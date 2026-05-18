@@ -37,11 +37,17 @@ function getMapsUrl(stop){
 }
 
 function getRouteUrl(day){
-  // Formato V1.3: ?api=1 + waypoints + travelmode=walking (coords puras, não nomes)
   const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
   const coord=s=>`${s.coord.lat},${s.coord.lng}`;
+  if(day.transport==='driving' && day.baseCoord){
+    const base=`${day.baseCoord.lat},${day.baseCoord.lng}`;
+    const waypoints=stops.map(coord).join('|');
+    let url=`https://www.google.com/maps/dir/?api=1&origin=${base}&destination=${base}&travelmode=driving`;
+    url+=`&waypoints=${encodeURIComponent(waypoints)}`;
+    return url;
+  }
   const origin=coord(stops[0]);
   const dest=coord(stops[stops.length-1]);
   const mid=stops.slice(1,-1).map(coord).join('|');
@@ -335,7 +341,7 @@ function renderMap(){
     ${stops.length?`<div class="stop-legend">${legend}</div>`:''}
     <div id="map"></div>
     <div class="map-cta">
-      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (walking)</a>
+      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (${day.transport==='driving'?'🚗 carro · ida e volta da base':'🚶 walking'})</a>
       ${tourButtons}
       <span class="map-hint">Clique nos marcadores pros detalhes${cardsWithTours.length?' · pontos pequenos cheios = parte 1 · contorno = parte 2':''}</span>
     </div>
