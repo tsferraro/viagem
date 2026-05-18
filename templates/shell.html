@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<style>
+{{STYLES_CSS}}
+</style>
+</head>
+<body>
+
+<div id="auth-gate">
+  <div class="auth-box">
+    <div class="auth-emoji">{{AUTH_EMOJI}}</div>
+    <div class="auth-title">{{AUTH_TITLE}}</div>
+    <div class="auth-sub">{{AUTH_SUBTITLE}}</div>
+    <input class="auth-input" id="pw" type="password" placeholder="senha" autocomplete="off">
+    <div class="auth-error" id="pw-err"></div>
+    <button class="auth-btn" onclick="checkAuth()">Entrar</button>
+  </div>
+</div>
+
+<div id="app">
+  <div class="header">
+    <h1>{{HEADER_TITLE}}</h1>
+    <div class="sub">{{HEADER_SUB}}</div>
+  </div>
+
+  <div class="sticky-nav">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input class="search-input" type="text" id="search" placeholder="Buscar atração, bairro, comida..." autocomplete="off">
+      <button class="search-clear" id="search-clear">×</button>
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+    <button class="overview-toggle" id="overview-toggle">
+      <span>📊 Resumo de todos os dias</span>
+      <span class="chev">▼</span>
+    </button>
+    <div class="overview" id="overview"></div>
+
+    <div class="main-tabs">
+      <button class="main-tab active" data-view="guia">📋 Guia</button>
+      <button class="main-tab" data-view="mapa">🗺️ Mapa</button>
+      <button class="main-tab" data-view="bairros">🏘️ Por bairro</button>
+    </div>
+  </div>
+
+  <div id="content"></div>
+
+  <div class="footer-legend" id="footer-legend">
+    <div class="head-row">
+      <h3>🗺️ LEGENDA & AVISOS</h3>
+      <label class="legend-toggle">
+        <input type="checkbox" id="legend-cb">
+        Já li
+      </label>
+    </div>
+    <div class="legend-content">
+      <div class="row">
+        <span><span class="risk-pill risk-green">🟢 tranquilo</span></span>
+        <span><span class="risk-pill risk-yellow">⚠️ atenção</span></span>
+        <span><span class="risk-pill risk-red">🔴 alta atenção</span></span>
+        <span style="font-size:12px"><span style="display:inline-block;background:#f59e0b;border-radius:50%;width:14px;height:14px;font-size:8px;color:#fff;text-align:center;line-height:14px;vertical-align:-2px;margin-right:4px">👥</span> {{LEGEND_GROUP_TEXT}}</span>
+      </div>
+      <div class="text">
+{{LEGEND_NOTES_HTML}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+// AUTH (persistente)
+const AUTH_KEY='roteiro_auth_v1';
+const AUTH_PASSWORD='{{PASSWORD}}';
+function checkAuth(){
+  const v=document.getElementById('pw').value;
+  if(v===AUTH_PASSWORD){
+    try{ localStorage.setItem(AUTH_KEY,'1'); }catch(e){}
+    document.getElementById('auth-gate').style.display='none';
+    document.getElementById('app').style.display='block';
+    init();
+  } else {
+    document.getElementById('pw-err').textContent='Senha incorreta';
+  }
+}
+document.getElementById('pw').addEventListener('keypress',e=>{if(e.key==='Enter')checkAuth()});
+// Auto-login se já autenticou antes (executa após DOM + scripts carregados)
+window.addEventListener('DOMContentLoaded',()=>{
+  if(localStorage.getItem(AUTH_KEY)==='1'){
+    document.getElementById('auth-gate').style.display='none';
+    document.getElementById('app').style.display='block';
+    if(typeof init==='function') init();
+  }
+});
+</script>
+
+<script>
+// ============== DATA ==============
+const DAYS = {{DAYS_JSON}};
+
+// ============== LINKS oficiais + reviews por atração ==============
+const LINKS_MAP = {{LINKS_MAP_JSON}};
+
+// ============== TRANSIT detalhe metrô + Uber ==============
+const TRANSIT_MAP = {{TRANSIT_MAP_JSON}};
+
+// ============== BAIRROS config (ranges lat/lng → nome de bairro) ==============
+const BAIRROS_CONFIG = {{BAIRROS_CONFIG_JSON}};
+
+// ============== RENDER ==============
+{{RENDER_FUNCTIONS_JS}}
+</script>
+
+</body>
+</html>

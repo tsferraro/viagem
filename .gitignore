@@ -1,0 +1,16 @@
+# Backups locais (gerados pelo deploy.sh) ficam fora do repo
+/.skill-backups/
+
+# Builds temporários
+/tmp-build/
+*.tmp.html
+
+# data.json de drafts (não publicáveis)
+data-draft*.json
+.draft-*.json
+
+# Editor cruft
+.DS_Store
+.idea/
+.vscode/
+*.swp
