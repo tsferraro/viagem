@@ -42,7 +42,7 @@ function getRouteUrl(day){
   if(stops.length===1) return getMapsUrl(stops[0]);
   const coord=s=>`${s.coord.lat},${s.coord.lng}`;
   if(day.transport==='driving' && day.baseCoord){
-    const base=`${day.baseCoord.lat},${day.baseCoord.lng}`;
+    const base=day.baseName?encodeURIComponent(day.baseName):`${day.baseCoord.lat},${day.baseCoord.lng}`;
     const waypoints=stops.map(coord).join('|');
     let url=`https://www.google.com/maps/dir/?api=1&origin=${base}&destination=${base}&travelmode=driving`;
     url+=`&waypoints=${encodeURIComponent(waypoints)}`;

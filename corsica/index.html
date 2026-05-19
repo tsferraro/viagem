@@ -619,6 +619,7 @@ const DAYS = [
       "lat": 41.708,
       "lng": 8.7965
     },
+    "baseName": "Porto Pollo, Corsica",
     "cor": "#84cc16",
     "gradA": "#3f6212",
     "gradB": "#4d7c0f",
@@ -838,6 +839,7 @@ const DAYS = [
       "lat": 41.708,
       "lng": 8.7965
     },
+    "baseName": "Porto Pollo, Corsica",
     "cor": "#b45309",
     "gradA": "#78350f",
     "gradB": "#92400e",
@@ -1020,6 +1022,7 @@ const DAYS = [
       "lat": 41.708,
       "lng": 8.7965
     },
+    "baseName": "Porto Pollo, Corsica",
     "cor": "#15803d",
     "gradA": "#14532d",
     "gradB": "#166534",
@@ -1174,6 +1177,7 @@ const DAYS = [
       "lat": 41.708,
       "lng": 8.7965
     },
+    "baseName": "Porto Pollo, Corsica",
     "cor": "#0ea5e9",
     "gradA": "#0c4a6e",
     "gradB": "#075985",
@@ -1545,6 +1549,7 @@ const DAYS = [
       "lat": 41.3875,
       "lng": 9.1544
     },
+    "baseName": "Bonifacio, Corsica",
     "cor": "#7c3aed",
     "gradA": "#4c1d95",
     "gradB": "#5b21b6",
@@ -1688,6 +1693,7 @@ const DAYS = [
       "lat": 41.3875,
       "lng": 9.1544
     },
+    "baseName": "Bonifacio, Corsica",
     "cor": "#14b8a6",
     "gradA": "#134e4a",
     "gradB": "#115e59",
@@ -2406,7 +2412,7 @@ function getRouteUrl(day){
   if(stops.length===1) return getMapsUrl(stops[0]);
   const coord=s=>`${s.coord.lat},${s.coord.lng}`;
   if(day.transport==='driving' && day.baseCoord){
-    const base=`${day.baseCoord.lat},${day.baseCoord.lng}`;
+    const base=day.baseName?encodeURIComponent(day.baseName):`${day.baseCoord.lat},${day.baseCoord.lng}`;
     const waypoints=stops.map(coord).join('|');
     let url=`https://www.google.com/maps/dir/?api=1&origin=${base}&destination=${base}&travelmode=driving`;
     url+=`&waypoints=${encodeURIComponent(waypoints)}`;
