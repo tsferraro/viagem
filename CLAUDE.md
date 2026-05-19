@@ -8,7 +8,13 @@ Você é **especialista em roteiros turísticos** pra família do Tobia. Roteiro
 
 **Capacidade**: este repo **CONTÉM A SKILL COMPLETA**: tools, templates, references profundos, sub-skill walking-tour-designer embarcada, decision-log e memory de projeto. Qualquer sessão Claude Code (desktop OU mobile-cloud) tem capacidade IDÊNTICA.
 
-## Estrutura do repo
+## Convenção estrutural · TODA viagem vive em subpasta (decisão 2026-05-19)
+
+**NÃO existe mais "viagem ativa no root"**. Root tem só landing (`index.html` regenerada pelo `wrap-up.sh`).
+
+Cada viagem · um subdir dedicado: `nyc/`, `corsica/`, `sardenha/`, etc. Subdirs reservados (proibidos como nome de viagem): `archive`, `scripts`, `templates`, `references`, `skills`.
+
+Paralelos da MESMA viagem usam sufixo: `corsica/`, `corsica-amigos/`, `corsica-pais/`.
 
 ```
 viagem/
@@ -16,34 +22,30 @@ viagem/
 ├── README.md                       ← intro pra família
 ├── MEMORY.md                       ← aprendizados de uso (cresce com cada viagem)
 ├── decision-log.md                 ← histórico de decisões estruturais com motivo
-├── index.html                      ← VIAGEM ATIVA principal
-├── SLUG.txt                        ← slug da viagem ativa
-├── <subdir>/index.html             ← OPCIONAL · roteiros paralelos (familia/, casal/, amigos/, extra/)
-├── <subdir>/SLUG.txt
+├── index.html                      ← LANDING (lista viagens ativas · auto-regenerada)
+├── <viagem>/                       ← UMA POR SUBPASTA · ex: nyc/, corsica/, sardenha/
+│   ├── index.html                  ← HTML do roteiro
+│   ├── SLUG.txt                    ← slug (ex: nyc-jul2026)
+│   └── data.json                   ← input do build (opcional · útil pra re-edits)
 ├── scripts/                        ← TOOLS (Python + Bash)
 │   ├── build.py                    ← gera index.html a partir de data.json
 │   ├── validate.py                 ← checks obrigatórios (BLOQUEIA push se falhar)
-│   └── deploy.sh                   ← archive + commit + merge main + push
+│   ├── deploy.sh                   ← deploy de UMA viagem em subdir · sempre push pra main
+│   └── wrap-up.sh                  ← PROTOCOLO DE ENCERRAMENTO (rodar ao final de sessão)
 ├── templates/                      ← template do HTML single-file
-│   ├── shell.html                  ← shell com 13 placeholders
-│   ├── styles.css                  ← CSS completo (279L)
-│   └── render-functions.js         ← 11 funções core + init (574L)
+│   ├── shell.html
+│   ├── styles.css
+│   └── render-functions.js
 ├── references/                     ← docs profundos (carregar sob demanda)
 │   ├── tobia-preferences.md        ← 10 princípios + 6 anti-padrões DETALHADOS
-│   ├── data-schema.md              ← schema completo de DAYS/stops/LINKS_MAP/etc (282L)
-│   ├── design-tokens.md            ← type scale · HSL spread · paleta · mobile safe-area
-│   ├── ui-patterns.md              ← soft re-render · getMapsUrl · popup contrast · etc
+│   ├── data-schema.md              ← schema completo (282L)
+│   ├── design-tokens.md
+│   ├── ui-patterns.md
 │   └── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
-├── skills/                         ← sub-skills embarcadas
+├── skills/
 │   └── walking-tour-designer/
-│       ├── SKILL.md                ← rubrica de valor + 4 tipos + partition
-│       ├── references/             ← valor-rubrica · tipos-tour · coord-validation
-│       └── examples/               ← 6 walking tours validados do NYC
 └── archive/
-    ├── index.html                  ← índice navegável das viagens passadas
-    └── <slug>/
-        ├── index.html
-        └── <subdir>/...
+    └── <slug>/                     ← viagens passadas movidas pra cá manualmente
 ```
 
 ## Quando carregar references/ vs ler só este CLAUDE.md
@@ -59,6 +61,28 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Quer ver decisões históricas + lições | `decision-log.md` + `references/lessons-learned.md` |
 | Quer entender preferências profundas do Tobia | `references/tobia-preferences.md` |
 | Iniciando viagem nova · quer ver aprendizados acumulados | `MEMORY.md` |
+
+## Protocolo de encerramento (OBRIGATÓRIO ao final de toda sessão)
+
+Antes de declarar sessão terminada:
+
+1. **Pergunte ao Tobia** se quer adicionar lição em `MEMORY.md` (o que funcionou · ajustes necessários · padrão pro destino/composição). Se sim, edite a seção apropriada.
+2. **Execute** `scripts/wrap-up.sh` · ele faz:
+   - `git status` · mostra tudo modificado
+   - `validate.py` em cada HTML modificado
+   - Regenera `index.html` da landing automaticamente (lê todas subpastas de viagem)
+   - Confirma branch = main (sem isolada)
+   - `git commit` + `git push origin main` (pergunta msg)
+   - `curl HEAD` em cada URL · confirma HTTP 200
+3. **Reporte ao Tobia** as URLs ao vivo + resumo do que mudou.
+
+Anti-padrão: encerrar sessão sem rodar `wrap-up.sh` · risco de deixar branch órfã, validate não rodado, landing desatualizada.
+
+## Senhas
+
+Cada viagem usa senha própria (decidida pelo Tobia · perguntar na criação se não informado).
+
+Pra descobrir senha de uma viagem existente: `grep AUTH_PASSWORD <viagem>/index.html` (a senha está em texto-claro no JS · auth gate é teatro contra acesso casual · privacidade real requer Cloudflare Access · ver FUTURE).
 
 ## Tools disponíveis (em `scripts/`)
 

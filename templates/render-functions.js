@@ -37,16 +37,22 @@ function getMapsUrl(stop){
 }
 
 function getRouteUrl(day){
-  // Formato V1.3: ?api=1 + waypoints + travelmode=walking (coords puras, não nomes)
+  // Formato V1.4: usa NOME do stop (com endereço entre parens) em vez de coords puras.
+  // Coords puras mostravam "Com alfinete" no Maps · nomes com endereço completo = label correto.
+  // Bug reportado por Tobia 2026-05-19 (sessão Córsega mobile).
   const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
-  const coord=s=>`${s.coord.lat},${s.coord.lng}`;
-  const origin=coord(stops[0]);
-  const dest=coord(stops[stops.length-1]);
-  const mid=stops.slice(1,-1).map(coord).join('|');
+  const queryName=s=>{
+    let n=s.nome;
+    if(s.tipo==='opcoes' && s.opcoes?.length) n=s.opcoes[0].nome;
+    return n.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  };
+  const origin=encodeURIComponent(queryName(stops[0]));
+  const dest=encodeURIComponent(queryName(stops[stops.length-1]));
+  const mid=stops.slice(1,-1).map(s=>encodeURIComponent(queryName(s))).join('|');
   let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
+  if(mid) url+=`&waypoints=${mid}`;
   return url;
 }
 
