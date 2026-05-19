@@ -6,31 +6,59 @@ Você é **especialista em roteiros turísticos** pra família do Tobia. Roteiro
 
 **Este repo** serve os roteiros como app HTML single-file via GitHub Pages. URL fixa pra família: `https://tsferraro.github.io/viagem`.
 
-**Capacidade**: este repo **CONTÉM TODOS OS SCRIPTS E TEMPLATES** da skill `itinerary-builder`. Qualquer sessão Claude Code (desktop OU mobile-cloud) que clonar este repo tem capacidade IDÊNTICA: criar viagem nova, ajustar existente, gerar walking tour, build+validate+deploy.
+**Capacidade**: este repo **CONTÉM A SKILL COMPLETA**: tools, templates, references profundos, sub-skill walking-tour-designer embarcada, decision-log e memory de projeto. Qualquer sessão Claude Code (desktop OU mobile-cloud) tem capacidade IDÊNTICA.
 
 ## Estrutura do repo
 
 ```
 viagem/
-├── CLAUDE.md               ← este arquivo (entry point)
-├── index.html              ← VIAGEM ATIVA principal
-├── SLUG.txt                ← slug da viagem ativa
-├── <subdir>/index.html     ← OPCIONAL · roteiros paralelos (familia/, casal/, amigos/, extra/)
+├── CLAUDE.md                       ← este arquivo · entry point + skill resumida
+├── README.md                       ← intro pra família
+├── MEMORY.md                       ← aprendizados de uso (cresce com cada viagem)
+├── decision-log.md                 ← histórico de decisões estruturais com motivo
+├── index.html                      ← VIAGEM ATIVA principal
+├── SLUG.txt                        ← slug da viagem ativa
+├── <subdir>/index.html             ← OPCIONAL · roteiros paralelos (familia/, casal/, amigos/, extra/)
 ├── <subdir>/SLUG.txt
-├── scripts/                ← TOOLS (Python + Bash)
-│   ├── build.py            ← gera index.html a partir de data.json
-│   ├── validate.py         ← checks obrigatórios (BLOQUEIA push se falhar)
-│   └── deploy.sh           ← archive + commit + merge main + push
-├── templates/              ← template do HTML single-file
-│   ├── shell.html          ← shell com 13 placeholders
-│   ├── styles.css          ← CSS completo (279L)
-│   └── render-functions.js ← 11 funções core + init (574L)
+├── scripts/                        ← TOOLS (Python + Bash)
+│   ├── build.py                    ← gera index.html a partir de data.json
+│   ├── validate.py                 ← checks obrigatórios (BLOQUEIA push se falhar)
+│   └── deploy.sh                   ← archive + commit + merge main + push
+├── templates/                      ← template do HTML single-file
+│   ├── shell.html                  ← shell com 13 placeholders
+│   ├── styles.css                  ← CSS completo (279L)
+│   └── render-functions.js         ← 11 funções core + init (574L)
+├── references/                     ← docs profundos (carregar sob demanda)
+│   ├── tobia-preferences.md        ← 10 princípios + 6 anti-padrões DETALHADOS
+│   ├── data-schema.md              ← schema completo de DAYS/stops/LINKS_MAP/etc (282L)
+│   ├── design-tokens.md            ← type scale · HSL spread · paleta · mobile safe-area
+│   ├── ui-patterns.md              ← soft re-render · getMapsUrl · popup contrast · etc
+│   └── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
+├── skills/                         ← sub-skills embarcadas
+│   └── walking-tour-designer/
+│       ├── SKILL.md                ← rubrica de valor + 4 tipos + partition
+│       ├── references/             ← valor-rubrica · tipos-tour · coord-validation
+│       └── examples/               ← 6 walking tours validados do NYC
 └── archive/
-    ├── index.html          ← índice navegável das viagens passadas
+    ├── index.html                  ← índice navegável das viagens passadas
     └── <slug>/
         ├── index.html
         └── <subdir>/...
 ```
+
+## Quando carregar references/ vs ler só este CLAUDE.md
+
+Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler também:
+
+| Quando | Ler além do CLAUDE.md |
+|---|---|
+| Vai mexer em estrutura de `DAYS` ou `stops` | `references/data-schema.md` |
+| Vai criar walking tour novo | `skills/walking-tour-designer/SKILL.md` + sub-references |
+| Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
+| Vai entender por que código JS é assim | `references/ui-patterns.md` |
+| Quer ver decisões históricas + lições | `decision-log.md` + `references/lessons-learned.md` |
+| Quer entender preferências profundas do Tobia | `references/tobia-preferences.md` |
+| Iniciando viagem nova · quer ver aprendizados acumulados | `MEMORY.md` |
 
 ## Tools disponíveis (em `scripts/`)
 
