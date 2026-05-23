@@ -1,7 +1,7 @@
 ---
 name: road-trip-designer
 description: >
-  Sub-skill do itinerary-builder pra estruturar dias de carro. Dado um dia com destinos definidos,
+  Sub-skill do roteiro-viagem pra estruturar dias de carro. Dado um dia com destinos definidos,
   retorna o array completo de stops enriquecido com info de estrada (roadType, parking, fuelAlert),
   pit stops pra criança (a cada 45-60min em trechos longos), ferry integrado, e rubrica de valor
   pra stops/desvios opcionais. Pode rodar standalone quando usuário pede "estrutura o dia de Bosa".
@@ -19,13 +19,13 @@ Retorna estrutura completa de um dia driving:
 3. **Pit stops** inseridos automaticamente se trecho >45min sem parada
 4. **Campos DAY** obrigatórios: `transport`, `baseCoord`, `baseName`
 
-Não retorna HTML — só dados. `itinerary-builder` cuida da renderização.
+Não retorna HTML — só dados. `roteiro-viagem` cuida da renderização.
 
 ---
 
 ## Quando triggera
 
-**Sub-skill** (chamada pelo `itinerary-builder`):
+**Sub-skill** (chamada pelo `roteiro-viagem`):
 - Dia com deslocamento de carro >20km do hotel/base
 - Múltiplos destinos com drives entre eles
 - Ferry integrado no dia
@@ -179,7 +179,7 @@ Ver `references/family-driving.md` pra critérios de boa parada.
 
 ## Comportamento do agente
 
-### Sub-skill (chamada pelo itinerary-builder)
+### Sub-skill (chamada pelo roteiro-viagem)
 
 1. Identificar tipo de day: hub-spoke / linear / loop / ferry-integrated
 2. Calcular duração total dos trechos → verificar necessidade de pit stop (>45min sem parada)
