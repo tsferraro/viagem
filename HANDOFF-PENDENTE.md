@@ -37,6 +37,28 @@ Ver `MEMORY.md` seção `v1.3 · 2026-05-23 (lições road-trip curto Sprockhöv
 
 - [ ] Copiar bullets do bloco "Lições pessoais" pro memory privado
 - [ ] Registrar composição+contexto da viagem Sprockhövel se útil pra futuras
-- [ ] `rm HANDOFF-PENDENTE.md`
+- [ ] `rm HANDOFF-PENDENTE.md` (só depois de Tobia decidir sobre as pendências abaixo)
 - [ ] `git commit -m "chore: sincroniza memory · remove handoff Sprockhövel"`
 - [ ] `git push origin main`
+
+---
+
+## Bugs latentes em outras viagens (Tobia decide quando refixar)
+
+Descobertos durante sessão Sprockhövel via validate atualizado. NÃO foram fixados nesta sessão (scope creep evitado). Tobia decide:
+
+### 1. corsica/ · legenda duplicada (semáforo 🟢🟡🔴 repetido)
+- Bug presente desde maio · você nunca viu
+- Fix: editar `corsica/data.json` linha 10 (`legend_notes_html`) removendo "🟢 Verde · 🟡 Amarelo · 🔴 Vermelho" + `python3 scripts/build.py corsica/data.json corsica/index.html`
+- Ou só editar `corsica/index.html` direto (mais rápido) · mas data.json fica divergente
+
+### 2. pais-sardenha/data.json · legenda divergente do HTML
+- O HTML está correto (você fixou em 2026-05-23 commit `93af72d` manualmente)
+- O data.json ainda tem a duplicação · próximo rebuild via build.py vai trazer o bug de volta
+- Fix: editar `pais-sardenha/data.json` linha 10 pra alinhar com HTML atual
+
+### 3. Walking tour URL "Com alfinete" · LATENTE em corsica/nyc/pais-sardenha
+- Mesmo bug que fixei em Sprockhövel · `getWalkingTourUrl()` no HTML antigo usa coords puras
+- Bug latente: só manifesta quando alguém clica botão "🚶 Walking Tour" no Maps mobile · provável que ninguém testou ainda
+- Fix por viagem: ou rebuild via `build.py` (pega o template novo automaticamente) ou patch direto no `function getWalkingTourUrl` do HTML
+- **Cuidado**: rebuild de pais-sardenha desfaz sua correção manual de legenda · fixar data.json primeiro (item 2)

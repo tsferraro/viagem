@@ -174,6 +174,38 @@ Ver `references/family-driving.md` pra critérios de boa parada.
 4. **Desvio >30min com dia lotado** — jamais incluir se dia já tem 3+ destinos
 5. **`roadType` inventado** — verificar no Google Maps (street view ou Maps label) antes de definir
 6. **Ferry sem horário/operador** — deixa família sem info crítica pra programar retorno
+7. **Cards de alternativa `🔄 ALT` SEM o emoji 🔄 no início do nome** — `getRouteUrl()` filtra alts pelo prefix · sem ele a alt vira destino da rota do dia e quebra (bug Sprockhövel 2026-05-23 · Valenciennes ALT puxou rota pra direção oposta)
+8. **Cadência pit-stop fixa 2h com criança <5a** — assumir 1h30 entre paradas (não 2h) quando viaja com filha 3a · documentado MEMORY v1.3
+
+---
+
+## ✅ Checklist de conferência pós-build (OBRIGATÓRIO)
+
+Após `build.py` rodar e ANTES de declarar road trip pronto:
+
+1. **Cards 🔄 ALT começam com `🔄` no `nome`?** Se viagem tem alternativas (Valenciennes substitui Mons, etc.), TODAS devem ter `🔄 ALT` no início. validate.py bloqueia se houver 🔄 sem filtro no template.
+2. **`legend_notes_html` SEM repetir 🟢🟡🔴?** Template já renderiza pills automaticamente · só notas extras (bases · convenções 🔄 · pit stops). validate.py bloqueia se detectar `🟢 Verde`/`🟡 Amarelo`/`🔴 Vermelho`.
+3. **Cada transit tem `roadType`?** A2/A1/E40/N6/etc · com tag se pedágio.
+4. **Trechos >45min têm pit stop?** Ou >1h30 se família tem criança <5a · skill calcula automaticamente, mas confere.
+5. **Cada card de destino remoto tem `parking`?** Sítios arqueológicos, praias, miradouros.
+6. **Ferry tem horário + operador + duração?** Sem isso, família perde a volta.
+7. **Coord de cada stop validada via web_search?**
+
+Anti-padrão metodológico: declarar road trip pronto sem abrir o botão "🗺️ Abrir rota do dia no Google Maps" em CADA dia · esse é o jeito que Tobia descobre se ALT está poluindo a rota.
+
+---
+
+## ⚠️ Escopo · NÃO propagar fixes pra viagens fora do scope da sessão
+
+Quando um bug é encontrado durante criação/edição de UMA viagem:
+- ✅ Fix na viagem do escopo
+- ✅ Fix no template (`templates/render-functions.js`) — beneficia futuras
+- ✅ Guardrail no `validate.py` — bloqueia regressão
+- ❌ NUNCA rebuild de outras viagens "pra propagar fix" sem pedir autorização explícita
+
+Motivo: viagens antigas podem ter edits manuais no HTML que NÃO estão no `data.json` (correções pós-build feitas em sessões anteriores). Rebuild sobrescreve essas correções silenciosamente. Bug Sprockhövel 2026-05-23: rebuild de `pais-sardenha` sobrescreveu correção manual de legenda feita 6h antes em outra sessão. Lição custosa.
+
+Bugs latentes em outras viagens: documentar em `HANDOFF-PENDENTE.md` (root) e deixar Tobia decidir.
 
 ---
 

@@ -7,7 +7,7 @@
   "header_sub": "27/Jul → 08/Ago · Porto Pollo + Bonifacio · 13 dias",
   "password": "corsica2026",
   "legend_group_text": "👨‍👩‍👧‍👦 Família reunida com avós",
-  "legend_notes_html": "<strong>👨‍👩‍👧‍👦</strong>: dias com avós (a partir de 07/Ago). Bases fixas: <strong>Porto Pollo</strong> (27/Jul-3/Ago) + <strong>Bonifacio</strong> (3/Ago-8/Ago). Atenção (amarelo) = esforço/acesso/calor. Alta atenção (vermelho) = alto esforço/risco logístico.",
+  "legend_notes_html": "<strong>🟢 Verde</strong>: tranquilo · <strong>🟡 Amarelo</strong>: atenção (esforço/acesso/calor) · <strong>🔴 Vermelho</strong>: alto esforço/risco logístico. <strong>👨‍👩‍👧‍👦</strong>: dias com avós (a partir de 07/Ago). Bases fixas: <strong>Porto Pollo</strong> (27/Jul-3/Ago) + <strong>Bonifacio</strong> (3/Ago-8/Ago).",
   "days": [
     {
       "date": "Seg 27/Jul",

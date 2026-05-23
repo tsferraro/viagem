@@ -347,7 +347,7 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
         <span style="font-size:12px"><span style="display:inline-block;background:#f59e0b;border-radius:50%;width:14px;height:14px;font-size:8px;color:#fff;text-align:center;line-height:14px;vertical-align:-2px;margin-right:4px">👥</span> 👨‍👩‍👧‍👦 Família reunida com avós</span>
       </div>
       <div class="text">
-<strong>👨‍👩‍👧‍👦</strong>: dias com avós (a partir de 07/Ago). Bases fixas: <strong>Porto Pollo</strong> (27/Jul-3/Ago) + <strong>Bonifacio</strong> (3/Ago-8/Ago). Atenção (amarelo) = esforço/acesso/calor. Alta atenção (vermelho) = alto esforço/risco logístico.
+<strong>🟢 Verde</strong>: tranquilo · <strong>🟡 Amarelo</strong>: atenção (esforço/acesso/calor) · <strong>🔴 Vermelho</strong>: alto esforço/risco logístico. <strong>👨‍👩‍👧‍👦</strong>: dias com avós (a partir de 07/Ago). Bases fixas: <strong>Porto Pollo</strong> (27/Jul-3/Ago) + <strong>Bonifacio</strong> (3/Ago-8/Ago).
       </div>
     </div>
   </div>
@@ -2323,35 +2323,31 @@ function getMapsUrl(stop){
 }
 
 function getRouteUrl(day){
-  // V1.5: filtra ALT cards (nome iniciando com 🔄) — alternativas não fazem parte da rota
-  // principal do dia. Bug Sprockhovel 2026-05-23 (Valenciennes ALT puxava rota pra direção oposta).
-  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord && !s.nome.startsWith('🔄'));
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
   const queryName=s=>{
     let n=s.nome;
-    if(s.tipo==='opcoes' && s.opcoes?.length) n=s.opcoes[0].nome;
+    if(s.tipo==='opcoes' && s.opcoes && s.opcoes.length) n=s.opcoes[0].nome;
     return n.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
   };
   const origin=encodeURIComponent(queryName(stops[0]));
   const dest=encodeURIComponent(queryName(stops[stops.length-1]));
   const mid=stops.slice(1,-1).map(s=>encodeURIComponent(queryName(s))).join('|');
-  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${mid}`;
+  let url='https://www.google.com/maps/dir/?api=1&origin='+origin+'&destination='+dest+'&travelmode=walking';
+  if(mid) url+='&waypoints='+mid;
   return url;
 }
 
 function getWalkingTourUrl(tour){
-  // V1.5: usa NOME com endereço (parens removidos só na query, conteúdo mantido) em vez de
-  // coords puras · coords puras mostravam "Com alfinete" no Maps · bug Sprockhovel 2026-05-23
-  // (mesmo bug que getRouteUrl V1.4 corrigiu, mas só lá · walking tour ficou pra trás).
+  // Rota directions Google Maps com todas as paradas do walking tour (modo walking)
   if(!tour||tour.length<2) return '#';
-  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
-  const origin=encodeURIComponent(queryName(tour[0]));
-  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
-  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
+  const coord=t=>`${t.coord.lat},${t.coord.lng}`;
+  const origin=coord(tour[0]);
+  const dest=coord(tour[tour.length-1]);
+  const mid=tour.slice(1,-1).map(coord).join('|');
   let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${mid}`;
+  if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
   return url;
 }
 

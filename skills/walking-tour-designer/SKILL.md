@@ -120,7 +120,35 @@ Se hibrido temático: cada parte tem tema próprio. Se descoberta pura: parte 1 
 | Inventar coords | Mapa fica errado · família vai pro lugar errado |
 | Mais de 16 stops num tour | Cansa criança · fragmentar em 2 viagens |
 | Walking tour em bairro com 3+ stops já no roteiro | Overlap inútil · usar annotations |
-| Stops sem endereço no nome | Google Maps busca falha · perde dia |
+| Stops sem endereço entre parens no nome | `getWalkingTourUrl()` usa o nome como query · sem endereço, Maps mostra "Com alfinete" · bug Sprockhövel 2026-05-23 |
+
+---
+
+## ✅ Checklist de conferência pós-build (OBRIGATÓRIO)
+
+Após `build.py` rodar e ANTES de declarar walking tour pronto:
+
+1. **Cada stop tem endereço entre parens no `nome`?** Ex: `"Beffroi de Mons (UNESCO · Rampe du Château)"` · sem isso, Google Maps mostra "Com alfinete" no lugar do nome (bug histórico Córsega 2026-05-19 + Sprockhövel 2026-05-23).
+2. **`validate.py` passou no check `'WT URL usa nome (não coord)'`?** Feature-chave que garante `getWalkingTourUrl()` está na versão V1.5+ no HTML gerado.
+3. **Walking tour findable**? Buscar pelo nome do tour no app deve trazer o card-âncora · `Search WT index` (feature-chave validate).
+4. **Coord de cada stop validada via web_search?** Sem inventar perto de.
+5. **Tour com >8 stops está partitionado?** validate alerta se >8 sem partition.
+
+Anti-padrão metodológico: declarar walking tour pronto sem abrir o botão "🚶 Walking Tour" no Maps mobile · esse é o jeito que Tobia descobre bug. Sempre conferir um botão do WT renderizado antes de fechar a sessão.
+
+---
+
+## ⚠️ Escopo · NÃO propagar fixes pra walking tours de viagens fora do scope
+
+Quando achar bug em walking tour da viagem do escopo (ex: WT URL mostrando "Com alfinete"):
+- ✅ Fix na viagem do escopo
+- ✅ Fix no template (`templates/render-functions.js`)
+- ✅ Guardrail no `validate.py`
+- ❌ NUNCA rebuild de outras viagens "pra propagar fix" sem autorização explícita do Tobia
+
+Rebuild de viagem antiga pode sobrescrever edits manuais que não estão no `data.json` (acontece quando Tobia edita HTML direto pra correção rápida em sessão anterior). Bug Sprockhövel 2026-05-23: rebuild de `pais-sardenha` desfez correção manual de legenda feita 6h antes em outra sessão.
+
+Documentar pendência em `HANDOFF-PENDENTE.md` (root) e deixar Tobia decidir.
 
 ---
 

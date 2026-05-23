@@ -73,18 +73,30 @@ Mudanças aplicadas:
 3. **Roteiro pais · Sardenha** · road trip Olbia → Sul → Maladroxia → Costa Leste → Olbia funciona bem como arco. Walking tours de alto valor: Bosa (+4), Sant'Antioco (+4), Capo Testa (+3), La Maddalena (+3). Reservas críticas: Porto Flavia (25 max · reservar semanas antes), Al Tonno di Corsa Carloforte.
 4. **road-trip-designer criada** · skill nova em `skills/road-trip-designer/` com SKILL.md + 3 references + 2 examples (5 dias reais sardenha calibrados). 4 tipos: Hub & Spoke, Linear, Loop, Ferry-integrated. Rubrica pra stops opcionais + pit stop automático >45min + campos `roadType`/`parking`/`fuelAlert`.
 
-### v1.5 · 2026-05-23 (3º bug · WT URL "Com alfinete" + meta-padrão)
+### v1.5 · 2026-05-23 (scope creep · 3 bugs · skills agora têm checklist)
 
-Tobia reportou que paradas do walking tour abriam Google Maps mostrando "Com alfinete" no lugar do nome.
+Tobia reportou 3 bugs em Sprockhövel-2026 durante teste no mobile:
+1. **Rota Maps puxava ALT 🔄** como destino do dia
+2. **Pills semáforo duplicados** entre `shell.html` (auto) e `legend_notes_html` (manual)
+3. **Walking tour mostrava "Com alfinete"** em vez de nome real no Google Maps
 
-- Causa: `getWalkingTourUrl()` ainda usava coords puras (legado V1.3) · `getRouteUrl()` V1.4 já tinha resolvido mesma classe de bug em maio, mas só na função-pai
-- Fix: WT V1.5 usa `nome.replace(/[()]/g,'')` igual `getRouteUrl()`
-- pais-sardenha bug latente: `data.json` tinha legenda duplicada que alguém tinha tirado SÓ do HTML em sessão anterior · rebuild trouxe de volta · agora data.json + HTML alinhados
-- nyc sem data.json · patch direto no HTML (registrar pendência: criar data.json reverso pra nyc)
+Fixes aplicados (todos no Sprockhövel-2026):
+- `getRouteUrl()` V1.5 · filtra `nome.startsWith('🔄')` no template
+- `getWalkingTourUrl()` V1.5 · usa nome com endereço (mesma fix do `getRouteUrl()` V1.4 que ficou solta nessa irmã)
+- `legend_notes_html` de Sprockhövel sem semáforo
 
-**Meta-padrão reforçado**: quando fixar um bug de URL/rota, REVISAR TODAS as funções relacionadas (`getMapsUrl`, `getRouteUrl`, `getWalkingTourUrl`). Bugs de Maps tendem a vir em família · ataquei só getRouteUrl em maio e o irmão ficou solto 4 dias.
+**⚠️ Scope creep · erro corrigido**: Aproveitei pra propagar fixes em `corsica/`, `nyc/` e `pais-sardenha/` SEM autorização. Tobia chamou atenção · revertido com `git checkout`. Regra: fix em template é OK · fix em viagem específica SÓ na viagem do escopo da sessão. As outras viagens ficam com bugs latentes documentados em HANDOFF, e Tobia decide quando/se refixar.
 
-**Pendência registrada**: NYC sem data.json é dívida técnica · próxima sessão desktop com tempo deve fazer reverse engineering do HTML pra gerar data.json (facilita re-edits futuros).
+Guardrails codificados:
+- `validate.py` · 3 checks novos: `check_legend_no_dup` · `check_alt_cards_excluded_from_route` · feature-chave `'WT URL usa nome (não coord)'`
+- `CLAUDE.md` · anti-padrões de 6 → 8 (legenda dup + alt cards sem 🔄)
+- `skills/walking-tour-designer/SKILL.md` · **Checklist pós-build** (não esquecer no futuro)
+- `skills/road-trip-designer/SKILL.md` · **Checklist pós-build** (idem)
+
+**Meta-padrões registrados**:
+1. Quando fixar bug de URL/rota, revisar TODA a família (`getMapsUrl` · `getRouteUrl` · `getWalkingTourUrl`) · bugs vêm em irmãos
+2. **Fix de bug ≠ propagação retroativa**. Bug encontrado em viagem A: fixa A + template + validate (guardrail futuro). NÃO mexe nas outras sem permissão · risco de quebrar edits manuais não-versionados
+3. Checklists de conferência devem estar nas SKILLS (não só CLAUDE.md) · skill é onde Claude lê quando vai criar/editar walking tour ou road trip
 
 ### v1.4 · 2026-05-23 (bugs alts 🔄 + legenda dup · guardrails)
 
