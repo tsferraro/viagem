@@ -17,6 +17,27 @@ import os, re, sys
 
 RESERVED = {'archive', 'scripts', 'templates', 'references', 'skills', '.git'}
 
+# Map de mês PT-BR (3 letras) → número
+MONTH_MAP = {'jan':1, 'fev':2, 'mar':3, 'abr':4, 'mai':5, 'jun':6,
+             'jul':7, 'ago':8, 'set':9, 'out':10, 'nov':11, 'dez':12}
+
+def parse_chronologic_key(slug, meta):
+    """Extrai (ano, mes, dia) pra ordenação cronológica.
+    Slug formato esperado: '*-<mes><ano>' (ex: nyc-jul2026 · sardenha-pais-ago2026)
+    Meta opcional pra extrair dia inicial (ex: '3-13 Julho 2026' → dia 3)
+    Fallback: (9999, 99, 99) coloca viagens sem data parseável no fim."""
+    import re as _re
+    m = _re.search(r'([a-z]{3})(\d{4})$', slug.lower())
+    if not m: return (9999, 99, 99)
+    mes_str, ano = m.group(1), int(m.group(2))
+    mes = MONTH_MAP.get(mes_str, 99)
+    # Tenta extrair dia inicial do meta
+    dia = 99
+    if meta:
+        m2 = _re.search(r'^(\d+)(?:[-/–]\d+)?\s', meta.strip())
+        if m2: dia = int(m2.group(1))
+    return (ano, mes, dia)
+
 def main():
     root = sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser('~/repos/viagem')
     if not os.path.isdir(root):
@@ -46,6 +67,9 @@ def main():
             emoji = nome[:i].strip()
             nome_clean = nome[i:].lstrip(' ·-—').strip() or d
         viagens.append({'subdir': d, 'slug': slug, 'nome': nome_clean, 'meta': meta, 'emoji': emoji})
+
+    # Ordenação cronológica · próxima viagem primeiro (ascendente por ano/mês/dia)
+    viagens.sort(key=lambda v: parse_chronologic_key(v['slug'], v['meta']))
 
     cards = '\n'.join(
         f'''  <a class="viagem-card" href="./{v['subdir']}/">
