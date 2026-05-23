@@ -73,6 +73,19 @@ Mudanças aplicadas:
 3. **Roteiro pais · Sardenha** · road trip Olbia → Sul → Maladroxia → Costa Leste → Olbia funciona bem como arco. Walking tours de alto valor: Bosa (+4), Sant'Antioco (+4), Capo Testa (+3), La Maddalena (+3). Reservas críticas: Porto Flavia (25 max · reservar semanas antes), Al Tonno di Corsa Carloforte.
 4. **road-trip-designer criada** · skill nova em `skills/road-trip-designer/` com SKILL.md + 3 references + 2 examples (5 dias reais sardenha calibrados). 4 tipos: Hub & Spoke, Linear, Loop, Ferry-integrated. Rubrica pra stops opcionais + pit stop automático >45min + campos `roadType`/`parking`/`fuelAlert`.
 
+### v1.5 · 2026-05-23 (3º bug · WT URL "Com alfinete" + meta-padrão)
+
+Tobia reportou que paradas do walking tour abriam Google Maps mostrando "Com alfinete" no lugar do nome.
+
+- Causa: `getWalkingTourUrl()` ainda usava coords puras (legado V1.3) · `getRouteUrl()` V1.4 já tinha resolvido mesma classe de bug em maio, mas só na função-pai
+- Fix: WT V1.5 usa `nome.replace(/[()]/g,'')` igual `getRouteUrl()`
+- pais-sardenha bug latente: `data.json` tinha legenda duplicada que alguém tinha tirado SÓ do HTML em sessão anterior · rebuild trouxe de volta · agora data.json + HTML alinhados
+- nyc sem data.json · patch direto no HTML (registrar pendência: criar data.json reverso pra nyc)
+
+**Meta-padrão reforçado**: quando fixar um bug de URL/rota, REVISAR TODAS as funções relacionadas (`getMapsUrl`, `getRouteUrl`, `getWalkingTourUrl`). Bugs de Maps tendem a vir em família · ataquei só getRouteUrl em maio e o irmão ficou solto 4 dias.
+
+**Pendência registrada**: NYC sem data.json é dívida técnica · próxima sessão desktop com tempo deve fazer reverse engineering do HTML pra gerar data.json (facilita re-edits futuros).
+
 ### v1.4 · 2026-05-23 (bugs alts 🔄 + legenda dup · guardrails)
 
 Dois bugs caçados em campo (Tobia testou Sprockhovel-2026 no mobile):
