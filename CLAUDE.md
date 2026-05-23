@@ -62,6 +62,12 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Quer entender preferências profundas do Tobia | `references/tobia-preferences.md` |
 | Iniciando viagem nova · quer ver aprendizados acumulados | `MEMORY.md` |
 
+## Landing (index.html root) é AUTO-REGENERADA
+
+A landing **é regenerada automaticamente** dentro de `scripts/deploy.sh` (chama `scripts/regen-landing.py` após validate). Você NUNCA precisa pensar nela · só não esqueça de usar `deploy.sh` (não `git push` direto).
+
+Se mexer manualmente em subpastas (criar/renomear/remover viagens) SEM usar `deploy.sh`, rode `python3 scripts/regen-landing.py` antes do commit.
+
 ## Protocolo de encerramento (OBRIGATÓRIO ao final de toda sessão)
 
 Antes de declarar sessão terminada:
@@ -70,13 +76,13 @@ Antes de declarar sessão terminada:
 2. **Execute** `scripts/wrap-up.sh` · ele faz:
    - `git status` · mostra tudo modificado
    - `validate.py` em cada HTML modificado
-   - Regenera `index.html` da landing automaticamente (lê todas subpastas de viagem)
+   - Re-roda `regen-landing.py` (segurança extra · landing já deve estar OK pelo deploy)
    - Confirma branch = main (sem isolada)
    - `git commit` + `git push origin main` (pergunta msg)
    - `curl HEAD` em cada URL · confirma HTTP 200
 3. **Reporte ao Tobia** as URLs ao vivo + resumo do que mudou.
 
-Anti-padrão: encerrar sessão sem rodar `wrap-up.sh` · risco de deixar branch órfã, validate não rodado, landing desatualizada.
+Anti-padrão: encerrar sessão sem rodar `wrap-up.sh` · risco de deixar branch órfã, validate não rodado.
 
 ## Senhas
 

@@ -58,6 +58,11 @@ echo "$NEW_SLUG" > "$TARGET_SLUG"
 echo "→ Validando..."
 python3 "$VALIDATE_PY" "$TARGET_HTML" || { echo "❌ validate.py falhou · ABORTADO"; exit 1; }
 
+# Regenerar landing AUTOMATICAMENTE (lê todas subpastas atuais + monta cards)
+# Decisão 2026-05-23: integrado ao deploy pra nunca esquecer · sessão Sardenha esqueceu rodar wrap-up
+echo "→ Regenerando landing (index.html root)..."
+python3 "$SCRIPT_DIR/regen-landing.py" "$REPO_DIR"
+
 # Backup local
 TS=$(date +%Y%m%d_%H%M%S)
 cp "$TARGET_HTML" "$BACKUP_DIR/${SUBDIR}_${NEW_SLUG}_${TS}.html"
