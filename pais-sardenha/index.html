@@ -344,8 +344,11 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
         <span><span class="risk-pill risk-green">🟢 tranquilo</span></span>
         <span><span class="risk-pill risk-yellow">⚠️ atenção</span></span>
         <span><span class="risk-pill risk-red">🔴 alta atenção</span></span>
+        <span style="font-size:12px"><span style="display:inline-block;background:#f59e0b;border-radius:50%;width:14px;height:14px;font-size:8px;color:#fff;text-align:center;line-height:14px;vertical-align:-2px;margin-right:4px">👥</span> 👨‍👩‍👧‍👦 Dias com Tobia, esposa e neta</span>
       </div>
-      <div class="text"><strong>Bases</strong>: Olbia (06) · Bonifacio (07) · Càbras (08-12) · Maladroxia (12-16) · Cala Gonone (16-18) · Santa Teresa/Capo Testa (18-21).</div>
+      <div class="text">
+<strong>👨‍👩‍👧‍👦</strong>: dias com Tobia + família (07/Ago Bonifacio · 08-15/Ago Sardenha juntos). <strong>Bases</strong>: Olbia (06) · Bonifacio (07) · Càbras (08-12) · Maladroxia (12-16) · Cala Gonone (16-18) · Santa Teresa/Capo Testa (18-21). Atenção (amarelo) = esforço/calor/logística · vermelho = dia pesado.
+      </div>
     </div>
   </div>
 </div>
@@ -550,7 +553,7 @@ const DAYS = [
         "nome": "Encontro com Tobia + família em Bonifacio",
         "cat": "Almoço de chegada juntos",
         "sobre": "Encontro com Tobia, esposa e a neta após viagem deles na Córsega. Reunião especial — começo da semana juntos. Almoço no porto pra todos relaxarem após a balsa. Tarde livre: andar pela cidadela medieval de Bonifacio, ver as falésias brancas, conhecer onde Tobia está hospedado.",
-        "imperdivel": "Abraçar a neta · ela vai estar fora de si de alegria",
+        "imperdivel": "Abraçar a neta · ela vai estar derrubada de excitação",
         "dicas": [
           "Tobia organiza reserva almoço · provavelmente Da Passano (tapas corsas pra dividir)",
           "À tarde · walking tour da cidadela com Tobia (ele já planejou)",
@@ -3293,34 +3296,35 @@ function getMapsUrl(stop){
 }
 
 function getRouteUrl(day){
-  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
+  // V1.5: filtra ALT cards (nome iniciando com 🔄) — alternativas não fazem parte da rota
+  // principal do dia. Bug Sprockhovel 2026-05-23 (Valenciennes ALT puxava rota pra direção oposta).
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord && !s.nome.startsWith('🔄'));
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
-  const coord=s=>`${s.coord.lat},${s.coord.lng}`;
-  if(day.transport==='driving' && day.baseCoord){
-    const base=day.baseName?encodeURIComponent(day.baseName):`${day.baseCoord.lat},${day.baseCoord.lng}`;
-    const waypoints=stops.map(coord).join('|');
-    let url=`https://www.google.com/maps/dir/?api=1&origin=${base}&destination=${base}&travelmode=driving`;
-    url+=`&waypoints=${encodeURIComponent(waypoints)}`;
-    return url;
-  }
-  const origin=coord(stops[0]);
-  const dest=coord(stops[stops.length-1]);
-  const mid=stops.slice(1,-1).map(coord).join('|');
+  const queryName=s=>{
+    let n=s.nome;
+    if(s.tipo==='opcoes' && s.opcoes?.length) n=s.opcoes[0].nome;
+    return n.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  };
+  const origin=encodeURIComponent(queryName(stops[0]));
+  const dest=encodeURIComponent(queryName(stops[stops.length-1]));
+  const mid=stops.slice(1,-1).map(s=>encodeURIComponent(queryName(s))).join('|');
   let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
+  if(mid) url+=`&waypoints=${mid}`;
   return url;
 }
 
 function getWalkingTourUrl(tour){
-  // Rota directions Google Maps com todas as paradas do walking tour (modo walking)
+  // V1.5: usa NOME com endereço (parens removidos só na query, conteúdo mantido) em vez de
+  // coords puras · coords puras mostravam "Com alfinete" no Maps · bug Sprockhovel 2026-05-23
+  // (mesmo bug que getRouteUrl V1.4 corrigiu, mas só lá · walking tour ficou pra trás).
   if(!tour||tour.length<2) return '#';
-  const coord=t=>`${t.coord.lat},${t.coord.lng}`;
-  const origin=coord(tour[0]);
-  const dest=coord(tour[tour.length-1]);
-  const mid=tour.slice(1,-1).map(coord).join('|');
+  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  const origin=encodeURIComponent(queryName(tour[0]));
+  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
+  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
   let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
+  if(mid) url+=`&waypoints=${mid}`;
   return url;
 }
 
@@ -3597,7 +3601,7 @@ function renderMap(){
     ${stops.length?`<div class="stop-legend">${legend}</div>`:''}
     <div id="map"></div>
     <div class="map-cta">
-      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (${day.transport==='driving'?'🚗 carro · ida e volta da base':'🚶 walking'})</a>
+      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (walking)</a>
       ${tourButtons}
       <span class="map-hint">Clique nos marcadores pros detalhes${cardsWithTours.length?' · pontos pequenos cheios = parte 1 · contorno = parte 2':''}</span>
     </div>

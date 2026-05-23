@@ -1177,14 +1177,16 @@ function getRouteUrl(day){
 }
 
 function getWalkingTourUrl(tour){
-  // Rota directions Google Maps com todas as paradas do walking tour (modo walking)
+  // V1.5: usa NOME com endereço (parens removidos só na query, conteúdo mantido) em vez de
+  // coords puras · coords puras mostravam "Com alfinete" no Maps · bug Sprockhovel 2026-05-23
+  // (mesmo bug que getRouteUrl V1.4 corrigiu, mas só lá · walking tour ficou pra trás).
   if(!tour||tour.length<2) return '#';
-  const coord=t=>`${t.coord.lat},${t.coord.lng}`;
-  const origin=coord(tour[0]);
-  const dest=coord(tour[tour.length-1]);
-  const mid=tour.slice(1,-1).map(coord).join('|');
+  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  const origin=encodeURIComponent(queryName(tour[0]));
+  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
+  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
   let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
+  if(mid) url+=`&waypoints=${mid}`;
   return url;
 }
 

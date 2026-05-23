@@ -296,6 +296,7 @@ def check_required_features(content):
         'Popup color forçado white':  'color:#fff !important',
         'getDefaultDayIdx':           'function getDefaultDayIdx',
         'getWalkingTourUrl':          'function getWalkingTourUrl',
+        'WT URL usa nome (não coord)':'queryName=t=>t.nome',
         'Walking tour flag':          'walking-tour-flag',
         'Search WT index':            "hay+=' walking tour '",
         'Overview WT button':         'ov-wt-btn',
