@@ -22,20 +22,47 @@ MONTH_MAP = {'jan':1, 'fev':2, 'mar':3, 'abr':4, 'mai':5, 'jun':6,
              'jul':7, 'ago':8, 'set':9, 'out':10, 'nov':11, 'dez':12}
 
 def parse_chronologic_key(slug, meta):
-    """Extrai (ano, mes, dia) pra ordenação cronológica.
-    Slug formato esperado: '*-<mes><ano>' (ex: nyc-jul2026 · sardenha-pais-ago2026)
-    Meta opcional pra extrair dia inicial (ex: '3-13 Julho 2026' → dia 3)
-    Fallback: (9999, 99, 99) coloca viagens sem data parseável no fim."""
+    """Extrai (ano, mes, dia) pra ordenação cronológica · prioriza META (mais preciso).
+    Padrões META suportados:
+      - '3-13 Julho 2026'        → dia 3, mês julho
+      - '27/Jul → 08/Ago'        → dia 27, mês jul
+      - '06/Ago → 21/Ago · 16 d' → dia 6, mês ago
+      - '5 setembro 2026'        → dia 5, mês setembro
+      - 'Julho 2026'             → dia 1, mês julho
+    Fallback: slug ('*-<mes3letras><ano>'). Sem nada parseável: (9999,99,99) vai no fim."""
     import re as _re
-    m = _re.search(r'([a-z]{3})(\d{4})$', slug.lower())
-    if not m: return (9999, 99, 99)
-    mes_str, ano = m.group(1), int(m.group(2))
-    mes = MONTH_MAP.get(mes_str, 99)
-    # Tenta extrair dia inicial do meta
+    ml = (meta or '').lower().strip()
+    sl = (slug or '').lower()
+
+    # 1 · Pegar ano do slug primeiro (mais confiável que meta)
+    ano_m = _re.search(r'(\d{4})$', sl)
+    ano = int(ano_m.group(1)) if ano_m else 9999
+
+    # 2 · Pegar mês: tentar meta primeiro, depois slug
+    mes = 99
+    # Procura abreviação 3 letras OU nome completo no meta
+    mes_meses = {**MONTH_MAP,
+                 'janeiro':1, 'fevereiro':2, 'março':3, 'marco':3, 'abril':4, 'maio':5, 'junho':6,
+                 'julho':7, 'agosto':8, 'setembro':9, 'outubro':10, 'novembro':11, 'dezembro':12}
+    for nome_mes, num in sorted(mes_meses.items(), key=lambda x: -len(x[0])):
+        if _re.search(rf'\b{nome_mes}\b', ml):
+            mes = num
+            break
+    # Se não achou no meta, pega do slug
+    if mes == 99:
+        slug_m = _re.search(r'([a-z]{3})\d{4}$', sl)
+        if slug_m: mes = MONTH_MAP.get(slug_m.group(1), 99)
+
+    # 3 · Pegar dia inicial do meta: primeiro número 1-31 seguido de separador
     dia = 99
-    if meta:
-        m2 = _re.search(r'^(\d+)(?:[-/–]\d+)?\s', meta.strip())
-        if m2: dia = int(m2.group(1))
+    if ml:
+        # Aceita "3-13", "27/Jul", "06/Ago", "5 setembro", "5 de junho"
+        m_dia = _re.search(r'(?:^|[^0-9])(\d{1,2})[/\-–\s]', ' ' + ml)
+        if m_dia:
+            d = int(m_dia.group(1))
+            if 1 <= d <= 31: dia = d
+
+    if ano == 9999 and mes == 99: return (9999, 99, 99)
     return (ano, mes, dia)
 
 def main():
