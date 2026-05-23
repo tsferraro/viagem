@@ -1,0 +1,1888 @@
+{
+  "title": "🇮🇹 Sardenha · Pais · Ago 2026",
+  "auth_emoji": "🇮🇹",
+  "auth_title": "Sardenha · Pais",
+  "auth_subtitle": "06 → 21 Ago 2026 · Roteiro pais",
+  "header_title": "Sardenha · Pais 2026",
+  "header_sub": "06/Ago → 21/Ago · 16 dias · Pais Tobia",
+  "password": "sardenha2026",
+  "legend_group_text": "👨‍👩‍👧‍👦 Dias com Tobia, esposa e neta",
+  "legend_notes_html": "<strong>🟢 Verde</strong>: tranquilo · <strong>🟡 Amarelo</strong>: atenção (esforço/calor/logística) · <strong>🔴 Vermelho</strong>: dia pesado. <strong>👨‍👩‍👧‍👦</strong>: dias com Tobia + família (07/Ago Bonifacio · 08-15/Ago Sardenha juntos). <strong>Bases</strong>: Olbia (06) · Bonifacio (07) · Càbras (08-12) · Maladroxia (12-16) · Cala Gonone (16-18) · Santa Teresa/Capo Testa (18-21).",
+  "days": [
+    {
+      "date": "Qui 6/Ago",
+      "tema": "Chegada Olbia · noite no centro",
+      "temaCurto": "Chegada",
+      "bairro": "🛫 Olbia & Norte",
+      "grupo": false,
+      "cor": "#1e40af",
+      "gradA": "#1e3a8a",
+      "gradB": "#1d4ed8",
+      "stops": [
+        {
+          "hora": "16:00",
+          "emoji": "🛬",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Aeroporto Olbia Costa Smeralda (OLB)",
+          "cat": "Chegada · pickup carro alugado",
+          "coord": {"lat": 40.8987, "lng": 9.5176}
+        },
+        {
+          "hora": "17:00",
+          "emoji": "🏨",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Check-in hotel Olbia centro",
+          "cat": "1 noite · prep encontro de amanhã",
+          "sobre": "Hotel central recomendado: Mercure Olbia (~€72) — perto do Corso Umberto, permite passeio noturno relaxado. Alternativa próxima ao aeroporto: Jazz Hotel (400m do OLB) caso queiram acordar cedo no dia seguinte. Olbia é cidade de passagem mas o centro histórico é genuinamente agradável pra uma tarde.",
+          "imperdivel": "Aperitivo (Vermentino + spritz) no Corso Umberto entre 18h-19h · ruas viram pedestres, locais saem em massa",
+          "dicas": [
+            "Aluguel carro Olbia · normalmente menos taxa que one-way · devolve mesmo aeroporto dia 21",
+            "Carro mantém com vocês até 21/Ago · usem-no entre Bonifacio (07) e retorno",
+            "Pague estacionamento azul (€2/h) ou estacionamento gratuito 200m do Corso",
+            "Reserva pra jantar antecipada · agosto enche"
+          ],
+          "duracao": "1h check-in",
+          "custo": "€72-115 noite",
+          "acessibilidade": "Centro plano · totalmente walkable",
+          "coord": {"lat": 40.9238, "lng": 9.5026}
+        },
+        {
+          "hora": "18:30",
+          "emoji": "🚶",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Passeggiata Corso Umberto · Olbia centro",
+          "cat": "Aperitivo + 2 igrejas + jantar",
+          "sobre": "Centro histórico compacto e walkable. Após 19h o Corso Umberto vira pedestre — cafés enchem com locais. Duas igrejas notáveis pra entrar: a Basilica di San Simplicio (Romanesca do séc. XI, em granito sardo · uma das mais bonitas da Sardenha · 10min do Corso) e a Chiesa di San Paolo (cúpula colorida, no próprio Corso · sem desvio). Sequência leve antes do jantar pra aclimatar à viagem.",
+          "imperdivel": "Basilica di San Simplicio · granito puro, austera, evocativa",
+          "dicas": [
+            "Aperitivo em qualquer café do Corso · spritz €5, Vermentino glass €4",
+            "Igrejas grátis · Basilica fecha 20h",
+            "Roupa fresca · Olbia em agosto faz 30°C+ à noite"
+          ],
+          "duracao": "1h30 a 2h",
+          "custo": "€15-25 aperitivos",
+          "acessibilidade": "Total",
+          "coord": {"lat": 40.9238, "lng": 9.5026}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar Olbia · 1ª noite Sardenha",
+          "cat": "3 opções no centro",
+          "coord": {"lat": 40.9238, "lng": 9.5026},
+          "opcoes": [
+            {"nome": "Ristorante Gallura (Corso Umberto)", "desc": "Cozinha tradicional sarda · fregola con vongole, polpo grelhado · ambiente clássico", "preco": "€35-50", "dist": "Centro"},
+            {"nome": "Da Rino (perto do porto)", "desc": "Peixe fresco · bottarga, ravioli sardi · familiar · clássico", "preco": "€30-45", "dist": "Porto"},
+            {"nome": "Trattoria Da Romolo", "desc": "Mais casual · carne de cordeiro grelhada, queijos sardos · preço bom", "preco": "€25-35", "dist": "Centro"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Sex 7/Ago",
+      "tema": "Olbia → Bonifacio · encontro com Tobia",
+      "temaCurto": "Bonifacio",
+      "bairro": "🏰 Bonifacio (visita)",
+      "grupo": true,
+      "cor": "#db2777",
+      "gradA": "#831843",
+      "gradB": "#9d174d",
+      "stops": [
+        {
+          "hora": "07:30",
+          "emoji": "🥐",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Café da manhã + check-out Olbia",
+          "cat": "Saída cedo pra ferry 11h",
+          "sobre": "Saída cedo de Olbia rumo a Santa Teresa di Gallura (~1h-1h15 drive via SS125 + SP90). Plano: pegar ferry Santa Teresa → Bonifacio no início da tarde. Carro fica em Santa Teresa (parking porto) — atravessam como passageiros (mais barato que carro na balsa). Voltam mesmo dia/manhã seguinte de Bonifacio.",
+          "imperdivel": "Não esquece de levar passaportes · entrada na França (Córsega)",
+          "dicas": [
+            "Reservar ferry com antecedência · agosto enche · Moby ou Ichnusa",
+            "Passageiro só (sem carro) é €17-35 ida · carro €80-130 (cara · evita)",
+            "Estacionamento Santa Teresa porto · ~€10-15/dia",
+            "Confirma horário ferry de retorno amanhã com Tobia"
+          ],
+          "duracao": "1h30",
+          "custo": "—",
+          "acessibilidade": "—",
+          "coord": {"lat": 40.9238, "lng": 9.5026}
+        },
+        {
+          "hora": "09:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Olbia → Santa Teresa di Gallura",
+          "cat": "~1h-1h15 · SS125 + SP90 · costa nordeste",
+          "coord": {"lat": 41.2380, "lng": 9.1944}
+        },
+        {
+          "hora": "11:00",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Ferry Santa Teresa → Bonifacio",
+          "cat": "~50min · Moby/Ichnusa · passageiro €17-35",
+          "coord": {"lat": 41.3875, "lng": 9.1544}
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🤗",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Encontro com Tobia + família em Bonifacio",
+          "cat": "Almoço de chegada juntos",
+          "sobre": "Encontro com Tobia, esposa e a neta após viagem deles na Córsega. Reunião especial — começo da semana juntos. Almoço no porto pra todos relaxarem após a balsa. Tarde livre: andar pela cidadela medieval de Bonifacio, ver as falésias brancas, conhecer onde Tobia está hospedado.",
+          "imperdivel": "Abraçar a neta · ela vai estar derrubada de excitação",
+          "dicas": [
+            "Tobia organiza reserva almoço · provavelmente Da Passano (tapas corsas pra dividir)",
+            "À tarde · walking tour da cidadela com Tobia (ele já planejou)",
+            "Hotel/pousada em Bonifacio · pernoita 1 noite só · reservar antes",
+            "Confirma ferry de retorno amanhã (todos juntos atravessam pra Sardenha)"
+          ],
+          "duracao": "Resto da tarde",
+          "custo": "—",
+          "acessibilidade": "Cidadela tem ladeiras · descansa do almoço",
+          "coord": {"lat": 41.3875, "lng": 9.1544}
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🏰",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Walking tour Cidadela de Bonifacio · com Tobia",
+          "cat": "5 stops · cidade-estado genovesa do séc. XII",
+          "sobre": "Tobia preparou um tour pela haute ville pra apresentar Bonifacio. Fundada pelo conde Bonifácio II de Toscana em 833. Dominada por Pisa, depois Gênova (8 séculos). Casas altas e estreitas (genovesas), pedra de calcário branco, dialeto local Bonifacien (ligure). AVISO: o Escalier du Roi d'Aragon (45° de inclinação, 187 degraus) é desafiador. Pode ficar no mirador do topo — a vista já é o premiado.",
+          "imperdivel": "Vista das falésias da Loggia · postal mais icônico de Bonifacio",
+          "dicas": [
+            "Sapato confortável · paralelepípedo desigual",
+            "Escalier: avisar Tobia se não topam descer · ficam no topo (mirador suficiente)",
+            "Sorveteria Da Mémé na Place du Marché · sabores corsos (castanha, mel)",
+            "Volta antes do escurecer · jantar família reunida"
+          ],
+          "duracao": "2h",
+          "custo": "Escalier €2.50",
+          "acessibilidade": "MISTA · ramparts ok · Escalier inacessível com problema de joelho",
+          "coord": {"lat": 41.3872, "lng": 9.1597},
+          "walkingTours": [
+            {
+              "nome": "Cidadela · 🏰 Caminho Histórico",
+              "descricao": "Porte de Gênes → Bastion → Sainte-Marie → Loggia (mirador) → Escalier (topo) · ~2h · 5 stops",
+              "stops": [
+                {"n": 1, "nome": "Porte de Gênes (entrada principal)", "coord": {"lat": 41.3874, "lng": 9.1583}},
+                {"n": 2, "nome": "Bastion de l'Etendard (museu + vista)", "coord": {"lat": 41.3876, "lng": 9.1589}},
+                {"n": 3, "nome": "Église Sainte-Marie-Majeure (cisterna)", "coord": {"lat": 41.3870, "lng": 9.1597}},
+                {"n": 4, "nome": "Loggia · mirador sul (falésias)", "coord": {"lat": 41.3855, "lng": 9.1578}},
+                {"n": 5, "nome": "Escalier du Roi d'Aragon (topo)", "coord": {"lat": 41.3840, "lng": 9.1558}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍷",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar especial · família reunida",
+          "cat": "Marcado por Tobia",
+          "coord": {"lat": 41.3872, "lng": 9.1597},
+          "opcoes": [
+            {"nome": "Les Quatre Vents (porto)", "desc": "Classy · frutos do mar · vista marina iluminada · reserva", "preco": "€50-70", "dist": "Porto"},
+            {"nome": "L'Archivolto (cidadela)", "desc": "Trattoria acolhedora · pasta com brocciu, cordeiro mel", "preco": "€40-55", "dist": "Cidadela"},
+            {"nome": "Da Passano (porto)", "desc": "Tapas corsas pra partilhar · perfeito com a neta", "preco": "€35-50", "dist": "Porto"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Sáb 8/Ago",
+      "tema": "Transição todos juntos · Bonifacio → Càbras",
+      "temaCurto": "Transição",
+      "bairro": "🛫 Transit",
+      "grupo": true,
+      "cor": "#dc2626",
+      "gradA": "#7f1d1d",
+      "gradB": "#991b1b",
+      "stops": [
+        {
+          "hora": "07:30",
+          "emoji": "🧳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "red",
+          "nome": "Check-out + saída cedo",
+          "cat": "Dia longo · plano apertado",
+          "sobre": "Dia de logística pesada todos juntos: ferry Bonifacio → Santa Teresa, retomada do carro de vocês, drive até Càbras (~3h30). Tobia separadamente pega novo carro alugado em Olbia (cruza ônibus). Plano consultor: vocês saem como passageiros do ferry pra evitar levar o carro na travessia, pegam carro em Santa Teresa e seguem pra Càbras. Saída do hotel até 8h.",
+          "imperdivel": "Café reforçado antes de embarcar · dia é longo",
+          "dicas": [
+            "Ferry 09h Bonifacio → Santa Teresa · 50min",
+            "Almoço rápido em Santa Teresa após o ferry · 30-45min só",
+            "SS131 até Oristano · ~2h30 estrada boa",
+            "Confirma chegada hotel Càbras · check-in 16h"
+          ],
+          "duracao": "—",
+          "custo": "—",
+          "acessibilidade": "—",
+          "coord": {"lat": 41.3872, "lng": 9.1597}
+        },
+        {
+          "hora": "09:00",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Ferry Bonifacio → Santa Teresa di Gallura",
+          "cat": "~50min · todos juntos · passageiros",
+          "coord": {"lat": 41.2380, "lng": 9.1944}
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🍝",
+          "periodo": "manha",
+          "tipo": "opcoes",
+          "nome": "Almoço rápido Santa Teresa",
+          "cat": "30-45min · prático",
+          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "opcoes": [
+            {"nome": "Caffè do porto", "desc": "Panini + café · 30min · economiza tempo", "preco": "€10-15", "dist": "Porto"},
+            {"nome": "Trattoria Piazza Vittorio Emanuele", "desc": "Prato do dia €15 · sem perda de tempo · simples", "preco": "€15-20", "dist": "10min a pé"},
+            {"nome": "Picnic comprado", "desc": "Padaria local · come no caminho · economia de 1h", "preco": "€10", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Santa Teresa → Càbras",
+          "cat": "~3h30 · SS131 Carlo Felice · sul",
+          "coord": {"lat": 39.9300, "lng": 8.5314}
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🏠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Chegada Càbras · base 4 noites",
+          "cat": "Sinis peninsula · próxima à Tharros e Is Arutas",
+          "sobre": "Càbras é vila de pescadores na península do Sinis, ~6km de Oristano. Cidade mundial da bottarga di muggine (ovas de tainha curadas). Vila tranquila, ~8000 habitantes. Próxima base estratégica: 8min a Is Arutas, 15min a Tharros, 60min a Bosa. Tobia chega em Càbras também (carro próprio dele). Conheçam o pequeno centro à noite, hotel/Airbnb organizado por Tobia provavelmente.",
+          "imperdivel": "Comprar bottarga da cooperativa local · presente Tobia · ~€60-80 100g",
+          "dicas": [
+            "Carrefour ou Tigotà no centro · estoque pra semana",
+            "Càbras é menor que Oristano · poucos restaurantes · reservar",
+            "Museu Mont'e Prama (gigantes de pedra) vale visita · vai amanhã ou dia após (5 min do hotel)",
+            "Mercado de peixe pela manhã na cooperativa"
+          ],
+          "duracao": "Resto do dia",
+          "custo": "—",
+          "acessibilidade": "Vila plana · ok",
+          "coord": {"lat": 39.9300, "lng": 8.5314}
+        },
+        {
+          "hora": "20:00",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar Càbras · 1ª noite",
+          "cat": "Foco bottarga + peixe",
+          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "opcoes": [
+            {"nome": "Il Caminetto (Via Cristoforo Colombo 8)", "desc": "Michelin Guide · spaghetti bottarga, vongole · institução · reservar", "preco": "€35-50", "dist": "Centro"},
+            {"nome": "Sa Funta (Via Garibaldi 25)", "desc": "Cozinha tradicional sarda · enguia defumada, choco em Vernaccia · adventurous", "preco": "€30-45", "dist": "Centro"},
+            {"nome": "Trattoria Sa Bell'e Crabasa", "desc": "Mais simples · peixe fresco · jantar tranquilo com a neta", "preco": "€20-30", "dist": "Centro"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Dom 9/Ago",
+      "tema": "Sinis · Is Arutas + Tharros + Putzu Idu",
+      "temaCurto": "Sinis",
+      "bairro": "🏖️ Sinis & Oristano",
+      "grupo": true,
+      "transport": "driving",
+      "baseCoord": {"lat": 39.9300, "lng": 8.5314},
+      "baseName": "Càbras, Sardinia",
+      "cor": "#0d9488",
+      "gradA": "#134e4a",
+      "gradB": "#115e59",
+      "stops": [
+        {
+          "hora": "08:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Càbras → Is Arutas",
+          "cat": "~15min · SP6 direção San Giovanni di Sinis",
+          "coord": {"lat": 39.9513, "lng": 8.3997}
+        },
+        {
+          "hora": "09:00",
+          "emoji": "🏖️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Spiaggia di Is Arutas · areia de quartzo",
+          "cat": "480m · grãos brancos/rosa de quartzo",
+          "sobre": "Praia única no mundo: 'areia' feita de grãos de quartzo finos (rice grain), brancos e rosados. Não é areia comum — são minúsculos cristais arredondados. Parte do Marine Protected Area de Sinis. PROIBIDO levar quartzo embora (multas). Água cristalina, lagoa rasa. Lotada em agosto pós-10h — chegar antes das 09h30 é a regra de ouro.",
+          "imperdivel": "Andar descalço · sensação única dos grãos · NÃO leva nenhuma na bolsa",
+          "dicas": [
+            "Parking €10/dia · enche às 10h em agosto · chegar 9h",
+            "Salva-vidas em serviço · zonas de banho demarcadas",
+            "Chuveiros + WC públicos no parking",
+            "Sombra escassa · leva guarda-sol",
+            "Combina com Tharros (15min) e/ou Putzu Idu (mesmo dia)"
+          ],
+          "duracao": "Manhã inteira",
+          "custo": "€10 parking · €15-20 aluguel cadeira",
+          "acessibilidade": "Trilha curta do parking · areia firme, fácil andar",
+          "coord": {"lat": 39.9513, "lng": 8.3997}
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço San Giovanni di Sinis",
+          "cat": "Vila pesqueira próxima",
+          "coord": {"lat": 39.8960, "lng": 8.4340},
+          "opcoes": [
+            {"nome": "Beach restaurant San Giovanni", "desc": "Pé na areia · peixe grelhado, fregola alle vongole · simples", "preco": "€25-35", "dist": "Praia"},
+            {"nome": "Ristorante Mediterraneo", "desc": "Praia · mais elaborado · reserve antecipado", "preco": "€35-45", "dist": "San Giovanni"},
+            {"nome": "Picnic na praia", "desc": "Comprou na padaria de Càbras antes · come com vista", "preco": "€15", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Tharros · ruínas fenício-romanas no mar",
+          "cat": "Sítio arqueológico em península no mar",
+          "sobre": "Cidade fenícia-púnica fundada ~séc. VIII a.C., depois romana, abandonada ~1050 d.C. Localizada em ponta extrema da península do Sinis (Capo San Marco), com vista oceânica para Capo Frasca. Remanescentes: termas romanas (decumanus, colunas de pé), Nuraghe Su Muru Mannu (Idade do Bronze), Tophet (cemitério ritual fenício). Setting espetacular — ruínas brancas em península com mar dos dois lados. Visita combinada com Museu Civico Cabras vale o ticket combinado (€10).",
+          "imperdivel": "As colunas romanas com mar atrás · postal único da Sardenha",
+          "dicas": [
+            "Verão (jun-set): 9h-19h · agosto extendido até 20h",
+            "Ticket combinado Tharros + Museo Civico Cabras = €10 (separados €6.50+€5)",
+            "Tarde com luz dourada é melhor pra fotos · sol forte ~14h é duro",
+            "Sem sombra · chapéu + água obrigatórios",
+            "1h30-2h percurso completo"
+          ],
+          "duracao": "1h30-2h",
+          "custo": "€6.50 sozinho · €10 combinado Museu Cabras",
+          "acessibilidade": "Trilha de pedra · degraus em alguns pontos · sapato firme",
+          "coord": {"lat": 39.8938, "lng": 8.4341},
+          "coord_unverified": true
+        },
+        {
+          "hora": "17:00",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Spiaggia di Putzu Idu · alternativa calma",
+          "cat": "1130m · areia branca fina · águas rasas",
+          "sobre": "Praia alternativa pra fim de tarde (se aguentarem). Areia branca FINA (não quartzo como Is Arutas), 1.130m de extensão, fundo raso por 300m — perfeita pra um banho relaxante. Mais infraestrutura que Is Arutas: restaurantes, aluguel de pranchas, waterfront. Boa pra desacelerar o ritmo depois das ruínas. ~15min de Tharros.",
+          "imperdivel": "Pôr do sol na água · luz dourada típica do Sinis",
+          "dicas": [
+            "Mais espalhada que Is Arutas · cabe mais gente · fica menos sufocante",
+            "Restaurantes na frente · jantar opção aqui (volta a Càbras a noite, 20min)",
+            "Vento de oeste pode entrar à tarde · ok pra refrescar"
+          ],
+          "duracao": "2h-3h",
+          "custo": "Parking €5-8",
+          "acessibilidade": "Total",
+          "coord": {"lat": 40.0302, "lng": 8.4058}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar · Càbras ou Putzu Idu",
+          "cat": "Conforme cansaço",
+          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "opcoes": [
+            {"nome": "Da Cesare (Putzu Idu beach)", "desc": "Pé na areia · peixe direto · jantar com luz pôr do sol", "preco": "€30-45", "dist": "Praia"},
+            {"nome": "Volta Càbras · Il Caminetto", "desc": "Bottarga · institução · reserva", "preco": "€35-50", "dist": "Càbras"},
+            {"nome": "Jantar leve em casa/airbnb", "desc": "Compra Carrefour · descanso · neta dorme cedo", "preco": "€20", "dist": "—"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Seg 10/Ago",
+      "tema": "Bosa · cidade medieval colorida",
+      "temaCurto": "Bosa",
+      "bairro": "🏛️ Bosa",
+      "grupo": true,
+      "transport": "driving",
+      "baseCoord": {"lat": 39.9300, "lng": 8.5314},
+      "baseName": "Càbras, Sardinia",
+      "cor": "#c2410c",
+      "gradA": "#7c2d12",
+      "gradB": "#9a3412",
+      "stops": [
+        {
+          "hora": "08:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Càbras → Bosa via SS292 costeira",
+          "cat": "~1h15 · estrada panorâmica entre falésias",
+          "coord": {"lat": 40.2993, "lng": 8.4983}
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Bosa · cidade medieval colorida do rio Temo",
+          "cat": "Walking tour · 4 stops · Sa Costa + Castello",
+          "sobre": "Uma das vilas mais bonitas da Sardenha. Casas coloridas (amarelas, vermelhas, ocres) subindo a colina sob o Castello Malaspina (1112). Atravessada pelo rio Temo — único navegável da Sardenha. Estilo medieval intacto: ruelas estreitas (Sa Costa = 'a Costa'), praças escondidas, vista do alto. Diferencial: as 35 antigas tanarias (curtumes) na beira do rio, todas fechadas desde 1960 e hoje monumento de arqueologia industrial — paisagem fotográfica única na Itália. Estrada SS292 costeira até aqui é uma das mais cênicas da ilha.",
+          "imperdivel": "Vista do Castello Malaspina · 360° sobre a vila colorida e o Temo",
+          "dicas": [
+            "Estacionar perto do rio · €2-3/h · cidade velha só a pé",
+            "Castello: entrada ~€3 · inclui freskos do séc XIV da capela Regnos Altos",
+            "Bosa Marina (praia, 3km sul) ok pra fim de tarde se quiserem refrescar",
+            "Almoço no rio: trattoria Ai Pescatori clássica",
+            "Estrada SS292 vale o detour SOZINHA · uma das melhores da Sardenha"
+          ],
+          "duracao": "3h-4h walking tour + Castello",
+          "custo": "€3 castelo · €5 estacionamento",
+          "acessibilidade": "Cidade velha = escadas + ladeiras · castelo só pra fit · Lungofiume plano",
+          "coord": {"lat": 40.2993, "lng": 8.4983},
+          "walkingTours": [
+            {
+              "nome": "Bosa · 🏛️ Cidade Medieval Colorida",
+              "descricao": "Lungofiume Temo → Sas Conzas (tanarias) → Sa Costa → Castello Malaspina · ~2h30 · 4 stops",
+              "stops": [
+                {"n": 1, "nome": "Lungofiume Temo (promenade ribeirinha)", "coord": {"lat": 40.2980, "lng": 8.4990}},
+                {"n": 2, "nome": "Sas Conzas (antigas tanarias)", "coord": {"lat": 40.2955, "lng": 8.5020}},
+                {"n": 3, "nome": "Sa Costa (cidade velha colorida)", "coord": {"lat": 40.2995, "lng": 8.5010}},
+                {"n": 4, "nome": "Castello Malaspina (mirador)", "coord": {"lat": 40.3005, "lng": 8.5015}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍝",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Bosa · à beira do Temo",
+          "cat": "3 opções",
+          "coord": {"lat": 40.2980, "lng": 8.4990},
+          "opcoes": [
+            {"nome": "Ai Pescatori (Lungofiume)", "desc": "Beira do rio · spaghetti bottarga, peixe local · clássico", "preco": "€30-40", "dist": "Rio"},
+            {"nome": "Borgo Sant'Ignazio", "desc": "Cidade velha · mais romântico · cordeiro sardo, pasta caseira", "preco": "€35-45", "dist": "Sa Costa"},
+            {"nome": "Pizzeria Locanda di Corte", "desc": "Casual · pizza forno lenha · ok com a neta", "preco": "€20-25", "dist": "Centro"}
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Bosa Marina · banho de fim de tarde",
+          "cat": "Opcional · 3km sul de Bosa",
+          "sobre": "Praia da vila marítima 3km ao sul de Bosa. Areia firme, fundo raso, vista da torre genovesa. Boa pra fim de tarde antes de voltar a Càbras. Ou pular e voltar direto se cansados.",
+          "imperdivel": "Torre Genovesa de Bosa Marina · ao fim da praia",
+          "dicas": [
+            "Pular sem culpa se cansados de Bosa · dia já tem muito a pé",
+            "Volta Càbras: 1h pela SS292 OU SS129 (mais rápida 50min)",
+            "Por do sol no caminho de volta se quiserem parar à beira mar"
+          ],
+          "duracao": "1h30",
+          "custo": "Grátis",
+          "acessibilidade": "Total",
+          "coord": {"lat": 40.2740, "lng": 8.4830}
+        },
+        {
+          "hora": "18:30",
+          "emoji": "🚗",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Bosa → Càbras",
+          "cat": "~1h volta · SS292 ou SS129",
+          "coord": {"lat": 39.9300, "lng": 8.5314}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar leve Càbras",
+          "cat": "Dia foi cheio",
+          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "opcoes": [
+            {"nome": "Trattoria Sa Bell'e Crabasa", "desc": "Simples · prato do dia · descanso", "preco": "€20-30", "dist": "Centro"},
+            {"nome": "Casa", "desc": "Salada + queijo sardo + vinho Vermentino · descontração", "preco": "€15", "dist": "—"},
+            {"nome": "Sa Funta (se ainda aguentam)", "desc": "Repete · pratos diferentes · vale", "preco": "€30-45", "dist": "Centro"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Ter 11/Ago",
+      "tema": "Day off · Stagno flamingos + Museu Mont'e Prama",
+      "temaCurto": "Flamingos",
+      "bairro": "🏖️ Sinis & Oristano",
+      "grupo": true,
+      "cor": "#06b6d4",
+      "gradA": "#155e75",
+      "gradB": "#0e7490",
+      "stops": [
+        {
+          "hora": "07:00",
+          "emoji": "🦩",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Stagno di Càbras · flamingos ao amanhecer",
+          "cat": "Maior população europeia de flamingos rosa",
+          "sobre": "Maior lagoa salobra da Sardenha · maior população de flamingos rosa da Europa. Permanente no ano todo, mas melhor luz e maior concentração no amanhecer/golden hour. Mirador na ponte SP6 entre Stagno di Cabras e Mistras (saída de Càbras direção San Salvatore) — pull-off do lado mar. Acesso gratuito, sem entrada. Levar binóculos.",
+          "imperdivel": "Pôr ou nascer do sol com bando de flamingos voando · fotos da vida",
+          "dicas": [
+            "Amanhecer = 6h30-7h em agosto · luz dourada perfeita",
+            "Sandália impermeável · pode ter lama/sal",
+            "Sem mosquitos de manhã · à tarde pioram",
+            "Binóculos ou zoom 200mm+ · flamingos ficam distantes",
+            "1h é suficiente · não tem trilha longa"
+          ],
+          "duracao": "1h30",
+          "custo": "Grátis",
+          "acessibilidade": "Estacionamento na pista · curta caminhada plana",
+          "coord": {"lat": 39.9503, "lng": 8.4833}
+        },
+        {
+          "hora": "09:00",
+          "emoji": "☕",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Café da manhã + recarrega",
+          "cat": "Volta tranquila a Càbras",
+          "sobre": "Manhã tranquila depois do early start. Café reforçado em Càbras, planejamento do dia. Tobia provavelmente quer ficar em casa ou ir a Putzu Idu de novo com a neta. Vocês podem aproveitar pra visitar o Museu Civico antes da turistada chegar.",
+          "imperdivel": "—",
+          "dicas": [
+            "Bar/café tradicional · cornetto + cappuccino",
+            "Padaria do centro abre 7h · pão fresco",
+            "Verificar previsão · agosto pode dar vento de tarde"
+          ],
+          "duracao": "1h",
+          "custo": "€10 família",
+          "acessibilidade": "Total",
+          "coord": {"lat": 39.9300, "lng": 8.5314}
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🗿",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Museu Civico Cabras · Gigantes de Mont'e Prama",
+          "cat": "Estátuas únicas no mundo · 3000 a.C.",
+          "sobre": "Coleção mais importante de Sardenha pré-nurágica: os 'Giants of Mont'e Prama' — estátuas de pedra de guerreiros, boxers e arqueiros, esculpidas ~3000 a.C., descobertas em 1974 num campo de aletria perto de Càbras. Únicas no Mediterrâneo da época. Visita ~1h30. Combina perfeitamente com Tharros (de ontem) — ticket combinado vale €10. Museu não é grande mas concentra peças impressionantes.",
+          "imperdivel": "Encarar os olhos circulares concêntricos dos Giants · única no mundo",
+          "dicas": [
+            "Ticket combinado Tharros+Museu = €10 · se já compraram ontem, hoje paga só €5 sozinho",
+            "Áudio-guia incluso · vale pelos detalhes históricos",
+            "Restauração das estátuas levou décadas · vale o contexto",
+            "1h30 é suficiente"
+          ],
+          "duracao": "1h30",
+          "custo": "€5 sozinho · €10 combinado",
+          "acessibilidade": "Total · museu acessível",
+          "coord": {"lat": 39.9296, "lng": 8.5330}
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Càbras · com bottarga",
+          "cat": "Dia mais leve · vale comer bem",
+          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "opcoes": [
+            {"nome": "Sa Funta", "desc": "Adventurous · enguia, choco · pratos diferentes", "preco": "€30-45", "dist": "Centro"},
+            {"nome": "Il Caminetto", "desc": "Repete bottarga · vale a 2ª vez", "preco": "€35-50", "dist": "Centro"},
+            {"nome": "Mercado de Càbras + picnic", "desc": "Compra direto do mercado · tomate, bottarga, pão · come perto do mar", "preco": "€20 família", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Tarde livre · Putzu Idu ou pré-Maladroxia",
+          "cat": "Relax antes da transição amanhã",
+          "sobre": "Tarde tranquila pra recarregar. Opções: voltar à Putzu Idu pra mais um banho calmo, ficar no centrinho de Càbras, ou começar a organizar mala pra amanhã (transição pra Maladroxia, ~3h drive). Tobia provavelmente quer relax na praia com a neta. Vocês podem caminhar pelo centro de Oristano (6km, 10min de carro) se quiserem mudar de ar — capital regional, mais movimento.",
+          "imperdivel": "Vermentino bem gelado num bar do porto · fim de tarde",
+          "dicas": [
+            "Compra bottarga pra levar · cooperativa de pescadores Càbras",
+            "Tigotà ou Carrefour · provisões pra Maladroxia",
+            "Confirma chegada hospedagem Maladroxia · amanhã 16h check-in"
+          ],
+          "duracao": "Resto da tarde",
+          "custo": "—",
+          "acessibilidade": "Total",
+          "coord": {"lat": 39.9300, "lng": 8.5314}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍷",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar despedida Càbras",
+          "cat": "Última noite",
+          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "opcoes": [
+            {"nome": "Il Caminetto (reserva)", "desc": "Última chance · bottarga top + vinho Vernaccia di Oristano · noite especial", "preco": "€35-50", "dist": "Centro"},
+            {"nome": "Sa Funta", "desc": "Pratos diferentes do almoço · enguia defumada", "preco": "€30-45", "dist": "Centro"},
+            {"nome": "Casa", "desc": "Jantar simples · descanso · amanhã é dia de drive", "preco": "€20", "dist": "—"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Qua 12/Ago",
+      "tema": "Càbras → Maladroxia · transição sul",
+      "temaCurto": "Maladroxia",
+      "bairro": "🛫 Transit",
+      "grupo": true,
+      "cor": "#ea580c",
+      "gradA": "#7c2d12",
+      "gradB": "#9a3412",
+      "stops": [
+        {
+          "hora": "09:30",
+          "emoji": "🧳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Check-out Càbras",
+          "cat": "Saída tranquila",
+          "sobre": "Saída leve depois de 4 noites em Càbras. Drive até Maladroxia (Sant'Antioco island) ~2h pela SS131 + SS195. Almoço no caminho ou em Maladroxia depois do check-in. Tobia segue também — todos vão pra mesma base de praia.",
+          "imperdivel": "Banho rápido na lagoa rasa de Maladroxia ao chegar",
+          "dicas": [
+            "SS131 → SS130 → SS195 Sant'Antioco · estrada boa, ~2h",
+            "Almoço Iglesias no caminho · cidade mineira interessante (não obrigatório)",
+            "Maladroxia tem só hospedagens · poucos restaurantes · check-in 16h"
+          ],
+          "duracao": "1h checkout",
+          "custo": "—",
+          "acessibilidade": "—",
+          "coord": {"lat": 39.9300, "lng": 8.5314}
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Càbras → Maladroxia (Sant'Antioco)",
+          "cat": "~2h · SS131 + SS195 · entra em Sant'Antioco pela ponte",
+          "coord": {"lat": 38.9989, "lng": 8.4489}
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🍝",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Iglesias ou chegada Maladroxia",
+          "cat": "Cidade mineira ou direto base",
+          "coord": {"lat": 39.0664, "lng": 8.4522},
+          "opcoes": [
+            {"nome": "Trattoria Iglesias centro", "desc": "Cidade mineira · 30min desvio · culinária do interior · prato do dia €15-20", "preco": "€20-30", "dist": "Iglesias"},
+            {"nome": "Continua até Maladroxia (rápido)", "desc": "Almoço tardio na praia · ganha tempo · mais cedo na hospedagem", "preco": "—", "dist": "—"},
+            {"nome": "Hotel Ristorante Lounge Maladroxia", "desc": "Praia · terraço com vista mar · cozinha simples", "preco": "€25-35", "dist": "Praia"}
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🏠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Check-in Maladroxia · base 4 noites",
+          "cat": "Sant'Antioco island · praia toddler-friendly",
+          "sobre": "Maladroxia é praia de ~500m na ilha de Sant'Antioco, ligada à Sardenha por estrada romana de pedra (causeway antigo). Áreas mais turísticas mas ainda calmas — vila pequena, basicamente um conjunto de hospedagens em torno da praia. Areia branca fina, mar emerald-turquoise, fundo super raso (perfeito pra neta brincar). Curiosidade: fontes termais quentes correm sob a areia em alguns pontos! Infraestrutura completa: guarda-sol, espreguiçadeira, bar, banheiro, salva-vidas.",
+          "imperdivel": "Caminhada nos pontos de água quente termal · brincadeira pra neta",
+          "dicas": [
+            "Vila pequena · 2-3 restaurantes só · reserva à noite",
+            "Compras: voltar pra Sant'Antioco town (9km, 15min) · Tigotà no centro",
+            "Sant'Antioco walking tour (Tophet + Museu) reservada pra amanhã",
+            "Acende GPS pro Carloforte ferry (dia 14)"
+          ],
+          "duracao": "Resto da tarde",
+          "custo": "—",
+          "acessibilidade": "Praia plana · ok carrinho neta",
+          "coord": {"lat": 38.9989, "lng": 8.4489}
+        },
+        {
+          "hora": "20:00",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar Maladroxia · 1ª noite",
+          "cat": "Opções limitadas · reservar",
+          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "opcoes": [
+            {"nome": "Hotel Ristorante Lounge Bar Maladroxia", "desc": "Praia · terraço panorâmico · cozinha sarda casual", "preco": "€25-35", "dist": "Praia"},
+            {"nome": "Ittiturismo I Due Fratelli", "desc": "Cooperativa pescadores Sant'Antioco · 15min carro · peixe top fresco · noite especial", "preco": "€35-50", "dist": "15min"},
+            {"nome": "Ristorante Da Silvana (lagoa)", "desc": "Sant'Antioco · rústico · preços bons · local favorito", "preco": "€25-35", "dist": "20min"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Qui 13/Ago",
+      "tema": "Sant'Antioco · walking tour fenício",
+      "temaCurto": "Sant'Antioco",
+      "bairro": "🏛️ Sant'Antioco",
+      "grupo": true,
+      "transport": "driving",
+      "baseCoord": {"lat": 38.9989, "lng": 8.4489},
+      "baseName": "Maladroxia, Sardinia",
+      "cor": "#b91c1c",
+      "gradA": "#7f1d1d",
+      "gradB": "#991b1b",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Maladroxia → Sant'Antioco town",
+          "cat": "~15min · SS126",
+          "coord": {"lat": 39.0664, "lng": 8.4522}
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Sant'Antioco · cidade fenícia 8 sec a.C.",
+          "cat": "Walking tour · 5 stops · Tophet + Museu + Basílica",
+          "sobre": "Sant'Antioco é a 4ª maior ilha do Mediterrâneo (ligada à Sardenha por uma ponte romana ainda em uso). Cidade fenícia chamada Sulci foi fundada no séc. VIII a.C. — uma das mais antigas civilizações de toda a Itália. Conjunto arqueológico no coração da cidade combina Tophet (necrópole infantil fenícia), Museu Barreca (artefatos fenício-púnicos), Basílica com catacumbas únicas (séc V cristãs sobre tumbas púnicas) e ruinas da tonnara (fábrica de atum séc XIX). Walking tour denso e único — Sardenha pré-nurágica e fenícia num só lugar.",
+          "imperdivel": "Catacumbas cristãs construídas DENTRO de tumbas púnicas · Basilica Sant'Antioco Martire",
+          "dicas": [
+            "Combina Tophet + MAB no ticket · ~€5-8 com tour guiado",
+            "Basílica + catacumbas separado · entrada ~€3",
+            "Verão (mar-out): 9h-19h · noite-de-vesp esfria · sai 17h",
+            "Bottarga aqui também é forte · diferente do estilo Càbras",
+            "Almoço na cidade · simples"
+          ],
+          "duracao": "3h-4h walking tour",
+          "custo": "€10-15 entradas combinadas",
+          "acessibilidade": "Centro tem ladeira leve · catacumbas têm escada estreita",
+          "coord": {"lat": 39.0706, "lng": 8.4500},
+          "walkingTours": [
+            {
+              "nome": "Sant'Antioco · 🏛️ Caminho Fenício-Cristão",
+              "descricao": "Tophet → MAB → Basilica/Catacumbas → Necrópole púnica → Tonnara Cala Sapone · ~3h · 5 stops",
+              "stops": [
+                {"n": 1, "nome": "Tophet di Sant'Antioco (cemitério ritual)", "coord": {"lat": 39.0706, "lng": 8.4500}},
+                {"n": 2, "nome": "Museo Barreca MAB (artefatos)", "coord": {"lat": 39.0706, "lng": 8.4500}},
+                {"n": 3, "nome": "Basilica Sant'Antioco Martire + catacumbas", "coord": {"lat": 39.0672, "lng": 8.4522}},
+                {"n": 4, "nome": "Necrópole púnica subterrânea", "coord": {"lat": 39.0670, "lng": 8.4524}},
+                {"n": 5, "nome": "Tonnara ruins · Cala Sapone", "coord": {"lat": 39.0590, "lng": 8.4480}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Sant'Antioco centro",
+          "cat": "Mid-walking tour",
+          "coord": {"lat": 39.0664, "lng": 8.4522},
+          "opcoes": [
+            {"nome": "Trattoria de Sant'Antioco", "desc": "Centro · pratos sardos clássicos · preço bom", "preco": "€20-30", "dist": "Centro"},
+            {"nome": "Locanda del Borgo", "desc": "Romântico · cozinha de mar e terra · reserva", "preco": "€35-45", "dist": "Centro"},
+            {"nome": "Picnic mira-mar", "desc": "Comprou padaria local · come perto da Basílica", "preco": "€15", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "17:00",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Volta a Maladroxia · banho de fim de tarde",
+          "cat": "Recarga após dia cultural",
+          "sobre": "Tarde tranquila depois do walking tour intenso. Banho relaxante na praia de Maladroxia. Sombra começa ~17h por causa das colinas oeste. Mar quente e calmo perfeito pra recuperação. Janta na vila.",
+          "imperdivel": "Pôr do sol da praia · luz dourada na água",
+          "dicas": [
+            "Espreguiçadeira no fim do dia · alguns lugares cobram €5",
+            "Conferir programa de Carloforte amanhã com Tobia · juntos ou separados?",
+            "Caminhada plana na areia · ótimo pra esticar pernas após walking"
+          ],
+          "duracao": "2h-3h",
+          "custo": "—",
+          "acessibilidade": "Total",
+          "coord": {"lat": 38.9989, "lng": 8.4489}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar Maladroxia",
+          "cat": "Vila",
+          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "opcoes": [
+            {"nome": "Hotel Ristorante Lounge", "desc": "Praia · vista mar · variedade de pratos", "preco": "€25-35", "dist": "Praia"},
+            {"nome": "Ittiturismo I Due Fratelli", "desc": "Peixe top · sai Maladroxia 15min · vale o jantar especial", "preco": "€35-50", "dist": "15min"},
+            {"nome": "Casa", "desc": "Compra Sant'Antioco · simples · relax", "preco": "€20", "dist": "—"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Sex 14/Ago",
+      "tema": "Carloforte · Isla de San Pietro",
+      "temaCurto": "Carloforte",
+      "bairro": "🏝️ Carloforte",
+      "grupo": true,
+      "transport": "driving",
+      "baseCoord": {"lat": 38.9989, "lng": 8.4489},
+      "baseName": "Maladroxia, Sardinia",
+      "cor": "#0e7490",
+      "gradA": "#155e75",
+      "gradB": "#0891b2",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Maladroxia → Calasetta (ferry Carloforte)",
+          "cat": "~25min · norte da ilha · ferry porto",
+          "coord": {"lat": 39.1078, "lng": 8.3686}
+        },
+        {
+          "hora": "09:45",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Ferry Calasetta → Carloforte",
+          "cat": "~30min · Delcomar · €4-5 passageiro · €17 carro",
+          "coord": {"lat": 39.1451, "lng": 8.3073}
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🏝️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Carloforte · vila genovesa do atum",
+          "cat": "Caruggi + Tonnara + culinária única",
+          "sobre": "Vila fundada em 1738 por pescadores de Pegli (Gênova) — daí a arquitetura, dialeto (Tabarchino, ainda falado!) e culinária ligure no meio do Mediterrâneo sardo. Centro histórico com caruggi (ruelas genovesas), casas pastel, muralhas defensivas. Tonnara (fábrica de atum) é uma das últimas tradicionais do Mediterrâneo — visita guiada possível. Culinária única: cascà (couscous com peixe, herança árabe-ligure), farinata, e claro, atum em mil preparos. Festival Girotonno em maio-junho (não esse ano) é evento internacional. Dia inteiro pra caminhar, almoçar e dar uma esticada na praia La Bobba ou Cala Lunga.",
+          "imperdivel": "Atum em Carloforte · provar diferentes cortes · ventresca de barriga é o melhor",
+          "dicas": [
+            "Caminhe os caruggi · Basilica San Carlo Borromeo é central",
+            "Tonnara só com visita guiada · agendar antes",
+            "Praia La Bobba ou Cala Lunga · 10-15min de carro do centro",
+            "Reserva Al Tonno di Corsa (Michelin) com bastante antecedência · jantar especial OU almoço top",
+            "Próximo ferry pra Calasetta a cada ~1h durante o dia"
+          ],
+          "duracao": "Dia inteiro · 6-7h na ilha",
+          "custo": "€8-10 ferry total · refeições à parte",
+          "acessibilidade": "Caruggi com paralelepípedo + escadas · cidade plana mas íngreme em pontos",
+          "coord": {"lat": 39.1451, "lng": 8.3073}
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🐟",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Carloforte · ATUM",
+          "cat": "Comer bem aqui é obrigatório",
+          "coord": {"lat": 39.1451, "lng": 8.3073},
+          "opcoes": [
+            {"nome": "Al Tonno di Corsa (Via Marconi 47)", "desc": "Michelin · institução desde 1980 · ventresca seared, tagliatelle ragù atum · reserva absoluta", "preco": "€60-90", "dist": "Centro"},
+            {"nome": "Osteria della Tonnara (porto)", "desc": "Casual · atum em mil formas · waterfront com vista", "preco": "€30-45", "dist": "Porto"},
+            {"nome": "Da Nicolo", "desc": "Trattoria simples · atum a preço bom · local-favorito", "preco": "€25-35", "dist": "Centro"}
+          ]
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Praia Cala Lunga ou La Bobba",
+          "cat": "Banho de tarde na ilha",
+          "sobre": "Praias da ilha de San Pietro pra fim de tarde. La Bobba: areia clara, popular, infraestrutura. Cala Lunga: mais selvagem, boa pra snorkel, granito + areia. Ambas a 10-15min do centro de Carloforte. Boa quebra após almoço pesado.",
+          "imperdivel": "Snorkel se as condições estiverem boas · águas cristalinas",
+          "dicas": [
+            "Pegar ferry de volta às ~18h30 · check horário",
+            "Pra quem não quer praia · café no porto e fica vendo barcos",
+            "Sandália de água pra Cala Lunga · pedras"
+          ],
+          "duracao": "2h-2h30",
+          "custo": "—",
+          "acessibilidade": "La Bobba mais fácil · Cala Lunga tem pedras",
+          "coord": {"lat": 39.1230, "lng": 8.2950}
+        },
+        {
+          "hora": "18:30",
+          "emoji": "⛴️",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Ferry Carloforte → Calasetta",
+          "cat": "~30min · volta tranquila",
+          "coord": {"lat": 39.1078, "lng": 8.3686}
+        },
+        {
+          "hora": "19:30",
+          "emoji": "🍝",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar leve Maladroxia · vila",
+          "cat": "Almoço foi pesado",
+          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "opcoes": [
+            {"nome": "Hotel Ristorante Lounge", "desc": "Praia · jantar leve · vinho · descanso", "preco": "€25-35", "dist": "Praia"},
+            {"nome": "Casa", "desc": "Salada + queijo + vinho · neta dorme cedo", "preco": "€15", "dist": "—"},
+            {"nome": "Pizza Sant'Antioco", "desc": "Pizzaria simples · 15min · ok família · take away possível", "preco": "€20-25", "dist": "15min"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Sáb 15/Ago",
+      "tema": "Porto Flavia + Cala Domestica",
+      "temaCurto": "Porto Flavia",
+      "bairro": "⛏️ Costa SO",
+      "grupo": true,
+      "transport": "driving",
+      "baseCoord": {"lat": 38.9989, "lng": 8.4489},
+      "baseName": "Maladroxia, Sardinia",
+      "cor": "#475569",
+      "gradA": "#1e293b",
+      "gradB": "#334155",
+      "stops": [
+        {
+          "hora": "08:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Maladroxia → Porto Flavia",
+          "cat": "~1h15 · SP83 via Iglesias e Buggerru",
+          "coord": {"lat": 39.3371, "lng": 8.4126}
+        },
+        {
+          "hora": "09:30",
+          "emoji": "⛏️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Porto Flavia · mina dentro do penhasco",
+          "cat": "Engenharia 1924 · entra na rocha pelo mar",
+          "sobre": "Uma das obras de engenharia industrial mais geniais do Mediterrâneo. Em 1924 construíram DOIS túneis HORIZONTAIS atravessando o penhasco direto pra carregar minério em navios ancorados abaixo, no nível do mar — economizava transportar minério até Carloforte. Visita guiada percorre o túnel principal (sem escadas, sem ladeiras), termina numa varanda esculpida na rocha com vista panorâmica para Pan di Zucchero (rochedo gigante no mar). Reserva OBRIGATÓRIA · max 25 pessoas por tour · duração ~2h.",
+          "imperdivel": "Varanda final no penhasco · vista do Pan di Zucchero e do Mediterrâneo · 50m de queda d'água",
+          "dicas": [
+            "Reservar em portoflaviatours.it ANTES · agosto enche rápido",
+            "Tour em italiano ou inglês · 2h aprox · €10 adultos/€6.50 65+",
+            "Túnel horizontal · sem escadas · acessível pra fit normal",
+            "Sapato fechado · chão de pedra · suéter (frio dentro)",
+            "Combinar com Cala Domestica (15min, pra almoço)"
+          ],
+          "duracao": "2h tour",
+          "custo": "€10/€6.50 senior",
+          "acessibilidade": "Túnel horizontal sem degraus · estacionamento perto",
+          "coord": {"lat": 39.3371, "lng": 8.4126}
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Porto Flavia → Cala Domestica",
+          "cat": "~15min · SP83 norte",
+          "coord": {"lat": 39.3738, "lng": 8.3797}
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Cala Domestica · baía escondida",
+          "cat": "Praia entre falésias · águas turquesa",
+          "sobre": "Uma das praias mais cênicas da costa sudoeste, sem o caos turístico de outras. Duas partes separadas por promontório rochoso: a maior, abrigada, e uma menor escondida (acessada por caminho na pedra). Areia fina, mar turquesa. Antiga torre de vigia espanhola nas ruínas. Parking pago (€4-5), 200m até a praia por passarela de madeira. Excelente parada após Porto Flavia — combinação cultura + descanso.",
+          "imperdivel": "Subir até a torre de vigia · vista da baía e do mar",
+          "dicas": [
+            "Strada estreita com curvas · cuidado · carro normal de aluguel ok",
+            "Parking €4-5/dia · usa cartão",
+            "Snack-bar simples na praia · ou leva picnic",
+            "Sombra natural ~14h-17h da falésia oeste"
+          ],
+          "duracao": "3h-4h",
+          "custo": "€5 parking",
+          "acessibilidade": "Passarela de madeira do parking · plana · ok",
+          "coord": {"lat": 39.3738, "lng": 8.3797}
+        },
+        {
+          "hora": "17:30",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Cala Domestica → Maladroxia",
+          "cat": "~1h15 volta · SP83 + SS126",
+          "coord": {"lat": 38.9989, "lng": 8.4489}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍷",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar especial · última noite todos juntos",
+          "cat": "Amanhã vocês partem sozinhos",
+          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "opcoes": [
+            {"nome": "Ittiturismo I Due Fratelli (Sant'Antioco)", "desc": "Cooperativa pescadores · peixe top · vinho · noite especial · 15min", "preco": "€40-55", "dist": "15min"},
+            {"nome": "Hotel Ristorante Lounge", "desc": "Praia · romântico · jantar tranquilo", "preco": "€30-40", "dist": "Praia"},
+            {"nome": "Locanda del Borgo (Sant'Antioco)", "desc": "Charme · cozinha de terra e mar", "preco": "€35-45", "dist": "15min"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Dom 16/Ago",
+      "tema": "Despedida · Maladroxia → Cala Gonone (Oriente Sarda)",
+      "temaCurto": "→Gonone",
+      "bairro": "🛫 Transit",
+      "grupo": false,
+      "cor": "#f59e0b",
+      "gradA": "#78350f",
+      "gradB": "#92400e",
+      "stops": [
+        {
+          "hora": "07:30",
+          "emoji": "👋",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "red",
+          "nome": "Despedida do Tobia · saída cedo",
+          "cat": "Drive longo · ~4h até Cala Gonone",
+          "sobre": "Dia de despedida. Tobia + família ficam em Maladroxia. Vocês seguem rumo a Cala Gonone (~280km, 4h pela SS131 + parte da SS125 cênica). É um dos drives mais bonitos da Europa: SS131 fast até Nuoro, depois SP38 + SS125 (chamada 'Route 66 da Sardenha') pelos últimos 50km — falésias calcárias, gorges, pinheiros mediterrâneos. Saída cedo (8h max) pra chegar a Cala Gonone à tarde. Almoço no caminho — sugestão: Nuoro (cidade interior, cultural).",
+          "imperdivel": "Layby DEPOIS do túnel de Dorgali · vista aérea de Cala Gonone abaixo · postal único",
+          "dicas": [
+            "Café reforçado em Sant'Antioco antes · primeira parada distante",
+            "Tanque cheio · SS131 tem postos mas planejado",
+            "Almoço Nuoro (cultura interior sarda) OU Dorgali (mais perto, simples)",
+            "Hospedagem Cala Gonone reservada · check-in normalmente 15h"
+          ],
+          "duracao": "1h preparação",
+          "custo": "—",
+          "acessibilidade": "—",
+          "coord": {"lat": 38.9989, "lng": 8.4489}
+        },
+        {
+          "hora": "08:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Maladroxia → Nuoro",
+          "cat": "~3h · SS131 Carlo Felice · estrada principal",
+          "coord": {"lat": 40.3216, "lng": 9.3303}
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Nuoro · cultura interior",
+          "cat": "Capital do interior · culinária da Barbagia",
+          "coord": {"lat": 40.3216, "lng": 9.3303},
+          "opcoes": [
+            {"nome": "Trattoria Marrosu (Nuoro centro)", "desc": "Cordeiro da Barbagia · pasta caseira · clássico", "preco": "€25-35", "dist": "Centro Nuoro"},
+            {"nome": "Ristorante Il Rifugio", "desc": "Tradicional · cinghiale (javali), pecorino · ambiente rústico", "preco": "€30-40", "dist": "Centro"},
+            {"nome": "Sandes na estrada", "desc": "Pra ganhar tempo · Autogrill SS131 · evita parada longa", "preco": "€10", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🏔️",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Nuoro → Dorgali → Cala Gonone",
+          "cat": "~1h15 · SP38 + SS125 cênica · 'Route 66 sarda'",
+          "coord": {"lat": 40.2804, "lng": 9.6272}
+        },
+        {
+          "hora": "15:30",
+          "emoji": "📸",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Layby após túnel de Dorgali · vista aérea",
+          "cat": "Foto stop obrigatória",
+          "sobre": "Parada rápida na estrada antes de descer pra Cala Gonone. Logo após o túnel principal de Dorgali, há um pull-off do lado esquerdo. Vista panorâmica da baía de Cala Gonone abaixo, com a vila virada para o mar e as falésias dos lados. Um dos visuais mais icônicos do drive Oriental Sarda. 10min e segue.",
+          "imperdivel": "A vista do paredão · cabo curto de gente nesse spot",
+          "dicas": [
+            "Lados da estrada · cuidado com tráfego",
+            "Coordenada aproximada · pista bem sinalizada",
+            "Fim de tarde com luz dourada é PRÓXIMO ao milagre"
+          ],
+          "duracao": "15min",
+          "custo": "—",
+          "acessibilidade": "Layby · saída do carro só",
+          "coord": {"lat": 40.2890, "lng": 9.6280},
+          "coord_unverified": true
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🏠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Check-in Cala Gonone · base 2 noites",
+          "cat": "Marina · porto de barcos do Golfo di Orosei",
+          "sobre": "Cala Gonone é vila litorânea no fundo de uma baía, encravada entre as falésias do Gulf of Orosei. Sem grandes hotéis — pousadas e B&Bs aos pés da escarpa. Coração da vila é a marina (onde reserva amanhã pra boat tour). Restaurantes e gelaterias na orla. Vista para o mar dramática — falésias dos dois lados. Antes do jantar vale uma volta pela marina pra reservar o passeio de barco da manhã seguinte.",
+          "imperdivel": "Marina ao pôr do sol · barcos voltando, luz dourada nas falésias",
+          "dicas": [
+            "Reservar boat tour Golfo di Orosei na marina · véspera é tarde mas tenta · escolha shuttle (não tour fechado)",
+            "Vila pequena · todos os restaurantes a 10min andando",
+            "Padaria + mini-mercado · estoca pra amanhã (boat tour leva picnic)"
+          ],
+          "duracao": "Resto da tarde",
+          "custo": "—",
+          "acessibilidade": "Vila plana mas há rampas íngremes em alguns pontos",
+          "coord": {"lat": 40.2804, "lng": 9.6272}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar Cala Gonone · 1ª noite",
+          "cat": "Marina · pé na água",
+          "coord": {"lat": 40.2804, "lng": 9.6272},
+          "opcoes": [
+            {"nome": "Il Pescatore (marina)", "desc": "Frutos do mar · vista barcos · cozinha de costa", "preco": "€35-50", "dist": "Marina"},
+            {"nome": "Bue Marino (centro)", "desc": "Trattoria sarda · culurgiones (raviolis sardos), cordeiro · ambiente acolhedor", "preco": "€30-40", "dist": "Centro"},
+            {"nome": "Pizzeria Pulcinella", "desc": "Casual · pizza forno lenha · simples · descanso", "preco": "€20-25", "dist": "Centro"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Seg 17/Ago",
+      "tema": "Boat Day · Golfo di Orosei",
+      "temaCurto": "Orosei",
+      "bairro": "🌊 Cala Gonone & Orosei",
+      "grupo": false,
+      "cor": "#0284c7",
+      "gradA": "#0c4a6e",
+      "gradB": "#075985",
+      "stops": [
+        {
+          "hora": "08:30",
+          "emoji": "🛥️",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Embarque Marina Cala Gonone",
+          "cat": "Tour escolhido na véspera",
+          "coord": {"lat": 40.2804, "lng": 9.6272}
+        },
+        {
+          "hora": "09:00",
+          "emoji": "🏝️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Boat Tour Golfo di Orosei · dia inteiro",
+          "cat": "Cala Luna + Cala Mariolu + Cala dei Sisine + Cala Goloritzé (vista)",
+          "sobre": "Dia inteiro de barco percorrendo o golfo mais espetacular da Sardenha. O Gulf of Orosei tem ~40km de falésias calcárias verticais (até 600m de altura) caindo no Mediterrâneo, com calas escondidas só acessíveis por mar. Roteiro clássico do full-day tour: Cala Luna (praia em meia-lua, oleandros), Cala Mariolu (areia/pedrinhas brancas e rosadas, água irreal), Cala dei Sisine (entre falésias), e VISTA externa de Cala Goloritzé (proibido desembarcar — só por trilha). Algumas paradas pra nadar e snorkel. Almoço picnic a bordo ou comprado antes. Leva: protetor solar (alto FPS), chapéu, snorkel próprio se tem, água em quantidade, casaco leve (vento). Chega ~17h.",
+          "imperdivel": "Mergulho em Cala Mariolu · água transparente como piscina · profundidade incrível visível do alto",
+          "dicas": [
+            "Reserva o shuttle (drop-off + pickup) · NÃO o tour com guia · flexibilidade",
+            "Tour completo: €60-90/pessoa · meio-dia: €40-60",
+            "Levar lanche · maioria dos tours não inclui",
+            "Sapato de água · pedras escorregadias em alguns desembarques",
+            "Snorkel: água transparente · peixes mediterrâneos · vale a pena"
+          ],
+          "duracao": "7-8h",
+          "custo": "€60-90/pessoa shuttle full-day",
+          "acessibilidade": "Embarque ok · algumas praias têm seixos · canguru não relevante",
+          "coord": {"lat": 40.1233, "lng": 9.6763}
+        },
+        {
+          "hora": "17:00",
+          "emoji": "🍦",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Retorno + sorvete na marina",
+          "cat": "Recuperação · sol forte",
+          "sobre": "Volta pra marina ~17h. Após dia de sol direto, mar e movimento de barco, simples relax. Sorveteria boa no porto (sabores típicos: mirto, fico d'india). Aproveita pra organizar mala de amanhã (transição pra Capo Testa/Santa Teresa, ~2h drive).",
+          "imperdivel": "Sabor fico d'india (figo da Índia) · típico sardo · refrescante",
+          "dicas": [
+            "Banho/ducha antes do jantar · sol pega muito",
+            "Hidratar com água e fruta",
+            "Marca check-out amanhã · estrada ok mas é dia de mudança"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "€5-8 sorvetes",
+          "acessibilidade": "Total",
+          "coord": {"lat": 40.2804, "lng": 9.6272}
+        },
+        {
+          "hora": "20:00",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar leve · dia foi cheio",
+          "cat": "Recarga",
+          "coord": {"lat": 40.2804, "lng": 9.6272},
+          "opcoes": [
+            {"nome": "Bue Marino", "desc": "Trattoria sarda · culurgiones, ravioli · ambiente acolhedor", "preco": "€30-40", "dist": "Centro"},
+            {"nome": "Trattoria del Marinaio (marina)", "desc": "Pé na água · peixe simples e fresco", "preco": "€30-40", "dist": "Marina"},
+            {"nome": "Pizza + cerveja", "desc": "Casual · descanso · dorme cedo · amanhã dirige", "preco": "€20", "dist": "Centro"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Ter 18/Ago",
+      "tema": "Cala Gonone → Capo Testa · drive norte",
+      "temaCurto": "→Capo Testa",
+      "bairro": "🌄 Capo Testa & Norte",
+      "grupo": false,
+      "cor": "#0891b2",
+      "gradA": "#155e75",
+      "gradB": "#0e7490",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🧳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Check-out Cala Gonone",
+          "cat": "Drive ~2h30 · SS125+SS131",
+          "sobre": "Última manhã em Cala Gonone. Bagagem ao carro, drive até Capo Testa/Santa Teresa di Gallura via SP26 → SS125 norte → SS131DCN (rápida). ~2h30 de estrada, mais relaxado que o drive de domingo. Paradas opcionais: Nuoro (cultura) ou Olbia (compras).",
+          "imperdivel": "Foto do túnel de Dorgali NO SENTIDO INVERSO (vista oposta) · ao sair de Cala Gonone",
+          "dicas": [
+            "Tanque cheio · SS131 tem postos",
+            "Paradas: Nuoro (centro 30min) ou Olbia (compras Corso Umberto)",
+            "Hospedagem Capo Testa/Santa Teresa · check-in 15-16h"
+          ],
+          "duracao": "30min",
+          "custo": "—",
+          "acessibilidade": "—",
+          "coord": {"lat": 40.2804, "lng": 9.6272}
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Cala Gonone → Santa Teresa di Gallura",
+          "cat": "~2h30 · SS125+SS131DCN · costa norte",
+          "coord": {"lat": 41.2380, "lng": 9.1944}
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍝",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Olbia ou Santa Teresa",
+          "cat": "No caminho · prático",
+          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "opcoes": [
+            {"nome": "Almoço Olbia (Corso Umberto)", "desc": "30min desvio · cidade conhecida · café + trattoria", "preco": "€20-30", "dist": "30min"},
+            {"nome": "Trattoria Santa Teresa", "desc": "Cidade do norte · ambiente marítimo · culinária da Gallura", "preco": "€25-35", "dist": "Centro"},
+            {"nome": "Picnic na estrada", "desc": "Pra ganhar tempo · Autogrill ou padaria · prático", "preco": "€10", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🏠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Check-in Santa Teresa/Capo Testa · base 3 noites",
+          "cat": "Norte sardo · porta da Córsega",
+          "sobre": "Santa Teresa di Gallura é a cidade do extremo norte (vocês conhecem do ferry de 07/Ago). Capo Testa fica 5km a oeste — península de granito esculpido pelo vento, com Valle della Luna (paisagem 'lunar') e farol. Hospedagem em Santa Teresa ou na zona de Capo Testa: ambas têm vantagens. Santa Teresa = mais infraestrutura (restaurantes, lojas), Capo Testa = mais isolado, natureza próxima. Próximos 3 dias: La Maddalena (19), San Pantaleo/Arzachena (20), retorno Olbia (21).",
+          "imperdivel": "Caminhar até a praia Rena di Ponente após o check-in · 10min · areia branca · perfeita pra pôr do sol",
+          "dicas": [
+            "Carro alugado fica com vocês · Maddalena/Palau a 30min",
+            "Reserva ferry Palau · Maddalena dia 19 (não precisa antes · vai no dia)",
+            "Restaurantes Santa Teresa centro: Piazza Vittorio Emanuele tem várias opções"
+          ],
+          "duracao": "1h check-in",
+          "custo": "—",
+          "acessibilidade": "Vila Santa Teresa plana · Capo Testa tem trilhas",
+          "coord": {"lat": 41.2389, "lng": 9.1907}
+        },
+        {
+          "hora": "17:00",
+          "emoji": "🌄",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Capo Testa · Valle della Luna walking trail",
+          "cat": "Mini walking tour · paisagem lunar de granito · 4 stops",
+          "sobre": "Capo Testa é uma península de granito moldada por vento e mar — formações arredondadas que parecem esculturas surrealistas. A 'Valle della Luna' é uma valeira entre essas formações onde, nos anos 1970, formou-se um acampamento hippie permanente (alguns ainda vivem lá). Walking tour de ~2h: parking → Valle della Luna → Cala Grande (banho rápido se quiser) → Farol → volta. Trilhas em granito desigual: sapato fechado obrigatório, NÃO sandália. Tarde dourada é o melhor horário: rochas viram rosa-laranja, dia turistas saem.",
+          "imperdivel": "Pôr do sol entre as rochas · cor única",
+          "dicas": [
+            "Parking gratuito no final da estrada · pode estar lotado · vai cedo no dia",
+            "Sapato fechado · trail tem trechos íngremes",
+            "Cala Grande: bom pra banho rápido · sem infraestrutura",
+            "Farol de Capo Testa: vista do estreito de Bonifacio e Córsega em dia claro",
+            "Loop completo ~6km · 2-3h · easy-moderado"
+          ],
+          "duracao": "2h-3h",
+          "custo": "Grátis",
+          "acessibilidade": "Trilha em granito · sem rampas formais · só pra fit",
+          "coord": {"lat": 41.2365, "lng": 9.1617},
+          "walkingTours": [
+            {
+              "nome": "Capo Testa · 🌄 Paisagem Lunar",
+              "descricao": "Parking → Valle della Luna → Cala Grande → Farol → volta · ~6km · 2-3h · 4 stops",
+              "stops": [
+                {"n": 1, "nome": "Parking Capo Testa (info point)", "coord": {"lat": 41.2365, "lng": 9.1617}},
+                {"n": 2, "nome": "Valle della Luna (formações graníticas)", "coord": {"lat": 41.2443, "lng": 9.1488}},
+                {"n": 3, "nome": "Cala Grande (praia escondida)", "coord": {"lat": 41.2410, "lng": 9.1480}},
+                {"n": 4, "nome": "Faro di Capo Testa", "coord": {"lat": 41.2376, "lng": 9.1480}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar Santa Teresa",
+          "cat": "Centro · vários restaurantes",
+          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "opcoes": [
+            {"nome": "Ristorante La Torre", "desc": "Centro · clássico gallurese · pasta caseira, cordeiro · reservado · bom vinho", "preco": "€35-45", "dist": "Centro"},
+            {"nome": "Trattoria del Borgo", "desc": "Cozinha tradicional · culurgiones, fregola · ambiente acolhedor", "preco": "€30-40", "dist": "Centro"},
+            {"nome": "L'Osteria", "desc": "Mais informal · peixe e frutos do mar · waterfront", "preco": "€25-35", "dist": "Porto"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Qua 19/Ago",
+      "tema": "La Maddalena · arquipélago",
+      "temaCurto": "Maddalena",
+      "bairro": "🏝️ La Maddalena & Caprera",
+      "grupo": false,
+      "transport": "driving",
+      "baseCoord": {"lat": 41.2389, "lng": 9.1907},
+      "baseName": "Santa Teresa di Gallura, Sardinia",
+      "cor": "#14b8a6",
+      "gradA": "#134e4a",
+      "gradB": "#115e59",
+      "stops": [
+        {
+          "hora": "08:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Santa Teresa → Palau (ferry)",
+          "cat": "~30min · SP90 · estrada costeira",
+          "coord": {"lat": 41.1809, "lng": 9.3788}
+        },
+        {
+          "hora": "09:30",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Ferry Palau → La Maddalena",
+          "cat": "15min · Maddalena Lines/Delcomar · ~€16/carro",
+          "coord": {"lat": 41.2169, "lng": 9.4026}
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🏝️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "La Maddalena town · walking tour + ilhas",
+          "cat": "5 stops · town + praia + Caprera de tarde",
+          "sobre": "La Maddalena é a ilha principal do arquipélago — vila colorida de marinheiros, com ~11k habitantes. Centro histórico walkable em 2h: Piazza Garibaldi, Piazza Umberto I, Igreja Santa Maria Maddalena. À tarde: cruza a ponte (5min carro) para a ilha Caprera, casa-museu de Garibaldi (Compendio Garibaldino, fechado segundas) + Cala Coticcio (uma das praias mais bonitas, requer trail curto). Combinação ilha + cultura + praia num só dia. PS: ponte é só de carro/pedestre — não tem ferry separada pra Caprera, ela é colada na Maddalena.",
+          "imperdivel": "Cala Coticcio (Caprera) · turquesa entre granito · 30min trail do parking",
+          "dicas": [
+            "Ferry a cada 30min · sem reserva necessária · simples",
+            "Carro vai junto · útil pra cruzar a ponte de Caprera (impossível a pé)",
+            "Trail Cala Coticcio: 30-45min ida · cuidado com pedras",
+            "Compendio Garibaldino: fechado segundas · ticket ~€8 · 1h visita",
+            "Volta ferry Palau ~17h-18h pra evitar fila"
+          ],
+          "duracao": "Dia inteiro · 8h+",
+          "custo": "€16 ferry carro + €8 museu Garibaldi",
+          "acessibilidade": "La Maddalena town plana · Cala Coticcio = trail moderado",
+          "coord": {"lat": 41.2169, "lng": 9.4026},
+          "walkingTours": [
+            {
+              "nome": "La Maddalena · 🏝️ Vila do Arquipélago",
+              "descricao": "Porto → Piazza Garibaldi → Piazza Umberto → Cala Francese → Spiaggia Tegge · ~2h · 5 stops",
+              "stops": [
+                {"n": 1, "nome": "Porto La Maddalena (chegada ferry)", "coord": {"lat": 41.2169, "lng": 9.4026}},
+                {"n": 2, "nome": "Piazza Garibaldi (centro)", "coord": {"lat": 41.2169, "lng": 9.4026}},
+                {"n": 3, "nome": "Piazza Umberto I", "coord": {"lat": 41.2175, "lng": 9.4030}},
+                {"n": 4, "nome": "Cala Francese (rochas rosa)", "coord": {"lat": 41.2210, "lng": 9.4050}},
+                {"n": 5, "nome": "Spiaggia di Tegge", "coord": {"lat": 41.2220, "lng": 9.4080}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍝",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço La Maddalena",
+          "cat": "Centro · ambiente marítimo",
+          "coord": {"lat": 41.2169, "lng": 9.4026},
+          "opcoes": [
+            {"nome": "Da Lucio (centro)", "desc": "Trattoria local · pasta com frutos do mar · waterfront", "preco": "€30-40", "dist": "Centro"},
+            {"nome": "Trattoria Aurora", "desc": "Família · culurgiones, peixe · bom valor", "preco": "€25-35", "dist": "Centro"},
+            {"nome": "Picnic em Cala Coticcio", "desc": "Compra padaria · come na praia · economia + cenário", "preco": "€15", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Ilha Caprera · Cala Coticcio + Garibaldi",
+          "cat": "Ponte da Moneta → ilha de Garibaldi",
+          "sobre": "Caprera está ligada à La Maddalena pela Ponte della Moneta (600m, drive 5min). Ilha do exílio de Giuseppe Garibaldi (1856-1882), com sua casa-museu (Compendio Garibaldino) e várias praias entre formações graníticas. Cala Coticcio é a estrela: água turquesa, areia branca, encravada em granito. Acesso: parking → trail de 30-45min entre vegetação e pedras. Não é difícil mas tem desnível e pedras soltas. Vale o esforço. Alternativa pra dia menos ativo: praia Cala Caprarese ou Cala Garibaldi (mais fáceis, sem trail).",
+          "imperdivel": "Cala Coticcio · água que parece piscina natural · #1 cala de Sardenha do norte",
+          "dicas": [
+            "Compendio Garibaldino fechado segundas · sé aberta · ticket €8",
+            "Cala Coticcio · sapato fechado pro trail · NÃO chinelos",
+            "Sem comércio · leva água e protetor",
+            "Se cansados: ficar em Cala Caprarese (mais perto, sem trail)"
+          ],
+          "duracao": "2h-3h",
+          "custo": "€8 museu (opcional)",
+          "acessibilidade": "Trail moderado · não recomendado pra problemas de joelho",
+          "coord": {"lat": 41.2050, "lng": 9.4670}
+        },
+        {
+          "hora": "18:30",
+          "emoji": "⛴️",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Ferry La Maddalena → Palau",
+          "cat": "15min · volta",
+          "coord": {"lat": 41.1809, "lng": 9.3788}
+        },
+        {
+          "hora": "19:30",
+          "emoji": "🚗",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Palau → Santa Teresa",
+          "cat": "~30min volta",
+          "coord": {"lat": 41.2389, "lng": 9.1907}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar Santa Teresa · noite tranquila",
+          "cat": "Após dia cheio",
+          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "opcoes": [
+            {"nome": "Trattoria del Borgo", "desc": "Cozinha tradicional · jantar tranquilo", "preco": "€30-40", "dist": "Centro"},
+            {"nome": "Pizzeria do centro", "desc": "Casual · pizza no forno lenha · descanso", "preco": "€20-25", "dist": "Centro"},
+            {"nome": "Casa", "desc": "Charcutaria + queijo + Vermentino · neta dorme", "preco": "€20", "dist": "—"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Qui 20/Ago",
+      "tema": "San Pantaleo market + Arzachena + Costa Smeralda",
+      "temaCurto": "San Pantaleo",
+      "bairro": "🏛️ Arzachena & San Pantaleo",
+      "grupo": false,
+      "transport": "driving",
+      "baseCoord": {"lat": 41.2389, "lng": 9.1907},
+      "baseName": "Santa Teresa di Gallura, Sardinia",
+      "cor": "#7c3aed",
+      "gradA": "#4c1d95",
+      "gradB": "#5b21b6",
+      "stops": [
+        {
+          "hora": "08:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Santa Teresa → San Pantaleo",
+          "cat": "~50min · SS133 + SP14 · interior Gallura",
+          "coord": {"lat": 41.0456, "lng": 9.4675}
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🛍️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "San Pantaleo · feira de quinta",
+          "cat": "Vila granítica + mercado artesão · 'mercado mais chique do mundo'",
+          "sobre": "Vila de granito encravada na cordilheira interior, ~10min da Costa Smeralda mas universo paralelo: artistas europeus moveram seus ateliês pra cá nos anos 1970, criando uma colônia criativa. Aos quintas-feiras (manhã, 8h30-13h), feira semanal mais elogiada da Sardenha — joias artesanais, esculturas, cerâmica, facas tradicionais, comida (queijos, salsichas, torrone). Comparada com 'mercados-de-grife' mas é GENUÍNO. Granito vermelho da igreja paroquial domina a piazza. Cafés em torno da praça com mesas de oleiandro.",
+          "imperdivel": "Café Nina · pequenos snacks + dolce vita italiana · sentar e ver o mundo passar",
+          "dicas": [
+            "Feira termina 13h · vai cedo (10h)",
+            "Compra: queijo pecorino, mel, frutas, peças artesão",
+            "Estacionamento na entrada da vila · grátis",
+            "Almoço em Giagoni se quiser mais sentado · senão snack na feira"
+          ],
+          "duracao": "3h-3h30",
+          "custo": "Variável · €40-100 compras",
+          "acessibilidade": "Vila plana · ok",
+          "coord": {"lat": 41.0456, "lng": 9.4675}
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍷",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço San Pantaleo",
+          "cat": "Pós-mercado",
+          "coord": {"lat": 41.0456, "lng": 9.4675},
+          "opcoes": [
+            {"nome": "Ristorante Giagoni (igreja)", "desc": "Tradicional · clientela seleta · pasta caseira, cordeiro · caro mas excelente", "preco": "€45-65", "dist": "Centro"},
+            {"nome": "Café Nina", "desc": "Casual · sandes, salads · perfeito após mercado", "preco": "€15-25", "dist": "Centro"},
+            {"nome": "Picnic do mercado", "desc": "Queijo + pão + tomate + vinho · come na praça", "preco": "€25 casal", "dist": "—"}
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🗿",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Tomba dei Giganti di Coddu Vecchiu",
+          "cat": "Sítio funerário coletivo · 1800-1400 a.C.",
+          "sobre": "Tumba coletiva da Idade do Bronze (1800-1400 a.C.), com estela frontal de 4.40m — a mais alta da Sardenha. Forma característica: estela central + 'exedra' (semicírculo de pedras na frente) onde os ritos eram realizados. Vale combinar com La Prisgiona Nuraghe (600m de distância, mesmo gestor) num passeio de 1h30 total. Arqueologia diferente do que se vê em Tharros — esta é genuinamente nurágica. Estaciona, paga ticket, anda.",
+          "imperdivel": "A estela central · sua escala em relação aos visitantes · pré-história sarda em primeira pessoa",
+          "dicas": [
+            "Aberto diariamente 10h-18h · ticket ~€3-5",
+            "Combina com La Prisgiona nuraghe vizinho · ticket combinado",
+            "Sol intenso à tarde · chapéu e água",
+            "1h é suficiente"
+          ],
+          "duracao": "1h",
+          "custo": "€3-5",
+          "acessibilidade": "Trilha curta plana",
+          "coord": {"lat": 41.0500, "lng": 9.3556}
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🛥️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Porto Cervo · espiada à Costa Smeralda",
+          "cat": "Vila de luxo · 1h é suficiente",
+          "sobre": "Para os curiosos do espetáculo: Porto Cervo é o centro de Costa Smeralda, um dos lugares mais luxuosos do mundo. Marina de mega-iates, butiques (Bulgari ao lado de cartões postais), Piazzetta com gelaterias caras. NÃO é Sardenha autêntica — é uma vila construída pelo Aga Khan nos anos 1960 pra atrair magnatas. Mas a curiosidade vale 1h: gente-circo, arquitetura caprichosa (Stella Maris, igreja surrealista), valor de imóvel absurdo. Andar pelo porto é grátis.",
+          "imperdivel": "Stella Maris · igreja branca de design surrealista (1968)",
+          "dicas": [
+            "Estacionamento pago · €5-10/h",
+            "Cafés extremamente caros · €8 cappuccino · só toma se quer experiência completa",
+            "1h é suficiente · não dá pra fazer mais sem gastar muito",
+            "Pula sem culpa se preferir voltar pra Santa Teresa direto"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "€5-10 estacionamento",
+          "acessibilidade": "Piazzetta + marina plana · ok",
+          "coord": {"lat": 41.1347, "lng": 9.5375}
+        },
+        {
+          "hora": "18:30",
+          "emoji": "🚗",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Porto Cervo → Santa Teresa",
+          "cat": "~50min · SS125 norte · estrada cênica",
+          "coord": {"lat": 41.2389, "lng": 9.1907}
+        },
+        {
+          "hora": "20:30",
+          "emoji": "🍷",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar especial · última noite Sardenha",
+          "cat": "Despedida",
+          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "opcoes": [
+            {"nome": "Ristorante La Torre", "desc": "Centro · clássico gallurese · noite especial · vinho top", "preco": "€40-55", "dist": "Centro"},
+            {"nome": "Trattoria del Borgo", "desc": "Acolhedor · pasta caseira · ambiente bom pra retrospectiva", "preco": "€30-40", "dist": "Centro"},
+            {"nome": "Restaurante porto Santa Teresa", "desc": "Waterfront · peixe + Vermentino · romântico", "preco": "€35-50", "dist": "Porto"}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Sex 21/Ago",
+      "tema": "Despedida · Santa Teresa → Olbia → voo",
+      "temaCurto": "Voo",
+      "bairro": "🛫 Olbia & Norte",
+      "grupo": false,
+      "cor": "#1e40af",
+      "gradA": "#1e3a8a",
+      "gradB": "#1d4ed8",
+      "stops": [
+        {
+          "hora": "08:00",
+          "emoji": "🧳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Check-out + saída tranquila",
+          "cat": "Olbia ~1h15 · sem pressa",
+          "sobre": "Última manhã da viagem. Café reforçado, check-out, drive tranquilo até Olbia (~1h15). Devolver carro alugado no Olbia airport. Tempo pra um almoço final em Olbia se voo de tarde, ou Bali-direct pro aeroporto se voo de manhã.",
+          "imperdivel": "Comprar bottarga ou queijo pecorino no Carrefour de Santa Teresa pra levar (não check-in só carry-on por causa do líquido)",
+          "dicas": [
+            "Confirma horário voo · check-in online 24h antes",
+            "Bottarga em sacolas seladas pra check-in",
+            "Devolver carro 2h antes do voo · evita estresse",
+            "Combustível antes (gas station perto do aeroporto · ~€5 a mais se devolver vazio)"
+          ],
+          "duracao": "1h30",
+          "custo": "—",
+          "acessibilidade": "—",
+          "coord": {"lat": 41.2389, "lng": 9.1907}
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Santa Teresa → Olbia airport",
+          "cat": "~1h15 · SP90 + SS125",
+          "coord": {"lat": 40.8987, "lng": 9.5176}
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Olbia · despedida",
+          "cat": "Centro ou aeroporto",
+          "coord": {"lat": 40.9238, "lng": 9.5026},
+          "opcoes": [
+            {"nome": "Trattoria Da Romolo (centro)", "desc": "Última refeição decente · pasta sarda · ambiente local", "preco": "€25-35", "dist": "Centro"},
+            {"nome": "Ristorante Gallura (Corso Umberto)", "desc": "Volta ao 1º almoço · circular fechando · clássico", "preco": "€30-45", "dist": "Centro"},
+            {"nome": "Aeroporto · sanduba", "desc": "Voo cedo · sem opções gourmet · prático", "preco": "€10-15", "dist": "OLB"}
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "✈️",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Voo de retorno · Olbia (OLB)",
+          "cat": "Devolução carro + check-in",
+          "coord": {"lat": 40.8987, "lng": 9.5176}
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🎬",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Fim da viagem · obrigado pela companhia!",
+          "cat": "16 dias · 11 cidades · Córsega + Sardenha",
+          "sobre": "Fim de uma viagem grande: Olbia → Bonifacio (encontro Tobia) → Càbras (Sinis) → Bosa → Maladroxia (Sant'Antioco) → Carloforte → Porto Flavia → Cala Gonone (Golfo Orosei) → Capo Testa → La Maddalena → San Pantaleo → Olbia. 16 dias intensos, 9 dias com Tobia + família, 6 dias independentes. Levam bottarga, vinho Saparale corso e Cannonau sardo, e fotos da neta no mar.",
+          "imperdivel": "Olhar pra trás · saber que foi uma das viagens melhores",
+          "dicas": [
+            "Caso a viagem fluiu bem · próxima ano replica formato com outro destino",
+            "Tobia + esposa + neta ficam mais 2 dias em Maladroxia (até 23/Ago)",
+            "Memórias por: WhatsApp família · álbum digital · vinho compartilhado em casa"
+          ],
+          "duracao": "—",
+          "custo": "—",
+          "acessibilidade": "—",
+          "coord": {"lat": 40.8987, "lng": 9.5176}
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Tharros · ruínas fenício-romanas no mar": [
+      {"type": "review", "label": "Italia.it · Tharros", "url": "https://www.italia.it/en/sardegna/cabras/cultural-places/tharros-archaeological-area"}
+    ],
+    "Sant'Antioco · cidade fenícia 8 sec a.C.": [
+      {"type": "official", "label": "MAB · Tophet + Museu", "url": "https://mabsantantioco.it/?lang=en"}
+    ],
+    "Porto Flavia · mina dentro do penhasco": [
+      {"type": "official", "label": "Porto Flavia · reserva", "url": "https://www.portoflaviatours.it"}
+    ],
+    "Boat Tour Golfo di Orosei · dia inteiro": [
+      {"type": "official", "label": "Excursões Cala Gonone", "url": "https://www.excursionscalagonone.com/"}
+    ],
+    "Grotta Bue Marino (referência)": [
+      {"type": "official", "label": "Grotta Bue Marino · oficial", "url": "https://www.grottabuemarino.com/en-informazioni"}
+    ],
+    "Bosa · cidade medieval colorida do rio Temo": [
+      {"type": "review", "label": "SardegnaTurismo · Bosa tanarias", "url": "https://www.sardegnaturismo.it/en/explore/ancient-tanneries-bosa"}
+    ],
+    "Carloforte · vila genovesa do atum": [
+      {"type": "official", "label": "Carloforte Turismo", "url": "https://www.carloforteturismo.it/en/practical-information/"}
+    ],
+    "Ferry Calasetta → Carloforte": [
+      {"type": "official", "label": "Delcomar · ferry", "url": "https://delcomar.it/en/"}
+    ],
+    "Ferry Palau → La Maddalena": [
+      {"type": "official", "label": "Maddalena Lines", "url": "https://www.maddalenalines.it/en/"}
+    ],
+    "Ferry Santa Teresa → Bonifacio": [
+      {"type": "official", "label": "Moby Lines", "url": "https://www.mobylines.com/routes/ferries-sardinia/santa-teresa-bonifacio-santa-teresa/"}
+    ]
+  },
+  "transit_map": {
+    "Aeroporto Olbia Costa Smeralda (OLB)": {
+      "uber": "Não opera · use táxi",
+      "metro": "Sem opção",
+      "taxi": "€20-30 · 15min · pra centro",
+      "carro": "Aluguel no aeroporto · evita transfer · mantém pelos 16 dias"
+    },
+    "Olbia → Santa Teresa di Gallura": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€100+ · proibitivo",
+      "carro": "1h-1h15 · SS125 + SP90 · costa nordeste · estrada boa"
+    },
+    "Ferry Santa Teresa → Bonifacio": {
+      "uber": "—",
+      "metro": "—",
+      "taxi": "—",
+      "carro": "Passageiro €17-35 · carro €80-130 · 50min · Moby/Ichnusa · reservar antecipado"
+    },
+    "Santa Teresa → Càbras": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€350+ · proibitivo",
+      "carro": "3h30 · SS131 (Carlo Felice) · principal rodovia sarda"
+    },
+    "Càbras → Bosa via SS292 costeira": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€100+ · não recomendado",
+      "carro": "1h15 · SS292 · estrada cênica entre falésias · um dos drives mais bonitos da Sardenha"
+    },
+    "Càbras → Maladroxia (Sant'Antioco)": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€220+",
+      "carro": "2h · SS131 + SS130 + SS195 · entra Sant'Antioco pela ponte"
+    },
+    "Maladroxia → Calasetta (ferry Carloforte)": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€30",
+      "carro": "25min · norte da ilha de Sant'Antioco · estrada simples"
+    },
+    "Ferry Calasetta → Carloforte": {
+      "uber": "—",
+      "metro": "—",
+      "taxi": "—",
+      "carro": "30min · €4-5 passageiro · €17 carro · Delcomar · ~1/h"
+    },
+    "Maladroxia → Porto Flavia": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€120+",
+      "carro": "1h15 · SP83 via Iglesias e Buggerru · estrada cênica costa SO"
+    },
+    "Maladroxia → Nuoro": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€350+",
+      "carro": "3h · SS131 norte"
+    },
+    "Nuoro → Dorgali → Cala Gonone": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€80",
+      "carro": "1h15 · SP38 + SS125 cênica · trecho 'Route 66 sarda'"
+    },
+    "Cala Gonone → Santa Teresa di Gallura": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€300+",
+      "carro": "2h30 · SS125+SS131DCN · costa norte"
+    },
+    "Santa Teresa → Palau (ferry)": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€40",
+      "carro": "30min · SP90 · costeira"
+    },
+    "Ferry Palau → La Maddalena": {
+      "uber": "—",
+      "metro": "—",
+      "taxi": "—",
+      "carro": "15min · ~€16 carro · Maddalena Lines · cada 30min"
+    },
+    "Santa Teresa → San Pantaleo": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€60",
+      "carro": "50min · SS133 + SP14 · interior Gallura"
+    },
+    "Porto Cervo → Santa Teresa": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€80",
+      "carro": "50min · SS125 norte · estrada cênica"
+    },
+    "Santa Teresa → Olbia airport": {
+      "uber": "Não opera",
+      "metro": "Sem opção",
+      "taxi": "€100+",
+      "carro": "1h15 · SP90 + SS125 · costa nordeste"
+    }
+  },
+  "bairros_config": [
+    {"nome": "🛫 Olbia & Norte", "latMin": 40.85, "latMax": 40.95, "lngMin": 9.45, "lngMax": 9.55},
+    {"nome": "🏰 Bonifacio (visita)", "latMin": 41.36, "latMax": 41.40, "lngMin": 9.14, "lngMax": 9.20},
+    {"nome": "🏖️ Sinis & Oristano", "latMin": 39.80, "latMax": 40.05, "lngMin": 8.35, "lngMax": 8.55},
+    {"nome": "🏛️ Bosa", "latMin": 40.27, "latMax": 40.32, "lngMin": 8.45, "lngMax": 8.55},
+    {"nome": "🏖️ Maladroxia", "latMin": 38.95, "latMax": 39.05, "lngMin": 8.42, "lngMax": 8.50},
+    {"nome": "🏛️ Sant'Antioco", "latMin": 39.05, "latMax": 39.15, "lngMin": 8.32, "lngMax": 8.46},
+    {"nome": "🏝️ Carloforte", "latMin": 39.10, "latMax": 39.16, "lngMin": 8.28, "lngMax": 8.32},
+    {"nome": "⛏️ Costa SO", "latMin": 39.30, "latMax": 39.40, "lngMin": 8.36, "lngMax": 8.42},
+    {"nome": "🌊 Cala Gonone & Orosei", "latMin": 40.08, "latMax": 40.30, "lngMin": 9.60, "lngMax": 9.70},
+    {"nome": "🏔️ Nuoro (transit)", "latMin": 40.30, "latMax": 40.35, "lngMin": 9.30, "lngMax": 9.35},
+    {"nome": "🌄 Capo Testa & Santa Teresa", "latMin": 41.20, "latMax": 41.26, "lngMin": 9.14, "lngMax": 9.25},
+    {"nome": "🏝️ La Maddalena & Caprera", "latMin": 41.18, "latMax": 41.23, "lngMin": 9.38, "lngMax": 9.48},
+    {"nome": "🏛️ Arzachena & San Pantaleo", "latMin": 41.03, "latMax": 41.15, "lngMin": 9.30, "lngMax": 9.55},
+    {"nome": "📍 Outros", "fallback": true}
+  ]
+}
