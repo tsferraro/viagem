@@ -11,6 +11,9 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ### NYC · Jul/2026 (em planejamento)
 - _A preencher após a viagem real._
 
+### Sprockhövel · 30/Mai-01/Jun/2026 (road-trip curto · em planejamento)
+- _A preencher após a viagem real._
+
 ---
 
 ## Padrões cross-viagem
@@ -69,5 +72,17 @@ Mudanças aplicadas:
 2. **Naming de subdir** · `pais/` foi ambíguo → renomeado pra `pais-sardenha/`. Padrão: subdir deve incluir o destino (`pais-sardenha/`, `amigos-corsica/`), não só a relação (`pais/`, `amigos/`).
 3. **Roteiro pais · Sardenha** · road trip Olbia → Sul → Maladroxia → Costa Leste → Olbia funciona bem como arco. Walking tours de alto valor: Bosa (+4), Sant'Antioco (+4), Capo Testa (+3), La Maddalena (+3). Reservas críticas: Porto Flavia (25 max · reservar semanas antes), Al Tonno di Corsa Carloforte.
 4. **road-trip-designer criada** · skill nova em `skills/road-trip-designer/` com SKILL.md + 3 references + 2 examples (5 dias reais sardenha calibrados). 4 tipos: Hub & Spoke, Linear, Loop, Ferry-integrated. Rubrica pra stops opcionais + pit stop automático >45min + campos `roadType`/`parking`/`fuelAlert`.
+
+### v1.3 · 2026-05-23 (lições road-trip curto Sprockhövel)
+
+Padrões pra road-trips de **fim-de-semana com destino único** (festa/evento · 2-3 dias máximo):
+
+1. **Estrutura 3-dias com festa no meio é canônica** · Dia 1 ida com 1 parada cultural curta · Dia 2 evento dia inteiro · Dia 3 volta direta (sem parada, ou parada curta opcional). Tentar adicionar paradas em AMBOS os dias de viagem (cenário "D" Mons+Cambrai) fica exaustivo · cortar uma.
+2. **Cadência de pit stops 1h30 com filha de 3a é firme** · não 2h. Skill `road-trip-designer` já assume isso (45-60min é regra default mas pra crianças <5a fica 1h30 fixo). Documentar essa diferença na sub-skill.
+3. **Alternativas inline 🔄 ao invés de subdirs paralelos** · 3 alts marcadas no mesmo HTML (Valenciennes/Schwebebahn/Cambrai) com instruções claras tipo "SE QUISER ESSA OPÇÃO: marca antes do build". Subdir paralelo (`/alternativas`) seria overkill pra alts decididas dia da viagem.
+4. **Valet Orly > parking oficial pra 3-4 dias** · BlueValet/Ector custa €11-15/dia (vs P éco €20+), com entrega no terminal — vence sempre com filha pequena + bagagem.
+5. **Aires específicas BE/DE que confirmei top** · `Aire de Verlaine` (E42 Belgium · top aire belga · ponte panorâmica + park infantil) · `Aachener Land Süd` (A4 DE Eschweiler · Shell+Coffee Fellows) · `Aire d'Hélécine` (E40 BE Leuven · família).
+6. **Densidade Mons 2h** funciona como sweet-spot · walking tour express 30min (Grand-Place + Beffroi · sem subida) + almoço · cabe sem pressão. Walking tour completo (Sainte-Waudru + Mundaneum) requer 3h+ — documentei como "estendido" no `walkingTours` mas sem forçar.
+7. **roteiro como "outra viagem" → instrução de escopo** · Tobia disse "É uma outra viagem de 3 dias" → sinal pra NÃO emendar com outro plano da semana. Respeitar limite estrito do escopo solicitado.
 
 ### Próximas lições serão registradas aqui após uso real.
