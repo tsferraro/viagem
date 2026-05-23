@@ -23,7 +23,7 @@ Para roteiros paralelos da MESMA viagem (família vs casal vs amigos): sufixo `c
 
 ## Para usar
 
-Este repo carrega a skill `itinerary-builder` completa (scripts + templates + references + sub-skills). Qualquer sessão Claude Code que clonar tem todas as ferramentas pra criar/atualizar viagens.
+Este repo carrega a skill `roteiro-viagem` completa (scripts + templates + references + sub-skills). Qualquer sessão Claude Code que clonar tem todas as ferramentas pra criar/atualizar viagens.
 
 Ver `CLAUDE.md` pra documentação operacional completa.
 

@@ -1,4 +1,4 @@
-# Data Schema — `itinerary-builder`
+# Data Schema — `roteiro-viagem`
 
 Schema completo dos objetos JS injetados no template `shell.html`.
 Toda skill que gera roteiros DEVE respeitar este schema exato.

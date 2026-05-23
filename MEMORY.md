@@ -1,6 +1,6 @@
 # MEMORY · Projeto Viagens
 
-Aprendizados de uso da skill `itinerary-builder` acumulados ao longo das viagens reais. Cresce com cada viagem feita. NÃO contém dados pessoais — apenas lições sobre uso da skill.
+Aprendizados de uso da skill `roteiro-viagem` acumulados ao longo das viagens reais. Cresce com cada viagem feita. NÃO contém dados pessoais — apenas lições sobre uso da skill.
 
 Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory/` (não vão pro repo público).
 
@@ -26,7 +26,7 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ## Evolução da skill
 
 ### v1.0 · 2026-05-16
-- Setup inicial · skill `itinerary-builder` + `walking-tour-designer` embarcadas
+- Setup inicial · skill `roteiro-viagem` + `walking-tour-designer` embarcadas
 - 10 princípios + 6 anti-padrões codificados
 - Suporte a roteiros paralelos via SUBDIR
 - Quality bar nos cards + anti-invenção de URLs (`validate.py --check-links`)

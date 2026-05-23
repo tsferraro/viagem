@@ -152,7 +152,7 @@ h2{{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter
 </div>
 
 <div class="footer">
-  Roteiros gerados pela skill <a href="https://github.com/tsferraro/viagem" target="_blank">itinerary-builder</a>
+  Roteiros gerados pela skill <a href="https://github.com/tsferraro/viagem" target="_blank">roteiro-viagem</a>
 </div>
 </body>
 </html>

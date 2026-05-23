@@ -1,6 +1,6 @@
 ---
 name: walking-tour-designer
-description: Projeta walking tours estruturados pra cidades — 4 a 16 stops com coordenadas validadas via web_search, particionado em 2 partes quando >8 stops. Use quando (1) invocada pela itinerary-builder durante fluxo de roteiro, (2) usuário pede direto - "monta um walking tour pro Marais em Paris", "preciso de um tour caminhando por Shibuya", "rota a pé pelo Beco do Batman", "design walking tour Greenwich Village", "walking tour Alfama 2 partes histórico+gastronomia". Standalone funciona. Aplica RUBRICA DE VALOR explícita - alto valor (bairro NÃO está no roteiro principal · descoberta pura), médio (enriquece bairro já visitado · annotations), baixo (overlap com stops planejadas · só anotações). 4 tipos de tour - descoberta pura (6-8 stops bairro novo), annotations (5-6 stops ao longo de caminho planejado), híbrido temático (2 partes ~6 cada por tema, ex - Bohemian Trail + Stonewall em Greenwich Village), compacto (4-5 stops num quarteirão tipo DUMBO/Stone Street). SEMPRE web_search pra coordenadas · NUNCA inventar coords · marca coord_unverified - true se estimativa · mantém endereço entre parens no nome - "Caffe Reggio (119 MacDougal)" - pra busca Google Maps preservar info. Retorna array walkingTours pronto pra inserir em card-âncora + lista de dicas numeradas 1️⃣2️⃣3️⃣ + sugestão de card âncora com justificativa. NÃO retorna HTML · só estrutura de dados consumível pela itinerary-builder ou pelo usuário.
+description: Projeta walking tours estruturados pra cidades — 4 a 16 stops com coordenadas validadas via web_search, particionado em 2 partes quando >8 stops. Use quando (1) invocada pela roteiro-viagem durante fluxo de roteiro, (2) usuário pede direto - "monta um walking tour pro Marais em Paris", "preciso de um tour caminhando por Shibuya", "rota a pé pelo Beco do Batman", "design walking tour Greenwich Village", "walking tour Alfama 2 partes histórico+gastronomia". Standalone funciona. Aplica RUBRICA DE VALOR explícita - alto valor (bairro NÃO está no roteiro principal · descoberta pura), médio (enriquece bairro já visitado · annotations), baixo (overlap com stops planejadas · só anotações). 4 tipos de tour - descoberta pura (6-8 stops bairro novo), annotations (5-6 stops ao longo de caminho planejado), híbrido temático (2 partes ~6 cada por tema, ex - Bohemian Trail + Stonewall em Greenwich Village), compacto (4-5 stops num quarteirão tipo DUMBO/Stone Street). SEMPRE web_search pra coordenadas · NUNCA inventar coords · marca coord_unverified - true se estimativa · mantém endereço entre parens no nome - "Caffe Reggio (119 MacDougal)" - pra busca Google Maps preservar info. Retorna array walkingTours pronto pra inserir em card-âncora + lista de dicas numeradas 1️⃣2️⃣3️⃣ + sugestão de card âncora com justificativa. NÃO retorna HTML · só estrutura de dados consumível pela roteiro-viagem ou pelo usuário.
 ---
 
 # Walking Tour Designer
@@ -11,14 +11,14 @@ Sub-skill (e standalone) que projeta walking tours estruturados pra inserção e
 
 Recebe um pedido (bairro + cidade + opcional: tema, composição, restrições) e retorna:
 
-1. Array `walkingTours[]` pronto pra inserir em `card.walkingTours` da itinerary-builder
+1. Array `walkingTours[]` pronto pra inserir em `card.walkingTours` da roteiro-viagem
 2. Lista de `dicas` numeradas (1️⃣2️⃣3️⃣...) pra adicionar no card
 3. Sugestão de card-âncora (qual stop existente abrigaria esse WT)
 4. Justificativa explícita de **valor** (alto/médio/baixo)
 
 ## Quando triggera
 
-- **Sub-skill**: invocada pela `itinerary-builder` na Fase 6 do pipeline (após esqueleto validado, antes do build)
+- **Sub-skill**: invocada pela `roteiro-viagem` na Fase 6 do pipeline (após esqueleto validado, antes do build)
 - **Standalone**: usuário pede direto "monta um walking tour pro Marais em Paris"
 
 ---
@@ -116,7 +116,7 @@ Se hibrido temático: cada parte tem tema próprio. Se descoberta pura: parte 1 
 
 | Anti-padrão | Por quê |
 |---|---|
-| Retornar HTML | Skill retorna só estrutura · itinerary-builder converte em HTML |
+| Retornar HTML | Skill retorna só estrutura · roteiro-viagem converte em HTML |
 | Inventar coords | Mapa fica errado · família vai pro lugar errado |
 | Mais de 16 stops num tour | Cansa criança · fragmentar em 2 viagens |
 | Walking tour em bairro com 3+ stops já no roteiro | Overlap inútil · usar annotations |
@@ -128,8 +128,8 @@ Se hibrido temático: cada parte tem tema próprio. Se descoberta pura: parte 1 
 
 1. **Apresentar rubrica primeiro**: antes do JSON, mostrar `valor` + `justificativa` em tabela
 2. **Validar coords**: cada coord retornada deve ter sido web_searched · marcar `coord_unverified` se dúvida
-3. **Standalone**: se invocada direto pelo usuário (sem itinerary-builder), retorna estrutura completa + adiciona seção "Como inserir no seu roteiro" com instruções
-4. **Sub-skill**: se invocada pela itinerary-builder, retorna só o JSON
+3. **Standalone**: se invocada direto pelo usuário (sem roteiro-viagem), retorna estrutura completa + adiciona seção "Como inserir no seu roteiro" com instruções
+4. **Sub-skill**: se invocada pela roteiro-viagem, retorna só o JSON
 
 ---
 

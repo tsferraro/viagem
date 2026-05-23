@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-validate.py — Validador do itinerary-builder
+validate.py — Validador do roteiro-viagem
 
 Roda checks de sanidade antes de commit/push.
 Exit code 0 = tudo ok · != 0 = bloqueia deploy.

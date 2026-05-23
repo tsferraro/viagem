@@ -1,7 +1,7 @@
 # Lessons Learned — Roteiro NYC Jul 2026
 
 Decisões tomadas durante a construção iterativa do app de roteiro NYC, com o motivo de cada uma.
-Servir de referência pro arquiteto que vai destilar essas decisões na skill `itinerary-builder`.
+Servir de referência pro arquiteto que vai destilar essas decisões na skill `roteiro-viagem`.
 
 ---
 

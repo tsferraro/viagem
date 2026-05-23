@@ -65,7 +65,7 @@ Se a coord é estimativa (não passou pelo web_search ou fonte não-oficial):
 }
 ```
 
-A skill itinerary-builder vai destacar essas coords no validate.py pra usuário corrigir.
+A skill roteiro-viagem vai destacar essas coords no validate.py pra usuário corrigir.
 
 ## Parens no nome (lição crítica)
 
@@ -76,7 +76,7 @@ Manter endereço entre parens no campo `nome`:
 ```
 
 Por quê:
-- `getMapsUrl()` na itinerary-builder remove SÓ os parens da query (mantém conteúdo): `"Caffe Reggio 119 MacDougal"` → Google Maps acha
+- `getMapsUrl()` na roteiro-viagem remove SÓ os parens da query (mantém conteúdo): `"Caffe Reggio 119 MacDougal"` → Google Maps acha
 - Usuário vê endereço no display
 - Backup pra caso coord esteja ligeiramente errada
 
@@ -95,7 +95,7 @@ Antes de salvar, checar:
 - Coord está dentro do bairro pretendido (visual no Google Maps)?
 - Se WT total tem 6 stops, distância acumulada está em ~1-2km?
 
-## Range checks (no validate.py do itinerary-builder)
+## Range checks (no validate.py do roteiro-viagem)
 
 ```python
 for lat_str, lng_str in coords:

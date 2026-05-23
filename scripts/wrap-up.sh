@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# wrap-up.sh — Protocolo de encerramento de sessão da skill itinerary-builder
+# wrap-up.sh — Protocolo de encerramento de sessão da skill roteiro-viagem
 #
 # Uso: scripts/wrap-up.sh [/path/repo]
 #
