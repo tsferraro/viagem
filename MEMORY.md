@@ -63,4 +63,11 @@ Mudanças aplicadas:
 - `scripts/wrap-up.sh` criado: protocolo de encerramento obrigatório
 - `FUTURE.md` priorizado: road-trip-designer + pre-trip-content-curator + trip-debrief-skill
 
+### v1.2 · 2026-05-23 (lições da sessão Sardenha pais + road-trip-designer)
+
+1. **Branch drift pós-merge** · PR mergeado mas continuamos commitando na feature branch → `pais-sardenha/` ficou órfão e precisou ser recuperado com `git checkout feature-branch -- files`. Regra: após merge, mudar pra main imediatamente antes de continuar.
+2. **Naming de subdir** · `pais/` foi ambíguo → renomeado pra `pais-sardenha/`. Padrão: subdir deve incluir o destino (`pais-sardenha/`, `amigos-corsica/`), não só a relação (`pais/`, `amigos/`).
+3. **Roteiro pais · Sardenha** · road trip Olbia → Sul → Maladroxia → Costa Leste → Olbia funciona bem como arco. Walking tours de alto valor: Bosa (+4), Sant'Antioco (+4), Capo Testa (+3), La Maddalena (+3). Reservas críticas: Porto Flavia (25 max · reservar semanas antes), Al Tonno di Corsa Carloforte.
+4. **road-trip-designer criada** · skill nova em `skills/road-trip-designer/` com SKILL.md + 3 references + 2 examples (5 dias reais sardenha calibrados). 4 tipos: Hub & Spoke, Linear, Loop, Ferry-integrated. Rubrica pra stops opcionais + pit stop automático >45min + campos `roadType`/`parking`/`fuelAlert`.
+
 ### Próximas lições serão registradas aqui após uso real.

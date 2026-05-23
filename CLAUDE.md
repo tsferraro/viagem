@@ -43,7 +43,8 @@ viagem/
 │   ├── ui-patterns.md
 │   └── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
 ├── skills/
-│   └── walking-tour-designer/
+│   ├── walking-tour-designer/
+│   └── road-trip-designer/
 └── archive/
     └── <slug>/                     ← viagens passadas movidas pra cá manualmente
 ```
@@ -56,6 +57,7 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 |---|---|
 | Vai mexer em estrutura de `DAYS` ou `stops` | `references/data-schema.md` |
 | Vai criar walking tour novo | `skills/walking-tour-designer/SKILL.md` + sub-references |
+| Vai montar dia de carro (`transport: "driving"`) | `skills/road-trip-designer/SKILL.md` |
 | Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
 | Vai entender por que código JS é assim | `references/ui-patterns.md` |
 | Quer ver decisões históricas + lições | `decision-log.md` + `references/lessons-learned.md` |
