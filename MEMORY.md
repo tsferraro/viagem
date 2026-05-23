@@ -73,6 +73,22 @@ Mudanças aplicadas:
 3. **Roteiro pais · Sardenha** · road trip Olbia → Sul → Maladroxia → Costa Leste → Olbia funciona bem como arco. Walking tours de alto valor: Bosa (+4), Sant'Antioco (+4), Capo Testa (+3), La Maddalena (+3). Reservas críticas: Porto Flavia (25 max · reservar semanas antes), Al Tonno di Corsa Carloforte.
 4. **road-trip-designer criada** · skill nova em `skills/road-trip-designer/` com SKILL.md + 3 references + 2 examples (5 dias reais sardenha calibrados). 4 tipos: Hub & Spoke, Linear, Loop, Ferry-integrated. Rubrica pra stops opcionais + pit stop automático >45min + campos `roadType`/`parking`/`fuelAlert`.
 
+### v1.4 · 2026-05-23 (bugs alts 🔄 + legenda dup · guardrails)
+
+Dois bugs caçados em campo (Tobia testou Sprockhovel-2026 no mobile):
+
+1. **Cards 🔄 ALT poluíam rota Maps do dia** · `getRouteUrl()` filtrava só `tipo!=='transit'`, então cards alternativos `tipo: card` viravam destino da rota → Google Maps puxava direção pra Valenciennes (oposto do trajeto Mons→SPK).
+   - Fix: `getRouteUrl()` V1.5 filtra `!nome.startsWith('🔄')`
+   - Convenção codificada: cards de alternativa SEMPRE começam com `🔄` no nome
+   - validate.py: `check_alt_cards_excluded_from_route` (bloqueia se houver 🔄 sem filtro)
+
+2. **Legenda do semáforo duplicada** (re-bug) · `shell.html` já renderiza pills 🟢🟡🔴 automaticamente, mas eu repeti em `legend_notes_html`. Mesmo bug que apareceu em pais-sardenha (v1.2) e que voltou em Sprockhovel-2026 + estava em corsica não detectado.
+   - Fix: `legend_notes_html` deve ter SÓ notas extras (bases · convenções 🔄 · pit stops)
+   - validate.py: `check_legend_no_dup` (bloqueia · regex no HTML gerado)
+   - corsica corrigida retroativamente (bug latente que ninguém viu até validate ficar mais rígido)
+
+**Padrão meta**: bugs visuais de roteiro são DIFÍCEIS de pegar em revisão local (HTML grande, edge cases sub-perceptíveis). Adicionar regra `validate.py` SEMPRE que um bug for visto na vida real · "se aconteceu uma vez é gambiarra, duas vezes é guardrail" agora codificado nos checks.
+
 ### v1.3 · 2026-05-23 (lições road-trip curto Sprockhövel)
 
 Padrões pra road-trips de **fim-de-semana com destino único** (festa/evento · 2-3 dias máximo):
