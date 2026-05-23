@@ -301,7 +301,7 @@ Os 4 objetos abaixo são serializados como JSON pretty (indent=2) dentro do `<sc
 9. **Auto-abrir dia de hoje** via `getDefaultDayIdx()`
 10. **Senha simples mas persistente** · localStorage AUTH_KEY
 
-## 6 anti-padrões obrigatórios
+## 8 anti-padrões obrigatórios
 
 1. **Re-renderizar tabs** inteiros a cada switch (usar `renderInnerContent()` soft)
 2. **Strip de parens** no NOME visível pra busca Maps (`getMapsUrl()` remove só na query)
@@ -309,6 +309,8 @@ Os 4 objetos abaixo são serializados como JSON pretty (indent=2) dentro do `<sc
 4. **Avisos paternalistas** ("metrô não tem elevator!")
 5. **Botão "Abrir no Maps" duplicado** no card E no popup (só popup)
 6. **Walking tour >8 stops** sem partition em 2 partes
+7. **Repetir semáforo 🟢🟡🔴 em `legend_notes_html`** · template (shell.html) já renderiza pills automaticamente · `legend_notes_html` é só pra notas EXTRAS (bases, convenções 🔄, pit stops, etc) · `validate.py` bloqueia se detectar
+8. **Cards de alternativa SEM prefixo `🔄`** · alternativas que substituem stops principais (ex: Valenciennes substitui Mons) DEVEM começar com `🔄` no campo `nome` · `getRouteUrl()` filtra esse prefix · sem ele, a rota do dia inclui o desvio e vira lixo
 
 ## Walking tours · rubrica
 

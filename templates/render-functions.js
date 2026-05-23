@@ -37,10 +37,9 @@ function getMapsUrl(stop){
 }
 
 function getRouteUrl(day){
-  // Formato V1.4: usa NOME do stop (com endereço entre parens) em vez de coords puras.
-  // Coords puras mostravam "Com alfinete" no Maps · nomes com endereço completo = label correto.
-  // Bug reportado por Tobia 2026-05-19 (sessão Córsega mobile).
-  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
+  // V1.5: filtra ALT cards (nome iniciando com 🔄) — alternativas não fazem parte da rota
+  // principal do dia. Bug Sprockhovel 2026-05-23 (Valenciennes ALT puxava rota pra direção oposta).
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord && !s.nome.startsWith('🔄'));
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
   const queryName=s=>{

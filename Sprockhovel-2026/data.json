@@ -7,7 +7,7 @@
   "header_sub": "30/Mai → 01/Jun · Mons (ida) · Festa SPK · volta direta · 3 dias",
   "password": "roadtrip",
   "legend_group_text": "👨‍👩‍👧 Família · Tobia · esposa · filha 3a",
-  "legend_notes_html": "<strong>🟢 Verde</strong>: tranquilo · <strong>🟡 Amarelo</strong>: atenção (logística/tempo) · <strong>🔴 Vermelho</strong>: pressão de horário. <strong>🔄 Alt</strong>: cards de alternativa (Valenciennes ida · Cambrai volta · Schwebebahn dom manhã). <strong>Pit stops</strong>: cadência 1h30 entre paradas com filha de 3a. Bases: <strong>casa de amigos · Sprockhövel</strong> (sáb+dom).",
+  "legend_notes_html": "<strong>🔄 Alt</strong>: cards de alternativa (Valenciennes ida · Cambrai volta · Schwebebahn dom manhã) — escolher antes do build. <strong>Pit stops</strong>: cadência 1h30 entre paradas com filha de 3a. Bases: <strong>casa de amigos · Sprockhövel</strong> (sáb+dom).",
   "days": [
     {
       "date": "Sáb 30/Mai",

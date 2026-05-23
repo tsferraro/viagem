@@ -248,6 +248,44 @@ def check_links_alive(content, timeout=5):
     else:
         ok(f"Todas {len(urls)} URLs em LINKS_MAP respondem OK")
 
+def check_legend_no_dup(content):
+    """Detecta duplicação do semáforo na legenda · pills 🟢🟡🔴 já são renderizados
+    automaticamente pelo template (shell.html). Repetir em legend_notes_html polui.
+    Bug recorrente: pais-sardenha (2026-05-23 fix) + Sprockhovel-2026 (2026-05-23 re-fix)."""
+    m = re.search(r'class="legend-content">\s*<div class="row">.*?</div>\s*<div class="text">\s*(.*?)\s*</div>', content, re.DOTALL)
+    if not m:
+        warn("legend-content não encontrada (template mudou?)")
+        return
+    notes = m.group(1)
+    redundant_patterns = [
+        ('🟢 Verde', '🟢 Verde'),
+        ('🟡 Amarelo', '🟡 Amarelo'),
+        ('🔴 Vermelho', '🔴 Vermelho'),
+        ('🟢 tranquilo', '🟢 tranquilo (já no pill acima)'),
+        ('⚠️ atenção', '⚠️ atenção (já no pill acima)'),
+        ('🔴 alta atenção', '🔴 alta atenção (já no pill acima)'),
+    ]
+    found = [label for p, label in redundant_patterns if p in notes]
+    if found:
+        err(f"Legenda duplicada: '{', '.join(found)}' em legend_notes_html · "
+            f"pills semáforo já renderizados pelo template · remova essas strings do data.json")
+    else:
+        ok("Legenda sem duplicação · pills + notes complementares")
+
+def check_alt_cards_excluded_from_route(content, days_text):
+    """Cards 🔄 ALT devem ser EXCLUÍDOS da rota do dia (getRouteUrl).
+    Convenção: cards de alternativa começam com '🔄' no nome.
+    Bug Sprockhovel 2026-05-23: ALT Valenciennes virou destino da rota do sábado.
+    Só verifica se a viagem usa cards 🔄 (evita ruído nas viagens antigas sem alts)."""
+    has_alt_cards = '🔄' in days_text
+    has_filter = 'startsWith(\'🔄\')' in content or 'startsWith("🔄")' in content
+    if not has_alt_cards:
+        return  # viagem sem alternativas · skip silencioso
+    if has_filter:
+        ok("getRouteUrl exclui cards 🔄 ALT da rota do dia")
+    else:
+        err("Viagem usa cards 🔄 ALT mas getRouteUrl NÃO os filtra · rota do dia vai pegar destino errado · regenerar HTML com template atual")
+
 def check_required_features(content):
     """Verifica que features-chave existem no HTML"""
     required = {
@@ -313,6 +351,8 @@ def main():
     # Features
     print(f"\n{C.DIM}── Features-chave ──{C.END}")
     check_required_features(content)
+    check_legend_no_dup(content)
+    check_alt_cards_excluded_from_route(content, days_text)
 
     # Links (opcional)
     if do_check_links:
