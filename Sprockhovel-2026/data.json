@@ -1,0 +1,525 @@
+{
+  "title": "🚗 Sprockhövel · Road-Trip · Mai/Jun 2026",
+  "auth_emoji": "🚗",
+  "auth_title": "Sprockhövel 2026",
+  "auth_subtitle": "30/Mai → 01/Jun · Road-trip família Tobia",
+  "header_title": "Paris ↔ Sprockhövel · Mai/Jun 2026",
+  "header_sub": "30/Mai → 01/Jun · Mons (ida) · Festa SPK · volta direta · 3 dias",
+  "password": "roadtrip",
+  "legend_group_text": "👨‍👩‍👧 Família · Tobia · esposa · filha 3a",
+  "legend_notes_html": "<strong>🟢 Verde</strong>: tranquilo · <strong>🟡 Amarelo</strong>: atenção (logística/tempo) · <strong>🔴 Vermelho</strong>: pressão de horário. <strong>🔄 Alt</strong>: cards de alternativa (Valenciennes ida · Cambrai volta · Schwebebahn dom manhã). <strong>Pit stops</strong>: cadência 1h30 entre paradas com filha de 3a. Bases: <strong>casa de amigos · Sprockhövel</strong> (sáb+dom).",
+  "days": [
+    {
+      "date": "Sáb 30/Mai",
+      "tema": "Paris → Mons → Sprockhövel · ida road-trip",
+      "temaCurto": "Ida · Mons",
+      "bairro": "🇫🇷 França → 🇧🇪 Bélgica → 🇩🇪 DE",
+      "grupo": false,
+      "cor": "#f97316",
+      "gradA": "#9a3412",
+      "gradB": "#c2410c",
+      "transport": "driving",
+      "baseCoord": {"lat": 48.8566, "lng": 2.3522},
+      "baseName": "Paris, France",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Saída Paris · direção A1 norte",
+          "cat": "~150km/1h30 até 1º pit stop · A1 direção Lille",
+          "roadType": "autopista",
+          "coord": {"lat": 48.8566, "lng": 2.3522}
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🛑",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Pit 1 · Aire d'Assevillers Nord (A1)",
+          "cat": "~15min · maior aire da Europa · WC + café + área infantil",
+          "roadType": "autopista",
+          "pitStop": true,
+          "coord": {"lat": 49.8419, "lng": 2.8896}
+        },
+        {
+          "hora": "10:45",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Assevillers → Mons · A1 + A2",
+          "cat": "~70km/1h15 · entra Bélgica via Hensies",
+          "roadType": "autopista",
+          "coord": {"lat": 50.4543, "lng": 3.9523}
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🅿️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Chegada Mons · Parking Grand-Place (29 Rue d'Havré)",
+          "cat": "Coberto · 1ª hora grátis · €1.50/h depois",
+          "sobre": "Parking coberto comunal a 50m da Grand-Place de Mons. Primeira hora gratuita, depois €1.50/h entre 8h-22h. Aberto sábado 7h30-00h. Acesso direto a pé pra restaurante L'Envers (3min) e Grand-Place (1min). Sem voirie paga sábado a partir das 14h (grátis em zonas externas).",
+          "imperdivel": "Coberto e protegido · perfeito pro carrinho da filha · sem preocupar com a chuva belga",
+          "dicas": [
+            "Entrada pela Rue d'Havré · sinalizada · GPS 'Parking Grand Place Mons'",
+            "Pega ticket na entrada · paga ao sair · ~€3-4 pra 2h",
+            "Se cheio: voirie gratuita 14h+ ou Parking de la Halle (5 Rue de la Halle) · 3min a pé"
+          ],
+          "duracao": "2h estacionado",
+          "custo": "€3-4 (2h)",
+          "acessibilidade": "Elevador · saída direto Rue d'Havré · carrinho fácil",
+          "parking": "€1.50/h · 1ª hora grátis · coberto · seguro",
+          "coord": {"lat": 50.4546, "lng": 3.9540}
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Mons · centre historique",
+          "cat": "3 opções · brasserie típica + alternativas",
+          "coord": {"lat": 50.4541, "lng": 3.9533},
+          "opcoes": [
+            {"nome": "L'Envers (20 rue de la Coupe)", "desc": "Brasserie soignée · plats mijotés + suggestions de saison · cadre chaleureux · terraço se sol · perfeito sábado meio-dia família", "preco": "€18-28/pessoa", "dist": "3min do parking"},
+            {"nome": "Maxens (Rue de Nimy)", "desc": "Bistro moderno · destaque TheFork 2026 · menu midi mais ligeiro · ok com filha", "preco": "€25-35/pessoa", "dist": "5min"},
+            {"nome": "Cocoï (street food vietnamita)", "desc": "Banh mi · nems · pho · rápido + barato se quiserem economizar tempo pro walking tour", "preco": "€10-15/pessoa", "dist": "4min"}
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Walking tour Mons · Grand-Place + Beffroi UNESCO",
+          "cat": "30min walk · 2 stops principais · UNESCO",
+          "sobre": "Mons tem 2 sites UNESCO no centro: a Grand-Place (uma das praças mais bonitas da Bélgica · arquitetura medieval-renascentista preservada) e o Beffroi de Mons (único campanário barroco da Bélgica · 87 metros · UNESCO 1999). Walking tour curto pra encaixar nas 2h disponíveis. Se quiserem estender 1h+, adicionar Collégiale Sainte-Waudru (gótico brabantino, entrada grátis) e Mundaneum ('Google de papel' fundado 1910).",
+          "imperdivel": "Beffroi de Mons · subida ao 5º andar de elevador · vista 360° da Wallonie",
+          "dicas": [
+            "Beffroi · elevador funciona ter-dom 11h-18h · €9 adulto · filha 3a grátis · NÃO sobe segunda",
+            "Grand-Place: estátua do macaquinho (Singe du Grand Garde) na esquina prefeitura · esfregar a cabeça pra dar sorte · tradição local · filha vai amar",
+            "Se sobrar tempo: Sainte-Waudru fica 5min a pé (descer Rue du Chapitre)",
+            "Volta ao parking pela Rue de la Clef · evita escadas",
+            "Banheiro público gratuito no Beffroi · útil antes da estrada"
+          ],
+          "duracao": "30min curto · 1h se subir Beffroi",
+          "custo": "Grátis (€9 subida Beffroi opcional)",
+          "acessibilidade": "Grand-Place plana · Beffroi elevador (sem escadas) · cobblestone leve",
+          "coord": {"lat": 50.4543, "lng": 3.9523},
+          "walkingTours": [
+            {
+              "nome": "Mons Centre UNESCO · Express 30min",
+              "descricao": "Grand-Place → Beffroi → volta parking · 2 sites UNESCO · ~30min se não subir",
+              "stops": [
+                {"n": 1, "nome": "Grand-Place de Mons", "coord": {"lat": 50.4543, "lng": 3.9523}},
+                {"n": 2, "nome": "Beffroi de Mons (UNESCO · Rampe du Château)", "coord": {"lat": 50.4528, "lng": 3.9527}}
+              ]
+            },
+            {
+              "nome": "Mons UNESCO · Estendido 1h30 (se sobrar tempo)",
+              "descricao": "Inclui Collégiale Sainte-Waudru (gótico brabantino) + Mundaneum ('Google de papel')",
+              "stops": [
+                {"n": 1, "nome": "Grand-Place de Mons", "coord": {"lat": 50.4543, "lng": 3.9523}},
+                {"n": 2, "nome": "Beffroi de Mons (UNESCO · Rampe du Château)", "coord": {"lat": 50.4528, "lng": 3.9527}},
+                {"n": 3, "nome": "Collégiale Sainte-Waudru (Place du Chapitre)", "coord": {"lat": 50.4536, "lng": 3.9495}},
+                {"n": 4, "nome": "Mundaneum (76 Rue de Nimy)", "coord": {"lat": 50.4569, "lng": 3.9530}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Mons → Aire de Verlaine · E42 leste",
+          "cat": "~150km/1h30 · via Charleroi-Namur-Huy",
+          "roadType": "autopista",
+          "coord": {"lat": 50.5867, "lng": 5.3608}
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🛑",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Pit 2 · Aire de Verlaine (E42) · top aire BE",
+          "cat": "~15min · restaurante + park infantil + ponte panorâmica",
+          "roadType": "autopista",
+          "pitStop": true,
+          "coord": {"lat": 50.5867, "lng": 5.3608}
+        },
+        {
+          "hora": "15:45",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Verlaine → Sprockhövel · E40 + A4/A44",
+          "cat": "~190km/1h45 · via Liège-Aachen-Düsseldorf",
+          "roadType": "autopista",
+          "coord": {"lat": 51.3500, "lng": 7.2450}
+        },
+        {
+          "hora": "17:30",
+          "emoji": "🏠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Chegada Sprockhövel · casa amigos",
+          "cat": "Pernoite 1 de 2 · descanso pós-estrada",
+          "sobre": "Chegada em Sprockhövel (NRW · Ruhrgebiet sul · ~30km E de Düsseldorf · ~15km de Wuppertal). Casa de amigos da família. Total dirigido sábado: ~520km / 7h efetivos (com Mons 2h + 2 pit stops 30min = 9h30 estrada).",
+          "imperdivel": "Cumprimentos · banho · jantar caseiro · dormir cedo",
+          "dicas": [
+            "Confirma endereço/portão com amigos antes de chegar perto",
+            "Carregador USB-C · tomadas alemãs tipo F (Schuko · 2 pinos redondos)",
+            "Mercado mais próximo (REWE/Edeka Sprockhövel) fecha 20h sábado · 0 domingo",
+            "Filha 3a: confirma se precisa de cama/colchão extra com amigos · grade?"
+          ],
+          "duracao": "Resto da noite",
+          "custo": "—",
+          "acessibilidade": "Casa particular · confirmar com host",
+          "coord": {"lat": 51.3500, "lng": 7.2450}
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🔄",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "🔄 ALT IDA · Valenciennes (substitui Mons)",
+          "cat": "Alternativa ida · cultural · 1h30-2h",
+          "sobre": "Substituto pra Mons se preferir uma parada mais cultural (e francófona pura). Place d'Armes (praça central com fonte/esculturas iluminadas), Musée des Beaux-Arts (Watteau nasceu aqui · Carpeaux também · obras flamengas), e Promenade des Arts (85 esculturas ao ar livre nas ruas). Fica MAIS perto de Paris (170km vs 220km), economiza ~30min de carro · MAS perde os 2 sites UNESCO de Mons. Bom plano B se chover (museu indoor) ou se quiserem variar.",
+          "imperdivel": "Musée des Beaux-Arts · maior coleção Carpeaux do mundo (fora do Louvre)",
+          "dicas": [
+            "Musée fechado terças · OK sábado · €8 adulto · grátis -18a",
+            "Place d'Armes fica frente à Mairie · esculturas iluminadas 45m no centro",
+            "Almoço: 'Le P'tit Quinquin' (cuisine du Nord) ou 'La Storia' (ital)",
+            "Parking Place d'Armes coberto · €1.50/h",
+            "SE QUISER ESSA OPÇÃO: marca antes do build · vou trocar walking tour Mons por Valenciennes"
+          ],
+          "duracao": "1h30-2h",
+          "custo": "€8 museu · €3 parking",
+          "acessibilidade": "Centro plano · museu acessível",
+          "coord": {"lat": 50.3580, "lng": 3.5234}
+        }
+      ]
+    },
+    {
+      "date": "Dom 31/Mai",
+      "tema": "Sprockhövel · Hattingen Leinpfad + Festa",
+      "temaCurto": "Festa SPK",
+      "bairro": "🇩🇪 Alemanha · Ruhrgebiet",
+      "grupo": true,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#15803d",
+      "transport": "driving",
+      "baseCoord": {"lat": 51.3500, "lng": 7.2450},
+      "baseName": "Sprockhövel, Germany",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🚶",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Hattingen · Leinpfad + Henrichshütte (Werkstraße)",
+          "cat": "Manhã família · caminhada beira-rio + museu industrial",
+          "sobre": "Hattingen fica 15min de carro de Sprockhövel. O Leinpfad é o histórico caminho de sirga ao longo do rio Ruhr — antes da motorização, cavalos puxavam barcos rio acima por este trilho. Hoje é caminhada plana, sombreada, beira-rio, perfeita pra carrinho. Combina com a Henrichshütte: antiga siderúrgica (1854-1987) transformada em museu industrial de 50.000m². Crianças entram grátis, tem mascote 'Ratte' que guia o rundweg infantil + playground gigante. Visita combinada (caminhada Leinpfad até a Henrichshütte) entrega contraste belíssimo: natureza vs. patrimônio industrial do Ruhrgebiet.",
+          "imperdivel": "Caminhar pela usina-museu de cima · ver os altos-fornos preservados",
+          "dicas": [
+            "Parking gratuito no museu Henrichshütte (Werkstraße 31-33) · GPS exato",
+            "Museu: ter-dom 10h-18h · domingo confirmado aberto · €5 adulto · -17a GRÁTIS",
+            "Filha 3a: ganha mascote 'Ratte' brochure + playground externo grátis sem entrada",
+            "Combo: parking museu → entra no Leinpfad direto pelo portão sul · caminhada 30min até Altstadt Hattingen e volta · 1h total",
+            "Cafeteria no museu (Henrichs Stube) · jantar leve ou Kaffee+Kuchen",
+            "Se chover: museu indoor + Altstadt Hattingen (fachwerk medieval) tem cobertura"
+          ],
+          "duracao": "2h30-3h",
+          "custo": "€5 adulto museu · -17a grátis · parking grátis",
+          "acessibilidade": "Leinpfad: plano + cascalho fino · carrinho OK · museu acessível 100%",
+          "parking": "Gratuito · Werkstraße 31-33 Hattingen · GPS 'LWL-Industriemuseum Henrichshütte'",
+          "coord": {"lat": 51.3970, "lng": 7.1820}
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Hattingen → Sprockhövel · preparação festa",
+          "cat": "~15min · interior",
+          "roadType": "interior",
+          "coord": {"lat": 51.3500, "lng": 7.2450}
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🎉",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Festa · Sprockhövel",
+          "cat": "Evento principal da viagem · tarde + noite",
+          "sobre": "Festa do amigo na casa em Sprockhövel. Dia inteiro de programa: tarde + jantar + noite. Termina após 20h. Confirmar com host: dress code, presente, horário oficial de início, comida (precisa contribuir?), se há atividade pra criança 3a.",
+          "imperdivel": "O motivo da viagem · curtir os amigos sem pressa",
+          "dicas": [
+            "Filha 3a: leva travesseiro/manta favorita pra ela dormir num quarto se cansar",
+            "Beba moderado · segunda 09h saída cedo + 6h de carro pro Orly",
+            "Bagagem do voo pré-arrumada SÁBADO à noite (não deixe pra segunda)",
+            "Verifica bagagem mão · líquidos/separação alemã pra voo de manhã",
+            "Carro 100% abastecido segunda · não fie posto domingo (fechado na DE)"
+          ],
+          "duracao": "Tarde + noite",
+          "custo": "—",
+          "acessibilidade": "Casa particular · confirmar com host",
+          "coord": {"lat": 51.3500, "lng": 7.2450}
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🔄",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "🔄 ALT MANHÃ · Wuppertal Schwebebahn",
+          "cat": "Alternativa manhã · pra vender ao grupo",
+          "sobre": "Schwebebahn = trem suspenso construído 1901 · único do mundo nessa escala · 13km de trilho a 12m acima do rio Wupper · 20 estações · viagem completa 30min. Ícone industrial alemão. Imperdível com filha 3a (sensação de andar pelo ar) e adultos curtem a engenharia preservada. Fica 35min de carro de Sprockhövel. SE quiserem fazer ao invés de Hattingen: combina elemento WOW pra criança · perde caminhada leve / contraste industrial.",
+          "imperdivel": "Trecho Vohwinkel → Hauptbahnhof · curvas sobre o rio · senta na frente",
+          "dicas": [
+            "Bilhete 24h €8.30 adulto · €4.20 -14a · ilimitado · compra na bilheteria estação",
+            "Estação Hauptbahnhof Wuppertal: parking subterrâneo €2/h",
+            "Faz ida e volta com filha em 1h sem descer · ou desce em Vohwinkel pro café Heinz von Heiden (ícone local)",
+            "Funciona 5h30-23h · sem reserva",
+            "Cuidado: a balsa Tuffi (elefantinha caiu em 1950) é a lenda · vendem souvenires na estação · piada com a filha"
+          ],
+          "duracao": "1h30-2h ida-volta",
+          "custo": "€8.30/adulto + €4.20/criança · parking €4",
+          "acessibilidade": "Estações com elevador (a maioria) · carrinho cabe nos vagões",
+          "coord": {"lat": 51.2540, "lng": 7.1500}
+        }
+      ]
+    },
+    {
+      "date": "Seg 01/Jun",
+      "tema": "Sprockhövel → Orly · volta direta",
+      "temaCurto": "Volta · voo",
+      "bairro": "🇩🇪 DE → 🇧🇪 Bélgica → 🇫🇷 França",
+      "grupo": false,
+      "cor": "#dc2626",
+      "gradA": "#7f1d1d",
+      "gradB": "#991b1b",
+      "transport": "driving",
+      "baseCoord": {"lat": 51.3500, "lng": 7.2450},
+      "baseName": "Sprockhövel, Germany",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Saída Sprockhövel · A1/A4 direção Aachen",
+          "cat": "~130km/1h20 · direção Aachen-Belgique",
+          "roadType": "autopista",
+          "coord": {"lat": 51.3500, "lng": 7.2450}
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🛑",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Pit 1 · Aachener Land Süd (A4 · Eschweiler)",
+          "cat": "~15min · Shell + Coffee Fellows + WC · família",
+          "roadType": "autopista",
+          "pitStop": true,
+          "coord": {"lat": 50.8231, "lng": 6.2792}
+        },
+        {
+          "hora": "10:45",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Eschweiler → Aire d'Hélécine · E40 BE",
+          "cat": "~140km/1h30 · via Liège-Leuven",
+          "roadType": "autopista",
+          "coord": {"lat": 50.7167, "lng": 4.9333}
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🍔",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Pit 2 · ALMOÇO · Aire d'Hélécine (E40)",
+          "cat": "~60min almoço · restaurante + park infantil",
+          "roadType": "autopista",
+          "pitStop": true,
+          "coord": {"lat": 50.7167, "lng": 4.9333}
+        },
+        {
+          "hora": "13:15",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Hélécine → Aire d'Hordain · E40 + A2 (FR)",
+          "cat": "~160km/1h45 · via Bruxelles ring + Mons + frontière",
+          "roadType": "autopista",
+          "coord": {"lat": 50.2683, "lng": 3.2986}
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🛑",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Pit 3 · Aire d'Hordain (A2 · sortie 15)",
+          "cat": "~15min · WC + café · cruzou a frontera FR",
+          "roadType": "autopista",
+          "pitStop": true,
+          "coord": {"lat": 50.2683, "lng": 3.2986}
+        },
+        {
+          "hora": "15:15",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Hordain → Orly · A2 + A1 sul",
+          "cat": "~190km/2h · via Cambrai-Roye-Compiègne",
+          "roadType": "autopista",
+          "coord": {"lat": 48.7256, "lng": 2.3651}
+        },
+        {
+          "hora": "17:15",
+          "emoji": "🅿️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Chegada Orly · BlueValet (entrega no terminal)",
+          "cat": "Entrega de chaves · check-in voo · folga ~1h30 antes voo 19h",
+          "sobre": "Chegada em Orly · entrega do carro ao serviço valet contratado (BlueValet ou Ector). Endereço dado na reserva · ponto de entrega é no próprio terminal (Aéroport Orly · Terminal Sud ou conforme voo). Recolha será feita no mesmo ponto na volta. Total dirigido segunda: ~620km / 6h efetivos (com 1h almoço + 30min outros pit stops = 7h30 estrada).",
+          "imperdivel": "Cronometra: entrega valet + check-in + segurança = 1h até o portão · folga real ~30-45min",
+          "dicas": [
+            "RESERVAR ANTES · bluevalet.fr ou ectorparking.com · economiza 25-30%",
+            "BlueValet ~€33-45/3 dias · ~€44-60/4 dias · entrega no terminal · 4h30-23h30",
+            "Tem entrega no terminal de saída · pickup na chegada (avisar voo)",
+            "Documento check-in pronto (passaporte + reserva) antes de entregar o carro",
+            "Devolver o tanque cheio? VERIFICAR contrato (Hertz/Avis: sim · Sixt: opção)",
+            "Volta: ligar pra valet de dentro do terminal de chegada · ~15min entrega"
+          ],
+          "duracao": "20min valet + check-in normal",
+          "custo": "€33-60 (3-4 dias estacionamento valet)",
+          "acessibilidade": "Direto ao terminal · sem shuttle",
+          "parking": "BlueValet/Ector valet · €11-15/dia · entrega/pickup terminal · reservar antes",
+          "coord": {"lat": 48.7256, "lng": 2.3651}
+        },
+        {
+          "hora": "07:00",
+          "emoji": "🔄",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "🔄 ALT VOLTA · Cambrai (almoço parada longa)",
+          "cat": "Alternativa volta · UNESCO + Bêtises · sair 07h SPK",
+          "sobre": "Substitui o pit stop Hordain por uma parada REAL de almoço em Cambrai (saída de autoestrada A2/A26). Cambrai = Beffroi UNESCO (62m · vista panorâmica), Grand-Place clássica, Cathédrale Notre-Dame-de-Grâce (sepulcro de Fénelon esculpido por David d'Angers), Jardin Public (estilo inglês 1862, ideal pro carrinho), e a Confiserie Afchain (visita gratuita seg-qui 9h30-11h30 · Bêtises de Cambrai). PREÇO: precisa sair Sprockhövel às 07h (não 09h) pra encaixar 1h30 em Cambrai + voo 19h.",
+          "imperdivel": "Subir Beffroi UNESCO (62m · vista campagne picarde) + comprar Bêtises na fábrica Afchain",
+          "dicas": [
+            "Cronograma: SPK 07h → Cambrai 11h30 → almoço+visite até 13h → Orly 15h30",
+            "Confiserie Afchain (visite fábrica): seg-qui 9h30-11h30 · GRÁTIS adulto · €2 criança · 8 Rue Lavoisier",
+            "Almoço: 'Maison Demarcq' (Place du Saint-Sépulcre · 50m do Beffroi · cuisine du Nord)",
+            "Parking Place Aristide Briand · €1.20/h · 5min a pé Grand-Place",
+            "Bêtises: 'Despinoy' (Fontaine-Notre-Dame · 5km fora · pula sem culpa) OU 'Afchain' direto na cidade",
+            "SE QUISER ESSA OPÇÃO: marca antes do build · vou trocar pit stop Hordain por Cambrai longo + ajustar horários"
+          ],
+          "duracao": "1h30-2h",
+          "custo": "Grátis Beffroi exterior · €4 subida · €1.20/h parking",
+          "acessibilidade": "Centro plano · Beffroi com elevador · Jardin Public carrinho-friendly",
+          "parking": "Place Aristide Briand · €1.20/h · 5min a pé centro",
+          "coord": {"lat": 50.1762, "lng": 3.2353}
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Walking tour Mons · Grand-Place + Beffroi UNESCO": [
+      {"type": "official", "label": "Visit Mons · UNESCO", "url": "https://www.visitmons.be/"},
+      {"type": "review", "label": "UNESCO · Belfries of Belgium and France", "url": "https://whc.unesco.org/en/list/943/"}
+    ],
+    "Almoço Mons · centre historique": [
+      {"type": "official", "label": "L'Envers · site oficial", "url": "https://www.lenversmons.be/"}
+    ],
+    "Chegada Mons · Parking Grand-Place (29 Rue d'Havré)": [
+      {"type": "official", "label": "Mons.be · parkings couverts", "url": "https://www.mons.be/fr/vivre-a-mons/mobilite-et-gestion-des-espaces-publics/mobilite/venir-et-se-garer-a-mons/parkings-couverts-communaux"}
+    ],
+    "Hattingen · Leinpfad + Henrichshütte (Werkstraße)": [
+      {"type": "official", "label": "LWL-Henrichshütte · museu", "url": "https://www.lwl.org/industriemuseum/standorte/henrichshuette-hattingen"}
+    ],
+    "🔄 ALT MANHÃ · Wuppertal Schwebebahn": [
+      {"type": "official", "label": "Schwebebahn · site oficial", "url": "https://www.schwebebahn.de/"}
+    ],
+    "🔄 ALT IDA · Valenciennes (substitui Mons)": [
+      {"type": "official", "label": "Musée des Beaux-Arts Valenciennes", "url": "https://musee.valenciennes.fr/"},
+      {"type": "review", "label": "Office de Tourisme Valenciennes", "url": "https://tourismevalenciennes.fr/"}
+    ],
+    "🔄 ALT VOLTA · Cambrai (almoço parada longa)": [
+      {"type": "official", "label": "Office de Tourisme Cambrai", "url": "https://www.tourisme-cambresis.fr/"},
+      {"type": "review", "label": "Confiserie Afchain · Bêtises", "url": "https://www.confiserieafchain.fr/"}
+    ],
+    "Pit 2 · Aire de Verlaine (E42) · top aire BE": [
+      {"type": "review", "label": "Moniteur Auto · top aire BE", "url": "https://www.moniteurautomobile.be/conseils-auto/generalites/aires-de-service-belgique-top-flop.html"}
+    ],
+    "Pit 1 · Aachener Land Süd (A4 · Eschweiler)": [
+      {"type": "official", "label": "Raststätten.de · Aachener Land Süd", "url": "https://www.raststaetten.de/standorte/aachener-land-sued/"}
+    ],
+    "Chegada Orly · BlueValet (entrega no terminal)": [
+      {"type": "official", "label": "BlueValet Orly · réserver", "url": "https://www.bluevalet.fr/en/landing/orly-airport/parking-aeroport"},
+      {"type": "review", "label": "Ector Orly · alternativa valet", "url": "https://www.ectorparking.com/fr/parking-aeroport/aeroport-paris-orly/"}
+    ]
+  },
+  "transit_map": {
+    "Saída Paris · direção A1 norte": {
+      "uber": "Casa → Aire pega táxi/Uber se preferir não dirigir até lá · €30-40",
+      "metro": "Sem opção pra road-trip",
+      "taxi": "—",
+      "carro": "A1 norte direção Lille · 150km até Asseville · 1h30 sem trânsito"
+    },
+    "Mons → Aire de Verlaine · E42 leste": {
+      "uber": "Não aplicável road-trip",
+      "metro": "Sem opção",
+      "taxi": "—",
+      "carro": "150km · 1h30 · E42 via Charleroi-Namur-Huy · 100% autoestrada · pedágio €0 (Bélgica autoestrada gratuita)"
+    },
+    "Verlaine → Sprockhövel · E40 + A4/A44": {
+      "uber": "Não aplicável",
+      "metro": "Sem opção",
+      "taxi": "—",
+      "carro": "190km · 1h45 · via Liège-Aachen-Düsseldorf · cruza fronteira BE/DE em Lichtenbusch · sem controle · €0 pedágio (DE também gratuito)"
+    },
+    "Saída Sprockhövel · A1/A4 direção Aachen": {
+      "uber": "Não aplicável",
+      "metro": "Sem opção",
+      "taxi": "—",
+      "carro": "Saída pela A43/A1 oeste · pega A4 Köln-Aachen na altura de Köln-Süd · 130km até Eschweiler"
+    },
+    "Eschweiler → Aire d'Hélécine · E40 BE": {
+      "uber": "Não aplicável",
+      "metro": "Sem opção",
+      "taxi": "—",
+      "carro": "140km · 1h30 · A4 → fronteira em Lichtenbusch (sem controle) → E40 via Liège-Leuven · 100% autoestrada gratuita"
+    },
+    "Hélécine → Aire d'Hordain · E40 + A2 (FR)": {
+      "uber": "Não aplicável",
+      "metro": "Sem opção",
+      "taxi": "—",
+      "carro": "160km · 1h45 · E40 → Bruxelles ring (R0 sul) → E19 sul → Mons → frontière FR em Hensies (sem controle) → A2 França · pedágio FR ~€8 (A2)"
+    },
+    "Hordain → Orly · A2 + A1 sul": {
+      "uber": "Não aplicável",
+      "metro": "Sem opção",
+      "taxi": "—",
+      "carro": "190km · 2h · A2 → Cambrai → Roye → Compiègne → A1 sul → Orly via A6 + N7 ou périphérique · pedágio FR ~€15 (A1+A2)"
+    }
+  },
+  "bairros_config": [
+    {"nome": "🇫🇷 França (Paris+A1+A2)", "latMin": 48.5, "latMax": 50.4, "lngMin": 1.5, "lngMax": 4.0},
+    {"nome": "🇧🇪 Bélgica (Mons+E42+E40)", "latMin": 50.4, "latMax": 51.0, "lngMin": 3.0, "lngMax": 6.0},
+    {"nome": "🇩🇪 Alemanha (Aachen+NRW)", "latMin": 50.5, "latMax": 51.7, "lngMin": 6.0, "lngMax": 8.0},
+    {"nome": "📍 Outros", "fallback": true}
+  ]
+}
