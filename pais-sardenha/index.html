@@ -523,6 +523,7 @@ const DAYS = [
         "tipo": "transit",
         "nome": "Olbia → Santa Teresa di Gallura",
         "cat": "~1h15 · SS125 + SP90 · costa nordeste",
+        "roadType": "costeira",
         "coord": {
           "lat": 41.238,
           "lng": 9.1944
@@ -687,6 +688,7 @@ const DAYS = [
         "tipo": "transit",
         "nome": "Santa Teresa → Jazz Hotel Olbia",
         "cat": "~1h15 · chegam ~22:45 · 2ª noite no mesmo quarto",
+        "roadType": "costeira",
         "coord": {
           "lat": 40.9238,
           "lng": 9.5026
@@ -735,6 +737,7 @@ const DAYS = [
         "tipo": "transit",
         "nome": "Olbia → Santa Teresa di Gallura",
         "cat": "~1h15 · SS125 + SP90",
+        "roadType": "costeira",
         "coord": {
           "lat": 41.238,
           "lng": 9.1944
@@ -791,6 +794,7 @@ const DAYS = [
         "tipo": "transit",
         "nome": "Santa Teresa → Oristano",
         "cat": "~3h15 · SS131 Carlo Felice · sul",
+        "roadType": "interior",
         "coord": {
           "lat": 39.93,
           "lng": 8.5314
@@ -1427,6 +1431,7 @@ const DAYS = [
         "tipo": "transit",
         "nome": "Oristano → Sant'Antioco",
         "cat": "~2h · SS131 + SS195 · entra em Sant'Antioco pela ponte romana",
+        "roadType": "interior",
         "coord": {
           "lat": 38.9989,
           "lng": 8.4489
@@ -3495,7 +3500,8 @@ function getRouteUrl(day){
   const origin=coord(stops[0]);
   const dest=coord(stops[stops.length-1]);
   const mid=stops.slice(1,-1).map(coord).join('|');
-  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
+  const mode=day.stops.some(s=>s.tipo==='transit'&&s.roadType)?'driving':'walking';
+  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=${mode}`;
   if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
   return url;
 }
@@ -3786,7 +3792,7 @@ function renderMap(){
     ${stops.length?`<div class="stop-legend">${legend}</div>`:''}
     <div id="map"></div>
     <div class="map-cta">
-      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (${day.transport==='driving'?'🚗 carro · ida e volta da base':'🚶 walking'})</a>
+      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (${day.transport==='driving'&&day.baseCoord?'🚗 carro · ida e volta da base':day.stops.some(s=>s.tipo==='transit'&&s.roadType)?'🚗 carro':'🚶 walking'})</a>
       ${tourButtons}
       <span class="map-hint">Clique nos marcadores pros detalhes${cardsWithTours.length?' · pontos pequenos cheios = parte 1 · contorno = parte 2':''}</span>
     </div>
