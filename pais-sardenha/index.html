@@ -2310,44 +2310,104 @@ const DAYS = [
         "periodo": "tarde",
         "tipo": "card",
         "risco": "green",
-        "nome": "Retorno + sorvete na marina",
+        "nome": "Retorno + sorvete na marina · Cala Gonone",
         "cat": "Recuperação · sol forte",
-        "sobre": "Volta pra marina ~17h. Após dia de sol direto, mar e movimento de barco, simples relax. Sorveteria boa no porto (sabores típicos: mirto, fico d'india). Aproveita pra organizar mala: amanhã drive pro norte (Arzachena, ~2h30).",
+        "sobre": "Volta pra marina ~17h. Após dia de sol direto, mar e movimento de barco, simples relax. Sorveteria boa no porto (sabores típicos: mirto, fico d'india). Depois voltam de carro pra Orosei (~20min) pra banho/ducha e o passeio noturno no centro histórico.",
         "imperdivel": "Sabor fico d'india (figo da Índia) · típico sardo · refrescante",
         "dicas": [
-          "Banho/ducha antes do jantar · sol pega muito",
-          "Hidratar bem",
-          "Marca check-out amanhã · drive ~2h30 pro norte"
+          "Hidratar bem após dia de sol",
+          "Volta pra Orosei ~18h30 · banho + centro histórico antes do jantar"
         ],
-        "duracao": "1h-1h30",
+        "duracao": "1h",
         "custo": "€5-8 sorvetes",
         "acessibilidade": "Total",
         "coord": {"lat": 40.2804, "lng": 9.6272}
       },
       {
-        "hora": "20:00",
+        "hora": "18:30",
+        "emoji": "🚗",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "Cala Gonone → Orosei",
+        "cat": "~20min · SP26 subindo as falésias",
+        "roadType": "montanha",
+        "coord": {"lat": 40.3758, "lng": 9.7052}
+      },
+      {
+        "hora": "19:00",
+        "emoji": "🏛️",
+        "periodo": "noite",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Orosei centro histórico · walking tour noturno",
+        "cat": "4 stops · Piazza · Igreja · Torre · Nuraghe urbano · ~1h",
+        "sobre": "Orosei medieval é o segredo melhor guardado da costa leste. Enquanto os turistas ficam na marina de Cala Gonone, a cidade velha a 20min acima está intacta e vazia à noite. Arquitetura sardo-byzantine: igrejas barrocas, vielas de granito escuro, torres de guarda. O detalhe único: Nuraghe Mannu fica DENTRO da cidade — um nuraghe da Idade do Bronze cercado por casas medievais. Walking tour leve de ~1h antes do jantar, sem esforço físico depois do dia de barco.",
+        "imperdivel": "Nuraghe Mannu dentro da cidade · dois mil anos de história num raio de 50m",
+        "dicas": [
+          "À noite é fresco · ideal após dia de sol forte",
+          "Piazza del Popolo: bares abrem 18h-22h · aperitivo antes do jantar",
+          "Jantar em Orosei a seguir · restaurantes bons na piazza"
+        ],
+        "duracao": "1h",
+        "custo": "Grátis",
+        "acessibilidade": "Centro plano · calçamento de pedra · ok",
+        "coord": {"lat": 40.3758, "lng": 9.7052},
+        "walkingTours": [
+          {
+            "nome": "Orosei · 🏛️ Medieval & Nuraghe Urbano",
+            "descricao": "Piazza del Popolo → Chiesa San Giacomo → Torre Ruia → Nuraghe Mannu · ~1km · 1h · 4 stops",
+            "stops": [
+              {
+                "n": 1,
+                "nome": "Piazza del Popolo (centro Orosei)",
+                "coord": {"lat": 40.3758, "lng": 9.7052}
+              },
+              {
+                "n": 2,
+                "nome": "Chiesa di San Giacomo Maggiore (fachada barroca)",
+                "coord": {"lat": 40.3762, "lng": 9.7045},
+                "coord_unverified": true
+              },
+              {
+                "n": 3,
+                "nome": "Torre Ruia · Castello medievale (vista)",
+                "coord": {"lat": 40.3773, "lng": 9.7058},
+                "coord_unverified": true
+              },
+              {
+                "n": 4,
+                "nome": "Nuraghe Mannu (nuraghe dentro da cidade)",
+                "coord": {"lat": 40.3748, "lng": 9.7075},
+                "coord_unverified": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "hora": "20:30",
         "emoji": "🍽️",
         "periodo": "noite",
         "tipo": "opcoes",
-        "nome": "Jantar leve · dia foi cheio",
-        "cat": "Recarga",
-        "coord": {"lat": 40.2804, "lng": 9.6272},
+        "nome": "Jantar Orosei · noite tranquila",
+        "cat": "Piazza del Popolo · culinária local",
+        "coord": {"lat": 40.3758, "lng": 9.7052},
         "opcoes": [
           {
-            "nome": "Bue Marino",
-            "desc": "Trattoria sarda · culurgiones, ravioli · ambiente acolhedor",
-            "preco": "€30-40",
+            "nome": "Ristorante Su Barchile (centro)",
+            "desc": "Referência em Orosei · cucina sarda de qualidade · culurgiones, porceddu",
+            "preco": "€30-45",
             "dist": "Centro"
           },
           {
-            "nome": "Trattoria del Marinaio (marina)",
-            "desc": "Pé na água · peixe simples e fresco",
-            "preco": "€30-40",
-            "dist": "Marina"
+            "nome": "Locanda Rosella",
+            "desc": "Tradicional · ambiente familiar · peixe local + pasta caseira",
+            "preco": "€25-35",
+            "dist": "Centro"
           },
           {
-            "nome": "Pizza + cerveja",
-            "desc": "Casual · descanso · dorme cedo · amanhã dirige",
+            "nome": "Pizza + descanso",
+            "desc": "Casual · dorme cedo · amanhã é dia de drive longo",
             "preco": "€20",
             "dist": "Centro"
           }
@@ -2656,7 +2716,33 @@ const DAYS = [
         "duracao": "2h-3h",
         "custo": "€8 museu (opcional)",
         "acessibilidade": "Trail moderado · não recomendado pra problemas de joelho",
-        "coord": {"lat": 41.205, "lng": 9.467}
+        "coord": {"lat": 41.205, "lng": 9.467},
+        "walkingTours": [
+          {
+            "nome": "Caprera · 🏖️ Garibaldi & Cala Coticcio",
+            "descricao": "Parking → Compendio Garibaldino → Cala Coticcio · ~3km · 1h30 · 3 stops",
+            "stops": [
+              {
+                "n": 1,
+                "nome": "Parking Caprera (Ponte della Moneta)",
+                "coord": {"lat": 41.19, "lng": 9.445},
+                "coord_unverified": true
+              },
+              {
+                "n": 2,
+                "nome": "Compendio Garibaldino (casa-museu)",
+                "coord": {"lat": 41.1948, "lng": 9.4608},
+                "coord_unverified": true
+              },
+              {
+                "n": 3,
+                "nome": "Cala Coticcio (praia turquesa)",
+                "coord": {"lat": 41.2006, "lng": 9.4751},
+                "coord_unverified": true
+              }
+            ]
+          }
+        ]
       },
       {
         "hora": "18:30",
@@ -2723,16 +2809,15 @@ const DAYS = [
         "periodo": "manha",
         "tipo": "card",
         "risco": "green",
-        "nome": "Check-out Arzachena · última manhã",
-        "cat": "Check-out 11h · devolução carro 17h · voo 18:20",
-        "sobre": "Última manhã da Sardenha. Check-out até 11h. Carro devolvido às 17h em Via degli Astronauti (aeroporto OLB, ref ZPXG-FCTH-INS). Voo LH321 às 18:20 Olbia → Frankfurt, conexão LH506 às 21:10 Frankfurt → São Paulo (GRU). Arzachena a Olbia: ~40min. Tempo pra um almoço final em Olbia antes do aeroporto.",
-        "imperdivel": "Comprar bottarga, pecorino ou mel da Gallura em Arzachena antes de sair",
+        "nome": "Check-out Arzachena · manhã arqueológica",
+        "cat": "Check-out 11h · circuito Coddu Vecchiu + San Pantaleo → Olbia",
+        "sobre": "Última manhã na Sardenha — e vai ser boa. Após check-out às 11h, pequeno circuito de 2h antes de seguir pra Olbia: Tomba dei Giganti Coddu Vecchiu (10min de Arzachena, arqueologia nurágica impressionante) + San Pantaleo (vila de granito com ateliês europeus). De San Pantaleo vão direto pra Olbia via SP14+SS125 (~50min). Almoço final em Olbia, depois aeroporto. Carro devolvido às 17h, voo 18:20.",
+        "imperdivel": "Comprar bottarga, pecorino ou mel da Gallura antes de sair",
         "dicas": [
           "Check-out 11h · devolução carro 17h Via degli Astronauti · ref ZPXG-FCTH-INS",
-          "Sai de Arzachena por volta das 14h-15h · Olbia a ~40min",
+          "Circuito 11h-13h30 · direto San Pantaleo → Olbia (~50min) · almoço 14h30",
           "Bottarga em sacola selada pra despachar · não é líquido",
-          "Check-in online LH321 · 24h antes",
-          "Combustível antes de devolver (posto na saída de Olbia)"
+          "Check-in online LH321 · 24h antes"
         ],
         "duracao": "1h check-out",
         "custo": "—",
@@ -2740,7 +2825,80 @@ const DAYS = [
         "coord": {"lat": 41.0720, "lng": 9.3867}
       },
       {
-        "hora": "12:00",
+        "hora": "11:00",
+        "emoji": "🚗",
+        "periodo": "manha",
+        "tipo": "transit",
+        "nome": "Arzachena → Tomba dei Giganti Coddu Vecchiu",
+        "cat": "~10min · SP14",
+        "roadType": "interior",
+        "coord": {"lat": 41.05, "lng": 9.3556}
+      },
+      {
+        "hora": "11:15",
+        "emoji": "🗿",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Tomba dei Giganti Coddu Vecchiu",
+        "cat": "Sítio funerário · 1800-1400 a.C. · estela 4.40m",
+        "sobre": "Tumba coletiva da Idade do Bronze (1800-1400 a.C.) com a estela frontal mais alta da Sardenha: 4.40m. Forma característica nurágica: estela central + semicírculo de pedras (exedra) pra rituais. Silêncio total, sem turistas às 11h. Vista dos campos da Gallura ao redor. Combina com La Prisgiona nuraghe a 600m (mesmo gestor, ticket combinado) se quiserem mais 30min.",
+        "imperdivel": "A estela central · pré-história sarda em escala real · 3 mil anos de silêncio",
+        "dicas": [
+          "Aberto 10h-18h · ticket ~€3-5",
+          "La Prisgiona nuraghe: 600m · ticket combinado · + 30min",
+          "Sol intenso · chapéu e água",
+          "1h é suficiente pra Tomba sozinha"
+        ],
+        "duracao": "1h",
+        "custo": "€3-5",
+        "acessibilidade": "Trilha plana curta · ok",
+        "parking": "Gratuito no local · 2min a pé da entrada",
+        "coord": {"lat": 41.05, "lng": 9.3556}
+      },
+      {
+        "hora": "12:15",
+        "emoji": "🚗",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "Coddu Vecchiu → San Pantaleo",
+        "cat": "~15min · SP14",
+        "roadType": "interior",
+        "coord": {"lat": 41.0456, "lng": 9.4675}
+      },
+      {
+        "hora": "12:30",
+        "emoji": "☕",
+        "periodo": "tarde",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "San Pantaleo · café de despedida",
+        "cat": "Vila de granito + ateliês europeus · 45min",
+        "sobre": "Vila de granito encravada na cordilheira da Gallura — artistas europeus que pararam aqui nos anos 1970 e nunca foram embora. Ateliês de joias, cerâmica, esculturas misturados com casas de pedra. Piazza com a Igreja Paroquial de granito vermelho e cafés com mesas de oleandro. Última pausa da viagem antes da estrada pra Olbia.",
+        "imperdivel": "Café Nina na praça · sentar · olhar o granito vermelho · última vez",
+        "dicas": [
+          "Compras: queijo pecorino, mel, peças artesão · pagar com cartão funciona",
+          "Parking na entrada da vila · gratuito",
+          "De San Pantaleo → Olbia direto: ~50min via SP14+SS125"
+        ],
+        "duracao": "45min",
+        "custo": "Variável",
+        "acessibilidade": "Vila plana · ok",
+        "parking": "Gratuito · entrada da vila",
+        "coord": {"lat": 41.0456, "lng": 9.4675}
+      },
+      {
+        "hora": "13:30",
+        "emoji": "🚗",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "San Pantaleo → Olbia",
+        "cat": "~50min · SP14 + SS125 direto",
+        "roadType": "interior",
+        "coord": {"lat": 40.9238, "lng": 9.5026}
+      },
+      {
+        "hora": "14:30",
         "emoji": "🍽️",
         "periodo": "tarde",
         "tipo": "opcoes",
@@ -2762,19 +2920,19 @@ const DAYS = [
           },
           {
             "nome": "Aeroporto · sanduba",
-            "desc": "Prefere mais tempo em Arzachena · prático",
+            "desc": "Prefere tempo em San Pantaleo · prático",
             "preco": "€10-15",
             "dist": "OLB"
           }
         ]
       },
       {
-        "hora": "15:00",
+        "hora": "16:00",
         "emoji": "🚗",
         "periodo": "tarde",
         "tipo": "transit",
-        "nome": "Arzachena → Olbia airport",
-        "cat": "~40min · SS125 + SP73",
+        "nome": "Olbia centro → Aeroporto OLB",
+        "cat": "~10min",
         "coord": {"lat": 40.8987, "lng": 9.5176}
       },
       {
@@ -3170,14 +3328,15 @@ function getRouteUrl(day){
 }
 
 function getWalkingTourUrl(tour){
-  // Rota directions Google Maps com todas as paradas do walking tour (modo walking)
+  // V1.5: usa NOME com endereço (parens removidos só na query) em vez de coords puras
+  // coords puras mostravam 'Com alfinete' no Maps · bug corrigido 2026-05-23
   if(!tour||tour.length<2) return '#';
-  const coord=t=>`${t.coord.lat},${t.coord.lng}`;
-  const origin=coord(tour[0]);
-  const dest=coord(tour[tour.length-1]);
-  const mid=tour.slice(1,-1).map(coord).join('|');
+  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  const origin=encodeURIComponent(queryName(tour[0]));
+  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
+  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
   let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
+  if(mid) url+=`&waypoints=${mid}`;
   return url;
 }
 
