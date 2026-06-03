@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>🐠 Valência · Pai & Filha · 3-4 Jun</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#f3f4f6;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#1f2937;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+
+#app{max-width:780px;margin:0 auto;padding:14px 12px 80px}
+
+/* STICKY NAV: search + overview + tabs */
+.sticky-nav{position:sticky;top:0;z-index:50;background:linear-gradient(to bottom, #f3f4f6 0%, #f3f4f6 92%, transparent 100%);margin:0 -12px;padding:12px 12px 16px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.sticky-nav .search-wrap, .sticky-nav .overview-toggle{margin-bottom:8px}
+.sticky-nav .main-tabs{margin-bottom:0}
+
+/* HEADER */
+.header{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:18px 18px;border-radius:14px;margin-bottom:12px}
+.header h1{font-size:22px;font-weight:700;letter-spacing:-0.3px}
+.header .sub{font-size:14px;opacity:0.85;margin-top:4px}
+.header .meta{font-size:12px;opacity:0.7;margin-top:8px;display:flex;gap:14px;flex-wrap:wrap}
+.header .meta span{display:inline-flex;align-items:center;gap:4px}
+
+/* SEARCH */
+.search-wrap{position:relative;margin-bottom:12px}
+.search-input{width:100%;padding:12px 14px 12px 40px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;font-size:14px;outline:none;transition:border-color .15s}
+.search-input:focus{border-color:#3b82f6}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;opacity:0.5}
+.search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:#e5e7eb;border:none;cursor:pointer;font-size:12px;color:#6b7280;display:none}
+.search-clear.show{display:block}
+.search-results{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e5e7eb;border-top:0;border-radius:0 0 12px 12px;max-height:50vh;overflow-y:auto;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:10;display:none}
+.search-results.show{display:block}
+.search-result{padding:10px 14px;border-bottom:1px solid #f3f4f6;cursor:pointer;font-size:14px}
+.search-result:hover{background:#f9fafb}
+.search-result:last-child{border-bottom:0}
+.search-result-name{font-weight:600;color:#111827}
+.search-result-meta{font-size:12px;color:#6b7280;margin-top:2px}
+.search-result-empty{padding:14px;text-align:center;color:#9ca3af;font-size:14px}
+
+/* OVERVIEW */
+.overview-toggle{display:block;width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;font-size:14px;font-weight:600;color:#374151;cursor:pointer;margin-bottom:10px;text-align:left;display:flex;align-items:center;justify-content:space-between}
+.overview-toggle .chev{transition:transform .2s}
+.overview-toggle.open .chev{transform:rotate(180deg)}
+.overview{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:6px;margin-bottom:12px;overflow-x:auto;display:none}
+.overview.show{display:block}
+.overview table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+.overview th{background:#f9fafb;padding:7px 6px;text-align:left;font-weight:600;color:#6b7280;font-size:10px;letter-spacing:0.3px;text-transform:uppercase;border-bottom:1px solid #e5e7eb}
+.overview td{padding:7px 6px;border-bottom:1px solid #f3f4f6;vertical-align:top}
+.overview tr:last-child td{border-bottom:0}
+.overview tr.clickable{cursor:pointer}
+.overview tr.clickable:hover{background:#f9fafb}
+.overview col.col-date{width:62px}
+.overview col.col-tema{width:23%}
+.overview col.col-attr{width:auto}
+.overview col.col-bairro{width:26%}
+.overview .ov-date{line-height:1.2;padding:6px 4px}
+.ov-date-pill{display:inline-flex;flex-direction:column;align-items:center;padding:5px 8px;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:7px;transition:all .15s;cursor:pointer;min-width:48px}
+.ov-date-pill strong{font-weight:700;color:#111827;font-size:11px;line-height:1.1}
+.ov-date-pill small{font-size:11px;color:#374151;font-weight:600;line-height:1.1;margin-top:1px}
+.ov-date-pill::after{content:'→';font-size:10px;color:#9ca3af;margin-top:2px;line-height:1}
+tr.clickable:hover .ov-date-pill{background:#e0e7ff;border-color:#c7d2fe}
+tr.clickable:hover .ov-date-pill::after{color:#6366f1}
+.ov-main{color:#111827;line-height:1.35}
+.ov-wt-btn{display:inline-flex;align-items:center;gap:4px;margin-top:5px;padding:4px 9px;background:linear-gradient(90deg,#6366f1,#8b5cf6);color:#fff;border:none;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;font-family:inherit;line-height:1.2;letter-spacing:0.3px;box-shadow:0 1px 2px rgba(99,102,241,0.3);transition:transform .1s,filter .15s}
+.ov-wt-btn:hover{filter:brightness(1.1)}
+.ov-wt-btn:active{transform:scale(0.96)}
+.overview .ov-tema{color:#374151;font-weight:500;white-space:normal;word-break:break-word;line-height:1.3}
+.overview .ov-attr{color:#0f172a;font-size:12px;white-space:normal;word-break:break-word;line-height:1.3}
+.overview .ov-bairro{color:#6b7280;font-size:10px;white-space:normal;word-break:break-word;line-height:1.3}
+
+/* MAIN TABS */
+.main-tabs{display:flex;gap:8px;margin-bottom:12px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:4px}
+.main-tab{flex:1;padding:8px 4px;border:none;background:transparent;font-size:14px;font-weight:600;color:#6b7280;cursor:pointer;border-radius:9px;transition:all .15s}
+.main-tab.active{background:#0f172a;color:#fff}
+.main-tab:not(.active):hover{background:#f3f4f6}
+
+/* DAY TABS */
+.day-tabs-wrap{position:relative;margin-bottom:14px}
+.day-tabs-wrap::before,
+.day-tabs-wrap::after{content:'';position:absolute;top:0;bottom:4px;width:24px;pointer-events:none;z-index:1;border-radius:8px}
+.day-tabs-wrap::before{left:0;background:linear-gradient(to right,#f3f4f6,transparent)}
+.day-tabs-wrap::after{right:0;background:linear-gradient(to left,#f3f4f6,transparent)}
+.day-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;scroll-padding:24px}
+.day-tabs::-webkit-scrollbar{height:4px}
+.day-tabs::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:2px}
+.day-tab{flex-shrink:0;padding:8px 12px;border:1px solid #e5e7eb;background:#fff;color:#374151;border-radius:9px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .15s}
+.day-tab.active{background:var(--day-color,#0f172a);color:#fff;border-color:var(--day-color,#0f172a)}
+.day-tab .dt-date{font-size:12px;opacity:0.7;margin-right:6px;font-weight:500}
+
+/* DAY CARD */
+.day-card{background:#fff;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.day-banner{padding:18px 18px 16px;color:#fff;background:linear-gradient(135deg,var(--day-grad-a),var(--day-grad-b))}
+.day-banner .date{font-size:12px;font-weight:600;opacity:0.85;text-transform:uppercase;letter-spacing:0.5px}
+.day-banner h2{font-size:19px;font-weight:700;margin-top:4px;letter-spacing:-0.2px}
+.day-banner .bairro{font-size:14px;opacity:0.85;margin-top:6px;display:flex;align-items:center;gap:5px}
+.day-nota{padding:12px 16px;background:#fffbeb;border-left:3px solid #f59e0b;font-size:14px;color:#78350f}
+
+/* PERIODO BLOCKS */
+.periodos{padding:14px 14px 8px}
+.periodo{margin-bottom:18px}
+.periodo:last-child{margin-bottom:6px}
+.periodo-header{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#111827;margin-bottom:10px;padding-bottom:6px;border-bottom:1px dashed #e5e7eb;text-transform:uppercase;letter-spacing:0.5px}
+.periodo-header .emoji{font-size:16px}
+.periodo-stops{display:flex;flex-direction:column;gap:10px}
+
+/* CARDS (atrações principais) */
+.stop-card{border:1px solid #e5e7eb;border-left:4px solid var(--day-color,#9ca3af);border-radius:11px;padding:12px 14px;background:#fff;transition:border-color .15s;cursor:pointer;position:relative}
+.stop-card:hover{border-color:#9ca3af;border-left-color:var(--day-color,#9ca3af)}
+.stop-card.expanded{cursor:default}
+.stop-card .stop-body,
+.stop-card .stop-imperdivel,
+.stop-card .stop-dicas,
+.stop-card .stop-meta,
+.stop-card .stop-link,
+.stop-card .stop-source-links{display:none}
+.stop-card.expanded .stop-body,
+.stop-card.expanded .stop-imperdivel,
+.stop-card.expanded .stop-dicas,
+.stop-card.expanded .stop-meta{display:block}
+.stop-card.expanded .stop-meta{display:flex}
+.stop-card.expanded .stop-link{display:inline-flex}
+.stop-card.expanded .stop-source-links{display:flex}
+.stop-card::after{content:'▼';position:absolute;right:14px;top:14px;font-size:10px;color:#9ca3af;transition:transform .2s}
+.stop-card.expanded::after{transform:rotate(180deg)}
+.stop-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px;padding-right:18px}
+.stop-emoji{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:26px;background:linear-gradient(135deg,var(--day-grad-a,#6b7280),var(--day-grad-b,#9ca3af));color:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.15)}
+.stop-time-name{flex:1;min-width:0}
+.stop-time{font-size:12px;font-weight:600;color:#6b7280;letter-spacing:0.3px}
+.stop-name{font-size:16px;font-weight:700;color:#111827;margin-top:1px;line-height:1.3}
+.stop-cat{font-size:12px;color:#6b7280;margin-top:3px;line-height:1.35}
+.stop-body{margin-top:10px;padding-top:10px;border-top:1px solid #f3f4f6}
+.stop-body p{font-size:14px;color:#374151;margin-bottom:8px;line-height:1.55}
+.stop-imperdivel{background:#fef3c7;border-left:3px solid #f59e0b;padding:8px 10px;border-radius:0 6px 6px 0;font-size:12px;color:#78350f;margin-bottom:10px}
+.stop-imperdivel strong{display:block;font-size:10px;font-weight:700;letter-spacing:0.5px;margin-bottom:2px;color:#92400e}
+.stop-dicas{font-size:12px;color:#374151}
+.stop-dicas-title{font-size:10px;font-weight:700;color:#6b7280;letter-spacing:0.5px;margin-bottom:4px;text-transform:uppercase}
+.stop-dicas ul{padding-left:18px;margin:0}
+.stop-dicas li{margin-bottom:3px;line-height:1.45}
+.stop-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;padding-top:10px;border-top:1px solid #f3f4f6;font-size:12px;color:#6b7280}
+.stop-meta span{display:inline-flex;align-items:center;gap:3px}
+.stop-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#0f172a;text-decoration:none;padding:5px 9px;border:1px solid #e5e7eb;border-radius:6px;margin-top:8px;background:#fafafa;transition:all .15s;cursor:pointer;font-family:inherit}
+.stop-link:hover{background:#0f172a;color:#fff;border-color:#0f172a}
+.stop-source-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.source-link{font-size:12px;color:#0f172a;text-decoration:none;padding:4px 8px;border:1px solid #e5e7eb;border-radius:5px;background:#fff;transition:all .15s}
+.source-link:hover{background:#0f172a;color:#fff;border-color:#0f172a}
+.source-link.official{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+
+/* OPCOES (3+ opções: comida, playgrounds, alt) */
+.stop-opcoes{border:1px dashed #d1d5db;border-left:4px dashed var(--day-color,#9ca3af);border-radius:11px;padding:12px 14px;background:#fafafa;cursor:pointer;position:relative;transition:border-color .15s}
+.stop-opcoes:hover{border-color:#9ca3af}
+.stop-opcoes.expanded{cursor:default}
+.stop-opcoes::after{content:'▼';position:absolute;right:14px;top:14px;font-size:10px;color:#9ca3af;transition:transform .2s}
+.stop-opcoes.expanded::after{transform:rotate(180deg)}
+.stop-opcoes .stop-body,
+.stop-opcoes .opcoes-list{display:none}
+.stop-opcoes.expanded .stop-body{display:block}
+.stop-opcoes.expanded .opcoes-list{display:block}
+.stop-opcoes-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:0;padding-right:18px}
+.stop-opcoes.expanded .stop-opcoes-head{margin-bottom:8px}
+.stop-opcoes-emoji{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;background:linear-gradient(135deg,var(--day-grad-a,#9ca3af),var(--day-grad-b,#d1d5db));color:#fff;opacity:0.85}
+.stop-opcoes-title{flex:1}
+.stop-opcoes-name{font-size:14px;font-weight:700;color:#111827}
+.stop-opcoes-cat{font-size:12px;color:#6b7280;margin-top:2px}
+.opcoes-list{margin-top:8px}
+.opcao-item{padding:8px 0;border-bottom:1px dashed #e5e7eb;font-size:12px}
+.opcao-item:last-child{border-bottom:0;padding-bottom:0}
+.opcao-name{font-weight:600;color:#111827;font-size:12px}
+.opcao-meta{display:inline-flex;gap:8px;font-size:12px;color:#6b7280;margin-left:6px}
+.opcao-desc{color:#4b5563;margin-top:2px;line-height:1.45}
+
+/* TRANSIT */
+.stop-transit{display:flex;flex-direction:column;gap:8px;padding:10px 12px;background:#f3f4f6;border-radius:9px}
+.stop-transit-header{display:flex;align-items:center;gap:8px;font-size:12px;color:#6b7280;flex-wrap:wrap}
+.stop-transit-emoji{font-size:14px}
+.stop-transit-time{font-weight:600;color:#374151;font-size:12px}
+.stop-transit-name{font-weight:600;color:#374151;flex:1;min-width:140px}
+.stop-transit-cat{font-size:12px;color:#6b7280;margin-left:24px}
+.stop-transit-routes{display:flex;flex-direction:column;gap:4px;margin-top:4px;margin-left:24px}
+/* Transit collapsible (apenas se tiver routes) */
+.stop-transit.collapsible{cursor:pointer;transition:background .15s}
+.stop-transit.collapsible:hover{background:#e5e7eb}
+.stop-transit.collapsible .stop-transit-routes{display:none}
+.stop-transit.collapsible.expanded .stop-transit-routes{display:flex}
+.stop-transit-chev{margin-left:auto;font-size:10px;color:#9ca3af;transition:transform .2s;font-weight:700}
+.stop-transit.collapsible.expanded .stop-transit-chev{transform:rotate(180deg);color:#6b7280}
+.route-option{font-size:12px;color:#4b5563;line-height:1.45}
+.route-option strong{color:#374151;font-weight:600;display:inline-block;min-width:62px}
+.route-option.recommended{color:#065f46}
+.route-option.recommended strong{color:#047857}
+
+/* RESERVA badges (✓ feito · ☐ pendente) - clicáveis */
+.reserva-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.4px;padding:3px 8px;border-radius:5px;margin-left:8px;vertical-align:1px;cursor:pointer;border:none;font-family:inherit;transition:transform .1s,filter .15s}
+.reserva-badge:hover{filter:brightness(0.95)}
+.reserva-badge:active{transform:scale(0.96)}
+.reserva-badge.ok{background:rgba(16,185,129,0.15);color:#047857}
+.reserva-badge.pending{background:rgba(245,158,11,0.18);color:#b45309}
+/* WALKING TOUR flag (busca + visibilidade) */
+.walking-tour-flag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:0.6px;padding:4px 10px;border-radius:5px;margin:4px 0 2px;background:linear-gradient(90deg,#6366f1,#8b5cf6);color:#fff;text-transform:uppercase;box-shadow:0 1px 2px rgba(99,102,241,0.3)}
+.search-wt-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.5px;padding:2px 6px;border-radius:4px;margin-left:8px;background:linear-gradient(90deg,#6366f1,#8b5cf6);color:#fff;text-transform:uppercase;vertical-align:1px}
+
+/* RISCO badges (tranquilo / atenção / alta atenção) */
+.risk-pill{display:inline-block;font-size:10px;font-weight:600;padding:1px 7px;border-radius:5px;margin-left:6px;vertical-align:1px}
+.risk-green{background:rgba(16,185,129,.12);color:#059669}
+.risk-yellow{background:rgba(245,158,11,.15);color:#d97706}
+.risk-red{background:rgba(239,68,68,.12);color:#dc2626}
+
+/* Cards com risco RED: faixa vertical sutil no lado direito */
+.stop-card[data-risco="red"]{position:relative}
+.stop-card[data-risco="red"]::before{content:'';position:absolute;right:0;top:14px;bottom:14px;width:3px;background:linear-gradient(180deg,#dc2626,#991b1b);border-radius:2px 0 0 2px}
+
+/* GROUP DOT no day-tab (família junto) */
+.day-tab{position:relative}
+.group-dot{position:absolute;top:-5px;right:-5px;background:#f59e0b;border-radius:50%;width:18px;height:18px;font-size:10px;display:flex;align-items:center;justify-content:center;color:#fff;line-height:1;border:2px solid #f3f4f6;box-shadow:0 1px 2px rgba(0,0,0,0.15)}
+
+/* POR BAIRRO */
+.bairros-list{display:flex;flex-direction:column;gap:14px}
+.bairro-block{background:#fff;border-radius:12px;padding:14px 16px;border:1px solid #e5e7eb}
+.bairro-name{font-size:16px;font-weight:700;color:#111827;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #f3f4f6;display:flex;align-items:center;gap:8px}
+.bairro-emoji{font-size:19px}
+.bairro-attrs{display:flex;flex-direction:column;gap:8px}
+.bairro-attr{padding:8px 10px;background:#fafafa;border-radius:8px;font-size:14px;cursor:pointer;border:1px solid transparent;transition:all .15s}
+.bairro-attr:hover{border-color:#e5e7eb;background:#fff}
+.bairro-attr-name{font-weight:600;color:#111827}
+.bairro-attr-day{font-size:12px;color:#6b7280;margin-top:2px}
+
+/* MAP */
+.map-section{display:flex;flex-direction:column;gap:12px}
+.stop-legend{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.stop-legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#374151}
+.stop-num{width:22px;height:22px;border-radius:50%;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.legend-hora{font-weight:700;color:#111827;min-width:42px}
+.legend-nome{color:#4b5563}
+#map{height:55vh;min-height:380px;border-radius:12px;border:1px solid #e5e7eb}
+.map-cta{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px;background:#fff;border:1px solid #e5e7eb;border-radius:12px}
+.gmaps-btn{display:inline-flex;align-items:center;justify-content:center;background:#0f172a;color:#fff;text-decoration:none;padding:12px 20px;border-radius:10px;font-size:14px;font-weight:600;transition:background .15s;width:100%;max-width:380px}
+.gmaps-btn:hover{background:#1e293b}
+.map-hint{font-size:12px;color:#9ca3af}
+/* Popup style (V1.3) */
+.pp-time{font-weight:700;font-size:12px;letter-spacing:.5px;margin-bottom:4px}
+.pp-name{font-weight:700;font-size:14px;color:#111827;margin-bottom:4px;line-height:1.3}
+.pp-notes{font-size:12px;color:#6b7280;line-height:1.4}
+.leaflet-popup-content a.pp-link, a.pp-link, .pp-link{display:inline-block;margin-top:8px;padding:8px 14px;color:#fff !important;border-radius:7px;font-size:12px;font-weight:600;text-decoration:none !important;text-shadow:0 1px 1px rgba(0,0,0,0.2)}
+/* Walking tour: sub-marcadores numerados pequenos */
+.wt-marker{background:transparent !important;border:none !important}
+.wt-marker > div{width:24px;height:24px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.35);font-family:-apple-system,sans-serif}
+.walking-tour-btn{margin-top:6px !important;font-size:13px !important;background:#1e293b !important}
+
+/* AUTH GATE */
+#auth-gate{position:fixed;inset:0;background:linear-gradient(135deg,#0f172a,#1e293b);display:flex;align-items:center;justify-content:center;padding:24px;z-index:100}
+.auth-box{background:#fff;border-radius:18px;padding:32px 28px;max-width:340px;width:100%;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,0.3)}
+.auth-emoji{font-size:42px;margin-bottom:6px}
+.auth-title{font-size:19px;font-weight:700;color:#111827}
+.auth-sub{font-size:14px;color:#6b7280;margin-top:6px;margin-bottom:18px}
+.auth-input{width:100%;padding:12px 16px;border:1px solid #e5e7eb;border-radius:11px;font-size:16px;outline:none;text-align:center;letter-spacing:1px;font-weight:500}
+.auth-input:focus{border-color:#3b82f6}
+.auth-error{font-size:12px;color:#dc2626;margin-top:8px;min-height:16px}
+.auth-btn{width:100%;padding:12px;background:#0f172a;color:#fff;border:none;border-radius:11px;font-size:14px;font-weight:600;margin-top:12px;cursor:pointer;transition:background .15s}
+.auth-btn:hover{background:#1e293b}
+
+/* LEGENDA & AVISOS no rodapé */
+.footer-legend{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px 17px;margin-top:24px;font-size:12px;color:#6b7280;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.footer-legend .head-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.footer-legend h3{font-weight:700;color:#111827;font-size:12px;letter-spacing:.5px;margin:0}
+.legend-toggle{display:flex;align-items:center;gap:8px;font-size:12px;color:#6b7280;cursor:pointer;user-select:none;font-weight:500}
+.legend-toggle input[type="checkbox"]{width:14px;height:14px;cursor:pointer;accent-color:#2563eb;margin:0}
+.legend-content{margin-top:10px}
+.footer-legend.collapsed .legend-content{display:none}
+.footer-legend.collapsed{padding:12px 17px}
+.legend-content .row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;align-items:center}
+.legend-content .text{line-height:1.7;border-top:1px solid #f3f4f6;padding-top:9px;font-size:12px}
+.legend-content strong{color:#111827}
+
+/* MOBILE */
+@media (max-width:600px){
+  #app{padding:10px 8px 80px}
+  .header{padding:14px;margin-bottom:10px}
+  .header h1{font-size:19px}
+  .periodos{padding:10px 10px 6px}
+  .day-banner{padding:14px}
+  .day-banner h2{font-size:19px}
+  .stop-card{padding:12px 12px}
+  .stop-name{font-size:14px}
+  .overview{font-size:12px}
+}
+
+</style>
+</head>
+<body>
+
+<div id="auth-gate">
+  <div class="auth-box">
+    <div class="auth-emoji">🐠</div>
+    <div class="auth-title">Valência 2026</div>
+    <div class="auth-sub">3-4 Jun · Tobia + filha (3a)</div>
+    <input class="auth-input" id="pw" type="password" placeholder="senha" autocomplete="off">
+    <div class="auth-error" id="pw-err"></div>
+    <button class="auth-btn" onclick="checkAuth()">Entrar</button>
+  </div>
+</div>
+
+<div id="app">
+  <div class="header">
+    <h1>Valência · 2 dias</h1>
+    <div class="sub">3-4/Jun · Oceanogràfic · Bioparc · Gulliver</div>
+  </div>
+
+  <div class="sticky-nav">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input class="search-input" type="text" id="search" placeholder="Buscar atração, bairro, comida..." autocomplete="off">
+      <button class="search-clear" id="search-clear">×</button>
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+    <button class="overview-toggle" id="overview-toggle">
+      <span>📊 Resumo de todos os dias</span>
+      <span class="chev">▼</span>
+    </button>
+    <div class="overview" id="overview"></div>
+
+    <div class="main-tabs">
+      <button class="main-tab active" data-view="guia">📋 Guia</button>
+      <button class="main-tab" data-view="mapa">🗺️ Mapa</button>
+      <button class="main-tab" data-view="bairros">🏘️ Por bairro</button>
+    </div>
+  </div>
+
+  <div id="content"></div>
+
+  <div class="footer-legend" id="footer-legend">
+    <div class="head-row">
+      <h3>🗺️ LEGENDA & AVISOS</h3>
+      <label class="legend-toggle">
+        <input type="checkbox" id="legend-cb">
+        Já li
+      </label>
+    </div>
+    <div class="legend-content">
+      <div class="row">
+        <span><span class="risk-pill risk-green">🟢 tranquilo</span></span>
+        <span><span class="risk-pill risk-yellow">⚠️ atenção</span></span>
+        <span><span class="risk-pill risk-red">🔴 alta atenção</span></span>
+        <span style="font-size:12px"><span style="display:inline-block;background:#f59e0b;border-radius:50%;width:14px;height:14px;font-size:8px;color:#fff;text-align:center;line-height:14px;vertical-align:-2px;margin-right:4px">👥</span> 👶 Pai + filha (3 anos)</span>
+      </div>
+      <div class="text">
+<strong>🏠 Base</strong>: Carrer de la Democràcia 48 (L'Olivereta · a ~12min a pé do Bioparc). <strong>👶</strong> Roteiro pai + filha (3a) · tudo pensado pra carrinho. <strong>☕ Hoje à tarde</strong>: ponto pra trabalhar enquanto ela brinca (Ruzafa).
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+// AUTH (persistente)
+const AUTH_KEY='roteiro_auth_v1';
+const AUTH_PASSWORD='valencia2026';
+function checkAuth(){
+  const v=document.getElementById('pw').value;
+  if(v===AUTH_PASSWORD){
+    try{ localStorage.setItem(AUTH_KEY,'1'); }catch(e){}
+    document.getElementById('auth-gate').style.display='none';
+    document.getElementById('app').style.display='block';
+    init();
+  } else {
+    document.getElementById('pw-err').textContent='Senha incorreta';
+  }
+}
+document.getElementById('pw').addEventListener('keypress',e=>{if(e.key==='Enter')checkAuth()});
+// Auto-login se já autenticou antes (executa após DOM + scripts carregados)
+window.addEventListener('DOMContentLoaded',()=>{
+  if(localStorage.getItem(AUTH_KEY)==='1'){
+    document.getElementById('auth-gate').style.display='none';
+    document.getElementById('app').style.display='block';
+    if(typeof init==='function') init();
+  }
+});
+</script>
+
+<script>
+// ============== DATA ==============
+const DAYS = [
+  {
+    "date": "Qua 3/Jun",
+    "tema": "Oceanogràfic · tarde de trabalho",
+    "temaCurto": "Oceanogràfic",
+    "bairro": "🐠 Ciudad de las Artes + Ruzafa",
+    "grupo": false,
+    "nota": "Manhã forte no Oceanogràfic (passear bastante) · almoço em Ruzafa · à tarde você trabalha enquanto ela brinca num café com parque de bolas. Volta tranquila pra base no fim do dia.",
+    "cor": "#0891b2",
+    "gradA": "#155e75",
+    "gradB": "#06b6d4",
+    "stops": [
+      {
+        "hora": "09:30",
+        "emoji": "🚕",
+        "periodo": "manha",
+        "tipo": "transit",
+        "nome": "Base (Democràcia) → Oceanogràfic",
+        "cat": "~12-15min · Uber/taxi tranquilo com a peque",
+        "coord": {
+          "lat": 39.4527,
+          "lng": -0.3481
+        }
+      },
+      {
+        "hora": "10:00",
+        "emoji": "🐠",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "yellow",
+        "nome": "Oceanogràfic (C/ Eduardo Primo Yúfera 1)",
+        "cat": "Maior aquário da Europa · túneis submarinos",
+        "sobre": "Maior aquário da Europa (110.000 m², inaugurado em 2003), dentro da Ciudad de las Artes y las Ciencias. São **nove torres-ecossistema** ligadas por túneis: do Ártico (belugas) aos mares tropicais, mais o oceanário central com um túnel de 70m onde tubarões e raias passam por cima da sua cabeça.",
+        "imperdivel": "O túnel dos Oceanos (tubarões nadando por cima) + os golfinhos do Delfinari.",
+        "dicas": [
+          "Compra **online com franja horária** · a taquilla fecha 1h antes do fechamento",
+          "Chega na abertura (**10h**) pra pegar belugas e o túnel de tubarões antes da multidão",
+          "Os **shows de golfinhos** têm horário fixo no Delfinari · confere o painel ao entrar e monta o circuito em volta deles",
+          "Restaurante Submarino fica dentro de um aquário 360° (caro · reserva à parte) · senão há cafés normais pra um lanche rápido com ela"
+        ],
+        "duracao": "3-4h",
+        "custo": "~€37-39 adulto · 4-12 ~€27 · 0-3 grátis (retira ticket)",
+        "acessibilidade": "100% acessível · carrinho roda em tudo, elevadores entre níveis",
+        "coord": {
+          "lat": 39.4527,
+          "lng": -0.3481
+        }
+      },
+      {
+        "hora": "13:30",
+        "emoji": "🚕",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "Oceanogràfic → Ruzafa",
+        "cat": "~10min · ou 25min a pé subindo pelo Jardí del Túria",
+        "coord": {
+          "lat": 39.4615,
+          "lng": -0.368
+        }
+      },
+      {
+        "hora": "14:00",
+        "emoji": "🍽️",
+        "periodo": "tarde",
+        "tipo": "opcoes",
+        "nome": "Almoço · Ruzafa",
+        "cat": "3 opções family-friendly antes do café",
+        "coord": {
+          "lat": 39.4615,
+          "lng": -0.368
+        },
+        "opcoes": [
+          {
+            "nome": "Federal Café (Ruzafa)",
+            "desc": "Brunch/all-day australiano · comida fresca, ambiente relax e cadeirão pra ela",
+            "preco": "€€",
+            "dist": "coração de Ruzafa"
+          },
+          {
+            "nome": "Dulce Tahona (Ruzafa)",
+            "desc": "Cafeteria com zona infantil · ela come e já começa a brincar",
+            "preco": "€",
+            "dist": "Ruzafa"
+          },
+          {
+            "nome": "Canalla Bistro (C/ Mestre Josep Serrano 5)",
+            "desc": "Ricard Camarena casual · pratos pra dividir, mais gastronômico (confirma horário de almoço)",
+            "preco": "€€€",
+            "dist": "Ruzafa"
+          }
+        ]
+      },
+      {
+        "hora": "16:00",
+        "emoji": "☕",
+        "periodo": "tarde",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Hippolatte · Café & Juegos (C/ dels Centelles 42)",
+        "cat": "Café de especialidade + parque de bolas · trabalha enquanto ela brinca",
+        "sobre": "Café de Ruzafa desenhado pra famílias: de um lado **mesas, wifi e café de especialidade**; do outro um **parque de bolas** com tobogã, rocódromo e zona blanda pra crianças de 1 a 9 anos. Você senta com o laptop e a vê brincando a poucos metros — exatamente o que você pediu pra hoje à tarde.",
+        "imperdivel": "A piscina de bolas + rocódromo · ela gasta toda a energia enquanto você fecha o trabalho.",
+        "dicas": [
+          "**Quarta abre só às 16h** (fecha 20h) · chega na abertura pra pegar mesa boa perto da zona de jogo",
+          "Wifi + tomadas · pede um flat white e estica a tarde",
+          "**Alternativa coladinha** (você pediu pra ver as duas): **Kibu Family & Friends** (C/ dels Centelles 7, mesma rua) — ludoteca com **monitor** + café de especialidade, mais 'coworking com babá'. Qua 16-19:30. Se quiser foco total no trabalho, é essa.",
+          "Leva meia antiderrapante pra ela entrar no parque de bolas"
+        ],
+        "duracao": "2-3h",
+        "custo": "Consumição + tarifa de jogo por criança (econômico · confirma no balcão)",
+        "acessibilidade": "Térreo, sem escadas · carrinho entra",
+        "coord": {
+          "lat": 39.4612,
+          "lng": -0.3618
+        }
+      },
+      {
+        "hora": "18:45",
+        "emoji": "🚕",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "Ruzafa → Base (Democràcia)",
+        "cat": "~15min · jantar leve perto da base",
+        "coord": {
+          "lat": 39.4715,
+          "lng": -0.395
+        }
+      }
+    ]
+  },
+  {
+    "date": "Qui 4/Jun",
+    "tema": "Bioparc + Parque Gulliver",
+    "temaCurto": "Bioparc",
+    "bairro": "🦍 Bioparc / L'Olivereta + Turia",
+    "grupo": false,
+    "nota": "Dia livre. Bioparc de manhã (a pé da base!) · almoço dentro do parque · siesta da peque · e Parque Gulliver no fim de tarde, quando esfria. Gulliver é opcional — se ela acabar moída no Bioparc, pula sem culpa e fica num jantar relax.",
+    "cor": "#16a34a",
+    "gradA": "#166534",
+    "gradB": "#22c55e",
+    "stops": [
+      {
+        "hora": "09:45",
+        "emoji": "🚶",
+        "periodo": "manha",
+        "tipo": "transit",
+        "nome": "Base (Democràcia) → Bioparc",
+        "cat": "~12-15min a pé (1km) · ou Uber 5min",
+        "coord": {
+          "lat": 39.4781,
+          "lng": -0.4071
+        }
+      },
+      {
+        "hora": "10:00",
+        "emoji": "🦍",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "yellow",
+        "nome": "Bioparc Valencia (Av. Pío Baroja 3)",
+        "cat": "Zoo de imersão · savana africana sem grades",
+        "sobre": "Zoo de **zoo-imersão** (2008): em vez de jaulas, recria os habitats africanos — savana, Madagáscar, floresta equatorial — separando bichos e gente por fossos e desníveis 'invisíveis'. Você caminha no meio de antílopes e girafas, com **gorilas, leões e hipopótamos** (tem janela subaquática) pelo caminho.",
+        "imperdivel": "A grande savana africana logo na entrada + o grupo de gorilas.",
+        "dicas": [
+          "Compra **online e escolhe a franja horária** de acesso · custa o mesmo e garante a entrada",
+          "Pega o **folheto de horários das exibições** na entrada e monta o circuito em volta delas (a dos gorilas/leões enche)",
+          "Calor de junho: faz o circuito de manhã, leva **água e chapéu** pra ela · há sombra, mas a savana é aberta",
+          "Almoço dentro do parque: **Samburu** serve paella com vista pra savana (ver opção abaixo)"
+        ],
+        "duracao": "3-4h",
+        "custo": "€29,50 adulto · ~€23,50 criança · 0-3 grátis",
+        "acessibilidade": "Percurso pensado pra carrinho · rampas suaves, sem escadas obrigatórias",
+        "coord": {
+          "lat": 39.4781,
+          "lng": -0.4071
+        }
+      },
+      {
+        "hora": "13:30",
+        "emoji": "🍽️",
+        "periodo": "tarde",
+        "tipo": "opcoes",
+        "nome": "Almoço · dentro do Bioparc",
+        "cat": "fica no parque · sem stress de sair com a peque",
+        "coord": {
+          "lat": 39.4778,
+          "lng": -0.4065
+        },
+        "opcoes": [
+          {
+            "nome": "Restaurante Samburu (Bioparc)",
+            "desc": "Paella de arroz bomba com vista pra savana · salões climatizados ou terraço",
+            "preco": "€€",
+            "dist": "dentro do parque"
+          },
+          {
+            "nome": "Cafetería Kidepo (Bioparc)",
+            "desc": "Café/snack rápido com vista pra savana, junto à zona infantil",
+            "preco": "€",
+            "dist": "ao lado do Samburu"
+          },
+          {
+            "nome": "Voltar pra L'Olivereta",
+            "desc": "Se preferir algo fora, o bairro da base tem bares de menú del día baratos",
+            "preco": "€",
+            "dist": "~12min a pé"
+          }
+        ]
+      },
+      {
+        "hora": "15:00",
+        "emoji": "🚶",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "Bioparc → Base · siesta da peque",
+        "cat": "~12-15min a pé · recarrega pras 2ª parte do dia",
+        "coord": {
+          "lat": 39.4715,
+          "lng": -0.395
+        }
+      },
+      {
+        "hora": "17:15",
+        "emoji": "🚕",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "Base → Parque Gulliver",
+        "cat": "~15min · ponta leste do Jardí del Túria",
+        "coord": {
+          "lat": 39.4625,
+          "lng": -0.3594
+        }
+      },
+      {
+        "hora": "17:30",
+        "emoji": "🛝",
+        "periodo": "tarde",
+        "tipo": "card",
+        "risco": "yellow",
+        "nome": "Parque Gulliver (Jardí del Túria, Tram XII)",
+        "cat": "Gigante de 70m virado escorregador · grátis",
+        "sobre": "No leito do antigo rio Turia, uma escultura de **70m do Gulliver** deitado e amarrado pelos liliputianos — só que ela toda é um playground gigante: o cabelo, as roupas e as cordas viram rampas, escadas e toboganes pra criançada escalar e descer. Inaugurado em 1990, é o parque infantil mais querido de Valência.",
+        "imperdivel": "Descer os toboganes pelo corpo do gigante · ela vai querer repetir umas 20 vezes.",
+        "dicas": [
+          "Junho abre **10-20h** · vai no fim da tarde (17h30+), quando o sol baixa — de tarde cheia o metal/pedra esquenta",
+          "Ao lado tem **minigolf, xadrez gigante** e um quiosque/bar pra você sentar enquanto ela corre",
+          "Carrinho fica embaixo · a figura é só escada/rampa, sobe junto com ela",
+          "Leva **água** · a sombra é limitada em cima do Gulliver"
+        ],
+        "duracao": "1-1h30",
+        "custo": "Grátis",
+        "acessibilidade": "Jardim plano e acessível · a estrutura do Gulliver é escada/rampa (sem carrinho em cima)",
+        "coord": {
+          "lat": 39.4625,
+          "lng": -0.3594
+        }
+      }
+    ]
+  }
+];
+
+// ============== LINKS oficiais + reviews por atração ==============
+const LINKS_MAP = {
+  "Oceanogràfic (C/ Eduardo Primo Yúfera 1)": [
+    {
+      "type": "official",
+      "label": "Oceanogràfic · site oficial",
+      "url": "https://www.oceanografic.org/"
+    }
+  ],
+  "Hippolatte · Café & Juegos (C/ dels Centelles 42)": [
+    {
+      "type": "official",
+      "label": "Hippolatte",
+      "url": "https://hippolatte.com/"
+    },
+    {
+      "type": "review",
+      "label": "Kibu Family & Friends (alternativa)",
+      "url": "https://www.kibuclubs.com/"
+    }
+  ],
+  "Bioparc Valencia (Av. Pío Baroja 3)": [
+    {
+      "type": "official",
+      "label": "Bioparc Valencia",
+      "url": "https://bioparcvalencia.es/"
+    }
+  ],
+  "Parque Gulliver (Jardí del Túria, Tram XII)": [
+    {
+      "type": "official",
+      "label": "Parque Gulliver · Visit València",
+      "url": "https://www.visitvalencia.com/que-hacer-valencia/naturaleza-en-valencia/parques-y-jardines/parque-gulliver"
+    }
+  ]
+};
+
+// ============== TRANSIT detalhe metrô + Uber ==============
+const TRANSIT_MAP = {
+  "Base (Democràcia) → Oceanogràfic": {
+    "uber": "~€8-10 · 12-15min · melhor opção com carrinho",
+    "bus": "EMT direto até a Ciudad de les Arts · ~25-30min",
+    "metro": "Tram/Metro com 1 baldeação até a zona · ~35-40min"
+  },
+  "Oceanogràfic → Ruzafa": {
+    "uber": "~€7 · 10min",
+    "metro": "A pé ~25min subindo pelo Jardí del Túria (sombra) · ou bus EMT ~20min"
+  },
+  "Ruzafa → Base (Democràcia)": {
+    "uber": "~€9 · 15min",
+    "metro": "[L5] Xàtiva → Àngel Guimerà + 5min a pé · ~30min"
+  },
+  "Base (Democràcia) → Bioparc": {
+    "uber": "~€5 · 5min",
+    "metro": "~12-15min a pé (1km) pela Av. del Cid / Pío Baroja"
+  },
+  "Bioparc → Base · siesta da peque": {
+    "metro": "~12-15min a pé de volta pra base"
+  },
+  "Base → Parque Gulliver": {
+    "uber": "~€9 · 15min",
+    "metro": "[L5] Àngel Guimerà → Amistat + bus/10min a pé · ~30min"
+  }
+};
+
+// ============== BAIRROS config (ranges lat/lng → nome de bairro) ==============
+const BAIRROS_CONFIG = [
+  {
+    "nome": "🦍 Bioparc / L'Olivereta",
+    "latMin": 39.468,
+    "latMax": 39.484,
+    "lngMin": -0.414,
+    "lngMax": -0.394
+  },
+  {
+    "nome": "🐠 Ciudad de las Artes",
+    "latMin": 39.448,
+    "latMax": 39.46,
+    "lngMin": -0.358,
+    "lngMax": -0.344
+  },
+  {
+    "nome": "☕ Ruzafa",
+    "latMin": 39.456,
+    "latMax": 39.467,
+    "lngMin": -0.376,
+    "lngMax": -0.362
+  },
+  {
+    "nome": "🛝 Turia / Gulliver",
+    "latMin": 39.459,
+    "latMax": 39.466,
+    "lngMin": -0.362,
+    "lngMax": -0.353
+  },
+  {
+    "nome": "📍 Valência",
+    "fallback": true
+  }
+];
+
+// ============== RENDER ==============
+function getDefaultDayIdx(){
+  // Detecta se hoje é um dos dias do roteiro e auto-seleciona; senão volta pro dia 1 (chegada)
+  const monthMap={Jan:0,Fev:1,Feb:1,Mar:2,Abr:3,Apr:3,Mai:4,May:4,Jun:5,Jul:6,Ago:7,Aug:7,Set:8,Sep:8,Out:9,Oct:9,Nov:10,Dez:11,Dec:11};
+  const today=new Date();
+  const tStr=today.toISOString().split('T')[0]; // YYYY-MM-DD
+  for(let i=0;i<DAYS.length;i++){
+    const m=DAYS[i].date.match(/(\d+)\/(\w+)/);
+    if(!m) continue;
+    const dayNum=parseInt(m[1]);
+    const monthIdx=monthMap[m[2]];
+    if(monthIdx===undefined) continue;
+    const d=new Date(2026,monthIdx,dayNum);
+    if(d.toISOString().split('T')[0]===tStr) return i;
+  }
+  return 0;
+}
+const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null };
+
+function getPeriodoMeta(p){
+  return {
+    manha:{emoji:'🌅',label:'Manhã'},
+    tarde:{emoji:'☀️',label:'Tarde'},
+    noite:{emoji:'🌙',label:'Noite'}
+  }[p];
+}
+
+function getMapsUrl(stop){
+  // Pra opcoes (3+ alternativas), usar nome da PRIMEIRA opção pra link específico
+  let queryName=stop.nome;
+  if(stop.tipo==='opcoes' && stop.opcoes && stop.opcoes.length>0){
+    queryName=stop.opcoes[0].nome;
+  }
+  // Remove parens MAS mantém conteúdo (endereços como "144 MacDougal" ajudam a busca)
+  const clean=queryName.replace(/[()]/g,'').replace(/[^\p{L}\p{N}\s\-'&.,/:!?]/gu,'').replace(/\s+/g,' ').trim();
+  if(stop.coord) return `https://www.google.com/maps/search/${encodeURIComponent(clean)}/@${stop.coord.lat},${stop.coord.lng},17z`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean+' New York')}`;
+}
+
+function getRouteUrl(day){
+  // V1.5: filtra ALT cards (nome iniciando com 🔄) — alternativas não fazem parte da rota
+  // principal do dia. Bug Sprockhovel 2026-05-23 (Valenciennes ALT puxava rota pra direção oposta).
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord && !s.nome.startsWith('🔄'));
+  if(!stops.length) return '#';
+  if(stops.length===1) return getMapsUrl(stops[0]);
+  const queryName=s=>{
+    let n=s.nome;
+    if(s.tipo==='opcoes' && s.opcoes?.length) n=s.opcoes[0].nome;
+    return n.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  };
+  const origin=encodeURIComponent(queryName(stops[0]));
+  const dest=encodeURIComponent(queryName(stops[stops.length-1]));
+  const mid=stops.slice(1,-1).map(s=>encodeURIComponent(queryName(s))).join('|');
+  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
+  if(mid) url+=`&waypoints=${mid}`;
+  return url;
+}
+
+function getWalkingTourUrl(tour){
+  // V1.5: usa NOME com endereço (parens removidos só na query, conteúdo mantido) em vez de
+  // coords puras · coords puras mostravam "Com alfinete" no Maps · bug Sprockhovel 2026-05-23
+  // (mesmo bug que getRouteUrl V1.4 corrigiu, mas só lá · walking tour ficou pra trás).
+  if(!tour||tour.length<2) return '#';
+  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  const origin=encodeURIComponent(queryName(tour[0]));
+  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
+  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
+  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
+  if(mid) url+=`&waypoints=${mid}`;
+  return url;
+}
+
+function renderCard(stop){
+  const links=LINKS_MAP[stop.nome]||[];
+  const riskLabel={green:'🟢 tranquilo',yellow:'⚠️ atenção',red:'🔴 alta atenção'};
+  const riskBadge=stop.risco?`<span class="risk-pill risk-${stop.risco}">${riskLabel[stop.risco]}</span>`:'';
+  let reservaBadge='';
+  if(stop.reserva){
+    const stored=localStorage.getItem(`reserva-${stop.nome}`);
+    const defaultDone=stop.reserva==='reservado';
+    const isDone=stored?stored==='done':defaultDone;
+    reservaBadge=`<button class="reserva-badge ${isDone?'ok':'pending'}" data-reserva="${stop.nome.replace(/"/g,'&quot;')}" title="Clique pra alternar">${isDone?'☑ FEITO':'☐ RESERVAR'}</button>`;
+  }
+  // Walking tour flag (busca + visual)
+  let walkingTourFlag='';
+  if(stop.walkingTours&&stop.walkingTours.length>0){
+    const totalStops=stop.walkingTours.reduce((a,t)=>a+t.stops.length,0);
+    const partsLabel=stop.walkingTours.length>1?`${stop.walkingTours.length} partes · ${totalStops} paradas`:`${totalStops} paradas`;
+    const tourTitles=stop.walkingTours.map(t=>t.nome).join(' + ').replace(/"/g,'&quot;');
+    walkingTourFlag=`<div class="walking-tour-flag" title="${tourTitles}">🚶 WALKING TOUR · ${partsLabel}</div>`;
+  }
+  return `<div class="stop-card" data-risco="${stop.risco||''}">
+    <div class="stop-head">
+      <div class="stop-emoji">${stop.emoji}</div>
+      <div class="stop-time-name">
+        <div class="stop-time">${stop.hora}${reservaBadge}</div>
+        ${walkingTourFlag}
+        <div class="stop-name">${stop.nome}</div>
+        <div class="stop-cat">${stop.cat}${riskBadge}</div>
+      </div>
+    </div>
+    ${stop.sobre?`<div class="stop-body"><p>${stop.sobre}</p></div>`:''}
+    ${stop.imperdivel?`<div class="stop-imperdivel"><strong>⭐ IMPERDÍVEL</strong>${stop.imperdivel}</div>`:''}
+    ${stop.dicas?`<div class="stop-dicas">
+      <div class="stop-dicas-title">💡 Dicas</div>
+      <ul>${stop.dicas.map(d=>`<li>${d}</li>`).join('')}</ul>
+    </div>`:''}
+    ${(stop.duracao||stop.custo||stop.acessibilidade)?`<div class="stop-meta">
+      ${stop.duracao?`<span>⏱️ ${stop.duracao}</span>`:''}
+      ${stop.custo?`<span>💵 ${stop.custo}</span>`:''}
+      ${stop.acessibilidade?`<span>♿ ${stop.acessibilidade}</span>`:''}
+    </div>`:''}
+    ${links.length?`<div class="stop-source-links">
+      ${links.map(l=>`<a class="source-link ${l.type==='official'?'official':''}" href="${l.url}" target="_blank" rel="noopener">${l.type==='official'?'🌐':'📰'} ${l.label}</a>`).join('')}
+    </div>`:''}
+  </div>`;
+}
+
+function renderOpcoes(stop){
+  return `<div class="stop-opcoes">
+    <div class="stop-opcoes-head">
+      <div class="stop-opcoes-emoji">${stop.emoji}</div>
+      <div class="stop-opcoes-title">
+        <div class="stop-time">${stop.hora}</div>
+        <div class="stop-opcoes-name">${stop.nome}</div>
+        <div class="stop-opcoes-cat">${stop.cat}</div>
+      </div>
+    </div>
+    ${stop.sobre?`<div class="stop-body" style="margin-top:6px;padding-top:6px"><p>${stop.sobre}</p></div>`:''}
+    <div class="opcoes-list">
+      ${stop.opcoes.map(o=>`<div class="opcao-item">
+        <span class="opcao-name">${o.nome}</span>
+        <span class="opcao-meta">${o.preco?'· '+o.preco:''} ${o.dist?'· '+o.dist:''}</span>
+        <div class="opcao-desc">${o.desc}</div>
+      </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+function renderTransit(stop){
+  const t=TRANSIT_MAP[stop.nome];
+  const hasRoutes=t&&(t.ferry||t.metro||t.uber);
+  return `<div class="stop-transit ${hasRoutes?'collapsible':''}">
+    <div class="stop-transit-header">
+      <span class="stop-transit-emoji">${stop.emoji}</span>
+      <span class="stop-transit-time">${stop.hora}</span>
+      <span class="stop-transit-name">${stop.nome}</span>
+      ${hasRoutes?'<span class="stop-transit-chev">▼</span>':''}
+    </div>
+    ${stop.cat?`<div class="stop-transit-cat">${stop.cat}</div>`:''}
+    ${hasRoutes?`<div class="stop-transit-routes">
+      ${t.ferry?`<div class="route-option"><strong>⛴️ Ferry</strong> ${t.ferry}</div>`:''}
+      ${t.metro?`<div class="route-option"><strong>🚇 Metrô</strong> ${t.metro}</div>`:''}
+      ${t.uber?`<div class="route-option"><strong>🚕 Uber</strong> ${t.uber}</div>`:''}
+    </div>`:''}
+  </div>`;
+}
+
+function renderStop(stop){
+  if(stop.tipo==='card') return renderCard(stop);
+  if(stop.tipo==='opcoes') return renderOpcoes(stop);
+  return renderTransit(stop);
+}
+
+function renderDay(day){
+  const periodos=['manha','tarde','noite'];
+  const grouped={manha:[],tarde:[],noite:[]};
+  day.stops.forEach(s=>{ if(grouped[s.periodo]) grouped[s.periodo].push(s); });
+  
+  return `<div class="day-card" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}">
+    <div class="day-banner">
+      <div class="date">${day.date}</div>
+      <h2>${day.tema}</h2>
+      <div class="bairro">📍 ${day.bairro}${day.grupo?' · 👥 grupo':''}</div>
+    </div>
+    ${day.nota?`<div class="day-nota">${day.nota}</div>`:''}
+    <div class="periodos">
+      ${periodos.filter(p=>grouped[p].length>0).map(p=>{
+        const m=getPeriodoMeta(p);
+        return `<div class="periodo">
+          <div class="periodo-header"><span class="emoji">${m.emoji}</span> ${m.label}</div>
+          <div class="periodo-stops">${grouped[p].map(renderStop).join('')}</div>
+        </div>`;
+      }).join('')}
+    </div>
+  </div>`;
+}
+
+function renderOverview(){
+  return `<table>
+    <colgroup>
+      <col class="col-date"><col class="col-tema"><col class="col-attr"><col class="col-bairro">
+    </colgroup>
+    <thead><tr><th>Data</th><th>Tema</th><th>Atração principal</th><th>Bairro</th></tr></thead>
+    <tbody>
+      ${DAYS.map((d,i)=>{
+        const cards=d.stops.filter(s=>s.tipo==='card');
+        const main=cards.length?cards[0].nome:'—';
+        const wtCards=cards.filter(c=>c.walkingTours&&c.walkingTours.length>0);
+        const parts=d.date.split(' ');
+        const wtButtons=wtCards.map(c=>{
+          const totalStops=c.walkingTours.reduce((a,t)=>a+t.stops.length,0);
+          const wtShort=c.walkingTours.length===1
+            ?c.walkingTours[0].nome.split('·')[0].trim()
+            :c.nome.split('·')[0].trim();
+          const partsLabel=c.walkingTours.length>1
+            ?`${c.walkingTours.length} partes · ${totalStops} paradas`
+            :`${totalStops} paradas`;
+          return `<button class="ov-wt-btn" data-idx="${i}" data-stop="${c.nome.replace(/"/g,'&quot;')}" title="Ir pro card: ${c.nome}">🚶 ${wtShort} · ${partsLabel}</button>`;
+        }).join('');
+        return `<tr class="clickable" data-idx="${i}">
+          <td class="ov-date"><span class="ov-date-pill"><strong>${parts[0]}</strong><small>${parts[1]}</small></span></td>
+          <td class="ov-tema">${d.tema}</td>
+          <td class="ov-attr"><div class="ov-main">${main}</div>${wtButtons}</td>
+          <td class="ov-bairro">${d.bairro}</td>
+        </tr>`;
+      }).join('')}
+    </tbody>
+  </table>`;
+}
+
+function renderDayTabs(){
+  return `<div class="day-tabs-wrap"><div class="day-tabs">${DAYS.map((d,i)=>{
+    const labelCurto=d.temaCurto||d.tema.split('·')[0].trim();
+    return `<button class="day-tab ${i===state.selIdx?'active':''}" data-idx="${i}" style="--day-color:${d.cor}">
+    <span class="dt-date">${d.date.split(' ')[0]} ${d.date.split(' ')[1]}</span>${labelCurto}
+    ${d.grupo?'<span class="group-dot">👥</span>':''}
+  </button>`;
+  }).join('')}</div></div>`;
+}
+
+function getBairroForCoord(lat, lng){
+  // Detecção dinâmica de bairro por coordenadas, baseada em BAIRROS_CONFIG (injetado pela skill via build.py).
+  // BAIRROS_CONFIG = [{nome, latMin, latMax, lngMin, lngMax}, ..., {nome, fallback:true}]
+  if (typeof BAIRROS_CONFIG === 'undefined' || !Array.isArray(BAIRROS_CONFIG)) return '📍 Outros';
+  for (const b of BAIRROS_CONFIG){
+    if (b.fallback) continue;
+    if (lat >= b.latMin && lat <= b.latMax && lng >= b.lngMin && lng <= b.lngMax) return b.nome;
+  }
+  const fb = BAIRROS_CONFIG.find(b => b.fallback);
+  return fb ? fb.nome : '📍 Outros';
+}
+
+function renderBairros(){
+  const bairros={};
+  DAYS.forEach((d,i)=>{
+    d.stops.filter(s=>s.tipo==='card' && s.coord).forEach(s=>{
+      const b=getBairroForCoord(s.coord.lat, s.coord.lng);
+      if(!bairros[b]) bairros[b]=[];
+      bairros[b].push({stop:s,date:d.date,dayIdx:i});
+    });
+  });
+  // Ordenar bairros pela frequência (mais visitados primeiro)
+  const sorted=Object.keys(bairros).sort((a,b)=>bairros[b].length-bairros[a].length);
+  return `<div class="bairros-list">
+    ${sorted.map(b=>`<div class="bairro-block">
+      <div class="bairro-name">${b} <span style="margin-left:auto;font-size:12px;color:#9ca3af;font-weight:500">${bairros[b].length} atrações</span></div>
+      <div class="bairro-attrs">
+        ${bairros[b].map(item=>`<div class="bairro-attr" data-idx="${item.dayIdx}">
+          <div class="bairro-attr-name">${item.stop.emoji} ${item.stop.nome}</div>
+          <div class="bairro-attr-day">${item.date} · ${item.stop.hora}</div>
+        </div>`).join('')}
+      </div>
+    </div>`).join('')}
+  </div>`;
+}
+
+let mapInstance=null;
+function renderMap(){
+  const day=DAYS[state.selIdx];
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
+  // Cards do dia com walking tours (array de partes)
+  const cardsWithTours=day.stops.filter(s=>s.walkingTours&&s.walkingTours.length>0);
+  // Helper: limpa nome pra busca no Google Maps (mantém endereço entre parens)
+  const cleanForSearch=nm=>nm.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  setTimeout(()=>{
+    if(mapInstance){ mapInstance.remove(); mapInstance=null; }
+    const div=document.getElementById('map');
+    if(!div) return;
+    mapInstance=L.map(div,{zoomControl:true,scrollWheelZoom:true});
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      attribution:'© OpenStreetMap',maxZoom:19
+    }).addTo(mapInstance);
+    if(stops.length===0){ mapInstance.setView([40.72,-73.95],12); return; }
+    const latlngs=stops.map(s=>[s.coord.lat,s.coord.lng]);
+    stops.forEach((s,i)=>{
+      const isOpcoes=s.tipo==='opcoes' && s.opcoes && s.opcoes.length>0;
+      const principalName=isOpcoes?s.opcoes[0].nome.split('(')[0].trim():'';
+      const popupHtml=`<div class="pp-time" style="color:${day.cor}">${s.hora}</div>
+        <div class="pp-name">${s.nome}</div>
+        <div class="pp-notes">${s.cat||''}</div>
+        ${isOpcoes?`<div class="pp-notes" style="margin-top:6px"><strong>📍 Principal:</strong> ${principalName}</div>`:''}
+        <a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
+      L.marker([s.coord.lat,s.coord.lng])
+        .bindPopup(popupHtml,{maxWidth:240})
+        .addTo(mapInstance);
+    });
+    if(latlngs.length>1){
+      L.polyline(latlngs,{color:day.cor,weight:3,opacity:0.7,dashArray:'6,8'}).addTo(mapInstance);
+    }
+    // WALKING TOURS: cada parte com visual próprio (Parte 1: cheia · Parte 2: contorno)
+    cardsWithTours.forEach(card=>{
+      card.walkingTours.forEach((tour,partIdx)=>{
+        const tourStops=tour.stops;
+        const tourLatLngs=tourStops.map(t=>[t.coord.lat,t.coord.lng]);
+        // Polyline: Parte 1 tracejada normal · Parte 2 tracejada mais fina
+        const dashStyle=partIdx===0?'4,5':'2,6';
+        L.polyline(tourLatLngs,{color:day.cor,weight:2.5,opacity:0.85,dashArray:dashStyle}).addTo(mapInstance);
+        // Marcadores: Parte 1 preenchidos · Parte 2 contorno (mesma cor)
+        const markerStyle=partIdx===0
+          ?`background:${day.cor};color:#fff;border:2px solid #fff`
+          :`background:#fff;color:${day.cor};border:2px solid ${day.cor}`;
+        tourStops.forEach(t=>{
+          const icon=L.divIcon({
+            className:'wt-marker',
+            html:`<div style="${markerStyle}">${t.n}</div>`,
+            iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
+          });
+          const searchName=cleanForSearch(t.nome);
+          const url=`https://www.google.com/maps/search/${encodeURIComponent(searchName)}/@${t.coord.lat},${t.coord.lng},17z`;
+          const popupHtml=`<div class="pp-time" style="color:${day.cor}">${tour.nome.split('·')[0].trim()} · parada ${t.n}</div>
+            <div class="pp-name">${t.nome}</div>
+            <a class="pp-link" style="background:${day.cor}" href="${url}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
+          L.marker([t.coord.lat,t.coord.lng],{icon})
+            .bindPopup(popupHtml,{maxWidth:240})
+            .addTo(mapInstance);
+        });
+      });
+    });
+    // Ajustar bounds incluindo walking tours
+    const allLatLngs=[...latlngs];
+    cardsWithTours.forEach(c=>c.walkingTours.forEach(t=>t.stops.forEach(s=>allLatLngs.push([s.coord.lat,s.coord.lng]))));
+    mapInstance.fitBounds(allLatLngs,{padding:[40,40]});
+  },50);
+  const legend=stops.map((s,i)=>`<div class="stop-legend-item"><div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span></div>`).join('');
+  // 1 botão por parte de walking tour
+  const tourButtons=cardsWithTours.flatMap(card=>
+    card.walkingTours.map(t=>
+      `<a class="gmaps-btn walking-tour-btn" href="${getWalkingTourUrl(t.stops)}" target="_blank" rel="noopener">🚶 ${t.nome} · ${t.stops.length} paradas</a>`
+    )
+  ).join('');
+  return `<div class="map-section">
+    ${stops.length?`<div class="stop-legend">${legend}</div>`:''}
+    <div id="map"></div>
+    <div class="map-cta">
+      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (walking)</a>
+      ${tourButtons}
+      <span class="map-hint">Clique nos marcadores pros detalhes${cardsWithTours.length?' · pontos pequenos cheios = parte 1 · contorno = parte 2':''}</span>
+    </div>
+  </div>`;
+}
+
+function renderSearch(query){
+  const q=query.toLowerCase().trim();
+  if(!q) return '';
+  const results=[];
+  DAYS.forEach((d,i)=>{
+    d.stops.forEach(s=>{
+      let hay=`${s.nome} ${s.cat||''} ${s.sobre||''} ${d.bairro} ${d.tema}`;
+      // Indexar walking tour: nomes das partes + nomes das paradas + dicas
+      if(s.walkingTours&&s.walkingTours.length>0){
+        hay+=' walking tour ';
+        s.walkingTours.forEach(t=>{
+          hay+=t.nome+' '+(t.descricao||'')+' ';
+          t.stops.forEach(p=>hay+=p.nome+' ');
+        });
+      }
+      // Indexar dicas também (curiosidades como "Hamilton", "Dylan", "Anchorage")
+      if(s.dicas) hay+=' '+s.dicas.join(' ');
+      if(hay.toLowerCase().includes(q)){
+        results.push({stop:s,day:d,idx:i});
+      }
+    });
+  });
+  if(results.length===0){
+    return `<div class="search-result-empty">Nenhum resultado pra "${query}"</div>`;
+  }
+  return results.slice(0,12).map(r=>{
+    const wtBadge=r.stop.walkingTours?'<span class="search-wt-tag">🚶 WALKING TOUR</span>':'';
+    return `<div class="search-result" data-idx="${r.idx}">
+    <div class="search-result-name">${r.stop.emoji} ${r.stop.nome}${wtBadge}</div>
+    <div class="search-result-meta">${r.day.date} · ${r.stop.hora} · ${r.day.bairro}</div>
+  </div>`;
+  }).join('');
+}
+
+function centerActiveTab(){
+  setTimeout(()=>{
+    const active=document.querySelector('.day-tab.active');
+    if(active) active.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+  },80);
+}
+
+function renderInnerContent(){
+  // Re-render apenas conteúdo do dia (sem rebuildar os tabs)
+  const inner=document.getElementById('inner-content');
+  if(!inner) return;
+  if(state.view==='guia'){
+    inner.innerHTML=renderDay(DAYS[state.selIdx]);
+  } else if(state.view==='mapa'){
+    inner.innerHTML=renderMap();
+  }
+  bindCardHandlers();
+}
+
+function bindCardHandlers(){
+  document.querySelectorAll('.stop-card, .stop-opcoes, .stop-transit.collapsible').forEach(c=>{
+    if(c.__bound) return;
+    c.__bound=true;
+    c.addEventListener('click',e=>{
+      if(e.target.closest('a, button')) return;
+      c.classList.toggle('expanded');
+    });
+  });
+  document.querySelectorAll('[data-reserva]').forEach(b=>{
+    if(b.__bound) return;
+    b.__bound=true;
+    b.addEventListener('click',e=>{
+      e.stopPropagation();
+      const name=b.dataset.reserva;
+      const wasDone=b.classList.contains('ok');
+      const willBeDone=!wasDone;
+      try{ localStorage.setItem(`reserva-${name}`,willBeDone?'done':'pending'); }catch(e){}
+      b.classList.toggle('ok',willBeDone);
+      b.classList.toggle('pending',!willBeDone);
+      b.textContent=willBeDone?'☑ FEITO':'☐ RESERVAR';
+    });
+  });
+  if(state.expandStop){
+    document.querySelectorAll('.stop-card .stop-name').forEach(el=>{
+      if(el.textContent.trim()===state.expandStop){
+        const card=el.closest('.stop-card');
+        card.classList.add('expanded');
+        setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'center'}),150);
+      }
+    });
+    state.expandStop=null;
+  }
+}
+
+function render(){
+  let content='';
+  if(state.view==='guia'||state.view==='mapa'){
+    const tabsHtml=renderDayTabs();
+    const innerHtml=state.view==='guia'?renderDay(DAYS[state.selIdx]):renderMap();
+    content=tabsHtml+'<div id="inner-content">'+innerHtml+'</div>';
+  } else if(state.view==='bairros'){
+    content=renderBairros();
+  }
+  document.getElementById('content').innerHTML=content;
+  
+  // Day tab clicks (com SOFT re-render — não rebuilda tabs)
+  const dayTabsEl=document.querySelector('.day-tabs');
+  if(dayTabsEl){
+    dayTabsEl.addEventListener('click',e=>{
+      const tab=e.target.closest('.day-tab');
+      if(!tab) return;
+      const idx=parseInt(tab.dataset.idx);
+      if(idx===state.selIdx) return;
+      state.selIdx=idx;
+      // Atualiza apenas a classe active (sem re-render dos tabs)
+      dayTabsEl.querySelectorAll('.day-tab').forEach(t=>t.classList.toggle('active',parseInt(t.dataset.idx)===idx));
+      renderInnerContent();
+      centerActiveTab();
+    });
+  }
+  // Main tabs
+  document.querySelectorAll('.main-tab').forEach(b=>{
+    b.addEventListener('click',()=>{
+      state.view=b.dataset.view;
+      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view===state.view));
+      render();
+    });
+  });
+  // Bairros clicks
+  document.querySelectorAll('.bairro-attr').forEach(b=>{
+    b.addEventListener('click',()=>{
+      state.selIdx=parseInt(b.dataset.idx);
+      state.view='guia';
+      state.expandStop=b.querySelector('.bairro-attr-name').textContent.replace(/^[\p{Emoji}\s]+/u,'').trim();
+      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+  bindCardHandlers();
+  centerActiveTab();
+}
+
+function init(){
+  document.getElementById('overview').innerHTML=renderOverview();
+  
+  // Legenda: collapse persistente
+  const fl=document.getElementById('footer-legend');
+  const cb=document.getElementById('legend-cb');
+  if(localStorage.getItem('legendRead')==='1'){
+    fl.classList.add('collapsed');
+    cb.checked=true;
+  }
+  cb.addEventListener('change',()=>{
+    try{ localStorage.setItem('legendRead',cb.checked?'1':'0'); }catch(e){}
+    fl.classList.toggle('collapsed',cb.checked);
+  });
+  
+  // Overview toggle
+  document.getElementById('overview-toggle').addEventListener('click',()=>{
+    const ov=document.getElementById('overview');
+    const tg=document.getElementById('overview-toggle');
+    const open=ov.classList.toggle('show');
+    tg.classList.toggle('open',open);
+  });
+  // Overview row/button click
+  document.getElementById('overview').addEventListener('click',e=>{
+    // Botão de walking tour: navega + auto-expand do card específico
+    const wtBtn=e.target.closest('.ov-wt-btn');
+    if(wtBtn){
+      e.stopPropagation();
+      state.selIdx=parseInt(wtBtn.dataset.idx);
+      state.view='guia';
+      state.expandStop=wtBtn.dataset.stop;
+      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      document.getElementById('overview').classList.remove('show');
+      document.getElementById('overview-toggle').classList.remove('open');
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+      return;
+    }
+    // Linha clicável: navega pro dia (primeiro card)
+    const tr=e.target.closest('tr.clickable');
+    if(tr){
+      state.selIdx=parseInt(tr.dataset.idx);
+      state.view='guia';
+      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      document.getElementById('overview').classList.remove('show');
+      document.getElementById('overview-toggle').classList.remove('open');
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  });
+  
+  // Search
+  const si=document.getElementById('search');
+  const sr=document.getElementById('search-results');
+  const sc=document.getElementById('search-clear');
+  si.addEventListener('input',()=>{
+    const v=si.value;
+    sc.classList.toggle('show',v.length>0);
+    if(v.length>=2){
+      sr.innerHTML=renderSearch(v);
+      sr.classList.add('show');
+    } else {
+      sr.classList.remove('show');
+    }
+  });
+  sr.addEventListener('click',e=>{
+    const r=e.target.closest('.search-result');
+    if(r){
+      state.selIdx=parseInt(r.dataset.idx);
+      state.view='guia';
+      state.expandStop=r.querySelector('.search-result-name').textContent.replace(/^[\p{Emoji}\s]+/u,'').trim();
+      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      si.value='';
+      sc.classList.remove('show');
+      sr.classList.remove('show');
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  });
+  sc.addEventListener('click',()=>{
+    si.value='';
+    sc.classList.remove('show');
+    sr.classList.remove('show');
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.search-wrap')) sr.classList.remove('show');
+  });
+  
+  render();
+}
+
+</script>
+
+</body>
+</html>
