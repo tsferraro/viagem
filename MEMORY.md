@@ -14,15 +14,20 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ### Sprockhövel · 30/Mai-01/Jun/2026 (road-trip curto · em planejamento)
 - _A preencher após a viagem real._
 
+### Valência · 3-4/Jun/2026 (relâmpago · pai + filha 3a · feito DURANTE a viagem)
+- Composição nova: **um adulto + criança pequena, com janela de trabalho no meio**. Tobia pediu o roteiro já em Valência, pra "hoje e amanhã". Pipeline rodou inteiro num passe só (sem esqueleto-valida-expande clássico) porque eram 2 dias — OK pra micro-viagens.
+- Âncora do dia: Oceanogràfic (manhã, 3-4h) + Bioparc (zoo de imersão, ótimo p/ 3a, colado na base em L'Olivereta) + Parque Gulliver (grátis, fim de tarde). Bioparc+Gulliver combinam bem (ambos no leito do Turia) mas é ambicioso → Gulliver marcado como opcional/pula-sem-culpa.
+
 ---
 
 ## Padrões cross-viagem
 
 ### O que funcionou bem
-- _A registrar conforme viagens acontecerem._
+- **"Trabalhar enquanto a criança brinca"** (pedido recorrente p/ pai com filha pequena) tem 2 soluções distintas — vale oferecer as duas e deixar Tobia escolher na hora: (a) **café com parque de bolas** (ex: Hippolatte/Valência) → você fica de olho nela e trabalha junto, sem reserva, flexível; (b) **ludoteca-coworking** (ex: Kibu/Happiwork) → monitor cuida e você foca, mas pede reserva e às vezes fica afastado. Padrão: café-com-zona = default; ludoteca = quando precisa foco total.
+- Cafés-família abrem **só de tarde em dias de semana** (Hippolatte qua 16-20h). Sempre conferir horário do dia exato antes de cravar — salvou o encaixe pós-Oceanogràfic.
 
 ### O que precisou ajustar mid-trip
-- _A registrar conforme viagens acontecerem._
+- **Geocoding bloqueado em ambiente mobile-cloud**: a rede do sandbox é allowlist-only · Nominatim/openalfa/callejero deram `Host not in allowlist` ou HTTP 403 no WebFetch. WebSearch resolve coords de POIs grandes (museus, zoos, parques) mas **não de endereços de rua específicos** (cafés, restaurantes pequenos). Workaround usado: endereço exato no `nome` (o "Abrir no Maps" navega certo via nome+endereço) + pino ancorado no quarteirão a partir de coord verificada vizinha + **flag transparente pro Tobia** de que aquele pino é aproximado. Não inventar coord precisa quando só dá pra ancorar — avisar é melhor que fingir precisão.
 
 ---
 

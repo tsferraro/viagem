@@ -1,0 +1,253 @@
+{
+  "title": "🐠 Valência · Pai & Filha · 3-4 Jun",
+  "auth_emoji": "🐠",
+  "auth_title": "Valência 2026",
+  "auth_subtitle": "3-4 Jun · Tobia + filha (3a)",
+  "header_title": "Valência · 2 dias",
+  "header_sub": "3-4/Jun · Oceanogràfic · Bioparc · Gulliver",
+  "password": "valencia2026",
+  "legend_group_text": "👶 Pai + filha (3 anos)",
+  "legend_notes_html": "<strong>🏠 Base</strong>: Carrer de la Democràcia 48 (L'Olivereta · a ~12min a pé do Bioparc). <strong>👶</strong> Roteiro pai + filha (3a) · tudo pensado pra carrinho. <strong>☕ Hoje à tarde</strong>: ponto pra trabalhar enquanto ela brinca (Ruzafa).",
+  "days": [
+    {
+      "date": "Qua 3/Jun",
+      "tema": "Oceanogràfic · tarde de trabalho",
+      "temaCurto": "Oceanogràfic",
+      "bairro": "🐠 Ciudad de las Artes + Ruzafa",
+      "grupo": false,
+      "nota": "Manhã forte no Oceanogràfic (passear bastante) · almoço em Ruzafa · à tarde você trabalha enquanto ela brinca num café com parque de bolas. Volta tranquila pra base no fim do dia.",
+      "cor": "#0891b2",
+      "gradA": "#155e75",
+      "gradB": "#06b6d4",
+      "stops": [
+        {
+          "hora": "09:30",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Base (Democràcia) → Oceanogràfic",
+          "cat": "~12-15min · Uber/taxi tranquilo com a peque",
+          "coord": {"lat": 39.4527, "lng": -0.3481}
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🐠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Oceanogràfic (C/ Eduardo Primo Yúfera 1)",
+          "cat": "Maior aquário da Europa · túneis submarinos",
+          "sobre": "Maior aquário da Europa (110.000 m², inaugurado em 2003), dentro da Ciudad de las Artes y las Ciencias. São **nove torres-ecossistema** ligadas por túneis: do Ártico (belugas) aos mares tropicais, mais o oceanário central com um túnel de 70m onde tubarões e raias passam por cima da sua cabeça.",
+          "imperdivel": "O túnel dos Oceanos (tubarões nadando por cima) + os golfinhos do Delfinari.",
+          "dicas": [
+            "Compra **online com franja horária** · a taquilla fecha 1h antes do fechamento",
+            "Chega na abertura (**10h**) pra pegar belugas e o túnel de tubarões antes da multidão",
+            "Os **shows de golfinhos** têm horário fixo no Delfinari · confere o painel ao entrar e monta o circuito em volta deles",
+            "Restaurante Submarino fica dentro de um aquário 360° (caro · reserva à parte) · senão há cafés normais pra um lanche rápido com ela"
+          ],
+          "duracao": "3-4h",
+          "custo": "~€37-39 adulto · 4-12 ~€27 · 0-3 grátis (retira ticket)",
+          "acessibilidade": "100% acessível · carrinho roda em tudo, elevadores entre níveis",
+          "coord": {"lat": 39.4527, "lng": -0.3481}
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Oceanogràfic → Ruzafa",
+          "cat": "~10min · ou 25min a pé subindo pelo Jardí del Túria",
+          "coord": {"lat": 39.4615, "lng": -0.3680}
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Ruzafa",
+          "cat": "3 opções family-friendly antes do café",
+          "coord": {"lat": 39.4615, "lng": -0.3680},
+          "opcoes": [
+            {"nome": "Federal Café (Ruzafa)", "desc": "Brunch/all-day australiano · comida fresca, ambiente relax e cadeirão pra ela", "preco": "€€", "dist": "coração de Ruzafa"},
+            {"nome": "Dulce Tahona (Ruzafa)", "desc": "Cafeteria com zona infantil · ela come e já começa a brincar", "preco": "€", "dist": "Ruzafa"},
+            {"nome": "Canalla Bistro (C/ Mestre Josep Serrano 5)", "desc": "Ricard Camarena casual · pratos pra dividir, mais gastronômico (confirma horário de almoço)", "preco": "€€€", "dist": "Ruzafa"}
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "☕",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Hippolatte · Café & Juegos (C/ dels Centelles 42)",
+          "cat": "Café de especialidade + parque de bolas · trabalha enquanto ela brinca",
+          "sobre": "Café de Ruzafa desenhado pra famílias: de um lado **mesas, wifi e café de especialidade**; do outro um **parque de bolas** com tobogã, rocódromo e zona blanda pra crianças de 1 a 9 anos. Você senta com o laptop e a vê brincando a poucos metros — exatamente o que você pediu pra hoje à tarde.",
+          "imperdivel": "A piscina de bolas + rocódromo · ela gasta toda a energia enquanto você fecha o trabalho.",
+          "dicas": [
+            "**Quarta abre só às 16h** (fecha 20h) · chega na abertura pra pegar mesa boa perto da zona de jogo",
+            "Wifi + tomadas · pede um flat white e estica a tarde",
+            "**Alternativa coladinha** (você pediu pra ver as duas): **Kibu Family & Friends** (C/ dels Centelles 7, mesma rua) — ludoteca com **monitor** + café de especialidade, mais 'coworking com babá'. Qua 16-19:30. Se quiser foco total no trabalho, é essa.",
+            "Leva meia antiderrapante pra ela entrar no parque de bolas"
+          ],
+          "duracao": "2-3h",
+          "custo": "Consumição + tarifa de jogo por criança (econômico · confirma no balcão)",
+          "acessibilidade": "Térreo, sem escadas · carrinho entra",
+          "coord": {"lat": 39.4612, "lng": -0.3618}
+        },
+        {
+          "hora": "18:45",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Ruzafa → Base (Democràcia)",
+          "cat": "~15min · jantar leve perto da base",
+          "coord": {"lat": 39.4715, "lng": -0.3950}
+        }
+      ]
+    },
+    {
+      "date": "Qui 4/Jun",
+      "tema": "Bioparc + Parque Gulliver",
+      "temaCurto": "Bioparc",
+      "bairro": "🦍 Bioparc / L'Olivereta + Turia",
+      "grupo": false,
+      "nota": "Dia livre. Bioparc de manhã (a pé da base!) · almoço dentro do parque · siesta da peque · e Parque Gulliver no fim de tarde, quando esfria. Gulliver é opcional — se ela acabar moída no Bioparc, pula sem culpa e fica num jantar relax.",
+      "cor": "#16a34a",
+      "gradA": "#166534",
+      "gradB": "#22c55e",
+      "stops": [
+        {
+          "hora": "09:45",
+          "emoji": "🚶",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Base (Democràcia) → Bioparc",
+          "cat": "~12-15min a pé (1km) · ou Uber 5min",
+          "coord": {"lat": 39.4781, "lng": -0.4071}
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🦍",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Bioparc Valencia (Av. Pío Baroja 3)",
+          "cat": "Zoo de imersão · savana africana sem grades",
+          "sobre": "Zoo de **zoo-imersão** (2008): em vez de jaulas, recria os habitats africanos — savana, Madagáscar, floresta equatorial — separando bichos e gente por fossos e desníveis 'invisíveis'. Você caminha no meio de antílopes e girafas, com **gorilas, leões e hipopótamos** (tem janela subaquática) pelo caminho.",
+          "imperdivel": "A grande savana africana logo na entrada + o grupo de gorilas.",
+          "dicas": [
+            "Compra **online e escolhe a franja horária** de acesso · custa o mesmo e garante a entrada",
+            "Pega o **folheto de horários das exibições** na entrada e monta o circuito em volta delas (a dos gorilas/leões enche)",
+            "Calor de junho: faz o circuito de manhã, leva **água e chapéu** pra ela · há sombra, mas a savana é aberta",
+            "Almoço dentro do parque: **Samburu** serve paella com vista pra savana (ver opção abaixo)"
+          ],
+          "duracao": "3-4h",
+          "custo": "€29,50 adulto · ~€23,50 criança · 0-3 grátis",
+          "acessibilidade": "Percurso pensado pra carrinho · rampas suaves, sem escadas obrigatórias",
+          "coord": {"lat": 39.4781, "lng": -0.4071}
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · dentro do Bioparc",
+          "cat": "fica no parque · sem stress de sair com a peque",
+          "coord": {"lat": 39.4778, "lng": -0.4065},
+          "opcoes": [
+            {"nome": "Restaurante Samburu (Bioparc)", "desc": "Paella de arroz bomba com vista pra savana · salões climatizados ou terraço", "preco": "€€", "dist": "dentro do parque"},
+            {"nome": "Cafetería Kidepo (Bioparc)", "desc": "Café/snack rápido com vista pra savana, junto à zona infantil", "preco": "€", "dist": "ao lado do Samburu"},
+            {"nome": "Voltar pra L'Olivereta", "desc": "Se preferir algo fora, o bairro da base tem bares de menú del día baratos", "preco": "€", "dist": "~12min a pé"}
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🚶",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Bioparc → Base · siesta da peque",
+          "cat": "~12-15min a pé · recarrega pras 2ª parte do dia",
+          "coord": {"lat": 39.4715, "lng": -0.3950}
+        },
+        {
+          "hora": "17:15",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Base → Parque Gulliver",
+          "cat": "~15min · ponta leste do Jardí del Túria",
+          "coord": {"lat": 39.4625, "lng": -0.3594}
+        },
+        {
+          "hora": "17:30",
+          "emoji": "🛝",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Parque Gulliver (Jardí del Túria, Tram XII)",
+          "cat": "Gigante de 70m virado escorregador · grátis",
+          "sobre": "No leito do antigo rio Turia, uma escultura de **70m do Gulliver** deitado e amarrado pelos liliputianos — só que ela toda é um playground gigante: o cabelo, as roupas e as cordas viram rampas, escadas e toboganes pra criançada escalar e descer. Inaugurado em 1990, é o parque infantil mais querido de Valência.",
+          "imperdivel": "Descer os toboganes pelo corpo do gigante · ela vai querer repetir umas 20 vezes.",
+          "dicas": [
+            "Junho abre **10-20h** · vai no fim da tarde (17h30+), quando o sol baixa — de tarde cheia o metal/pedra esquenta",
+            "Ao lado tem **minigolf, xadrez gigante** e um quiosque/bar pra você sentar enquanto ela corre",
+            "Carrinho fica embaixo · a figura é só escada/rampa, sobe junto com ela",
+            "Leva **água** · a sombra é limitada em cima do Gulliver"
+          ],
+          "duracao": "1-1h30",
+          "custo": "Grátis",
+          "acessibilidade": "Jardim plano e acessível · a estrutura do Gulliver é escada/rampa (sem carrinho em cima)",
+          "coord": {"lat": 39.4625, "lng": -0.3594}
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Oceanogràfic (C/ Eduardo Primo Yúfera 1)": [
+      {"type": "official", "label": "Oceanogràfic · site oficial", "url": "https://www.oceanografic.org/"}
+    ],
+    "Hippolatte · Café & Juegos (C/ dels Centelles 42)": [
+      {"type": "official", "label": "Hippolatte", "url": "https://hippolatte.com/"},
+      {"type": "review", "label": "Kibu Family & Friends (alternativa)", "url": "https://www.kibuclubs.com/"}
+    ],
+    "Bioparc Valencia (Av. Pío Baroja 3)": [
+      {"type": "official", "label": "Bioparc Valencia", "url": "https://bioparcvalencia.es/"}
+    ],
+    "Parque Gulliver (Jardí del Túria, Tram XII)": [
+      {"type": "official", "label": "Parque Gulliver · Visit València", "url": "https://www.visitvalencia.com/que-hacer-valencia/naturaleza-en-valencia/parques-y-jardines/parque-gulliver"}
+    ]
+  },
+  "transit_map": {
+    "Base (Democràcia) → Oceanogràfic": {
+      "uber": "~€8-10 · 12-15min · melhor opção com carrinho",
+      "bus": "EMT direto até a Ciudad de les Arts · ~25-30min",
+      "metro": "Tram/Metro com 1 baldeação até a zona · ~35-40min"
+    },
+    "Oceanogràfic → Ruzafa": {
+      "uber": "~€7 · 10min",
+      "metro": "A pé ~25min subindo pelo Jardí del Túria (sombra) · ou bus EMT ~20min"
+    },
+    "Ruzafa → Base (Democràcia)": {
+      "uber": "~€9 · 15min",
+      "metro": "[L5] Xàtiva → Àngel Guimerà + 5min a pé · ~30min"
+    },
+    "Base (Democràcia) → Bioparc": {
+      "uber": "~€5 · 5min",
+      "metro": "~12-15min a pé (1km) pela Av. del Cid / Pío Baroja"
+    },
+    "Bioparc → Base · siesta da peque": {
+      "metro": "~12-15min a pé de volta pra base"
+    },
+    "Base → Parque Gulliver": {
+      "uber": "~€9 · 15min",
+      "metro": "[L5] Àngel Guimerà → Amistat + bus/10min a pé · ~30min"
+    }
+  },
+  "bairros_config": [
+    {"nome": "🦍 Bioparc / L'Olivereta", "latMin": 39.468, "latMax": 39.484, "lngMin": -0.414, "lngMax": -0.394},
+    {"nome": "🐠 Ciudad de las Artes", "latMin": 39.448, "latMax": 39.460, "lngMin": -0.358, "lngMax": -0.344},
+    {"nome": "☕ Ruzafa", "latMin": 39.456, "latMax": 39.467, "lngMin": -0.376, "lngMax": -0.362},
+    {"nome": "🛝 Turia / Gulliver", "latMin": 39.459, "latMax": 39.466, "lngMin": -0.362, "lngMax": -0.353},
+    {"nome": "📍 Valência", "fallback": true}
+  ]
+}
