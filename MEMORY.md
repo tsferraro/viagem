@@ -11,8 +11,10 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ### NYC · Jul/2026 (em planejamento)
 - _A preencher após a viagem real._
 
-### Sprockhövel · 30/Mai-01/Jun/2026 (road-trip curto · em planejamento)
-- _A preencher após a viagem real._
+### Sprockhövel · 30/Mai-01/Jun/2026 (road-trip curto · ✅ FEITA · arquivada 03/Jun)
+- **Correu muito bem.** Estrutura 3-dias com festa no meio (ida c/ parada → evento → volta) confirmou-se na prática.
+- **Paradas Mons + Valenciennes foram o destaque** · ambas caíram no **momento perfeito pra almoço + descanso** na ida. Validação real do padrão "1 parada cultural curta na ida, cronometrada pra coincidir com fome/cansaço da peque (~a cada 1h30)". A parada não é só logística de pit stop — quando é uma cidade bonita com Grand-Place/praça, vira o melhor momento do trajeto.
+- Lição p/ próximos road-trips com criança: **planejar a parada-almoço como atração, não como pausa técnica** · escolher cidade com centro caminhável a ~1h30-2h da saída.
 
 ### Valência · 3-4/Jun/2026 (relâmpago · pai + filha 3a · feito DURANTE a viagem)
 - Composição nova: **um adulto + criança pequena, com janela de trabalho no meio**. Tobia pediu o roteiro já em Valência, pra "hoje e amanhã". Pipeline rodou inteiro num passe só (sem esqueleto-valida-expande clássico) porque eram 2 dias — OK pra micro-viagens.
