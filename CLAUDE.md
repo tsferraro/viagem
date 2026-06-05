@@ -43,6 +43,7 @@ viagem/
 │   ├── ui-patterns.md
 │   └── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
 ├── skills/
+│   ├── destination-scout/          ← levantamento macro (atrações+restaurantes+histórico) · degrau 0
 │   ├── walking-tour-designer/
 │   └── road-trip-designer/
 └── archive/
@@ -56,6 +57,7 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Quando | Ler além do CLAUDE.md |
 |---|---|
 | Vai mexer em estrutura de `DAYS` ou `stops` | `references/data-schema.md` |
+| Vai fazer levantamento macro de destino (atrações+restaurantes+histórico) ANTES do roteiro · ou pesquisa avulsa | `skills/destination-scout/SKILL.md` |
 | Vai criar walking tour novo | `skills/walking-tour-designer/SKILL.md` + sub-references |
 | Vai montar dia de carro (`transport: "driving"`) | `skills/road-trip-designer/SKILL.md` |
 | Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
@@ -159,7 +161,7 @@ Quando Tobia pede mudança em viagem existente:
 
 1. **Briefing parse**: destino, datas, base, composição, voos, reservas, mobilidade
 2. **UMA pergunta por vez** pra preencher lacunas críticas (NÃO checklist)
-3. **Web research** ~5-10 buscas: bairros, eventos, restaurantes, transit, hidden gems
+3. **Levantamento macro** (degrau 0) via `skills/destination-scout/SKILL.md`: mapeamento de atrações+restaurantes (veredito 🟢🟡🔴) + histórico/curiosidades · valida com Tobia antes de sequenciar dias
 4. **Esqueleto** em tabela (1 linha/dia: data/bairro/tema/atração) · valida com Tobia antes de detalhar
 5. **Expansão dia-a-dia** · se viagem >14 dias, **OBRIGATÓRIO** dividir em blocos de 5-7 dias com validação entre cada
 6. **Walking tours** com rubrica de valor (alto/médio/baixo) + justificativa
