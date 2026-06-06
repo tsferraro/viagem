@@ -1,6 +1,6 @@
 ---
 name: destination-scout
-description: Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🟢🟡🔴, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE calibra TUDO pelo PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil. SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) só sob demanda via scripts/md_to_docx.py. NÃO sequencia dias nem monta o app HTML — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).
+description: Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🟢🟡🔴, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE calibra TUDO pelo PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil. SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) e PDF só sob demanda (scripts/md_to_docx.py + scripts/docx_to_pdf.py). NÃO sequencia dias nem monta o app HTML — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).
 ---
 
 # Destination Scout
@@ -70,8 +70,8 @@ Regras anti-invenção (do CLAUDE.md):
 
 Estrutura de saída (markdown, pronto pra copiar):
 
-### 3.1 · TL;DR (3-4 linhas)
-Big picture antes do detalhe (princípio #4 do repo). O que o destino É, pra esse perfil, e o nº1 imperdível.
+### 3.1 · Resumo (3-4 linhas)
+Big picture antes do detalhe (princípio #4 do repo). O que o destino É, pra esse perfil, e o nº1 imperdível. Use o título "Resumo" (PT-BR) — NÃO "TL;DR" (gíria, fica esquisito em guia pra família).
 
 ### 3.2 · Tabela "esforço × recompensa"
 | Atração | Base p/ acesso | Esforço | Veredito |
@@ -113,17 +113,23 @@ Mesmas regras anti-invenção. Fatos de web_search. Tom: envolvente mas factual,
 
 ---
 
-## PASSO 5 · Export Word (só sob demanda)
+## PASSO 5 · Export Word/PDF (só sob demanda)
 
-Quando o usuário pedir Word/.docx:
+Fluxo: salve o levantamento em um `.md`, depois converta. **Word** (`.docx`) e **PDF** compartilham a primeira etapa.
 
 ```bash
+# Markdown -> Word
 python3 skills/destination-scout/scripts/md_to_docx.py entrada.md "Saída.docx"
+
+# Word -> PDF (cadeia completa: md -> docx -> pdf)
+python3 skills/destination-scout/scripts/docx_to_pdf.py "Saída.docx" "Saída.pdf"
 ```
 
-O script (`scripts/md_to_docx.py`) converte markdown (headings, tabelas, bullets, prosa) em `.docx` formatado. Instala `python-docx` se faltar. Entregar o arquivo via SendUserFile.
+- `md_to_docx.py` converte markdown (headings, tabelas, bullets, prosa, **negrito**/*itálico*) em `.docx`. Instala `python-docx` se faltar.
+- `docx_to_pdf.py` renderiza o `.docx` em PDF com fonte DejaVu embarcada (acentos PT-BR), subtítulo cinza, tabelas com cabeçalho colorido. Os semáforos 🟢🟡🔴 viram **bolinhas coloridas** (●) e emojis decorativos que a fonte não cobre são removidos. Instala `reportlab`/`python-docx` se faltarem.
+- Entregar o arquivo via SendUserFile. Se possível, **renderize e confira** o PDF antes de entregar (ex: `pip install pymupdf` + `fitz`) — não chute o layout.
 
-`.docx` é **descartável** (está no .gitignore) — é entregável regenerável, não versionado.
+`.docx` e `.pdf` são **descartáveis** (estão no .gitignore) — entregáveis regeneráveis, não versionados.
 
 ---
 
@@ -139,5 +145,6 @@ PT-BR, casual, direto, consultor crítico. Tabelas pra comparação. NUNCA conco
 - [ ] Bloco mapeamento ANTES do histórico
 - [ ] Veredito 🟢🟡🔴 em cada atração
 - [ ] Ao menos 1 armadilha de turista sinalizada (se existir)
+- [ ] Resumo no topo (NÃO "TL;DR")
 - [ ] Fontes citadas
-- [ ] Word só se pedido
+- [ ] Word/PDF só se pedido (e PDF conferido visualmente antes de entregar)
