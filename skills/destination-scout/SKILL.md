@@ -1,6 +1,6 @@
 ---
 name: destination-scout
-description: Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🟢🟡🔴, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE calibra TUDO pelo PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil. SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) e PDF só sob demanda (scripts/md_to_docx.py + scripts/docx_to_pdf.py). NÃO sequencia dias nem monta o app HTML — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).
+description: Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🟢🟡🔴, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE começa fixando o BRIEFING INICIAL antes de pesquisar — três inputs: (1) PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil; (2) BASE/hospedagem — toda distância sai dali; (3) FORMATO de output (chat · Word · PDF). Se algum não foi informado, pergunta antes de qualquer web_search. SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) e PDF só sob demanda (scripts/md_to_docx.py + scripts/docx_to_pdf.py). NÃO sequencia dias nem monta o app HTML — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).
 ---
 
 # Destination Scout
@@ -9,12 +9,12 @@ Skill (e standalone) que faz o **levantamento macro inicial** de um destino — 
 
 ## O que esta skill faz
 
-Recebe um destino + perfil do viajante e retorna, **nesta ordem fixa**:
+Começa fixando o **briefing inicial** (perfil do viajante · base/hospedagem · formato de output) e só então pesquisa. Retorna, **nesta ordem fixa**:
 
 1. **MAPEAMENTO** · atrações + restaurantes curados, com veredito crítico, logística e clusters geográficos
 2. **HISTÓRIA & CURIOSIDADES** · prosa corrida que dá contexto ao destino e ganchos às atrações
 
-Saída: **chat sempre** · **Word (.docx) só quando pedido**.
+Saída: **chat sempre** · **Word (.docx) / PDF só quando pedido**.
 
 ## O que esta skill NÃO faz
 
@@ -31,17 +31,20 @@ Ela é o **degrau 0**: levantamento → valida com o Tobia → só então constr
 
 ---
 
-## PASSO 1 · Perfil do viajante (SEMPRE primeiro)
+## PASSO 1 · Briefing inicial (SEMPRE antes de pesquisar)
 
-O mesmo destino rende mapeamento **diferente** por perfil. Nunca pesquise antes de fixar isto. Se o usuário não informou, **pergunte UMA vez** (não checklist):
+Três inputs recalibram TODO o levantamento. Fixe os três **antes** de qualquer web_search — pesquisar com base/perfil errado obriga a refazer vereditos e distâncias. Se o usuário já informou algum no pedido, não repergunte; pergunte só o que falta. Use `AskUserQuestion` (ou, em chat puro, uma mensagem curta) — **não** um checklist burocrático.
 
-> "Pra quem é? (família com criança pequena · grupo de amigos/amigas · casal · sêniores · mochileiro/aventureiro) — isso muda bastante o que recomendo."
+| Input | Por que é crítico | Se não informado |
+|---|---|---|
+| **1. Perfil do viajante** | O mesmo destino rende mapeamento diferente por perfil (família c/ criança · amigos/amigas · casal · sêniores · mochileiro). Recalibra vereditos, tom, logística (carrinho? fôlego? balada?), orçamento e gastronomia. | "Pra quem é? família c/ criança pequena · grupo de amigos · casal · sêniores · mochileiro" |
+| **2. Base / hospedagem** | TODA distância e logística é medida a partir da base. Sem ela, "15min" não significa nada. Pode ser bairro, hotel ou cidade-base de bate-volta. | "Onde vocês ficam hospedados (bairro/cidade)? distâncias saem dali" |
+| **3. Formato de output** | Define o entregável: chat (default), Word ou PDF. Muda se eu preparo o `.md` pra conversão e se rodo os scripts no fim. | "Como prefere receber? aqui no chat (padrão) · Word · PDF" |
 
-O perfil recalibra: **vereditos** (esforço aceitável), **tom**, **logística destacada** (carrinho? fôlego? balada? acessibilidade?), **orçamento**, **gastronomia** (romântico vs. boteco vs. kids-friendly).
+⚠️ Lição real (Chapada, 2026): pesquisa nasceu "família com filha 3a", virou "mãe + amigas". Mudou TODOS os vereditos. **Confirme o briefing antes de pesquisar** pra não refazer.
 
-Detalhes e matriz de calibração: `references/audience-profiles.md`.
-
-⚠️ Lição real (Chapada, 2026): pesquisa nasceu "família com filha 3a", virou "mãe + amigas". Mudou TODOS os vereditos. **Confirme o perfil antes de pesquisar** pra não refazer.
+Detalhes e matriz de calibração por perfil: `references/audience-profiles.md`.
+Sobre o passo de conversão Word/PDF: ver PASSO 5.
 
 ---
 
@@ -139,7 +142,8 @@ PT-BR, casual, direto, consultor crítico. Tabelas pra comparação. NUNCA conco
 
 ## Checklist antes de entregar
 
-- [ ] Perfil do viajante fixado e refletido nos vereditos
+- [ ] Briefing fixado ANTES de pesquisar: perfil · base/hospedagem · formato de output
+- [ ] Perfil refletido nos vereditos · distâncias medidas a partir da base
 - [ ] ≥6 web_search feitas
 - [ ] Todo preço datado · nenhuma URL inventada
 - [ ] Bloco mapeamento ANTES do histórico
