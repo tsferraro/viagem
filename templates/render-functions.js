@@ -267,6 +267,9 @@ function renderBairros(){
 let mapInstance=null;
 function renderMap(){
   const day=DAYS[state.selIdx];
+  // hideStopMarkers: quando o dia INTEIRO é a própria walking tour (cada card = uma parada
+  // numerada), esconde os pins comuns pra não duplicar com os marcadores numerados do WT.
+  const hideStops=!!day.hideStopMarkers;
   const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   // Cards do dia com walking tours (array de partes)
   const cardsWithTours=day.stops.filter(s=>s.walkingTours&&s.walkingTours.length>0);
@@ -282,20 +285,22 @@ function renderMap(){
     }).addTo(mapInstance);
     if(stops.length===0){ mapInstance.setView([40.72,-73.95],12); return; }
     const latlngs=stops.map(s=>[s.coord.lat,s.coord.lng]);
-    stops.forEach((s,i)=>{
-      const isOpcoes=s.tipo==='opcoes' && s.opcoes && s.opcoes.length>0;
-      const principalName=isOpcoes?s.opcoes[0].nome.split('(')[0].trim():'';
-      const popupHtml=`<div class="pp-time" style="color:${day.cor}">${s.hora}</div>
-        <div class="pp-name">${s.nome}</div>
-        <div class="pp-notes">${s.cat||''}</div>
-        ${isOpcoes?`<div class="pp-notes" style="margin-top:6px"><strong>📍 Principal:</strong> ${principalName}</div>`:''}
-        <a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
-      L.marker([s.coord.lat,s.coord.lng])
-        .bindPopup(popupHtml,{maxWidth:240})
-        .addTo(mapInstance);
-    });
-    if(latlngs.length>1){
-      L.polyline(latlngs,{color:day.cor,weight:3,opacity:0.7,dashArray:'6,8'}).addTo(mapInstance);
+    if(!hideStops){
+      stops.forEach((s,i)=>{
+        const isOpcoes=s.tipo==='opcoes' && s.opcoes && s.opcoes.length>0;
+        const principalName=isOpcoes?s.opcoes[0].nome.split('(')[0].trim():'';
+        const popupHtml=`<div class="pp-time" style="color:${day.cor}">${s.hora}</div>
+          <div class="pp-name">${s.nome}</div>
+          <div class="pp-notes">${s.cat||''}</div>
+          ${isOpcoes?`<div class="pp-notes" style="margin-top:6px"><strong>📍 Principal:</strong> ${principalName}</div>`:''}
+          <a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
+        L.marker([s.coord.lat,s.coord.lng])
+          .bindPopup(popupHtml,{maxWidth:240})
+          .addTo(mapInstance);
+      });
+      if(latlngs.length>1){
+        L.polyline(latlngs,{color:day.cor,weight:3,opacity:0.7,dashArray:'6,8'}).addTo(mapInstance);
+      }
     }
     // WALKING TOURS: cada parte com visual próprio (Parte 1: cheia · Parte 2: contorno)
     cardsWithTours.forEach(card=>{

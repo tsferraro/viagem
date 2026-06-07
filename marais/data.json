@@ -153,6 +153,7 @@
       "temaCurto": "Arte & Brechó",
       "bairro": "🎨 Le Marais (4e → Haut Marais 3e)",
       "grupo": false,
+      "hideStopMarkers": true,
       "nota": "Este é o Marais que se conta caminhando devagar, de pátio em pátio. Um circuito de ~2,5km (meio-dia, com paradas) que costura o sul medieval — palacete da Reine Margot, antiquários e um trecho da muralha de 1190 — com o Haut Marais das galerias de arte, brechós e dos grandes hôtels particuliers, terminando na casa mais antiga de Paris. Pensado pra adultos e pra compartilhar com quem vem te visitar; é plano (carrinho aguenta), mas tem mais história que parquinho. Faça a manhã no sul, almoce no caminho, e ataque o norte à tarde.",
       "cor": "#b45309",
       "gradA": "#78350f",
