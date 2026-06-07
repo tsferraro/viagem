@@ -212,7 +212,7 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
         fname = slugify(cidade) + '.html'
         city_cards.append(render_city_card(emoji, cidade, len(grupos[cidade]), fname))
     if city_cards:
-        sections.append('<section class="trip-section">\n<h2>🌍 Passeios por cidade</h2>\n'
+        sections.append('<section class="trip-section">\n<h2>🌍 Cidades</h2>\n'
                         '<div class="viagens">\n' + '\n'.join(city_cards) + '\n</div>\n</section>')
     body_main = '\n\n'.join(sections) + '\n\n' + ARCHIVE
     with open(os.path.join(root, 'index.html'), 'w') as f:
