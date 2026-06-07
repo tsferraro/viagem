@@ -396,7 +396,27 @@ Tobia pode pedir override antes do build.
 ## Git workflow
 
 - Sempre `git commit` + `git push origin main` direto · NÃO deixar em branch isolada
+- **MERGE AUTOMÁTICO NA `main` É OBRIGATÓRIO NO FIM DE TODA SESSÃO** · sem perguntar · sem esperar PR
 - Se aceito sugestão de mudança, executar build+validate+deploy sem perguntar de novo
+
+### ⚠️ Sessões cloud / Claude Code na web · merge na main é o passo final (NÃO opcional)
+
+O GitHub Pages serve **só a branch `main`** (`https://tsferraro.github.io/viagem`). Conteúdo em branch de feature **NÃO aparece na landing ao vivo** até chegar na `main`. Bug recorrente: sessão cloud roda numa branch designada (`claude/...`), entrega o roteiro, e esquece de levar pra `main` → Tobia abre a landing e não vê a viagem.
+
+**Regra**: independente de qual branch a sessão começou, o passo final SEMPRE é merge na `main` + `git push origin main`. Isso é parte da entrega · não é "extra" nem precisa de novo OK do Tobia.
+
+```bash
+# Fim de sessão · da branch de feature pra main (fast-forward sempre que possível)
+git checkout main && git pull origin main
+git merge --no-ff <branch-da-sessao> -m "merge: <slug> na main"
+python3 scripts/regen-landing.py "$(pwd)"   # garante landing com a viagem nova
+git add -A && git commit -m "chore: regen landing" --allow-empty
+git push origin main
+```
+
+Anti-padrão: declarar entrega pronta com o roteiro só na branch de feature · a viagem fica invisível na landing.
+
+
 - Mensagens estruturadas:
   - `feat: roteiro <slug> · <N dias> · <destino>`
   - `content: enriquecer <stop> com <detalhe>`

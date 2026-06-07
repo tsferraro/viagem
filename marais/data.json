@@ -1,0 +1,174 @@
+{
+  "title": "🎠 Marais em Família · Paris",
+  "auth_emoji": "🎠",
+  "auth_title": "Marais em Família",
+  "auth_subtitle": "Paris · adultos + crianças (2-7a)",
+  "header_title": "Marais · Dia em Família",
+  "header_sub": "2 walking tours · Place des Vosges + Mercado & Playground",
+  "password": "marais2026",
+  "legend_group_text": "👨‍👩‍👧 Adultos + crianças (2-7a)",
+  "legend_notes_html": "<strong>🚶 2 walking tours</strong>: <em>Parte 1 · Coração do Marais</em> (ancorada na Place des Vosges) e <em>Parte 2 · Mercado & Playground</em> (ancorada no Marché des Enfants Rouges). <strong>🧒 Terreno</strong>: Marais é plano · só trechos curtos de paralelepípedo (rue des Rosiers, em torno do mercado) · carrinho roda em quase tudo. <strong>🚇 Início</strong>: métro Saint-Paul [1] ou Chemin Vert [8].",
+  "days": [
+    {
+      "date": "Dia no Marais",
+      "tema": "Marais em Família · 2 walking tours",
+      "temaCurto": "Marais",
+      "bairro": "🏛️ Le Marais (3e + 4e)",
+      "grupo": true,
+      "nota": "Dia inteiro no Marais, bairro plano e compacto — ideal pra fazer a pé com crianças pequenas. Manhã no sul histórico (Place des Vosges + walking tour Parte 1, terminando na Fontaine Stravinsky, que as crianças amam), almoço de falafel na rue des Rosiers, e tarde no norte: mercado coberto mais antigo de Paris + playground do Square du Temple pra descarregar energia. As duas walking tours são opcionais e independentes — faz uma, faz as duas, ou só os cards-âncora se o dia render menos.",
+      "cor": "#9333ea",
+      "gradA": "#6b21a8",
+      "gradB": "#a855f7",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro → Place des Vosges",
+          "cat": "Saint-Paul [1] ou Chemin Vert [8] · ~5min a pé até a praça",
+          "coord": {"lat": 48.8554, "lng": 2.3608}
+        },
+        {
+          "hora": "10:15",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Place des Vosges (Pl. des Vosges, 4e)",
+          "cat": "Praça planejada mais antiga de Paris (1612) · gramado + tanque de areia",
+          "sobre": "Inaugurada em 1612 como Place Royale, é a praça planejada mais antiga de Paris: 36 pavilhões idênticos de tijolo rosa e pedra branca em volta de um jardim quadrado perfeito. No centro há gramados onde **é permitido sentar e pisar** (raro em Paris) com fonte em cada canto, e — o que conta pra criançada — um **tanque de areia e brinquedos** sob as tílias.",
+          "imperdivel": "Deixar as crianças correrem no gramado central + as arcadas cobertas que dão a volta inteira na praça (sombra e abrigo de chuva garantidos pro carrinho).",
+          "dicas": [
+            "**Arcadas** cobrem todo o perímetro da praça · sombra no calor e abrigo na chuva, com o carrinho",
+            "**Tanque de areia e brinquedos** no jardim · vale levar pá e baldinho",
+            "No **nº 6** fica a Maison de Victor Hugo: coleção permanente **grátis** e banheiro limpo (raro no centro)",
+            "Saída pelo canto sudoeste leva direto ao **Hôtel de Sully** por um passadiço discreto que quase ninguém usa"
+          ],
+          "duracao": "45min-1h (mais se engatarem no tanque de areia)",
+          "custo": "Grátis",
+          "acessibilidade": "Jardim plano de saibro compacto · carrinho roda fácil · arcadas têm 1 degrau em alguns trechos",
+          "coord": {"lat": 48.8556, "lng": 2.3654},
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 🏛️ Coração do Marais",
+              "descricao": "Place des Vosges → Victor Hugo → Hôtel de Sully → Carnavalet → rue des Rosiers → Fontaine Stravinsky · ~1.4km · ~1h",
+              "stops": [
+                {"n": 1, "nome": "Place des Vosges (jardim central, 4e)", "coord": {"lat": 48.8556, "lng": 2.3654}},
+                {"n": 2, "nome": "Maison de Victor Hugo (6 Place des Vosges)", "coord": {"lat": 48.8548, "lng": 2.3661}},
+                {"n": 3, "nome": "Hôtel de Sully (62 rue Saint-Antoine)", "coord": {"lat": 48.8547, "lng": 2.3639}},
+                {"n": 4, "nome": "Musée Carnavalet (23 rue de Sévigné)", "coord": {"lat": 48.8570, "lng": 2.3628}},
+                {"n": 5, "nome": "Rue des Rosiers · L'As du Fallafel (34 rue des Rosiers)", "coord": {"lat": 48.8574, "lng": 2.3591}},
+                {"n": 6, "nome": "Fontaine Stravinsky (Place Igor Stravinsky)", "coord": {"lat": 48.8595, "lng": 2.3515}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🧆",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · rue des Rosiers",
+          "cat": "3 opções no coração do antigo bairro judaico",
+          "coord": {"lat": 48.8574, "lng": 2.3591},
+          "opcoes": [
+            {"nome": "L'As du Fallafel (34 rue des Rosiers)", "desc": "O falafel mais famoso de Paris · pega pra viagem e come na praça (a fila do balcão anda rápido)", "preco": "€8-10", "dist": "fim da Parte 1"},
+            {"nome": "Miznon (22 rue des Écouffes)", "desc": "Pitas recheadas do chef Eyal Shani · casual, barulhento, adora criança · couve-flor inteira assada é o hit", "preco": "€12-16", "dist": "1min a pé"},
+            {"nome": "Chez Marianne (2 rue des Hospitalières-St-Gervais)", "desc": "Mezze sentado (homus, falafel, berinjela) · prato de degustação dividido funciona bem em família", "preco": "€15-20", "dist": "2min a pé"}
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🚶",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Rue des Rosiers → Marché des Enfants Rouges",
+          "cat": "~12min a pé subindo pelo Marais · passa pela rue Vieille-du-Temple",
+          "coord": {"lat": 48.8602, "lng": 2.3608}
+        },
+        {
+          "hora": "14:45",
+          "emoji": "🍓",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Marché des Enfants Rouges (39 rue de Bretagne, 3e)",
+          "cat": "Mercado coberto mais antigo de Paris (1615) · bancas de comida do mundo",
+          "sobre": "Aberto em 1615, é o **mercado coberto mais antigo de Paris**. O nome vem de um antigo orfanato cujas crianças vestiam vermelho (cor da caridade). Hoje é metade mercado, metade praça de alimentação: bancas marroquina, japonesa, italiana e libanesa dividindo mesas comunais sob a estrutura de ferro.",
+          "imperdivel": "Tajine do traiteur marroquino (a fila vale) + as crêpes/galettes pras crianças.",
+          "dicas": [
+            "**Fecha 2ª-feira** · lota das 12h às 14h no fim de semana — chega 11h30 ou depois das 14h com criança",
+            "Mesas comunais apertadas · no pico melhor dobrar o carrinho e encostar na lateral",
+            "Banca japonesa (**Chez Taeko**) e crêpes salgadas resolvem criança exigente",
+            "Saída norte cai na **rue de Bretagne**, rua de bairro com padarias (Bontemps no nº 57) pra sobremesa"
+          ],
+          "duracao": "45min-1h15",
+          "custo": "€10-16 por prato",
+          "acessibilidade": "Térreo plano · corredores estreitos e cheios no horário de pico",
+          "coord": {"lat": 48.8630, "lng": 2.3621},
+          "walkingTours": [
+            {
+              "nome": "Parte 2 · 🍓 Marais Norte: Mercado & Playground",
+              "descricao": "Musée Picasso → Marché des Enfants Rouges → Square du Temple → Carreau du Temple · ~800m · ~40min",
+              "stops": [
+                {"n": 1, "nome": "Musée Picasso (Hôtel Salé, 5 rue de Thorigny)", "coord": {"lat": 48.8598, "lng": 2.3626}},
+                {"n": 2, "nome": "Marché des Enfants Rouges (39 rue de Bretagne)", "coord": {"lat": 48.8630, "lng": 2.3621}},
+                {"n": 3, "nome": "Square du Temple - Elie Wiesel (rue de Bretagne)", "coord": {"lat": 48.8637, "lng": 2.3606}, "coord_unverified": true},
+                {"n": 4, "nome": "Carreau du Temple (4 rue Eugène Spuller)", "coord": {"lat": 48.8646, "lng": 2.3623}}
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:15",
+          "emoji": "🛝",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Square du Temple - Elie Wiesel (rue de Bretagne, 3e)",
+          "cat": "Jardim à inglesa com playground cercado, cascata e coreto · descarrego de energia",
+          "sobre": "Um dos 24 jardins criados na reforma de Haussmann (1857), no terreno da antiga fortaleza dos **Templários** que virou prisão da família real na Revolução. Hoje é um parque à inglesa de 7.700 m² com lago, **cascata artificial** feita de rochas da floresta de Fontainebleau, um coreto de 1900 e um **playground cercado** com tanque de areia.",
+          "imperdivel": "O playground cercado (dá pra sentar e soltar as crianças com tranquilidade) + a cascata e o laguinho.",
+          "dicas": [
+            "Playground é **cercado** — senta no banco e deixa as crianças à solta",
+            "Tem **banheiro público** e ponto de água · no verão ligam os brumisateurs (borrifadores)",
+            "Coladinho fica o **Carreau du Temple** (mercado de ferro de 1863, hoje centro cultural) — entra pra ver a estrutura e fugir de sol/chuva",
+            "Fecha ao anoitecer (horário varia com a estação) · confere o portão na saída"
+          ],
+          "duracao": "45min-1h30",
+          "custo": "Grátis",
+          "acessibilidade": "Aleias planas e largas · 100% carrinho · playground com piso emborrachado",
+          "coord": {"lat": 48.8637, "lng": 2.3606}
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Place des Vosges (Pl. des Vosges, 4e)": [
+      {"type": "official", "label": "Maison de Victor Hugo (nº 6 · grátis)", "url": "https://www.maisonsvictorhugo.paris.fr/en"}
+    ],
+    "Marché des Enfants Rouges (39 rue de Bretagne, 3e)": [
+      {"type": "official", "label": "Marché des Enfants Rouges · Ville de Paris", "url": "https://www.paris.fr/lieux/marche-couvert-des-enfants-rouges-5461"}
+    ],
+    "Square du Temple - Elie Wiesel (rue de Bretagne, 3e)": [
+      {"type": "official", "label": "Square du Temple-Elie Wiesel · Ville de Paris", "url": "https://www.paris.fr/lieux/square-du-temple-elie-wiesel-2425"},
+      {"type": "official", "label": "Carreau du Temple · Ville de Paris", "url": "https://www.paris.fr/lieux/le-carreau-du-temple-19179"}
+    ]
+  },
+  "transit_map": {
+    "Chegada · Métro → Place des Vosges": {
+      "metro": "[1] Saint-Paul · ~5min a pé até a praça · ou [8] Chemin Vert (saída ainda mais perto)",
+      "uber": "Conveniente vindo com carrinho · deixa no canto da rue de Birague"
+    },
+    "Rue des Rosiers → Marché des Enfants Rouges": {
+      "metro": "~12min a pé subindo pela rue Vieille-du-Temple · sem baldeação que compense de métro"
+    }
+  },
+  "bairros_config": [
+    {"nome": "🏛️ Marais Sud (4e)", "latMin": 48.853, "latMax": 48.8605, "lngMin": 2.358, "lngMax": 2.368},
+    {"nome": "🍓 Marais Norte (3e)", "latMin": 48.8605, "latMax": 48.866, "lngMin": 2.358, "lngMax": 2.366},
+    {"nome": "🎨 Pompidou / Stravinsky", "latMin": 48.857, "latMax": 48.861, "lngMin": 2.349, "lngMax": 2.354},
+    {"nome": "📍 Paris", "fallback": true}
+  ]
+}
