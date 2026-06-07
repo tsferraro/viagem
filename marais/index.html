@@ -98,6 +98,10 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
 .day-banner h2{font-size:19px;font-weight:700;margin-top:4px;letter-spacing:-0.2px}
 .day-banner .bairro{font-size:14px;opacity:0.85;margin-top:6px;display:flex;align-items:center;gap:5px}
 .day-nota{padding:12px 16px;background:#fffbeb;border-left:3px solid #f59e0b;font-size:14px;color:#78350f}
+.nivel-toggle{display:flex;align-items:center;gap:8px;padding:12px 16px;flex-wrap:wrap}
+.nivel-label{font-size:12px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:0.4px}
+.nivel-btn{border:1.5px solid #e5e7eb;background:#fff;color:#6b7280;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;transition:all 0.15s}
+.nivel-btn.active{background:var(--day-color);border-color:var(--day-color);color:#fff}
 
 /* PERIODO BLOCKS */
 .periodos{padding:14px 14px 8px}
@@ -304,7 +308,7 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
 
 <div id="app">
   <div class="header">
-    <h1>Le Marais · Walking Tours</h1>
+    <h1>🗺️ Le Marais · Walking Tours</h1>
     <div class="sub">Família · Profundo · Guloso · Museus escondidos</div>
   </div>
 
@@ -632,7 +636,7 @@ const DAYS = [
     "bairro": "🎨 Le Marais (4e → Haut Marais 3e)",
     "grupo": false,
     "hideStopMarkers": true,
-    "nota": "Este é o Marais que se conta caminhando devagar, de pátio em pátio: ~3,5km em 2 partes (faça a Parte 1 de manhã, almoce no caminho e ataque a Parte 2 à tarde). A Parte 1 puxa o sul medieval — a viela da rue des Barres, o palacete da Reine Margot, antiquários e um trecho da muralha de 1190. A Parte 2 sobe pro Haut Marais das galerias, brechós e dos grandes hôtels particuliers, terminando na casa mais antiga de Paris. Pensado pra adultos e pra compartilhar com quem vem te visitar; é plano (carrinho aguenta), mas tem mais história que parquinho. ⭐ Faça num <strong>domingo</strong>: as lojas do Marais abrem (raro em Paris).",
+    "nota": "Este é o Marais que se conta caminhando devagar, de pátio em pátio: ~3,5km em 2 partes (faça a Parte 1 de manhã, almoce no caminho e ataque a Parte 2 à tarde). A Parte 1 puxa o sul medieval — a viela da rue des Barres, o palacete da Reine Margot, antiquários e um trecho da muralha de 1190. A Parte 2 sobe pro Haut Marais das galerias, brechós e dos grandes hôtels particuliers, terminando na casa mais antiga de Paris. Pensado pra adultos e pra compartilhar com quem vem te visitar; é plano (carrinho aguenta), mas tem mais história que parquinho. ⭐ Faça num <strong>domingo</strong>: as lojas do Marais abrem (raro em Paris). 🔬 Use o seletor <strong>Básico / Profundo</strong> aqui em cima: Básico mostra só as 6 paradas imperdíveis; Profundo abre as 10.",
     "cor": "#b45309",
     "gradA": "#78350f",
     "gradB": "#d97706",
@@ -643,6 +647,7 @@ const DAYS = [
         "periodo": "manha",
         "tipo": "card",
         "risco": "green",
+        "essencial": true,
         "nome": "Église Saint-Gervais & Rue des Barres (13 rue des Barres, 4e)",
         "cat": "A viela medieval mais bonita do Marais + a igreja do obus de 1918",
         "sobre": "Comece nos fundos da igreja, na <strong>rue des Barres</strong> — uma ladeirinha de paralelepípedo com casas enxaimel inclinadas, uma das esquinas mais medievais e fotogênicas de Paris. A <strong>Église Saint-Gervais-Saint-Protais</strong> casa o gótico flamejante com a primeira fachada clássica de Paris (1620). Foi palco de uma das maiores tragédias da Primeira Guerra: na <strong>Sexta-Feira Santa de 29 de março de 1918</strong>, um obus disparado pelo canhão alemão de longuíssimo alcance atravessou a abóbada durante a missa e matou cerca de 88 fiéis — o ataque mais letal de toda a guerra em Paris.",
@@ -766,6 +771,7 @@ const DAYS = [
         "periodo": "manha",
         "tipo": "card",
         "risco": "green",
+        "essencial": true,
         "nome": "Hôtel de Sens · Bibliothèque Forney (1 rue du Figuier, 4e)",
         "cat": "Joia gótica de ~1500 · uma das raras casas medievais de Paris",
         "sobre": "Com torres e torreões pontudos, parece um castelo de conto de fadas plantado na cidade — e é um dos raríssimos <strong>palácios medievais civis</strong> que sobraram em Paris, construído entre 1475 e 1519 para os arcebispos de Sens. Sua moradora mais célebre foi <strong>a Reine Margot</strong> (Marguerite de Valois), primeira esposa de Henri IV, que viveu aqui em 1605-06: a lenda conta que um de seus jovens amantes foi morto bem na porta por um rival ciumento — e que ela mandou decapitar o assassino e foi ao enterro da vítima de luto. Hoje guarda a Bibliothèque Forney, de artes decorativas.",
@@ -789,6 +795,7 @@ const DAYS = [
         "periodo": "manha",
         "tipo": "card",
         "risco": "green",
+        "essencial": true,
         "nome": "Village Saint-Paul (rue Saint-Paul / rue des Jardins-Saint-Paul, 4e)",
         "cat": "6 pátios escondidos com 30+ antiquários · e 60m da muralha de Philippe Auguste",
         "sobre": "Um quarteirão inteiro escondido atrás das fachadas: <strong>seis pátios de pedra interligados</strong>, com mais de trinta antiquários, brocanteurs, galerias e ateliês de design. Entra-se por portões discretos na rue Saint-Paul e na rue des Jardins-Saint-Paul. A poucos passos, na rue des Jardins-Saint-Paul, está o maior trecho visível em Paris da <strong>muralha de Philippe Auguste</strong> (c. 1190-1220): 60 metros de muro medieval e a base de uma torre de defesa.",
@@ -904,6 +911,7 @@ const DAYS = [
         "periodo": "tarde",
         "tipo": "card",
         "risco": "green",
+        "essencial": true,
         "nome": "Hôtel de Rohan · Chevaux du Soleil (87 rue Vieille-du-Temple, 3e)",
         "cat": "Obra-prima escondida num pátio · os Cavalos de Apolo (1738)",
         "sobre": "Palacete de 1705 do cardeal de Rohan, hoje parte dos Archives Nationales. Mas o tesouro está escondido no <strong>pátio das antigas cavalariças</strong>: o baixo-relevo <strong>'Os Cavalos do Sol' (Chevaux du Soleil)</strong>, esculpido por Robert Le Lorrain entre 1734 e 1738 — os cavalos do deus-sol Apolo sendo abeberados por tritões, irrompendo da pedra com uma energia que parece molhada. Uma das maiores esculturas do séc. XVIII em Paris, e quase ninguém sabe que está ali.",
@@ -927,6 +935,7 @@ const DAYS = [
         "periodo": "tarde",
         "tipo": "card",
         "risco": "green",
+        "essencial": true,
         "nome": "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois, 3e)",
         "cat": "Cour d'honneur monumental + um dos ápices do rococó francês",
         "sobre": "Vizinho de parede com o Rohan, o Hôtel de Soubise abre num <strong>cour d'honneur em ferradura</strong>, cercado por dupla colunata — talvez o pátio mais grandioso do Marais. Dentro, os apartamentos do príncipe e da princesa de Soubise, decorados por <strong>Germain Boffrand</strong> (1735-40) com telas de Boucher e Natoire, são um dos pontos mais altos do <strong>rococó</strong> em França. Guarda o Musée des Archives Nationales — do Édito de Nantes ao testamento de Napoleão.",
@@ -950,6 +959,7 @@ const DAYS = [
         "periodo": "tarde",
         "tipo": "card",
         "risco": "green",
+        "essencial": true,
         "nome": "Maison de Nicolas Flamel (51 rue de Montmorency, 3e)",
         "cat": "A casa mais antiga de Paris (1407) · e a lenda do alquimista",
         "sobre": "O grande final: a <strong>casa mais antiga de Paris</strong> que se pode datar com certeza — 1407, gravado na frieze sobre o térreo. Foi mandada construir por <strong>Nicolas Flamel</strong>, escrivão e livreiro rico, não como moradia, mas como <strong>abrigo para os pobres</strong>: o térreo era comércio e os andares de cima, alojamento gratuito, com uma condição esculpida na fachada — rezar de manhã e à noite pela alma do casal Flamel. Séculos depois, Flamel virou lenda como o alquimista que teria descoberto a <strong>pedra filosofal</strong> e o elixir da vida eterna — o mesmo que aparece em <em>Harry Potter</em> e <em>O Código Da Vinci</em>.",
@@ -1562,7 +1572,7 @@ function getDefaultDayIdx(){
   }
   return 0;
 }
-const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null };
+const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null, nivel:'profundo' };
 
 function getPeriodoMeta(p){
   return {
@@ -1711,9 +1721,19 @@ function renderStop(stop){
 
 function renderDay(day){
   const periodos=['manha','tarde','noite'];
+  // Toggle Básico↔Profundo: se o dia tem stops marcados essencial, mostra o seletor.
+  // Básico = só os essenciais · Profundo = tudo.
+  const hasNiveis=day.stops.some(s=>s.essencial);
+  const basico=hasNiveis && state.nivel==='basico';
+  const visStops=basico?day.stops.filter(s=>s.essencial):day.stops;
   const grouped={manha:[],tarde:[],noite:[]};
-  day.stops.forEach(s=>{ if(grouped[s.periodo]) grouped[s.periodo].push(s); });
-  
+  visStops.forEach(s=>{ if(grouped[s.periodo]) grouped[s.periodo].push(s); });
+  const toggle=hasNiveis?`<div class="nivel-toggle">
+      <span class="nivel-label">Versão:</span>
+      <button class="nivel-btn ${basico?'':'active'}" data-nivel="profundo">🔬 Profundo</button>
+      <button class="nivel-btn ${basico?'active':''}" data-nivel="basico">⚡ Básico</button>
+    </div>`:'';
+
   return `<div class="day-card" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}">
     <div class="day-banner">
       <div class="date">${day.date}</div>
@@ -1721,6 +1741,7 @@ function renderDay(day){
       <div class="bairro">📍 ${day.bairro}${day.grupo?' · 👥 grupo':''}</div>
     </div>
     ${day.nota?`<div class="day-nota">${day.nota}</div>`:''}
+    ${toggle}
     <div class="periodos">
       ${periodos.filter(p=>grouped[p].length>0).map(p=>{
         const m=getPeriodoMeta(p);
@@ -1976,6 +1997,16 @@ function bindCardHandlers(){
       b.classList.toggle('ok',willBeDone);
       b.classList.toggle('pending',!willBeDone);
       b.textContent=willBeDone?'☑ FEITO':'☐ RESERVAR';
+    });
+  });
+  document.querySelectorAll('.nivel-btn').forEach(b=>{
+    if(b.__bound) return;
+    b.__bound=true;
+    b.addEventListener('click',e=>{
+      e.stopPropagation();
+      if(state.nivel===b.dataset.nivel) return;
+      state.nivel=b.dataset.nivel;
+      renderInnerContent();
     });
   });
   if(state.expandStop){

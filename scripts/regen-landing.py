@@ -79,6 +79,8 @@ def main():
         slug_f = os.path.join(full, 'SLUG.txt')
         if not (os.path.isdir(full) and os.path.exists(html)): continue
         slug = open(slug_f).read().strip() if os.path.exists(slug_f) else d
+        city_f = os.path.join(full, 'CITY.txt')
+        city = open(city_f).read().strip() if os.path.exists(city_f) else None
         with open(html) as f: c = f.read()
         h1 = re.search(r'<h1>([^<]+)</h1>', c)
         sub = re.search(r'class="sub">([^<]+)</div>', c)
@@ -93,20 +95,41 @@ def main():
                 i += 1
             emoji = nome[:i].strip()
             nome_clean = nome[i:].lstrip(' ·-—').strip() or d
-        viagens.append({'subdir': d, 'slug': slug, 'nome': nome_clean, 'meta': meta, 'emoji': emoji})
+        viagens.append({'subdir': d, 'slug': slug, 'nome': nome_clean, 'meta': meta, 'emoji': emoji, 'city': city})
 
-    # Ordenação cronológica · próxima viagem primeiro (ascendente por ano/mês/dia)
-    viagens.sort(key=lambda v: parse_chronologic_key(v['slug'], v['meta']))
-
-    cards = '\n'.join(
-        f'''  <a class="viagem-card" href="./{v['subdir']}/">
+    def render_card(v):
+        return f'''  <a class="viagem-card" href="./{v['subdir']}/">
     <span class="viagem-chev">›</span>
     <div class="viagem-emoji">{v['emoji']}</div>
     <div class="viagem-nome">{v['nome']}</div>
     <div class="viagem-meta">{v['meta']}</div>
   </a>'''
-        for v in viagens
-    )
+
+    def render_section(title, items):
+        inner = '\n'.join(render_card(v) for v in items)
+        return f'<h2>{title}</h2>\n<div class="viagens">\n{inner}\n</div>'
+
+    # Emoji por cidade (seções tipo "Paris · passeios") · default 📍
+    CITY_EMOJI = {'Paris': '🗼', 'Nova York': '🗽', 'Lisboa': '🇵🇹'}
+
+    # Viagens sem cidade = trips datados (ordem cronológica) · com cidade = coletâneas de passeios
+    sem_cidade = [v for v in viagens if not v.get('city')]
+    sem_cidade.sort(key=lambda v: parse_chronologic_key(v['slug'], v['meta']))
+
+    from collections import OrderedDict
+    grupos = OrderedDict()
+    for v in viagens:
+        if v.get('city'):
+            grupos.setdefault(v['city'], []).append(v)
+
+    sections = []
+    if sem_cidade:
+        sections.append(render_section('✈️ Viagens', sem_cidade))
+    for cidade in sorted(grupos):
+        items = sorted(grupos[cidade], key=lambda v: v['nome'])
+        emoji = CITY_EMOJI.get(cidade, '📍')
+        sections.append(render_section(f'{emoji} {cidade} · passeios', items))
+    sections_html = '\n\n'.join(sections)
 
     html = f'''<!DOCTYPE html>
 <html lang="pt-BR">
@@ -136,10 +159,7 @@ h2{{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter
 <h1>🗺️ Roteiros</h1>
 <div class="sub">Família Ferraro · viagens em planejamento e ativas</div>
 
-<h2>✈️ Viagens</h2>
-<div class="viagens">
-{cards}
-</div>
+{sections_html}
 
 <h2>📦 Arquivo</h2>
 <div class="viagens">

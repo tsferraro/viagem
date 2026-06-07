@@ -14,7 +14,7 @@ function getDefaultDayIdx(){
   }
   return 0;
 }
-const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null };
+const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null, nivel:'profundo' };
 
 function getPeriodoMeta(p){
   return {
@@ -163,9 +163,19 @@ function renderStop(stop){
 
 function renderDay(day){
   const periodos=['manha','tarde','noite'];
+  // Toggle Básico↔Profundo: se o dia tem stops marcados essencial, mostra o seletor.
+  // Básico = só os essenciais · Profundo = tudo.
+  const hasNiveis=day.stops.some(s=>s.essencial);
+  const basico=hasNiveis && state.nivel==='basico';
+  const visStops=basico?day.stops.filter(s=>s.essencial):day.stops;
   const grouped={manha:[],tarde:[],noite:[]};
-  day.stops.forEach(s=>{ if(grouped[s.periodo]) grouped[s.periodo].push(s); });
-  
+  visStops.forEach(s=>{ if(grouped[s.periodo]) grouped[s.periodo].push(s); });
+  const toggle=hasNiveis?`<div class="nivel-toggle">
+      <span class="nivel-label">Versão:</span>
+      <button class="nivel-btn ${basico?'':'active'}" data-nivel="profundo">🔬 Profundo</button>
+      <button class="nivel-btn ${basico?'active':''}" data-nivel="basico">⚡ Básico</button>
+    </div>`:'';
+
   return `<div class="day-card" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}">
     <div class="day-banner">
       <div class="date">${day.date}</div>
@@ -173,6 +183,7 @@ function renderDay(day){
       <div class="bairro">📍 ${day.bairro}${day.grupo?' · 👥 grupo':''}</div>
     </div>
     ${day.nota?`<div class="day-nota">${day.nota}</div>`:''}
+    ${toggle}
     <div class="periodos">
       ${periodos.filter(p=>grouped[p].length>0).map(p=>{
         const m=getPeriodoMeta(p);
@@ -428,6 +439,16 @@ function bindCardHandlers(){
       b.classList.toggle('ok',willBeDone);
       b.classList.toggle('pending',!willBeDone);
       b.textContent=willBeDone?'☑ FEITO':'☐ RESERVAR';
+    });
+  });
+  document.querySelectorAll('.nivel-btn').forEach(b=>{
+    if(b.__bound) return;
+    b.__bound=true;
+    b.addEventListener('click',e=>{
+      e.stopPropagation();
+      if(state.nivel===b.dataset.nivel) return;
+      state.nivel=b.dataset.nivel;
+      renderInnerContent();
     });
   });
   if(state.expandStop){
