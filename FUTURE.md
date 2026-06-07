@@ -52,7 +52,8 @@ Skills e melhorias planejadas. Cada item tem trigger de quando vale executar.
 | `scripts/rebuild-search.py` · regenera hay strings indexadas | Se busca ficar lenta com 200+ stops |
 | Strategy "etapas" implementada visualmente (separador entre grupos no day-tabs) | Quando viagem 25 dias for testada em campo |
 | PWA manifest + service worker · funciona offline 100% (incluindo mapa) | Se Tobia reportar uso offline na viagem (Açores rural) |
-| Modo "imprimir" · gera PDF a partir do HTML | Se família pedir versão impressa |
+| ~~Modo "imprimir" · gera PDF a partir do HTML~~ ✅ feito v1.6 (botão 🖨️ + `@media print`) | — |
+| **Idioma / i18n** · toggle PT↔EN↔FR no roteiro (strings + conteúdo dos cards) · útil pra compartilhar com visitante não-lusófono que vier a Paris | Registrado 2026-06-07 a pedido do Tobia · fazer **só quando surgir a necessidade real** (família/amigo não-PT usando o roteiro) |
 | Export GPX dos walking tours · pra GPS hiking | Quando WT incluir hiking trail (Açores, montanha) |
 | Multi-device sync de reservas via Cloudflare KV ou Supabase | Se família reclamar de divergência de reservas |
 

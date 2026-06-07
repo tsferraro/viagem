@@ -20,6 +20,14 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 - Composição nova: **um adulto + criança pequena, com janela de trabalho no meio**. Tobia pediu o roteiro já em Valência, pra "hoje e amanhã". Pipeline rodou inteiro num passe só (sem esqueleto-valida-expande clássico) porque eram 2 dias — OK pra micro-viagens.
 - Âncora do dia: Oceanogràfic (manhã, 3-4h) + Bioparc (zoo de imersão, ótimo p/ 3a, colado na base em L'Olivereta) + Parque Gulliver (grátis, fim de tarde). Bioparc+Gulliver combinam bem (ambos no leito do Turia) mas é ambicioso → Gulliver marcado como opcional/pula-sem-culpa.
 
+### Marais · Paris (coletânea de passeios · sem data · mora em Paris)
+- **Formato novo: coletânea por bairro, abas-por-tema.** Cada aba é uma walking tour completa (👶 Família · 🎨 Profundo/história · 🍫 Guloso · 🖼️ Museus · 🛍️ Lojas). Agrupada na landing via `CITY.txt = Paris`. Modelo replicável pra outros bairros/cidades onde Tobia mora ou visita muito.
+- **Abas-por-tema dispensam o toggle Básico↔Profundo**: a aba Família já é o "básico". Tobia mesmo apontou isso → removidos os `essencial`. Toggle fica reservado pra **roteiro datado** onde dá pra cortar pro essencial.
+- **Profundo = história em 1º lugar**, não só "arte & brechó". Renomear pra refletir o peso real do conteúdo.
+- **Dia-coletânea-de-tour sempre `hideStopMarkers: true`** — senão pins padrão + pins da WT brigam e a legenda fica com menos pontos que o mapa (bug pego em campo pelo Tobia).
+- **Numeração de WT multi-parte tem que ser sequencial (1..N)** atravessando as partes · bug: parte 2 reiniciava em 1 e não batia com a legenda. Fix no `renderMap()` (wtSeq global).
+- **Coords das lojas ancoradas** (Nominatim/Mappy/Yelp todos bloqueados no sandbox · `Host not in allowlist`/403). Usei coords verificadas vizinhas na mesma rua + flag pro Tobia. Maps navega certo pelo nome+endereço.
+
 ---
 
 ## Padrões cross-viagem
@@ -34,6 +42,13 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ---
 
 ## Evolução da skill
+
+### v1.6 · 2026-06-07 (coletânea Marais · features de app + fix de mapa)
+- **Fix numeração sequencial no mapa**: WT multi-parte numera 1..N contínuo (antes parte 2 reiniciava em 1). Legenda construída do `wtSeq` quando `hideStopMarkers` → bate 1:1 com os pinos.
+- **Abas-por-tema vs toggle Básico↔Profundo documentado** na CLAUDE.md (pergunta 2b). Coletânea = abas; roteiro datado = toggle. Toggle segue no template pra reuso.
+- **3 features de app novas no template** (todas as viagens herdam): botão **←Início** (`home-btn` → landing), botão **🖨️ PDF** (`@media print` limpa nav/mapa/gate · "offline/PDF"), **busca global na landing** (`regen-landing.py` filtra cards + esconde seções vazias).
+- **Pendente (idioma/i18n)**: registrado no FUTURE como melhoria · fazer só quando surgir necessidade real (família/visitante não-PT).
+- Reforço: **dia-coletânea-de-tour = `hideStopMarkers: true`** sempre.
 
 ### v1.0 · 2026-05-16
 - Setup inicial · skill `roteiro-viagem` + `walking-tour-designer` embarcadas

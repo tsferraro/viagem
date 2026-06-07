@@ -4,10 +4,10 @@
   "auth_title": "Walking Tours · Paris",
   "auth_subtitle": "Le Marais · roteiros a pé (sem data)",
   "header_title": "🗺️ Le Marais · Walking Tours",
-  "header_sub": "Família · Profundo · Guloso · Museus escondidos",
+  "header_sub": "Família · Profundo · Guloso · Museus · Lojas",
   "password": "marais2026",
   "legend_group_text": "👨‍👩‍👧 Tour ok pra crianças pequenas",
-  "legend_notes_html": "<strong>🗺️ Coletânea de walking tours pelo Marais</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. <strong>👶 Família</strong>: clássico, plano, playgrounds + fonte do Stravinsky. <strong>🎨 Profundo</strong>: arte, brechó, hôtels e a casa mais antiga de Paris (2 partes, ~3,5km). <strong>🍫 Guloso</strong>: chocolate, choux, crêpes e sorvete. <strong>🖼️ Museus</strong>: 5 museus escondidos (3 grátis). <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>⭐ Dica de ouro</strong>: o Marais é dos raros bairros de Paris com lojas abertas no <strong>domingo</strong>.",
+  "legend_notes_html": "<strong>🗺️ Coletânea de walking tours pelo Marais</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. <strong>👶 Família</strong>: clássico, plano, playgrounds + fonte do Stravinsky. <strong>🎨 Profundo</strong>: história, hôtels, arte &amp; brechó e a casa mais antiga de Paris (2 partes, ~3,5km). <strong>🍫 Guloso</strong>: chocolate, choux, crêpes e sorvete. <strong>🖼️ Museus</strong>: 5 museus escondidos (3 grátis). <strong>🛍️ Lojas</strong>: design e concept stores (Fleux, Muji, Merci) do 4e ao Haut Marais. <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>⭐ Dica de ouro</strong>: o Marais é dos raros bairros de Paris com lojas abertas no <strong>domingo</strong>.",
   "days": [
     {
       "date": "👶 Família",
@@ -27,7 +27,10 @@
           "tipo": "transit",
           "nome": "Chegada · Métro → Place des Vosges",
           "cat": "Saint-Paul [1] ou Chemin Vert [8] · ~5min a pé até a praça",
-          "coord": {"lat": 48.8554, "lng": 2.3608}
+          "coord": {
+            "lat": 48.8554,
+            "lng": 2.3608
+          }
         },
         {
           "hora": "10:15",
@@ -52,18 +55,63 @@
           "duracao": "45min-1h na praça (a Parte 1 toda dá +1h30)",
           "custo": "Grátis",
           "acessibilidade": "Jardim plano de saibro compacto · carrinho roda fácil · arcadas têm 1 degrau em alguns trechos",
-          "coord": {"lat": 48.8556, "lng": 2.3654},
+          "coord": {
+            "lat": 48.8556,
+            "lng": 2.3654
+          },
           "walkingTours": [
             {
               "nome": "Parte 1 · 🏛️ Coração do Marais",
               "descricao": "Place des Vosges → Victor Hugo → Hôtel de Sully → Carnavalet → rue des Rosiers → Fontaine Stravinsky · ~1.4km · ~1h",
               "stops": [
-                {"n": 1, "nome": "Place des Vosges (jardim central, 4e)", "coord": {"lat": 48.8556, "lng": 2.3654}},
-                {"n": 2, "nome": "Maison de Victor Hugo (6 Place des Vosges)", "coord": {"lat": 48.8548, "lng": 2.3661}},
-                {"n": 3, "nome": "Hôtel de Sully (62 rue Saint-Antoine)", "coord": {"lat": 48.8547, "lng": 2.3639}},
-                {"n": 4, "nome": "Musée Carnavalet (23 rue de Sévigné)", "coord": {"lat": 48.8570, "lng": 2.3628}},
-                {"n": 5, "nome": "Rue des Rosiers · L'As du Fallafel (34 rue des Rosiers)", "coord": {"lat": 48.8574, "lng": 2.3591}},
-                {"n": 6, "nome": "Fontaine Stravinsky (Place Igor Stravinsky)", "coord": {"lat": 48.8595, "lng": 2.3515}}
+                {
+                  "n": 1,
+                  "nome": "Place des Vosges (jardim central, 4e)",
+                  "coord": {
+                    "lat": 48.8556,
+                    "lng": 2.3654
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Maison de Victor Hugo (6 Place des Vosges)",
+                  "coord": {
+                    "lat": 48.8548,
+                    "lng": 2.3661
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Hôtel de Sully (62 rue Saint-Antoine)",
+                  "coord": {
+                    "lat": 48.8547,
+                    "lng": 2.3639
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Musée Carnavalet (23 rue de Sévigné)",
+                  "coord": {
+                    "lat": 48.857,
+                    "lng": 2.3628
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Rue des Rosiers · L'As du Fallafel (34 rue des Rosiers)",
+                  "coord": {
+                    "lat": 48.8574,
+                    "lng": 2.3591
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Fontaine Stravinsky (Place Igor Stravinsky)",
+                  "coord": {
+                    "lat": 48.8595,
+                    "lng": 2.3515
+                  }
+                }
               ]
             }
           ]
@@ -75,11 +123,29 @@
           "tipo": "opcoes",
           "nome": "Almoço · rue des Rosiers",
           "cat": "3 opções no coração do antigo bairro judaico (o Pletzl)",
-          "coord": {"lat": 48.8574, "lng": 2.3591},
+          "coord": {
+            "lat": 48.8574,
+            "lng": 2.3591
+          },
           "opcoes": [
-            {"nome": "L'As du Fallafel (34 rue des Rosiers)", "desc": "O falafel mais famoso de Paris · pega pra viagem e come na praça (a fila do balcão anda rápido)", "preco": "€8-10", "dist": "fim da Parte 1"},
-            {"nome": "Miznon (22 rue des Écouffes)", "desc": "Pitas recheadas do chef Eyal Shani · casual, barulhento, adora criança · a couve-flor inteira assada é o hit", "preco": "€12-16", "dist": "1min a pé"},
-            {"nome": "Chez Marianne (2 rue des Hospitalières-St-Gervais)", "desc": "Mezze sentado (homus, falafel, berinjela) · prato de degustação dividido funciona bem em família", "preco": "€15-20", "dist": "2min a pé"}
+            {
+              "nome": "L'As du Fallafel (34 rue des Rosiers)",
+              "desc": "O falafel mais famoso de Paris · pega pra viagem e come na praça (a fila do balcão anda rápido)",
+              "preco": "€8-10",
+              "dist": "fim da Parte 1"
+            },
+            {
+              "nome": "Miznon (22 rue des Écouffes)",
+              "desc": "Pitas recheadas do chef Eyal Shani · casual, barulhento, adora criança · a couve-flor inteira assada é o hit",
+              "preco": "€12-16",
+              "dist": "1min a pé"
+            },
+            {
+              "nome": "Chez Marianne (2 rue des Hospitalières-St-Gervais)",
+              "desc": "Mezze sentado (homus, falafel, berinjela) · prato de degustação dividido funciona bem em família",
+              "preco": "€15-20",
+              "dist": "2min a pé"
+            }
           ]
         },
         {
@@ -89,7 +155,10 @@
           "tipo": "transit",
           "nome": "Rue des Rosiers → Marché des Enfants Rouges",
           "cat": "~12min a pé subindo pela rue Vieille-du-Temple",
-          "coord": {"lat": 48.8602, "lng": 2.3608}
+          "coord": {
+            "lat": 48.8602,
+            "lng": 2.3608
+          }
         },
         {
           "hora": "14:45",
@@ -110,16 +179,48 @@
           "duracao": "45min-1h15",
           "custo": "€10-16 por prato",
           "acessibilidade": "Térreo plano · corredores estreitos e cheios no horário de pico",
-          "coord": {"lat": 48.8630, "lng": 2.3621},
+          "coord": {
+            "lat": 48.863,
+            "lng": 2.3621
+          },
           "walkingTours": [
             {
               "nome": "Parte 2 · 🍓 Marais Norte: Mercado & Playground",
               "descricao": "Musée Picasso → Marché des Enfants Rouges → Square du Temple → Carreau du Temple · ~800m · ~40min",
               "stops": [
-                {"n": 1, "nome": "Musée Picasso (Hôtel Salé, 5 rue de Thorigny)", "coord": {"lat": 48.8598, "lng": 2.3626}},
-                {"n": 2, "nome": "Marché des Enfants Rouges (39 rue de Bretagne)", "coord": {"lat": 48.8630, "lng": 2.3621}},
-                {"n": 3, "nome": "Square du Temple - Elie Wiesel (rue de Bretagne)", "coord": {"lat": 48.8637, "lng": 2.3606}, "coord_unverified": true},
-                {"n": 4, "nome": "Carreau du Temple (4 rue Eugène Spuller)", "coord": {"lat": 48.8646, "lng": 2.3623}}
+                {
+                  "n": 1,
+                  "nome": "Musée Picasso (Hôtel Salé, 5 rue de Thorigny)",
+                  "coord": {
+                    "lat": 48.8598,
+                    "lng": 2.3626
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Marché des Enfants Rouges (39 rue de Bretagne)",
+                  "coord": {
+                    "lat": 48.863,
+                    "lng": 2.3621
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Square du Temple - Elie Wiesel (rue de Bretagne)",
+                  "coord": {
+                    "lat": 48.8637,
+                    "lng": 2.3606
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 4,
+                  "nome": "Carreau du Temple (4 rue Eugène Spuller)",
+                  "coord": {
+                    "lat": 48.8646,
+                    "lng": 2.3623
+                  }
+                }
               ]
             }
           ]
@@ -143,14 +244,18 @@
           "duracao": "45min-1h30",
           "custo": "Grátis",
           "acessibilidade": "Aleias planas e largas · 100% carrinho · playground com piso emborrachado",
-          "coord": {"lat": 48.8637, "lng": 2.3606}
+          "coord": {
+            "lat": 48.8637,
+            "lng": 2.3606
+          }
         }
-      ]
+      ],
+      "hideStopMarkers": true
     },
     {
       "date": "🎨 Profundo",
-      "tema": "Marais Profundo · Arte, Brechó & História",
-      "temaCurto": "Arte & Brechó",
+      "tema": "Marais Profundo · História, Arte & Brechó",
+      "temaCurto": "História",
       "bairro": "🎨 Le Marais (4e → Haut Marais 3e)",
       "grupo": false,
       "hideStopMarkers": true,
@@ -165,7 +270,6 @@
           "periodo": "manha",
           "tipo": "card",
           "risco": "green",
-          "essencial": true,
           "nome": "Église Saint-Gervais & Rue des Barres (13 rue des Barres, 4e)",
           "cat": "A viela medieval mais bonita do Marais + a igreja do obus de 1918",
           "sobre": "Comece nos fundos da igreja, na <strong>rue des Barres</strong> — uma ladeirinha de paralelepípedo com casas enxaimel inclinadas, uma das esquinas mais medievais e fotogênicas de Paris. A <strong>Église Saint-Gervais-Saint-Protais</strong> casa o gótico flamejante com a primeira fachada clássica de Paris (1620). Foi palco de uma das maiores tragédias da Primeira Guerra: na <strong>Sexta-Feira Santa de 29 de março de 1918</strong>, um obus disparado pelo canhão alemão de longuíssimo alcance atravessou a abóbada durante a missa e matou cerca de 88 fiéis — o ataque mais letal de toda a guerra em Paris.",
@@ -179,28 +283,106 @@
           "duracao": "15-20min",
           "custo": "Grátis",
           "acessibilidade": "Viela em ladeira de paralelepípedo · puxado pra carrinho · igreja acessível pela frente",
-          "coord": {"lat": 48.8562, "lng": 2.3522},
+          "coord": {
+            "lat": 48.8562,
+            "lng": 2.3522
+          },
           "walkingTours": [
             {
               "nome": "Parte 1 · 🏰 Marais Sul: pedras & arte",
               "descricao": "Saint-Gervais/rue des Barres → Hôtel de Sens → Village Saint-Paul → Marché Sainte-Catherine → MEP · ~1.6km",
               "stops": [
-                {"n": 1, "nome": "Église Saint-Gervais & Rue des Barres (13 rue des Barres)", "coord": {"lat": 48.8562, "lng": 2.3522}},
-                {"n": 2, "nome": "Hôtel de Sens (1 rue du Figuier, 4e)", "coord": {"lat": 48.8534, "lng": 2.3592}},
-                {"n": 3, "nome": "Village Saint-Paul (rue Saint-Paul, 4e)", "coord": {"lat": 48.8526, "lng": 2.3633}},
-                {"n": 4, "nome": "Place du Marché Sainte-Catherine (4e)", "coord": {"lat": 48.8552, "lng": 2.3636}, "coord_unverified": true},
-                {"n": 5, "nome": "Maison Européenne de la Photographie (5 rue de Fourcy)", "coord": {"lat": 48.8551, "lng": 2.3589}}
+                {
+                  "n": 1,
+                  "nome": "Église Saint-Gervais & Rue des Barres (13 rue des Barres)",
+                  "coord": {
+                    "lat": 48.8562,
+                    "lng": 2.3522
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Hôtel de Sens (1 rue du Figuier, 4e)",
+                  "coord": {
+                    "lat": 48.8534,
+                    "lng": 2.3592
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Village Saint-Paul (rue Saint-Paul, 4e)",
+                  "coord": {
+                    "lat": 48.8526,
+                    "lng": 2.3633
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Place du Marché Sainte-Catherine (4e)",
+                  "coord": {
+                    "lat": 48.8552,
+                    "lng": 2.3636
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 5,
+                  "nome": "Maison Européenne de la Photographie (5 rue de Fourcy)",
+                  "coord": {
+                    "lat": 48.8551,
+                    "lng": 2.3589
+                  }
+                }
               ]
             },
             {
               "nome": "Parte 2 · 🛍️ Haut Marais: lojas & hôtels",
               "descricao": "Mariage Frères → Friperies → Hôtel de Rohan → Hôtel de Soubise → Maison de Nicolas Flamel · ~1.9km",
               "stops": [
-                {"n": 1, "nome": "Mariage Frères (30 rue du Bourg-Tibourg)", "coord": {"lat": 48.8573, "lng": 2.3551}, "coord_unverified": true},
-                {"n": 2, "nome": "Free'P'Star · friperies (61 rue de la Verrerie)", "coord": {"lat": 48.8577, "lng": 2.3540}, "coord_unverified": true},
-                {"n": 3, "nome": "Hôtel de Rohan · Chevaux du Soleil (87 rue Vieille-du-Temple)", "coord": {"lat": 48.8601, "lng": 2.3603}, "coord_unverified": true},
-                {"n": 4, "nome": "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois)", "coord": {"lat": 48.8593, "lng": 2.3593}, "coord_unverified": true},
-                {"n": 5, "nome": "Maison de Nicolas Flamel (51 rue de Montmorency)", "coord": {"lat": 48.8636, "lng": 2.3532}}
+                {
+                  "n": 1,
+                  "nome": "Mariage Frères (30 rue du Bourg-Tibourg)",
+                  "coord": {
+                    "lat": 48.8573,
+                    "lng": 2.3551
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 2,
+                  "nome": "Free'P'Star · friperies (61 rue de la Verrerie)",
+                  "coord": {
+                    "lat": 48.8577,
+                    "lng": 2.354
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 3,
+                  "nome": "Hôtel de Rohan · Chevaux du Soleil (87 rue Vieille-du-Temple)",
+                  "coord": {
+                    "lat": 48.8601,
+                    "lng": 2.3603
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 4,
+                  "nome": "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois)",
+                  "coord": {
+                    "lat": 48.8593,
+                    "lng": 2.3593
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 5,
+                  "nome": "Maison de Nicolas Flamel (51 rue de Montmorency)",
+                  "coord": {
+                    "lat": 48.8636,
+                    "lng": 2.3532
+                  }
+                }
               ]
             }
           ]
@@ -211,7 +393,6 @@
           "periodo": "manha",
           "tipo": "card",
           "risco": "green",
-          "essencial": true,
           "nome": "Hôtel de Sens · Bibliothèque Forney (1 rue du Figuier, 4e)",
           "cat": "Joia gótica de ~1500 · uma das raras casas medievais de Paris",
           "sobre": "Com torres e torreões pontudos, parece um castelo de conto de fadas plantado na cidade — e é um dos raríssimos <strong>palácios medievais civis</strong> que sobraram em Paris, construído entre 1475 e 1519 para os arcebispos de Sens. Sua moradora mais célebre foi <strong>a Reine Margot</strong> (Marguerite de Valois), primeira esposa de Henri IV, que viveu aqui em 1605-06: a lenda conta que um de seus jovens amantes foi morto bem na porta por um rival ciumento — e que ela mandou decapitar o assassino e foi ao enterro da vítima de luto. Hoje guarda a Bibliothèque Forney, de artes decorativas.",
@@ -224,7 +405,10 @@
           "duracao": "20-30min",
           "custo": "Grátis (pátio e jardim)",
           "acessibilidade": "Pátio em pedra · acessível no térreo",
-          "coord": {"lat": 48.8534, "lng": 2.3592}
+          "coord": {
+            "lat": 48.8534,
+            "lng": 2.3592
+          }
         },
         {
           "hora": "11:00",
@@ -232,7 +416,6 @@
           "periodo": "manha",
           "tipo": "card",
           "risco": "green",
-          "essencial": true,
           "nome": "Village Saint-Paul (rue Saint-Paul / rue des Jardins-Saint-Paul, 4e)",
           "cat": "6 pátios escondidos com 30+ antiquários · e 60m da muralha de Philippe Auguste",
           "sobre": "Um quarteirão inteiro escondido atrás das fachadas: <strong>seis pátios de pedra interligados</strong>, com mais de trinta antiquários, brocanteurs, galerias e ateliês de design. Entra-se por portões discretos na rue Saint-Paul e na rue des Jardins-Saint-Paul. A poucos passos, na rue des Jardins-Saint-Paul, está o maior trecho visível em Paris da <strong>muralha de Philippe Auguste</strong> (c. 1190-1220): 60 metros de muro medieval e a base de uma torre de defesa.",
@@ -245,7 +428,10 @@
           "duracao": "30-45min",
           "custo": "Grátis (olhar)",
           "acessibilidade": "Pátios em paralelepípedo plano · carrinho roda, mas chacoalha",
-          "coord": {"lat": 48.8526, "lng": 2.3633}
+          "coord": {
+            "lat": 48.8526,
+            "lng": 2.3633
+          }
         },
         {
           "hora": "11:45",
@@ -265,7 +451,10 @@
           "duracao": "15-30min",
           "custo": "Café/apéro €€",
           "acessibilidade": "Praça plana pedestre · 100% carrinho",
-          "coord": {"lat": 48.8552, "lng": 2.3636}
+          "coord": {
+            "lat": 48.8552,
+            "lng": 2.3636
+          }
         },
         {
           "hora": "12:15",
@@ -285,7 +474,10 @@
           "duracao": "1h (ou 10min só livraria)",
           "custo": "~€13 adulto · grátis até 8 anos / qua à noite reduzido",
           "acessibilidade": "Museu acessível com elevador",
-          "coord": {"lat": 48.8551, "lng": 2.3589}
+          "coord": {
+            "lat": 48.8551,
+            "lng": 2.3589
+          }
         },
         {
           "hora": "14:00",
@@ -305,7 +497,10 @@
           "duracao": "20min (loja) a 1h (almoço)",
           "custo": "Grátis (loja) · salão €€-€€€",
           "acessibilidade": "Loja térrea acessível · museu/salão por escada",
-          "coord": {"lat": 48.8573, "lng": 2.3551}
+          "coord": {
+            "lat": 48.8573,
+            "lng": 2.3551
+          }
         },
         {
           "hora": "14:45",
@@ -325,7 +520,10 @@
           "duracao": "20-40min",
           "custo": "€1-30 a peça",
           "acessibilidade": "Térreo + mezanino por escada · loja apertada",
-          "coord": {"lat": 48.8577, "lng": 2.3540}
+          "coord": {
+            "lat": 48.8577,
+            "lng": 2.354
+          }
         },
         {
           "hora": "15:30",
@@ -333,7 +531,6 @@
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
-          "essencial": true,
           "nome": "Hôtel de Rohan · Chevaux du Soleil (87 rue Vieille-du-Temple, 3e)",
           "cat": "Obra-prima escondida num pátio · os Cavalos de Apolo (1738)",
           "sobre": "Palacete de 1705 do cardeal de Rohan, hoje parte dos Archives Nationales. Mas o tesouro está escondido no <strong>pátio das antigas cavalariças</strong>: o baixo-relevo <strong>'Os Cavalos do Sol' (Chevaux du Soleil)</strong>, esculpido por Robert Le Lorrain entre 1734 e 1738 — os cavalos do deus-sol Apolo sendo abeberados por tritões, irrompendo da pedra com uma energia que parece molhada. Uma das maiores esculturas do séc. XVIII em Paris, e quase ninguém sabe que está ali.",
@@ -346,7 +543,10 @@
           "duracao": "15-20min",
           "custo": "Grátis (pátio)",
           "acessibilidade": "Pátio plano acessível",
-          "coord": {"lat": 48.8601, "lng": 2.3603}
+          "coord": {
+            "lat": 48.8601,
+            "lng": 2.3603
+          }
         },
         {
           "hora": "16:00",
@@ -354,7 +554,6 @@
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
-          "essencial": true,
           "nome": "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois, 3e)",
           "cat": "Cour d'honneur monumental + um dos ápices do rococó francês",
           "sobre": "Vizinho de parede com o Rohan, o Hôtel de Soubise abre num <strong>cour d'honneur em ferradura</strong>, cercado por dupla colunata — talvez o pátio mais grandioso do Marais. Dentro, os apartamentos do príncipe e da princesa de Soubise, decorados por <strong>Germain Boffrand</strong> (1735-40) com telas de Boucher e Natoire, são um dos pontos mais altos do <strong>rococó</strong> em França. Guarda o Musée des Archives Nationales — do Édito de Nantes ao testamento de Napoleão.",
@@ -367,7 +566,10 @@
           "duracao": "20min (pátio) a 1h (museu)",
           "custo": "Grátis (pátio/jardim) · museu ~€8",
           "acessibilidade": "Cour d'honneur plano e acessível",
-          "coord": {"lat": 48.8593, "lng": 2.3593}
+          "coord": {
+            "lat": 48.8593,
+            "lng": 2.3593
+          }
         },
         {
           "hora": "16:45",
@@ -375,7 +577,6 @@
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
-          "essencial": true,
           "nome": "Maison de Nicolas Flamel (51 rue de Montmorency, 3e)",
           "cat": "A casa mais antiga de Paris (1407) · e a lenda do alquimista",
           "sobre": "O grande final: a <strong>casa mais antiga de Paris</strong> que se pode datar com certeza — 1407, gravado na frieze sobre o térreo. Foi mandada construir por <strong>Nicolas Flamel</strong>, escrivão e livreiro rico, não como moradia, mas como <strong>abrigo para os pobres</strong>: o térreo era comércio e os andares de cima, alojamento gratuito, com uma condição esculpida na fachada — rezar de manhã e à noite pela alma do casal Flamel. Séculos depois, Flamel virou lenda como o alquimista que teria descoberto a <strong>pedra filosofal</strong> e o elixir da vida eterna — o mesmo que aparece em <em>Harry Potter</em> e <em>O Código Da Vinci</em>.",
@@ -388,7 +589,10 @@
           "duracao": "10-15min (fachada)",
           "custo": "Grátis (fachada) · restaurante €€€€",
           "acessibilidade": "Vê-se da calçada · rua plana",
-          "coord": {"lat": 48.8636, "lng": 2.3532}
+          "coord": {
+            "lat": 48.8636,
+            "lng": 2.3532
+          }
         }
       ]
     },
@@ -422,18 +626,68 @@
           "duracao": "10-15min",
           "custo": "~€6 o éclair",
           "acessibilidade": "Loja térrea pequena · acessível",
-          "coord": {"lat": 48.8567, "lng": 2.3602},
+          "coord": {
+            "lat": 48.8567,
+            "lng": 2.3602
+          },
           "walkingTours": [
             {
               "nome": "Marais Guloso · 🍫 a rota toda",
               "descricao": "L'Éclair de Génie → Une Glace à Paris → Breizh Café → Popelini → Bontemps → Jacques Genin · ~1.5km",
               "stops": [
-                {"n": 1, "nome": "L'Éclair de Génie (14 rue Pavée, 4e)", "coord": {"lat": 48.8567, "lng": 2.3602}, "coord_unverified": true},
-                {"n": 2, "nome": "Une Glace à Paris (15 rue Sainte-Croix-de-la-Bretonnerie, 4e)", "coord": {"lat": 48.8581, "lng": 2.3563}},
-                {"n": 3, "nome": "Breizh Café (109 rue Vieille-du-Temple, 3e)", "coord": {"lat": 48.8597, "lng": 2.3609}, "coord_unverified": true},
-                {"n": 4, "nome": "Popelini (29 rue Debelleyme, 3e)", "coord": {"lat": 48.8606, "lng": 2.3636}, "coord_unverified": true},
-                {"n": 5, "nome": "Bontemps Pâtisserie (57 rue de Bretagne, 3e)", "coord": {"lat": 48.8628, "lng": 2.3633}, "coord_unverified": true},
-                {"n": 6, "nome": "Jacques Genin (133 rue de Turenne, 3e)", "coord": {"lat": 48.8623, "lng": 2.3657}, "coord_unverified": true}
+                {
+                  "n": 1,
+                  "nome": "L'Éclair de Génie (14 rue Pavée, 4e)",
+                  "coord": {
+                    "lat": 48.8567,
+                    "lng": 2.3602
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 2,
+                  "nome": "Une Glace à Paris (15 rue Sainte-Croix-de-la-Bretonnerie, 4e)",
+                  "coord": {
+                    "lat": 48.8581,
+                    "lng": 2.3563
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Breizh Café (109 rue Vieille-du-Temple, 3e)",
+                  "coord": {
+                    "lat": 48.8597,
+                    "lng": 2.3609
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 4,
+                  "nome": "Popelini (29 rue Debelleyme, 3e)",
+                  "coord": {
+                    "lat": 48.8606,
+                    "lng": 2.3636
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 5,
+                  "nome": "Bontemps Pâtisserie (57 rue de Bretagne, 3e)",
+                  "coord": {
+                    "lat": 48.8628,
+                    "lng": 2.3633
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 6,
+                  "nome": "Jacques Genin (133 rue de Turenne, 3e)",
+                  "coord": {
+                    "lat": 48.8623,
+                    "lng": 2.3657
+                  },
+                  "coord_unverified": true
+                }
               ]
             }
           ]
@@ -456,7 +710,10 @@
           "duracao": "10-15min",
           "custo": "~€4-6",
           "acessibilidade": "Loja térrea · rua plana",
-          "coord": {"lat": 48.8581, "lng": 2.3563}
+          "coord": {
+            "lat": 48.8581,
+            "lng": 2.3563
+          }
         },
         {
           "hora": "12:30",
@@ -476,7 +733,10 @@
           "duracao": "1h (almoço)",
           "custo": "€12-18",
           "acessibilidade": "Térreo · pode ter espera em pé",
-          "coord": {"lat": 48.8597, "lng": 2.3609}
+          "coord": {
+            "lat": 48.8597,
+            "lng": 2.3609
+          }
         },
         {
           "hora": "14:30",
@@ -496,7 +756,10 @@
           "duracao": "10-15min",
           "custo": "~€2 cada chou",
           "acessibilidade": "Loja térrea pequena",
-          "coord": {"lat": 48.8606, "lng": 2.3636}
+          "coord": {
+            "lat": 48.8606,
+            "lng": 2.3636
+          }
         },
         {
           "hora": "15:15",
@@ -516,7 +779,10 @@
           "duracao": "20-40min (com jardim)",
           "custo": "€€",
           "acessibilidade": "Térreo · jardim no mesmo nível",
-          "coord": {"lat": 48.8628, "lng": 2.3633}
+          "coord": {
+            "lat": 48.8628,
+            "lng": 2.3633
+          }
         },
         {
           "hora": "16:00",
@@ -536,7 +802,10 @@
           "duracao": "20-40min (salão)",
           "custo": "€€-€€€",
           "acessibilidade": "Loja térrea · salão no andar de cima por escada",
-          "coord": {"lat": 48.8623, "lng": 2.3657}
+          "coord": {
+            "lat": 48.8623,
+            "lng": 2.3657
+          }
         }
       ]
     },
@@ -570,17 +839,57 @@
           "duracao": "45min",
           "custo": "Grátis (permanente)",
           "acessibilidade": "Elevador até o apartamento",
-          "coord": {"lat": 48.8548, "lng": 2.3661},
+          "coord": {
+            "lat": 48.8548,
+            "lng": 2.3661
+          },
           "walkingTours": [
             {
               "nome": "Museus do Marais · 🖼️ a rota toda",
               "descricao": "Maison de Victor Hugo → Carnavalet → Cognacq-Jay → Picasso → Musée de la Chasse · ~800m",
               "stops": [
-                {"n": 1, "nome": "Maison de Victor Hugo (6 Place des Vosges, 4e)", "coord": {"lat": 48.8548, "lng": 2.3661}},
-                {"n": 2, "nome": "Musée Carnavalet (23 rue de Sévigné, 3e)", "coord": {"lat": 48.8570, "lng": 2.3628}},
-                {"n": 3, "nome": "Musée Cognacq-Jay (8 rue Elzévir, 3e)", "coord": {"lat": 48.8580, "lng": 2.3621}, "coord_unverified": true},
-                {"n": 4, "nome": "Musée Picasso (Hôtel Salé, 5 rue de Thorigny, 3e)", "coord": {"lat": 48.8598, "lng": 2.3626}},
-                {"n": 5, "nome": "Musée de la Chasse et de la Nature (62 rue des Archives, 3e)", "coord": {"lat": 48.8604, "lng": 2.3584}, "coord_unverified": true}
+                {
+                  "n": 1,
+                  "nome": "Maison de Victor Hugo (6 Place des Vosges, 4e)",
+                  "coord": {
+                    "lat": 48.8548,
+                    "lng": 2.3661
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Musée Carnavalet (23 rue de Sévigné, 3e)",
+                  "coord": {
+                    "lat": 48.857,
+                    "lng": 2.3628
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Musée Cognacq-Jay (8 rue Elzévir, 3e)",
+                  "coord": {
+                    "lat": 48.858,
+                    "lng": 2.3621
+                  },
+                  "coord_unverified": true
+                },
+                {
+                  "n": 4,
+                  "nome": "Musée Picasso (Hôtel Salé, 5 rue de Thorigny, 3e)",
+                  "coord": {
+                    "lat": 48.8598,
+                    "lng": 2.3626
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Musée de la Chasse et de la Nature (62 rue des Archives, 3e)",
+                  "coord": {
+                    "lat": 48.8604,
+                    "lng": 2.3584
+                  },
+                  "coord_unverified": true
+                }
               ]
             }
           ]
@@ -603,7 +912,10 @@
           "duracao": "1-1h30",
           "custo": "Grátis (permanente)",
           "acessibilidade": "Acessível (reforma de 2021 melhorou muito)",
-          "coord": {"lat": 48.8570, "lng": 2.3628}
+          "coord": {
+            "lat": 48.857,
+            "lng": 2.3628
+          }
         },
         {
           "hora": "12:15",
@@ -623,7 +935,10 @@
           "duracao": "45min",
           "custo": "Grátis (permanente)",
           "acessibilidade": "Hôtel antigo · andares por escada (acessibilidade parcial)",
-          "coord": {"lat": 48.8580, "lng": 2.3621}
+          "coord": {
+            "lat": 48.858,
+            "lng": 2.3621
+          }
         },
         {
           "hora": "14:30",
@@ -643,7 +958,10 @@
           "duracao": "1h30-2h",
           "custo": "~€16 · grátis -18",
           "acessibilidade": "Acessível com elevador",
-          "coord": {"lat": 48.8598, "lng": 2.3626}
+          "coord": {
+            "lat": 48.8598,
+            "lng": 2.3626
+          }
         },
         {
           "hora": "16:00",
@@ -663,69 +981,402 @@
           "duracao": "1h-1h30",
           "custo": "~€12 · grátis -18",
           "acessibilidade": "Hôtel histórico · acessibilidade parcial (escadas)",
-          "coord": {"lat": 48.8604, "lng": 2.3584}
+          "coord": {
+            "lat": 48.8604,
+            "lng": 2.3584
+          }
+        }
+      ]
+    },
+    {
+      "date": "🛍️ Lojas",
+      "tema": "Marais das Lojas · Design & Concept Stores",
+      "temaCurto": "Lojas",
+      "bairro": "🛍️ Le Marais (4e → Haut Marais 3e)",
+      "grupo": false,
+      "cor": "#0d9488",
+      "gradA": "#115e59",
+      "gradB": "#14b8a6",
+      "hideStopMarkers": true,
+      "nota": "🍽️ <strong>Almoço no caminho</strong>: stands do Marché des Enfants Rouges (rue de Bretagne, a 2min do Empreintes) ou feche no <em>Used Book Café</em> dentro do Merci. <strong>Atenção dia</strong>: Empreintes fecha seg+dom · Merci e Bonton fecham dom · faça num dia útil ou sábado.",
+      "stops": [
+        {
+          "hora": "10:30",
+          "emoji": "🛋️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Fleux (39 rue Sainte-Croix de la Bretonnerie, 4e)",
+          "cat": "Concept store deco · desde 2005",
+          "sobre": "O concept store que ajudou a transformar o Marais em meca do design. Aberto em 2005, hoje ocupa quase <strong>1.500m²</strong> espalhados por várias lojas na mesma rua (nº 39, 40, 43, 52): móveis, luminárias, papelaria, objetos absurdos e presentes que você não sabia que precisava.",
+          "imperdivel": "O fundo da loja nº39, onde ficam as peças de design autoral e a seleção de iluminação.",
+          "dicas": [
+            "Abre 11h seg-sex · 10h30 sáb · e — raro no Marais — <strong>13h-20h no domingo</strong>",
+            "As lojas ficam a 30s a pé uma da outra na mesma rua",
+            "Ótimo pra presente: papelaria e objetos pequenos no térreo"
+          ],
+          "duracao": "30-45min",
+          "custo": "Grátis (entrada)",
+          "acessibilidade": "Térreo plano · algumas unidades têm degraus internos · carrinho ok no nº39",
+          "coord": {
+            "lat": 48.8581,
+            "lng": 2.3552
+          },
+          "walkingTours": [
+            {
+              "nome": "Marais das Lojas · 🛍️ a rota toda",
+              "descricao": "Fleux → Muji → French Trotters → Empreintes → Bonton → Merci · ~2,2km · do 4e ao Haut Marais",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Fleux (39 rue Sainte-Croix de la Bretonnerie, 4e)",
+                  "coord": {
+                    "lat": 48.8581,
+                    "lng": 2.3552
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Muji (47 rue des Francs-Bourgeois, 4e)",
+                  "coord": {
+                    "lat": 48.8581,
+                    "lng": 2.3614
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "French Trotters (128 rue Vieille-du-Temple, 3e)",
+                  "coord": {
+                    "lat": 48.8617,
+                    "lng": 2.3628
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Empreintes (5 rue de Picardie, 3e)",
+                  "coord": {
+                    "lat": 48.8633,
+                    "lng": 2.3644
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Bonton (5 boulevard des Filles du Calvaire, 3e)",
+                  "coord": {
+                    "lat": 48.862,
+                    "lng": 2.367
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Merci (111 boulevard Beaumarchais, 3e)",
+                  "coord": {
+                    "lat": 48.8607,
+                    "lng": 2.3669
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:15",
+          "emoji": "🗒️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Muji (47 rue des Francs-Bourgeois, 4e)",
+          "cat": "Minimalismo japonês · flagship",
+          "sobre": "A grande loja parisiense da marca japonesa do 'sem-marca' (<em>mujirushi</em> = sem logo): design discreto, funcional e acessível — papelaria, organização, roupa básica, cosmético e até móvel. Fica num prédio histórico da rue des Francs-Bourgeois, a poucos passos do Picasso e do Carnavalet.",
+          "imperdivel": "A parede de canetas e cadernos (o caderno Muji é cult) e a seção de organização de mala — cubes e frascos úteis pra viagem.",
+          "dicas": [
+            "Tem um degrau na entrada · peça pro staff acionar a rampa mecânica",
+            "Bom pra reabastecer itens de viagem e brinquedo de avião pra Lia",
+            "Aberto 10h-19h30 (sáb até 20h)"
+          ],
+          "duracao": "20-30min",
+          "custo": "Grátis (entrada)",
+          "acessibilidade": "Degrau na entrada · rampa mecânica sob pedido · interior plano",
+          "coord": {
+            "lat": 48.8581,
+            "lng": 2.3614
+          }
+        },
+        {
+          "hora": "12:00",
+          "emoji": "👕",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "French Trotters (128 rue Vieille-du-Temple, 3e)",
+          "cat": "Moda & lifestyle curado",
+          "sobre": "Concept store do casal Carole e Clarent Dehlouz, nascido das viagens deles: 200m² de moda masculina e feminina, cosméticos e marcas de estúdios da Dinamarca, Brasil, Índia e França. Um dos endereços que definem o estilo <em>effortless</em> do Haut Marais.",
+          "imperdivel": "A curadoria de marcas pequenas que não se acha em loja de departamento — e a linha própria French Trotters.",
+          "dicas": [
+            "Fica na parte norte da rue Vieille-du-Temple, já quase no Haut Marais",
+            "Preço premium · mais pra namorar e descobrir marca do que comprar por impulso",
+            "A 3min a pé do Empreintes — encadeia bem"
+          ],
+          "duracao": "20-30min",
+          "custo": "Grátis (entrada)",
+          "acessibilidade": "Loja térrea · carrinho ok",
+          "coord": {
+            "lat": 48.8617,
+            "lng": 2.3628
+          }
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🎨",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Empreintes (5 rue de Picardie, 3e)",
+          "cat": "Métiers d'art · 600m² em 3 andares",
+          "sobre": "O maior concept store de artesanato de arte da França, dos Ateliers d'Art de France (aberto em 2016). São cerca de <strong>1.000 peças feitas à mão</strong> por artesãos do país todo — cerâmica, joia, vidro, mobiliário — em 600m² de luz natural perto do Carreau du Temple, com sala de projeção, espaço de exposição e biblioteca.",
+          "imperdivel": "Subir os 3 andares: cada piso é uma curadoria diferente e o topo costuma ter a exposição temporária.",
+          "dicas": [
+            "Abre <strong>ter-sáb 11h-19h · fecha seg e dom</strong> — programe!",
+            "Não é só vitrine: dá pra comprar peça de artesão direto",
+            "A rue de Picardie liga a rue de Bretagne ao Carreau du Temple — bom eixo"
+          ],
+          "duracao": "30-45min",
+          "custo": "Grátis (entrada)",
+          "acessibilidade": "Elevador entre os 3 andares · carrinho ok",
+          "coord": {
+            "lat": 48.8633,
+            "lng": 2.3644
+          }
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🧸",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Bonton (5 boulevard des Filles du Calvaire, 3e)",
+          "cat": "Concept store infantil · 800m²",
+          "sobre": "Um dos primeiros concept stores infantis de Paris (2001): 800m² de roupa de criança, brinquedo e decoração de quarto, com <strong>cabeleireiro infantil</strong> e café. Estilo bobo-chic com estampas e cores — feito sob medida pra Lia.",
+          "imperdivel": "O cabeleireiro infantil e o cantinho de brinquedos: dá pra deixar a Lia brincar enquanto se olha a loja.",
+          "dicas": [
+            "Seg-sáb 10h-19h · tem café e área de troca/cuidado de bebê",
+            "Vizinho do Merci (3min) — feche as duas últimas paradas juntas",
+            "Preço alto, mas a brincadeira/corte de cabelo vale a parada com criança"
+          ],
+          "duracao": "30min",
+          "custo": "Grátis (entrada)",
+          "acessibilidade": "Loja grande e plana · ótima pra carrinho · trocador disponível",
+          "coord": {
+            "lat": 48.862,
+            "lng": 2.367
+          }
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🛍️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Merci (111 boulevard Beaumarchais, 3e)",
+          "cat": "Concept store icônico + café",
+          "sobre": "O concept store mais famoso de Paris, numa antiga fábrica têxtil do séc. XIX virada em 3 andares-loft: móvel, joia, papelaria, moda, casa e infantil. <strong>Todo o lucro</strong> da loja e dos cafés vai pra uma fundação que educa mulheres e crianças. Você reconhece pelo <strong>Fiat 500 vermelho</strong> parado no pátio de entrada.",
+          "imperdivel": "O Fiat 500 vermelho no pátio (a foto obrigatória) e o <em>Used Book Café</em> lá dentro pra fechar o passeio.",
+          "dicas": [
+            "Seg-sáb 10h-19h30 · fecha domingo",
+            "Tem 3 cafés dentro · o Used Book Café é o mais charmoso pra almoço/lanche",
+            "Feche o roteiro aqui: café + a loja inteira de uma vez"
+          ],
+          "duracao": "45min-1h",
+          "custo": "Grátis (entrada) · café €€",
+          "acessibilidade": "Elevador entre andares · pátio plano · carrinho ok",
+          "coord": {
+            "lat": 48.8607,
+            "lng": 2.3669
+          }
         }
       ]
     }
   ],
   "links_map": {
     "Place des Vosges (Pl. des Vosges, 4e)": [
-      {"type": "official", "label": "Maison de Victor Hugo (nº 6 · grátis)", "url": "https://www.maisonsvictorhugo.paris.fr/en"}
+      {
+        "type": "official",
+        "label": "Maison de Victor Hugo (nº 6 · grátis)",
+        "url": "https://www.maisonsvictorhugo.paris.fr/en"
+      }
     ],
     "Marché des Enfants Rouges (39 rue de Bretagne, 3e)": [
-      {"type": "official", "label": "Marché des Enfants Rouges · Ville de Paris", "url": "https://www.paris.fr/lieux/marche-couvert-des-enfants-rouges-5461"}
+      {
+        "type": "official",
+        "label": "Marché des Enfants Rouges · Ville de Paris",
+        "url": "https://www.paris.fr/lieux/marche-couvert-des-enfants-rouges-5461"
+      }
     ],
     "Square du Temple - Elie Wiesel (rue de Bretagne, 3e)": [
-      {"type": "official", "label": "Square du Temple-Elie Wiesel · Ville de Paris", "url": "https://www.paris.fr/lieux/square-du-temple-elie-wiesel-2425"},
-      {"type": "official", "label": "Carreau du Temple · Ville de Paris", "url": "https://www.paris.fr/lieux/le-carreau-du-temple-19179"}
+      {
+        "type": "official",
+        "label": "Square du Temple-Elie Wiesel · Ville de Paris",
+        "url": "https://www.paris.fr/lieux/square-du-temple-elie-wiesel-2425"
+      },
+      {
+        "type": "official",
+        "label": "Carreau du Temple · Ville de Paris",
+        "url": "https://www.paris.fr/lieux/le-carreau-du-temple-19179"
+      }
     ],
     "Église Saint-Gervais & Rue des Barres (13 rue des Barres, 4e)": [
-      {"type": "official", "label": "Église Saint-Gervais-Saint-Protais · Ville de Paris", "url": "https://www.paris.fr/lieux/eglise-saint-gervais-saint-protais-19458"}
+      {
+        "type": "official",
+        "label": "Église Saint-Gervais-Saint-Protais · Ville de Paris",
+        "url": "https://www.paris.fr/lieux/eglise-saint-gervais-saint-protais-19458"
+      }
     ],
     "Village Saint-Paul (rue Saint-Paul / rue des Jardins-Saint-Paul, 4e)": [
-      {"type": "review", "label": "Village Saint-Paul · VisitParisRegion", "url": "https://www.visitparisregion.com/en/village-saint-paul"}
+      {
+        "type": "review",
+        "label": "Village Saint-Paul · VisitParisRegion",
+        "url": "https://www.visitparisregion.com/en/village-saint-paul"
+      }
     ],
     "Maison Européenne de la Photographie · MEP (5/7 rue de Fourcy, 4e)": [
-      {"type": "official", "label": "MEP · Ville de Paris", "url": "https://www.paris.fr/lieux/maison-europeenne-de-la-photographie-19189"}
+      {
+        "type": "official",
+        "label": "MEP · Ville de Paris",
+        "url": "https://www.paris.fr/lieux/maison-europeenne-de-la-photographie-19189"
+      }
     ],
     "Mariage Frères (30 rue du Bourg-Tibourg, 4e)": [
-      {"type": "official", "label": "Mariage Frères · site oficial", "url": "https://www.mariagefreres.com/en/"}
+      {
+        "type": "official",
+        "label": "Mariage Frères · site oficial",
+        "url": "https://www.mariagefreres.com/en/"
+      }
     ],
     "Friperies do Marais · Free'P'Star (61 rue de la Verrerie, 4e)": [
-      {"type": "review", "label": "Free'P'Star · VisitParisRegion", "url": "https://www.visitparisregion.com/en/free-p-star"}
+      {
+        "type": "review",
+        "label": "Free'P'Star · VisitParisRegion",
+        "url": "https://www.visitparisregion.com/en/free-p-star"
+      }
     ],
     "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois, 3e)": [
-      {"type": "official", "label": "Hôtel de Soubise · Archives Nationales", "url": "https://www.archives-nationales.culture.gouv.fr/infos-pratiques/le-musee-des-archives-nationales-lhotel-de-soubise"}
+      {
+        "type": "official",
+        "label": "Hôtel de Soubise · Archives Nationales",
+        "url": "https://www.archives-nationales.culture.gouv.fr/infos-pratiques/le-musee-des-archives-nationales-lhotel-de-soubise"
+      }
     ],
     "Maison de Nicolas Flamel (51 rue de Montmorency, 3e)": [
-      {"type": "review", "label": "Maison de Nicolas Flamel · Paris je t'aime", "url": "https://parisjetaime.com/eng/culture/maison-de-nicolas-flamel-p1825"}
+      {
+        "type": "review",
+        "label": "Maison de Nicolas Flamel · Paris je t'aime",
+        "url": "https://parisjetaime.com/eng/culture/maison-de-nicolas-flamel-p1825"
+      }
     ],
     "Une Glace à Paris (15 rue Sainte-Croix-de-la-Bretonnerie, 4e)": [
-      {"type": "official", "label": "Une Glace à Paris · site oficial", "url": "https://uneglaceaparis.fr/web/"}
+      {
+        "type": "official",
+        "label": "Une Glace à Paris · site oficial",
+        "url": "https://uneglaceaparis.fr/web/"
+      }
     ],
     "Breizh Café (109 rue Vieille-du-Temple, 3e)": [
-      {"type": "official", "label": "Breizh Café Le Marais", "url": "https://www.breizhcafe.com/le-marais"}
+      {
+        "type": "official",
+        "label": "Breizh Café Le Marais",
+        "url": "https://www.breizhcafe.com/le-marais"
+      }
     ],
     "Jacques Genin (133 rue de Turenne, 3e)": [
-      {"type": "official", "label": "Jacques Genin · site oficial", "url": "https://jacquesgenin.fr/magasins"}
+      {
+        "type": "official",
+        "label": "Jacques Genin · site oficial",
+        "url": "https://jacquesgenin.fr/magasins"
+      }
     ],
     "Bontemps Pâtisserie (57 rue de Bretagne, 3e)": [
-      {"type": "official", "label": "Bontemps Pâtisserie", "url": "https://bontemps.paris/"}
+      {
+        "type": "official",
+        "label": "Bontemps Pâtisserie",
+        "url": "https://bontemps.paris/"
+      }
     ],
     "Maison de Victor Hugo (6 Place des Vosges, 4e)": [
-      {"type": "official", "label": "Maison de Victor Hugo · site oficial", "url": "https://www.maisonsvictorhugo.paris.fr/en"}
+      {
+        "type": "official",
+        "label": "Maison de Victor Hugo · site oficial",
+        "url": "https://www.maisonsvictorhugo.paris.fr/en"
+      }
     ],
     "Musée Carnavalet (23 rue de Sévigné, 3e)": [
-      {"type": "official", "label": "Musée Carnavalet · site oficial", "url": "https://www.carnavalet.paris.fr/en"}
+      {
+        "type": "official",
+        "label": "Musée Carnavalet · site oficial",
+        "url": "https://www.carnavalet.paris.fr/en"
+      }
     ],
     "Musée Cognacq-Jay (8 rue Elzévir, 3e)": [
-      {"type": "official", "label": "Musée Cognacq-Jay · site oficial", "url": "https://www.museecognacqjay.paris.fr/en"}
+      {
+        "type": "official",
+        "label": "Musée Cognacq-Jay · site oficial",
+        "url": "https://www.museecognacqjay.paris.fr/en"
+      }
     ],
     "Musée Picasso (Hôtel Salé, 5 rue de Thorigny, 3e)": [
-      {"type": "official", "label": "Musée Picasso Paris · site oficial", "url": "https://museepicassoparis.fr/en"}
+      {
+        "type": "official",
+        "label": "Musée Picasso Paris · site oficial",
+        "url": "https://museepicassoparis.fr/en"
+      }
     ],
     "Musée de la Chasse et de la Nature (62 rue des Archives, 3e)": [
-      {"type": "official", "label": "Musée de la Chasse et de la Nature", "url": "https://www.chassenature.org/"}
+      {
+        "type": "official",
+        "label": "Musée de la Chasse et de la Nature",
+        "url": "https://www.chassenature.org/"
+      }
+    ],
+    "Fleux (39 rue Sainte-Croix de la Bretonnerie, 4e)": [
+      {
+        "type": "official",
+        "label": "fleux.com",
+        "url": "https://www.fleux.com/en"
+      }
+    ],
+    "Muji (47 rue des Francs-Bourgeois, 4e)": [
+      {
+        "type": "official",
+        "label": "MUJI Francs-Bourgeois",
+        "url": "https://france.muji.eu/pages/store-locator/muji-francs-bourgeois.html"
+      }
+    ],
+    "French Trotters (128 rue Vieille-du-Temple, 3e)": [
+      {
+        "type": "official",
+        "label": "frenchtrotters.fr",
+        "url": "https://www.frenchtrotters.fr/en/"
+      }
+    ],
+    "Empreintes (5 rue de Picardie, 3e)": [
+      {
+        "type": "official",
+        "label": "empreintes-paris.com",
+        "url": "https://www.empreintes-paris.com/"
+      }
+    ],
+    "Bonton (5 boulevard des Filles du Calvaire, 3e)": [
+      {
+        "type": "official",
+        "label": "bonton.fr",
+        "url": "https://www.bonton.fr/en/pages/boutiques/filles-du-calvaire"
+      }
+    ],
+    "Merci (111 boulevard Beaumarchais, 3e)": [
+      {
+        "type": "official",
+        "label": "merci-merci.com",
+        "url": "https://merci-merci.com/en"
+      }
     ]
   },
   "transit_map": {
@@ -738,9 +1389,30 @@
     }
   },
   "bairros_config": [
-    {"nome": "🎨 Beaubourg / Pompidou", "latMin": 48.857, "latMax": 48.862, "lngMin": 2.349, "lngMax": 2.3535},
-    {"nome": "🏛️ Marais Sul · Saint-Paul (4e)", "latMin": 48.851, "latMax": 48.8588, "lngMin": 2.350, "lngMax": 2.369},
-    {"nome": "✨ Haut Marais (3e)", "latMin": 48.8588, "latMax": 48.866, "lngMin": 2.351, "lngMax": 2.369},
-    {"nome": "📍 Paris", "fallback": true}
+    {
+      "nome": "🎨 Beaubourg / Pompidou",
+      "latMin": 48.857,
+      "latMax": 48.862,
+      "lngMin": 2.349,
+      "lngMax": 2.3535
+    },
+    {
+      "nome": "🏛️ Marais Sul · Saint-Paul (4e)",
+      "latMin": 48.851,
+      "latMax": 48.8588,
+      "lngMin": 2.35,
+      "lngMax": 2.369
+    },
+    {
+      "nome": "✨ Haut Marais (3e)",
+      "latMin": 48.8588,
+      "latMax": 48.866,
+      "lngMin": 2.351,
+      "lngMax": 2.369
+    },
+    {
+      "nome": "📍 Paris",
+      "fallback": true
+    }
   ]
 }
