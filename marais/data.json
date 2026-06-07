@@ -998,10 +998,10 @@
       "gradA": "#115e59",
       "gradB": "#14b8a6",
       "hideStopMarkers": true,
-      "nota": "🍽️ <strong>Almoço no caminho</strong>: stands do Marché des Enfants Rouges (rue de Bretagne, a 2min do Empreintes) ou feche no <em>Used Book Café</em> dentro do Merci. <strong>Atenção dia</strong>: Empreintes fecha seg+dom · Merci e Bonton fecham dom · faça num dia útil ou sábado.",
+      "nota": "🍽️ <strong>Almoço no caminho</strong>: stands do Marché des Enfants Rouges (rue de Bretagne, perto do Empreintes) ou feche no <em>Used Book Café</em> do Merci. <strong>Dias de fechar</strong>: Empreintes fecha seg+dom · Merci e Bonton fecham dom · Sézane fecha seg (mas abre dom!) · CSAO abre quase todo dia. Melhor num dia útil ou sábado.",
       "stops": [
         {
-          "hora": "10:30",
+          "hora": "10:00",
           "emoji": "🛋️",
           "periodo": "manha",
           "tipo": "card",
@@ -1025,7 +1025,7 @@
           "walkingTours": [
             {
               "nome": "Marais das Lojas · 🛍️ a rota toda",
-              "descricao": "Fleux → Muji → French Trotters → Empreintes → Bonton → Merci · ~2,2km · do 4e ao Haut Marais",
+              "descricao": "Fleux → Sézane → CSAO → Muji → French Trotters → Empreintes → Bonton → Merci · ~2,4km · do 4e ao Haut Marais",
               "stops": [
                 {
                   "n": 1,
@@ -1037,6 +1037,22 @@
                 },
                 {
                   "n": 2,
+                  "nome": "Sézane (33 rue des Blancs-Manteaux, 4e)",
+                  "coord": {
+                    "lat": 48.8585,
+                    "lng": 2.3576
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "CSAO (9 rue Elzévir, 3e)",
+                  "coord": {
+                    "lat": 48.8584,
+                    "lng": 2.3609
+                  }
+                },
+                {
+                  "n": 4,
                   "nome": "Muji (47 rue des Francs-Bourgeois, 4e)",
                   "coord": {
                     "lat": 48.8581,
@@ -1044,7 +1060,7 @@
                   }
                 },
                 {
-                  "n": 3,
+                  "n": 5,
                   "nome": "French Trotters (128 rue Vieille-du-Temple, 3e)",
                   "coord": {
                     "lat": 48.8617,
@@ -1052,7 +1068,7 @@
                   }
                 },
                 {
-                  "n": 4,
+                  "n": 6,
                   "nome": "Empreintes (5 rue de Picardie, 3e)",
                   "coord": {
                     "lat": 48.8633,
@@ -1060,7 +1076,7 @@
                   }
                 },
                 {
-                  "n": 5,
+                  "n": 7,
                   "nome": "Bonton (5 boulevard des Filles du Calvaire, 3e)",
                   "coord": {
                     "lat": 48.862,
@@ -1068,7 +1084,7 @@
                   }
                 },
                 {
-                  "n": 6,
+                  "n": 8,
                   "nome": "Merci (111 boulevard Beaumarchais, 3e)",
                   "coord": {
                     "lat": 48.8607,
@@ -1080,7 +1096,53 @@
           ]
         },
         {
+          "hora": "10:40",
+          "emoji": "👗",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Sézane (33 rue des Blancs-Manteaux, 4e)",
+          "cat": "Moda francesa · ex-Bains du Marais",
+          "sobre": "A marca que começou online e virou sinônimo de 'estilo parisiense' acessível. A loja do Marais abriu em 2023 no antigo <strong>Bains du Marais</strong>, a poucos passos do jardim dos Archives Nationales: roupa, couro, sapato, joia e seleção lifestyle, no clima de apartamento que dá nome às lojas (<em>l'Appartement</em>).",
+          "imperdivel": "O espaço em si — manteve a alma do antigo hammam — e o cantinho de cortesia/café que a Sézane sempre monta.",
+          "dicas": [
+            "Ter-sex 11h-20h · sáb 10h-20h · <strong>dom 11h-20h</strong> (abre domingo!) · fecha seg",
+            "Octobre Éditions (masculino da mesma casa) fica em frente, no nº28",
+            "Preço médio-alto · corte e qualidade valem"
+          ],
+          "duracao": "20-30min",
+          "custo": "Grátis (entrada)",
+          "acessibilidade": "Loja térrea ampla · carrinho ok",
+          "coord": {
+            "lat": 48.8585,
+            "lng": 2.3576
+          }
+        },
+        {
           "hora": "11:15",
+          "emoji": "🧺",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "CSAO (9 rue Elzévir, 3e)",
+          "cat": "Artesanato da África Ocidental · comércio justo",
+          "sobre": "A Compagnie du Sénégal et de l'Afrique de l'Ouest, fundada por Valérie Schlumberger em 1995 e no Marais desde 1997. Comércio justo de verdade: cestaria, têxtil, bijuteria e decoração feitos por artesãos e cooperativas da África Ocidental. O contraponto mais colorido e alegre da rua.",
+          "imperdivel": "Os cestos tecidos à mão e a bijuteria — peças únicas, preço honesto, e a compra sustenta as cooperativas.",
+          "dicas": [
+            "Ter-sáb 11h-19h · dom e seg 14h-19h (abre quase todo dia)",
+            "Colada no Musée Cognacq-Jay (do roteiro Museus), na rue Elzévir",
+            "Presente com história · destoa — no bom sentido — do design escandinavo do resto da rota"
+          ],
+          "duracao": "20min",
+          "custo": "Grátis (entrada)",
+          "acessibilidade": "Loja térrea pequena · carrinho passa apertado",
+          "coord": {
+            "lat": 48.8584,
+            "lng": 2.3609
+          }
+        },
+        {
+          "hora": "11:45",
           "emoji": "🗒️",
           "periodo": "manha",
           "tipo": "card",
@@ -1103,7 +1165,7 @@
           }
         },
         {
-          "hora": "12:00",
+          "hora": "12:15",
           "emoji": "👕",
           "periodo": "manha",
           "tipo": "card",
@@ -1126,7 +1188,7 @@
           }
         },
         {
-          "hora": "14:00",
+          "hora": "14:15",
           "emoji": "🎨",
           "periodo": "tarde",
           "tipo": "card",
@@ -1172,7 +1234,7 @@
           }
         },
         {
-          "hora": "16:00",
+          "hora": "15:45",
           "emoji": "🛍️",
           "periodo": "tarde",
           "tipo": "card",
@@ -1376,6 +1438,20 @@
         "type": "official",
         "label": "merci-merci.com",
         "url": "https://merci-merci.com/en"
+      }
+    ],
+    "Sézane (33 rue des Blancs-Manteaux, 4e)": [
+      {
+        "type": "official",
+        "label": "sezane.com",
+        "url": "https://www.sezane.com/"
+      }
+    ],
+    "CSAO (9 rue Elzévir, 3e)": [
+      {
+        "type": "official",
+        "label": "csao.fr",
+        "url": "https://www.csao.fr/en/"
       }
     ]
   },
