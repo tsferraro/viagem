@@ -159,6 +159,7 @@ Quando Tobia pede mudança em viagem existente:
 
 1. **Briefing parse**: destino, datas, base, composição, voos, reservas, mobilidade
 2. **UMA pergunta por vez** pra preencher lacunas críticas (NÃO checklist)
+2b. **Pergunta de profundidade** (sempre, pra walking tours/roteiros/road trips/levantamentos): _versão **básica** (essencial enxuto), **profunda** (história, curiosidades, o que observar parada-a-parada — padrão Marais), ou **as 2 com toggle** (botão Básico↔Profundo no mesmo dia, via stops marcados `essencial: true`)?_ Default = profunda.
 3. **Web research** ~5-10 buscas: bairros, eventos, restaurantes, transit, hidden gems
 4. **Esqueleto** em tabela (1 linha/dia: data/bairro/tema/atração) · valida com Tobia antes de detalhar
 5. **Expansão dia-a-dia** · se viagem >14 dias, **OBRIGATÓRIO** dividir em blocos de 5-7 dias com validação entre cada
@@ -364,6 +365,18 @@ Cards `card` devem ter PROFUNDIDADE. O valor real é pesquisa profunda + curador
 Web_search obrigatório antes de escrever card. Se info não está disponível, marcar `coord_unverified` e pedir validação do Tobia em vez de inventar.
 
 Anti-padrão: card mínimo só com nome+coord+hora (vale só pra `transit`, não pra `card`).
+
+### Padrão-ouro de storytelling (referência: coletânea Marais · `marais/`)
+
+Nível de detalhe esperado em walking tours / roteiros / road trips / levantamentos (assumir postura de **guia de free walking tour que precisa encantar pra ganhar a gorjeta**):
+
+- **`sobre`**: conta a história/curiosidade (data, personagem, lenda, "por que isso existe"). Ex: Reine Margot e o amante morto na porta · Flamel e a pedra filosofal · o obus de 1918 em Saint-Gervais. Use `<strong>`/`<em>` (HTML cru · NÃO markdown `**`, o template não converte).
+- **`imperdivel`** como **"o que observar"**: aponta o detalhe concreto que o turista distraído perde (a bala de canhão na fachada, os Cavalos de Apolo no pátio, o Pavillon du Roi mais alto).
+- **Pontos no caminho que não são parada**: narrar nas `dicas` ("ao virar a esquina, repare em X") · numa walking tour, narrar parada-a-parada nas `dicas` quando os stops são só pins no mapa.
+- **Honestidade**: "pula sem culpa" quando for fraco; "mais cenário que comida".
+- **Findability**: nome com endereço entre parens (Maps acerta pelo nome).
+
+Tours-tab que SÃO a própria walking tour (cada card = uma parada numerada) usam `hideStopMarkers: true` no dia (só pins numerados no mapa, sem duplicar).
 
 ## Roteiros paralelos
 
