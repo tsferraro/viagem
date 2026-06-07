@@ -232,8 +232,11 @@ function renderOverview(){
 function renderDayTabs(){
   return `<div class="day-tabs-wrap"><div class="day-tabs">${DAYS.map((d,i)=>{
     const labelCurto=d.temaCurto||d.tema.split('·')[0].trim();
+    // dt-date: junta os tokens disponíveis (data datada "Sex 5/Set" OU só emoji "👶" em coletâneas
+    // sem data) · evita imprimir "undefined" quando o campo date tem 1 token só.
+    const dtDate=d.date.split(' ').slice(0,2).join(' ');
     return `<button class="day-tab ${i===state.selIdx?'active':''}" data-idx="${i}" style="--day-color:${d.cor}">
-    <span class="dt-date">${d.date.split(' ')[0]} ${d.date.split(' ')[1]}</span>${labelCurto}
+    <span class="dt-date">${dtDate}</span>${labelCurto}
     ${d.grupo?'<span class="group-dot">👥</span>':''}
   </button>`;
   }).join('')}</div></div>`;

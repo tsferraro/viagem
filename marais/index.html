@@ -413,9 +413,9 @@ window.addEventListener('DOMContentLoaded',()=>{
 // ============== DATA ==============
 const DAYS = [
   {
-    "date": "👶 Família",
+    "date": "👶",
     "tema": "Marais Clássico · Em Família",
-    "temaCurto": "Em Família",
+    "temaCurto": "Família",
     "bairro": "🏛️ Le Marais (3e + 4e)",
     "grupo": true,
     "nota": "O Marais é o pedaço mais bem preservado da Paris pré-Revolução: um antigo pântano ('marais') drenado por monges no séc. XII, virou o bairro da aristocracia no séc. XVII em torno da Place des Vosges, foi abandonado quando a corte foi pra Versailles, virou bairro de artesãos e o coração judaico de Paris (o 'Pletzl'), e escapou da picareta por um triz graças à lei Malraux de 1962. Resultado: ruas medievais, palacetes e pátios escondidos num bairro plano, compacto e ótimo de fazer a pé com criança. Este tour pega o melhor pra família — Place des Vosges, mercado coberto e playground — com a walking tour Parte 1 terminando na fonte mais divertida de Paris.",
@@ -656,7 +656,7 @@ const DAYS = [
     "hideStopMarkers": true
   },
   {
-    "date": "🎨 Profundo",
+    "date": "🎨",
     "tema": "Marais Profundo · História, Arte & Brechó",
     "temaCurto": "História",
     "bairro": "🎨 Le Marais (4e → Haut Marais 3e)",
@@ -1000,7 +1000,7 @@ const DAYS = [
     ]
   },
   {
-    "date": "🍫 Guloso",
+    "date": "🍫",
     "tema": "Marais Guloso · Doces, Chocolate & Crêpes",
     "temaCurto": "Guloso",
     "bairro": "🍫 Le Marais (4e → Haut Marais 3e)",
@@ -1213,7 +1213,7 @@ const DAYS = [
     ]
   },
   {
-    "date": "🖼️ Museus",
+    "date": "🖼️",
     "tema": "Museus Escondidos do Marais",
     "temaCurto": "Museus",
     "bairro": "🖼️ Le Marais (4e → Haut Marais 3e)",
@@ -1392,7 +1392,7 @@ const DAYS = [
     ]
   },
   {
-    "date": "🛍️ Lojas",
+    "date": "🛍️",
     "tema": "Marais das Lojas · Design & Concept Stores",
     "temaCurto": "Lojas",
     "bairro": "🛍️ Le Marais (4e → Haut Marais 3e)",
@@ -2136,8 +2136,11 @@ function renderOverview(){
 function renderDayTabs(){
   return `<div class="day-tabs-wrap"><div class="day-tabs">${DAYS.map((d,i)=>{
     const labelCurto=d.temaCurto||d.tema.split('·')[0].trim();
+    // dt-date: junta os tokens disponíveis (data datada "Sex 5/Set" OU só emoji "👶" em coletâneas
+    // sem data) · evita imprimir "undefined" quando o campo date tem 1 token só.
+    const dtDate=d.date.split(' ').slice(0,2).join(' ');
     return `<button class="day-tab ${i===state.selIdx?'active':''}" data-idx="${i}" style="--day-color:${d.cor}">
-    <span class="dt-date">${d.date.split(' ')[0]} ${d.date.split(' ')[1]}</span>${labelCurto}
+    <span class="dt-date">${dtDate}</span>${labelCurto}
     ${d.grupo?'<span class="group-dot">👥</span>':''}
   </button>`;
   }).join('')}</div></div>`;

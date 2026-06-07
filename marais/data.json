@@ -10,9 +10,9 @@
   "legend_notes_html": "<strong>🗺️ Coletânea de walking tours pelo Marais</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. <strong>👶 Família</strong>: clássico, plano, playgrounds + fonte do Stravinsky. <strong>🎨 Profundo</strong>: história, hôtels, arte &amp; brechó e a casa mais antiga de Paris (2 partes, ~3,5km). <strong>🍫 Guloso</strong>: chocolate, choux, crêpes e sorvete. <strong>🖼️ Museus</strong>: 5 museus escondidos (3 grátis). <strong>🛍️ Lojas</strong>: design e concept stores (Fleux, Muji, Merci) do 4e ao Haut Marais. <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>⭐ Dica de ouro</strong>: o Marais é dos raros bairros de Paris com lojas abertas no <strong>domingo</strong>.",
   "days": [
     {
-      "date": "👶 Família",
+      "date": "👶",
       "tema": "Marais Clássico · Em Família",
-      "temaCurto": "Em Família",
+      "temaCurto": "Família",
       "bairro": "🏛️ Le Marais (3e + 4e)",
       "grupo": true,
       "nota": "O Marais é o pedaço mais bem preservado da Paris pré-Revolução: um antigo pântano ('marais') drenado por monges no séc. XII, virou o bairro da aristocracia no séc. XVII em torno da Place des Vosges, foi abandonado quando a corte foi pra Versailles, virou bairro de artesãos e o coração judaico de Paris (o 'Pletzl'), e escapou da picareta por um triz graças à lei Malraux de 1962. Resultado: ruas medievais, palacetes e pátios escondidos num bairro plano, compacto e ótimo de fazer a pé com criança. Este tour pega o melhor pra família — Place des Vosges, mercado coberto e playground — com a walking tour Parte 1 terminando na fonte mais divertida de Paris.",
@@ -253,7 +253,7 @@
       "hideStopMarkers": true
     },
     {
-      "date": "🎨 Profundo",
+      "date": "🎨",
       "tema": "Marais Profundo · História, Arte & Brechó",
       "temaCurto": "História",
       "bairro": "🎨 Le Marais (4e → Haut Marais 3e)",
@@ -597,7 +597,7 @@
       ]
     },
     {
-      "date": "🍫 Guloso",
+      "date": "🍫",
       "tema": "Marais Guloso · Doces, Chocolate & Crêpes",
       "temaCurto": "Guloso",
       "bairro": "🍫 Le Marais (4e → Haut Marais 3e)",
@@ -810,7 +810,7 @@
       ]
     },
     {
-      "date": "🖼️ Museus",
+      "date": "🖼️",
       "tema": "Museus Escondidos do Marais",
       "temaCurto": "Museus",
       "bairro": "🖼️ Le Marais (4e → Haut Marais 3e)",
@@ -989,7 +989,7 @@
       ]
     },
     {
-      "date": "🛍️ Lojas",
+      "date": "🛍️",
       "tema": "Marais das Lojas · Design & Concept Stores",
       "temaCurto": "Lojas",
       "bairro": "🛍️ Le Marais (4e → Haut Marais 3e)",

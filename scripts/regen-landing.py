@@ -122,6 +122,78 @@ def main():
         if v.get('city'):
             grupos.setdefault(v['city'], []).append(v)
 
+    STYLE = '''*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f3f4f6;color:#111827;line-height:1.6;padding:24px 16px;max-width:560px;margin:0 auto;min-height:100vh}
+h1{font-size:24px;font-weight:700;letter-spacing:-0.5px;margin-bottom:6px}
+.sub{color:#6b7280;font-size:14px;margin-bottom:28px}
+h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;margin:28px 0 12px}
+.viagens{display:flex;flex-direction:column;gap:10px}
+.viagem-card{display:block;background:#fff;border-radius:12px;padding:18px 20px;text-decoration:none;color:#111827;box-shadow:0 1px 3px rgba(0,0,0,0.05);transition:transform 0.15s,box-shadow 0.15s}
+.viagem-card:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.viagem-emoji{font-size:28px;margin-bottom:6px}
+.viagem-nome{font-size:18px;font-weight:700;letter-spacing:-0.3px}
+.viagem-meta{font-size:13px;color:#6b7280;margin-top:3px}
+.viagem-chev{float:right;color:#9ca3af;font-size:18px;margin-top:6px}
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;text-align:center}
+.footer a{color:#6b7280;text-decoration:none}
+.search-box{position:relative;margin-bottom:24px}
+.search-box input{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px 14px 42px;font-size:15px;font-family:inherit;color:#111827;box-shadow:0 1px 3px rgba(0,0,0,0.05);outline:none}
+.search-box input:focus{border-color:#9ca3af}
+.search-box .ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.6}
+.search-empty{display:none;color:#9ca3af;font-size:14px;text-align:center;padding:24px 0}'''
+
+    SCRIPT = '''<script>
+// Busca · filtra os cards de viagem/passeio por nome + descrição
+(function(){
+  var input=document.getElementById('trip-search');
+  var empty=document.getElementById('search-empty');
+  if(!input) return;
+  input.addEventListener('input',function(){
+    var q=input.value.toLowerCase().trim();
+    var anyVisible=false;
+    document.querySelectorAll('.trip-section').forEach(function(sec){
+      var secVisible=false;
+      sec.querySelectorAll('.viagem-card').forEach(function(card){
+        var hit=!q||card.textContent.toLowerCase().indexOf(q)>=0;
+        card.style.display=hit?'':'none';
+        if(hit) secVisible=true;
+      });
+      sec.style.display=secVisible?'':'none';
+      if(secVisible) anyVisible=true;
+    });
+    empty.style.display=anyVisible?'none':'block';
+  });
+})();
+</script>'''
+
+    def page(title, h1, sub, body):
+        return ('<!DOCTYPE html>\n<html lang="pt-BR">\n<head>\n'
+                '<meta charset="UTF-8">\n'
+                '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">\n'
+                '<meta name="robots" content="noindex,nofollow">\n'
+                f'<title>{title}</title>\n<style>\n{STYLE}\n</style>\n</head>\n<body>\n'
+                f'<h1>{h1}</h1>\n<div class="sub">{sub}</div>\n\n'
+                '<div class="search-box">\n  <span class="ico">🔍</span>\n'
+                '  <input type="text" id="trip-search" placeholder="Buscar passeio..." autocomplete="off">\n</div>\n'
+                '<div class="search-empty" id="search-empty">Nada encontrado.</div>\n\n'
+                f'{body}\n\n'
+                '<div class="footer">\n  Roteiros gerados pela skill '
+                '<a href="https://github.com/tsferraro/viagem" target="_blank">roteiro-viagem</a>\n</div>\n\n'
+                f'{SCRIPT}\n</body>\n</html>\n')
+
+    ARCHIVE = ('<h2>📦 Arquivo</h2>\n<div class="viagens">\n'
+               '  <a class="viagem-card" href="./archive/">\n'
+               '    <span class="viagem-chev">›</span>\n'
+               '    <div class="viagem-emoji">📋</div>\n'
+               '    <div class="viagem-nome">Viagens passadas</div>\n'
+               '    <div class="viagem-meta">Histórico completo</div>\n  </a>\n</div>')
+
+    def slugify(s):
+        import unicodedata
+        s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()
+        return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
+
+    # 1 · Landing principal (TODAS as viagens + arquivo)
     sections = []
     if sem_cidade:
         sections.append(render_section('✈️ Viagens', sem_cidade))
@@ -129,91 +201,25 @@ def main():
         items = sorted(grupos[cidade], key=lambda v: v['nome'])
         emoji = CITY_EMOJI.get(cidade, '📍')
         sections.append(render_section(f'{emoji} {cidade} · passeios', items))
-    sections_html = '\n\n'.join(sections)
+    body_main = '\n\n'.join(sections) + '\n\n' + ARCHIVE
+    with open(os.path.join(root, 'index.html'), 'w') as f:
+        f.write(page('🗺️ Roteiros · Família Ferraro', '🗺️ Roteiros',
+                     'Família Ferraro · viagens em planejamento e ativas', body_main))
 
-    html = f'''<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
-<title>🗺️ Roteiros · Família Ferraro</title>
-<style>
-*{{margin:0;padding:0;box-sizing:border-box}}
-body{{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f3f4f6;color:#111827;line-height:1.6;padding:24px 16px;max-width:560px;margin:0 auto;min-height:100vh}}
-h1{{font-size:24px;font-weight:700;letter-spacing:-0.5px;margin-bottom:6px}}
-.sub{{color:#6b7280;font-size:14px;margin-bottom:28px}}
-h2{{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;margin:28px 0 12px}}
-.viagens{{display:flex;flex-direction:column;gap:10px}}
-.viagem-card{{display:block;background:#fff;border-radius:12px;padding:18px 20px;text-decoration:none;color:#111827;box-shadow:0 1px 3px rgba(0,0,0,0.05);transition:transform 0.15s,box-shadow 0.15s}}
-.viagem-card:hover{{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}}
-.viagem-emoji{{font-size:28px;margin-bottom:6px}}
-.viagem-nome{{font-size:18px;font-weight:700;letter-spacing:-0.3px}}
-.viagem-meta{{font-size:13px;color:#6b7280;margin-top:3px}}
-.viagem-chev{{float:right;color:#9ca3af;font-size:18px;margin-top:6px}}
-.footer{{margin-top:40px;padding-top:20px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;text-align:center}}
-.footer a{{color:#6b7280;text-decoration:none}}
-.search-box{{position:relative;margin-bottom:24px}}
-.search-box input{{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px 14px 42px;font-size:15px;font-family:inherit;color:#111827;box-shadow:0 1px 3px rgba(0,0,0,0.05);outline:none}}
-.search-box input:focus{{border-color:#9ca3af}}
-.search-box .ico{{position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.6}}
-.search-empty{{display:none;color:#9ca3af;font-size:14px;text-align:center;padding:24px 0}}
-</style>
-</head>
-<body>
-<h1>🗺️ Roteiros</h1>
-<div class="sub">Família Ferraro · viagens em planejamento e ativas</div>
+    # 2 · Uma página STANDALONE por cidade (link separado pra compartilhar · só os passeios daquela cidade)
+    city_pages = []
+    for cidade in sorted(grupos):
+        items = sorted(grupos[cidade], key=lambda v: v['nome'])
+        emoji = CITY_EMOJI.get(cidade, '📍')
+        body_city = render_section(f'{emoji} {cidade} · passeios', items)
+        fname = slugify(cidade) + '.html'
+        with open(os.path.join(root, fname), 'w') as f:
+            f.write(page(f'{emoji} {cidade} · Passeios', f'{emoji} {cidade}',
+                         f'Passeios da Família Ferraro em {cidade}', body_city))
+        city_pages.append(fname)
 
-<div class="search-box">
-  <span class="ico">🔍</span>
-  <input type="text" id="trip-search" placeholder="Buscar viagem ou passeio..." autocomplete="off">
-</div>
-<div class="search-empty" id="search-empty">Nenhuma viagem encontrada.</div>
-
-{sections_html}
-
-<h2>📦 Arquivo</h2>
-<div class="viagens">
-  <a class="viagem-card" href="./archive/">
-    <span class="viagem-chev">›</span>
-    <div class="viagem-emoji">📋</div>
-    <div class="viagem-nome">Viagens passadas</div>
-    <div class="viagem-meta">Histórico completo</div>
-  </a>
-</div>
-
-<div class="footer">
-  Roteiros gerados pela skill <a href="https://github.com/tsferraro/viagem" target="_blank">roteiro-viagem</a>
-</div>
-
-<script>
-// Busca global · filtra os cards de viagem/passeio por nome + descrição
-(function(){{
-  var input=document.getElementById('trip-search');
-  var empty=document.getElementById('search-empty');
-  if(!input) return;
-  input.addEventListener('input',function(){{
-    var q=input.value.toLowerCase().trim();
-    var anyVisible=false;
-    document.querySelectorAll('.trip-section').forEach(function(sec){{
-      var secVisible=false;
-      sec.querySelectorAll('.viagem-card').forEach(function(card){{
-        var hit=!q||card.textContent.toLowerCase().indexOf(q)>=0;
-        card.style.display=hit?'':'none';
-        if(hit) secVisible=true;
-      }});
-      sec.style.display=secVisible?'':'none';
-      if(secVisible) anyVisible=true;
-    }});
-    empty.style.display=anyVisible?'none':'block';
-  }});
-}})();
-</script>
-</body>
-</html>
-'''
-    with open(os.path.join(root, 'index.html'), 'w') as f: f.write(html)
-    print(f'✓ Landing regenerada com {len(viagens)} viagem(ns): {", ".join(v["subdir"] for v in viagens)}')
+    extra = f' · páginas por cidade: {", ".join(city_pages)}' if city_pages else ''
+    print(f'✓ Landing regenerada com {len(viagens)} viagem(ns): {", ".join(v["subdir"] for v in viagens)}{extra}')
 
 if __name__ == '__main__':
     main()

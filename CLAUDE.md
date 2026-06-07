@@ -403,6 +403,7 @@ O toggle continua no template pronto pra reuso — é só (re)adicionar `essenci
 - **Botão 🖨️ PDF** (`print-btn` → `window.print()`): `@media print` em `styles.css` esconde nav/mapa/gate e imprime o dia aberto em layout limpo (cards não quebram no meio). É o caminho de "salvar offline / PDF" pra levar em campo.
 - **Busca global na landing** (`regen-landing.py`): campo que filtra os cards de viagem/passeio por nome+descrição e esconde seções vazias.
 - **CITY.txt** numa viagem → agrupa ela numa seção "🗼 <Cidade> · passeios" na landing (coletâneas tipo Marais). Sem CITY.txt → entra em "✈️ Viagens" (ordem cronológica).
+- **Página standalone por cidade** (`regen-landing.py`): além da landing-mãe (`index.html`), gera um `<cidade>.html` na raiz pra CADA cidade com CITY.txt (ex: `paris.html`) · lista SÓ os passeios daquela cidade, sem arquivo nem outras viagens · link separado pra compartilhar (`tsferraro.github.io/viagem/paris.html`) sem expor as viagens pessoais. Auto-regenerada · não interfere na detecção de viagens (é arquivo na raiz, não subpasta).
 
 ## Roteiros paralelos
 
