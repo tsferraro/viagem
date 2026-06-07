@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>🎠 Marais em Família · Paris</title>
+<title>🗺️ Walking Tours · Le Marais (Paris)</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -293,9 +293,9 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
 
 <div id="auth-gate">
   <div class="auth-box">
-    <div class="auth-emoji">🎠</div>
-    <div class="auth-title">Marais em Família</div>
-    <div class="auth-sub">Paris · adultos + crianças (2-7a)</div>
+    <div class="auth-emoji">🗺️</div>
+    <div class="auth-title">Walking Tours · Paris</div>
+    <div class="auth-sub">Le Marais · roteiros a pé (sem data)</div>
     <input class="auth-input" id="pw" type="password" placeholder="senha" autocomplete="off">
     <div class="auth-error" id="pw-err"></div>
     <button class="auth-btn" onclick="checkAuth()">Entrar</button>
@@ -304,8 +304,8 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
 
 <div id="app">
   <div class="header">
-    <h1>Marais · Dia em Família</h1>
-    <div class="sub">2 walking tours · Place des Vosges + Mercado & Playground</div>
+    <h1>Le Marais · Walking Tours</h1>
+    <div class="sub">Em Família (clássico) · Profundo (arte, brechó & história)</div>
   </div>
 
   <div class="sticky-nav">
@@ -344,10 +344,10 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
         <span><span class="risk-pill risk-green">🟢 tranquilo</span></span>
         <span><span class="risk-pill risk-yellow">⚠️ atenção</span></span>
         <span><span class="risk-pill risk-red">🔴 alta atenção</span></span>
-        <span style="font-size:12px"><span style="display:inline-block;background:#f59e0b;border-radius:50%;width:14px;height:14px;font-size:8px;color:#fff;text-align:center;line-height:14px;vertical-align:-2px;margin-right:4px">👥</span> 👨‍👩‍👧 Adultos + crianças (2-7a)</span>
+        <span style="font-size:12px"><span style="display:inline-block;background:#f59e0b;border-radius:50%;width:14px;height:14px;font-size:8px;color:#fff;text-align:center;line-height:14px;vertical-align:-2px;margin-right:4px">👥</span> 👨‍👩‍👧 Tour ok pra crianças pequenas</span>
       </div>
       <div class="text">
-<strong>🚶 2 walking tours</strong>: <em>Parte 1 · Coração do Marais</em> (ancorada na Place des Vosges) e <em>Parte 2 · Mercado & Playground</em> (ancorada no Marché des Enfants Rouges). <strong>🧒 Terreno</strong>: Marais é plano · só trechos curtos de paralelepípedo (rue des Rosiers, em torno do mercado) · carrinho roda em quase tudo. <strong>🚇 Início</strong>: métro Saint-Paul [1] ou Chemin Vert [8].
+<strong>🗺️ Coletânea de walking tours pelo Marais</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. <strong>Tour 1 · Em Família</strong>: clássico, plano, com playgrounds e a fonte do Stravinsky. <strong>Tour 2 · Profundo</strong>: arte, brechó, hôtels particuliers e a casa mais antiga de Paris (~2,5km, meio-dia). <strong>🧭 Como usar</strong>: cada aba é um tour · toque em 🗺️ Mapa pra ver a rota e abrir a navegação a pé no Google Maps · toque num card pra abrir as histórias e dicas.
       </div>
     </div>
   </div>
@@ -384,12 +384,12 @@ window.addEventListener('DOMContentLoaded',()=>{
 // ============== DATA ==============
 const DAYS = [
   {
-    "date": "Dia no Marais",
-    "tema": "Marais em Família · 2 walking tours",
-    "temaCurto": "Marais",
+    "date": "👶 Família",
+    "tema": "Marais Clássico · Em Família",
+    "temaCurto": "Em Família",
     "bairro": "🏛️ Le Marais (3e + 4e)",
     "grupo": true,
-    "nota": "Dia inteiro no Marais, bairro plano e compacto — ideal pra fazer a pé com crianças pequenas. Manhã no sul histórico (Place des Vosges + walking tour Parte 1, terminando na Fontaine Stravinsky, que as crianças amam), almoço de falafel na rue des Rosiers, e tarde no norte: mercado coberto mais antigo de Paris + playground do Square du Temple pra descarregar energia. As duas walking tours são opcionais e independentes — faz uma, faz as duas, ou só os cards-âncora se o dia render menos.",
+    "nota": "O Marais é o pedaço mais bem preservado da Paris pré-Revolução: um antigo pântano (\"marais\") drenado por monges no séc. XII, virou o bairro da aristocracia no séc. XVII em torno da Place des Vosges, foi abandonado quando a corte foi pra Versailles, virou bairro de artesãos e o coração judaico de Paris (o \"Pletzl\"), e escapou da picareta por um triz graças à lei Malraux de 1962. Resultado: ruas medievais, palacetes e pátios escondidos num bairro plano, compacto e ótimo de fazer a pé com criança. Este tour pega o melhor pra família — Place des Vosges, mercado coberto e playground — com a walking tour Parte 1 terminando na fonte mais divertida de Paris.",
     "cor": "#9333ea",
     "gradA": "#6b21a8",
     "gradB": "#a855f7",
@@ -414,15 +414,19 @@ const DAYS = [
         "risco": "green",
         "nome": "Place des Vosges (Pl. des Vosges, 4e)",
         "cat": "Praça planejada mais antiga de Paris (1612) · gramado + tanque de areia",
-        "sobre": "Inaugurada em 1612 como Place Royale, é a praça planejada mais antiga de Paris: 36 pavilhões idênticos de tijolo rosa e pedra branca em volta de um jardim quadrado perfeito. No centro há gramados onde **é permitido sentar e pisar** (raro em Paris) com fonte em cada canto, e — o que conta pra criançada — um **tanque de areia e brinquedos** sob as tílias.",
-        "imperdivel": "Deixar as crianças correrem no gramado central + as arcadas cobertas que dão a volta inteira na praça (sombra e abrigo de chuva garantidos pro carrinho).",
+        "sobre": "Mandada construir por Henri IV e inaugurada em 1612 como <strong>Place Royale</strong>, é a praça planejada mais antiga de Paris: 36 pavilhões idênticos de tijolo rosa e pedra branca em volta de um jardim quadrado perfeito. Ganhou o nome atual em 1800, homenageando o departamento dos Vosges (o primeiro a pagar os impostos da jovem República). No centro há gramados onde <strong>é permitido sentar e pisar</strong> — raríssimo em Paris — com fonte em cada canto e um tanque de areia sob as tílias.",
+        "imperdivel": "O que observar: dos 36 pavilhões, dois são mais altos — o <strong>Pavillon du Roi</strong> (ao sul, sobre a entrada da rue de Birague) e o <strong>Pavillon de la Reine</strong> (ao norte). No meio, a estátua equestre de Luís XIII (o original virou canhão na Revolução).",
         "dicas": [
-          "**Arcadas** cobrem todo o perímetro da praça · sombra no calor e abrigo na chuva, com o carrinho",
-          "**Tanque de areia e brinquedos** no jardim · vale levar pá e baldinho",
-          "No **nº 6** fica a Maison de Victor Hugo: coleção permanente **grátis** e banheiro limpo (raro no centro)",
-          "Saída pelo canto sudoeste leva direto ao **Hôtel de Sully** por um passadiço discreto que quase ninguém usa"
+          "As <strong>arcadas</strong> cobrem todo o perímetro — sombra no calor, abrigo na chuva, e hoje abrigam galerias de arte e cafés. Dá a volta inteira com o carrinho",
+          "Tanque de areia e brinquedos no canto do jardim · vale levar pá e baldinho",
+          "🚶 <strong>Walking Tour Parte 1 · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+          "🚶 <strong>1. Place des Vosges</strong> — no nº 6 morou Victor Hugo (1832-48), onde escreveu parte de <em>Os Miseráveis</em>; a Maison de Victor Hugo tem coleção <strong>grátis</strong> e um salão chinês delirante que ele mesmo desenhou. Banheiro limpo (raro no centro)",
+          "🚶 <strong>2. Hôtel de Sully (62 rue Saint-Antoine)</strong> — saia pelo canto sudoeste: um passadiço discreto liga a praça ao jardim deste palacete de 1630. Atalho de gente local, quase ninguém usa",
+          "🚶 <strong>3. Musée Carnavalet</strong> — o museu da história de Paris, coleção permanente <strong>grátis</strong>, com jardins. Madame de Sévigné, a maior fofoqueira-escritora do séc. XVII, morou aqui",
+          "🚶 <strong>4. Rue des Rosiers</strong> — o coração do antigo bairro judaico (o \"Pletzl\"). Repare nas placas em hebraico, padarias e delis; é aqui o almoço de falafel (parada seguinte)",
+          "🚶 <strong>5. Fontaine Stravinsky</strong> — ao lado do Centre Pompidou, 16 esculturas que cospem água: as pretas e mecânicas são de Tinguely, as coloridas e malucas de Niki de Saint Phalle, todas inspiradas em obras do compositor Stravinsky. As crianças surtam (de alegria)"
         ],
-        "duracao": "45min-1h (mais se engatarem no tanque de areia)",
+        "duracao": "45min-1h na praça (a Parte 1 toda dá +1h30)",
         "custo": "Grátis",
         "acessibilidade": "Jardim plano de saibro compacto · carrinho roda fácil · arcadas têm 1 degrau em alguns trechos",
         "coord": {
@@ -492,7 +496,7 @@ const DAYS = [
         "periodo": "tarde",
         "tipo": "opcoes",
         "nome": "Almoço · rue des Rosiers",
-        "cat": "3 opções no coração do antigo bairro judaico",
+        "cat": "3 opções no coração do antigo bairro judaico (o Pletzl)",
         "coord": {
           "lat": 48.8574,
           "lng": 2.3591
@@ -506,7 +510,7 @@ const DAYS = [
           },
           {
             "nome": "Miznon (22 rue des Écouffes)",
-            "desc": "Pitas recheadas do chef Eyal Shani · casual, barulhento, adora criança · couve-flor inteira assada é o hit",
+            "desc": "Pitas recheadas do chef Eyal Shani · casual, barulhento, adora criança · a couve-flor inteira assada é o hit",
             "preco": "€12-16",
             "dist": "1min a pé"
           },
@@ -524,7 +528,7 @@ const DAYS = [
         "periodo": "tarde",
         "tipo": "transit",
         "nome": "Rue des Rosiers → Marché des Enfants Rouges",
-        "cat": "~12min a pé subindo pelo Marais · passa pela rue Vieille-du-Temple",
+        "cat": "~12min a pé subindo pela rue Vieille-du-Temple",
         "coord": {
           "lat": 48.8602,
           "lng": 2.3608
@@ -538,13 +542,13 @@ const DAYS = [
         "risco": "yellow",
         "nome": "Marché des Enfants Rouges (39 rue de Bretagne, 3e)",
         "cat": "Mercado coberto mais antigo de Paris (1615) · bancas de comida do mundo",
-        "sobre": "Aberto em 1615, é o **mercado coberto mais antigo de Paris**. O nome vem de um antigo orfanato cujas crianças vestiam vermelho (cor da caridade). Hoje é metade mercado, metade praça de alimentação: bancas marroquina, japonesa, italiana e libanesa dividindo mesas comunais sob a estrutura de ferro.",
+        "sobre": "Aberto em 1615, é o <strong>mercado coberto mais antigo de Paris</strong>. O nome — \"Mercado das Crianças Vermelhas\" — vem de um antigo orfanato vizinho, o Hôpital des Enfants-Rouges, cujas crianças vestiam vermelho, a cor da caridade. Hoje é metade mercado, metade praça de alimentação: bancas marroquina, japonesa, italiana e libanesa dividindo mesas comunais sob a estrutura de ferro.",
         "imperdivel": "Tajine do traiteur marroquino (a fila vale) + as crêpes/galettes pras crianças.",
         "dicas": [
-          "**Fecha 2ª-feira** · lota das 12h às 14h no fim de semana — chega 11h30 ou depois das 14h com criança",
+          "<strong>Fecha 2ª-feira</strong> · lota das 12h às 14h no fim de semana — chega 11h30 ou depois das 14h com criança",
           "Mesas comunais apertadas · no pico melhor dobrar o carrinho e encostar na lateral",
-          "Banca japonesa (**Chez Taeko**) e crêpes salgadas resolvem criança exigente",
-          "Saída norte cai na **rue de Bretagne**, rua de bairro com padarias (Bontemps no nº 57) pra sobremesa"
+          "Banca japonesa (<strong>Chez Taeko</strong>) e crêpes salgadas resolvem criança exigente",
+          "No caminho, a rue de Bretagne é uma rua de bairro de verdade — padarias (Bontemps no nº 57), queijarias e a saída norte cai colado no Square du Temple"
         ],
         "duracao": "45min-1h15",
         "custo": "€10-16 por prato",
@@ -603,12 +607,12 @@ const DAYS = [
         "risco": "green",
         "nome": "Square du Temple - Elie Wiesel (rue de Bretagne, 3e)",
         "cat": "Jardim à inglesa com playground cercado, cascata e coreto · descarrego de energia",
-        "sobre": "Um dos 24 jardins criados na reforma de Haussmann (1857), no terreno da antiga fortaleza dos **Templários** que virou prisão da família real na Revolução. Hoje é um parque à inglesa de 7.700 m² com lago, **cascata artificial** feita de rochas da floresta de Fontainebleau, um coreto de 1900 e um **playground cercado** com tanque de areia.",
+        "sobre": "Aqui ficava o <strong>Enclos du Temple</strong>, sede europeia dos Cavaleiros Templários, e a torre medieval onde a família de Luís XVI foi presa em 1792. Napoleão mandou demolir a torre em 1808 pra evitar que virasse romaria monarquista. No lugar, Haussmann criou em 1857 este parque à inglesa de 7.700 m² com lago, <strong>cascata feita de rochas da floresta de Fontainebleau</strong>, um coreto de 1900 e um <strong>playground cercado</strong> com tanque de areia. Desde 2017 leva o nome de Elie Wiesel.",
         "imperdivel": "O playground cercado (dá pra sentar e soltar as crianças com tranquilidade) + a cascata e o laguinho.",
         "dicas": [
-          "Playground é **cercado** — senta no banco e deixa as crianças à solta",
-          "Tem **banheiro público** e ponto de água · no verão ligam os brumisateurs (borrifadores)",
-          "Coladinho fica o **Carreau du Temple** (mercado de ferro de 1863, hoje centro cultural) — entra pra ver a estrutura e fugir de sol/chuva",
+          "Playground é <strong>cercado</strong> — senta no banco e deixa as crianças à solta",
+          "Tem <strong>banheiro público</strong> e ponto de água · no verão ligam os brumisateurs (borrifadores)",
+          "Coladinho fica o <strong>Carreau du Temple</strong> (mercado de ferro de 1863, hoje centro cultural) — entra pra ver a estrutura e fugir de sol/chuva",
           "Fecha ao anoitecer (horário varia com a estação) · confere o portão na saída"
         ],
         "duracao": "45min-1h30",
@@ -617,6 +621,283 @@ const DAYS = [
         "coord": {
           "lat": 48.8637,
           "lng": 2.3606
+        }
+      }
+    ]
+  },
+  {
+    "date": "🎨 Profundo",
+    "tema": "Marais Profundo · Arte, Brechó & História",
+    "temaCurto": "Arte & Brechó",
+    "bairro": "🎨 Le Marais (4e → Haut Marais 3e)",
+    "grupo": false,
+    "nota": "Este é o Marais que se conta caminhando devagar, de pátio em pátio. Um circuito de ~2,5km (meio-dia, com paradas) que costura o sul medieval — palacete da Reine Margot, antiquários e um trecho da muralha de 1190 — com o Haut Marais das galerias de arte, brechós e dos grandes hôtels particuliers, terminando na casa mais antiga de Paris. Pensado pra adultos e pra compartilhar com quem vem te visitar; é plano (carrinho aguenta), mas tem mais história que parquinho. Faça a manhã no sul, almoce no caminho, e ataque o norte à tarde.",
+    "cor": "#b45309",
+    "gradA": "#78350f",
+    "gradB": "#d97706",
+    "stops": [
+      {
+        "hora": "10:00",
+        "emoji": "🏺",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Village Saint-Paul (rue Saint-Paul / rue des Jardins-Saint-Paul, 4e)",
+        "cat": "6 pátios escondidos com 30+ antiquários · e 60m da muralha de Philippe Auguste",
+        "sobre": "Um quarteirão inteiro escondido atrás das fachadas: <strong>seis pátios de pedra interligados</strong>, com mais de trinta antiquários, brocanteurs, galerias e ateliês de design. Pouca gente acha de primeira — entra-se por portões discretos na rue Saint-Paul e na rue des Jardins-Saint-Paul. A poucos passos, na rue des Jardins-Saint-Paul, está o maior trecho visível em Paris da <strong>muralha de Philippe Auguste</strong> (c. 1190-1220): 60 metros de muro medieval e a base de uma torre de defesa.",
+        "imperdivel": "Atravessar os pátios sem pressa, espiando vitrines de móveis, gravuras e bugigangas vintage — e tocar a muralha de 800 anos a 50m dali.",
+        "dicas": [
+          "A maioria dos antiquários <strong>fecha 2ª e 3ª-feira</strong> e abre só à tarde · quinta a domingo é o melhor dia",
+          "É <strong>brocante de garimpo</strong>, não pechincha de feira — preços de antiquário. Mas olhar é grátis e o cenário é lindo",
+          "Comece cedo aqui: está perto do métro Saint-Paul [1] e do Pont Marie, a ponta sul do circuito",
+          "Repare no chão: placas marcam onde passava a muralha medieval pela cidade"
+        ],
+        "duracao": "30-45min",
+        "custo": "Grátis (olhar)",
+        "acessibilidade": "Pátios em paralelepípedo plano · carrinho roda, mas chacoalha",
+        "coord": {
+          "lat": 48.8526,
+          "lng": 2.3633
+        }
+      },
+      {
+        "hora": "10:40",
+        "emoji": "🏰",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Hôtel de Sens · Bibliothèque Forney (1 rue du Figuier, 4e)",
+        "cat": "Joia gótica de ~1500 · uma das raras casas medievais de Paris",
+        "sobre": "Com suas torres e torreões pontudos, parece um castelo de conto de fadas plantado na cidade — e é um dos raríssimos <strong>palácios medievais civis</strong> que sobraram em Paris, construído entre 1475 e 1519 para os arcebispos de Sens. Sua moradora mais célebre foi <strong>a Reine Margot</strong> (Marguerite de Valois), primeira esposa de Henri IV, que viveu aqui em 1605-06: a lenda conta que um de seus jovens amantes foi morto bem na porta por um rival ciumento — e que ela mandou decapitar o assassino e foi ao enterro da vítima de luto. Hoje guarda a Bibliothèque Forney, de artes decorativas.",
+        "imperdivel": "A fachada e o pátio interno (entrada livre no pátio). Procure a <strong>bala de canhão</strong> cravada na fachada, com a data de julho de 1830 (Revolução de Julho).",
+        "dicas": [
+          "O <strong>pátio</strong> é de entrada livre; a biblioteca tem horário próprio (fechada dom/2ª) — mas o barato aqui é a arquitetura por fora",
+          "Tem um <strong>jardim à francesa</strong> nos fundos, lado rio, ótimo pra foto e respiro",
+          "Está a 3min da margem do Sena e do Pont Marie, caso queira esticar até a Île Saint-Louis depois"
+        ],
+        "duracao": "20-30min",
+        "custo": "Grátis (pátio e jardim)",
+        "acessibilidade": "Pátio em pedra · acessível no térreo",
+        "coord": {
+          "lat": 48.8534,
+          "lng": 2.3592
+        }
+      },
+      {
+        "hora": "11:15",
+        "emoji": "📷",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Maison Européenne de la Photographie · MEP (5/7 rue de Fourcy, 4e)",
+        "cat": "O grande museu de fotografia de Paris · num hôtel do séc. XVIII",
+        "sobre": "Dentro do <strong>Hôtel Hénault de Cantobre</strong> (séc. XVIII), a MEP é desde 1996 a casa da fotografia em Paris: grandes exposições de nomes contemporâneos, uma fototeca enorme, livraria excelente e um café no subsolo abobadado. É o tipo de museu de tamanho humano — dá pra ver com calma em 1h.",
+        "imperdivel": "Seja o que estiver em cartaz: a curadoria é forte e rotativa. Confere a expo do momento antes de subir.",
+        "dicas": [
+          "<strong>Fecha 2ª e 3ª</strong> · aberto qua-dom · noite de quarta costuma ter entrada reduzida ou eventos",
+          "A <strong>livraria</strong> de fotografia é uma das melhores da cidade, vale a parada mesmo sem entrar na expo",
+          "Se viajar com criança e a expo não rolar, pula sem culpa — o tour segue forte logo adiante",
+          "Café no porão abobadado é um ótimo ponto de pausa/banheiro"
+        ],
+        "duracao": "1h (ou 10min só livraria)",
+        "custo": "~€13 adulto · grátis até 8 anos / qua à noite reduzido",
+        "acessibilidade": "Museu acessível com elevador",
+        "coord": {
+          "lat": 48.8551,
+          "lng": 2.3589
+        },
+        "walkingTours": [
+          {
+            "nome": "Marais Profundo · 🎨 a rota toda",
+            "descricao": "Village Saint-Paul → Hôtel de Sens → MEP → Mariage Frères → Friperies → Hôtel de Rohan → Hôtel de Soubise → Maison de Nicolas Flamel · ~2.5km",
+            "stops": [
+              {
+                "n": 1,
+                "nome": "Village Saint-Paul (rue Saint-Paul, 4e)",
+                "coord": {
+                  "lat": 48.8526,
+                  "lng": 2.3633
+                }
+              },
+              {
+                "n": 2,
+                "nome": "Hôtel de Sens (1 rue du Figuier, 4e)",
+                "coord": {
+                  "lat": 48.8534,
+                  "lng": 2.3592
+                }
+              },
+              {
+                "n": 3,
+                "nome": "Maison Européenne de la Photographie (5 rue de Fourcy)",
+                "coord": {
+                  "lat": 48.8551,
+                  "lng": 2.3589
+                }
+              },
+              {
+                "n": 4,
+                "nome": "Mariage Frères (30 rue du Bourg-Tibourg)",
+                "coord": {
+                  "lat": 48.8573,
+                  "lng": 2.3551
+                },
+                "coord_unverified": true
+              },
+              {
+                "n": 5,
+                "nome": "Free'P'Star · friperies (61 rue de la Verrerie)",
+                "coord": {
+                  "lat": 48.8577,
+                  "lng": 2.354
+                },
+                "coord_unverified": true
+              },
+              {
+                "n": 6,
+                "nome": "Hôtel de Rohan · Chevaux du Soleil (87 rue Vieille-du-Temple)",
+                "coord": {
+                  "lat": 48.8601,
+                  "lng": 2.3603
+                },
+                "coord_unverified": true
+              },
+              {
+                "n": 7,
+                "nome": "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois)",
+                "coord": {
+                  "lat": 48.8593,
+                  "lng": 2.3593
+                },
+                "coord_unverified": true
+              },
+              {
+                "n": 8,
+                "nome": "Maison de Nicolas Flamel (51 rue de Montmorency)",
+                "coord": {
+                  "lat": 48.8636,
+                  "lng": 2.3532
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "hora": "12:15",
+        "emoji": "🫖",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Mariage Frères (30 rue du Bourg-Tibourg, 4e)",
+        "cat": "A mais antiga casa de chá de Paris (1854) · loja + salão + museu do chá",
+        "sobre": "Fundada em 1854 pelos irmãos Henri e Édouard Mariage, é a casa de chá mais célebre de Paris: <strong>mais de 650 chás</strong> de 36 países, num cenário de madeira escura, latas douradas e vendedores de avental de linho que parecem saídos do séc. XIX. A loja-mãe é esta, na rue du Bourg-Tibourg, com salão de chá e um pequeno <strong>museu do chá</strong> no andar de cima.",
+        "imperdivel": "Entrar só pra sentir o cheiro (centenas de latas abertas) — e, se for hora do almoço, o <em>brunch au thé</em> ou um pâtisserie no salão.",
+        "dicas": [
+          "Balcão de loja abre 10h30 · salão/restaurante ~12h-19h — bom ponto de <strong>almoço ou pausa</strong> do tour",
+          "Não precisa consumir pra ver a loja e subir até o mini-museu",
+          "O chá <em>Marco Polo</em> (frutado) é o clássico de presente · latas viajam bem na mala",
+          "Pelo caminho até aqui você cruza a rue de Rivoli e o burburinho do Hôtel de Ville — é a transição do Marais histórico pro Marais das lojas"
+        ],
+        "duracao": "20min (loja) a 1h (almoço)",
+        "custo": "Grátis (loja) · salão €€-€€€",
+        "acessibilidade": "Loja térrea acessível · museu/salão por escada",
+        "coord": {
+          "lat": 48.8573,
+          "lng": 2.3551
+        }
+      },
+      {
+        "hora": "13:30",
+        "emoji": "👗",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Friperies do Marais · Free'P'Star (61 rue de la Verrerie, 4e)",
+        "cat": "Garimpo vintage de €1 a €30 · o brechó-instituição do bairro",
+        "sobre": "O Marais é o epicentro do <strong>vintage parisiense</strong>, e a Free'P'Star é a porta de entrada: araras transbordando de roupa dos anos 70-80-90, casacos, blazers, jaquetas de couro e os famosos <strong>cestos de €1</strong> no mezanino. Aberta praticamente todo dia até tarde. Em volta, a rue de la Verrerie, a rue du Roi-de-Sicile e a rue Vieille-du-Temple concentram dezenas de friperies e griffes.",
+        "imperdivel": "Cavar o cesto de €1 e sair com algo improvável. É garimpo: quem tem paciência acha tesouro.",
+        "dicas": [
+          "Tem <strong>3 endereços</strong> da Free'P'Star no Marais (8 rue Sainte-Croix-de-la-Bretonnerie, 20 rue de Rivoli e este, 61 rue de la Verrerie) — todos abrem até ~21h",
+          "Outras boas: <strong>Kilo Shop</strong> (roupa vendida por peso), <strong>Vintage Désir</strong> (rue des Rosiers) e <strong>Thanx God I'm a VIP</strong> (griffe usada)",
+          "Leve dinheiro/cartão e paciência · prove sempre, numeração de época engana",
+          "Esta é a parada mais 'jovem' do tour — se não curte garimpo, passe direto pro Haut Marais"
+        ],
+        "duracao": "20-40min",
+        "custo": "€1-30 a peça",
+        "acessibilidade": "Térreo + mezanino por escada · loja apertada",
+        "coord": {
+          "lat": 48.8577,
+          "lng": 2.354
+        }
+      },
+      {
+        "hora": "14:30",
+        "emoji": "🐎",
+        "periodo": "tarde",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Hôtel de Rohan · Chevaux du Soleil (87 rue Vieille-du-Temple, 3e)",
+        "cat": "Obra-prima escondida num pátio · os Cavalos de Apolo (1738)",
+        "sobre": "Palacete construído a partir de 1705 para o cardeal de Rohan, hoje parte dos Archives Nationales. Mas o tesouro está escondido no <strong>pátio das antigas cavalariças</strong>: o baixo-relevo <strong>\"Os Cavalos do Sol\" (Chevaux du Soleil)</strong>, esculpido por Robert Le Lorrain entre 1734 e 1738 — os cavalos do deus-sol Apolo sendo abeberados por tritões, irrompendo da pedra com uma energia que parece molhada. Uma das maiores esculturas do séc. XVIII em Paris, e quase ninguém sabe que está ali.",
+        "imperdivel": "Entrar no pátio (acesso livre) e achar o relevo no alto da parede da antiga cavalariça, à direita. Vale parar e olhar 2 minutos — é de cair o queixo.",
+        "dicas": [
+          "O <strong>pátio é gratuito</strong>; as salas de exposição dos Archives têm horário próprio",
+          "Repare na esquina com a rue des Quatre-Fils — é um dos cantos mais fotogênicos do Haut Marais",
+          "A rue Vieille-du-Temple, que você percorre, é uma das mais antigas e bonitas do bairro: cafés, livrarias e fachadas tortas"
+        ],
+        "duracao": "15-20min",
+        "custo": "Grátis (pátio)",
+        "acessibilidade": "Pátio plano acessível",
+        "coord": {
+          "lat": 48.8601,
+          "lng": 2.3603
+        }
+      },
+      {
+        "hora": "15:00",
+        "emoji": "📜",
+        "periodo": "tarde",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois, 3e)",
+        "cat": "Cour d'honneur monumental + um dos ápices do rococó francês",
+        "sobre": "Vizinho de parede com o Rohan, o Hôtel de Soubise abre num <strong>cour d'honneur em ferradura</strong>, cercado por uma dupla colunata — talvez o pátio mais grandioso do Marais. Dentro, os apartamentos do príncipe e da princesa de Soubise, decorados por <strong>Germain Boffrand</strong> (1735-40) com telas de Boucher e Natoire, são um dos pontos mais altos do <strong>rococó</strong> em França. Guarda o Musée des Archives Nationales — onde se vê de tudo, do Édito de Nantes ao testamento de Napoleão.",
+        "imperdivel": "O cour d'honneur (livre) e, do lado da rue des Archives, o <strong>portal medieval com torreões</strong> do antigo Hôtel de Clisson (séc. XIV) — o único portão particular medieval que sobrou de pé em Paris.",
+        "dicas": [
+          "O <strong>pátio e o jardim</strong> são gratuitos · o museu (apartamentos rococó) é pago e fecha 3ª",
+          "O <strong>jardim</strong> dos Archives é um segredo bem guardado pra sentar — entrada pela rue des Quatre-Fils",
+          "Você está na <strong>rue des Francs-Bourgeois</strong>, a espinha comercial do Marais (aberta inclusive aos domingos) — nome que vem dos 'burgueses livres', os pobres isentos de imposto que moravam aqui na Idade Média"
+        ],
+        "duracao": "20min (pátio) a 1h (museu)",
+        "custo": "Grátis (pátio/jardim) · museu ~€8",
+        "acessibilidade": "Cour d'honneur plano e acessível",
+        "coord": {
+          "lat": 48.8593,
+          "lng": 2.3593
+        }
+      },
+      {
+        "hora": "16:00",
+        "emoji": "⚗️",
+        "periodo": "tarde",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Maison de Nicolas Flamel (51 rue de Montmorency, 3e)",
+        "cat": "A casa mais antiga de Paris (1407) · e a lenda do alquimista",
+        "sobre": "O grande final: a <strong>casa mais antiga de Paris</strong> que se pode datar com certeza — 1407, gravado na frieze sobre o térreo. Foi mandada construir por <strong>Nicolas Flamel</strong>, escrivão e livreiro rico, não como sua moradia, mas como <strong>abrigo para os pobres</strong>: o térreo era de comércio e os andares de cima, alojamento gratuito, com uma condição esculpida na fachada — rezar de manhã e à noite pela alma do casal Flamel. Séculos depois, Flamel virou lenda como o alquimista que teria descoberto a <strong>pedra filosofal</strong> e o elixir da vida eterna — o mesmo Flamel que aparece em <em>Harry Potter</em> e <em>O Código Da Vinci</em>.",
+        "imperdivel": "Ler a inscrição gótica na fachada (letras e símbolos originais de 1407) — e jantar no Auberge Nicolas Flamel, restaurante estrelado que ocupa a casa hoje.",
+        "dicas": [
+          "A fachada é o ponto — visível da rua a qualquer hora, de graça. O interior é o <strong>Auberge Nicolas Flamel</strong> (gastronômico, reserva necessária)",
+          "Está na pontinha noroeste do Marais, a 5min do Musée des Arts et Métiers (autômatos, máquinas, o pêndulo de Foucault — ótima extensão se sobrar gás)",
+          "🛍️ <strong>Pra fechar com compras</strong>: volte ao Haut Marais (rue de Bretagne / rue de Poitou) — galerias de arte como a <strong>Perrotin</strong> e a <strong>Thaddaeus Ropac</strong>, e o concept store <strong>Merci</strong> (111 bd Beaumarchais), com o famoso Fiat vermelho na entrada e lucros revertidos pra caridade"
+        ],
+        "duracao": "10-15min (fachada)",
+        "custo": "Grátis (fachada) · restaurante €€€€",
+        "acessibilidade": "Vê-se da calçada · rua plana",
+        "coord": {
+          "lat": 48.8636,
+          "lng": 2.3532
         }
       }
     ]
@@ -650,6 +931,48 @@ const LINKS_MAP = {
       "label": "Carreau du Temple · Ville de Paris",
       "url": "https://www.paris.fr/lieux/le-carreau-du-temple-19179"
     }
+  ],
+  "Village Saint-Paul (rue Saint-Paul / rue des Jardins-Saint-Paul, 4e)": [
+    {
+      "type": "review",
+      "label": "Village Saint-Paul · VisitParisRegion",
+      "url": "https://www.visitparisregion.com/en/village-saint-paul"
+    }
+  ],
+  "Maison Européenne de la Photographie · MEP (5/7 rue de Fourcy, 4e)": [
+    {
+      "type": "official",
+      "label": "MEP · Ville de Paris",
+      "url": "https://www.paris.fr/lieux/maison-europeenne-de-la-photographie-19189"
+    }
+  ],
+  "Mariage Frères (30 rue du Bourg-Tibourg, 4e)": [
+    {
+      "type": "official",
+      "label": "Mariage Frères · site oficial",
+      "url": "https://www.mariagefreres.com/en/"
+    }
+  ],
+  "Friperies do Marais · Free'P'Star (61 rue de la Verrerie, 4e)": [
+    {
+      "type": "review",
+      "label": "Free'P'Star · VisitParisRegion",
+      "url": "https://www.visitparisregion.com/en/free-p-star"
+    }
+  ],
+  "Hôtel de Soubise · Archives Nationales (60 rue des Francs-Bourgeois, 3e)": [
+    {
+      "type": "official",
+      "label": "Hôtel de Soubise · Archives Nationales",
+      "url": "https://www.archives-nationales.culture.gouv.fr/infos-pratiques/le-musee-des-archives-nationales-lhotel-de-soubise"
+    }
+  ],
+  "Maison de Nicolas Flamel (51 rue de Montmorency, 3e)": [
+    {
+      "type": "review",
+      "label": "Maison de Nicolas Flamel · Paris je t'aime",
+      "url": "https://parisjetaime.com/eng/culture/maison-de-nicolas-flamel-p1825"
+    }
   ]
 };
 
@@ -667,25 +990,25 @@ const TRANSIT_MAP = {
 // ============== BAIRROS config (ranges lat/lng → nome de bairro) ==============
 const BAIRROS_CONFIG = [
   {
-    "nome": "🏛️ Marais Sud (4e)",
-    "latMin": 48.853,
-    "latMax": 48.8605,
-    "lngMin": 2.358,
-    "lngMax": 2.368
-  },
-  {
-    "nome": "🍓 Marais Norte (3e)",
-    "latMin": 48.8605,
-    "latMax": 48.866,
-    "lngMin": 2.358,
-    "lngMax": 2.366
-  },
-  {
-    "nome": "🎨 Pompidou / Stravinsky",
+    "nome": "🎨 Beaubourg / Pompidou",
     "latMin": 48.857,
-    "latMax": 48.861,
+    "latMax": 48.862,
     "lngMin": 2.349,
-    "lngMax": 2.354
+    "lngMax": 2.3535
+  },
+  {
+    "nome": "🏛️ Marais Sul · Saint-Paul (4e)",
+    "latMin": 48.851,
+    "latMax": 48.8588,
+    "lngMin": 2.3535,
+    "lngMax": 2.369
+  },
+  {
+    "nome": "✨ Haut Marais (3e)",
+    "latMin": 48.8588,
+    "latMax": 48.866,
+    "lngMin": 2.351,
+    "lngMax": 2.369
   },
   {
     "nome": "📍 Paris",
