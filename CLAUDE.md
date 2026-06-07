@@ -399,11 +399,11 @@ O toggle continua no template pronto pra reuso — é só (re)adicionar `essenci
 
 ## Features do app (template · todas as viagens herdam)
 
-- **Botão ←Início** (`home-btn` no header): volta pra landing (`../`). Toda viagem em subpasta ganha de graça.
+- **Roteiros NÃO têm botão "voltar pra home"** (decisão Tobia 2026-06-07 · privacidade): como as páginas de cidade (`paris.html`) são compartilhadas, um ←Início no roteiro exporia a home com as viagens pessoais. Volta-pra-home vive só nas **páginas de seção** (Arquivo tem link `../`) · no roteiro, usa-se o botão do navegador.
 - **Botão 🖨️ PDF** (`print-btn` → `window.print()`): `@media print` em `styles.css` esconde nav/mapa/gate e imprime o dia aberto em layout limpo (cards não quebram no meio). É o caminho de "salvar offline / PDF" pra levar em campo.
-- **Busca global na landing** (`regen-landing.py`): campo que filtra os cards de viagem/passeio por nome+descrição e esconde seções vazias.
-- **CITY.txt** numa viagem → agrupa ela numa seção "🗼 <Cidade> · passeios" na landing (coletâneas tipo Marais). Sem CITY.txt → entra em "✈️ Viagens" (ordem cronológica).
-- **Página standalone por cidade** (`regen-landing.py`): além da landing-mãe (`index.html`), gera um `<cidade>.html` na raiz pra CADA cidade com CITY.txt (ex: `paris.html`) · lista SÓ os passeios daquela cidade, sem arquivo nem outras viagens · link separado pra compartilhar (`tsferraro.github.io/viagem/paris.html`) sem expor as viagens pessoais. Auto-regenerada · não interfere na detecção de viagens (é arquivo na raiz, não subpasta).
+- **Busca global na landing** (`regen-landing.py`): campo que filtra os cards por nome+descrição e esconde seções vazias (na home e em cada página de cidade).
+- **CITY.txt** numa viagem → ela é uma **coletânea de cidade**. Na **home** a cidade aparece como **1 card** na seção "🌍 Passeios por cidade" que leva pra página da cidade — os roteiros NÃO listam inline na home (pedido Tobia 2026-06-07). Sem CITY.txt → viagem datada normal em "✈️ Viagens" (ordem cronológica), inline na home.
+- **Página standalone por cidade** (`regen-landing.py`): gera um `<cidade>.html` na raiz pra CADA cidade com CITY.txt (ex: `paris.html`) · lista os passeios daquela cidade, sem arquivo, sem outras viagens e **sem link pra home** · é O link pra compartilhar (`tsferraro.github.io/viagem/paris.html`) sem expor as viagens pessoais. Auto-regenerada · é arquivo na raiz (não subpasta), então não vira "viagem" na detecção.
 
 ## Roteiros paralelos
 
