@@ -286,6 +286,17 @@ function renderMap(){
   const cardsWithTours=day.stops.filter(s=>s.walkingTours&&s.walkingTours.length>0);
   // Helper: limpa nome pra busca no Google Maps (mantém endereço entre parens)
   const cleanForSearch=nm=>nm.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  // Numeração SEQUENCIAL contínua das paradas de walking tour (atravessa TODAS as partes).
+  // Antes cada parte reiniciava em 1 → pino "1" repetia na parte 2 e a legenda (1..N) não batia.
+  // Agora wtSeq.n é global (1..N) e bate com a legenda · partIdx define o estilo (parte 1 cheia · 2+ contorno).
+  const wtSeq=[];
+  cardsWithTours.forEach(card=>{
+    card.walkingTours.forEach((tour,partIdx)=>{
+      tour.stops.forEach(t=>{
+        wtSeq.push({n:wtSeq.length+1,nome:t.nome,coord:t.coord,partIdx,partName:tour.nome.split('·')[0].trim()});
+      });
+    });
+  });
   setTimeout(()=>{
     if(mapInstance){ mapInstance.remove(); mapInstance=null; }
     const div=document.getElementById('map');
@@ -313,41 +324,50 @@ function renderMap(){
         L.polyline(latlngs,{color:day.cor,weight:3,opacity:0.7,dashArray:'6,8'}).addTo(mapInstance);
       }
     }
-    // WALKING TOURS: cada parte com visual próprio (Parte 1: cheia · Parte 2: contorno)
+    // WALKING TOURS: polyline por parte (Parte 1 tracejada normal · Parte 2+ mais fina)
     cardsWithTours.forEach(card=>{
       card.walkingTours.forEach((tour,partIdx)=>{
-        const tourStops=tour.stops;
-        const tourLatLngs=tourStops.map(t=>[t.coord.lat,t.coord.lng]);
-        // Polyline: Parte 1 tracejada normal · Parte 2 tracejada mais fina
+        const tourLatLngs=tour.stops.map(t=>[t.coord.lat,t.coord.lng]);
         const dashStyle=partIdx===0?'4,5':'2,6';
         L.polyline(tourLatLngs,{color:day.cor,weight:2.5,opacity:0.85,dashArray:dashStyle}).addTo(mapInstance);
-        // Marcadores: Parte 1 preenchidos · Parte 2 contorno (mesma cor)
-        const markerStyle=partIdx===0
-          ?`background:${day.cor};color:#fff;border:2px solid #fff`
-          :`background:#fff;color:${day.cor};border:2px solid ${day.cor}`;
-        tourStops.forEach(t=>{
-          const icon=L.divIcon({
-            className:'wt-marker',
-            html:`<div style="${markerStyle}">${t.n}</div>`,
-            iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
-          });
-          const searchName=cleanForSearch(t.nome);
-          const url=`https://www.google.com/maps/search/${encodeURIComponent(searchName)}/@${t.coord.lat},${t.coord.lng},17z`;
-          const popupHtml=`<div class="pp-time" style="color:${day.cor}">${tour.nome.split('·')[0].trim()} · parada ${t.n}</div>
-            <div class="pp-name">${t.nome}</div>
-            <a class="pp-link" style="background:${day.cor}" href="${url}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
-          L.marker([t.coord.lat,t.coord.lng],{icon})
-            .bindPopup(popupHtml,{maxWidth:240})
-            .addTo(mapInstance);
-        });
       });
     });
+    // Marcadores numerados SEQUENCIAIS (1..N contínuo) · Parte 1 cheios · Parte 2+ contorno
+    wtSeq.forEach(item=>{
+      const markerStyle=item.partIdx===0
+        ?`background:${day.cor};color:#fff;border:2px solid #fff`
+        :`background:#fff;color:${day.cor};border:2px solid ${day.cor}`;
+      const icon=L.divIcon({
+        className:'wt-marker',
+        html:`<div style="${markerStyle}">${item.n}</div>`,
+        iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
+      });
+      const searchName=cleanForSearch(item.nome);
+      const url=`https://www.google.com/maps/search/${encodeURIComponent(searchName)}/@${item.coord.lat},${item.coord.lng},17z`;
+      const popupHtml=`<div class="pp-time" style="color:${day.cor}">${item.partName} · parada ${item.n}</div>
+        <div class="pp-name">${item.nome}</div>
+        <a class="pp-link" style="background:${day.cor}" href="${url}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
+      L.marker([item.coord.lat,item.coord.lng],{icon})
+        .bindPopup(popupHtml,{maxWidth:240})
+        .addTo(mapInstance);
+    });
     // Ajustar bounds incluindo walking tours
-    const allLatLngs=[...latlngs];
-    cardsWithTours.forEach(c=>c.walkingTours.forEach(t=>t.stops.forEach(s=>allLatLngs.push([s.coord.lat,s.coord.lng]))));
+    const allLatLngs=[...latlngs,...wtSeq.map(item=>[item.coord.lat,item.coord.lng])];
     mapInstance.fitBounds(allLatLngs,{padding:[40,40]});
   },50);
-  const legend=stops.map((s,i)=>`<div class="stop-legend-item"><div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span></div>`).join('');
+  // Legenda: quando o dia É a própria walking tour (hideStopMarkers), usa a sequência contínua
+  // das paradas WT (bate 1..N com os pinos numerados). Senão, lista os stops do dia (com hora).
+  let legend;
+  if(hideStops && wtSeq.length){
+    legend=wtSeq.map(item=>{
+      const dotStyle=item.partIdx===0
+        ?`background:${day.cor};color:#fff`
+        :`background:#fff;color:${day.cor};border:1.5px solid ${day.cor}`;
+      return `<div class="stop-legend-item"><div class="stop-num" style="${dotStyle}">${item.n}</div><span class="legend-nome">${item.nome.split('(')[0].trim()}</span></div>`;
+    }).join('');
+  } else {
+    legend=stops.map((s,i)=>`<div class="stop-legend-item"><div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span></div>`).join('');
+  }
   // 1 botão por parte de walking tour
   const tourButtons=cardsWithTours.flatMap(card=>
     card.walkingTours.map(t=>
@@ -355,7 +375,7 @@ function renderMap(){
     )
   ).join('');
   return `<div class="map-section">
-    ${stops.length?`<div class="stop-legend">${legend}</div>`:''}
+    ${(stops.length||wtSeq.length)?`<div class="stop-legend">${legend}</div>`:''}
     <div id="map"></div>
     <div class="map-cta">
       <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (walking)</a>

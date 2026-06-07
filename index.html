@@ -20,12 +20,24 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
 .viagem-chev{float:right;color:#9ca3af;font-size:18px;margin-top:6px}
 .footer{margin-top:40px;padding-top:20px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;text-align:center}
 .footer a{color:#6b7280;text-decoration:none}
+.search-box{position:relative;margin-bottom:24px}
+.search-box input{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px 14px 42px;font-size:15px;font-family:inherit;color:#111827;box-shadow:0 1px 3px rgba(0,0,0,0.05);outline:none}
+.search-box input:focus{border-color:#9ca3af}
+.search-box .ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.6}
+.search-empty{display:none;color:#9ca3af;font-size:14px;text-align:center;padding:24px 0}
 </style>
 </head>
 <body>
 <h1>🗺️ Roteiros</h1>
 <div class="sub">Família Ferraro · viagens em planejamento e ativas</div>
 
+<div class="search-box">
+  <span class="ico">🔍</span>
+  <input type="text" id="trip-search" placeholder="Buscar viagem ou passeio..." autocomplete="off">
+</div>
+<div class="search-empty" id="search-empty">Nenhuma viagem encontrada.</div>
+
+<section class="trip-section">
 <h2>✈️ Viagens</h2>
 <div class="viagens">
   <a class="viagem-card" href="./valencia/">
@@ -53,16 +65,19 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
     <div class="viagem-meta">06/Ago → 21/Ago · 16 dias · Pais Tobia</div>
   </a>
 </div>
+</section>
 
+<section class="trip-section">
 <h2>🗼 Paris · passeios</h2>
 <div class="viagens">
   <a class="viagem-card" href="./marais/">
     <span class="viagem-chev">›</span>
     <div class="viagem-emoji">🗺️</div>
     <div class="viagem-nome">Le Marais · Walking Tours</div>
-    <div class="viagem-meta">Família · Profundo · Guloso · Museus escondidos</div>
+    <div class="viagem-meta">Família · Profundo · Guloso · Museus · Lojas</div>
   </a>
 </div>
+</section>
 
 <h2>📦 Arquivo</h2>
 <div class="viagens">
@@ -77,5 +92,29 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
 <div class="footer">
   Roteiros gerados pela skill <a href="https://github.com/tsferraro/viagem" target="_blank">roteiro-viagem</a>
 </div>
+
+<script>
+// Busca global · filtra os cards de viagem/passeio por nome + descrição
+(function(){
+  var input=document.getElementById('trip-search');
+  var empty=document.getElementById('search-empty');
+  if(!input) return;
+  input.addEventListener('input',function(){
+    var q=input.value.toLowerCase().trim();
+    var anyVisible=false;
+    document.querySelectorAll('.trip-section').forEach(function(sec){
+      var secVisible=false;
+      sec.querySelectorAll('.viagem-card').forEach(function(card){
+        var hit=!q||card.textContent.toLowerCase().indexOf(q)>=0;
+        card.style.display=hit?'':'none';
+        if(hit) secVisible=true;
+      });
+      sec.style.display=secVisible?'':'none';
+      if(secVisible) anyVisible=true;
+    });
+    empty.style.display=anyVisible?'none':'block';
+  });
+})();
+</script>
 </body>
 </html>

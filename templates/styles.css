@@ -11,6 +11,9 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 
 /* HEADER */
 .header{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:18px 18px;border-radius:14px;margin-bottom:12px}
+.header-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.home-btn,.print-btn{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.18);text-decoration:none;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;transition:background .15s;font-family:inherit}
+.home-btn:hover,.print-btn:hover{background:rgba(255,255,255,0.22)}
 .header h1{font-size:22px;font-weight:700;letter-spacing:-0.3px}
 .header .sub{font-size:14px;opacity:0.85;margin-top:4px}
 .header .meta{font-size:12px;opacity:0.7;margin-top:8px;display:flex;gap:14px;flex-wrap:wrap}
@@ -280,4 +283,22 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
   .stop-card{padding:12px 12px}
   .stop-name{font-size:14px}
   .overview{font-size:12px}
+}
+
+/* ===== IMPRIMIR / SALVAR PDF (botão 🖨️ no header → window.print) ===== */
+@media print{
+  /* Esconde tudo que é interativo/navegação · imprime só o conteúdo do dia aberto */
+  #auth-gate,.sticky-nav,.header-actions,#map,.map-cta,.footer-legend,.nivel-toggle,.day-tabs-wrap,.reserva-badge,.walking-tour-flag{display:none !important}
+  body,#app{background:#fff !important;color:#000 !important;display:block !important}
+  #app{padding:0 !important;max-width:100% !important}
+  .header{background:#fff !important;color:#000 !important;border:0;border-bottom:2px solid #111;border-radius:0;padding:0 0 10px;margin-bottom:14px}
+  .header h1{color:#000}
+  .header .sub{color:#333;opacity:1}
+  .stop-card,.stop-opcoes,.stop-transit{break-inside:avoid;page-break-inside:avoid;box-shadow:none !important;border:1px solid #ddd}
+  .day-card{box-shadow:none !important}
+  .stop-body,.stop-dicas,.stop-imperdivel,.stop-meta{display:block !important}
+  .stop-source-links a{color:#000 !important}
+  a{text-decoration:none;color:#000}
+  /* Mostra a legenda do mapa (lista de paradas numeradas) que é útil no papel */
+  .stop-legend{border:1px solid #ddd}
 }

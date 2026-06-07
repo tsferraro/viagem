@@ -378,6 +378,32 @@ Nível de detalhe esperado em walking tours / roteiros / road trips / levantamen
 
 Tours-tab que SÃO a própria walking tour (cada card = uma parada numerada) usam `hideStopMarkers: true` no dia (só pins numerados no mapa, sem duplicar).
 
+### Numeração no mapa · regra (corrigido 2026-06-07)
+
+Quando o dia tem walking tour(s) com **mais de uma parte**, os pinos numerados e a legenda do mapa são **sequenciais contínuos** (1..N atravessando todas as partes) — NUNCA reiniciar em 1 na parte 2.
+
+- `render-functions.js · renderMap()` monta `wtSeq` (flatten de todas as partes) e usa `wtSeq.n` global nos marcadores E na legenda.
+- Estilo do pino vem do `partIdx`: **parte 1 = cheio** (cor do dia) · **parte 2+ = contorno**. Pra isso funcionar, as 2 partes têm que estar no `walkingTours` do **mesmo card** (`[Parte1, Parte2]`). Se cada parte fica num card diferente, ambas viram "parte 1" (cheias) — ainda sequencial, só sem distinção visual.
+- Com `hideStopMarkers: true`, a legenda é construída a partir do `wtSeq` (bate 1..N com os pinos) · sem ela, a legenda lista os stops do dia (com hora).
+
+Anti-padrão (bug 2026-06-07): legenda mostrando menos pontos que o mapa (ex: legenda 1-4, mapa 1-6) · acontecia quando o dia tinha walking tour mas **não** tinha `hideStopMarkers` → pins padrão + pins da WT brigavam. Fix: dias-coletânea-de-tour sempre `hideStopMarkers: true`.
+
+### Toggle Básico↔Profundo vs. abas-por-tema
+
+Dois jeitos de oferecer profundidade — **escolher na pergunta 2b**:
+
+1. **Toggle no mesmo dia** (`essencial: true` em alguns stops): o template renderiza um seletor 🔬 Profundo / ⚡ Básico (`renderDay` → `.nivel-toggle`); Básico filtra só os `essencial`. Bom pra **um roteiro datado** onde a família quer poder "cortar pro essencial" num dia cheio.
+2. **Abas-por-tema** (padrão coletânea Marais): cada tema é um DAY/aba separado (Família = a versão leve · Profundo = a versão densa · Guloso · Museus · Lojas). **Quando os temas já são tours distintos, NÃO usar o toggle** — a aba Família já É o "básico", e o toggle vira redundante. Decisão Marais 2026-06-07: removidos os `essencial` (sem toggle), porque as abas resolvem.
+
+O toggle continua no template pronto pra reuso — é só (re)adicionar `essencial: true` nos stops de um dia.
+
+## Features do app (template · todas as viagens herdam)
+
+- **Botão ←Início** (`home-btn` no header): volta pra landing (`../`). Toda viagem em subpasta ganha de graça.
+- **Botão 🖨️ PDF** (`print-btn` → `window.print()`): `@media print` em `styles.css` esconde nav/mapa/gate e imprime o dia aberto em layout limpo (cards não quebram no meio). É o caminho de "salvar offline / PDF" pra levar em campo.
+- **Busca global na landing** (`regen-landing.py`): campo que filtra os cards de viagem/passeio por nome+descrição e esconde seções vazias.
+- **CITY.txt** numa viagem → agrupa ela numa seção "🗼 <Cidade> · passeios" na landing (coletâneas tipo Marais). Sem CITY.txt → entra em "✈️ Viagens" (ordem cronológica).
+
 ## Roteiros paralelos
 
 Casos: família 1ª semana + casal 2ª · pais + amigos · pré-viagem + ativa.
