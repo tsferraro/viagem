@@ -24,6 +24,58 @@ function getPeriodoMeta(p){
   }[p];
 }
 
+// ===== ÁUDIO-GUIA (protótipo · Web Speech API · TTS nativo do device, custo zero) =====
+// Lê sobre + "o que observar" + dicas em voz alta. Habilitado por card via flag `audio:true`.
+// Ponto fraco conhecido: nomes franceses lidos por voz PT-BR (é o que o teste vai avaliar).
+const audioState={btn:null,speaking:false};
+function stripForSpeech(html){
+  return (html||'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'e').replace(/&[a-z]+;/g,' ').replace(/\s+/g,' ').trim();
+}
+function buildNarration(stop){
+  const nome=stop.nome.replace(/\s*\([^)]*\)/g,'').trim(); // tira endereço entre parens da fala
+  const parts=[nome+'.'];
+  if(stop.sobre) parts.push(stripForSpeech(stop.sobre));
+  if(stop.imperdivel) parts.push('O que observar: '+stripForSpeech(stop.imperdivel)+'.');
+  if(stop.dicas&&stop.dicas.length) parts.push('Dicas. '+stop.dicas.map(stripForSpeech).join('. ')+'.');
+  return parts.join(' ');
+}
+function pickPtVoice(){
+  const vs=('speechSynthesis' in window)?window.speechSynthesis.getVoices():[];
+  return vs.find(v=>/pt[-_]BR/i.test(v.lang)) || vs.find(v=>/^pt/i.test(v.lang)) || null;
+}
+function resetAudioBtn(){
+  if(audioState.btn){
+    audioState.btn.classList.remove('playing');
+    const lbl=audioState.btn.querySelector('.audio-label'); if(lbl) lbl.textContent='Ouvir';
+    const ico=audioState.btn.querySelector('.audio-ico'); if(ico) ico.textContent='▶️';
+  }
+}
+function stopAudio(){
+  if('speechSynthesis' in window) window.speechSynthesis.cancel();
+  resetAudioBtn();
+  audioState.btn=null; audioState.speaking=false;
+}
+function playStopAudio(stop,btn){
+  if(!('speechSynthesis' in window)){ alert('Seu navegador não suporta o áudio-guia (Web Speech).'); return; }
+  const wasThis=audioState.btn===btn && audioState.speaking;
+  stopAudio();
+  if(wasThis) return; // clicou de novo no mesmo botão → era pra parar
+  const u=new SpeechSynthesisUtterance(buildNarration(stop));
+  u.lang='pt-BR'; u.rate=1.0; u.pitch=1.0;
+  const v=pickPtVoice(); if(v) u.voice=v;
+  u.onend=stopAudio; u.onerror=stopAudio;
+  audioState.btn=btn; audioState.speaking=true;
+  btn.classList.add('playing');
+  const lbl=btn.querySelector('.audio-label'); if(lbl) lbl.textContent='Parar';
+  const ico=btn.querySelector('.audio-ico'); if(ico) ico.textContent='⏸️';
+  window.speechSynthesis.speak(u);
+}
+function findStopByName(nm){
+  for(const d of DAYS){ for(const s of d.stops){ if(s.nome===nm) return s; } }
+  return null;
+}
+
+
 function getMapsUrl(stop){
   // Pra opcoes (3+ alternativas), usar nome da PRIMEIRA opção pra link específico
   let queryName=stop.nome;
@@ -88,6 +140,8 @@ function renderCard(stop){
     const tourTitles=stop.walkingTours.map(t=>t.nome).join(' + ').replace(/"/g,'&quot;');
     walkingTourFlag=`<div class="walking-tour-flag" title="${tourTitles}">🚶 WALKING TOUR · ${partsLabel}</div>`;
   }
+  // Áudio-guia (protótipo · só em cards com audio:true)
+  const audioBtn=stop.audio?`<button class="audio-btn" data-audio="${stop.nome.replace(/"/g,'&quot;')}"><span class="audio-ico">▶️</span> <span class="audio-label">Ouvir</span></button>`:'';
   return `<div class="stop-card" data-risco="${stop.risco||''}">
     <div class="stop-head">
       <div class="stop-emoji">${stop.emoji}</div>
@@ -98,6 +152,7 @@ function renderCard(stop){
         <div class="stop-cat">${stop.cat}${riskBadge}</div>
       </div>
     </div>
+    ${audioBtn}
     ${stop.sobre?`<div class="stop-body"><p>${stop.sobre}</p></div>`:''}
     ${stop.imperdivel?`<div class="stop-imperdivel"><strong>⭐ IMPERDÍVEL</strong>${stop.imperdivel}</div>`:''}
     ${stop.dicas?`<div class="stop-dicas">
@@ -431,6 +486,7 @@ function centerActiveTab(){
 
 function renderInnerContent(){
   // Re-render apenas conteúdo do dia (sem rebuildar os tabs)
+  stopAudio(); // para narração ao trocar de dia/aba
   const inner=document.getElementById('inner-content');
   if(!inner) return;
   if(state.view==='guia'){
@@ -474,6 +530,15 @@ function bindCardHandlers(){
       renderInnerContent();
     });
   });
+  document.querySelectorAll('[data-audio]').forEach(b=>{
+    if(b.__bound) return;
+    b.__bound=true;
+    b.addEventListener('click',e=>{
+      e.stopPropagation();
+      const stop=findStopByName(b.dataset.audio);
+      if(stop) playStopAudio(stop,b);
+    });
+  });
   if(state.expandStop){
     document.querySelectorAll('.stop-card .stop-name').forEach(el=>{
       if(el.textContent.trim()===state.expandStop){
@@ -487,6 +552,7 @@ function bindCardHandlers(){
 }
 
 function render(){
+  if(typeof stopAudio==='function') stopAudio(); // para narração ao trocar de view
   let content='';
   if(state.view==='guia'||state.view==='mapa'){
     const tabsHtml=renderDayTabs();
@@ -536,6 +602,11 @@ function render(){
 }
 
 function init(){
+  // Áudio-guia: força o carregamento da lista de vozes (iOS/Android carregam async)
+  if('speechSynthesis' in window){
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged=()=>window.speechSynthesis.getVoices();
+  }
   document.getElementById('overview').innerHTML=renderOverview();
   
   // Legenda: collapse persistente

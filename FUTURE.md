@@ -55,6 +55,7 @@ Skills e melhorias planejadas. Cada item tem trigger de quando vale executar.
 | ~~Modo "imprimir" · gera PDF a partir do HTML~~ ✅ feito v1.6 (botão 🖨️ + `@media print`) | — |
 | **Idioma / i18n** · toggle PT↔EN↔FR no roteiro (strings + conteúdo dos cards) · útil pra compartilhar com visitante não-lusófono que vier a Paris | Registrado 2026-06-07 a pedido do Tobia · fazer **só quando surgir a necessidade real** (família/amigo não-PT usando o roteiro) |
 | Export GPX dos walking tours · pra GPS hiking | Quando WT incluir hiking trail (Açores, montanha) |
+| **Áudio-guia** · botão ▶️ Ouvir por card lê sobre+imperdível+dicas via Web Speech API (TTS nativo, custo zero, cabe no single-file) · **protótipo ativo em `marais/` card Place des Vosges** (flag `audio:true`) | **Em teste 2026-06-07.** Decisão de escalar pra coletânea toda depende do veredito do Tobia sobre (a) qualidade da voz PT-BR no iPhone e (b) pronúncia dos nomes franceses. Se nomes incomodarem: avaliar voz-francesa-pros-nomes (troca de `voice` mid-fala) ou campo `audioText` separado do visível. Áudio gravado/IA (ElevenLabs) **descartado** por ora (quebra single-file + custo). |
 | Multi-device sync de reservas via Cloudflare KV ou Supabase | Se família reclamar de divergência de reservas |
 
 ---
