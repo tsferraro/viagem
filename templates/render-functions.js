@@ -41,7 +41,21 @@ function buildNarration(stop){
 }
 function pickPtVoice(){
   const vs=('speechSynthesis' in window)?window.speechSynthesis.getVoices():[];
-  return vs.find(v=>/pt[-_]BR/i.test(v.lang)) || vs.find(v=>/^pt/i.test(v.lang)) || null;
+  const pt=vs.filter(v=>/^pt/i.test(v.lang));
+  if(!pt.length) return null;
+  // Ranqueia: prioriza vozes neurais/enhanced/Siri/Google · penaliza as "compact" (robóticas)
+  const score=v=>{
+    const n=(v.name||'').toLowerCase();
+    let s=0;
+    if(/pt[-_]br/i.test(v.lang)) s+=3;
+    if(/siri/.test(n)) s+=7;
+    if(/enhanced|premium|neural|natural/.test(n)) s+=6;
+    if(/google/.test(n)) s+=4;
+    if(/luciana|joana|catarina|francisca|helena|ant[oô]nio/.test(n)) s+=2;
+    if(/compact|eloquence/.test(n)) s-=6;
+    return s;
+  };
+  return pt.slice().sort((a,b)=>score(b)-score(a))[0];
 }
 function resetAudioBtn(){
   if(audioState.btn){
@@ -61,8 +75,8 @@ function playStopAudio(stop,btn){
   stopAudio();
   if(wasThis) return; // clicou de novo no mesmo botão → era pra parar
   const u=new SpeechSynthesisUtterance(buildNarration(stop));
-  u.lang='pt-BR'; u.rate=1.0; u.pitch=1.0;
-  const v=pickPtVoice(); if(v) u.voice=v;
+  u.lang='pt-BR'; u.rate=0.95; u.pitch=1.0;
+  const v=pickPtVoice(); if(v){ u.voice=v; u.lang=v.lang; }
   u.onend=stopAudio; u.onerror=stopAudio;
   audioState.btn=btn; audioState.speaking=true;
   btn.classList.add('playing');
