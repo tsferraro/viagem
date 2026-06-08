@@ -96,7 +96,9 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
 .nivel-label{font-size:12px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:0.4px}
 .nivel-btn{border:1.5px solid #e5e7eb;background:#fff;color:#6b7280;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;transition:all 0.15s}
 .nivel-btn.active{background:var(--day-color);border-color:var(--day-color);color:#fff}
-.audio-btn{display:inline-flex;align-items:center;gap:6px;margin-top:10px;border:1.5px solid var(--day-color,#9333ea);background:#fff;color:var(--day-color,#9333ea);font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;cursor:pointer;transition:all .15s;font-family:inherit}
+.audio-row{display:flex;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap}
+.audio-voice{border:1px solid #e5e7eb;background:#fff;color:#374151;font-size:12px;font-weight:600;padding:7px 10px;border-radius:999px;font-family:inherit;max-width:170px}
+.audio-btn{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--day-color,#9333ea);background:#fff;color:var(--day-color,#9333ea);font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;cursor:pointer;transition:all .15s;font-family:inherit}
 .audio-btn:hover{background:var(--day-color,#9333ea);color:#fff}
 .audio-btn.playing{background:var(--day-color,#9333ea);color:#fff;animation:audiopulse 1.4s ease-in-out infinite}
 @keyframes audiopulse{0%,100%{opacity:1}50%{opacity:0.65}}
@@ -293,7 +295,7 @@ tr.clickable:hover .ov-date-pill::after{color:#6366f1}
 /* ===== IMPRIMIR / SALVAR PDF (botão 🖨️ no header → window.print) ===== */
 @media print{
   /* Esconde tudo que é interativo/navegação · imprime só o conteúdo do dia aberto */
-  #auth-gate,.sticky-nav,.header-actions,#map,.map-cta,.footer-legend,.nivel-toggle,.day-tabs-wrap,.reserva-badge,.walking-tour-flag,.audio-btn{display:none !important}
+  #auth-gate,.sticky-nav,.header-actions,#map,.map-cta,.footer-legend,.nivel-toggle,.day-tabs-wrap,.reserva-badge,.walking-tour-flag,.audio-row{display:none !important}
   body,#app{background:#fff !important;color:#000 !important;display:block !important}
   #app{padding:0 !important;max-width:100% !important}
   .header{background:#fff !important;color:#000 !important;border:0;border-bottom:2px solid #111;border-radius:0;padding:0 0 10px;margin-bottom:14px}

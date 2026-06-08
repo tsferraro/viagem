@@ -39,23 +39,42 @@ function buildNarration(stop){
   if(stop.dicas&&stop.dicas.length) parts.push('Dicas. '+stop.dicas.map(stripForSpeech).join('. ')+'.');
   return parts.join(' ');
 }
-function pickPtVoice(){
+function ptVoices(){
   const vs=('speechSynthesis' in window)?window.speechSynthesis.getVoices():[];
-  const pt=vs.filter(v=>/^pt/i.test(v.lang));
+  return vs.filter(v=>/^pt/i.test(v.lang));
+}
+let selectedVoiceURI='';
+try{ selectedVoiceURI=localStorage.getItem('audioVoiceURI')||''; }catch(e){}
+function pickPtVoice(){
+  const pt=ptVoices();
   if(!pt.length) return null;
-  // Ranqueia: prioriza vozes neurais/enhanced/Siri/Google · penaliza as "compact" (robóticas)
+  // Ranqueia: prioriza vozes neurais/aprimoradas/Siri/Google · penaliza "compact"/Eloquence (robóticas)
   const score=v=>{
     const n=(v.name||'').toLowerCase();
     let s=0;
     if(/pt[-_]br/i.test(v.lang)) s+=3;
     if(/siri/.test(n)) s+=7;
-    if(/enhanced|premium|neural|natural/.test(n)) s+=6;
+    if(/aprimorad|enhanced|premium|neural|natural/.test(n)) s+=6;
     if(/google/.test(n)) s+=4;
-    if(/luciana|joana|catarina|francisca|helena|ant[oô]nio/.test(n)) s+=2;
+    if(/luciana|joana|felipe|fernanda|catarina|francisca|helena/.test(n)) s+=2;
     if(/compact|eloquence/.test(n)) s-=6;
     return s;
   };
   return pt.slice().sort((a,b)=>score(b)-score(a))[0];
+}
+function getChosenVoice(){
+  const pt=ptVoices();
+  if(selectedVoiceURI){ const m=pt.find(v=>v.voiceURI===selectedVoiceURI); if(m) return m; }
+  return pickPtVoice();
+}
+function fillVoiceSelects(){
+  const pt=ptVoices();
+  document.querySelectorAll('.audio-voice').forEach(sel=>{
+    if(sel.dataset.filled==='1' && sel.options.length>1) return;
+    sel.innerHTML='<option value="">🔊 Voz automática</option>'+pt.map(v=>`<option value="${v.voiceURI}">${v.name}</option>`).join('');
+    sel.value=selectedVoiceURI;
+    sel.dataset.filled='1';
+  });
 }
 function resetAudioBtn(){
   if(audioState.btn){
@@ -76,7 +95,7 @@ function playStopAudio(stop,btn){
   if(wasThis) return; // clicou de novo no mesmo botão → era pra parar
   const u=new SpeechSynthesisUtterance(buildNarration(stop));
   u.lang='pt-BR'; u.rate=0.95; u.pitch=1.0;
-  const v=pickPtVoice(); if(v){ u.voice=v; u.lang=v.lang; }
+  const v=getChosenVoice(); if(v){ u.voice=v; u.lang=v.lang; }
   u.onend=stopAudio; u.onerror=stopAudio;
   audioState.btn=btn; audioState.speaking=true;
   btn.classList.add('playing');
@@ -154,8 +173,11 @@ function renderCard(stop){
     const tourTitles=stop.walkingTours.map(t=>t.nome).join(' + ').replace(/"/g,'&quot;');
     walkingTourFlag=`<div class="walking-tour-flag" title="${tourTitles}">🚶 WALKING TOUR · ${partsLabel}</div>`;
   }
-  // Áudio-guia (protótipo · só em cards com audio:true)
-  const audioBtn=stop.audio?`<button class="audio-btn" data-audio="${stop.nome.replace(/"/g,'&quot;')}"><span class="audio-ico">▶️</span> <span class="audio-label">Ouvir</span></button>`:'';
+  // Áudio-guia (protótipo · só em cards com audio:true) · botão + seletor de voz
+  const audioBtn=stop.audio?`<div class="audio-row">
+    <button class="audio-btn" data-audio="${stop.nome.replace(/"/g,'&quot;')}"><span class="audio-ico">▶️</span> <span class="audio-label">Ouvir</span></button>
+    <select class="audio-voice" title="Escolher voz" aria-label="Voz"><option value="">🔊 Voz automática</option></select>
+  </div>`:'';
   return `<div class="stop-card" data-risco="${stop.risco||''}">
     <div class="stop-head">
       <div class="stop-emoji">${stop.emoji}</div>
@@ -553,6 +575,18 @@ function bindCardHandlers(){
       if(stop) playStopAudio(stop,b);
     });
   });
+  fillVoiceSelects();
+  document.querySelectorAll('.audio-voice').forEach(sel=>{
+    if(sel.__bound) return;
+    sel.__bound=true;
+    sel.addEventListener('click',e=>e.stopPropagation());
+    sel.addEventListener('change',e=>{
+      e.stopPropagation();
+      selectedVoiceURI=sel.value;
+      try{ localStorage.setItem('audioVoiceURI',selectedVoiceURI); }catch(e){}
+      stopAudio();
+    });
+  });
   if(state.expandStop){
     document.querySelectorAll('.stop-card .stop-name').forEach(el=>{
       if(el.textContent.trim()===state.expandStop){
@@ -619,7 +653,7 @@ function init(){
   // Áudio-guia: força o carregamento da lista de vozes (iOS/Android carregam async)
   if('speechSynthesis' in window){
     window.speechSynthesis.getVoices();
-    window.speechSynthesis.onvoiceschanged=()=>window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged=()=>{ window.speechSynthesis.getVoices(); if(typeof fillVoiceSelects==='function') fillVoiceSelects(); };
   }
   document.getElementById('overview').innerHTML=renderOverview();
   
