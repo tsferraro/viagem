@@ -43,6 +43,13 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 
 ## Evolução da skill
 
+### v1.7 · 2026-06-07 (navegação + privacidade da landing · coletâneas por cidade)
+- **Cidade vira "aba à parte"**: na home cada cidade com `CITY.txt` é **1 card** na seção **🌍 Cidades** → leva pra `<cidade>.html` (ex: `paris.html`). Os roteiros da cidade **NÃO listam inline na home** · só na página da cidade. Pedido explícito do Tobia (quer compartilhar Paris sem misturar com as viagens pessoais).
+- **Página de cidade é o link compartilhável** · standalone, **sem link pra home** (senão expõe as viagens privadas ao compartilhar). `regen-landing.py` gera ela automática junto com a landing-mãe.
+- **Roteiros NÃO têm botão "voltar pra home"** (mesma razão de privacidade): a página de cidade é compartilhada · um ←Início no roteiro vazaria a home. Mantido só o 🖨️ PDF no header do roteiro.
+- **Volta-pra-home vive só nas páginas de seção** · `archive/index.html` (Viagens passadas) tem botão **← Início**. Dentro de roteiro/cidade, usa-se o botão do navegador.
+- **Cuidado cache GitHub Pages**: Tobia reportou ver layout antigo (Pages CDN + cache do navegador) · ao validar "não foi", checar o arquivo gerado antes de re-mexer · pode ser só cache. Refresh forçado / aba anônima resolve.
+
 ### v1.6 · 2026-06-07 (coletânea Marais · features de app + fix de mapa)
 - **Fix numeração sequencial no mapa**: WT multi-parte numera 1..N contínuo (antes parte 2 reiniciava em 1). Legenda construída do `wtSeq` quando `hideStopMarkers` → bate 1:1 com os pinos.
 - **Abas-por-tema vs toggle Básico↔Profundo documentado** na CLAUDE.md (pergunta 2b). Coletânea = abas; roteiro datado = toggle. Toggle segue no template pra reuso.
