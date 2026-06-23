@@ -1251,43 +1251,84 @@ const DAYS = [
   },
 
   {
-    date:"Dom 12/Jul", tema:"Broadway · MJ Musical", temaCurto:"Broadway",
-    bairro:"Manhattan — UES + Midtown", grupo:true,
-    nota:"⚠️ MJ Musical proíbe <4 anos — babá pra pequena no airbnb confirmada? Manhã relax em Brooklyn → Uber pra UES → almoço leve → musical 15h → jantar Hell's Kitchen. O MET saiu daqui (foi pra sexta), então o dia ficou bem mais leve.",
+    date:"Dom 12/Jul", tema:"DUMBO + Ponte + MJ Musical", temaCurto:"DUMBO+MJ",
+    bairro:"Brooklyn DUMBO → Manhattan (Tribeca + Midtown)", grupo:true,
+    nota:"A pequena fica com a família hoje → vocês fazem DUMBO + travessia da Brooklyn Bridge de manhã (sem carrinho, ritmo de adulto) → almoço em Tribeca já do lado de Manhattan → musical 15h → jantar Hell's Kitchen. ⚠️ MJ Musical proíbe <4 anos. Sair da ponte ~12h15 dá folga confortável pro show.",
     cor:"#ec4899", gradA:"#831843", gradB:"#be185d",
     stops:[
       {
-        hora:"manhã", emoji:"☕", periodo:"manha", tipo:"opcoes",
-        nome:"Manhã relax · Greenpoint/Williamsburg",
-        cat:"Sem corrida — o dia do musical só começa à tarde",
-        coord:{lat:40.7244,lng:-73.9434},
-        opcoes:[
-          {nome:"Brunch tardio no bairro", desc:"Aproveitar Greenpoint sem pressa antes de cruzar pra Manhattan. Dormir até tarde com a pequena, café com calma.", preco:"$$", dist:"Base"},
-          {nome:"WNYC Transmitter Park", desc:"Parque à beira do East River com vista de Manhattan + pier + playground. Bom pra gastar energia da pequena antes da babá.", preco:"Grátis", dist:"10 min"},
-          {nome:"McCarren Park", desc:"Parque grande entre Greenpoint e Williamsburg, playground e sombra. Espaço pra correr de manhã.", preco:"Grátis", dist:"15 min"}
+        hora:"9:00", emoji:"⛴️", periodo:"manha", tipo:"transit",
+        nome:"NYC Ferry · India St → DUMBO",
+        cat:"~15 min · $4 · doca a 8 min da base · pequena fica com a família",
+        coord:{lat:40.7029,lng:-73.9939}
+      },
+      {
+        hora:"9:30", emoji:"🌊", periodo:"manha", tipo:"card", risco:"yellow",
+        nome:"Brooklyn Bridge Park · Pier 1 + Pebble Beach",
+        cat:"Parque ribeirinho · vista Manhattan",
+        sobre:"Parque de 34 hectares inaugurado em 2010 ao longo do East River. Pier 1 é a entrada norte com gramados, esculturas, playground (Pier 2 tem o famoso). **Pebble Beach** é uma pequena praia de pedrinhas naturais na borda do East River — vista frontal da Brooklyn Bridge + skyline financeiro. Lugar quase secreto, calmo de manhã.",
+        imperdivel:"Pebble Beach com a Brooklyn Bridge enquadrando o skyline ao fundo — uma das melhores fotos de Brooklyn",
+        dicas:[
+          "Sem a pequena hoje = ritmo de adulto, dá pra cobrir a annotations e atravessar a ponte",
+          "Pier 1 tem banheiros públicos limpos",
+          "Empire Stores adjacente tem cafés Brooklyn Roasting + lojinhas",
+          "Conservancy oferece tour grátis sábados 11h",
+          "🗺️ WALKING TOUR DUMBO (40min · 1km · 6 paradas) — ver aba Mapa pra rota completa",
+          "1️⃣ **Old Fulton Street** · rua mais antiga de Brooklyn (1814), paralelepípedos originais, **Eagle Warehouse** (1893) que abrigava o Brooklyn Daily Eagle (jornal do Walt Whitman)",
+          "2️⃣ **Brooklyn Bridge Anchorage** · colunas de granito gigantes que sustentam a ponte. Nos anos 80, usado como galeria de arte experimental ('The Anchorage Sessions' — Laurie Anderson, Philip Glass tocaram aqui)",
+          "3️⃣ **Front Street vintage shops** · ruazinha de tijolo vermelho com **Front General Store** (objetos vintage curados) e cafeterias artesanais",
+          "4️⃣ 📸 **Manhattan Bridge view spot** (Washington & Water) · A FOTO mais icônica de Brooklyn · *Once Upon a Time in America* (1984), *Captain America: Civil War*, milhões de Instagrams",
+          "5️⃣ **Empire Stores** · 7 warehouses de tijolo de 1869 (originalmente armazém de café e tabaco do porto), restaurados em 2017 com rooftop bar, **Time Out Market Brooklyn** e shops",
+          "6️⃣ **St. Ann's Warehouse** (45 Water St, Tobacco Warehouse 1860) · teatro experimental dentro do antigo armazém de tabaco — David Byrne, Sigourney Weaver, Lou Reed se apresentaram aqui"
+        ],
+        duracao:"1h-1h15 (BBP) + 40min walking tour", custo:"Gratuito", acessibilidade:"100% acessível",
+        coord:{lat:40.7016,lng:-73.9970},
+        walkingTours:[
+          {
+            nome:"DUMBO · 🏭 Industrial Past",
+            descricao:"Old Fulton → Anchorage → Manhattan Bridge view → Empire Stores · ~40min",
+            stops:[
+              {n:1,nome:"Old Fulton Street + Eagle Warehouse (1893)",coord:{lat:40.7022,lng:-73.9943}},
+              {n:2,nome:"Brooklyn Bridge Anchorage",coord:{lat:40.7028,lng:-73.9929}},
+              {n:3,nome:"Front General Store (143 Front St)",coord:{lat:40.7036,lng:-73.9904}},
+              {n:4,nome:"Manhattan Bridge view spot (Washington & Water)",coord:{lat:40.7037,lng:-73.9893}},
+              {n:5,nome:"Empire Stores + Time Out Market (53-83 Water St)",coord:{lat:40.7034,lng:-73.9893}},
+              {n:6,nome:"St. Ann's Warehouse (45 Water St)",coord:{lat:40.7042,lng:-73.9883}}
+            ]
+          }
         ]
       },
       {
-        hora:"12:00", emoji:"🚕", periodo:"tarde", tipo:"transit",
-        nome:"Uber Greenpoint → UES",
-        cat:"~30 min · almoço antes do musical",
-        coord:{lat:40.7780,lng:-73.9528}
+        hora:"11:00", emoji:"🌉", periodo:"manha", tipo:"card", risco:"yellow",
+        nome:"Brooklyn Bridge Walk a pé",
+        cat:"DUMBO → Civic Center Manhattan · 1.83km",
+        sobre:"A travessia a pé pela Brooklyn Bridge é uma das experiências definitivas de NY. Inaugurada em 1883, foi a maior ponte suspensa do mundo na época. Travessia leva ~1h-1h15 sem pressa, com paradas pra fotos. O caminho pedonal fica no piso superior, separado dos carros. Sem carrinho hoje, a subida é tranquila.",
+        imperdivel:"O ponto central da ponte (Tower #2) tem a vista mais icônica · Brooklyn pra trás, Manhattan na frente",
+        dicas:[
+          "Iniciar pelo lado DUMBO (Washington St) — subida mais gradual",
+          "Linha amarela divide pedestres de ciclistas (NÃO passar pra ciclovia)",
+          "Sem sombra — chapéu + água, julho ao meio-dia pega sol",
+          "Final no lado Manhattan: City Hall Park (banheiros) · Tribeca a 10 min a pé pro almoço",
+          "Termina em Manhattan = já fica do lado certo pro teatro à tarde (não volta pro Brooklyn)"
+        ],
+        duracao:"1h-1h15", custo:"Gratuito", acessibilidade:"Subida moderada (sem carrinho hoje, fácil)",
+        coord:{lat:40.7061,lng:-73.9969}
       },
       {
         hora:"12:30", emoji:"🍽️", periodo:"tarde", tipo:"opcoes",
-        nome:"Almoço · Upper East Side",
-        cat:"3 opções a 5-10 min do MET",
-        coord:{lat:40.7780,lng:-73.9528},
+        nome:"Almoço · Tribeca",
+        cat:"3 opções perto do fim da ponte",
+        coord:{lat:40.7193,lng:-74.0093},
         opcoes:[
-          {nome:"Sant Ambroeus (5th & 78th)", desc:"Italiano sofisticado estilo Milano. Risotto excelente, cappuccino premium. Reserva online recomendada domingo.", preco:"$$$", dist:"5 min do MET"},
-          {nome:"Williamsburg Pizza UES (87th & 2nd)", desc:"Pizza por fatia $4-5, rápida, sem reserva. Mesma marca do Williamsburg.", preco:"$", dist:"10 min do MET"},
-          {nome:"Le Pain Quotidien UES", desc:"Sit-down com high chair, cardápio infantil, salgadas/saladas saudáveis.", preco:"$$", dist:"5 min do MET"}
+          {nome:"Locanda Verde", desc:"Restaurante de Andrew Carmellini, parceria com Robert De Niro. Italiano elevado em ambiente de loft. Reserva via Resy.", preco:"$$$", dist:"10 min do fim da ponte"},
+          {nome:"Bubby's Tribeca", desc:"All-day American comfort, café da manhã servido o dia todo. Bom pra grupo.", preco:"$$", dist:"8 min da ponte"},
+          {nome:"Whole Foods Tribeca", desc:"Hot bar + saladas pra montar prato + comer no Hudson River Park (Pier 25). Mais rápido se o tempo apertar.", preco:"$", dist:"15 min da ponte"}
         ]
       },
       {
         hora:"14:00", emoji:"🚕", periodo:"tarde", tipo:"transit",
-        nome:"Uber UES → Neil Simon Theatre",
-        cat:"~15 min · entrada 14h30 pra acomodar",
+        nome:"Uber Tribeca → Neil Simon Theatre",
+        cat:"~20 min · entrada 14h30 pra acomodar",
         coord:{lat:40.7631,lng:-73.9844}
       },
       {
