@@ -1070,9 +1070,9 @@ const DAYS = [
   },
 
   {
-    date:"Sex 10/Jul", tema:"Midtown · Top of Rock", temaCurto:"Midtown",
-    bairro:"Manhattan — Midtown", grupo:true,
-    nota:"Dia montado em torno do Top of the Rock 11h ✅ RESERVADO. Bryant Park abertura → Top of Rock → LEGO Store (criança grátis brinca de DUPLO) → Grand Central → Times Square (passagem).",
+    date:"Sex 10/Jul", tema:"Midtown · Top of Rock + MET", temaCurto:"Midtown",
+    bairro:"Manhattan — Midtown + UES", grupo:true,
+    nota:"Dia montado em torno do Top of the Rock 11h ✅ RESERVADO + MET à tarde (movido do domingo). Bryant Park → Top of Rock → almoço Midtown → Uber pro MET (Egyptian wing + Temple of Dendur). Cortados LEGO/Grand Central/Times Square pra abrir espaço pro MET.",
     cor:"#f59e0b", gradA:"#78350f", gradB:"#b45309",
     stops:[
       {
@@ -1146,55 +1146,32 @@ const DAYS = [
         ]
       },
       {
-        hora:"13:30", emoji:"🧱", periodo:"tarde", tipo:"card", risco:"green",
-        nome:"LEGO Store · 5th Ave",
-        cat:"620 5th Ave · flagship NYC",
-        sobre:"Flagship Store da LEGO em Nova York, dentro do Rockefeller Center. **Tem estações de DUPLO e LEGO gratuitas onde a criança brinca por 1h sem comprar nada**. Modelos gigantes (a Rockefeller Center Christmas Tree em LEGO, Statue of Liberty 1.5m). Pode montar minifig customizado na Mini-Figure Factory.",
-        imperdivel:"Estações de jogo livre + montar minifig personalizado da pequena",
-        dicas:[
-          "Brincar grátis nas estações sem precisar comprar",
-          "Mini-Figure Factory: $15, pode escolher cabeça/corpo/acessório custom",
-          "Banheiros públicos no Rockefeller Center próximo (não tem dentro)",
-          "Cardápio infantil emocional — minha sugestão: não prometer comprar antes de ir, pra evitar drama na saída"
-        ],
-        duracao:"45min-1h", custo:"Grátis brincar · $15 minifig opcional", acessibilidade:"100% acessível",
-        coord:{lat:40.7589,lng:-73.9784}
+        hora:"13:30", emoji:"🚕", periodo:"tarde", tipo:"transit",
+        nome:"Uber Midtown → MET",
+        cat:"~15 min · 5th Ave & 82nd St",
+        coord:{lat:40.7794,lng:-73.9632}
       },
       {
-        hora:"14:45", emoji:"🚂", periodo:"tarde", tipo:"card", risco:"yellow",
-        nome:"Grand Central Terminal",
-        cat:"42nd St · estação histórica 1913",
-        sobre:"Estação inaugurada em 1913, salva da demolição em 1978 por Jackie Onassis. **Hall central tem o teto Beaux-Arts pintado com constelações** (Orion, Aquarius, etc) — invertido (espelhado) por erro do pintor. Whispering Gallery no nível inferior: arco de pedra com acústica anômala — fala num canto, ouve no canto oposto. Trens chegando/partindo o tempo todo — irresistível pra criança pequena.",
-        imperdivel:"Teto pintado de constelações + Whispering Gallery (fica no nível Dining Concourse, antes do Oyster Bar)",
+        hora:"14:00", emoji:"🏛️", periodo:"tarde", tipo:"card", risco:"yellow",
+        nome:"Metropolitan Museum of Art (MET)",
+        cat:"5th Ave & 82nd · maior museu dos EUA · 1870",
+        sobre:"Maior museu de arte dos EUA e um dos quatro maiores do mundo (com Louvre, British Museum, Hermitage). 2 milhões de obras cobrindo 5.000 anos. Fundado em 1870, no edifício atual desde 1880. 17 departamentos curatoriais. Acervo tão amplo que ninguém vê tudo — turistas seletivos focam Egito, Grécia/Roma, pintura europeia.",
+        imperdivel:"Temple of Dendur (Sackler Wing) — templo egípcio inteiro do século 15 a.C., presente do governo egípcio aos EUA em 1965. Reconstruído pedra por pedra, com piscina refletora simulando o Nilo.",
         dicas:[
-          "Banheiros públicos limpos no Dining Concourse",
-          "Oyster Bar (1913) interno é restaurante histórico — só passa olhar",
-          "Grand Central Market lateral: queijos, pães, café (Murray's Cheese)",
-          "Apple Store dentro da estação (último andar)",
-          "Saída pra Vanderbilt Hall (eventos), Lexington Ave + 42nd St"
+          "Comprar online: $30 adulto, criança <12 grátis (ainda assim pega ticket grátis)",
+          "Plano com 3 anos: Egyptian Wing (1h) → Greek/Roman (30min) → MET Rooftop (vista Central Park, 15min) = 2h é o máximo",
+          "MET Rooftop Garden Bar abre maio-out: drink com vista do parque + skyline (só adulto)",
+          "Sexta o MET fecha 21h (Fri/Sat horário estendido) · chegar 14h pega a tarde sem fila de abertura",
+          "American Wing tem Washington Crossing the Delaware (1851)",
+          "Carrinho permitido em todas galerias",
+          "Banheiros: vários por andar, perto dos elevadores"
         ],
-        duracao:"30-45min", custo:"Gratuito", acessibilidade:"100% acessível",
-        coord:{lat:40.7527,lng:-73.9772}
+        duracao:"2h30", custo:"$60 casal (pequena grátis)", acessibilidade:"100% acessível",
+        coord:{lat:40.7794,lng:-73.9632}
       },
       {
-        hora:"15:30", emoji:"📺", periodo:"tarde", tipo:"card", risco:"red",
-        nome:"Times Square (passagem)",
-        cat:"7th Ave & Broadway · 47th St",
-        sobre:"Originalmente Longacre Square, virou Times Square em 1904 quando o NY Times mudou pra sua nova sede. Hoje é o cruzamento mais fotografado do mundo, 50M+ visitantes/ano. Painéis LED gigantes (alguns custam $2M/mês de aluguel), Naked Cowboy, fantasiados pedindo gorjeta. Curiosidade: as luzes nunca apagam por contrato — exigido pelo plano urbanístico desde os 30s.",
-        imperdivel:"Olhar pra cima no cruzamento 7th & 47th e girar 360° — tela atrás de tela",
-        dicas:[
-          "Visitar 15-20 min é suficiente — depois é sobrecarga sensorial pra criança",
-          "NÃO comprar nada de fantasiados (Spiderman, Elsa) sem combinar preço antes — golpe de $20-50 por foto",
-          "TKTS booth (estrutura vermelha): tickets de Broadway com 30-50% desconto pra hoje",
-          "Banheiros limpos no Marriott Marquis (suite no átrio)",
-          "Pegar Uber em rua paralela (Times Square é pedestre-only entre 42-47)"
-        ],
-        duracao:"15-30min", custo:"Gratuito", acessibilidade:"100% acessível",
-        coord:{lat:40.7580,lng:-73.9855}
-      },
-      {
-        hora:"16:00", emoji:"🚕", periodo:"tarde", tipo:"transit",
-        nome:"Uber Times Square → Greenpoint",
+        hora:"16:30", emoji:"🚕", periodo:"tarde", tipo:"transit",
+        nome:"Uber MET → Greenpoint",
         cat:"~30 min · pequena dorme",
         coord:{lat:40.7244,lng:-73.9434}
       }
@@ -1202,9 +1179,9 @@ const DAYS = [
   },
 
   {
-    date:"Sáb 11/Jul", tema:"AMNH · Museu de História Natural", temaCurto:"AMNH",
-    bairro:"Manhattan — Upper West Side", grupo:true,
-    nota:"Segundo sábado: AMNH pela manhã (idade perfeita pra dinossauros!) + almoço UWS + tarde leve. Sem festival, sem extensão de parque — dia mais relax do que dia 8/Jul, dando descanso pré-domingo intenso (MET + MJ).",
+    date:"Sáb 11/Jul", tema:"AMNH + High Line", temaCurto:"AMNH",
+    bairro:"Manhattan — UWS + Chelsea/High Line", grupo:true,
+    nota:"Segundo sábado: AMNH pela manhã (idade perfeita pra dinossauros!) → almoço UWS → tarde na High Line (stroll relax). ⚠️ AMNH(UWS) → High Line(Chelsea) é ~25min de Uber pro sul, não é coladinho. Aqui é a versão leve da High Line; a tour completa com annotations continua na quinta 9/Jul.",
     cor:"#a855f7", gradA:"#581c87", gradB:"#7e22ce",
     stops:[
       {
@@ -1243,54 +1220,58 @@ const DAYS = [
         ]
       },
       {
-        hora:"13:30", emoji:"🌳", periodo:"tarde", tipo:"opcoes",
-        nome:"Tarde leve · opções na região",
-        cat:"Pequena cansada do museu = atividade leve",
-        coord:{lat:40.7800,lng:-73.9740},
-        opcoes:[
-          {nome:"Diana Ross Playground", desc:"Playground sombreado, sprinklers, ao lado do AMNH (81st St). Bom decompressor pós-museu.", preco:"Grátis", dist:"5 min do AMNH"},
-          {nome:"Central Park West walking", desc:"Caminhada pela calçada do Central Park West (sombra das árvores) com paradas nas estátuas (Alice no País das Maravilhas em 75th St).", preco:"Grátis", dist:"10 min"},
-          {nome:"Volta pra casa cedo", desc:"Sem culpa: AMNH é cansativo, voltar 14h pra descansar antes do dia intenso de domingo (MET+MJ Musical) é estratégia válida.", preco:"—", dist:"—"}
-        ]
+        hora:"13:30", emoji:"🚕", periodo:"tarde", tipo:"transit",
+        nome:"Uber UWS → High Line (entrada 30th St)",
+        cat:"~20-25 min · descer pra Chelsea",
+        coord:{lat:40.7559,lng:-74.0042}
       },
       {
-        hora:"15:00", emoji:"🚕", periodo:"tarde", tipo:"transit",
-        nome:"Uber UWS → Greenpoint",
-        cat:"~30 min",
-        coord:{lat:40.7244,lng:-73.9434}
+        hora:"14:00", emoji:"🌿", periodo:"tarde", tipo:"card", risco:"yellow",
+        nome:"High Line · stroll relax (30th St → Gansevoort)",
+        cat:"Parque elevado · ex-ferrovia 1934 · caminhada leve",
+        sobre:"Parque elevado sobre a antiga ferrovia West Side Line (1934, abandonada em 1980, reaberta como parque entre 2009-2014). Paisagismo selvagem-cultivado sobre os trilhos originais. <strong>Versão relax</strong>: dessa vez sem a maratona de annotations da quinta — só caminhar de cima pra baixo, sentar nos bancos e deixar a pequena ver a cidade do alto.",
+        imperdivel:"O <strong>10th Ave Square</strong> (17th St): anfiteatro de madeira com janela panorâmica enquadrando o tráfego como cinema — melhor lugar pra sentar com a pequena",
+        dicas:[
+          "Pouca sombra: julho à tarde pega sol — água + chapéu + protetor",
+          "Carrinho ok em todo o percurso (plano) · elevadores em 30th, 23rd, 16th, 14th, Gansevoort",
+          "Se a pequena cansar, descer em qualquer elevador e pegar Uber",
+          "Food carts no 16th St (Chelsea Market embaixo) pra snack/sorvete",
+          "Fim sul em Gansevoort St (Meatpacking) · Whitney Museum ali se sobrar energia"
+        ],
+        duracao:"45min-1h", custo:"Gratuito", acessibilidade:"5 elevadores · 100% carrinho",
+        coord:{lat:40.7559,lng:-74.0042}
+      },
+      {
+        hora:"15:30", emoji:"🚕", periodo:"tarde", tipo:"transit",
+        nome:"Uber Meatpacking → Greenpoint",
+        cat:"~25 min",
+        coord:{lat:40.7400,lng:-74.0079}
       }
     ]
   },
 
   {
-    date:"Dom 12/Jul", tema:"MET + Broadway", temaCurto:"MET",
+    date:"Dom 12/Jul", tema:"Broadway · MJ Musical", temaCurto:"Broadway",
     bairro:"Manhattan — UES + Midtown", grupo:true,
-    nota:"⚠️ MJ Musical proíbe <4 anos — babá pra pequena no airbnb confirmada? Manhã MET (Egyptian wing + Temple of Dendur) → almoço UES → musical 15h → jantar Hell's Kitchen. Dia mais longo, único com exceção do 'volta antes das 18h'.",
+    nota:"⚠️ MJ Musical proíbe <4 anos — babá pra pequena no airbnb confirmada? Manhã relax em Brooklyn → Uber pra UES → almoço leve → musical 15h → jantar Hell's Kitchen. O MET saiu daqui (foi pra sexta), então o dia ficou bem mais leve.",
     cor:"#ec4899", gradA:"#831843", gradB:"#be185d",
     stops:[
       {
-        hora:"9:00", emoji:"🚕", periodo:"manha", tipo:"transit",
-        nome:"Uber Greenpoint → MET",
-        cat:"~30 min · entrada 5th Ave & 82nd St",
-        coord:{lat:40.7794,lng:-73.9632}
+        hora:"manhã", emoji:"☕", periodo:"manha", tipo:"opcoes",
+        nome:"Manhã relax · Greenpoint/Williamsburg",
+        cat:"Sem corrida — o dia do musical só começa à tarde",
+        coord:{lat:40.7244,lng:-73.9434},
+        opcoes:[
+          {nome:"Brunch tardio no bairro", desc:"Aproveitar Greenpoint sem pressa antes de cruzar pra Manhattan. Dormir até tarde com a pequena, café com calma.", preco:"$$", dist:"Base"},
+          {nome:"WNYC Transmitter Park", desc:"Parque à beira do East River com vista de Manhattan + pier + playground. Bom pra gastar energia da pequena antes da babá.", preco:"Grátis", dist:"10 min"},
+          {nome:"McCarren Park", desc:"Parque grande entre Greenpoint e Williamsburg, playground e sombra. Espaço pra correr de manhã.", preco:"Grátis", dist:"15 min"}
+        ]
       },
       {
-        hora:"9:30", emoji:"🏛️", periodo:"manha", tipo:"card", risco:"yellow",
-        nome:"Metropolitan Museum of Art (MET)",
-        cat:"5th Ave & 82nd · maior museu dos EUA · 1870",
-        sobre:"Maior museu de arte dos EUA e um dos quatro maiores do mundo (com Louvre, British Museum, Hermitage). 2 milhões de obras cobrindo 5.000 anos. Fundado em 1870, no edifício atual desde 1880. 17 departamentos curatoriais. Acervo tão amplo que ninguém vê tudo — turistas seletivos focam Egito, Grécia/Roma, pintura europeia.",
-        imperdivel:"Temple of Dendur (Sackler Wing) — templo egípcio inteiro do século 15 a.C., presente do governo egípcio aos EUA em 1965. Reconstruído pedra por pedra, com piscina refletora simulando o Nilo.",
-        dicas:[
-          "Comprar online: $30 adulto, criança <12 grátis (ainda assim pega ticket grátis)",
-          "Plano com 3 anos: Egyptian Wing (1h) → Greek/Roman (30min) → MET Rooftop (vista Central Park, 15min) = 2h é o máximo",
-          "MET Rooftop Garden Bar abre maio-out: drink com vista do parque + skyline (só adulto)",
-          "Domingo abre 10h-17h · chegar 9h30 pega fila de membro (mais rápida) ou abre as portas com primeiro turno",
-          "American Wing tem Washington Crossing the Delaware (1851)",
-          "Carrinho permitido em todas galerias",
-          "Banheiros: vários por andar, perto dos elevadores"
-        ],
-        duracao:"2h30-3h", custo:"$60 casal (pequena grátis)", acessibilidade:"100% acessível",
-        coord:{lat:40.7794,lng:-73.9632}
+        hora:"12:00", emoji:"🚕", periodo:"tarde", tipo:"transit",
+        nome:"Uber Greenpoint → UES",
+        cat:"~30 min · almoço antes do musical",
+        coord:{lat:40.7780,lng:-73.9528}
       },
       {
         hora:"12:30", emoji:"🍽️", periodo:"tarde", tipo:"opcoes",
@@ -1594,14 +1575,16 @@ function getRouteUrl(day){
 }
 
 function getWalkingTourUrl(tour){
-  // Rota directions Google Maps com todas as paradas do walking tour (modo walking)
+  // V1.5: usa NOME com endereço (parens removidos só na query, conteúdo mantido) em vez de
+  // coords puras · coords puras mostravam "Com alfinete" no Maps · bug Sprockhovel 2026-05-23
+  // (mesmo bug que getRouteUrl V1.4 corrigiu, mas só lá · walking tour ficou pra trás).
   if(!tour||tour.length<2) return '#';
-  const coord=t=>`${t.coord.lat},${t.coord.lng}`;
-  const origin=coord(tour[0]);
-  const dest=coord(tour[tour.length-1]);
-  const mid=tour.slice(1,-1).map(coord).join('|');
+  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
+  const origin=encodeURIComponent(queryName(tour[0]));
+  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
+  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
   let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${encodeURIComponent(mid)}`;
+  if(mid) url+=`&waypoints=${mid}`;
   return url;
 }
 
