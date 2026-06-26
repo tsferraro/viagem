@@ -2082,7 +2082,7 @@ function render(){
   document.getElementById('content').innerHTML=content;
   
   // Day tab clicks (com SOFT re-render — não rebuilda tabs)
-  const dayTabsEl=document.querySelector('.day-tabs');
+  const dayTabsEl=document.querySelector('.daystrip');
   if(dayTabsEl){
     dayTabsEl.addEventListener('click',e=>{
       const tab=e.target.closest('.day-tab');
@@ -2096,27 +2096,23 @@ function render(){
       centerActiveTab();
     });
   }
-  // Main tabs
-  document.querySelectorAll('.main-tab').forEach(b=>{
-    b.addEventListener('click',()=>{
-      state.view=b.dataset.view;
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view===state.view));
-      render();
-    });
-  });
   // Bairros clicks
   document.querySelectorAll('.bairro-attr').forEach(b=>{
     b.addEventListener('click',()=>{
       state.selIdx=parseInt(b.dataset.idx);
       state.view='guia';
       state.expandStop=b.querySelector('.bairro-attr-name').textContent.replace(/^[\p{Emoji}\s]+/u,'').trim();
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      syncTabbar();
       render();
       window.scrollTo({top:0,behavior:'smooth'});
     });
   });
   bindCardHandlers();
   centerActiveTab();
+}
+
+function syncTabbar(){
+  document.querySelectorAll('.tab-btn').forEach(t=>t.classList.toggle('active',t.dataset.view===state.view));
 }
 
 function init(){
@@ -2134,15 +2130,29 @@ function init(){
     fl.classList.toggle('collapsed',cb.checked);
   });
   
-  // Overview toggle
-  document.getElementById('overview-toggle').addEventListener('click',()=>{
-    const ov=document.getElementById('overview');
-    const tg=document.getElementById('overview-toggle');
-    const open=ov.classList.toggle('show');
-    tg.classList.toggle('open',open);
+  // Bottom tab bar
+  document.querySelectorAll('.tab-btn').forEach(b=>{
+    b.addEventListener('click',()=>{
+      closeOverview();
+      state.view=b.dataset.view;
+      syncTabbar();
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
   });
-  // Overview row/button click
-  document.getElementById('overview').addEventListener('click',e=>{
+
+  // Overview sheet
+  const ovEl=document.getElementById('overview');
+  const ovBtn=document.getElementById('overview-toggle');
+  function closeOverview(){ ovEl.classList.remove('show'); ovBtn.classList.remove('active'); }
+  window.closeOverview=closeOverview;
+  ovBtn.addEventListener('click',()=>{
+    const open=ovEl.classList.toggle('show');
+    ovBtn.classList.toggle('active',open);
+    if(open) window.scrollTo({top:0,behavior:'smooth'});
+  });
+  ovEl.addEventListener('click',e=>{
+    if(e.target.id==='ov-close'){ closeOverview(); return; }
     // Botão de walking tour: navega + auto-expand do card específico
     const wtBtn=e.target.closest('.ov-wt-btn');
     if(wtBtn){
@@ -2150,30 +2160,36 @@ function init(){
       state.selIdx=parseInt(wtBtn.dataset.idx);
       state.view='guia';
       state.expandStop=wtBtn.dataset.stop;
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
-      document.getElementById('overview').classList.remove('show');
-      document.getElementById('overview-toggle').classList.remove('open');
+      syncTabbar();
+      closeOverview();
       render();
       window.scrollTo({top:0,behavior:'smooth'});
       return;
     }
-    // Linha clicável: navega pro dia (primeiro card)
-    const tr=e.target.closest('tr.clickable');
+    // Linha clicável: navega pro dia
+    const tr=e.target.closest('.ov-row.clickable');
     if(tr){
       state.selIdx=parseInt(tr.dataset.idx);
       state.view='guia';
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
-      document.getElementById('overview').classList.remove('show');
-      document.getElementById('overview-toggle').classList.remove('open');
+      syncTabbar();
+      closeOverview();
       render();
       window.scrollTo({top:0,behavior:'smooth'});
     }
   });
-  
-  // Search
+
+  // Search (toggle panel + results)
   const si=document.getElementById('search');
   const sr=document.getElementById('search-results');
   const sc=document.getElementById('search-clear');
+  const sw=document.getElementById('search-wrap');
+  const sBtn=document.getElementById('search-btn');
+  sBtn.addEventListener('click',()=>{
+    const open=sw.classList.toggle('show');
+    sBtn.classList.toggle('active',open);
+    if(open){ closeOverview(); setTimeout(()=>si.focus(),60); }
+    else { sr.classList.remove('show'); }
+  });
   si.addEventListener('input',()=>{
     const v=si.value;
     sc.classList.toggle('show',v.length>0);
@@ -2190,10 +2206,12 @@ function init(){
       state.selIdx=parseInt(r.dataset.idx);
       state.view='guia';
       state.expandStop=r.querySelector('.search-result-name').textContent.replace(/^[\p{Emoji}\s]+/u,'').trim();
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      syncTabbar();
       si.value='';
       sc.classList.remove('show');
       sr.classList.remove('show');
+      sw.classList.remove('show');
+      sBtn.classList.remove('active');
       render();
       window.scrollTo({top:0,behavior:'smooth'});
     }
