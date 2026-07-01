@@ -1,6 +1,6 @@
 ---
 name: destination-scout
-description: Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🟢🟡🔴, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE começa fixando o BRIEFING INICIAL antes de pesquisar — dois inputs: (1) PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil; (2) BASE/hospedagem — toda distância sai dali. Se algum não foi informado, pergunta antes de qualquer web_search. Entrega SEMPRE no chat primeiro; só DEPOIS pergunta se quer exportar Word/PDF (dá espaço a ajustes antes de converter). SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) e PDF só sob demanda (scripts/md_to_docx.py + scripts/docx_to_pdf.py). NÃO sequencia dias nem monta o app HTML — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).
+description: Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🟢🟡🔴, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE começa fixando o BRIEFING INICIAL antes de pesquisar — dois inputs: (1) PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil; (2) BASE/hospedagem — toda distância sai dali. Se algum não foi informado, pergunta antes de qualquer web_search. Entrega SEMPRE no chat primeiro; só DEPOIS pergunta se quer exportar Word/PDF (dá espaço a ajustes antes de converter). SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) e PDF só sob demanda (scripts/md_to_docx.py + scripts/docx_to_pdf.py). NÃO sequencia múltiplos dias nem monta o app HTML (exceção: modo mini-plano opcional — um bloco/meia-diária com horários e âncora fixa, ex: "domingo de manhã + Notre-Dame 14h30") — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).
 ---
 
 # Destination Scout
@@ -18,7 +18,7 @@ Saída: **chat sempre** · **Word (.docx) / PDF só quando pedido**.
 
 ## O que esta skill NÃO faz
 
-- NÃO sequencia dias (isso é o roteiro — `build.py` + pipeline da roteiro-viagem)
+- NÃO sequencia MÚLTIPLOS dias nem monta o app (isso é o roteiro — `build.py` + pipeline da roteiro-viagem). **Exceção: modo mini-plano** (abaixo) — pode entregar UM bloco/meia-diária com horários
 - NÃO monta HTML/app
 - NÃO inventa preço, distância, URL ou coordenada (regra herdada do CLAUDE.md)
 
@@ -139,6 +139,20 @@ python3 skills/destination-scout/scripts/docx_to_pdf.py /tmp/<slug>.docx entrega
 - Depois de gerar: `git add entregas/<slug>.md entregas/<slug>.pdf` + commit + push (mesma main de sempre). Manter o `.md` fonte permite re-editar/regerar sem refazer do zero.
 
 ---
+
+## Modo mini-plano (opcional · exceção ao "não sequencia dias")
+
+Quando o usuário pede um plano pra **UM período específico** — meia-diária, uma âncora com horário (ex: "domingo de manhã + Notre-Dame 14h30") — a skill pode entregar um **mini-plano sequenciado**: 1 bloco curto (manhã OU tarde), roteiro linear com faixas de horário, terminando numa âncora fixa. NÃO confundir com o roteiro completo (multi-dia + app HTML).
+
+Continua valendo TUDO: briefing (perfil + base) antes de pesquisar · ≥6 web_search · anti-invenção (preços datados, sem URL inventada, distâncias da base) · honestidade · chat-first + export sob demanda.
+
+Estrutura do mini-plano:
+1. **Âncora fixa no topo** — o compromisso e o horário (ex: "Notre-Dame 14:30 · estar na porta 14:15")
+2. **Como chegar (da base)** — trajeto + aviso de logística real (carrinho/escada/baldeação)
+3. **Sequência do bloco** com faixas de horário (ex: "Manhã ≈10h45-12h30")
+4. **Almoço/parada** em tabela: opções + "distância até a âncora"
+
+Quando NÃO usar: se é a viagem inteira → é o pipeline de roteiro (`build.py`). Exemplo trabalhado: um mini-plano de meia-diária em Paris (Notre-Dame domingo).
 
 ## Tom (herdado do CLAUDE.md)
 
