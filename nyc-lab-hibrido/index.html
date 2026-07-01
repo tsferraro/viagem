@@ -62,6 +62,12 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .ov-head{display:flex;align-items:center;justify-content:space-between;margin:14px 2px 12px}
 .ov-head h2{font-size:21px;font-weight:800;letter-spacing:-.5px}
 .ov-head .ov-close{font-size:13px;font-weight:700;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 12px;cursor:pointer}
+.help-sheet{display:none;margin:4px 16px 0;animation:fade .2s ease;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:2px 16px 14px;box-shadow:var(--shadow-sm)}
+.help-sheet.show{display:block}
+.help-list{list-style:none;padding:0;margin:2px 0 0}
+.help-list li{font-size:13.5px;color:var(--ink-soft);line-height:1.5;padding:9px 0;border-bottom:1px solid var(--line-soft)}
+.help-list li:last-child{border-bottom:0}
+.help-list b{color:var(--ink);font-weight:700}
 .ov-grid{display:flex;flex-direction:column;gap:9px}
 .ov-row{display:flex;gap:13px;align-items:stretch;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 13px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .15s}
 .ov-row:active{transform:scale(.985)}
@@ -428,6 +434,7 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
       </div>
       <button class="icon-btn" id="overview-toggle" aria-label="Resumo da viagem">🗓️</button>
       <button class="icon-btn" id="search-btn" aria-label="Buscar">🔍</button>
+      <button class="icon-btn" id="help-btn" aria-label="Ajuda · dicas">❓</button>
     </div>
     <div class="search-wrap" id="search-wrap">
       <span class="search-icon">🔍</span>
@@ -438,6 +445,18 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
   </div>
 
   <div class="overview" id="overview"></div>
+
+  <div class="help-sheet" id="help-sheet">
+    <div class="ov-head"><h2>💡 Como usar</h2><button class="ov-close" id="help-close">Fechar ✕</button></div>
+    <ul class="help-list">
+      <li><b>← Deslize →</b> pra trocar de dia — funciona no <b>Guia</b> e no <b>Mapa</b></li>
+      <li><b>○ Feito</b> · toque no botão do card pra marcar a parada como feita (vai pra "Feitas hoje")</li>
+      <li><b>☐ Reservar</b> · toque pra confirmar uma reserva já feita (fica ✅ Reservado) — salvo no aparelho</li>
+      <li><b>📅 Resumo</b> · todos os dias, com filtro "A fazer" / "Feito"</li>
+      <li><b>🗺️ Mapa</b> · toque nos pinos numerados pro nome + abrir no Google Maps</li>
+      <li><b>📋 / 🚇</b> nos cards de transporte · copiar endereço (Uber) ou abrir transporte público (Metrô)</li>
+    </ul>
+  </div>
 
   <div id="content"></div>
 
@@ -2595,17 +2614,10 @@ function syncTabbar(){
 function init(){
   document.getElementById('overview').innerHTML=renderOverview();
   
-  // Legenda: colapsada POR DEFAULT · expande no toque · "Já li" marca como lida
+  // Legenda: aberta + desmarcada no 1º acesso · SÓ o "Já li" colapsa · persiste entre sessões
   const fl=document.getElementById('footer-legend');
   const cb=document.getElementById('legend-cb');
-  fl.classList.add('collapsed'); // default = colapsado
-  if(localStorage.getItem('legendRead')==='1') cb.checked=true;
-  // Tocar no cabeçalho expande/colapsa (menos quando o toque é no checkbox "Já li")
-  const flHead=fl.querySelector('.head-row h3');
-  if(flHead){
-    flHead.style.cursor='pointer';
-    flHead.addEventListener('click',()=>fl.classList.toggle('collapsed'));
-  }
+  if(localStorage.getItem('legendRead')==='1'){ cb.checked=true; fl.classList.add('collapsed'); }
   cb.addEventListener('change',()=>{
     try{ localStorage.setItem('legendRead',cb.checked?'1':'0'); }catch(e){}
     fl.classList.toggle('collapsed',cb.checked);
@@ -2631,6 +2643,7 @@ function init(){
   ovBtn.addEventListener('click',()=>{
     const isOpen=ovEl.classList.contains('show');
     if(isOpen){ closeOverview(); return; }
+    closeHelp();
     // Abre sempre no filtro Roteiro, sem seção pending
     openOverviewSheet('roteiro',false);
   });
@@ -2691,7 +2704,7 @@ function init(){
   sBtn.addEventListener('click',()=>{
     const open=sw.classList.toggle('show');
     sBtn.classList.toggle('active',open);
-    if(open){ closeOverview(); setTimeout(()=>si.focus(),60); }
+    if(open){ closeOverview(); closeHelp(); setTimeout(()=>si.focus(),60); }
     else { sr.classList.remove('show'); }
   });
   si.addEventListener('input',()=>{
@@ -2728,7 +2741,42 @@ function init(){
   document.addEventListener('click',e=>{
     if(!e.target.closest('.search-wrap')) sr.classList.remove('show');
   });
-  
+
+  // Ajuda · sheet de dicas (sempre acessível pelo ❓)
+  const helpEl=document.getElementById('help-sheet');
+  const helpBtn=document.getElementById('help-btn');
+  function closeHelp(){ helpEl.classList.remove('show'); helpBtn.classList.remove('active'); }
+  helpBtn.addEventListener('click',()=>{
+    const open=helpEl.classList.toggle('show');
+    helpBtn.classList.toggle('active',open);
+    if(open){ closeOverview(); window.scrollTo({top:0,behavior:'smooth'}); }
+  });
+  helpEl.addEventListener('click',e=>{ if(e.target.id==='help-close') closeHelp(); });
+
+  // Swipe entre dias (Guia + Mapa) · toque no mapa Leaflet mantém o pan
+  (function(){
+    const area=document.getElementById('content');
+    let x0=null,y0=null,onMap=false;
+    area.addEventListener('touchstart',e=>{
+      const t=e.touches[0]; x0=t.clientX; y0=t.clientY;
+      onMap=!!(e.target.closest && e.target.closest('#map'));
+    },{passive:true});
+    area.addEventListener('touchend',e=>{
+      if(x0===null) return;
+      const startX=x0; x0=null;
+      if(onMap) return;                                  // deixa o mapa fazer pan
+      if(state.view!=='guia' && state.view!=='mapa') return;
+      const t=e.changedTouches[0], dx=t.clientX-startX, dy=t.clientY-y0;
+      if(Math.abs(dx)<60 || Math.abs(dx)<Math.abs(dy)*1.8) return;   // horizontal claro
+      const next=state.selIdx+(dx<0?1:-1);               // arrastar p/ esquerda = próximo dia
+      if(next<0 || next>=DAYS.length) return;
+      state.selIdx=next;
+      document.querySelectorAll('.day-tab').forEach(tb=>tb.classList.toggle('active',parseInt(tb.dataset.idx)===next));
+      renderInnerContent();
+      centerActiveTab();
+    },{passive:true});
+  })();
+
   render();
 }
 </script>
