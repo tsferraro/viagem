@@ -64,3 +64,21 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 | Nomenclatura GitHub/URLs? | Skill gera slug automático (`<destino>-<mes><ano>`) · Tobia NÃO renomeia · pode override se quiser | Documentado na seção "Naming automático" do SKILL.md |
 | Subpastas pra 2+ roteiros paralelos? | Adicionado suporte SUBDIR no deploy.sh · estrutura `familia/`, `casal/`, `amigos/`, `extra/` | deploy.sh atualizado · SKILL.md atualizado · paralelos arquivam junto |
 | Mobile pode ter mesma capacidade do desktop? (Opção A escolhida) | Sim · embarcar `scripts/` + `templates/` DENTRO do repo `tsferraro/viagem` · mobile-cloud clona e roda os scripts no sandbox dele | Criado `~/.skill-backups/repo-template/` self-contained (CLAUDE.md + README + scripts + templates) · validate.py limites elevados pra 500KB/1500KB · build.py default pretty-printed (removido minify default · `--minify` opcional só pra emergência) · SKILL.md desktop aponta source-of-truth = repo |
+
+---
+
+## 2026-07-01 · Redesign de interface + skill impeccable embarcada
+
+**Contexto**: Tobia pediu teste de melhoria de design do roteiro NYC. Rodada a skill **impeccable** (design/UI · Apache 2.0) como avaliador. 3 variantes em sandbox (`nyc-lab-bold/`, `-evo/`, `-hibrido/`).
+
+**Decisões**:
+
+| # | Decisão | Alternativas rejeitadas | Motivo |
+|---|---|---|---|
+| 1 | Redesign **híbrido** vira o novo padrão | Bold puro (31/40 · hero-metric banido) · Evolução (33/40 · seguro mas menos uau) | Híbrido 38/40 · bottom-bar+status do Bold + segurança da Evolução |
+| 2 | Skill impeccable salva em `skills/impeccable/` | Manter fora do repo | Runnable pra reavaliar/gerar design · mesma lógica "skill completa no repo" |
+| 3 | 2 templates **separados** (datada vs coletânea-cidade) | 1 template com flags | Menos conditional spaghetti · coletânea não tem datas/AGORA/stats |
+| 4 | Rota do Maps por **coordenadas** (reafirma V1.3) | Nomes nos waypoints | Nome vago/evento cai no lugar errado ("Fogos Macy's"→loja) · doc §3.7 já mandava coords |
+| 5 | `noMaps:true` p/ stops sem ponto público | Deixar link errado | "Sem ponto se não confiável" · omite link em vez de enganar |
+
+**Validação**: detector impeccable 0 antipadrões · validate.py 0 erros · testado no device do Tobia (rota a-pé, RESERVADO, transporte). Registro completo em `references/design-rubric.md`.

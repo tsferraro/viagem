@@ -41,10 +41,12 @@ viagem/
 │   ├── data-schema.md              ← schema completo (282L)
 │   ├── design-tokens.md
 │   ├── ui-patterns.md
-│   └── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
+│   ├── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
+│   └── design-rubric.md            ← rubrica de avaliação de UI + skill impeccable
 ├── skills/
 │   ├── walking-tour-designer/
-│   └── road-trip-designer/
+│   ├── road-trip-designer/
+│   └── impeccable/                 ← skill de design/UI · avaliar·gerar·polir (Apache 2.0)
 └── archive/
     └── <slug>/                     ← viagens passadas movidas pra cá manualmente
 ```
@@ -59,6 +61,7 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Vai criar walking tour novo | `skills/walking-tour-designer/SKILL.md` + sub-references |
 | Vai montar dia de carro (`transport: "driving"`) | `skills/road-trip-designer/SKILL.md` |
 | Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
+| Vai avaliar ou elevar design/UI de um roteiro | `references/design-rubric.md` + `skills/impeccable/` |
 | Vai entender por que código JS é assim | `references/ui-patterns.md` |
 | Quer ver decisões históricas + lições | `decision-log.md` + `references/lessons-learned.md` |
 | Quer entender preferências profundas do Tobia | `references/tobia-preferences.md` |

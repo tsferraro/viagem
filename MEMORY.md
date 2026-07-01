@@ -156,3 +156,12 @@ Padrões pra road-trips de **fim-de-semana com destino único** (festa/evento ·
 7. **roteiro como "outra viagem" → instrução de escopo** · Tobia disse "É uma outra viagem de 3 dias" → sinal pra NÃO emendar com outro plano da semana. Respeitar limite estrito do escopo solicitado.
 
 ### Próximas lições serão registradas aqui após uso real.
+
+---
+
+## Método & QA (transversal · redesign NYC 2026-07)
+
+- **QA visual às cegas funciona**: o ambiente cloud tem **Chromium+Playwright** → renderizar HTML local e tirar screenshot real (bypass do auth via `localStorage`). Foi o que permitiu iterar design com qualidade sem ver o device. Detalhe em `references/design-rubric.md`.
+- **Skill impeccable = avaliador de design** (`skills/impeccable/`): detector determinístico (`detect.mjs`) + heurísticas de Nielsen. Trend NYC: **31→38/40**.
+- **LIÇÃO (custou retrabalho)**: antes de mexer em URL do Google Maps, **ler `references/` primeiro**. Um sub-agente trocou a rota coords→nomes sem checar o doc, reintroduzindo o bug "nomes erráticos em waypoints" que o §3.7 já resolvia.
+- **Delegação**: sub-agentes se confundem com o próprio histórico em rodadas longas → pra mudança nova, **spawn com contexto limpo + âncoras exatas** > resumir agente antigo.

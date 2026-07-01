@@ -242,3 +242,35 @@ Pra features ambíguas (ex: High Line WT vale a pena?). Nunca decidir sozinho em
 ### 8.4 Push direto pra main
 **Decisão**: sem PR flow, sem branches.  
 **Motivo**: usuário solo, GitHub Pages serve main, simplicidade > governance.
+
+---
+
+## 9. REDESIGN HÍBRIDO (2026-07-01 · novo padrão de UI)
+
+### 9.1 Navegação: bottom tab bar
+**Decisão**: nav principal (Guia/Mapa/Bairros) em **bottom bar** flutuante · topo = topbar slim com Resumo (📅) + Busca (🔍).
+**Motivo**: acesso com o polegar · vira "app" na tela de início (validado no device). Register product permite nav nativa.
+
+### 9.2 Status compacto (não hero-metric)
+**Decisão**: topo mostra **data real de hoje** + chip Reservas · stats (X/11 dias passados · atrações/tours feitos) num painel **colapsável e acionável** (clique→"A fazer").
+**Motivo**: hero-metric (números grandes+gradiente) é ban de IA e empurra conteúdo pra baixo da dobra.
+
+### 9.3 Eixo "feito" separado de "reserva"
+**Decisão**: `feito-<nome>` (toggle "○ Feito/✓ Feito" · afunda pra "Feitas hoje") ≠ `reserva-<nome>` (RESERVAR/RESERVADO). Ambos em localStorage. Rótulos distintos (não os dois "FEITO").
+
+### 9.4 AGORA em tempo real
+**Decisão**: `getNowStopIdx` destaca a parada da hora atual (só no dia real) + auto-scroll.
+
+### 9.5 Rota por coords + travelmode por dia (reafirma V1.3)
+**Decisão**: `?api=1&origin=lat,lng&…&travelmode=<walking|driving>` · `dayTransport(day)` escolhe a-pé/carro por distância (>5km total ou leg >2.5km = carro) · walking tour sempre a-pé.
+**Motivo**: nomes em waypoints erráticos (§3.7) · coords determinísticas.
+
+### 9.6 Transporte com ações
+**Decisão**: card transit ganha 📋 Copiar endereço (Uber→clipboard) + 🚇 Transporte público (Metrô→Maps travelmode=transit, origin omitido=GPS).
+
+### 9.7 noMaps p/ stops sem ponto público
+**Decisão**: `noMaps:true` → getMapsUrl='' · popup/legenda omitem o link. Evento ganha venue no nome (Fogos Macy's→Transmitter Park).
+**Motivo**: "sem link é melhor que link errado".
+
+### 9.8 Timeline sem régua · marcadores numerados distintos
+**Decisão**: removida a régua vertical → cards largura total. Mapa: principais numerados (cor do dia) · walking tour em roxo fixo `#6d5efc` (distinto).
