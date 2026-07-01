@@ -1,0 +1,2532 @@
+{
+  "title": "🗽 Roteiro NYC · Família · Jul 2026",
+  "auth_emoji": "🗽",
+  "auth_title": "Roteiro NYC · Jul 2026",
+  "auth_subtitle": "Acesso restrito família",
+  "header_title": "Roteiro NYC · Família",
+  "header_sub": "3–13 Jul 2026 · Base Greenpoint",
+  "password": "jujuba",
+  "mode": "trip",
+  "legend_group_text": "Dia com família (9-13/Jul)",
+  "legend_notes_html": "        <strong>🚇 Metrô com carrinho:</strong> Estações G (Greenpoint Av, Nassau Av) e L (Lorimer St) NÃO têm elevador. Cabe carregar no braço como em Paris — sem panic.<br>\n        <strong>🌡️ Julho em NY:</strong> +32°C frequente. Protetor solar, água e pausas na sombra inegociáveis.<br>\n        <strong>🎆 50ª Fogos Macy's (sáb 4/Jul):</strong> Protetor auricular pra pequena. Multidão controlada em Transmitter Park, mas barulho intenso.<br>\n        <strong>⛴️ NYC Ferry:</strong> Doca India St a 5min da base. Forma mais cômoda de cruzar o East River com carrinho. App \"NYC Ferry\".",
+  "days": [
+    {
+      "date": "Sex 3/Jul",
+      "tema": "Chegada · Greenpoint",
+      "temaCurto": "Chegada",
+      "bairro": "EWR → Greenpoint",
+      "grupo": false,
+      "nota": "Chegada noturna em EWR às 21h. Foco: transfer + dormir. Bedtime da pequena gerencia o dia.",
+      "cor": "#6b7280",
+      "gradA": "#374151",
+      "gradB": "#4b5563",
+      "stops": [
+        {
+          "hora": "21:00",
+          "emoji": "✈️",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Pouso em EWR · Newark Liberty",
+          "cat": "Decolagem ORY ~19h00 Paris · Pouso EWR 21h00 NYC · ~8h voo + 6h fuso · Imigração + bagagem ~45-60min",
+          "coord": {
+            "lat": 40.6925,
+            "lng": -74.1687
+          }
+        },
+        {
+          "hora": "22:30",
+          "emoji": "🚕",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Uber EWR → Greenpoint",
+          "cat": "~45 min · trânsito noturno leve",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        },
+        {
+          "hora": "23:30",
+          "emoji": "😴",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Chegada à base · dormir",
+          "noMaps": true,
+          "cat": "McGolrick Park area, Greenpoint",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sáb 4/Jul",
+      "tema": "Williamsburg · 4th of July",
+      "temaCurto": "Williamsburg",
+      "bairro": "Greenpoint + Williamsburg",
+      "grupo": false,
+      "nota": "50ª edição dos fogos Macy's · cidade lotada à noite. Manhã calma no bairro, compras + lunch Smorgasburg, sesta longa, fogos do Transmitter Park (vista mais distante mas sem caos). Levar protetor auricular pra pequena.",
+      "cor": "#dc2626",
+      "gradA": "#7f1d1d",
+      "gradB": "#991b1b",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🥯",
+          "periodo": "manha",
+          "tipo": "opcoes",
+          "nome": "Café da manhã · Bagel",
+          "cat": "3 opções em Williamsburg/Greenpoint",
+          "coord": {
+            "lat": 40.7232,
+            "lng": -73.9555
+          },
+          "opcoes": [
+            {
+              "nome": "The Bagel Store (Williamsburg)",
+              "desc": "Rainbow bagels icônicos do Instagram + clássicos. Tem fila domingo, sábado tranquilo.",
+              "preco": "$5-9",
+              "dist": "15 min a pé"
+            },
+            {
+              "nome": "Bagel Pub (Williamsburg)",
+              "desc": "Bagel artesanal clássico, atmosfera local, sem turistada.",
+              "preco": "$4-8",
+              "dist": "15 min a pé"
+            },
+            {
+              "nome": "Eberle Bakery (Greenpoint)",
+              "desc": "Bakery local desde 1925, polonesa + bagels. Mais perto da base.",
+              "preco": "$4-7",
+              "dist": "5 min a pé"
+            }
+          ]
+        },
+        {
+          "hora": "11:30",
+          "emoji": "💻",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Apple Williamsburg",
+          "cat": "247 Bedford Ave · loja em ex-banco de 1948",
+          "sobre": "Loja flagship da Apple em Brooklyn, instalada em prédio histórico de 1948 que era um banco. Pé direito alto, fachada de pedra, atendimento típico Apple. Escolha estratégica pra resolver compra grande (MacBook) sem entrar no caos do flagship 5th Ave em Manhattan — clima muito mais relaxado.",
+          "imperdivel": "Atmosfera de loja-no-bairro vs flagship turística: você consegue testar e fechar compra grande sem pressão",
+          "dicas": [
+            "Reservar Personal Setup pelo app Apple Store antes — economiza 30 min",
+            "Pickup de produto reservado online: rápido, 10 min",
+            "Aberto 10h-21h sábado",
+            "⚠️ Smart ring NÃO é Apple — Oura (online + pickup), Samsung Galaxy Ring (Hudson Yards), Ultrahuman (SoHo)",
+            "Banheiro: usar antes (Bagel shop ou cafés Bedford) — Apple não tem público"
+          ],
+          "duracao": "45min-1h",
+          "custo": "Conforme produto",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7176,
+            "lng": -73.9572
+          }
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍴",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Smorgasburg Williamsburg",
+          "cat": "Marsha P. Johnson State Park · 90 Kent Ave",
+          "sobre": "O 'Woodstock of Eating' segundo o NY Times. Desde 2011, festival ao ar livre com ~70 vendedores rotativos: ramen, arepas, tacos, lobster roll, bao chinês, sorvete artesanal. Sábados em Williamsburg no Marsha P. Johnson State Park (beira do East River). Gratuito entrar, paga por prato.",
+          "imperdivel": "Red Hook Lobster Pound — lobster roll de Maine de verdade ao ar livre em Brooklyn",
+          "dicas": [
+            "Chegar 11h (abertura) evita as filas das 13h",
+            "99% cashless (Apple Pay, tap-to-pay)",
+            "Sombra parcial — chapéu pra pequena",
+            "Banheiros no Bushwick Inlet Park a 200m (não tem dentro)",
+            "Outros stands: Mao's Bao, Yakitori Tatsu, Coco Bread jamaicano"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "$40-60 família",
+          "acessibilidade": "Plano, gramado parcial",
+          "coord": {
+            "lat": 40.7239,
+            "lng": -73.961
+          }
+        },
+        {
+          "hora": "14:00",
+          "emoji": "😴",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Siesta na base",
+          "noMaps": true,
+          "cat": "~2h descanso · banho · lanche",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        },
+        {
+          "hora": "18:00",
+          "emoji": "🧺",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Piquenique pré-fogos · Transmitter Park",
+          "cat": "Setup pra ver os fogos · 3h30 antes",
+          "sobre": "Em ano de 50ª edição os fogos podem encher mais que normal, mas Transmitter Park ainda fica longe do caos de Brooklyn Bridge Park ou East River Park. Chegada às 18h garante área no gramado/pier com vista limpa. Os fogos 2026 lançam da Brooklyn Bridge + 4 barcaças no Lower East River (Seaport) — Transmitter dá vista panorâmica mais distante mas sem turistada.",
+          "imperdivel": "Pôr do sol às 20h32 com Manhattan inteira no horizonte — antes mesmo dos fogos",
+          "dicas": [
+            "Levar: manta grande, água (1L/pessoa), lanche, repelente, lanterna, protetor auricular pra pequena",
+            "Banheiros: nenhum no parque — usar antes ou em bar próximo",
+            "Bodega na Manhattan Ave vende cerveja em copos térmicos",
+            "WiFi público funciona — útil pra acompanhar contagem regressiva NBC"
+          ],
+          "duracao": "3h30 até os fogos",
+          "custo": "~$30 lanches",
+          "acessibilidade": "Carrinho ok no pier",
+          "coord": {
+            "lat": 40.7298,
+            "lng": -73.9608
+          }
+        },
+        {
+          "hora": "21:25",
+          "emoji": "🎆",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "red",
+          "nome": "Fogos Macy's · 50ª edição (Transmitter Park)",
+          "cat": "25 min de show · ano histórico",
+          "sobre": "A Macy's faz fogos no 4 de Julho desde 1976 — 2026 é a 50ª edição. Em 2026 lançam de 4 barcaças no Lower East River (entre Pier 17 e Manhattan Heliport) + projeção mapeada na Brooklyn Bridge (novo recurso pro aniversário). Show de ~25 min, ~80.000 pirotecnias, trilha sonora pela 1010 WINS rádio.",
+          "imperdivel": "Trecho final 'grand finale' — 30s de mais de 1.000 explosões simultâneas",
+          "dicas": [
+            "Volume alto MESMO de 3km — protetor auricular pra criança é obrigatório",
+            "Tirar foto: ISO 200, exposição longa 2-4s",
+            "Backup TV (NBC) com som ambiente abafado pelo vidro: criança consegue dormir",
+            "Volta pra casa: 21h55 vai estar cheio, esperar 22h-22h30",
+            "Sirena de bombeiros / polícia frequente no pós — esperado, não é emergência"
+          ],
+          "duracao": "25min show + 30min volta",
+          "custo": "Gratuito",
+          "acessibilidade": "Pier acessível",
+          "coord": {
+            "lat": 40.7298,
+            "lng": -73.9608
+          }
+        }
+      ]
+    },
+    {
+      "date": "Dom 5/Jul",
+      "tema": "Greenpoint + Williamsburg · amigos",
+      "temaCurto": "Greenpoint",
+      "bairro": "Greenpoint + Williamsburg",
+      "grupo": false,
+      "nota": "Dia de bairro com os amigos (a família/avós só chega dia 9). Sem corrida, sem Manhattan: brunch em Greenpoint → Domino Park no waterfront (playground + tacos + skyline) → sesta → cerveja na Brooklyn Brewery / McCarren Park → jantar casual em grupo. O DUMBO + travessia da ponte foram pro domingo 12 (com a família).",
+      "cor": "#0d9488",
+      "gradA": "#134e4a",
+      "gradB": "#0f766e",
+      "stops": [
+        {
+          "hora": "10:30",
+          "emoji": "🍳",
+          "periodo": "manha",
+          "tipo": "opcoes",
+          "nome": "Brunch · Greenpoint com os amigos",
+          "cat": "3 opções na Manhattan Ave · sem pressa",
+          "coord": {
+            "lat": 40.7256,
+            "lng": -73.9521
+          },
+          "opcoes": [
+            {
+              "nome": "Peter Pan Donut & Pastry Shop (727 Manhattan Ave)",
+              "desc": "Instituição de Greenpoint desde 1950 — donuts lendários (o blueberry é cult), breakfast sandwiches e milkshakes. Barato, balcão retrô, ímã pra criança. Fila anda rápido.",
+              "preco": "$",
+              "dist": "5-10 min da base"
+            },
+            {
+              "nome": "Esme (999 Manhattan Ave)",
+              "desc": "Brunch moderno num espaço claríssimo e colorido, indoor + outdoor. Aceita reserva — bom pra grupo grande sentar junto.",
+              "preco": "$$",
+              "dist": "8 min"
+            },
+            {
+              "nome": "Milk and Roses (1110 Manhattan Ave)",
+              "desc": "Americano com pegada do sul da Itália + jardim secreto nos fundos. Ambiente de livraria-bistrô, kid-ok, ótimo pra grupo demorar.",
+              "preco": "$$",
+              "dist": "10 min"
+            }
+          ]
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🏭",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Domino Park (15 River St, Williamsburg waterfront)",
+          "cat": "Parque do antigo refino de açúcar · 2018",
+          "sobre": "Parque de 2,4 hectares aberto em 2018 no terreno da <strong>Domino Sugar Refinery</strong> — fundada em 1856, já foi o maior refino de açúcar do mundo, chegando a produzir até 98% do açúcar consumido nos EUA antes de fechar em 2004. Projeto do <strong>James Corner Field Operations</strong>, o mesmo escritório da High Line. Custou ~$50M e percorre um quarto de milha de orla do East River, da Grand St à South 5th, bem ao pé da Williamsburg Bridge.",
+          "imperdivel": "Os <strong>4 tanques de xarope de 11m</strong> de aço enferrujado preservados ao longo da esplanada (relíquias do refino) + o <strong>Sweetwater Playground</strong> em forma de mini-usina: a criança 'entra como cana e sai como melaço', nas cores turquesa e amarelo originais da Domino",
+          "dicas": [
+            "Sweetwater Playground tem fontes/sprinklers no verão — leva muda de roupa pra pequena",
+            "<strong>Tacocina</strong> (do Danny Meyer / mesmo grupo do Shake Shack): tacos + margaritas/cerveja em mesas ao ar livre na água — perfeito pro grupo enquanto a pequena brinca",
+            "Bocce, dog run e gramados pra deitar · sombra parcial, leva chapéu",
+            "Vista frontal da Williamsburg Bridge + skyline de Manhattan, melhor luz fim de tarde",
+            "Playground abre do nascer ao pôr do sol · banheiros no parque"
+          ],
+          "duracao": "1h30-2h",
+          "custo": "Grátis (Tacocina à parte)",
+          "acessibilidade": "100% acessível · plano",
+          "coord": {
+            "lat": 40.7148,
+            "lng": -73.9679
+          }
+        },
+        {
+          "hora": "14:00",
+          "emoji": "😴",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Siesta na base · Greenpoint",
+          "noMaps": true,
+          "cat": "~10 min de Williamsburg · pequena dorme, grupo descansa",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🍺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Brooklyn Brewery (79 N 11th St, Williamsburg)",
+          "cat": "Cervejaria-ícone de Brooklyn · tasting room",
+          "sobre": "Fundada em 1988 por <strong>Steve Hindy</strong> (jornalista que aprendeu a fazer cerveja no Oriente Médio) e o vizinho Tom Potter. O logo é do lendário <strong>Milton Glaser</strong> (o mesmo do 'I ♥ NY') — sem dinheiro pra pagá-lo, deram a ele uma fatia da empresa que hoje 'vale milhões'. Brewmaster desde 1994: <strong>Garrett Oliver</strong>. A Brooklyn Lager virou símbolo da retomada cervejeira da cidade. O tasting room ocupa uma antiga fábrica de matzá ocupada em 1996.",
+          "imperdivel": "Tomar a Brooklyn Lager na fonte, no galpão original · os tours saem nos fins de semana (curtos e gratuitos)",
+          "dicas": [
+            "Domingo abre 12h-20h · espaço amplo e informal, criança ok de dia",
+            "<strong>McCarren Park</strong> a ~5 min: se a pequena precisar gastar energia, playground + gramado enorme",
+            "Tours gratuitos rolam sáb/dom — conferir horário no balcão ao chegar",
+            "Pagamento por cartão · tem cerveja to-go e merch (a camiseta com o B do Glaser)",
+            "Sem cozinha própria — petiscos/food trucks variam; o jantar é logo depois"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "$8-10/chope",
+          "acessibilidade": "Térreo acessível",
+          "coord": {
+            "lat": 40.7217,
+            "lng": -73.9576
+          }
+        },
+        {
+          "hora": "18:30",
+          "emoji": "🍕",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar casual em grupo · Williamsburg/Greenpoint",
+          "cat": "3 opções kid-friendly pra fechar o dia com os amigos",
+          "coord": {
+            "lat": 40.7117,
+            "lng": -73.9569
+          },
+          "opcoes": [
+            {
+              "nome": "Emmy Squared (364 Grand St)",
+              "desc": "Pizza Detroit (quadrada, borda crocante caramelizada) + a famosa Emmy burger estilo In-N-Out turbinada. Animado, ótimo pra dividir em grupo, criança adora.",
+              "preco": "$$",
+              "dist": "Williamsburg"
+            },
+            {
+              "nome": "Karczma (136 Greenpoint Ave)",
+              "desc": "Polonês autêntico de Greenpoint, garçonetes a caráter, pierogi tido como o melhor do bairro + grelhados pra dividir. Barato, divertido, kid-ok. Reserva no fim de semana.",
+              "preco": "$",
+              "dist": "Greenpoint"
+            },
+            {
+              "nome": "Bernie's (332 Driggs Ave)",
+              "desc": "Americano retrô red-sauce de Greenpoint, vibe nostálgica, porções generosas pra mesa grande. Walk-in fácil, bom pra grupo com criança.",
+              "preco": "$$",
+              "dist": "Greenpoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Seg 6/Jul",
+      "tema": "Central Park",
+      "temaCurto": "Central Park",
+      "bairro": "Manhattan — Central Park + UWS",
+      "grupo": false,
+      "nota": "1 parque/dia rule = Central Park é O parque do dia. Zoo de manhã (idade perfeita pra pequena), almoço UWS, Bethesda Terrace + Teleférico Roosevelt. Outros playgrounds da região ficam como opção/distração se precisar.",
+      "cor": "#10b981",
+      "gradA": "#064e3b",
+      "gradB": "#047857",
+      "stops": [
+        {
+          "hora": "9:30",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → Central Park (entrada Plaza)",
+          "cat": "~30 min · entrada 5th Ave & 60th",
+          "coord": {
+            "lat": 40.7676,
+            "lng": -73.9719
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🦭",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Central Park Zoo + Tisch Children's Zoo",
+          "cat": "Zoológico WCS · escala perfeita pra 3 anos",
+          "sobre": "Zoológico pequeno (2.5 hectares) gerenciado pela Wildlife Conservation Society. Foco em leões-marinhos (alimentação famosa em show de 15 min, 3x ao dia), pinguins, lêmures, ursos polares, sapos venenosos. O **Tisch Children's Zoo** anexo é petting zoo com cabras e ovelhas, escala micro pra pré-escolares — ótimo pra interação direta. Total ~1h30-2h vê tudo sem cansar a criança.",
+          "imperdivel": "Sea lion feeding às 11h30 (também 14h e 16h30) — show educativo de 15 min com tratadores, criança adora",
+          "dicas": [
+            "Tickets online: $20 adulto, $15 crianças 3-12, gratuito <3",
+            "Comprar antecipado evita fila (saída do Uber direto pra entrada)",
+            "Hand sanitizer essencial no Tisch (animais de fazenda)",
+            "Programar visita ao redor do feeding das 11h30",
+            "Café do zoo é fraco — almoçar fora",
+            "Carrinho 100% ok"
+          ],
+          "duracao": "1h30-2h",
+          "custo": "$55 família (pequena grátis)",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7676,
+            "lng": -73.9719
+          }
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Upper West Side / Columbus Circle",
+          "cat": "3 opções perto do zoo",
+          "coord": {
+            "lat": 40.7681,
+            "lng": -73.9819
+          },
+          "opcoes": [
+            {
+              "nome": "Whole Foods Columbus Circle",
+              "desc": "Hot bar enorme + saladas + sushi pra montar prato. Comer na praça aberta do TWC ou montar piquenique pro Central Park.",
+              "preco": "$",
+              "dist": "10 min do zoo"
+            },
+            {
+              "nome": "Trader Joe's 670 Columbus Ave",
+              "desc": "Mercado mais barato, ótimo pra piquenique (sanduíches prontos, frutas, snacks).",
+              "preco": "$",
+              "dist": "15 min do zoo"
+            },
+            {
+              "nome": "Le Pain Quotidien Columbus Circle",
+              "desc": "Sit-down rápido com high chair, cardápio infantil, salgadas/saladas saudáveis.",
+              "preco": "$$",
+              "dist": "10 min do zoo"
+            }
+          ]
+        },
+        {
+          "hora": "13:15",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Bethesda Terrace + Bow Bridge",
+          "cat": "Coração arquitetônico do Central Park",
+          "sobre": "Praça arquitetônica construída em 1873, **única arquitetura formal** do projeto original do parque. Tem a fonte 'Angel of the Waters' (estátua-anjo de bronze) e uma passagem subterrânea com teto de **azulejos Minton ingleses pintados à mão** — 3.500 painéis, único teto desse tipo no mundo. **Bow Bridge** ali ao lado: ponte de ferro fundido de 1862, a mais fotografada de Manhattan (apareceu em 'When Harry Met Sally', 'Spider-Man 3', 'The Avengers').",
+          "imperdivel": "O teto Minton da arcada inferior · Bow Bridge ao pôr do sol",
+          "dicas": [
+            "Caminhada da Bethesda → Bow Bridge: 5 min",
+            "Músicos de rua tocam frequentemente embaixo da arcada (acústica incrível)",
+            "Conservatory Water (lago dos barquinhos RC) fica a 3 min — vale parada de 15 min",
+            "Banheiros na própria Bethesda Terrace (andar inferior)",
+            "Não confundir com a fonte da Plaza Hotel (essa é privada, paga)",
+            "🗺️ WALKING TOUR CENTRAL PARK (1h · 1.5km · 6 paradas) — ver aba Mapa pra rota completa · loop centro-sul do parque, kid-friendly",
+            "1️⃣ **Strawberry Fields + Imagine mosaic** (West 72nd) · memorial de **John Lennon** assassinado em 1980 no Dakota (prédio em frente ao parque). Mosaico 'Imagine' doado pela Itália. Pessoas tocam Beatles e deixam flores",
+            "2️⃣ **The Mall + Literary Walk** · única alameda formal do parque · estátuas de **Shakespeare, Robert Burns, Walter Scott** alinhadas · *When Harry Met Sally*, *Pretty Woman*",
+            "3️⃣ **Bethesda Terrace + Angel of the Waters** (1873) · você já está aqui — passe pela arcada inferior pro teto Minton",
+            "4️⃣ **Bow Bridge** (1862) · ferro fundido, primeira ponte de ferro pública dos EUA · *Avengers*, *Spider-Man 3*, *When Harry Met Sally*",
+            "5️⃣ 🧸 **Conservatory Water + Sailboat Pond** · lago dos barquinhos miniatura desde 1876 (inspirado no Luxembourg Gardens em Paris) · *Stuart Little*",
+            "6️⃣ 🧸 **Alice in Wonderland + Hans Christian Andersen statues** (East 74-75th) · **estátuas climbáveis** que a pequena vai adorar · HCA tem **leitura ao vivo de contos** sábados 11h (Jun-Set)"
+          ],
+          "duracao": "45min-1h + 1h walking tour opcional",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível, rampas",
+          "coord": {
+            "lat": 40.774,
+            "lng": -73.9712
+          },
+          "walkingTours": [
+            {
+              "nome": "Central Park · 🎨 Coração do Parque",
+              "descricao": "Strawberry Fields → Bethesda → Bow Bridge → Alice + HCA · ~1h",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Strawberry Fields + Imagine mosaic (West 72nd)",
+                  "coord": {
+                    "lat": 40.7757,
+                    "lng": -73.9747
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "The Mall + Literary Walk",
+                  "coord": {
+                    "lat": 40.7728,
+                    "lng": -73.9714
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Bethesda Terrace + Angel of the Waters",
+                  "coord": {
+                    "lat": 40.774,
+                    "lng": -73.9712
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Bow Bridge",
+                  "coord": {
+                    "lat": 40.7757,
+                    "lng": -73.972
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Conservatory Water + Sailboat Pond",
+                  "coord": {
+                    "lat": 40.774,
+                    "lng": -73.967
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Alice in Wonderland + Hans Christian Andersen statues",
+                  "coord": {
+                    "lat": 40.7748,
+                    "lng": -73.9665
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🚠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Teleférico Roosevelt Island",
+          "cat": "E 60th & 2nd Ave · único teleférico urbano EUA",
+          "sobre": "Único teleférico urbano de massa nos EUA (desde 1976), com 4 minutos de travessia a 76m de altura sobre o East River. Filmes: Spider-Man, Nighthawks (1981). Reformado em 2010 com gondolas Doppelmayr suíças. **Custa o mesmo do metrô: $2.90** (MetroCard ou OMNY). Vista lateral épica de Manhattan + Queensboro Bridge.",
+          "imperdivel": "O momento em que o teleférico passa por cima dos carros da Queensboro Bridge a 76m — sensação de voar sobre Manhattan",
+          "dicas": [
+            "Estação Tramway Plaza: E 59-60th St entre 2nd & York Ave (10 min do Bethesda)",
+            "$2.90 ida + $2.90 volta (não tem combo)",
+            "Crianças <44 polegadas: grátis",
+            "Sai a cada 7-15 min, 6h-2h",
+            "Volta no mesmo tram — não tem subway acessível com elevador na ilha",
+            "Roosevelt Island tem o Four Freedoms Park (FDR memorial) — opcional 30 min se sobrar tempo"
+          ],
+          "duracao": "30-45min",
+          "custo": "$11.60 casal",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7615,
+            "lng": -73.9633
+          }
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🛝",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Playgrounds da região (se precisar distração)",
+          "noMaps": true,
+          "cat": "Opcional · pode pular se a pequena tá tranquila",
+          "coord": {
+            "lat": 40.7717,
+            "lng": -73.9716
+          },
+          "opcoes": [
+            {
+              "nome": "Heckscher Playground",
+              "desc": "Maior playground do Central Park, área de spray d'água em julho. Sul do parque (62nd St).",
+              "preco": "Grátis",
+              "dist": "15 min do Tramway"
+            },
+            {
+              "nome": "Ancient Playground",
+              "desc": "Tema egípcio, perto do MET (84th St). Spray d'água. Bom se vão pro lado leste.",
+              "preco": "Grátis",
+              "dist": "20 min do Tramway"
+            },
+            {
+              "nome": "Diana Ross Playground",
+              "desc": "West Side (81st St), perto do AMNH. Sombra densa.",
+              "preco": "Grátis",
+              "dist": "25 min do Tramway"
+            }
+          ]
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Central Park → Greenpoint",
+          "cat": "~35 min · pequena dorme no carro",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Ter 7/Jul",
+      "tema": "Lower Manhattan · Wall Street",
+      "temaCurto": "Lower Manhattan",
+      "bairro": "Manhattan — Battery + Financial District",
+      "grupo": false,
+      "nota": "Combinação 5-em-1 muito eficiente: tudo a 10 min a pé. Battery Park abre o dia com SeaGlass Carousel + ferry grátis vendo Statue · pós-almoço 9/11 Memorial + Oculus completam o circuito Lower Manhattan.",
+      "cor": "#3b82f6",
+      "gradA": "#1e3a8a",
+      "gradB": "#1d4ed8",
+      "stops": [
+        {
+          "hora": "9:00",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → Battery Park",
+          "cat": "~30 min · entrada Whitehall Terminal",
+          "coord": {
+            "lat": 40.7019,
+            "lng": -74.0125
+          }
+        },
+        {
+          "hora": "9:30",
+          "emoji": "🐟",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "SeaGlass Carousel (Battery Park)",
+          "cat": "Carrossel-aquário · 2015",
+          "sobre": "Inaugurado em 2015 no Battery Park, homenagem ao primeiro aquário público dos EUA que ficava bem ali (1896-1941). **30 peixes gigantes esculpidos (5m+) em fibra com iluminação LED interna** que muda de cor durante o passeio. Trilha sonora orquestral, e o carrossel não gira só na horizontal — cada peixe roda em seu próprio eixo. Único no mundo.",
+          "imperdivel": "O efeito imersivo: luz baixa, peixes brilhando, música clássica — a criança fica em transe os 3 minutos do passeio",
+          "dicas": [
+            "$6 por volta · cartão",
+            "Aberto 10h-22h em julho",
+            "Battery Park inteiro vale 30 min: playground, vista Statue of Liberty",
+            "Banheiros públicos limpos no Battery Maritime Building (próximo)",
+            "Fila menor às 10h na abertura (chegar antes do ferry)"
+          ],
+          "duracao": "30-45min",
+          "custo": "$24 família 3 voltas",
+          "acessibilidade": "Plataforma acessível",
+          "coord": {
+            "lat": 40.7022,
+            "lng": -74.015
+          }
+        },
+        {
+          "hora": "10:30",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Staten Island Ferry · vista Statue of Liberty",
+          "cat": "Travessia gratuita · 25 min cada perna",
+          "sobre": "Balsas públicas operando ininterruptamente desde 1817, Manhattan (Whitehall Terminal) ↔ Staten Island (St. George). Atravessa o porto de NY passando MUITO próximo à Statue of Liberty + Ellis Island. **Totalmente GRATUITO desde 1997**. 70.000 passageiros/dia, vibe local (commuters) misturada com turistas. Sem catraca, sem reserva.",
+          "imperdivel": "Os primeiros 7-8 min da travessia, quando a Statue passa a ~600m pelo lado do barco — ângulo lateral icônico, melhor que qualquer foto",
+          "dicas": [
+            "🆓 Totalmente gratuito, sem reserva",
+            "Lado OESTE/DIREITO na ida (Manhattan→Staten): vê Statue + Ellis + Jersey",
+            "Lado LESTE/ESQUERDO na volta: vê Brooklyn Bridge + skyline",
+            "Deck superior tem melhor vista mas mais vento",
+            "Sai a cada 30min de manhã · cumprir o looping: desce em St. George, espera 15min, volta",
+            "Carrinho passa direto, elevador disponível"
+          ],
+          "duracao": "1h-1h15",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7019,
+            "lng": -74.0125
+          }
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Lower Manhattan",
+          "cat": "3 opções a 5-10 min do ferry",
+          "coord": {
+            "lat": 40.7113,
+            "lng": -74.014
+          },
+          "opcoes": [
+            {
+              "nome": "Whole Foods Tribeca (270 Greenwich St)",
+              "desc": "Hot bar grande, saladas, opções saudáveis. Comer no Hudson River Park ou no próprio mezanino.",
+              "preco": "$",
+              "dist": "10 min do ferry"
+            },
+            {
+              "nome": "Brookfield Place Hudson Eats",
+              "desc": "Food hall climatizado com Black Seed Bagels, Sweetgreen, Shake Shack, Mighty Quinn BBQ etc. Vista da World Financial Center.",
+              "preco": "$-$$",
+              "dist": "5 min do 9/11"
+            },
+            {
+              "nome": "Joe's Pizza (180 Bedford NYC) — wait, Joe's Pizza Greenwich Village 7 Carmine St",
+              "desc": "Pizza por fatia clássica, $3-4/fatia. Greenwich Village mas vale o desvio. Pulada de fatia rápida.",
+              "preco": "$",
+              "dist": "Uber 8min"
+            }
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🕊️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "9/11 Memorial",
+          "cat": "Memorial outdoor · gratuito · 24h",
+          "sobre": "Construído no lugar exato das Twin Towers, inaugurado em 2011 (10 anos pós-ataque). **Duas piscinas-fonte quadradas de 1 acre cada**, com cascatas de 9m descendo pelos lados, ocupam as pegadas exatas das torres. Os nomes das 2.977 vítimas do 11 de Setembro, das Twin Towers, do Pentágono, do voo 93 e do ataque de 1993 estão inscritos em parapeito de bronze ao redor das piscinas. Espaço público gratuito. Não confundir com o Museum 9/11 (pago, dentro do prédio adjacente).",
+          "imperdivel": "A Survivor Tree (pereira que sobreviveu ao atentado) · quando familiares colocam uma rosa branca sobre o nome inscrito (gesto silencioso que humaniza o número 2.977)",
+          "dicas": [
+            "Gratuito + aberto 24h, sem reserva pro memorial outdoor",
+            "Banheiros públicos no Oculus a 3 min (próximo prédio)",
+            "Adultos com tempo: Museum 9/11 ($26) tem acervo profundo, 2h de visita",
+            "Atmosfera é solene — não fazer selfies sorrindo",
+            "Carrinho 100% ok"
+          ],
+          "duracao": "45min-1h",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7115,
+            "lng": -74.0134
+          }
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Oculus · World Trade Center",
+          "cat": "Estação de trem + arquitetura · 2016",
+          "sobre": "Estação de trem PATH desenhada pelo arquiteto espanhol Santiago Calatrava (mesmo do Auditório Tenerife). Inaugurado em 2016, custou **US$ 4 bilhões — a estação de trem mais cara da história**. A estrutura externa parece uma pomba branca em vôo (intencional: gesto pós-9/11). O interior é catedral-cathedral, all-white, com nervuras de aço de 50m de altura. Tem 100+ lojas, restaurantes, e conexão direta com o 9/11 Memorial. Climatizado — refúgio do calor.",
+          "imperdivel": "O 'eye of the oculus' — clarabóia central que se abre todo 11 de Setembro às 10h28 (hora exata da queda da torre norte)",
+          "dicas": [
+            "Entrada gratuita, não tem ticket",
+            "Aberto 24h (transit station)",
+            "Banheiros públicos limpos no nível inferior",
+            "Vista épica da nave principal das escadas rolantes laterais",
+            "Apple Store no lado norte (climatizado, banheiro)",
+            "Eataly no shopping ali ao lado tem café/gelato decente",
+            "🗺️ WALKING TOUR WALL STREET (45min · 0.6km · 6 paradas) — ver aba Mapa pra rota completa · history packed mile do distrito financeiro",
+            "1️⃣ **Trinity Church** (igreja atual de 1846, primeira igreja desde 1697) · **tumba de Alexander Hamilton** no cemitério + Robert Fulton (inventor do barco a vapor) + Eliza Hamilton",
+            "2️⃣ **Federal Hall** · estátua do **George Washington** no exato lugar onde tomou posse como **1º Presidente dos EUA em 30/Abril/1789**. Edifício atual de 1842, mas o local é o spot do nascimento do governo americano",
+            "3️⃣ **NYSE - New York Stock Exchange** (11 Wall St) · fachada neoclássica de 1903 · não entra sem credencial desde 9/11, mas a fachada com bandeira gigante vale a foto",
+            "4️⃣ **Charging Bull** (Bowling Green) · escultura de 3.200kg do Arturo Di Modica, instalado **clandestinamente em 1989** como protesto pós-crash de 87 · tradição: tocar os 'Wall Street parts' pra sorte (já entendeu)",
+            "5️⃣ 🔍 **Stone Street** · **rua paralelepípedo mais antiga de Manhattan** (calçada em 1658 pelos holandeses), hoje pedonal, cheia de bares/restaurantes de séc. XIX restaurados — ponto perfeito de almoço/café",
+            "6️⃣ **Fraunces Tavern** (54 Pearl St, 1762) · onde **Washington se despediu dos oficiais do Exército Continental em 4/Dez/1783** · ainda funciona como restaurante + tem museum (US$8) com artefatos da Revolução"
+          ],
+          "duracao": "30-45min (Oculus) + 45min walking tour",
+          "custo": "Gratuito (Oculus + tour)",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7113,
+            "lng": -74.0118
+          },
+          "walkingTours": [
+            {
+              "nome": "Wall Street · 🏛️ História Americana",
+              "descricao": "Trinity → Federal Hall → Charging Bull → Stone St → Fraunces · ~45min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Trinity Church (Hamilton's tomb)",
+                  "coord": {
+                    "lat": 40.7081,
+                    "lng": -74.0124
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Federal Hall (Washington inauguration)",
+                  "coord": {
+                    "lat": 40.7075,
+                    "lng": -74.0103
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "NYSE - New York Stock Exchange (11 Wall St)",
+                  "coord": {
+                    "lat": 40.7068,
+                    "lng": -74.0113
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Charging Bull (Bowling Green)",
+                  "coord": {
+                    "lat": 40.7055,
+                    "lng": -74.0134
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Stone Street (cobblestone histórico)",
+                  "coord": {
+                    "lat": 40.7044,
+                    "lng": -74.0114
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Fraunces Tavern (54 Pearl St, 1762)",
+                  "coord": {
+                    "lat": 40.7034,
+                    "lng": -74.0114
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Lower Manhattan → Greenpoint",
+          "cat": "~25 min · pequena dorme",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Qua 8/Jul",
+      "tema": "MOMA + Greenwich Village",
+      "temaCurto": "Greenwich Village",
+      "bairro": "Manhattan — Midtown + Greenwich Village",
+      "grupo": false,
+      "nota": "Único dia de Manhattan iconic da esposa antes da família chegar. MOMA pela manhã (foco em destaques) + Greenwich Village walking à tarde (Washington Sq splash pad pra distração da pequena). Pequena vai no carrinho · pausas em cafés.",
+      "cor": "#6366f1",
+      "gradA": "#312e81",
+      "gradB": "#4338ca",
+      "stops": [
+        {
+          "hora": "9:30",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → Midtown",
+          "cat": "~25 min · entrada MOMA 53rd & 5th",
+          "coord": {
+            "lat": 40.7614,
+            "lng": -73.9776
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🎨",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "MOMA · Museum of Modern Art",
+          "cat": "53rd & 5th · arte moderna desde 1929",
+          "sobre": "Fundado em 1929 por três mulheres (Lillie Bliss, Mary Quinn Sullivan, Abby Aldrich Rockefeller), foi o **primeiro museu do mundo dedicado exclusivamente à arte moderna**. Acervo de 200.000 obras: Picasso, Matisse, Van Gogh, Warhol, Pollock, Rothko, Frida Kahlo, Dalí. Reforma de $450M em 2019 expandiu 30%.",
+          "imperdivel": "A Noite Estrelada (Van Gogh, 1889) — Sala 502, 5º andar · Demoiselles d'Avignon (Picasso) + Monet Water Lilies estão na mesma região",
+          "dicas": [
+            "Comprar online: $30 adulto, criança <16 grátis",
+            "Plano com criança: pular ala temática avant-garde, focar coleção permanente 4º-5º andar (2h max)",
+            "Tour familiar gratuito 11h e 14h (45min, em inglês) — pega cards na entrada",
+            "Banheiros: 2º, 4º, 6º andares",
+            "Espresso Bar no 2º andar pra café decente",
+            "Carrinho permitido em todas galerias (exceto grupos escolares raros)",
+            "Aberto 10h30-17h30 · quarta abre 10h30 ✓"
+          ],
+          "duracao": "2h-2h30",
+          "custo": "$60 casal",
+          "acessibilidade": "100% acessível, elevadores",
+          "coord": {
+            "lat": 40.7614,
+            "lng": -73.9776
+          }
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Midtown",
+          "cat": "3 opções perto do MOMA",
+          "coord": {
+            "lat": 40.7619,
+            "lng": -73.9821
+          },
+          "opcoes": [
+            {
+              "nome": "The Halal Guys (53rd & 6th)",
+              "desc": "Food cart original desde 1990, chicken & rice combo com molho branco + hot sauce. Comer no banco do parque ou Bryant Park (5min).",
+              "preco": "$10/pessoa",
+              "dist": "3 min do MOMA"
+            },
+            {
+              "nome": "Le Pain Quotidien (53rd & 7th)",
+              "desc": "Sit-down com high chair, cardápio infantil, salgadas/saladas, ambiente tranquilo pra criança.",
+              "preco": "$$",
+              "dist": "5 min do MOMA"
+            },
+            {
+              "nome": "Whole Foods Bryant Park",
+              "desc": "Hot bar grande + comer no Bryant Park (10 min). Funciona bem como piquenique.",
+              "preco": "$",
+              "dist": "10 min do MOMA"
+            }
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Midtown → Washington Square",
+          "cat": "~15 min",
+          "coord": {
+            "lat": 40.7308,
+            "lng": -73.9973
+          }
+        },
+        {
+          "hora": "13:45",
+          "emoji": "🌳",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Washington Square Park",
+          "cat": "Coração de Greenwich Village · NYU",
+          "sobre": "Praça pública desde 1828, construída sobre um antigo cemitério de epidemia de febre amarela (~20.000 corpos enterrados embaixo). O **Washington Square Arch** (1892) é réplica do Arc de Triomphe parisiense. Hoje é coração do Greenwich Village + ponto de encontro de estudantes da NYU. Atmosfera bohemia: músicos de rua, jogadores de xadrez profissionais, performers.",
+          "imperdivel": "O arco enquadrando a Empire State Building no fim da 5th Avenue · **a fonte central liga sprinklers em julho — splash pad pra pequena**",
+          "dicas": [
+            "Fonte central = splash pad gratuito improvisado em julho",
+            "Carrinho passa por toda a praça (todos os caminhos pavimentados)",
+            "Banheiros públicos no canto sudeste",
+            "Mesas de xadrez no canto sudoeste (jogadores profissionais $5/partida)",
+            "Café-bookstore Three Lives & Co a 4 min — uma das melhores livrarias de NY"
+          ],
+          "duracao": "45min",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7308,
+            "lng": -73.9973
+          }
+        },
+        {
+          "hora": "14:45",
+          "emoji": "🚶",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Greenwich Village walking",
+          "cat": "Free walking tour · ~1h30 · 2km · curiosidades + hidden gems",
+          "sobre": "Único bairro de Manhattan que **escapa da grade ortogonal** — ruas tortas e curtas, brownstones, prédios de 3-5 andares (raríssimo em Manhattan). 3 camadas de história sobrepostas: **Bohemian (1910s)**, **Beat/Folk (50s-60s)** — Bob Dylan, Hendrix, Joni Mitchell começaram aqui — e **Stonewall LGBTQ+ (1969)**. Rota sugerida abaixo cobre 10 paradas em ~1h30 de Washington Square até Christopher St.",
+          "imperdivel": "**Caffe Reggio** (MacDougal) — desde 1927, **primeira cafeteria dos EUA a servir cappuccino**. Bob Dylan tirou aqui a foto com Suze Rotolo que virou capa de 'The Freewheelin' Bob Dylan' (1963)",
+          "dicas": [
+            "🗺️ ROTEIRO SUGERIDO (1h30 · 2km · ponto a ponto)",
+            "1️⃣ **Washington Sq Arch** — réplica do Arc de Triomphe (1892). Curiosidade: sob a praça estão ~20.000 corpos enterrados (cemitério de febre amarela 1797-1825)",
+            "2️⃣ Walk sul pela **MacDougal St** → #119 **Caffe Reggio** · primeira cafeteria EUA a servir cappuccino (1927). Pausa pra café aqui é parte da experiência",
+            "3️⃣ #117 **Comedy Cellar** · Louis CK, Chris Rock, Seinfeld testam material toda semana. Larry David filmou Curb Your Enthusiasm aqui",
+            "4️⃣ #144 MacDougal · **Bob Dylan's apartment** (1961-64) — onde escreveu 'Blowin' in the Wind'. Plaque na fachada",
+            "5️⃣ Cross Bleecker → **Joe's Pizza** (7 Carmine St) · fatia $3 desde 1975. **Apareceu em Spider-Man 2** (2004) — placa idêntica até hoje",
+            "6️⃣ Continue Bleecker oeste → #254 **Murray's Cheese** (1940) · loja de queijos mais antiga de NY. **Degustação grátis no balcão**",
+            "7️⃣ #385 Bleecker · primeira loja **Marc Jacobs** (1986)",
+            "8️⃣ #401 Bleecker · **Magnolia Bakery** · cupcakes Sex and the City (Ep. 3.05, 2000). Honestidade: lotada de turista, pula sem culpa",
+            "9️⃣ 🔍 **HIDDEN GEM** · **Patchin Place** (entre 6th Ave e Greenwich, off W 10th St) · viela com 10 casas em fila. **e.e. cummings + Marlon Brando moraram aqui**. Portão tranca mas dá pra ver de fora",
+            "🔟 **Stonewall Inn** (53 Christopher St) · monumento nacional desde 2016 · marco zero do movimento LGBTQ+ (motim de 28/Jun/1969)",
+            "1️⃣1️⃣ 🔍 **HIDDEN GEM** · **AIDS Memorial** (Greenwich Ave & 12th St) · triângulo aço inox 5m no antigo St. Vincent's Hospital, epicentro AIDS nos anos 80",
+            "1️⃣2️⃣ 🔍 **HIDDEN GEM** · **Northern Dispensary** (152 Waverly Pl) · clínica médica de 1831 onde **Edgar Allan Poe foi tratado**. Prédio triangular único",
+            "⏱️ Tempo total: 1h30 caminhando devagar com pausas. Pausa pra café no Caffe Reggio recomendada",
+            "♿ Calçadas estreitas, alguns trechos com pedra portuguesa — carrinho passa mas mais lento",
+            "🛝 Se a pequena cansar: **Bleecker Playground** (Hudson & Bleecker) tem sprinklers no verão"
+          ],
+          "duracao": "1h30-2h",
+          "custo": "Gratuito + café/pizza opcional",
+          "acessibilidade": "Calçadas estreitas em trechos",
+          "coord": {
+            "lat": 40.7325,
+            "lng": -74.003
+          },
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 🎶 Bohemian Trail (Folk + Comedy)",
+              "descricao": "Washington Sq → MacDougal → Bleecker · ~40min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Washington Sq Arch",
+                  "coord": {
+                    "lat": 40.7308,
+                    "lng": -73.9974
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Caffe Reggio (119 MacDougal)",
+                  "coord": {
+                    "lat": 40.7297,
+                    "lng": -73.9988
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Comedy Cellar (117 MacDougal)",
+                  "coord": {
+                    "lat": 40.7296,
+                    "lng": -73.9988
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Bob Dylan's apartment (144 MacDougal)",
+                  "coord": {
+                    "lat": 40.7293,
+                    "lng": -73.999
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Joe's Pizza (7 Carmine St)",
+                  "coord": {
+                    "lat": 40.7305,
+                    "lng": -74.002
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Murray's Cheese (254 Bleecker)",
+                  "coord": {
+                    "lat": 40.7314,
+                    "lng": -74.0033
+                  }
+                }
+              ]
+            },
+            {
+              "nome": "Parte 2 · 🌈 Stonewall + Hidden Gems",
+              "descricao": "Bleecker → Christopher → Greenwich Ave · ~40min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Marc Jacobs original (385 Bleecker)",
+                  "coord": {
+                    "lat": 40.7341,
+                    "lng": -74.0044
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Magnolia Bakery (401 Bleecker)",
+                  "coord": {
+                    "lat": 40.735,
+                    "lng": -74.0049
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Patchin Place (off W 10th St)",
+                  "coord": {
+                    "lat": 40.7345,
+                    "lng": -74.0017
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Stonewall Inn (53 Christopher)",
+                  "coord": {
+                    "lat": 40.7339,
+                    "lng": -74.0026
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "AIDS Memorial (Greenwich Ave & 12th)",
+                  "coord": {
+                    "lat": 40.7372,
+                    "lng": -74.0009
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Northern Dispensary (152 Waverly Pl)",
+                  "coord": {
+                    "lat": 40.7346,
+                    "lng": -74.0009
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Greenwich Village → Greenpoint",
+          "cat": "~25 min · pequena dorme",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Qui 9/Jul",
+      "tema": "Hudson Yards + High Line",
+      "temaCurto": "High Line",
+      "bairro": "Manhattan — Hudson Yards + Chelsea + West Village",
+      "grupo": true,
+      "nota": "⚠️ Família chega de manhã. Encontro pra fechar o dia juntos no Vessel às 11h (timed entry reservada). Hudson Yards é o ponto norte da High Line — caminha pro sul até Chelsea Market (almoço) e Little Island (fim).",
+      "cor": "#f97316",
+      "gradA": "#7c2d12",
+      "gradB": "#c2410c",
+      "stops": [
+        {
+          "hora": "~10:30",
+          "emoji": "👨‍👩‍👧",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Família chega · transfer aeroporto → Williamsburg",
+          "noMaps": true,
+          "cat": "Eles se instalam · vocês saem da base 10h30",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → Hudson Yards",
+          "cat": "~30 min · encontro com família no Vessel",
+          "coord": {
+            "lat": 40.7539,
+            "lng": -74.0021
+          }
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🐝",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "reserva": "pendente",
+          "nome": "The Vessel · Hudson Yards",
+          "cat": "Escultura escalável · timed entry",
+          "sobre": "Estrutura de 45m projetada por Thomas Heatherwick em 2019. **154 lances de escada interconectados, 80 patamares, 2.500 degraus**. Aço cor cobre, formato hexagonal de favo de mel. Após fechamento longo por incidentes, **reabriu em março 2026** com mesh de segurança. Andares superiores hoje têm acesso parcial. Localização: Hudson Yards (extremidade norte da High Line).",
+          "imperdivel": "A vista do topo (até onde dá): skyline Hudson + West Side + High Line abaixo · arquitetura de dentro pra fora",
+          "dicas": [
+            "⚠️ TICKET TIMED ENTRY obrigatório em vesselnyc.com",
+            "$10 adulto · crianças <5 grátis (mas precisa ticket)",
+            "Criança 3 anos não anda sozinha — adulto carrega no colo OU fica embaixo com carrinho (estrutura impressionante de baixo também)",
+            "Elevador limitado (só algumas áreas)",
+            "Não pode entrar com comida/bebida",
+            "Carrinho fica no térreo",
+            "Banheiros próximos no Hudson Yards mall"
+          ],
+          "duracao": "30-45min",
+          "custo": "$30-40 grupo",
+          "acessibilidade": "Térreo acessível · elevador parcial",
+          "coord": {
+            "lat": 40.7539,
+            "lng": -74.0021
+          }
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🌿",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "High Line · entrada norte (30th St) → sul",
+          "cat": "Parque elevado · ex-ferrovia 1934 · 2.3km",
+          "sobre": "Parque elevado construído sobre a antiga ferrovia de carga West Side Line (1934, abandonada em 1980). Reformado em 3 fases (2009, 2011, 2014). Trabalha com paisagismo que mistura plantas selvagens com cultivadas — parece ferrovia abandonada estilizada. Plano: caminhar de Hudson Yards (30th St) até Chelsea Market (16th St) — ~30 min sem pressa.",
+          "imperdivel": "O 26th St 'viewing spur' — extensão lateral original da ferrovia preservada como mirante, vista única da 10th Avenue",
+          "dicas": [
+            "Entrada com elevador: 30th St, 23rd St, 16th St, 14th St, Gansevoort",
+            "Pouca sombra: ir antes das 13h em julho. Levar água + chapéu",
+            "Carrinho permitido em todo o percurso (plano)",
+            "Bancos espalhados pra descanso",
+            "Food carts no 16th St se precisar de snack rápido",
+            "Sair em 16th St pra Chelsea Market (almoço)",
+            "🗺️ WALKING TOUR HIGH LINE (annotations · 45min · 2.3km) — ver aba Mapa pra paradas curadas ao longo do percurso",
+            "1️⃣ **The Spur + The Plinth** (30th St & 10th Ave) · extensão norte com **escultura monumental rotativa anual** (Plinth) · primeira obra Plinth foi um busto monumental do Simone Leigh (2019)",
+            "2️⃣ **26th St viewing spur** · extensão lateral original preservada · mirante único da 10th Avenue passando embaixo",
+            "3️⃣ 🛝 **23rd St Lawn** · gramado retangular pra descanso · sombra parcial · **ideal pra pausa com a pequena**",
+            "4️⃣ **10th Ave Square** (17th St) · **anfiteatro de assentos de madeira em escada** sobre a 10th Ave · ponto fotográfico icônico · janela panorâmica enquadrando o tráfego como cinema",
+            "5️⃣ **Chelsea Market Passage** (16th St) · onde a High Line passa **DENTRO** da Nabisco factory (1898) — local exato onde o **Oreo foi inventado em 1912**. Sair aqui pro almoço",
+            "6️⃣ **The Standard Hotel** (Little W 12th) · **prédio inteiro construído straddling a High Line** · feat. de engenharia · vidro pleno (escândalo: hóspedes faziam shows à janela nos primeiros anos)"
+          ],
+          "duracao": "45min-1h (caminhada) + paradas annotations",
+          "custo": "Gratuito",
+          "acessibilidade": "5 elevadores",
+          "coord": {
+            "lat": 40.7559,
+            "lng": -74.0042
+          },
+          "walkingTours": [
+            {
+              "nome": "High Line · 🌿 Annotations ao longo do percurso",
+              "descricao": "6 paradas curadas: Plinth → 26th Spur → 23rd Lawn → 10th Ave Square → Chelsea Market → Standard",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "The Spur + The Plinth (30th & 10th Ave)",
+                  "coord": {
+                    "lat": 40.7548,
+                    "lng": -74.0017
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "26th St viewing spur",
+                  "coord": {
+                    "lat": 40.7508,
+                    "lng": -74.005
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "23rd St Lawn",
+                  "coord": {
+                    "lat": 40.7479,
+                    "lng": -74.0058
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "10th Ave Square (17th St)",
+                  "coord": {
+                    "lat": 40.7434,
+                    "lng": -74.0067
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Chelsea Market Passage (16th St, ex-Nabisco)",
+                  "coord": {
+                    "lat": 40.7422,
+                    "lng": -74.007
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "The Standard Hotel (Little W 12th, straddling)",
+                  "coord": {
+                    "lat": 40.7402,
+                    "lng": -74.0079
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Chelsea Market",
+          "cat": "Food hall climatizado · ex-fábrica Nabisco",
+          "sobre": "Antiga fábrica da Nabisco onde foi inventado o Oreo cookie em 1912 (fábrica 1898-1958). Reaberto em 1997 como food hall. 35+ vendedores, lojas especializadas, túnel de tijolos preservado, tubulações industriais expostas. **Climatizado — refúgio do calor**.",
+          "coord": {
+            "lat": 40.7424,
+            "lng": -74.0061
+          },
+          "opcoes": [
+            {
+              "nome": "Los Tacos No.1",
+              "desc": "Tacos mexicanos autênticos com tortilla feita na hora. Al pastor com abacaxi é icônico. Fila rotativa rápida.",
+              "preco": "$15/pessoa",
+              "dist": "No Chelsea Market"
+            },
+            {
+              "nome": "The Lobster Place",
+              "desc": "Lobster roll fresco, ostras, sushi de qualidade. Aquário ao vivo encanta criança.",
+              "preco": "$$$",
+              "dist": "No Chelsea Market"
+            },
+            {
+              "nome": "Amy's Bread + Buon Italia",
+              "desc": "Sanduíches em pão artesanal + opções italianas. Mais leve, kid-friendly.",
+              "preco": "$",
+              "dist": "No Chelsea Market"
+            }
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🌺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Little Island",
+          "cat": "Ilha artificial · Pier 55 · 2021",
+          "sobre": "Ilha artificial flutuante de 2.4 acres construída sobre 132 colunas de concreto em forma de tulipa, inaugurada em 2021 ao custo de $260M (financiada por Barry Diller). Substituiu o antigo Pier 54 destruído pelo furacão Sandy em 2012. Tem playground escalável, anfiteatro pra shows grátis, jardins paisagísticos, vistas 360° do Hudson + Manhattan.",
+          "imperdivel": "O Glade Amphitheater · subir as colinas e ver Hudson Yards + High Line de um ângulo único",
+          "dicas": [
+            "Entrada gratuita, sem ticket pra acesso geral",
+            "Eventos noturnos podem requerer reserva (verificar littleisland.org)",
+            "Banheiros públicos no centro",
+            "Carrinho 100% ok (rampas)",
+            "Conexão direta com Hudson River Park (estende o passeio)"
+          ],
+          "duracao": "45min-1h",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7421,
+            "lng": -74.0107
+          }
+        },
+        {
+          "hora": "15:45",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Little Island → Greenpoint",
+          "cat": "~25 min · primeiro jantar com família",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sex 10/Jul",
+      "tema": "Midtown · Top of Rock + MET",
+      "temaCurto": "Midtown",
+      "bairro": "Manhattan — Midtown + UES",
+      "grupo": true,
+      "nota": "Dia montado em torno do Top of the Rock 11h ✅ RESERVADO + MET à tarde (movido do domingo). Bryant Park → Top of Rock → almoço Midtown → Uber pro MET (Egyptian wing + Temple of Dendur). Cortados LEGO/Grand Central/Times Square pra abrir espaço pro MET.",
+      "cor": "#f59e0b",
+      "gradA": "#78350f",
+      "gradB": "#b45309",
+      "stops": [
+        {
+          "hora": "9:00",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → Bryant Park",
+          "cat": "~30 min · 42nd & 6th",
+          "coord": {
+            "lat": 40.7536,
+            "lng": -73.9832
+          }
+        },
+        {
+          "hora": "9:30",
+          "emoji": "🌳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Bryant Park",
+          "cat": "Parque urbano · biblioteca por trás",
+          "sobre": "Parque de 4 hectares atrás da NY Public Library. Em 1980 era epicentro de tráfico de drogas, reformado nos 90s e hoje é um dos parques mais elegantes de Manhattan. Tem **mini-carrossel pago ($4/passeio)**, mesas comunitárias, café Le Pain Quotidien, programação cultural no verão (concertos Picnic Performances sex 19h).",
+          "imperdivel": "Vista da NY Public Library Beaux-Arts ao fundo · carrossel histórico",
+          "dicas": [
+            "Mini-carrossel $4 — pequena adora",
+            "Banheiros públicos limpos (raro em Manhattan) no canto sudeste",
+            "Café Le Pain Quotidien interno tem high chair",
+            "Wi-Fi gratuito + mesas de xadrez/pingue-pongue (raquetes alugadas)",
+            "Picnic Performances grátis sex 19h em julho-ago — bedtime da pequena"
+          ],
+          "duracao": "30-45min",
+          "custo": "$8 1 volta no carrossel",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7536,
+            "lng": -73.9832
+          }
+        },
+        {
+          "hora": "11:00",
+          "emoji": "⭐",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "reserva": "reservado",
+          "nome": "Top of the Rock · 70 andares",
+          "cat": "30 Rockefeller Plaza · RESERVADO ✅",
+          "sobre": "Observatório no 70º andar do Rockefeller Center (1933). Vista melhor que Empire State **porque você vê o Empire State** no horizonte (a foto icônica). Três decks: 67 (indoor + abrigada), 69 (parcial outdoor), **70 (totalmente outdoor sem grades — só plexiglass)**. Vista 360°: Central Park ao norte, Empire State + Lower Manhattan ao sul, Hudson + Brooklyn nas laterais.",
+          "imperdivel": "O deck 70 sem grades — sensação de estar no topo da cidade · pôr do sol às 20h32",
+          "dicas": [
+            "Reserva 11h ✅ — chegar 10h45 pra entrar",
+            "Levar protetor solar (deck 70 é sol direto)",
+            "Foto: Empire State na 5th Ave ao sul, melhor luz fim de manhã",
+            "Banheiros: nível mezanino + 67º andar",
+            "Saída pelo NBC Studios store (pode comprar souvenirs do SNL)",
+            "🗺️ WALKING TOUR MIDTOWN (45min · 1km · 6 paradas) — ver aba Mapa pra rota completa · conecta TOR → 5th Ave → Grand Central",
+            "1️⃣ **Channel Gardens** (entrada Rockefeller pela 5th Ave) · canteiros de flores entre French & British Buildings (1933), seasonal floral installations · árvore de Natal famosa fica aqui",
+            "2️⃣ **Atlas statue** (frente Rockefeller na 5th Ave) · bronze de 1937, **Atlas carregando o mundo nos ombros** · 7m de altura · símbolo do art deco americano",
+            "3️⃣ **Saint Patrick's Cathedral** (5th Ave & 50th) · 1879 neo-gótica, **maior catedral católica dos EUA** · entrada gratuita · vitrais Charles Connick · onde foram velados Babe Ruth, Bobby Kennedy",
+            "4️⃣ **NY Public Library Stephen A. Schwarzman** (5th Ave & 42nd) · 1911 Beaux-Arts · leões **Patience & Fortitude** na entrada · **Rose Main Reading Room** no 3º andar (52m de comprimento, tetos pintados, free pra visitar) · *Ghostbusters*, *Sex and the City*",
+            "5️⃣ 🍴 **Bryant Park** (atrás da NYPL) · gramado + **carrossel Le Carrousel** + xadrez público + Wi-Fi grátis · NÃO confundir com Central Park · ideal pra pausa com a pequena",
+            "6️⃣ **Chrysler Building** (Lexington & 42nd, visível de Bryant Park ao leste) · 1930 art deco · **prédio mais alto do mundo por 11 meses** (até Empire State em 1931) · águias-gárgulas de aço inox no 61º andar · lobby aberto pra visitar gratuitamente (madeiras + murais)"
+          ],
+          "duracao": "1h-1h30 (TOR) + 45min walking tour",
+          "custo": "Já pago",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7587,
+            "lng": -73.9787
+          },
+          "walkingTours": [
+            {
+              "nome": "Midtown · 🏙️ 5th Ave + 42nd St",
+              "descricao": "Rockefeller → St. Patrick's → NYPL → Bryant → Chrysler · ~45min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Channel Gardens (Rockefeller entrada 5th Ave)",
+                  "coord": {
+                    "lat": 40.7589,
+                    "lng": -73.9789
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Atlas statue (Rockefeller 5th Ave)",
+                  "coord": {
+                    "lat": 40.7585,
+                    "lng": -73.9772
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Saint Patrick's Cathedral (5th Ave & 50th)",
+                  "coord": {
+                    "lat": 40.7585,
+                    "lng": -73.976
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "NY Public Library Schwarzman (5th Ave & 42nd)",
+                  "coord": {
+                    "lat": 40.7532,
+                    "lng": -73.9822
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Bryant Park",
+                  "coord": {
+                    "lat": 40.7536,
+                    "lng": -73.9832
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Chrysler Building (Lexington & 42nd)",
+                  "coord": {
+                    "lat": 40.7516,
+                    "lng": -73.9755
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Midtown",
+          "cat": "3 opções entre Top of Rock e Grand Central",
+          "coord": {
+            "lat": 40.7528,
+            "lng": -73.9772
+          },
+          "opcoes": [
+            {
+              "nome": "Grand Central Dining Concourse",
+              "desc": "Food hall histórico abaixo da estação. Murray's Cheese Bar, Shake Shack, Cipriani, Magnolia Bakery. Atmosfera grand.",
+              "preco": "$-$$",
+              "dist": "5 min do Top of Rock"
+            },
+            {
+              "nome": "Whole Foods Bryant Park",
+              "desc": "Hot bar + saladas + tomar no Bryant Park (caminho de volta).",
+              "preco": "$",
+              "dist": "5 min do Top of Rock"
+            },
+            {
+              "nome": "Sweetgreen (5th Ave)",
+              "desc": "Saladas customizáveis, sem espera longa, kid-friendly.",
+              "preco": "$",
+              "dist": "5 min do Top of Rock"
+            }
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Midtown → MET",
+          "cat": "~15 min · 5th Ave & 82nd St",
+          "coord": {
+            "lat": 40.7794,
+            "lng": -73.9632
+          }
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Metropolitan Museum of Art (MET)",
+          "cat": "5th Ave & 82nd · maior museu dos EUA · 1870",
+          "sobre": "Maior museu de arte dos EUA e um dos quatro maiores do mundo (com Louvre, British Museum, Hermitage). 2 milhões de obras cobrindo 5.000 anos. Fundado em 1870, no edifício atual desde 1880. 17 departamentos curatoriais. Acervo tão amplo que ninguém vê tudo — turistas seletivos focam Egito, Grécia/Roma, pintura europeia.",
+          "imperdivel": "Temple of Dendur (Sackler Wing) — templo egípcio inteiro do século 15 a.C., presente do governo egípcio aos EUA em 1965. Reconstruído pedra por pedra, com piscina refletora simulando o Nilo.",
+          "dicas": [
+            "Comprar online: $30 adulto, criança <12 grátis (ainda assim pega ticket grátis)",
+            "Plano com 3 anos: Egyptian Wing (1h) → Greek/Roman (30min) → MET Rooftop (vista Central Park, 15min) = 2h é o máximo",
+            "MET Rooftop Garden Bar abre maio-out: drink com vista do parque + skyline (só adulto)",
+            "Sexta o MET fecha 21h (Fri/Sat horário estendido) · chegar 14h pega a tarde sem fila de abertura",
+            "American Wing tem Washington Crossing the Delaware (1851)",
+            "Carrinho permitido em todas galerias",
+            "Banheiros: vários por andar, perto dos elevadores"
+          ],
+          "duracao": "2h30",
+          "custo": "$60 casal (pequena grátis)",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7794,
+            "lng": -73.9632
+          }
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber MET → Greenpoint",
+          "cat": "~30 min · pequena dorme",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sáb 11/Jul",
+      "tema": "AMNH + High Line",
+      "temaCurto": "AMNH",
+      "bairro": "Manhattan — UWS + Chelsea/High Line",
+      "grupo": true,
+      "nota": "Segundo sábado: AMNH pela manhã (idade perfeita pra dinossauros!) → almoço UWS → tarde na High Line (stroll relax). ⚠️ AMNH(UWS) → High Line(Chelsea) é ~25min de Uber pro sul, não é coladinho. Aqui é a versão leve da High Line; a tour completa com annotations continua na quinta 9/Jul.",
+      "cor": "#a855f7",
+      "gradA": "#581c87",
+      "gradB": "#7e22ce",
+      "stops": [
+        {
+          "hora": "9:30",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → UWS",
+          "cat": "~30 min · entrada AMNH 79th St",
+          "coord": {
+            "lat": 40.7813,
+            "lng": -73.974
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🦖",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "red",
+          "reserva": "pendente",
+          "nome": "American Museum of Natural History",
+          "cat": "Museu de história natural · desde 1869",
+          "sobre": "Um dos maiores museus de história natural do mundo, fundado em 1869, com 32 milhões de espécimes em 45 salas permanentes. Conhecido pelo **Hall of Saurischian Dinosaurs (T-Rex original, Apatossauro)**, pela baleia azul de 28m suspensa no teto do Milstein Hall, e pela Rose Center for Earth and Space (planetário dentro de cubo de vidro). Cenário do filme Night at the Museum.",
+          "imperdivel": "T-Rex original no 4º andar (descoberto em Montana 1902) + baleia azul suspensa no Hall of Ocean Life (3º) — vista melhor de cima",
+          "dicas": [
+            "⚠️ COMPRAR ONLINE com antecedência — sábado verão SEMPRE lota",
+            "$28 adulto, $16 criança 3-12. Inclui exposições gerais",
+            "Plano com 3 anos: dinossauros (4º) + baleia (1º) + Discovery Room (interativa). 2-2h30 max",
+            "Discovery Room: experiências hands-on, entrada limitada por tempo, pegar ticket grátis na entrada",
+            "Café Mezz no 4º andar pra lanche · restaurante grande no piso inferior",
+            "Aberto 10h-17h30 · chegar abertura evita tour groups",
+            "Banheiros: 1º andar perto entrada principal, 4º andar perto dinossauros"
+          ],
+          "duracao": "2h30",
+          "custo": "$72 família",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7813,
+            "lng": -73.974
+          }
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Upper West Side",
+          "cat": "3 opções perto do AMNH",
+          "coord": {
+            "lat": 40.78,
+            "lng": -73.981
+          },
+          "opcoes": [
+            {
+              "nome": "Trader Joe's 670 Columbus Ave",
+              "desc": "Mercado pra montar piquenique. Comer no Central Park (Sheep Meadow a 10min) ou Diana Ross Playground.",
+              "preco": "$",
+              "dist": "5 min do AMNH"
+            },
+            {
+              "nome": "Shake Shack Columbus Circle",
+              "desc": "Burger clássico NYC, kid menu, cardápio rápido. Mais 5 min de caminhada.",
+              "preco": "$$",
+              "dist": "10 min do AMNH"
+            },
+            {
+              "nome": "Café Mezz (dentro do AMNH)",
+              "desc": "Café do próprio museu, conveniência total mas comida fraca. Vale só se quiserem ficar dentro.",
+              "preco": "$$",
+              "dist": "No museu"
+            }
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber UWS → High Line (entrada 30th St)",
+          "cat": "~20-25 min · descer pra Chelsea",
+          "coord": {
+            "lat": 40.7559,
+            "lng": -74.0042
+          }
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🌿",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "High Line · stroll relax (30th St → Gansevoort)",
+          "cat": "Parque elevado · ex-ferrovia 1934 · caminhada leve",
+          "sobre": "Parque elevado sobre a antiga ferrovia West Side Line (1934, abandonada em 1980, reaberta como parque entre 2009-2014). Paisagismo selvagem-cultivado sobre os trilhos originais. <strong>Versão relax</strong>: dessa vez sem a maratona de annotations da quinta — só caminhar de cima pra baixo, sentar nos bancos e deixar a pequena ver a cidade do alto.",
+          "imperdivel": "O <strong>10th Ave Square</strong> (17th St): anfiteatro de madeira com janela panorâmica enquadrando o tráfego como cinema — melhor lugar pra sentar com a pequena",
+          "dicas": [
+            "Pouca sombra: julho à tarde pega sol — água + chapéu + protetor",
+            "Carrinho ok em todo o percurso (plano) · elevadores em 30th, 23rd, 16th, 14th, Gansevoort",
+            "Se a pequena cansar, descer em qualquer elevador e pegar Uber",
+            "Food carts no 16th St (Chelsea Market embaixo) pra snack/sorvete",
+            "Fim sul em Gansevoort St (Meatpacking) · Whitney Museum ali se sobrar energia"
+          ],
+          "duracao": "45min-1h",
+          "custo": "Gratuito",
+          "acessibilidade": "5 elevadores · 100% carrinho",
+          "coord": {
+            "lat": 40.7559,
+            "lng": -74.0042
+          }
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Meatpacking → Greenpoint",
+          "cat": "~25 min",
+          "coord": {
+            "lat": 40.74,
+            "lng": -74.0079
+          }
+        }
+      ]
+    },
+    {
+      "date": "Dom 12/Jul",
+      "tema": "DUMBO + Ponte + MJ Musical",
+      "temaCurto": "DUMBO+MJ",
+      "bairro": "Brooklyn DUMBO → Manhattan (Tribeca + Midtown)",
+      "grupo": true,
+      "nota": "A pequena fica com a família hoje → vocês fazem DUMBO + travessia da Brooklyn Bridge de manhã (sem carrinho, ritmo de adulto) → almoço em Tribeca já do lado de Manhattan → musical 15h → jantar Hell's Kitchen. ⚠️ MJ Musical proíbe <4 anos. Sair da ponte ~12h15 dá folga confortável pro show.",
+      "cor": "#ec4899",
+      "gradA": "#831843",
+      "gradB": "#be185d",
+      "stops": [
+        {
+          "hora": "9:00",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "NYC Ferry · India St → DUMBO",
+          "cat": "~15 min · $4 · doca a 8 min da base · pequena fica com a família",
+          "coord": {
+            "lat": 40.7029,
+            "lng": -73.9939
+          }
+        },
+        {
+          "hora": "9:30",
+          "emoji": "🌊",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Brooklyn Bridge Park · Pier 1 + Pebble Beach",
+          "cat": "Parque ribeirinho · vista Manhattan",
+          "sobre": "Parque de 34 hectares inaugurado em 2010 ao longo do East River. Pier 1 é a entrada norte com gramados, esculturas, playground (Pier 2 tem o famoso). **Pebble Beach** é uma pequena praia de pedrinhas naturais na borda do East River — vista frontal da Brooklyn Bridge + skyline financeiro. Lugar quase secreto, calmo de manhã.",
+          "imperdivel": "Pebble Beach com a Brooklyn Bridge enquadrando o skyline ao fundo — uma das melhores fotos de Brooklyn",
+          "dicas": [
+            "Sem a pequena hoje = ritmo de adulto, dá pra cobrir a annotations e atravessar a ponte",
+            "Pier 1 tem banheiros públicos limpos",
+            "Empire Stores adjacente tem cafés Brooklyn Roasting + lojinhas",
+            "Conservancy oferece tour grátis sábados 11h",
+            "🗺️ WALKING TOUR DUMBO (40min · 1km · 6 paradas) — ver aba Mapa pra rota completa",
+            "1️⃣ **Old Fulton Street** · rua mais antiga de Brooklyn (1814), paralelepípedos originais, **Eagle Warehouse** (1893) que abrigava o Brooklyn Daily Eagle (jornal do Walt Whitman)",
+            "2️⃣ **Brooklyn Bridge Anchorage** · colunas de granito gigantes que sustentam a ponte. Nos anos 80, usado como galeria de arte experimental ('The Anchorage Sessions' — Laurie Anderson, Philip Glass tocaram aqui)",
+            "3️⃣ **Front Street vintage shops** · ruazinha de tijolo vermelho com **Front General Store** (objetos vintage curados) e cafeterias artesanais",
+            "4️⃣ 📸 **Manhattan Bridge view spot** (Washington & Water) · A FOTO mais icônica de Brooklyn · *Once Upon a Time in America* (1984), *Captain America: Civil War*, milhões de Instagrams",
+            "5️⃣ **Empire Stores** · 7 warehouses de tijolo de 1869 (originalmente armazém de café e tabaco do porto), restaurados em 2017 com rooftop bar, **Time Out Market Brooklyn** e shops",
+            "6️⃣ **St. Ann's Warehouse** (45 Water St, Tobacco Warehouse 1860) · teatro experimental dentro do antigo armazém de tabaco — David Byrne, Sigourney Weaver, Lou Reed se apresentaram aqui"
+          ],
+          "duracao": "1h-1h15 (BBP) + 40min walking tour",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7016,
+            "lng": -73.997
+          },
+          "walkingTours": [
+            {
+              "nome": "DUMBO · 🏭 Industrial Past",
+              "descricao": "Old Fulton → Anchorage → Manhattan Bridge view → Empire Stores · ~40min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Old Fulton Street + Eagle Warehouse (1893)",
+                  "coord": {
+                    "lat": 40.7022,
+                    "lng": -73.9943
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Brooklyn Bridge Anchorage",
+                  "coord": {
+                    "lat": 40.7028,
+                    "lng": -73.9929
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Front General Store (143 Front St)",
+                  "coord": {
+                    "lat": 40.7036,
+                    "lng": -73.9904
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Manhattan Bridge view spot (Washington & Water)",
+                  "coord": {
+                    "lat": 40.7037,
+                    "lng": -73.9893
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Empire Stores + Time Out Market (53-83 Water St)",
+                  "coord": {
+                    "lat": 40.7034,
+                    "lng": -73.9893
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "St. Ann's Warehouse (45 Water St)",
+                  "coord": {
+                    "lat": 40.7042,
+                    "lng": -73.9883
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🌉",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Brooklyn Bridge Walk a pé",
+          "cat": "DUMBO → Civic Center Manhattan · 1.83km",
+          "sobre": "A travessia a pé pela Brooklyn Bridge é uma das experiências definitivas de NY. Inaugurada em 1883, foi a maior ponte suspensa do mundo na época. Travessia leva ~1h-1h15 sem pressa, com paradas pra fotos. O caminho pedonal fica no piso superior, separado dos carros. Sem carrinho hoje, a subida é tranquila.",
+          "imperdivel": "O ponto central da ponte (Tower #2) tem a vista mais icônica · Brooklyn pra trás, Manhattan na frente",
+          "dicas": [
+            "Iniciar pelo lado DUMBO (Washington St) — subida mais gradual",
+            "Linha amarela divide pedestres de ciclistas (NÃO passar pra ciclovia)",
+            "Sem sombra — chapéu + água, julho ao meio-dia pega sol",
+            "Final no lado Manhattan: City Hall Park (banheiros) · Tribeca a 10 min a pé pro almoço",
+            "Termina em Manhattan = já fica do lado certo pro teatro à tarde (não volta pro Brooklyn)"
+          ],
+          "duracao": "1h-1h15",
+          "custo": "Gratuito",
+          "acessibilidade": "Subida moderada (sem carrinho hoje, fácil)",
+          "coord": {
+            "lat": 40.7061,
+            "lng": -73.9969
+          }
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Tribeca",
+          "cat": "3 opções perto do fim da ponte",
+          "coord": {
+            "lat": 40.7193,
+            "lng": -74.0093
+          },
+          "opcoes": [
+            {
+              "nome": "Locanda Verde",
+              "desc": "Restaurante de Andrew Carmellini, parceria com Robert De Niro. Italiano elevado em ambiente de loft. Reserva via Resy.",
+              "preco": "$$$",
+              "dist": "10 min do fim da ponte"
+            },
+            {
+              "nome": "Bubby's Tribeca",
+              "desc": "All-day American comfort, café da manhã servido o dia todo. Bom pra grupo.",
+              "preco": "$$",
+              "dist": "8 min da ponte"
+            },
+            {
+              "nome": "Whole Foods Tribeca",
+              "desc": "Hot bar + saladas pra montar prato + comer no Hudson River Park (Pier 25). Mais rápido se o tempo apertar.",
+              "preco": "$",
+              "dist": "15 min da ponte"
+            }
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Tribeca → Neil Simon Theatre",
+          "cat": "~20 min · entrada 14h30 pra acomodar",
+          "coord": {
+            "lat": 40.7631,
+            "lng": -73.9844
+          }
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🎭",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "reserva": "reservado",
+          "nome": "MJ The Musical",
+          "cat": "Neil Simon Theatre · ~2h30 · RESERVADO ✅",
+          "sobre": "Musical biográfico de Michael Jackson, na Broadway desde 2022, premiado com 4 Tony Awards incluindo Best Lead Actor (Myles Frost). Foco no Dangerous World Tour (1992-93) com flashbacks pra carreira inteira. Coreografias originais reproduzem icons MJ. Trilha sonora com 25+ hits.",
+          "imperdivel": "O número 'Smooth Criminal' com a lean impossible — coreografia que requer engenharia mecânica nos sapatos",
+          "dicas": [
+            "🔴 Idade mín. 4 anos — pequena de 3 NÃO pode entrar. Babá no airbnb obrigatório",
+            "Chegar 14h30 pra acomodar família e ingressos",
+            "Banheiros: cheios no entreato, ir no pré-show",
+            "Programa físico: $20 (vale)",
+            "Snack discreto + bebida sem álcool permitidos",
+            "Saída 17h45 · pico de teatros saindo em Times Square"
+          ],
+          "duracao": "2h30",
+          "custo": "Já pago",
+          "acessibilidade": "Teatro acessível",
+          "coord": {
+            "lat": 40.7631,
+            "lng": -73.9844
+          }
+        },
+        {
+          "hora": "18:00",
+          "emoji": "🍜",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar · Hell's Kitchen",
+          "cat": "3 opções pós-Broadway · 9th Ave",
+          "coord": {
+            "lat": 40.7642,
+            "lng": -73.9933
+          },
+          "opcoes": [
+            {
+              "nome": "X'ian Famous Foods",
+              "desc": "Macarrão biang-biang puxado à mão + lamb cumin (sabor da Rota da Seda). Picante REAL. $15-20/pessoa.",
+              "preco": "$",
+              "dist": "10 min do teatro"
+            },
+            {
+              "nome": "Joe's Shanghai",
+              "desc": "Xiao long bao (soup dumplings) é o pedido obrigatório. Chinês de Shanghai autêntico.",
+              "preco": "$$",
+              "dist": "10 min do teatro"
+            },
+            {
+              "nome": "Pio Pio",
+              "desc": "Frango assado peruano, ótimo pra criança (pré-musical caso família queira algo mais simples).",
+              "preco": "$$",
+              "dist": "15 min do teatro"
+            }
+          ]
+        },
+        {
+          "hora": "19:30",
+          "emoji": "🚕",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Uber Hell's Kitchen → Greenpoint",
+          "cat": "~30 min · pequena dormindo com babá já",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Seg 13/Jul",
+      "tema": "Bedford Ave · Despedida",
+      "temaCurto": "Bedford Ave",
+      "bairro": "Williamsburg + Greenpoint · saída noturna",
+      "grupo": true,
+      "nota": "Voo 23h EWR · sair de Greenpoint 19h30. Manhã leve em Williamsburg · sesta · arrumar mala · embarque. Plano enxuto deliberadamente: voo internacional + criança pequena exige reserva de energia.",
+      "cor": "#475569",
+      "gradA": "#1e293b",
+      "gradB": "#334155",
+      "stops": [
+        {
+          "hora": "9:30",
+          "emoji": "🥐",
+          "periodo": "manha",
+          "tipo": "opcoes",
+          "nome": "Brunch · Williamsburg",
+          "cat": "3 opções pra fechar o brunch NYC",
+          "coord": {
+            "lat": 40.7232,
+            "lng": -73.9555
+          },
+          "opcoes": [
+            {
+              "nome": "Five Leaves (Greenpoint)",
+              "desc": "Restaurante institution Greenpoint, ricotta pancakes lendária, atmosfera de café Australia-meets-Brooklyn. Reservar via Resy (lotado domingo, segunda mais tranquilo).",
+              "preco": "$$$",
+              "dist": "10 min da base"
+            },
+            {
+              "nome": "Cafe Mogador (Williamsburg)",
+              "desc": "Brunch marroquino, tagine + ovos pochés. Vibe colorida, kid-friendly.",
+              "preco": "$$",
+              "dist": "15 min"
+            },
+            {
+              "nome": "Sweetleaf Coffee (Greenpoint)",
+              "desc": "Café terceira-onda, sanduíches simples, atmosfera de coworking local. Mais quick.",
+              "preco": "$",
+              "dist": "5 min"
+            }
+          ]
+        },
+        {
+          "hora": "10:30",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "NYC Ferry · East River round trip",
+          "cat": "India St → DUMBO → Pier 11 → volta",
+          "sobre": "Sistema de balsas públicas de Brooklyn/Queens/Manhattan operando desde 2017. **Doca India St fica a 5 min da base**. Linha East River sai daqui em direção a DUMBO, depois sul até Pier 11 (Wall St) — 30 min ida com escalas em Greenpoint, North Williamsburg, South Williamsburg, DUMBO. Vista lateral do skyline da água. Custo $4/pessoa (cashless tap-to-pay). Crianças <44 polegadas grátis. Round trip ~1h30 com 10 min em DUMBO/Pier 11.",
+          "imperdivel": "O ângulo da água: ver Manhattan de baixo pra cima, do East River, do nível do mar. Diferente do Staten Island Ferry (mais turístico).",
+          "dicas": [
+            "Doca India St: andar até final da India St (Newtown Creek)",
+            "$4 ida + $4 volta = $8 adulto. Pequena <44pol grátis",
+            "App NYC Ferry mostra horários em real time",
+            "Sair às 10h30 garante volta às 12h, antes de almoço/sesta",
+            "Sentar lá fora no convés superior pra vista panorâmica",
+            "Saída do Pier 11 Wall St: 5 min do Oculus se quiser parada extra"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "$16 casal",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7351,
+            "lng": -73.9591
+          }
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🛍️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Bedford Ave · shopping de despedida",
+          "cat": "Williamsburg principal · souvenirs locais",
+          "sobre": "Bedford Avenue é a rua principal de Williamsburg — entre N 5th e N 12th tem a maior densidade de lojinhas locais, cafés, vintage shops, livrarias. Vantagem pra despedida: souvenirs autênticos Brooklyn (não 'I ♥ NY' genérico de Times Square). Caminhada de ~1h cobre tudo.",
+          "imperdivel": "Mast Brothers Chocolate · chocolate artesanal de Brooklyn, embalagens icônicas, ótimo presente pra trazer · Spoonbill & Sugartown · livraria icônica de Williamsburg (livros raros + arte)",
+          "dicas": [
+            "Mast Brothers Chocolate (111 N 3rd St) — tour de fábrica grátis se rolar",
+            "Spoonbill & Sugartown Booksellers — livros usados raros + arte. Compra peça única",
+            "Brooklyn Industries — camisetas/sacolas com brand local",
+            "Bedford Cheese Shop — queijos artesanais locais (transporte: cuidado com aduana FR)",
+            "Strand Bookstore tem outlet em Williamsburg, mas a flagship em Union Square é melhor (se sobrar tempo num dia anterior)"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "Conforme compras",
+          "acessibilidade": "Calçadas Williamsburg ok pra carrinho",
+          "coord": {
+            "lat": 40.7177,
+            "lng": -73.9569
+          }
+        },
+        {
+          "hora": "13:30",
+          "emoji": "😴",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Volta pra base · almoço leve em casa · sesta pequena · arrumar mala",
+          "noMaps": true,
+          "cat": "14h-19h · checkout, banho da pequena, organização",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        },
+        {
+          "hora": "19:30",
+          "emoji": "🚕",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → EWR",
+          "cat": "~45-60 min · check-in internacional 2h antes",
+          "coord": {
+            "lat": 40.6925,
+            "lng": -74.1687
+          }
+        },
+        {
+          "hora": "23:00",
+          "emoji": "✈️",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Voo EWR → ORY · 14/Jul 12:15 chegada Paris",
+          "cat": "Decolagem EWR 23h00 NYC · Pouso ORY 14/Jul 12h15 Paris · ~7h15 voo + 6h fuso · Boa viagem 🗽",
+          "coord": {
+            "lat": 40.6925,
+            "lng": -74.1687
+          }
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Apple Williamsburg": [
+      {
+        "type": "official",
+        "label": "Apple Store",
+        "url": "https://www.apple.com/retail/williamsburg/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/shopping/apple-store-williamsburg"
+      }
+    ],
+    "Smorgasburg Williamsburg": [
+      {
+        "type": "official",
+        "label": "Site oficial",
+        "url": "https://www.smorgasburg.com/"
+      },
+      {
+        "type": "review",
+        "label": "NYT review",
+        "url": "https://www.nytimes.com/2014/06/04/dining/smorgasburg-the-woodstock-of-eating.html"
+      }
+    ],
+    "Piquenique pré-fogos · Transmitter Park": [
+      {
+        "type": "official",
+        "label": "Parks NYC",
+        "url": "https://www.nycgovparks.org/parks/transmitter-park"
+      }
+    ],
+    "Fogos Macy's · 50ª edição": [
+      {
+        "type": "official",
+        "label": "Macy's 4th",
+        "url": "https://social.macys.com/fireworks/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/things-to-do/macys-4th-of-july-fireworks"
+      }
+    ],
+    "Brooklyn Bridge Park · Pier 1 + Pebble Beach": [
+      {
+        "type": "official",
+        "label": "BBP",
+        "url": "https://www.brooklynbridgepark.org/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/things-to-do/brooklyn-bridge-park"
+      },
+      {
+        "type": "review",
+        "label": "Mommy Poppins (playgrounds ranking)",
+        "url": "https://mommypoppins.com/new-york-city-kids/parks-playgrounds/brooklyn-bridge-park-playgrounds-ranked"
+      }
+    ],
+    "Jane's Carousel": [
+      {
+        "type": "official",
+        "label": "Site oficial",
+        "url": "https://www.janescarousel.org/"
+      },
+      {
+        "type": "review",
+        "label": "Parched Around The World (história)",
+        "url": "https://www.parchedaroundtheworld.com/articles/the-history-behind-janes-carousel-and-how-it-found-its-home-in-brooklyn/"
+      }
+    ],
+    "Brooklyn Bridge Walk a pé": [
+      {
+        "type": "official",
+        "label": "NYC DOT",
+        "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/attractions/brooklyn-bridge"
+      }
+    ],
+    "Central Park Zoo + Tisch Children's Zoo": [
+      {
+        "type": "official",
+        "label": "Site oficial",
+        "url": "https://centralparkzoo.com/"
+      }
+    ],
+    "Bethesda Terrace + Bow Bridge": [
+      {
+        "type": "official",
+        "label": "Central Park Conservancy",
+        "url": "https://www.centralparknyc.org/locations/bethesda-terrace"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/bethesda-terrace-arcade"
+      }
+    ],
+    "Teleférico Roosevelt Island": [
+      {
+        "type": "official",
+        "label": "RIOC",
+        "url": "https://rioc.ny.gov/302/Roosevelt-Island-Tramway"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/roosevelt-island-tramway"
+      }
+    ],
+    "SeaGlass Carousel (Battery Park)": [
+      {
+        "type": "official",
+        "label": "Site oficial",
+        "url": "https://thebattery.org/landmark/seaglass-carousel/"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura (1º aquário dos EUA)",
+        "url": "https://www.atlasobscura.com/places/seaglass-carousel"
+      }
+    ],
+    "Staten Island Ferry · vista Statue of Liberty": [
+      {
+        "type": "official",
+        "label": "NYC DOT",
+        "url": "https://www.siferry.com/"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/staten-island-ferry"
+      }
+    ],
+    "9/11 Memorial": [
+      {
+        "type": "official",
+        "label": "911memorial.org",
+        "url": "https://www.911memorial.org/"
+      },
+      {
+        "type": "review",
+        "label": "NY Times",
+        "url": "https://www.nytimes.com/2011/09/12/nyregion/911-memorial-opens-with-emotion-and-quiet-reflection.html"
+      }
+    ],
+    "Oculus · World Trade Center": [
+      {
+        "type": "official",
+        "label": "WTC",
+        "url": "https://wtc.com/about/buildings/wtc-transportation-hub"
+      }
+    ],
+    "MOMA · Museum of Modern Art": [
+      {
+        "type": "official",
+        "label": "MoMA",
+        "url": "https://www.moma.org/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/museums/museum-of-modern-art-moma"
+      }
+    ],
+    "Washington Square Park": [
+      {
+        "type": "official",
+        "label": "Parks NYC",
+        "url": "https://www.nycgovparks.org/parks/washington-square-park"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/washington-square-park"
+      }
+    ],
+    "Greenwich Village walking": [
+      {
+        "type": "review",
+        "label": "NYT 36 Hours",
+        "url": "https://www.nytimes.com/interactive/2023/05/04/travel/things-to-do-greenwich-village.html"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/things-to-do/best-things-to-do-in-greenwich-village"
+      }
+    ],
+    "The Vessel · Hudson Yards": [
+      {
+        "type": "official",
+        "label": "vesselnyc.com",
+        "url": "https://www.vesselnyc.com/"
+      },
+      {
+        "type": "review",
+        "label": "Reabertura 2026",
+        "url": "https://www.timeout.com/newyork/news/the-infamous-vessel-at-hudson-yards-is-reopening-in-four-days-022326"
+      }
+    ],
+    "High Line · entrada norte (30th St) → sul": [
+      {
+        "type": "official",
+        "label": "thehighline.org",
+        "url": "https://www.thehighline.org/"
+      },
+      {
+        "type": "review",
+        "label": "Mommy Poppins (com crianças)",
+        "url": "https://mommypoppins.com/new-york-city-kids/the-high-line-walking-the-elevated-park-with-kids"
+      }
+    ],
+    "Little Island": [
+      {
+        "type": "official",
+        "label": "littleisland.org",
+        "url": "https://littleisland.org/"
+      },
+      {
+        "type": "review",
+        "label": "Mommy Poppins (primeiras impressões)",
+        "url": "https://mommypoppins.com/new-york-city-kids/parks-playgrounds/little-island-nyc-hudson-river"
+      }
+    ],
+    "Bryant Park": [
+      {
+        "type": "official",
+        "label": "bryantpark.org",
+        "url": "https://bryantpark.org/"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/bryant-park"
+      }
+    ],
+    "Top of the Rock · 70 andares": [
+      {
+        "type": "official",
+        "label": "Site oficial",
+        "url": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/"
+      },
+      {
+        "type": "review",
+        "label": "Mommy Poppins (com criança e carrinho)",
+        "url": "https://mommypoppins.com/content/top-of-the-rock-experience-best-nyc-views-when-to-go-other-tips"
+      }
+    ],
+    "LEGO Store · 5th Ave": [
+      {
+        "type": "official",
+        "label": "LEGO Store",
+        "url": "https://www.lego.com/en-us/stores/store/rockefeller-center"
+      }
+    ],
+    "Grand Central Terminal": [
+      {
+        "type": "official",
+        "label": "Site oficial",
+        "url": "https://www.grandcentralterminal.com/"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura (Whispering Gallery)",
+        "url": "https://www.atlasobscura.com/places/grand-central-terminal-whispering-gallery"
+      }
+    ],
+    "Times Square (passagem)": [
+      {
+        "type": "official",
+        "label": "Times Sq NYC",
+        "url": "https://www.timessquarenyc.org/"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura",
+        "url": "https://www.atlasobscura.com/places/times-square"
+      }
+    ],
+    "American Museum of Natural History": [
+      {
+        "type": "official",
+        "label": "amnh.org",
+        "url": "https://www.amnh.org/"
+      },
+      {
+        "type": "review",
+        "label": "Mommy Poppins (com crianças)",
+        "url": "https://mommypoppins.com/new-york-city-kids/museums/amnh-tips-american-museum-natural-history-with-kids"
+      }
+    ],
+    "Metropolitan Museum of Art (MET)": [
+      {
+        "type": "official",
+        "label": "metmuseum.org",
+        "url": "https://www.metmuseum.org/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/museums/met-metropolitan-museum-of-art"
+      }
+    ],
+    "MJ The Musical": [
+      {
+        "type": "official",
+        "label": "mjthemusical.com",
+        "url": "https://mjthemusical.com/"
+      },
+      {
+        "type": "review",
+        "label": "NY Times (review do crítico)",
+        "url": "https://www.nytimes.com/2022/02/01/theater/mj-michael-jackson-musical-review.html"
+      }
+    ],
+    "NYC Ferry · East River round trip": [
+      {
+        "type": "official",
+        "label": "ferry.nyc",
+        "url": "https://www.ferry.nyc/routes-and-schedules/route/east-river/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out NY (rotas e tips)",
+        "url": "https://www.timeout.com/newyork/things-to-do/nyc-ferry-routes-stops-and-tips"
+      }
+    ],
+    "Bedford Ave · shopping de despedida": [
+      {
+        "type": "review",
+        "label": "Time Out NY",
+        "url": "https://www.timeout.com/newyork/shopping/best-stores-on-bedford-avenue-williamsburg"
+      }
+    ],
+    "Domino Park (15 River St, Williamsburg waterfront)": [
+      {
+        "type": "official",
+        "label": "dominopark.com",
+        "url": "https://www.dominopark.com/"
+      },
+      {
+        "type": "review",
+        "label": "Mommy Poppins (com crianças)",
+        "url": "https://mommypoppins.com/new-york-city-kids/parks-playgrounds/domino-park-and-playground-to-open-in-williamsburg-brooklyn"
+      }
+    ],
+    "Brooklyn Brewery (79 N 11th St, Williamsburg)": [
+      {
+        "type": "official",
+        "label": "brooklynbrewery.com",
+        "url": "https://brooklynbrewery.com/visit-us/"
+      }
+    ]
+  },
+  "transit_map": {
+    "Uber EWR → Greenpoint": {
+      "metro": "NJ Transit (EWR Airport → NY Penn Station) 30min · transferir [7] Penn-34 St → Court Sq · [G] → Greenpoint Av · ~1h30 com bagagem · $13 NJT + $2.90 metrô",
+      "uber": "$70-90 · 45-60min porta a porta"
+    },
+    "NYC Ferry · India St → DUMBO": {
+      "ferry": "[East River] India St → Greenpoint → N Wmsb → S Wmsb → DUMBO/Fulton Ferry · 4 paradas · 15min · $4",
+      "uber": "$15-18 · 12min · backup se ferry overcrowded ou chuva"
+    },
+    "Uber Tribeca → Greenpoint": {
+      "ferry": "[East River] Wall St/Pier 11 → DUMBO → S/N Wmsb → Greenpoint · direto · ~30min · $4",
+      "metro": "Fulton St [A] direção Brooklyn → Hoyt-Schermerhorn (9min) · [G] → Greenpoint Av (12min) · ~35min · 1 transferência · $2.90",
+      "uber": "$22-28 · 25min porta a porta"
+    },
+    "Uber Greenpoint → Central Park (entrada Plaza)": {
+      "metro": "[G] Greenpoint Av → Court Sq (10min) · [E] → 5 Av/53 St (7min) · walk 8min até entrada Plaza · ~35min · 1 transferência · $2.90",
+      "uber": "$25-30 · 25-30min porta a porta"
+    },
+    "Uber Central Park → Greenpoint": {
+      "metro": "[E] 5 Av/53 St → Court Sq (7min) · [G] → Greenpoint Av (12min) · ~25min · 1 transferência · $2.90",
+      "uber": "$25-30 · 30min · pequena dorme no carro"
+    },
+    "Uber Greenpoint → Battery Park": {
+      "metro": "[G] Greenpoint Av → Hoyt-Schermerhorn (12min) · [A] direção Far Rockaway → Fulton St (9min) · walk 8min até Battery · ~40min · 1 transferência · $2.90",
+      "uber": "$25-30 · 25-30min porta a porta"
+    },
+    "Uber Lower Manhattan → Greenpoint": {
+      "metro": "Fulton St [A] direção Brooklyn → Hoyt-Schermerhorn (9min) · [G] → Greenpoint Av (12min) · ~30min · 1 transferência · $2.90",
+      "uber": "$22-28 · 22-25min porta a porta"
+    },
+    "Uber Greenpoint → Midtown": {
+      "metro": "[G] Greenpoint Av → Court Sq (10min) · [E] → 5 Av/53 St (7min) · walk 2min até MOMA · ~22min · 1 transferência · $2.90",
+      "uber": "$22-28 · 22-25min porta a porta"
+    },
+    "Uber Midtown → Washington Square": {
+      "metro": "[F] 47-50 St-Rockefeller Ctr → W 4 St-Washington Sq · 5 paradas · 10min · direto · $2.90",
+      "uber": "$12-15 · 12-15min porta a porta"
+    },
+    "Uber Greenwich Village → Greenpoint": {
+      "metro": "[L] 6 Av/14 St → Lorimer St (12min) · [G] → Greenpoint Av (5min) · ~22min · 1 transferência · $2.90",
+      "uber": "$22-25 · 22min porta a porta"
+    },
+    "Uber Greenpoint → Hudson Yards": {
+      "metro": "[G] Greenpoint Av → Court Sq (10min) · [7] → 34 St-Hudson Yards (12min) · ~25min · 1 transferência · $2.90",
+      "uber": "$22-25 · 22-25min porta a porta"
+    },
+    "Uber Little Island → Greenpoint": {
+      "metro": "Walk até 14 St/8 Av (12min) · [L] direção Brooklyn → Lorimer St (15min) · [G] → Greenpoint Av (5min) · ~35min · 1 transferência · $2.90",
+      "uber": "$25-30 · 22-25min porta a porta"
+    },
+    "Uber Greenpoint → Bryant Park": {
+      "metro": "[G] Greenpoint Av → Court Sq (10min) · [7] → 5 Av-Bryant Park (8min) · ~22min · 1 transferência · $2.90",
+      "uber": "$22-25 · 22min porta a porta"
+    },
+    "Uber Times Square → Greenpoint": {
+      "metro": "[7] Times Sq-42 St → Court Sq (15min) · [G] → Greenpoint Av (10min) · ~28min · 1 transferência · $2.90",
+      "uber": "$22-28 · 25min porta a porta"
+    },
+    "Uber Greenpoint → UWS": {
+      "metro": "[G] Greenpoint Av → Court Sq (10min) · [7] → Times Sq (15min) · [1] → 79 St (8min) · walk 5min até AMNH · ~42min · 2 transferências · $2.90",
+      "uber": "$25-30 · 28-30min porta a porta"
+    },
+    "Uber UWS → Greenpoint": {
+      "metro": "[1] 79 St → Times Sq (8min) · [7] → Court Sq (15min) · [G] → Greenpoint Av (10min) · ~38min · 2 transferências · $2.90",
+      "uber": "$25-30 · 28-30min porta a porta"
+    },
+    "Uber Greenpoint → MET": {
+      "metro": "[G] Greenpoint Av → Court Sq (10min) · [E] → Lexington-53 St (5min) · [6] → 86 St (8min) · walk 10min oeste até 5 Av · ~45min · 2 transferências · $2.90",
+      "uber": "$28-32 · 28-30min porta a porta"
+    },
+    "Uber UES → Neil Simon Theatre": {
+      "metro": "[6] 86 St → 59 St (5min) · [N/R/W] → 49 St (2min) · walk 3min até teatro (52 St/Bway) · ~12min · 1 transferência · $2.90",
+      "uber": "$12-15 · 12-15min porta a porta"
+    },
+    "Uber Hell's Kitchen → Greenpoint": {
+      "metro": "[7] Times Sq-42 St → Court Sq (15min) · [G] → Greenpoint Av (10min) · ~28min · 1 transferência · $2.90",
+      "uber": "$22-28 · 22-25min porta a porta · pequena já dormindo com babá"
+    },
+    "Uber Greenpoint → EWR": {
+      "metro": "[G] → Court Sq + [7] → Times Sq → walk Penn Station · NJ Transit → EWR Airport · AirTrain → Terminal · ~1h30 com bagagem · $13 NJT + $2.90 metrô",
+      "uber": "$70-90 · 45-60min porta a porta com bagagem"
+    }
+  },
+  "bairros_config": [
+    {
+      "nome": "📍 Outros",
+      "fallback": true
+    }
+  ]
+}

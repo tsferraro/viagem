@@ -1,10 +1,16 @@
+// ============== RENDER ==============
+// APP_MODE ("trip" | "city") é declarado no bloco DATA (shell.html) ANTES deste script.
+// trip = viagem datada (date-strip DOW+dia, status bar com data real/AGORA/stats-de-dias).
+// city = coletânea de cidade sem datas (abas = temas · sem data/AGORA/dias · mantém feito/mapa/busca).
+const IS_TRIP = (typeof APP_MODE==='undefined') || APP_MODE==='trip';
+
 function getDefaultDayIdx(){
   // Detecta se hoje é um dos dias do roteiro e auto-seleciona; senão volta pro dia 1 (chegada)
   const monthMap={Jan:0,Fev:1,Feb:1,Mar:2,Abr:3,Apr:3,Mai:4,May:4,Jun:5,Jul:6,Ago:7,Aug:7,Set:8,Sep:8,Out:9,Oct:9,Nov:10,Dez:11,Dec:11};
   const today=new Date();
   const tStr=today.toISOString().split('T')[0]; // YYYY-MM-DD
   for(let i=0;i<DAYS.length;i++){
-    const m=DAYS[i].date.match(/(\d+)\/(\w+)/);
+    const m=(DAYS[i].date||'').match(/(\d+)\/(\w+)/);
     if(!m) continue;
     const dayNum=parseInt(m[1]);
     const monthIdx=monthMap[m[2]];
@@ -14,7 +20,76 @@ function getDefaultDayIdx(){
   }
   return 0;
 }
-const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null, nivel:'profundo' };
+const MONTH_MAP={Jan:0,Fev:1,Feb:1,Mar:2,Abr:3,Apr:3,Mai:4,May:4,Jun:5,Jul:6,Ago:7,Aug:7,Set:8,Sep:8,Out:9,Oct:9,Nov:10,Dez:11,Dec:11};
+
+// Índice do dia do roteiro que é HOJE, ou -1 se hoje não é dia de viagem.
+// Mesma lógica exata de getDefaultDayIdx (exact-date-match) mas retorna -1 (não 0) fora da viagem.
+function getTodayTripIdx(){
+  const today=new Date();
+  const tStr=today.toISOString().split('T')[0]; // YYYY-MM-DD
+  for(let i=0;i<DAYS.length;i++){
+    const m=(DAYS[i].date||'').match(/(\d+)\/(\w+)/);
+    if(!m) continue;
+    const dayNum=parseInt(m[1]);
+    const monthIdx=MONTH_MAP[m[2]];
+    if(monthIdx===undefined) continue;
+    const d=new Date(2026,monthIdx,dayNum);
+    if(d.toISOString().split('T')[0]===tStr) return i;
+  }
+  return -1;
+}
+
+// ===== FEITO axis (execução durante a viagem, separado de reserva) =====
+function isFeito(nome){ try{return localStorage.getItem('feito-'+nome)==='done';}catch(e){return false;} }
+function setFeito(nome,val){ try{localStorage.setItem('feito-'+nome,val?'done':'undone');}catch(e){} }
+
+// hora "HH:MM" -> minutos; retorna null se inválido
+function horaToMin(h){ const m=(h||'').match(/(\d{1,2}):(\d{2})/); if(!m) return null; return parseInt(m[1])*60+parseInt(m[2]); }
+
+// Índice do stop "AGORA" · só se dayIdx é o dia de hoje E o relógio real está dentro da janela do dia.
+function getNowStopIdx(day,dayIdx){
+  if(getTodayTripIdx()!==dayIdx) return -1;
+  const now=new Date();
+  const nowMin=now.getHours()*60+now.getMinutes();
+  const timed=day.stops.map((s,i)=>({i,m:horaToMin(s.hora)})).filter(x=>x.m!==null);
+  if(!timed.length) return -1;
+  // antes do primeiro ou depois de +3h do último → sem AGORA
+  if(nowMin<timed[0].m) return -1;
+  const last=timed[timed.length-1];
+  if(nowMin>=last.m+180) return -1;
+  for(let k=0;k<timed.length;k++){
+    const start=timed[k].m;
+    const end=k+1<timed.length?timed[k+1].m:last.m+180;
+    if(nowMin>=start && nowMin<end) return timed[k].i;
+  }
+  return -1;
+}
+
+// Data de hoje formatada PT-BR: "1/Jul" (sempre correta, independente das datas da viagem)
+const PT_MESES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+function hojeLabel(){
+  const d=new Date();
+  const mes=PT_MESES[d.getMonth()];
+  return d.getDate()+'/'+mes.charAt(0).toUpperCase()+mes.slice(1);
+}
+// Dias da viagem já DECORRIDOS: quantos DAYS têm data estritamente ANTES de hoje.
+// 0 antes da viagem começar · 11 depois de terminar (clamp natural pela contagem).
+function diasElapsed(){
+  const today=new Date();
+  const tStr=today.toISOString().split('T')[0];
+  let elapsed=0;
+  for(let i=0;i<DAYS.length;i++){
+    const m=(DAYS[i].date||'').match(/(\d+)\/(\w+)/);
+    if(!m) continue;
+    const monthIdx=MONTH_MAP[m[2]];
+    if(monthIdx===undefined) continue;
+    const d=new Date(2026,monthIdx,parseInt(m[1]));
+    if(d.toISOString().split('T')[0]<tStr) elapsed++;
+  }
+  return elapsed;
+}
+
+const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null, ovFilter:'roteiro', ovShowPending:false };
 
 function getPeriodoMeta(p){
   return {
@@ -24,92 +99,8 @@ function getPeriodoMeta(p){
   }[p];
 }
 
-// ===== ÁUDIO-GUIA (protótipo · Web Speech API · TTS nativo do device, custo zero) =====
-// Lê sobre + "o que observar" + dicas em voz alta. Habilitado por card via flag `audio:true`.
-// Ponto fraco conhecido: nomes franceses lidos por voz PT-BR (é o que o teste vai avaliar).
-const audioState={btn:null,speaking:false};
-function stripForSpeech(html){
-  return (html||'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'e').replace(/&[a-z]+;/g,' ').replace(/\s+/g,' ').trim();
-}
-function buildNarration(stop){
-  const nome=stop.nome.replace(/\s*\([^)]*\)/g,'').trim(); // tira endereço entre parens da fala
-  const parts=[nome+'.'];
-  if(stop.sobre) parts.push(stripForSpeech(stop.sobre));
-  if(stop.imperdivel) parts.push('O que observar: '+stripForSpeech(stop.imperdivel)+'.');
-  if(stop.dicas&&stop.dicas.length) parts.push('Dicas. '+stop.dicas.map(stripForSpeech).join('. ')+'.');
-  return parts.join(' ');
-}
-function ptVoices(){
-  const vs=('speechSynthesis' in window)?window.speechSynthesis.getVoices():[];
-  return vs.filter(v=>/^pt/i.test(v.lang));
-}
-let selectedVoiceURI='';
-try{ selectedVoiceURI=localStorage.getItem('audioVoiceURI')||''; }catch(e){}
-function pickPtVoice(){
-  const pt=ptVoices();
-  if(!pt.length) return null;
-  // Ranqueia: prioriza vozes neurais/aprimoradas/Siri/Google · penaliza "compact"/Eloquence (robóticas)
-  const score=v=>{
-    const n=(v.name||'').toLowerCase();
-    let s=0;
-    if(/pt[-_]br/i.test(v.lang)) s+=3;
-    if(/siri/.test(n)) s+=7;
-    if(/aprimorad|enhanced|premium|neural|natural/.test(n)) s+=6;
-    if(/google/.test(n)) s+=4;
-    if(/luciana|joana|felipe|fernanda|catarina|francisca|helena/.test(n)) s+=2;
-    if(/compact|eloquence/.test(n)) s-=6;
-    return s;
-  };
-  return pt.slice().sort((a,b)=>score(b)-score(a))[0];
-}
-function getChosenVoice(){
-  const pt=ptVoices();
-  if(selectedVoiceURI){ const m=pt.find(v=>v.voiceURI===selectedVoiceURI); if(m) return m; }
-  return pickPtVoice();
-}
-function fillVoiceSelects(){
-  const pt=ptVoices();
-  document.querySelectorAll('.audio-voice').forEach(sel=>{
-    if(sel.dataset.filled==='1' && sel.options.length>1) return;
-    sel.innerHTML='<option value="">🔊 Voz automática</option>'+pt.map(v=>`<option value="${v.voiceURI}">${v.name}</option>`).join('');
-    sel.value=selectedVoiceURI;
-    sel.dataset.filled='1';
-  });
-}
-function resetAudioBtn(){
-  if(audioState.btn){
-    audioState.btn.classList.remove('playing');
-    const lbl=audioState.btn.querySelector('.audio-label'); if(lbl) lbl.textContent='Ouvir';
-    const ico=audioState.btn.querySelector('.audio-ico'); if(ico) ico.textContent='▶️';
-  }
-}
-function stopAudio(){
-  if('speechSynthesis' in window) window.speechSynthesis.cancel();
-  resetAudioBtn();
-  audioState.btn=null; audioState.speaking=false;
-}
-function playStopAudio(stop,btn){
-  if(!('speechSynthesis' in window)){ alert('Seu navegador não suporta o áudio-guia (Web Speech).'); return; }
-  const wasThis=audioState.btn===btn && audioState.speaking;
-  stopAudio();
-  if(wasThis) return; // clicou de novo no mesmo botão → era pra parar
-  const u=new SpeechSynthesisUtterance(buildNarration(stop));
-  u.lang='pt-BR'; u.rate=0.95; u.pitch=1.0;
-  const v=getChosenVoice(); if(v){ u.voice=v; u.lang=v.lang; }
-  u.onend=stopAudio; u.onerror=stopAudio;
-  audioState.btn=btn; audioState.speaking=true;
-  btn.classList.add('playing');
-  const lbl=btn.querySelector('.audio-label'); if(lbl) lbl.textContent='Parar';
-  const ico=btn.querySelector('.audio-ico'); if(ico) ico.textContent='⏸️';
-  window.speechSynthesis.speak(u);
-}
-function findStopByName(nm){
-  for(const d of DAYS){ for(const s of d.stops){ if(s.nome===nm) return s; } }
-  return null;
-}
-
-
 function getMapsUrl(stop){
+  if(stop.noMaps) return '';
   // Pra opcoes (3+ alternativas), usar nome da PRIMEIRA opção pra link específico
   let queryName=stop.nome;
   if(stop.tipo==='opcoes' && stop.opcoes && stop.opcoes.length>0){
@@ -121,40 +112,76 @@ function getMapsUrl(stop){
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean+' New York')}`;
 }
 
+// Monta URL de rota do Google Maps na forma path-segment (/dir/Nome1/Nome2/.../).
+// Mostra os NOMES das paradas E desenha o trajeto (a forma ?origin=&waypoints= só marcava pins).
+// Cada nome: parens removidos (conteúdo mantido) + ", New York, NY" pra geocodar certo · segmento URL-encoded.
+// Total de segmentos capado em ~10 (amostra o miolo, mantém 1º + último).
+// Monta URL de rota do Google Maps na forma oficial api=1, por COORDENADAS.
+// Coord é exata (nomes vagos/eventos como "Fogos Macy's" caem no lugar errado).
+// Waypoints intermediários capados em 9 (limite free da api=1): amostra o miolo,
+// sempre mantendo origem (1º) e destino (último).
+function dirCoordUrl(coords,mode='walking'){
+  const pts=coords.filter(c=>c&&typeof c.lat==='number'&&typeof c.lng==='number');
+  if(pts.length<2) return null;
+  const origin=pts[0], dest=pts[pts.length-1];
+  let mids=pts.slice(1,-1);
+  const MAXW=9;
+  if(mids.length>MAXW){
+    const pick=[];
+    for(let k=0;k<MAXW;k++){
+      const idx=Math.round(k*(mids.length-1)/(MAXW-1));
+      pick.push(mids[idx]);
+    }
+    mids=pick.filter((p,i,a)=>a.indexOf(p)===i);
+  }
+  const ll=c=>`${c.lat},${c.lng}`;
+  let url=`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(ll(origin))}&destination=${encodeURIComponent(ll(dest))}`;
+  if(mids.length) url+=`&waypoints=${encodeURIComponent(mids.map(ll).join('|'))}`;
+  url+=`&travelmode=${mode}`;
+  return url;
+}
+
+// Estima o modo de deslocamento do dia pela distância total + maior perna (haversine).
+function dayTransport(day){
+  const pts=day.stops.filter(s=>s.tipo!=='transit' && s.coord).map(s=>s.coord);
+  if(pts.length<2) return 'walking';
+  const haversine=(a,b)=>{
+    const R=6371, toRad=x=>x*Math.PI/180;
+    const dLat=toRad(b.lat-a.lat), dLng=toRad(b.lng-a.lng);
+    const s=Math.sin(dLat/2)**2+Math.cos(toRad(a.lat))*Math.cos(toRad(b.lat))*Math.sin(dLng/2)**2;
+    return 2*R*Math.asin(Math.sqrt(s));
+  };
+  let total=0, maxLeg=0;
+  for(let i=1;i<pts.length;i++){
+    const leg=haversine(pts[i-1],pts[i]);
+    total+=leg; if(leg>maxLeg) maxLeg=leg;
+  }
+  return (total>5||maxLeg>2.5)?'driving':'walking';
+}
+
 function getRouteUrl(day){
-  // V1.5: filtra ALT cards (nome iniciando com 🔄) — alternativas não fazem parte da rota
-  // principal do dia. Bug Sprockhovel 2026-05-23 (Valenciennes ALT puxava rota pra direção oposta).
-  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord && !s.nome.startsWith('🔄'));
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
-  const queryName=s=>{
-    let n=s.nome;
-    if(s.tipo==='opcoes' && s.opcoes?.length) n=s.opcoes[0].nome;
-    return n.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
-  };
-  const origin=encodeURIComponent(queryName(stops[0]));
-  const dest=encodeURIComponent(queryName(stops[stops.length-1]));
-  const mid=stops.slice(1,-1).map(s=>encodeURIComponent(queryName(s))).join('|');
-  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${mid}`;
-  return url;
+  // Rota por coordenadas (exata) · opcoes usa a própria coord do stop
+  return dirCoordUrl(stops.map(s=>s.coord),dayTransport(day)) || getMapsUrl(stops[0]);
 }
 
 function getWalkingTourUrl(tour){
-  // V1.5: usa NOME com endereço (parens removidos só na query, conteúdo mantido) em vez de
-  // coords puras · coords puras mostravam "Com alfinete" no Maps · bug Sprockhovel 2026-05-23
-  // (mesmo bug que getRouteUrl V1.4 corrigiu, mas só lá · walking tour ficou pra trás).
+  // Rota por COORDENADAS (exata) · sempre walking.
   if(!tour||tour.length<2) return '#';
-  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
-  const origin=encodeURIComponent(queryName(tour[0]));
-  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
-  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
-  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${mid}`;
-  return url;
+  const coordUrl=dirCoordUrl(tour.map(t=>t.coord),'walking');
+  if(coordUrl) return coordUrl;
+  // Fallback (só se faltar coord em alguma parada): rota por nome.
+  const queryName=t=>t.nome;
+  const names=tour.map(queryName).filter(Boolean);
+  if(names.length<2) return '#';
+  return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n.replace(/[()]/g,'').replace(/\s+/g,' ').trim()+', New York, NY')).join('/')}/`;
 }
 
-function renderCard(stop){
+function agoraPillHtml(isNow){ return isNow?'<span class="agora-pill"><span class="agora-dot"></span>Agora</span>':''; }
+
+function renderCard(stop,isNow,done){
   const links=LINKS_MAP[stop.nome]||[];
   const riskLabel={green:'🟢 tranquilo',yellow:'⚠️ atenção',red:'🔴 alta atenção'};
   const riskBadge=stop.risco?`<span class="risk-pill risk-${stop.risco}">${riskLabel[stop.risco]}</span>`:'';
@@ -163,7 +190,7 @@ function renderCard(stop){
     const stored=localStorage.getItem(`reserva-${stop.nome}`);
     const defaultDone=stop.reserva==='reservado';
     const isDone=stored?stored==='done':defaultDone;
-    reservaBadge=`<button class="reserva-badge ${isDone?'ok':'pending'}" data-reserva="${stop.nome.replace(/"/g,'&quot;')}" title="Clique pra alternar">${isDone?'☑ FEITO':'☐ RESERVAR'}</button>`;
+    reservaBadge=`<button class="reserva-badge ${isDone?'ok':'pending'}" data-reserva="${stop.nome.replace(/"/g,'&quot;')}" title="Clique pra alternar reserva">${isDone?'✅ RESERVADO':'☐ RESERVAR'}</button>`;
   }
   // Walking tour flag (busca + visual)
   let walkingTourFlag='';
@@ -173,22 +200,19 @@ function renderCard(stop){
     const tourTitles=stop.walkingTours.map(t=>t.nome).join(' + ').replace(/"/g,'&quot;');
     walkingTourFlag=`<div class="walking-tour-flag" title="${tourTitles}">🚶 WALKING TOUR · ${partsLabel}</div>`;
   }
-  // Áudio-guia (protótipo · só em cards com audio:true) · botão + seletor de voz
-  const audioBtn=stop.audio?`<div class="audio-row">
-    <button class="audio-btn" data-audio="${stop.nome.replace(/"/g,'&quot;')}"><span class="audio-ico">▶️</span> <span class="audio-label">Ouvir</span></button>
-    <select class="audio-voice" title="Escolher voz" aria-label="Voz"><option value="">🔊 Voz automática</option></select>
-  </div>`:'';
   return `<div class="stop-card" data-risco="${stop.risco||''}">
+    <div class="chev">▼</div>
+    ${walkingTourFlag}
     <div class="stop-head">
-      <div class="stop-emoji">${stop.emoji}</div>
+      <div class="stop-emoji-col">
+        <div class="stop-emoji">${stop.emoji}</div>
+      </div>
       <div class="stop-time-name">
-        <div class="stop-time">${stop.hora}${reservaBadge}</div>
-        ${walkingTourFlag}
+        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${riskBadge}${reservaBadge}${feitoChkHtml(stop.nome,done)}</div>
         <div class="stop-name">${stop.nome}</div>
-        <div class="stop-cat">${stop.cat}${riskBadge}</div>
+        <div class="stop-cat">${stop.cat}</div>
       </div>
     </div>
-    ${audioBtn}
     ${stop.sobre?`<div class="stop-body"><p>${stop.sobre}</p></div>`:''}
     ${stop.imperdivel?`<div class="stop-imperdivel"><strong>⭐ IMPERDÍVEL</strong>${stop.imperdivel}</div>`:''}
     ${stop.dicas?`<div class="stop-dicas">
@@ -206,12 +230,15 @@ function renderCard(stop){
   </div>`;
 }
 
-function renderOpcoes(stop){
+function renderOpcoes(stop,isNow,done){
   return `<div class="stop-opcoes">
+    <div class="chev">▼</div>
     <div class="stop-opcoes-head">
-      <div class="stop-opcoes-emoji">${stop.emoji}</div>
+      <div class="stop-emoji-col">
+        <div class="stop-opcoes-emoji">${stop.emoji}</div>
+      </div>
       <div class="stop-opcoes-title">
-        <div class="stop-time">${stop.hora}</div>
+        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${feitoChkHtml(stop.nome,done)}</div>
         <div class="stop-opcoes-name">${stop.nome}</div>
         <div class="stop-opcoes-cat">${stop.cat}</div>
       </div>
@@ -227,9 +254,26 @@ function renderOpcoes(stop){
   </div>`;
 }
 
-function renderTransit(stop){
+// Destino de um transit: o próximo stop NÃO-transit no dia (nome com endereço/parens mantidos).
+function nextStopName(day,idx){
+  for(let j=idx+1;j<day.stops.length;j++){
+    const s=day.stops[j];
+    if(s.tipo!=='transit'){
+      if(s.tipo==='opcoes' && s.opcoes && s.opcoes.length) return s.opcoes[0].nome;
+      return s.nome;
+    }
+  }
+  return null;
+}
+
+function renderTransit(stop,dest){
   const t=TRANSIT_MAP[stop.nome];
   const hasRoutes=t&&(t.ferry||t.metro||t.uber);
+  const destStr=dest||stop.nome;
+  const destAttr=destStr.replace(/"/g,'&quot;');
+  const transitUrl=`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destStr+', New York, NY')}&travelmode=transit`;
+  const uberLine=t&&t.uber?`<div class="route-option"><strong>🚕 Uber</strong> ${t.uber}<button class="route-act" type="button" data-copy="${destAttr}">📋 Copiar endereço</button></div>`:'';
+  const metroLine=t&&t.metro?`<div class="route-option"><strong>🚇 Metrô</strong> ${t.metro}<a class="route-act" href="${transitUrl}" target="_blank" rel="noopener">🚇 Transporte público</a></div>`:'';
   return `<div class="stop-transit ${hasRoutes?'collapsible':''}">
     <div class="stop-transit-header">
       <span class="stop-transit-emoji">${stop.emoji}</span>
@@ -240,109 +284,295 @@ function renderTransit(stop){
     ${stop.cat?`<div class="stop-transit-cat">${stop.cat}</div>`:''}
     ${hasRoutes?`<div class="stop-transit-routes">
       ${t.ferry?`<div class="route-option"><strong>⛴️ Ferry</strong> ${t.ferry}</div>`:''}
-      ${t.metro?`<div class="route-option"><strong>🚇 Metrô</strong> ${t.metro}</div>`:''}
-      ${t.uber?`<div class="route-option"><strong>🚕 Uber</strong> ${t.uber}</div>`:''}
+      ${metroLine}
+      ${uberLine}
     </div>`:''}
   </div>`;
 }
 
-function renderStop(stop){
-  if(stop.tipo==='card') return renderCard(stop);
-  if(stop.tipo==='opcoes') return renderOpcoes(stop);
-  return renderTransit(stop);
+// Pill "Feito" rotulada · fica no meta do header (à direita, perto de hora/risco)
+function feitoChkHtml(nome,done){
+  return `<button class="feito-chk" data-feito="${nome.replace(/"/g,'&quot;')}" aria-label="${done?'Marcar como não-feito':'Marcar como feito'}" title="${done?'Feito — toque pra desfazer':'Marcar como feito'}"><span class="fc-gly">${done?'✓':'○'}</span> Feito</button>`;
 }
 
-function renderDay(day){
-  const periodos=['manha','tarde','noite'];
-  // Toggle Básico↔Profundo: se o dia tem stops marcados essencial, mostra o seletor.
-  // Básico = só os essenciais · Profundo = tudo.
-  const hasNiveis=day.stops.some(s=>s.essencial);
-  const basico=hasNiveis && state.nivel==='basico';
-  const visStops=basico?day.stops.filter(s=>s.essencial):day.stops;
-  const grouped={manha:[],tarde:[],noite:[]};
-  visStops.forEach(s=>{ if(grouped[s.periodo]) grouped[s.periodo].push(s); });
-  const toggle=hasNiveis?`<div class="nivel-toggle">
-      <span class="nivel-label">Versão:</span>
-      <button class="nivel-btn ${basico?'':'active'}" data-nivel="profundo">🔬 Profundo</button>
-      <button class="nivel-btn ${basico?'active':''}" data-nivel="basico">⚡ Básico</button>
-    </div>`:'';
+function renderStop(stop,isNow,dest){
+  // Transit: sem check feito · fica sempre na timeline
+  if(stop.tipo==='transit') return renderTransit(stop,dest);
+  const done=isFeito(stop.nome);
+  const inner=stop.tipo==='card'?renderCard(stop,isNow,done):renderOpcoes(stop,isNow,done);
+  return `<div class="stop-wrap${done?' is-feito':''}${isNow?' is-now':''}">${inner}</div>`;
+}
 
-  return `<div class="day-card" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}">
-    <div class="day-banner">
-      <div class="date">${day.date}</div>
-      <h2>${day.tema}</h2>
-      <div class="bairro">📍 ${day.bairro}${day.grupo?' · 👥 grupo':''}</div>
+function tripStats(){
+  let days=DAYS.length, attractions=0, tours=0, totalReservas=0, doneReservas=0;
+  let totalAttr=0, doneAttr=0, totalTours=0, doneTours=0;
+  DAYS.forEach(d=>d.stops.forEach(s=>{
+    if(s.tipo==='card'){ attractions++; totalAttr++; if(isFeito(s.nome)) doneAttr++; }
+    if(s.walkingTours&&s.walkingTours.length){
+      tours+=s.walkingTours.length;
+      totalTours+=s.walkingTours.length;
+      if(isFeito(s.nome)) doneTours+=s.walkingTours.length; // tour feito se o card-pai é feito
+    }
+    if(s.reserva){
+      totalReservas++;
+      const stored=localStorage.getItem(`reserva-${s.nome}`);
+      const isDone=stored?stored==='done':s.reserva==='reservado';
+      if(isDone) doneReservas++;
+    }
+  }));
+  return {days,attractions,tours,totalReservas,doneReservas,
+          totalAttr,doneAttr,totalTours,doneTours};
+}
+
+function renderStatusBar(){
+  const st=tripStats();
+  const expanded=(()=>{ try{return localStorage.getItem('statusExpanded')==='1';}catch(e){return false;} })();
+  // Chip de reservas só quando NÃO estão todas completas (completas viram nota no rodapé)
+  const reservasComplete=st.totalReservas>0 && st.doneReservas===st.totalReservas;
+  const reservasChip=reservasComplete?'':`<button class="sb-chip" id="sb-reservas" title="Ver reservas pendentes">☐ Reservas <span class="tnum">${st.doneReservas}/${st.totalReservas}</span> <span class="sb-arr">›</span></button>`;
+
+  if(!IS_TRIP){
+    // Modo cidade (coletânea sem datas): sem "Hoje/data real", sem stat de Dias, sem AGORA.
+    // Só mostra reservas (se houver pendentes) + stats de atrações/tours. Se nada, oculta a barra.
+    const hasContent=(!reservasComplete && st.totalReservas>0) || st.totalAttr>0 || st.totalTours>0;
+    if(!hasContent) return '';
+    return `<div class="status-bar" id="status-bar">
+    <div class="sb-row">
+      ${reservasChip||'<span class="sb-day">📍 Passeios</span>'}
+      <button class="sb-expand ${expanded?'open':''}" id="sb-expand" aria-expanded="${expanded}">stats <span class="sb-cx">▾</span></button>
     </div>
-    ${day.nota?`<div class="day-nota">${day.nota}</div>`:''}
-    ${toggle}
-    <div class="periodos">
-      ${periodos.filter(p=>grouped[p].length>0).map(p=>{
-        const m=getPeriodoMeta(p);
-        return `<div class="periodo">
-          <div class="periodo-header"><span class="emoji">${m.emoji}</span> ${m.label}</div>
-          <div class="periodo-stops">${grouped[p].map(renderStop).join('')}</div>
-        </div>`;
-      }).join('')}
+    <div class="sb-stats ${expanded?'open':''}" id="sb-stats">
+      <button class="sb-stat" data-goto="afazer"><div class="sbs-num tnum">${st.doneAttr}<em> / ${st.totalAttr}</em></div><div class="sbs-lbl">Atrações</div></button>
+      <button class="sb-stat" data-goto="afazer"><div class="sbs-num tnum">${st.doneTours}<em> / ${st.totalTours}</em></div><div class="sbs-lbl">Walking tours</div></button>
+    </div>
+  </div>`;
+  }
+
+  return `<div class="status-bar" id="status-bar">
+    <div class="sb-row">
+      <span class="sb-day">📅 Hoje · <span class="tnum">${hojeLabel()}</span></span>
+      ${reservasChip}
+      <button class="sb-expand ${expanded?'open':''}" id="sb-expand" aria-expanded="${expanded}">stats <span class="sb-cx">▾</span></button>
+    </div>
+    <div class="sb-stats ${expanded?'open':''}" id="sb-stats">
+      <button class="sb-stat" data-goto="dia"><div class="sbs-num tnum">${diasElapsed()}<em> / ${st.days}</em></div><div class="sbs-lbl">Dias</div></button>
+      <button class="sb-stat" data-goto="afazer"><div class="sbs-num tnum">${st.doneAttr}<em> / ${st.totalAttr}</em></div><div class="sbs-lbl">Atrações</div></button>
+      <button class="sb-stat" data-goto="afazer"><div class="sbs-num tnum">${st.doneTours}<em> / ${st.totalTours}</em></div><div class="sbs-lbl">Walking tours</div></button>
     </div>
   </div>`;
 }
 
+// Nota "Reservas completas" no rodapé · aparece só quando todas as reservas estão feitas
+function updateReservasNote(){
+  const el=document.getElementById('reservas-note');
+  if(!el) return;
+  const st=tripStats();
+  const complete=st.totalReservas>0 && st.doneReservas===st.totalReservas;
+  el.innerHTML=complete?`<div class="reservas-done">✅ Reservas completas (${st.doneReservas}/${st.totalReservas})</div>`:'';
+}
+
+function renderDay(day){
+  const periodos=['manha','tarde','noite'];
+  const bigEmoji=(day.stops.find(s=>s.tipo==='card')||day.stops[0]||{}).emoji||'📍';
+  const parts=(day.date||'').split(' ');
+  const dow=parts[0]||'', dm=parts[1]||'';
+  const nowIdx=getNowStopIdx(day,state.selIdx);
+
+  // Checkáveis do dia (card/opcoes) · pra contagem ✓ X/Y
+  const checkable=day.stops.filter(s=>s.tipo==='card'||s.tipo==='opcoes');
+  const doneCount=checkable.filter(s=>isFeito(s.nome)).length;
+  const doneKicker=checkable.length?`<span class="grp">✓ ${doneCount}/${checkable.length} feitas</span>`:'';
+
+  // Kicker: trip mostra "Dia N de M" · city mostra o tema-curto (label do tema) sem contagem/data
+  const kickerLabel=IS_TRIP?`🗽 Dia ${state.selIdx+1} de ${DAYS.length}`:`📍 ${day.temaCurto||day.tema.split('·')[0].trim()}`;
+  const heroAndNota=`<div class="day-hero" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}" data-bigemoji="${bigEmoji}">
+      <div class="hero-inner">
+        <span class="hero-kicker">${kickerLabel}${day.grupo?'<span class="grp">👥 Família junta</span>':doneKicker}</span>
+        ${IS_TRIP?`<div class="hero-date">${dow} · ${dm}</div>`:''}
+        <div class="hero-title">${day.tema}</div>
+        <div class="hero-bairro">📍 ${day.bairro}</div>
+      </div>
+    </div>
+    ${day.nota?`<div class="day-nota">${day.nota}</div>`:''}`;
+
+  // Timeline: só stops NÃO-feitos (transit sempre fica) · feitos vão pra seção final
+  const grouped={manha:[],tarde:[],noite:[]};
+  day.stops.forEach((s,i)=>{
+    if(!grouped[s.periodo]) return;
+    const isCheckable=(s.tipo==='card'||s.tipo==='opcoes');
+    if(isCheckable && isFeito(s.nome)) return; // vai pra Feitas hoje
+    grouped[s.periodo].push({s,i});
+  });
+
+  const timeline=`<div class="timeline" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}">
+    ${periodos.filter(p=>grouped[p].length>0).map(p=>{
+      const m=getPeriodoMeta(p);
+      return `<div class="period">
+        <div class="period-label"><span class="pe">${m.emoji}</span> ${m.label}</div>
+        <div class="tl-stops">${grouped[p].map(({s,i})=>`<div class="tl-item${s.tipo==='transit'?' is-transit':''}">${renderStop(s,i===nowIdx,s.tipo==='transit'?nextStopName(day,i):null)}</div>`).join('')}</div>
+      </div>`;
+    }).join('')}
+  </div>`;
+
+  // Feitas hoje: stops checkáveis feitos, em ordem cronológica original
+  const doneStops=day.stops.filter(s=>(s.tipo==='card'||s.tipo==='opcoes') && isFeito(s.nome));
+  let feitas='';
+  if(doneStops.length){
+    const open=(()=>{ try{return localStorage.getItem('feitasOpen_'+state.selIdx)!=='0';}catch(e){return true;} })();
+    feitas=`<div class="feitas-section ${open?'open':''}" style="--day-color:${day.cor}">
+      <button class="feitas-head" id="feitas-head">
+        <span class="fh-ico">✓</span>
+        <span class="fh-txt">Feitas hoje (${doneStops.length})</span>
+        <span class="fh-cx">▼</span>
+      </button>
+      <div class="feitas-list">
+        ${doneStops.map(s=>{
+          const nm=s.nome.replace(/"/g,'&quot;');
+          return `<div class="feitas-item" data-jump="${nm}">
+            <div class="fi-emoji">${s.emoji}</div>
+            <div class="fi-txt"><div class="fi-name">${s.nome}</div><div class="fi-time"><span class="tnum">${s.hora}</span> · ${(s.cat||'').split('·')[0].trim()}</div></div>
+            <button class="fi-undo" data-feito="${nm}" title="Desfazer">↺</button>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }
+
+  return heroAndNota + timeline + feitas;
+}
+
+// Linha de tarefa (stop) clicável nos filtros A fazer / Feitas / pending
+function ovTaskRow(stop,dayIdx,extraClass){
+  const nm=stop.nome.replace(/"/g,'&quot;');
+  const check=extraClass==='done'?'✓':(extraClass==='pend'?'☐':'○');
+  return `<div class="ov-task ${extraClass||''}" data-idx="${dayIdx}" data-jump="${nm}">
+    <div class="ot-emoji">${stop.emoji}</div>
+    <div class="ot-txt"><div class="ot-name">${stop.nome}</div><div class="ot-meta"><span class="tnum">${stop.hora}</span> · ${(stop.cat||'').split('·')[0].trim()}</div></div>
+    <div class="ot-check">${check}</div>
+  </div>`;
+}
+
+// Agrupa stops por dia e renderiza (usado por A fazer / Feitas)
+function ovDayGroups(predicate,doneClass){
+  let html='',any=false;
+  DAYS.forEach((d,i)=>{
+    const matched=d.stops.filter(s=>(s.tipo==='card'||s.tipo==='opcoes') && predicate(s));
+    if(!matched.length) return;
+    any=true;
+    html+=`<div class="ov-daygroup">
+      <div class="ov-daygroup-h"><span class="dg-swatch" style="background:${d.cor}"></span>${d.tema}<span class="dg-date">${d.date}</span></div>
+      ${matched.map(s=>ovTaskRow(s,i,doneClass)).join('')}
+    </div>`;
+  });
+  return {html,any};
+}
+
 function renderOverview(){
-  return `<table>
-    <colgroup>
-      <col class="col-date"><col class="col-tema"><col class="col-attr"><col class="col-bairro">
-    </colgroup>
-    <thead><tr><th>Data</th><th>Tema</th><th>Atração principal</th><th>Bairro</th></tr></thead>
-    <tbody>
-      ${DAYS.map((d,i)=>{
-        const cards=d.stops.filter(s=>s.tipo==='card');
-        const main=cards.length?cards[0].nome:'—';
-        const wtCards=cards.filter(c=>c.walkingTours&&c.walkingTours.length>0);
-        const parts=d.date.split(' ');
-        const wtButtons=wtCards.map(c=>{
-          const totalStops=c.walkingTours.reduce((a,t)=>a+t.stops.length,0);
-          const wtShort=c.walkingTours.length===1
-            ?c.walkingTours[0].nome.split('·')[0].trim()
-            :c.nome.split('·')[0].trim();
-          const partsLabel=c.walkingTours.length>1
-            ?`${c.walkingTours.length} partes · ${totalStops} paradas`
-            :`${totalStops} paradas`;
-          return `<button class="ov-wt-btn" data-idx="${i}" data-stop="${c.nome.replace(/"/g,'&quot;')}" title="Ir pro card: ${c.nome}">🚶 ${wtShort} · ${partsLabel}</button>`;
-        }).join('');
-        return `<tr class="clickable" data-idx="${i}">
-          <td class="ov-date"><span class="ov-date-pill"><strong>${parts[0]}</strong><small>${parts[1]}</small></span></td>
-          <td class="ov-tema">${d.tema}</td>
-          <td class="ov-attr"><div class="ov-main">${main}</div>${wtButtons}</td>
-          <td class="ov-bairro">${d.bairro}</td>
-        </tr>`;
-      }).join('')}
-    </tbody>
-  </table>`;
+  const filter=state.ovFilter||'roteiro';
+  const seg=`<div class="ov-seg">
+    <button class="ov-seg-btn ${filter==='roteiro'?'active':''}" data-filter="roteiro">Roteiro</button>
+    <button class="ov-seg-btn ${filter==='afazer'?'active':''}" data-filter="afazer">A fazer</button>
+    <button class="ov-seg-btn ${filter==='feitas'?'active':''}" data-filter="feitas">Feito</button>
+  </div>`;
+
+  // Seção pinada de reservas pendentes (só quando aberto pela chip ☐ Reservas)
+  let pendingHtml='';
+  if(state.ovShowPending){
+    const pend=[];
+    DAYS.forEach((d,i)=>d.stops.forEach(s=>{
+      if(!s.reserva) return;
+      const stored=localStorage.getItem(`reserva-${s.nome}`);
+      const done=stored?stored==='done':s.reserva==='reservado';
+      if(!done) pend.push({s,i});
+    }));
+    if(pend.length){
+      pendingHtml=`<div class="ov-pending">
+        <div class="ov-pending-h">☐ Reservas pendentes (${pend.length})</div>
+        ${pend.map(({s,i})=>ovTaskRow(s,i,'pend')).join('')}
+      </div>`;
+    } else {
+      pendingHtml=`<div class="ov-pending"><div class="ov-pending-h">☑ Reservas em dia</div><div style="font-size:13px;color:#7a5618">Nada pendente — todas as reservas marcadas.</div></div>`;
+    }
+  }
+
+  const head=`<div class="ov-head">
+      <h2>Toda a viagem</h2>
+      <button class="ov-close" id="ov-close">Fechar ✕</button>
+    </div>`;
+
+  if(filter==='afazer'){
+    const g=ovDayGroups(s=>!isFeito(s.nome),'pend');
+    return head+pendingHtml+seg+(g.any?g.html:`<div class="ov-empty">🎉 Tudo feito! Nada na lista.</div>`);
+  }
+  if(filter==='feitas'){
+    const g=ovDayGroups(s=>isFeito(s.nome),'done');
+    return head+pendingHtml+seg+(g.any?g.html:`<div class="ov-empty">Nada marcado como feito ainda.<br>Use o toque ○ na borda dos cards durante a viagem.</div>`);
+  }
+
+  // filter === 'roteiro' (default)
+  return head+pendingHtml+seg+`<div class="ov-grid">
+    ${DAYS.map((d,i)=>{
+      const cards=d.stops.filter(s=>s.tipo==='card');
+      const main=cards.length?cards[0].nome:'—';
+      const wtCards=cards.filter(c=>c.walkingTours&&c.walkingTours.length>0);
+      const parts=(d.date||'').split(' ');
+      const dm=(parts[1]||'').split('/')[0];
+      const wtButtons=wtCards.map(c=>{
+        const totalStops=c.walkingTours.reduce((a,t)=>a+t.stops.length,0);
+        const wtShort=c.walkingTours.length===1
+          ?c.walkingTours[0].nome.split('·')[0].trim()
+          :c.nome.split('·')[0].trim();
+        const partsLabel=c.walkingTours.length>1
+          ?`${c.walkingTours.length} partes · ${totalStops} paradas`
+          :`${totalStops} paradas`;
+        return `<button class="ov-wt-btn" data-idx="${i}" data-stop="${c.nome.replace(/"/g,'&quot;')}" title="Ir pro card: ${c.nome}">🚶 ${wtShort} · ${partsLabel}</button>`;
+      }).join('');
+      return `<div class="ov-row clickable" data-idx="${i}">
+        <div class="ov-daycol" style="--g1:${d.gradA};--g2:${d.gradB}">
+          <span class="dow">${parts[0]}</span><span class="dnum tnum">${dm}</span>
+        </div>
+        <div class="ov-body">
+          <div class="ov-tema">${d.tema}</div>
+          <div class="ov-meta"><span>📍 ${d.bairro}</span>${d.grupo?'<span class="ov-grp">👥 família</span>':''}</div>
+          <div class="ov-attr"><b>★</b> ${main}</div>
+          ${wtButtons}
+        </div>
+      </div>`;
+    }).join('')}
+    </div>`;
 }
 
 function renderDayTabs(){
-  return `<div class="day-tabs-wrap"><div class="day-tabs">${DAYS.map((d,i)=>{
+  return `<div class="daystrip-wrap"><div class="daystrip">${DAYS.map((d,i)=>{
     const labelCurto=d.temaCurto||d.tema.split('·')[0].trim();
-    // dt-date: junta os tokens disponíveis (data datada "Sex 5/Set" OU só emoji "👶" em coletâneas
-    // sem data) · evita imprimir "undefined" quando o campo date tem 1 token só.
-    const dtDate=d.date.split(' ').slice(0,2).join(' ');
+    const parts=(d.date||'').split(' ');
+    const dm=(parts[1]||'').split('/')[0];
+    // trip: DOW grande + dia-número + tema-curto abaixo · city: só o rótulo do tema (sem data)
+    const inner=IS_TRIP
+      ?`<span class="dt-dow">${parts[0]||''}</span>
+    <span class="dt-num tnum">${dm}</span>
+    <span class="dt-tag">${labelCurto}</span>`
+      :`<span class="dt-num" style="font-size:15px;letter-spacing:-.2px;line-height:1.15;text-align:center">${labelCurto}</span>`;
     return `<button class="day-tab ${i===state.selIdx?'active':''}" data-idx="${i}" style="--day-color:${d.cor}">
-    <span class="dt-date">${dtDate}</span>${labelCurto}
+    ${inner}
     ${d.grupo?'<span class="group-dot">👥</span>':''}
   </button>`;
   }).join('')}</div></div>`;
 }
 
 function getBairroForCoord(lat, lng){
-  // Detecção dinâmica de bairro por coordenadas, baseada em BAIRROS_CONFIG (injetado pela skill via build.py).
-  // BAIRROS_CONFIG = [{nome, latMin, latMax, lngMin, lngMax}, ..., {nome, fallback:true}]
-  if (typeof BAIRROS_CONFIG === 'undefined' || !Array.isArray(BAIRROS_CONFIG)) return '📍 Outros';
-  for (const b of BAIRROS_CONFIG){
-    if (b.fallback) continue;
-    if (lat >= b.latMin && lat <= b.latMax && lng >= b.lngMin && lng <= b.lngMax) return b.nome;
-  }
-  const fb = BAIRROS_CONFIG.find(b => b.fallback);
-  return fb ? fb.nome : '📍 Outros';
+  // Detecção canônica de bairro por coordenadas
+  if(lat>40.715 && lat<40.745 && lng>-73.97 && lng<-73.93) return '🏘️ Greenpoint / Williamsburg';
+  if(lat>40.69 && lat<40.715 && lng>-74.00 && lng<-73.985) return '🌉 DUMBO / Brooklyn Bridge Park';
+  if(lat>40.70 && lat<40.72 && lng>-74.02 && lng<-74.00) return '🗽 Lower Manhattan / Financial';
+  if(lat>40.726 && lat<40.74 && lng>-74.01 && lng<-73.99) return '🎨 Greenwich Village / West Village';
+  if(lat>40.74 && lat<40.76 && lng>-74.015 && lng<-73.99) return '🌿 Chelsea / Meatpacking / Hudson Yards';
+  if(lat>40.75 && lat<40.77 && lng>-74.00 && lng<-73.97) return '🏢 Midtown';
+  if(lat>40.76 && lat<40.79 && lng>-73.99 && lng<-73.96) return '🌳 Central Park / Upper West Side';
+  if(lat>40.76 && lat<40.79 && lng>-73.97 && lng<-73.94) return '🏛️ Upper East Side';
+  if(lat>40.55 && lat<40.60) return '🏖️ Brooklyn Sul';
+  if(lat>40.68 && lat<40.70) return '🌴 Prospect Park area';
+  return '📍 Outros';
 }
 
 function renderBairros(){
@@ -356,13 +586,18 @@ function renderBairros(){
   });
   // Ordenar bairros pela frequência (mais visitados primeiro)
   const sorted=Object.keys(bairros).sort((a,b)=>bairros[b].length-bairros[a].length);
-  return `<div class="bairros-list">
+  return `<div class="section-title">Por bairro</div>
+  <div class="section-sub">${sorted.length} áreas · toque numa atração pra abrir no roteiro</div>
+  <div class="bairros-list">
     ${sorted.map(b=>`<div class="bairro-block">
-      <div class="bairro-name">${b} <span style="margin-left:auto;font-size:12px;color:#9ca3af;font-weight:500">${bairros[b].length} atrações</span></div>
+      <div class="bairro-name">${b}<span class="bairro-count">${bairros[b].length}</span></div>
       <div class="bairro-attrs">
         ${bairros[b].map(item=>`<div class="bairro-attr" data-idx="${item.dayIdx}">
-          <div class="bairro-attr-name">${item.stop.emoji} ${item.stop.nome}</div>
-          <div class="bairro-attr-day">${item.date} · ${item.stop.hora}</div>
+          <div class="bairro-attr-emoji">${item.stop.emoji}</div>
+          <div class="bairro-attr-txt">
+            <div class="bairro-attr-name">${item.stop.nome}</div>
+            <div class="bairro-attr-day">${item.date} · ${item.stop.hora}</div>
+          </div>
         </div>`).join('')}
       </div>
     </div>`).join('')}
@@ -372,25 +607,11 @@ function renderBairros(){
 let mapInstance=null;
 function renderMap(){
   const day=DAYS[state.selIdx];
-  // hideStopMarkers: quando o dia INTEIRO é a própria walking tour (cada card = uma parada
-  // numerada), esconde os pins comuns pra não duplicar com os marcadores numerados do WT.
-  const hideStops=!!day.hideStopMarkers;
   const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   // Cards do dia com walking tours (array de partes)
   const cardsWithTours=day.stops.filter(s=>s.walkingTours&&s.walkingTours.length>0);
   // Helper: limpa nome pra busca no Google Maps (mantém endereço entre parens)
   const cleanForSearch=nm=>nm.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
-  // Numeração SEQUENCIAL contínua das paradas de walking tour (atravessa TODAS as partes).
-  // Antes cada parte reiniciava em 1 → pino "1" repetia na parte 2 e a legenda (1..N) não batia.
-  // Agora wtSeq.n é global (1..N) e bate com a legenda · partIdx define o estilo (parte 1 cheia · 2+ contorno).
-  const wtSeq=[];
-  cardsWithTours.forEach(card=>{
-    card.walkingTours.forEach((tour,partIdx)=>{
-      tour.stops.forEach(t=>{
-        wtSeq.push({n:wtSeq.length+1,nome:t.nome,coord:t.coord,partIdx,partName:tour.nome.split('·')[0].trim()});
-      });
-    });
-  });
   setTimeout(()=>{
     if(mapInstance){ mapInstance.remove(); mapInstance=null; }
     const div=document.getElementById('map');
@@ -401,78 +622,73 @@ function renderMap(){
     }).addTo(mapInstance);
     if(stops.length===0){ mapInstance.setView([40.72,-73.95],12); return; }
     const latlngs=stops.map(s=>[s.coord.lat,s.coord.lng]);
-    if(!hideStops){
-      stops.forEach((s,i)=>{
-        const isOpcoes=s.tipo==='opcoes' && s.opcoes && s.opcoes.length>0;
-        const principalName=isOpcoes?s.opcoes[0].nome.split('(')[0].trim():'';
-        const popupHtml=`<div class="pp-time" style="color:${day.cor}">${s.hora}</div>
-          <div class="pp-name">${s.nome}</div>
-          <div class="pp-notes">${s.cat||''}</div>
-          ${isOpcoes?`<div class="pp-notes" style="margin-top:6px"><strong>📍 Principal:</strong> ${principalName}</div>`:''}
-          <a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
-        L.marker([s.coord.lat,s.coord.lng])
-          .bindPopup(popupHtml,{maxWidth:240})
-          .addTo(mapInstance);
-      });
-      if(latlngs.length>1){
-        L.polyline(latlngs,{color:day.cor,weight:3,opacity:0.7,dashArray:'6,8'}).addTo(mapInstance);
-      }
-    }
-    // WALKING TOURS: polyline por parte (Parte 1 tracejada normal · Parte 2+ mais fina)
-    cardsWithTours.forEach(card=>{
-      card.walkingTours.forEach((tour,partIdx)=>{
-        const tourLatLngs=tour.stops.map(t=>[t.coord.lat,t.coord.lng]);
-        const dashStyle=partIdx===0?'4,5':'2,6';
-        L.polyline(tourLatLngs,{color:day.cor,weight:2.5,opacity:0.85,dashArray:dashStyle}).addTo(mapInstance);
-      });
-    });
-    // Marcadores numerados SEQUENCIAIS (1..N contínuo) · Parte 1 cheios · Parte 2+ contorno
-    wtSeq.forEach(item=>{
-      const markerStyle=item.partIdx===0
-        ?`background:${day.cor};color:#fff;border:2px solid #fff`
-        :`background:#fff;color:${day.cor};border:2px solid ${day.cor}`;
-      const icon=L.divIcon({
+    stops.forEach((s,i)=>{
+      const isOpcoes=s.tipo==='opcoes' && s.opcoes && s.opcoes.length>0;
+      const principalName=isOpcoes?s.opcoes[0].nome.split('(')[0].trim():'';
+      const popupHtml=`<div class="pp-time" style="color:${day.cor}">${s.hora}</div>
+        <div class="pp-name">${s.nome}</div>
+        <div class="pp-notes">${s.cat||''}</div>
+        ${isOpcoes?`<div class="pp-notes" style="margin-top:6px"><strong>📍 Principal:</strong> ${principalName}</div>`:''}
+        ${getMapsUrl(s)?`<a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`:''}`;
+      const numIcon=L.divIcon({
         className:'wt-marker',
-        html:`<div style="${markerStyle}">${item.n}</div>`,
+        html:`<div style="background:${day.cor};color:#fff;border:2px solid #fff">${i+1}</div>`,
         iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
       });
-      const searchName=cleanForSearch(item.nome);
-      const url=`https://www.google.com/maps/search/${encodeURIComponent(searchName)}/@${item.coord.lat},${item.coord.lng},17z`;
-      const popupHtml=`<div class="pp-time" style="color:${day.cor}">${item.partName} · parada ${item.n}</div>
-        <div class="pp-name">${item.nome}</div>
-        <a class="pp-link" style="background:${day.cor}" href="${url}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
-      L.marker([item.coord.lat,item.coord.lng],{icon})
+      L.marker([s.coord.lat,s.coord.lng],{icon:numIcon})
         .bindPopup(popupHtml,{maxWidth:240})
         .addTo(mapInstance);
     });
+    if(latlngs.length>1){
+      L.polyline(latlngs,{color:day.cor,weight:3,opacity:0.7,dashArray:'6,8'}).addTo(mapInstance);
+    }
+    // WALKING TOURS: cor fixa ROXA (#6d5efc) · distinta da cor do dia (marcadores + linha)
+    const WT_COLOR='#6d5efc';
+    cardsWithTours.forEach(card=>{
+      card.walkingTours.forEach((tour,partIdx)=>{
+        const tourStops=tour.stops;
+        const tourLatLngs=tourStops.map(t=>[t.coord.lat,t.coord.lng]);
+        // Polyline: Parte 1 tracejada normal · Parte 2 tracejada mais fina
+        const dashStyle=partIdx===0?'4,5':'2,6';
+        L.polyline(tourLatLngs,{color:WT_COLOR,weight:2.5,opacity:0.85,dashArray:dashStyle}).addTo(mapInstance);
+        // Marcadores: Parte 1 preenchidos roxo · Parte 2 contorno roxo
+        const markerStyle=partIdx===0
+          ?`background:${WT_COLOR};color:#fff;border:2px solid #fff`
+          :`background:#fff;color:${WT_COLOR};border:2px solid ${WT_COLOR}`;
+        tourStops.forEach(t=>{
+          const icon=L.divIcon({
+            className:'wt-marker',
+            html:`<div style="${markerStyle}">${t.n}</div>`,
+            iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
+          });
+          const searchName=cleanForSearch(t.nome);
+          const url=`https://www.google.com/maps/search/${encodeURIComponent(searchName)}/@${t.coord.lat},${t.coord.lng},17z`;
+          const popupHtml=`<div class="pp-time" style="color:${day.cor}">${tour.nome.split('·')[0].trim()} · parada ${t.n}</div>
+            <div class="pp-name">${t.nome}</div>
+            <a class="pp-link" style="background:${day.cor}" href="${url}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
+          L.marker([t.coord.lat,t.coord.lng],{icon})
+            .bindPopup(popupHtml,{maxWidth:240})
+            .addTo(mapInstance);
+        });
+      });
+    });
     // Ajustar bounds incluindo walking tours
-    const allLatLngs=[...latlngs,...wtSeq.map(item=>[item.coord.lat,item.coord.lng])];
+    const allLatLngs=[...latlngs];
+    cardsWithTours.forEach(c=>c.walkingTours.forEach(t=>t.stops.forEach(s=>allLatLngs.push([s.coord.lat,s.coord.lng]))));
     mapInstance.fitBounds(allLatLngs,{padding:[40,40]});
   },50);
-  // Legenda: quando o dia É a própria walking tour (hideStopMarkers), usa a sequência contínua
-  // das paradas WT (bate 1..N com os pinos numerados). Senão, lista os stops do dia (com hora).
-  let legend;
-  if(hideStops && wtSeq.length){
-    legend=wtSeq.map(item=>{
-      const dotStyle=item.partIdx===0
-        ?`background:${day.cor};color:#fff`
-        :`background:#fff;color:${day.cor};border:1.5px solid ${day.cor}`;
-      return `<div class="stop-legend-item"><div class="stop-num" style="${dotStyle}">${item.n}</div><span class="legend-nome">${item.nome.split('(')[0].trim()}</span></div>`;
-    }).join('');
-  } else {
-    legend=stops.map((s,i)=>`<div class="stop-legend-item"><div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span></div>`).join('');
-  }
+  const legend=stops.map((s,i)=>{const u=getMapsUrl(s);const inner=`<div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span>${u?'<span class="legend-go">↗</span>':''}`;return u?`<a class="stop-legend-item" href="${u}" target="_blank" rel="noopener" title="Abrir ${s.nome.split('(')[0].trim()} no Google Maps">${inner}</a>`:`<div class="stop-legend-item">${inner}</div>`;}).join('');
   // 1 botão por parte de walking tour
   const tourButtons=cardsWithTours.flatMap(card=>
     card.walkingTours.map(t=>
       `<a class="gmaps-btn walking-tour-btn" href="${getWalkingTourUrl(t.stops)}" target="_blank" rel="noopener">🚶 ${t.nome} · ${t.stops.length} paradas</a>`
     )
   ).join('');
-  return `<div class="map-section">
-    ${(stops.length||wtSeq.length)?`<div class="stop-legend">${legend}</div>`:''}
+  return `<div class="map-section" style="--day-color:${day.cor}">
+    ${stops.length?`<div class="stop-legend">${legend}</div>`:''}
     <div id="map"></div>
     <div class="map-cta">
-      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (walking)</a>
+      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (${dayTransport(day)==='driving'?'carro':'a pé'})</a>
       ${tourButtons}
       <span class="map-hint">Clique nos marcadores pros detalhes${cardsWithTours.length?' · pontos pequenos cheios = parte 1 · contorno = parte 2':''}</span>
     </div>
@@ -522,7 +738,6 @@ function centerActiveTab(){
 
 function renderInnerContent(){
   // Re-render apenas conteúdo do dia (sem rebuildar os tabs)
-  stopAudio(); // para narração ao trocar de dia/aba
   const inner=document.getElementById('inner-content');
   if(!inner) return;
   if(state.view==='guia'){
@@ -553,66 +768,127 @@ function bindCardHandlers(){
       try{ localStorage.setItem(`reserva-${name}`,willBeDone?'done':'pending'); }catch(e){}
       b.classList.toggle('ok',willBeDone);
       b.classList.toggle('pending',!willBeDone);
-      b.textContent=willBeDone?'☑ FEITO':'☐ RESERVAR';
+      b.textContent=willBeDone?'✅ RESERVADO':'☐ RESERVAR';
+      // Reservas afetam o chip do topo (some quando 4/4) e a nota do rodapé
+      const sb=document.getElementById('status-bar');
+      if(sb && state.view==='guia'){ sb.outerHTML=renderStatusBar(); bindStatusBar(); }
+      updateReservasNote();
     });
   });
-  document.querySelectorAll('.nivel-btn').forEach(b=>{
+  // Transit · botão "Copiar endereço" (copia destino pro clipboard, com fallback)
+  document.querySelectorAll('[data-copy]').forEach(b=>{
     if(b.__bound) return;
     b.__bound=true;
     b.addEventListener('click',e=>{
       e.stopPropagation();
-      if(state.nivel===b.dataset.nivel) return;
-      state.nivel=b.dataset.nivel;
-      renderInnerContent();
+      const txt=b.dataset.copy;
+      const flash=()=>{
+        const orig=b.innerHTML;
+        b.innerHTML='copiado ✓';
+        setTimeout(()=>{ b.innerHTML=orig; },1500);
+      };
+      const fallback=()=>{
+        try{
+          const ta=document.createElement('textarea');
+          ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+          document.body.appendChild(ta); ta.focus(); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta);
+        }catch(err){}
+        flash();
+      };
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(flash,fallback);
+      } else { fallback(); }
     });
   });
-  document.querySelectorAll('[data-audio]').forEach(b=>{
+  // FEITO check toggle (card/opcoes) + botão desfazer na seção Feitas
+  document.querySelectorAll('[data-feito]').forEach(b=>{
     if(b.__bound) return;
     b.__bound=true;
     b.addEventListener('click',e=>{
       e.stopPropagation();
-      const stop=findStopByName(b.dataset.audio);
-      if(stop) playStopAudio(stop,b);
+      const name=b.dataset.feito;
+      setFeito(name,!isFeito(name));
+      renderInnerContent(); // stop migra pra/de Feitas hoje
+      // Stats de Atrações/Tours mudam · atualiza status bar (se aberto)
+      const sb=document.getElementById('status-bar');
+      if(sb && state.view==='guia'){ sb.outerHTML=renderStatusBar(); bindStatusBar(); }
     });
   });
-  fillVoiceSelects();
-  document.querySelectorAll('.audio-voice').forEach(sel=>{
-    if(sel.__bound) return;
-    sel.__bound=true;
-    sel.addEventListener('click',e=>e.stopPropagation());
-    sel.addEventListener('change',e=>{
-      e.stopPropagation();
-      selectedVoiceURI=sel.value;
-      try{ localStorage.setItem('audioVoiceURI',selectedVoiceURI); }catch(e){}
-      stopAudio();
+  // Cabeçalho "Feitas hoje": colapsar
+  const fh=document.getElementById('feitas-head');
+  if(fh && !fh.__bound){
+    fh.__bound=true;
+    fh.addEventListener('click',()=>{
+      const sec=fh.closest('.feitas-section');
+      const open=sec.classList.toggle('open');
+      try{ localStorage.setItem('feitasOpen_'+state.selIdx,open?'1':'0'); }catch(e){}
+    });
+  }
+  // Item feito clicável (menos o botão undo): re-marca como não-feito não · só desfaz via undo.
+  document.querySelectorAll('.feitas-item[data-jump]').forEach(it=>{
+    if(it.__bound) return;
+    it.__bound=true;
+    it.addEventListener('click',e=>{
+      if(e.target.closest('[data-feito]')) return; // undo trata sozinho
     });
   });
   if(state.expandStop){
-    document.querySelectorAll('.stop-card .stop-name').forEach(el=>{
+    // Expande o card OU o bloco de opções cujo nome bate
+    document.querySelectorAll('.stop-card .stop-name, .stop-opcoes .stop-opcoes-name').forEach(el=>{
       if(el.textContent.trim()===state.expandStop){
-        const card=el.closest('.stop-card');
+        const card=el.closest('.stop-card, .stop-opcoes');
         card.classList.add('expanded');
         setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'center'}),150);
       }
     });
     state.expandStop=null;
+  } else if(state.view==='guia'){
+    // AGORA: auto-scroll pro stop atual (se houver) no load do dia
+    const nowEl=document.querySelector('.stop-wrap.is-now');
+    if(nowEl){
+      setTimeout(()=>nowEl.scrollIntoView({behavior:'smooth',block:'center'}),200);
+    }
   }
+  maybeShowFeitoHint();
+}
+
+// First-run: mostra uma dica sutil no primeiro check ○ · some ao tocar ou após alguns segundos
+function maybeShowFeitoHint(){
+  if(state.view!=='guia') return;
+  let seen=false; try{ seen=localStorage.getItem('hintFeito')==='1'; }catch(e){}
+  if(seen) return;
+  const firstChk=document.querySelector('.tl-stops .stop-wrap:not(.is-feito) .feito-chk');
+  if(!firstChk) return;
+  const wrap=firstChk.closest('.stop-wrap');
+  if(!wrap || wrap.querySelector('.feito-hint')) return;
+  const dismiss=()=>{
+    try{ localStorage.setItem('hintFeito','1'); }catch(e){}
+    const h=wrap.querySelector('.feito-hint'); if(h) h.remove();
+  };
+  const hint=document.createElement('div');
+  hint.className='feito-hint';
+  hint.textContent='Toque ✓ pra marcar como feito';
+  hint.addEventListener('click',dismiss);
+  wrap.appendChild(hint);
+  firstChk.addEventListener('click',dismiss,{once:true});
+  setTimeout(dismiss,5000);
 }
 
 function render(){
-  if(typeof stopAudio==='function') stopAudio(); // para narração ao trocar de view
   let content='';
   if(state.view==='guia'||state.view==='mapa'){
+    const heroHtml=state.view==='guia'?renderStatusBar():'';
     const tabsHtml=renderDayTabs();
     const innerHtml=state.view==='guia'?renderDay(DAYS[state.selIdx]):renderMap();
-    content=tabsHtml+'<div id="inner-content">'+innerHtml+'</div>';
+    content=heroHtml+tabsHtml+'<div id="inner-content">'+innerHtml+'</div>';
   } else if(state.view==='bairros'){
     content=renderBairros();
   }
   document.getElementById('content').innerHTML=content;
   
   // Day tab clicks (com SOFT re-render — não rebuilda tabs)
-  const dayTabsEl=document.querySelector('.day-tabs');
+  const dayTabsEl=document.querySelector('.daystrip');
   if(dayTabsEl){
     dayTabsEl.addEventListener('click',e=>{
       const tab=e.target.closest('.day-tab');
@@ -626,58 +902,132 @@ function render(){
       centerActiveTab();
     });
   }
-  // Main tabs
-  document.querySelectorAll('.main-tab').forEach(b=>{
-    b.addEventListener('click',()=>{
-      state.view=b.dataset.view;
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view===state.view));
-      render();
-    });
-  });
   // Bairros clicks
   document.querySelectorAll('.bairro-attr').forEach(b=>{
     b.addEventListener('click',()=>{
       state.selIdx=parseInt(b.dataset.idx);
       state.view='guia';
       state.expandStop=b.querySelector('.bairro-attr-name').textContent.replace(/^[\p{Emoji}\s]+/u,'').trim();
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      syncTabbar();
       render();
       window.scrollTo({top:0,behavior:'smooth'});
     });
   });
+  bindStatusBar();
   bindCardHandlers();
   centerActiveTab();
 }
 
-function init(){
-  // Áudio-guia: força o carregamento da lista de vozes (iOS/Android carregam async)
-  if('speechSynthesis' in window){
-    window.speechSynthesis.getVoices();
-    window.speechSynthesis.onvoiceschanged=()=>{ window.speechSynthesis.getVoices(); if(typeof fillVoiceSelects==='function') fillVoiceSelects(); };
+// Abre o Resumo com filtro/pending · rerenderiza o sheet e mostra
+function openOverviewSheet(filter,showPending){
+  state.ovFilter=filter||'roteiro';
+  state.ovShowPending=!!showPending;
+  const ovEl=document.getElementById('overview');
+  const ovBtn=document.getElementById('overview-toggle');
+  ovEl.innerHTML=renderOverview();
+  ovEl.classList.add('show');
+  ovBtn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function bindStatusBar(){
+  const exp=document.getElementById('sb-expand');
+  const stats=document.getElementById('sb-stats');
+  if(exp && !exp.__bound){
+    exp.__bound=true;
+    exp.addEventListener('click',()=>{
+      const open=stats.classList.toggle('open');
+      exp.classList.toggle('open',open);
+      exp.setAttribute('aria-expanded',open);
+      try{ localStorage.setItem('statusExpanded',open?'1':'0'); }catch(e){}
+    });
   }
+  const chip=document.getElementById('sb-reservas');
+  if(chip && !chip.__bound){
+    chip.__bound=true;
+    chip.addEventListener('click',()=>openOverviewSheet('roteiro',true));
+  }
+  document.querySelectorAll('.sb-stat[data-goto]').forEach(b=>{
+    if(b.__bound) return;
+    b.__bound=true;
+    b.addEventListener('click',()=>{
+      if(b.dataset.goto==='afazer'){ openOverviewSheet('afazer',false); return; }
+      if(b.dataset.goto==='dia'){
+        // Pula pro dia de hoje se estivermos dentro da viagem · senão no-op
+        const idx=getTodayTripIdx();
+        if(idx>=0 && idx!==state.selIdx){
+          state.selIdx=idx; state.view='guia'; syncTabbar(); render();
+          window.scrollTo({top:0,behavior:'smooth'});
+        }
+        return;
+      }
+    });
+  });
+}
+
+function syncTabbar(){
+  document.querySelectorAll('.tab-btn').forEach(t=>t.classList.toggle('active',t.dataset.view===state.view));
+}
+
+function init(){
   document.getElementById('overview').innerHTML=renderOverview();
   
-  // Legenda: collapse persistente
+  // Legenda: aberta + desmarcada no 1º acesso · SÓ o "Já li" colapsa · persiste entre sessões
   const fl=document.getElementById('footer-legend');
   const cb=document.getElementById('legend-cb');
-  if(localStorage.getItem('legendRead')==='1'){
-    fl.classList.add('collapsed');
-    cb.checked=true;
-  }
+  if(localStorage.getItem('legendRead')==='1'){ cb.checked=true; fl.classList.add('collapsed'); }
   cb.addEventListener('change',()=>{
     try{ localStorage.setItem('legendRead',cb.checked?'1':'0'); }catch(e){}
     fl.classList.toggle('collapsed',cb.checked);
   });
+  updateReservasNote();
   
-  // Overview toggle
-  document.getElementById('overview-toggle').addEventListener('click',()=>{
-    const ov=document.getElementById('overview');
-    const tg=document.getElementById('overview-toggle');
-    const open=ov.classList.toggle('show');
-    tg.classList.toggle('open',open);
+  // Bottom tab bar
+  document.querySelectorAll('.tab-btn').forEach(b=>{
+    b.addEventListener('click',()=>{
+      closeOverview();
+      state.view=b.dataset.view;
+      syncTabbar();
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
   });
-  // Overview row/button click
-  document.getElementById('overview').addEventListener('click',e=>{
+
+  // Overview sheet
+  const ovEl=document.getElementById('overview');
+  const ovBtn=document.getElementById('overview-toggle');
+  function closeOverview(){ ovEl.classList.remove('show'); ovBtn.classList.remove('active'); }
+  window.closeOverview=closeOverview;
+  ovBtn.addEventListener('click',()=>{
+    const isOpen=ovEl.classList.contains('show');
+    if(isOpen){ closeOverview(); return; }
+    closeHelp();
+    // Abre sempre no filtro Roteiro, sem seção pending
+    openOverviewSheet('roteiro',false);
+  });
+  ovEl.addEventListener('click',e=>{
+    if(e.target.id==='ov-close'){ closeOverview(); return; }
+    // Segmented control (Roteiro · A fazer · Feitas)
+    const seg=e.target.closest('.ov-seg-btn');
+    if(seg){
+      state.ovFilter=seg.dataset.filter;
+      state.ovShowPending=false; // trocar de aba dispensa o pinned de reservas
+      ovEl.innerHTML=renderOverview();
+      window.scrollTo({top:0,behavior:'smooth'});
+      return;
+    }
+    // Task row (A fazer / Feitas / Reservas pendentes): navega + expand
+    const task=e.target.closest('.ov-task[data-jump]');
+    if(task){
+      state.selIdx=parseInt(task.dataset.idx);
+      state.view='guia';
+      state.expandStop=task.dataset.jump;
+      syncTabbar();
+      closeOverview();
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+      return;
+    }
     // Botão de walking tour: navega + auto-expand do card específico
     const wtBtn=e.target.closest('.ov-wt-btn');
     if(wtBtn){
@@ -685,30 +1035,36 @@ function init(){
       state.selIdx=parseInt(wtBtn.dataset.idx);
       state.view='guia';
       state.expandStop=wtBtn.dataset.stop;
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
-      document.getElementById('overview').classList.remove('show');
-      document.getElementById('overview-toggle').classList.remove('open');
+      syncTabbar();
+      closeOverview();
       render();
       window.scrollTo({top:0,behavior:'smooth'});
       return;
     }
-    // Linha clicável: navega pro dia (primeiro card)
-    const tr=e.target.closest('tr.clickable');
+    // Linha clicável: navega pro dia
+    const tr=e.target.closest('.ov-row.clickable');
     if(tr){
       state.selIdx=parseInt(tr.dataset.idx);
       state.view='guia';
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
-      document.getElementById('overview').classList.remove('show');
-      document.getElementById('overview-toggle').classList.remove('open');
+      syncTabbar();
+      closeOverview();
       render();
       window.scrollTo({top:0,behavior:'smooth'});
     }
   });
-  
-  // Search
+
+  // Search (toggle panel + results)
   const si=document.getElementById('search');
   const sr=document.getElementById('search-results');
   const sc=document.getElementById('search-clear');
+  const sw=document.getElementById('search-wrap');
+  const sBtn=document.getElementById('search-btn');
+  sBtn.addEventListener('click',()=>{
+    const open=sw.classList.toggle('show');
+    sBtn.classList.toggle('active',open);
+    if(open){ closeOverview(); closeHelp(); setTimeout(()=>si.focus(),60); }
+    else { sr.classList.remove('show'); }
+  });
   si.addEventListener('input',()=>{
     const v=si.value;
     sc.classList.toggle('show',v.length>0);
@@ -725,10 +1081,12 @@ function init(){
       state.selIdx=parseInt(r.dataset.idx);
       state.view='guia';
       state.expandStop=r.querySelector('.search-result-name').textContent.replace(/^[\p{Emoji}\s]+/u,'').trim();
-      document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.view==='guia'));
+      syncTabbar();
       si.value='';
       sc.classList.remove('show');
       sr.classList.remove('show');
+      sw.classList.remove('show');
+      sBtn.classList.remove('active');
       render();
       window.scrollTo({top:0,behavior:'smooth'});
     }
@@ -741,6 +1099,41 @@ function init(){
   document.addEventListener('click',e=>{
     if(!e.target.closest('.search-wrap')) sr.classList.remove('show');
   });
-  
+
+  // Ajuda · sheet de dicas (sempre acessível pelo ❓)
+  const helpEl=document.getElementById('help-sheet');
+  const helpBtn=document.getElementById('help-btn');
+  function closeHelp(){ helpEl.classList.remove('show'); helpBtn.classList.remove('active'); }
+  helpBtn.addEventListener('click',()=>{
+    const open=helpEl.classList.toggle('show');
+    helpBtn.classList.toggle('active',open);
+    if(open){ closeOverview(); window.scrollTo({top:0,behavior:'smooth'}); }
+  });
+  helpEl.addEventListener('click',e=>{ if(e.target.id==='help-close') closeHelp(); });
+
+  // Swipe entre dias (Guia + Mapa) · toque no mapa Leaflet mantém o pan
+  (function(){
+    const area=document.getElementById('content');
+    let x0=null,y0=null,onMap=false;
+    area.addEventListener('touchstart',e=>{
+      const t=e.touches[0]; x0=t.clientX; y0=t.clientY;
+      onMap=!!(e.target.closest && e.target.closest('#map'));
+    },{passive:true});
+    area.addEventListener('touchend',e=>{
+      if(x0===null) return;
+      const startX=x0; x0=null;
+      if(onMap) return;                                  // deixa o mapa fazer pan
+      if(state.view!=='guia' && state.view!=='mapa') return;
+      const t=e.changedTouches[0], dx=t.clientX-startX, dy=t.clientY-y0;
+      if(Math.abs(dx)<60 || Math.abs(dx)<Math.abs(dy)*1.8) return;   // horizontal claro
+      const next=state.selIdx+(dx<0?1:-1);               // arrastar p/ esquerda = próximo dia
+      if(next<0 || next>=DAYS.length) return;
+      state.selIdx=next;
+      document.querySelectorAll('.day-tab').forEach(tb=>tb.classList.toggle('active',parseInt(tb.dataset.idx)===next));
+      renderInnerContent();
+      centerActiveTab();
+    },{passive:true});
+  })();
+
   render();
 }

@@ -24,33 +24,39 @@
 </div>
 
 <div id="app">
-  <div class="header">
-    <div class="header-actions">
-      <button class="print-btn" onclick="window.print()" title="Salvar como PDF / imprimir">🖨️&nbsp;PDF</button>
+  <div class="topbar">
+    <div class="topbar-row">
+      <div class="brand">
+        <span class="brand-mark">{{AUTH_EMOJI}}</span>
+        <div class="brand-text">
+          <div class="brand-title">{{HEADER_TITLE}}</div>
+          <div class="brand-sub">{{HEADER_SUB}}</div>
+        </div>
+      </div>
+      <button class="icon-btn" id="overview-toggle" aria-label="Resumo da viagem">🗓️</button>
+      <button class="icon-btn" id="search-btn" aria-label="Buscar">🔍</button>
+      <button class="icon-btn" id="help-btn" aria-label="Ajuda · dicas">❓</button>
     </div>
-    <h1>{{HEADER_TITLE}}</h1>
-    <div class="sub">{{HEADER_SUB}}</div>
-  </div>
-
-  <div class="sticky-nav">
-    <div class="search-wrap">
+    <div class="search-wrap" id="search-wrap">
       <span class="search-icon">🔍</span>
       <input class="search-input" type="text" id="search" placeholder="Buscar atração, bairro, comida..." autocomplete="off">
       <button class="search-clear" id="search-clear">×</button>
       <div class="search-results" id="search-results"></div>
     </div>
+  </div>
 
-    <button class="overview-toggle" id="overview-toggle">
-      <span>📊 Resumo de todos os dias</span>
-      <span class="chev">▼</span>
-    </button>
-    <div class="overview" id="overview"></div>
+  <div class="overview" id="overview"></div>
 
-    <div class="main-tabs">
-      <button class="main-tab active" data-view="guia">📋 Guia</button>
-      <button class="main-tab" data-view="mapa">🗺️ Mapa</button>
-      <button class="main-tab" data-view="bairros">🏘️ Por bairro</button>
-    </div>
+  <div class="help-sheet" id="help-sheet">
+    <div class="ov-head"><h2>💡 Como usar</h2><button class="ov-close" id="help-close">Fechar ✕</button></div>
+    <ul class="help-list">
+      <li><b>← Deslize →</b> pra trocar de dia — funciona no <b>Guia</b> e no <b>Mapa</b></li>
+      <li><b>○ Feito</b> · toque no botão do card pra marcar a parada como feita (vai pra "Feitas hoje")</li>
+      <li><b>☐ Reservar</b> · toque pra confirmar uma reserva já feita (fica ✅ Reservado) — salvo no aparelho</li>
+      <li><b>📅 Resumo</b> · todos os dias, com filtro "A fazer" / "Feito"</li>
+      <li><b>🗺️ Mapa</b> · toque nos pinos numerados pro nome + abrir no Google Maps</li>
+      <li><b>📋 / 🚇</b> nos cards de transporte · copiar endereço (Uber) ou abrir transporte público (Metrô)</li>
+    </ul>
   </div>
 
   <div id="content"></div>
@@ -73,8 +79,17 @@
       <div class="text">
 {{LEGEND_NOTES_HTML}}
       </div>
+      <div id="reservas-note"></div>
     </div>
   </div>
+
+  <nav class="tabbar" id="tabbar">
+    <div class="tabbar-inner">
+      <button class="tab-btn active" data-view="guia"><span class="tb-ico">📋</span><span class="tb-lbl">Guia</span></button>
+      <button class="tab-btn" data-view="mapa"><span class="tb-ico">🗺️</span><span class="tb-lbl">Mapa</span></button>
+      <button class="tab-btn" data-view="bairros"><span class="tb-ico">🏘️</span><span class="tb-lbl">Bairros</span></button>
+    </div>
+  </nav>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
@@ -116,6 +131,9 @@ const TRANSIT_MAP = {{TRANSIT_MAP_JSON}};
 
 // ============== BAIRROS config (ranges lat/lng → nome de bairro) ==============
 const BAIRROS_CONFIG = {{BAIRROS_CONFIG_JSON}};
+
+// ============== MODE ("trip" datada | "city" coletânea sem datas) ==============
+const APP_MODE = "{{MODE}}";
 
 // ============== RENDER ==============
 {{RENDER_FUNCTIONS_JS}}

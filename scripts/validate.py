@@ -289,18 +289,28 @@ def check_alt_cards_excluded_from_route(content, days_text):
 def check_required_features(content):
     """Verifica que features-chave existem no HTML"""
     required = {
+        # Invariantes que sobrevivem à arquitetura "editorial trip journal" (redesign 2026-07)
         'AUTH_KEY persistente':       "AUTH_KEY='roteiro_auth_v1'",
+        'APP_MODE (trip/city)':       'const APP_MODE',
         'centerActiveTab':            'function centerActiveTab',
         'renderInnerContent':         'function renderInnerContent',
         'getMapsUrl mantém parens':   "replace(/[()]/g",
         'Popup color forçado white':  'color:#fff !important',
         'getDefaultDayIdx':           'function getDefaultDayIdx',
         'getWalkingTourUrl':          'function getWalkingTourUrl',
-        'WT URL usa nome (não coord)':'queryName=t=>t.nome',
+        'WT URL fallback usa nome':   'queryName=t=>t.nome',
         'Walking tour flag':          'walking-tour-flag',
         'Search WT index':            "hay+=' walking tour '",
         'Overview WT button':         'ov-wt-btn',
         'Transit colapsável':         'stop-transit.collapsible',
+        # Novos invariantes da arquitetura nova
+        'Status bar':                 'function renderStatusBar',
+        'dayTransport (modo do dia)': 'function dayTransport',
+        'AGORA (getNowStopIdx)':      'function getNowStopIdx',
+        'Feito axis (isFeito)':       'function isFeito',
+        'Feito axis (localStorage)':  "'feito-'",
+        'Rota por coord (api=1)':     'api=1',
+        'Rota com travelmode':        'travelmode=',
     }
     
     for name, pattern in required.items():
