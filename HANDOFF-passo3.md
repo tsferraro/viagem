@@ -20,6 +20,7 @@ Leia integralmente e resuma pra si mesmo o que cada um estabelece sobre QUALIDAD
 - `references/data-schema.md` (schema completo — o que cada campo de card/opcoes/transit/walkingTour deve conter)
 - `references/design-rubric.md` (como a rubrica-irmã de DESIGN foi estruturada — espelhe o formato e o rigor)
 - `MEMORY.md` (aprendizados reais por viagem + método QA) e `decision-log.md`
+- `skills/destination-scout/` (SKILL.md + `references/audience-profiles.md` + `mapping-rubric.md` + `prose-guide.md` + `examples/chapada-veadeiros.md`) — **degrau 0 de pesquisa/curadoria · meia rubrica de conteúdo JÁ PRONTA · reusar, não duplicar** (ver seção "Aproveitar a destination-scout" abaixo)
 - `skills/walking-tour-designer/SKILL.md` (+ sub-references) e `skills/road-trip-designer/SKILL.md`
 - `scripts/validate.py` (já tem `--check-links`! entenda como funciona) e `scripts/build.py`
 - Um roteiro real como referência de padrão-ouro: `nyc/data.json` (e a coletânea `marais/` como exemplo de modo "city")
@@ -42,6 +43,16 @@ Apresente ao Tobia, em tabela, o plano: as **dimensões da rubrica** (com pontua
 3. **Loop-até-excelente**: integre ao pipeline de criação (documente em `CLAUDE.md` na seção de pipeline e/ou `deploy.sh`/`wrap-up.sh`): ao final da criação, roda o `audit-content.py`; se abaixo do limiar → itera (corrige os P0/P1) e re-roda; só entrega quando **excelente**, e mostra a nota final pro Tobia junto do link.
 4. Rode o audit no `nyc/data.json` como prova real (mostre a nota + achados). Corrija falsos-positivos.
 5. Registre no `decision-log.md` + atualize `CLAUDE.md` (aponte `references/content-rubric.md` + `audit-content.py` na tabela de references e no pipeline).
+
+### Aproveitar a `destination-scout` (não reinventar)
+A skill `skills/destination-scout/` (degrau 0: pesquisa/curadoria macro do destino, ANTES do roteiro) já codifica padrões de CONTEÚDO que a rubrica deve **estender**, com vocabulário único (não forkar):
+- `audience-profiles.md` → dimensão **Adaptação ao público/objetivo** (matriz 5 perfis × eixos; regra "calibrar pelo elo mais restritivo"; perguntar idade). Reusar direto.
+- `mapping-rubric.md` → **veredito 🟢🟡🔴** (mesma escala do `risco` do roteiro — alinhar, não criar outra), **logística obrigatória por item** (distância em **km** não "perto", ingresso **datado**, reserva, janela, ⚠️ segurança), **armadilhas de turista**, **sabores-assinatura**. Vários viram **checks automatizáveis** do `audit-content.py`.
+- `prose-guide.md` → dimensão **Escrita & storytelling** (gancho, prosa, anti-floreio, factual) — casa com o padrão-ouro Marais do CLAUDE.md.
+- Anti-invenção (preços datados, sem URL inventada, distância da base, `[a confirmar]`, omitir na dúvida) é comum às duas → base dos checks do audit.
+- `examples/chapada-veadeiros.md` = exemplo trabalhado do nível de qualidade.
+
+**Chain do pipeline:** destination-scout (degrau 0 · curadoria) → `build.py` (roteiro) → `audit-content.py` (portão de qualidade). O **loop-até-excelente** atravessa essa cadeia; o audit pode inclusive verificar se o roteiro honrou os padrões da scout (veredito presente, preços datados, fontes citadas, público calibrado). **Uma fonte de verdade** pra veredito/perfil/anti-invenção — a rubrica de conteúdo referencia a destination-scout, não a reescreve.
 
 ### Granularidade da avaliação (decisão do Tobia)
 Avaliar em **dois níveis**, e a nota final é agregada COM breakdown por dia visível:
