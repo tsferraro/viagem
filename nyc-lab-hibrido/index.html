@@ -108,17 +108,10 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 /* ===== TIMELINE ===== */
 .timeline{position:relative;margin:6px 16px 0;padding-left:0}
 .period{position:relative;margin-top:18px}
-.period-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:1px;margin:0 0 4px 52px}
+.period-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:1px;margin:0 0 4px 2px}
 .period-label .pe{font-size:15px}
-/* the vertical rail lives inside .tl-stops */
 .tl-stops{position:relative;display:flex;flex-direction:column;gap:12px;padding-top:6px}
-.tl-stops::before{content:'';position:absolute;left:19px;top:10px;bottom:6px;width:2px;background:linear-gradient(180deg,color-mix(in srgb,var(--day-color) 45%,transparent),color-mix(in srgb,var(--day-color) 12%,transparent));border-radius:2px}
-.tl-item{position:relative;padding-left:52px}
-.tl-node{position:absolute;left:9px;top:14px;width:22px;height:22px;border-radius:50%;background:#fff;border:2.5px solid var(--day-color);z-index:2;display:flex;align-items:center;justify-content:center}
-.tl-node::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--day-color)}
-.tl-item.is-transit .tl-node{border-style:dashed;border-width:2px}
-.tl-item.is-transit .tl-node::after{width:5px;height:5px;opacity:.55}
-.tl-time{position:absolute;left:46px;top:-7px}/* not used; time inside card */
+.tl-item{position:relative;padding-left:0}
 
 /* ===== STOP CARD (rich) ===== */
 .stop-card{position:relative;border:1px solid var(--line);border-radius:18px;padding:14px;background:var(--card);cursor:pointer;box-shadow:var(--shadow-sm);transition:box-shadow .18s,transform .12s,border-color .18s;overflow:hidden}
@@ -188,12 +181,17 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .stop-transit.collapsible.expanded .stop-transit-chev{transform:rotate(180deg)}
 .route-option{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
 .route-option strong{color:var(--day-color);font-weight:700;display:inline-block;min-width:64px}
+.route-act{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:700;margin-left:8px;padding:4px 9px;border-radius:999px;border:1px solid color-mix(in srgb,var(--day-color) 24%,var(--line));background:var(--card);color:var(--day-color);cursor:pointer;font-family:inherit;text-decoration:none;vertical-align:1px;transition:background .15s,transform .1s}
+.route-act:active{transform:scale(.94)}
+.route-act:hover{background:color-mix(in srgb,var(--day-color) 8%,var(--card))}
 
-/* RESERVA badges */
-.reserva-badge{display:inline-flex;align-items:center;font-size:10px;font-weight:800;letter-spacing:.4px;padding:4px 9px;border-radius:999px;cursor:pointer;border:none;font-family:inherit;transition:transform .1s,filter .15s}
+/* RESERVA badges · o estado PENDING lê como botão tocável (tap pra confirmar) */
+.reserva-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:800;letter-spacing:.4px;padding:4px 9px;border-radius:999px;cursor:pointer;border:1px solid transparent;font-family:inherit;transition:transform .1s,filter .15s,background .15s,border-color .15s}
 .reserva-badge:active{transform:scale(.93)}
-.reserva-badge.ok{background:rgba(16,185,129,.16);color:#047857}
-.reserva-badge.pending{background:rgba(245,158,11,.2);color:#b45309}
+.reserva-badge.ok{background:rgba(16,185,129,.16);color:#047857;border-color:transparent}
+.reserva-badge.pending{background:#fff4dc;color:#b45309;border:1px solid #f0cf8e;padding:5px 8px 5px 10px;box-shadow:0 1px 2px rgba(180,83,9,.1)}
+.reserva-badge.pending::after{content:'toque';font-size:8px;font-weight:800;letter-spacing:.3px;opacity:.6;background:rgba(180,83,9,.14);padding:2px 5px;border-radius:999px;margin-left:2px;text-transform:uppercase}
+.reserva-badge.pending:hover{background:#ffedc2;border-color:#e6bd6f}
 
 /* WALKING TOUR flag */
 .walking-tour-flag{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;letter-spacing:.5px;padding:5px 11px;border-radius:999px;margin:0 0 7px;background:linear-gradient(95deg,#6d5efc,#a855f7);color:#fff;text-transform:uppercase;box-shadow:0 1px 3px rgba(16,20,40,.12);align-self:flex-start}
@@ -237,7 +235,11 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 /* MAP (kept functional, restyled chrome) */
 .map-section{display:flex;flex-direction:column;gap:12px;margin:6px 16px 0}
 .stop-legend{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-sm)}
-.stop-legend-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-soft)}
+.stop-legend-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-soft);text-decoration:none;padding:5px 8px;margin:-3px -4px;border-radius:11px;cursor:pointer;transition:background .14s,transform .1s;-webkit-tap-highlight-color:transparent}
+.stop-legend-item:hover{background:var(--line-soft)}
+.stop-legend-item:active{transform:scale(.99);background:var(--line-soft)}
+.stop-legend-item .legend-go{margin-left:auto;flex-shrink:0;font-size:13px;font-weight:800;color:var(--faint);opacity:.7}
+.stop-legend-item:hover .legend-go{color:var(--day-color,#0f172a);opacity:1}
 .stop-num{width:24px;height:24px;border-radius:50%;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .legend-hora{font-weight:800;color:var(--ink);min-width:44px}
 .legend-nome{color:var(--ink-soft)}
@@ -309,14 +311,15 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .sb-stat .sbs-num em{font-style:normal;color:var(--muted);font-size:13px;font-weight:700}
 .sb-stat .sbs-lbl{font-size:9.5px;opacity:.72;font-weight:800;text-transform:uppercase;letter-spacing:.4px;margin-top:6px;color:var(--ink-soft)}
 
-/* ===== FEITO in-card check (sob o emoji) + card done state ===== */
+/* ===== FEITO labeled toggle (no meta do card) + card done state ===== */
 .stop-wrap{position:relative}
-/* coluna emoji vira flex-column: tile + botão check embaixo */
 .stop-emoji-col{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0}
-.feito-chk{width:27px;height:27px;border-radius:50%;background:var(--card);border:2px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:12px;font-weight:800;line-height:1;font-family:inherit;transition:background .18s,color .18s,border-color .18s,transform .1s;padding:0}
-.feito-chk:active{transform:scale(.9)}
+.feito-chk{display:inline-flex;align-items:center;gap:5px;margin-left:auto;background:var(--card);border:1px solid var(--line);cursor:pointer;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;line-height:1;font-family:inherit;transition:background .18s,color .18s,border-color .18s,transform .1s;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.feito-chk .fc-gly{font-size:11px}
+.feito-chk:active{transform:scale(.93)}
 .feito-chk:hover{border-color:#16a34a;color:#16a34a}
-.stop-wrap.is-feito .feito-chk{background:#16a34a;border-color:#16a34a;color:#fff}
+.stop-wrap.is-feito .feito-chk{background:rgba(16,163,74,.14);border-color:rgba(16,163,74,.3);color:#15803d}
+.stop-wrap.is-feito .feito-chk:hover{border-color:rgba(16,163,74,.5)}
 .stop-wrap.is-feito .stop-card,.stop-wrap.is-feito .stop-opcoes{opacity:.62}
 .stop-wrap.is-feito .stop-name,.stop-wrap.is-feito .stop-opcoes-name{text-decoration:line-through;text-decoration-color:rgba(11,16,32,.4)}
 @keyframes stopFade{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
@@ -397,7 +400,6 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
   .stop-card,.stop-opcoes{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
   .stop-card .stop-body,.stop-card .stop-imperdivel,.stop-card .stop-dicas,.stop-card .stop-meta{display:block !important}
   .stop-card .chev,.stop-opcoes .chev{display:none}
-  .tl-stops::before{display:none}
 }
 </style>
 </head>
@@ -1760,7 +1762,7 @@ function getMapsUrl(stop){
 // Mostra os NOMES das paradas E desenha o trajeto (a forma ?origin=&waypoints= só marcava pins).
 // Cada nome: parens removidos (conteúdo mantido) + ", New York, NY" pra geocodar certo · segmento URL-encoded.
 // Total de segmentos capado em ~10 (amostra o miolo, mantém 1º + último).
-function dirPathUrl(names){
+function dirPathUrl(names,mode='walking'){
   const clean=names.map(n=>n.replace(/[()]/g,'').replace(/\s+/g,' ').trim()).filter(Boolean);
   if(clean.length<2) return null;
   let segs=clean;
@@ -1777,7 +1779,28 @@ function dirPathUrl(names){
     segs=[first,...pick.filter((p,i,a)=>a.indexOf(p)===i),last];
   }
   const path=segs.map(s=>encodeURIComponent(s+', New York, NY')).join('/');
-  return `https://www.google.com/maps/dir/${path}/?travelmode=walking`;
+  // O sufixo data=!4m2!4m1!3e<MODE> gruda o travelmode na forma /dir/A/B/ (o ?travelmode= não).
+  // MODE: 2=walking · 0=driving.
+  const e3=mode==='driving'?0:2;
+  return `https://www.google.com/maps/dir/${path}/data=!4m2!4m1!3e${e3}`;
+}
+
+// Estima o modo de deslocamento do dia pela distância total + maior perna (haversine).
+function dayTransport(day){
+  const pts=day.stops.filter(s=>s.tipo!=='transit' && s.coord).map(s=>s.coord);
+  if(pts.length<2) return 'walking';
+  const haversine=(a,b)=>{
+    const R=6371, toRad=x=>x*Math.PI/180;
+    const dLat=toRad(b.lat-a.lat), dLng=toRad(b.lng-a.lng);
+    const s=Math.sin(dLat/2)**2+Math.cos(toRad(a.lat))*Math.cos(toRad(b.lat))*Math.sin(dLng/2)**2;
+    return 2*R*Math.asin(Math.sqrt(s));
+  };
+  let total=0, maxLeg=0;
+  for(let i=1;i<pts.length;i++){
+    const leg=haversine(pts[i-1],pts[i]);
+    total+=leg; if(leg>maxLeg) maxLeg=leg;
+  }
+  return (total>5||maxLeg>2.5)?'driving':'walking';
 }
 
 function getRouteUrl(day){
@@ -1786,7 +1809,7 @@ function getRouteUrl(day){
   if(stops.length===1) return getMapsUrl(stops[0]);
   // Extrai o nome exibido de cada stop (opcoes → nome da 1ª opção)
   const queryName=s=>(s.tipo==='opcoes' && s.opcoes && s.opcoes.length)?s.opcoes[0].nome:s.nome;
-  return dirPathUrl(stops.map(queryName)) || getMapsUrl(stops[0]);
+  return dirPathUrl(stops.map(queryName),dayTransport(day)) || getMapsUrl(stops[0]);
 }
 
 function getWalkingTourUrl(tour){
@@ -1823,10 +1846,9 @@ function renderCard(stop,isNow,done){
     <div class="stop-head">
       <div class="stop-emoji-col">
         <div class="stop-emoji">${stop.emoji}</div>
-        ${feitoChkHtml(stop.nome,done)}
       </div>
       <div class="stop-time-name">
-        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${riskBadge}${reservaBadge}</div>
+        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${riskBadge}${reservaBadge}${feitoChkHtml(stop.nome,done)}</div>
         <div class="stop-name">${stop.nome}</div>
         <div class="stop-cat">${stop.cat}</div>
       </div>
@@ -1854,10 +1876,9 @@ function renderOpcoes(stop,isNow,done){
     <div class="stop-opcoes-head">
       <div class="stop-emoji-col">
         <div class="stop-opcoes-emoji">${stop.emoji}</div>
-        ${feitoChkHtml(stop.nome,done)}
       </div>
       <div class="stop-opcoes-title">
-        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}</div>
+        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${feitoChkHtml(stop.nome,done)}</div>
         <div class="stop-opcoes-name">${stop.nome}</div>
         <div class="stop-opcoes-cat">${stop.cat}</div>
       </div>
@@ -1873,9 +1894,26 @@ function renderOpcoes(stop,isNow,done){
   </div>`;
 }
 
-function renderTransit(stop){
+// Destino de um transit: o próximo stop NÃO-transit no dia (nome com endereço/parens mantidos).
+function nextStopName(day,idx){
+  for(let j=idx+1;j<day.stops.length;j++){
+    const s=day.stops[j];
+    if(s.tipo!=='transit'){
+      if(s.tipo==='opcoes' && s.opcoes && s.opcoes.length) return s.opcoes[0].nome;
+      return s.nome;
+    }
+  }
+  return null;
+}
+
+function renderTransit(stop,dest){
   const t=TRANSIT_MAP[stop.nome];
   const hasRoutes=t&&(t.ferry||t.metro||t.uber);
+  const destStr=dest||stop.nome;
+  const destAttr=destStr.replace(/"/g,'&quot;');
+  const transitUrl=`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destStr+', New York, NY')}&travelmode=transit`;
+  const uberLine=t&&t.uber?`<div class="route-option"><strong>🚕 Uber</strong> ${t.uber}<button class="route-act" type="button" data-copy="${destAttr}">📋 Copiar endereço</button></div>`:'';
+  const metroLine=t&&t.metro?`<div class="route-option"><strong>🚇 Metrô</strong> ${t.metro}<a class="route-act" href="${transitUrl}" target="_blank" rel="noopener">🚇 Transporte público</a></div>`:'';
   return `<div class="stop-transit ${hasRoutes?'collapsible':''}">
     <div class="stop-transit-header">
       <span class="stop-transit-emoji">${stop.emoji}</span>
@@ -1886,20 +1924,20 @@ function renderTransit(stop){
     ${stop.cat?`<div class="stop-transit-cat">${stop.cat}</div>`:''}
     ${hasRoutes?`<div class="stop-transit-routes">
       ${t.ferry?`<div class="route-option"><strong>⛴️ Ferry</strong> ${t.ferry}</div>`:''}
-      ${t.metro?`<div class="route-option"><strong>🚇 Metrô</strong> ${t.metro}</div>`:''}
-      ${t.uber?`<div class="route-option"><strong>🚕 Uber</strong> ${t.uber}</div>`:''}
+      ${metroLine}
+      ${uberLine}
     </div>`:''}
   </div>`;
 }
 
-// Botão de check feito · fica DENTRO do card, embaixo do emoji
+// Pill "Feito" rotulada · fica no meta do header (à direita, perto de hora/risco)
 function feitoChkHtml(nome,done){
-  return `<button class="feito-chk" data-feito="${nome.replace(/"/g,'&quot;')}" aria-label="${done?'Marcar como não-feito':'Marcar como feito'}" title="${done?'Feito — toque pra desfazer':'Marcar como feito'}">${done?'✓':'○'}</button>`;
+  return `<button class="feito-chk" data-feito="${nome.replace(/"/g,'&quot;')}" aria-label="${done?'Marcar como não-feito':'Marcar como feito'}" title="${done?'Feito — toque pra desfazer':'Marcar como feito'}"><span class="fc-gly">${done?'✓':'○'}</span> Feito</button>`;
 }
 
-function renderStop(stop,isNow){
+function renderStop(stop,isNow,dest){
   // Transit: sem check feito · fica sempre na timeline
-  if(stop.tipo==='transit') return renderTransit(stop);
+  if(stop.tipo==='transit') return renderTransit(stop,dest);
   const done=isFeito(stop.nome);
   const inner=stop.tipo==='card'?renderCard(stop,isNow,done):renderOpcoes(stop,isNow,done);
   return `<div class="stop-wrap${done?' is-feito':''}${isNow?' is-now':''}">${inner}</div>`;
@@ -1991,7 +2029,7 @@ function renderDay(day){
       const m=getPeriodoMeta(p);
       return `<div class="period">
         <div class="period-label"><span class="pe">${m.emoji}</span> ${m.label}</div>
-        <div class="tl-stops">${grouped[p].map(({s,i})=>`<div class="tl-item${s.tipo==='transit'?' is-transit':''}"><div class="tl-node"></div>${renderStop(s,i===nowIdx)}</div>`).join('')}</div>
+        <div class="tl-stops">${grouped[p].map(({s,i})=>`<div class="tl-item${s.tipo==='transit'?' is-transit':''}">${renderStop(s,i===nowIdx,s.tipo==='transit'?nextStopName(day,i):null)}</div>`).join('')}</div>
       </div>`;
     }).join('')}
   </div>`;
@@ -2054,7 +2092,7 @@ function renderOverview(){
   const seg=`<div class="ov-seg">
     <button class="ov-seg-btn ${filter==='roteiro'?'active':''}" data-filter="roteiro">Roteiro</button>
     <button class="ov-seg-btn ${filter==='afazer'?'active':''}" data-filter="afazer">A fazer</button>
-    <button class="ov-seg-btn ${filter==='feitas'?'active':''}" data-filter="feitas">Feitas</button>
+    <button class="ov-seg-btn ${filter==='feitas'?'active':''}" data-filter="feitas">Feito</button>
   </div>`;
 
   // Seção pinada de reservas pendentes (só quando aberto pela chip ☐ Reservas)
@@ -2208,7 +2246,12 @@ function renderMap(){
         <div class="pp-notes">${s.cat||''}</div>
         ${isOpcoes?`<div class="pp-notes" style="margin-top:6px"><strong>📍 Principal:</strong> ${principalName}</div>`:''}
         <a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
-      L.marker([s.coord.lat,s.coord.lng])
+      const numIcon=L.divIcon({
+        className:'wt-marker',
+        html:`<div style="background:${day.cor};color:#fff;border:2px solid #fff">${i+1}</div>`,
+        iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
+      });
+      L.marker([s.coord.lat,s.coord.lng],{icon:numIcon})
         .bindPopup(popupHtml,{maxWidth:240})
         .addTo(mapInstance);
     });
@@ -2249,18 +2292,18 @@ function renderMap(){
     cardsWithTours.forEach(c=>c.walkingTours.forEach(t=>t.stops.forEach(s=>allLatLngs.push([s.coord.lat,s.coord.lng]))));
     mapInstance.fitBounds(allLatLngs,{padding:[40,40]});
   },50);
-  const legend=stops.map((s,i)=>`<div class="stop-legend-item"><div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span></div>`).join('');
+  const legend=stops.map((s,i)=>`<a class="stop-legend-item" href="${getMapsUrl(s)}" target="_blank" rel="noopener" title="Abrir ${s.nome.split('(')[0].trim()} no Google Maps"><div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span><span class="legend-go">↗</span></a>`).join('');
   // 1 botão por parte de walking tour
   const tourButtons=cardsWithTours.flatMap(card=>
     card.walkingTours.map(t=>
       `<a class="gmaps-btn walking-tour-btn" href="${getWalkingTourUrl(t.stops)}" target="_blank" rel="noopener">🚶 ${t.nome} · ${t.stops.length} paradas</a>`
     )
   ).join('');
-  return `<div class="map-section">
+  return `<div class="map-section" style="--day-color:${day.cor}">
     ${stops.length?`<div class="stop-legend">${legend}</div>`:''}
     <div id="map"></div>
     <div class="map-cta">
-      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (walking)</a>
+      <a class="gmaps-btn" href="${getRouteUrl(day)}" target="_blank" rel="noopener">🗺️ Abrir rota do dia no Google Maps (${dayTransport(day)==='driving'?'carro':'a pé'})</a>
       ${tourButtons}
       <span class="map-hint">Clique nos marcadores pros detalhes${cardsWithTours.length?' · pontos pequenos cheios = parte 1 · contorno = parte 2':''}</span>
     </div>
@@ -2345,6 +2388,32 @@ function bindCardHandlers(){
       const sb=document.getElementById('status-bar');
       if(sb && state.view==='guia'){ sb.outerHTML=renderStatusBar(); bindStatusBar(); }
       updateReservasNote();
+    });
+  });
+  // Transit · botão "Copiar endereço" (copia destino pro clipboard, com fallback)
+  document.querySelectorAll('[data-copy]').forEach(b=>{
+    if(b.__bound) return;
+    b.__bound=true;
+    b.addEventListener('click',e=>{
+      e.stopPropagation();
+      const txt=b.dataset.copy;
+      const flash=()=>{
+        const orig=b.innerHTML;
+        b.innerHTML='copiado ✓';
+        setTimeout(()=>{ b.innerHTML=orig; },1500);
+      };
+      const fallback=()=>{
+        try{
+          const ta=document.createElement('textarea');
+          ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+          document.body.appendChild(ta); ta.focus(); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta);
+        }catch(err){}
+        flash();
+      };
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(flash,fallback);
+      } else { fallback(); }
     });
   });
   // FEITO check toggle (card/opcoes) + botão desfazer na seção Feitas
