@@ -524,7 +524,7 @@ const DAYS = [
       },
       {
         hora:"23:30", emoji:"😴", periodo:"noite", tipo:"transit",
-        nome:"Chegada à base · dormir",
+        nome:"Chegada à base · dormir", noMaps:true,
         cat:"McGolrick Park area, Greenpoint",
         coord:{lat:40.7244,lng:-73.9434}
       }
@@ -582,7 +582,7 @@ const DAYS = [
       },
       {
         hora:"14:00", emoji:"😴", periodo:"tarde", tipo:"transit",
-        nome:"Siesta na base",
+        nome:"Siesta na base", noMaps:true,
         cat:"~2h descanso · banho · lanche",
         coord:{lat:40.7244,lng:-73.9434}
       },
@@ -603,7 +603,7 @@ const DAYS = [
       },
       {
         hora:"21:25", emoji:"🎆", periodo:"noite", tipo:"card", risco:"red",
-        nome:"Fogos Macy's · 50ª edição",
+        nome:"Fogos Macy's · 50ª edição (Transmitter Park)",
         cat:"25 min de show · ano histórico",
         sobre:"A Macy's faz fogos no 4 de Julho desde 1976 — 2026 é a 50ª edição. Em 2026 lançam de 4 barcaças no Lower East River (entre Pier 17 e Manhattan Heliport) + projeção mapeada na Brooklyn Bridge (novo recurso pro aniversário). Show de ~25 min, ~80.000 pirotecnias, trilha sonora pela 1010 WINS rádio.",
         imperdivel:"Trecho final 'grand finale' — 30s de mais de 1.000 explosões simultâneas",
@@ -655,7 +655,7 @@ const DAYS = [
       },
       {
         hora:"14:00", emoji:"😴", periodo:"tarde", tipo:"transit",
-        nome:"Siesta na base · Greenpoint",
+        nome:"Siesta na base · Greenpoint", noMaps:true,
         cat:"~10 min de Williamsburg · pequena dorme, grupo descansa",
         coord:{lat:40.7244,lng:-73.9434}
       },
@@ -785,7 +785,7 @@ const DAYS = [
       },
       {
         hora:"15:30", emoji:"🛝", periodo:"tarde", tipo:"opcoes",
-        nome:"Playgrounds da região (se precisar distração)",
+        nome:"Playgrounds da região (se precisar distração)", noMaps:true,
         cat:"Opcional · pode pular se a pequena tá tranquila",
         coord:{lat:40.7717,lng:-73.9716},
         opcoes:[
@@ -1055,7 +1055,7 @@ const DAYS = [
     stops:[
       {
         hora:"~10:30", emoji:"👨‍👩‍👧", periodo:"manha", tipo:"transit",
-        nome:"Família chega · transfer aeroporto → Williamsburg",
+        nome:"Família chega · transfer aeroporto → Williamsburg", noMaps:true,
         cat:"Eles se instalam · vocês saem da base 10h30",
         coord:{lat:40.7244,lng:-73.9434}
       },
@@ -1509,7 +1509,7 @@ const DAYS = [
       },
       {
         hora:"13:30", emoji:"😴", periodo:"tarde", tipo:"transit",
-        nome:"Volta pra base · almoço leve em casa · sesta pequena · arrumar mala",
+        nome:"Volta pra base · almoço leve em casa · sesta pequena · arrumar mala", noMaps:true,
         cat:"14h-19h · checkout, banho da pequena, organização",
         coord:{lat:40.7244,lng:-73.9434}
       },
@@ -1747,6 +1747,7 @@ function getPeriodoMeta(p){
 }
 
 function getMapsUrl(stop){
+  if(stop.noMaps) return '';
   // Pra opcoes (3+ alternativas), usar nome da PRIMEIRA opção pra link específico
   let queryName=stop.nome;
   if(stop.tipo==='opcoes' && stop.opcoes && stop.opcoes.length>0){
@@ -2251,7 +2252,7 @@ function renderMap(){
         <div class="pp-name">${s.nome}</div>
         <div class="pp-notes">${s.cat||''}</div>
         ${isOpcoes?`<div class="pp-notes" style="margin-top:6px"><strong>📍 Principal:</strong> ${principalName}</div>`:''}
-        <a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
+        ${getMapsUrl(s)?`<a class="pp-link" style="background:${day.cor}" href="${getMapsUrl(s)}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`:''}`;
       const numIcon=L.divIcon({
         className:'wt-marker',
         html:`<div style="background:${day.cor};color:#fff;border:2px solid #fff">${i+1}</div>`,
@@ -2299,7 +2300,7 @@ function renderMap(){
     cardsWithTours.forEach(c=>c.walkingTours.forEach(t=>t.stops.forEach(s=>allLatLngs.push([s.coord.lat,s.coord.lng]))));
     mapInstance.fitBounds(allLatLngs,{padding:[40,40]});
   },50);
-  const legend=stops.map((s,i)=>`<a class="stop-legend-item" href="${getMapsUrl(s)}" target="_blank" rel="noopener" title="Abrir ${s.nome.split('(')[0].trim()} no Google Maps"><div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span><span class="legend-go">↗</span></a>`).join('');
+  const legend=stops.map((s,i)=>{const u=getMapsUrl(s);const inner=`<div class="stop-num" style="background:${day.cor}">${i+1}</div><span class="legend-hora">${s.hora}</span><span class="legend-nome">${s.nome.split('(')[0].trim()}</span>${u?'<span class="legend-go">↗</span>':''}`;return u?`<a class="stop-legend-item" href="${u}" target="_blank" rel="noopener" title="Abrir ${s.nome.split('(')[0].trim()} no Google Maps">${inner}</a>`:`<div class="stop-legend-item">${inner}</div>`;}).join('');
   // 1 botão por parte de walking tour
   const tourButtons=cardsWithTours.flatMap(card=>
     card.walkingTours.map(t=>
