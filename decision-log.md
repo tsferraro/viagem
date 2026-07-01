@@ -82,3 +82,27 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 | 5 | `noMaps:true` p/ stops sem ponto público | Deixar link errado | "Sem ponto se não confiável" · omite link em vez de enganar |
 
 **Validação**: detector impeccable 0 antipadrões · validate.py 0 erros · testado no device do Tobia (rota a-pé, RESERVADO, transporte). Registro completo em `references/design-rubric.md`.
+
+---
+
+## 2026-07-01 · Passo 3 — Rubrica de Conteúdo + audit-content.py + loop-até-excelente
+
+**Contexto**: Rubrica de design (Passo 2) entregue a 39/40. Próximo passo: rubrica de CONTEÚDO — escrita, links, coords, logística — que o validate.py estrutural não cobre.
+
+**Decisões**:
+
+| # | Decisão | Alternativas rejeitadas | Motivo |
+|---|---|---|---|
+| 1 | Rubrica de conteúdo REFERENCIA destination-scout sem duplicar | Reescrever vocabário de veredito/perfil/anti-invenção | Uma fonte de verdade pra cada conceito; mudança na scout propaga automaticamente |
+| 2 | 10 dimensões × 4pts = /40 · mesma escala da design-rubric | Escala diferente (0-3, 0-5) | Coerência com rubrica-irmã; Tobia já conhece a banda de referência |
+| 3 | Limiar de aprovação automática: nota ≥28 E P0=0 · Claude aspira ≥32 | 24 (muito permissivo) · 32 obrigatório (rígido demais) | 28 = banda "Bom"; P0=0 garante que não há bloqueio crítico; 32 é aspiracional não obrigatório |
+| 4 | `audit-content.py` aceita tanto `data.json` quanto `index.html` | Só data.json | Retrocompatibilidade: roteiros sem data.json (editados manualmente) também auditáveis |
+| 5 | D7 (Walking Tours) retorna 4/4 (N/A) se viagem não tem WT | Penalizar roteiros sem WT | Um roteiro de só 2 dias sem WT não é pior por isso — não deve perder nota |
+| 6 | Preços livres de data sem penalidade; gratuito sem data = correto | Exigir data até em gratuitos | "Gratuito" não vence com o tempo; data só importa em preços pagos (mapping-rubric §anti-invenção) |
+| 7 | Loop-até-excelente: máx 3 iterações automáticas · parar e perguntar ao Tobia se falhar | Loop infinito | Evita ciclo de auto-correção sem convergência; após 3 tentativas, o problema é de conteúdo, não de formato |
+| 8 | destination-scout = "degrau 0" explícito no pipeline | Scout como opcional | Ordem formal: scout → build → validate → audit → deploy; cada degrau tem portão de qualidade |
+
+**Artefatos criados**:
+- `references/content-rubric.md` — rubrica de 10 dimensões com relação destination-scout + pipeline loop-até-excelente
+- `scripts/audit-content.py` — script ~500L (suporta .json e .html · exits 0/1/2 · --check-links opcional)
+- CLAUDE.md atualizado: tabela references + tools section + pipelines create e update
