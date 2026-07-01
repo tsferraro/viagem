@@ -42,10 +42,12 @@ viagem/
 │   ├── design-tokens.md
 │   ├── ui-patterns.md
 │   ├── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
-│   └── design-rubric.md            ← rubrica de avaliação de UI + skill impeccable
+│   ├── design-rubric.md            ← rubrica de avaliação de UI + skill impeccable
+│   └── content-rubric.md           ← rubrica de avaliação de CONTEÚDO (10 dim · /40) + audit-content.py
 ├── skills/
 │   ├── walking-tour-designer/
 │   ├── road-trip-designer/
+│   ├── destination-scout/          ← levantamento macro do destino (degrau 0 antes do roteiro)
 │   └── impeccable/                 ← skill de design/UI · avaliar·gerar·polir (Apache 2.0)
 └── archive/
     └── <slug>/                     ← viagens passadas movidas pra cá manualmente
@@ -62,6 +64,8 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Vai montar dia de carro (`transport: "driving"`) | `skills/road-trip-designer/SKILL.md` |
 | Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
 | Vai avaliar ou elevar design/UI de um roteiro | `references/design-rubric.md` + `skills/impeccable/` |
+| Vai auditar CONTEÚDO (escrita, links, coords, logística) | `references/content-rubric.md` → rodar `scripts/audit-content.py` |
+| Vai criar viagem nova · quer pesquisa macro do destino | `skills/destination-scout/SKILL.md` (degrau 0 antes do roteiro) |
 | Vai entender por que código JS é assim | `references/ui-patterns.md` |
 | Quer ver decisões históricas + lições | `decision-log.md` + `references/lessons-learned.md` |
 | Quer entender preferências profundas do Tobia | `references/tobia-preferences.md` |
@@ -124,6 +128,17 @@ Bloqueia deploy se falhar:
 - 11 features-chave presentes (AUTH_KEY · centerActiveTab · renderInnerContent · getMapsUrl · etc)
 - Tamanho ≤ 500KB (warning) · 1500KB (erro)
 
+### `audit-content.py` — rubrica de conteúdo /40
+
+```bash
+python3 scripts/audit-content.py <viagem>/data.json              # audit completo · retorna nota + P0-P3
+python3 scripts/audit-content.py <viagem>/data.json --check-links # + verifica URLs HTTP (lento)
+python3 scripts/audit-content.py <viagem>/index.html             # fallback sem data.json
+python3 scripts/audit-content.py <viagem>/data.json --json       # saída JSON (machine-readable)
+```
+
+Retorna nota /40 por 10 dimensões + achados P0-P3 + checklist manual + veredicto de aprovação (≥28 e P0=0). Exit: 0=aprovado, 1=não aprovado, 2=erro de input.
+
 ### `deploy.sh` — archive + push
 
 ```bash
@@ -155,8 +170,9 @@ Quando Tobia pede mudança em viagem existente:
 3. **Para mudanças pequenas**: edita inline o `const DAYS = [...]` (formato JSON pretty)
 4. **Para mudanças grandes** (novo dia, novo walking tour, troca atração principal): re-gera via `build.py` a partir de data.json
 5. Roda `scripts/validate.py index.html` (obrigatório)
+5b. Roda `scripts/audit-content.py <viagem>/data.json` (recomendado) · corrige P1s até nota ≥28 e P0=0
 6. `git add · commit · push origin main` (sem branch)
-7. Confirma pro Tobia com link da URL
+7. Confirma pro Tobia com link da URL + nota de conteúdo
 
 ## Pipeline · viagem nova (mode create)
 
@@ -170,7 +186,8 @@ Quando Tobia pede mudança em viagem existente:
 7. **Monta `data.json`** com: title/auth/header/password/legend + days + links_map + transit_map + bairros_config
 8. **Roda `build.py data.json index.html`**
 9. **Roda `validate.py index.html`** (BLOQUEIA se falhar)
-10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`**
+9b. **Roda `audit-content.py data.json`** · loop até nota ≥28 e P0=0 (máx 3 iterações · fix P1s no data.json → re-build → re-audit)
+10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · reportar nota conteúdo na entrega
 
 ## Schema dos dados (JSON pretty embedded no HTML)
 
