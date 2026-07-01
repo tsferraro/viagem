@@ -64,7 +64,7 @@ Maioria das interfaces reais tira 20-32/40. Bandas: 36-40 Excellent · 28-35 Goo
 
 ## Registro · redesign NYC (2026-07-01)
 
-- Trend impeccable (heurística): **Bold 31 → Evolução 33 → Híbrido v1 36 → v2/v3 38/40**. Detector: **0 antipadrões**.
+- Trend impeccable (heurística): **Bold 31 → Evolução 33 → Híbrido v1 36 → v2 39/40**. Detector: **0 antipadrões**.
 - Vencedor = **Híbrido** (bottom bar · topbar Resumo+Lupa · status compacto data-real + stats acionáveis · check "feito" → "Feitas hoje" · AGORA tempo real · Resumo Roteiro/A-fazer/Feito · rotas por coord [V1.3] · transporte com copiar-endereço + transporte-público · walking tour em cor distinta).
 - Sandboxes de comparação: `nyc-lab-bold/`, `nyc-lab-evo/`, `nyc-lab-hibrido/` (reservados na landing).
 

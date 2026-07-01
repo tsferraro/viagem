@@ -75,7 +75,7 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 
 | # | Decisão | Alternativas rejeitadas | Motivo |
 |---|---|---|---|
-| 1 | Redesign **híbrido** vira o novo padrão | Bold puro (31/40 · hero-metric banido) · Evolução (33/40 · seguro mas menos uau) | Híbrido 38/40 · bottom-bar+status do Bold + segurança da Evolução |
+| 1 | Redesign **híbrido** vira o novo padrão | Bold puro (31/40 · hero-metric banido) · Evolução (33/40 · seguro mas menos uau) | Híbrido 39/40 · bottom-bar+status do Bold + segurança da Evolução |
 | 2 | Skill impeccable salva em `skills/impeccable/` | Manter fora do repo | Runnable pra reavaliar/gerar design · mesma lógica "skill completa no repo" |
 | 3 | 2 templates **separados** (datada vs coletânea-cidade) | 1 template com flags | Menos conditional spaghetti · coletânea não tem datas/AGORA/stats |
 | 4 | Rota do Maps por **coordenadas** (reafirma V1.3) | Nomes nos waypoints | Nome vago/evento cai no lugar errado ("Fogos Macy's"→loja) · doc §3.7 já mandava coords |
