@@ -35,6 +35,7 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ### O que funcionou bem
 - **"Trabalhar enquanto a criança brinca"** (pedido recorrente p/ pai com filha pequena) tem 2 soluções distintas — vale oferecer as duas e deixar Tobia escolher na hora: (a) **café com parque de bolas** (ex: Hippolatte/Valência) → você fica de olho nela e trabalha junto, sem reserva, flexível; (b) **ludoteca-coworking** (ex: Kibu/Happiwork) → monitor cuida e você foca, mas pede reserva e às vezes fica afastado. Padrão: café-com-zona = default; ludoteca = quando precisa foco total.
 - Cafés-família abrem **só de tarde em dias de semana** (Hippolatte qua 16-20h). Sempre conferir horário do dia exato antes de cravar — salvou o encaixe pós-Oceanogràfic.
+- **Grupo grande (8+) com várias crianças** (ex: Paris/Luxembourg, 10 pessoas · 4 crianças 2-7a): o filtro que decide **não** é "melhor comida", é **espaço + aceita reserva de grupo + criança pode circular**. Priorizar lugar com terraço/jardim onde a criança se distrai (ex: La Terrasse de Madame, dentro do Jardin du Luxembourg · menu enfant + reserva de grupo). Sempre **flag pra ligar e reservar com antecedência** — mesa pra 10 num domingo sem aviso é furada. Ter um **plano B "à prova de falha"** (rede tipo Léon/Hippopotamus: menu enfant, cadeirão, aceita grupo fácil) vale mais que um 2º lugar chique.
 
 ### O que precisou ajustar mid-trip
 - **SEMPRE verificar horário/dia de funcionamento ANTES de propor uma atração** — não basta ela existir e ser boa, tem que estar aberta no dia certo. Caso real (Paris · Notre-Dame domingo 7/jun/2026): propus o **Marché aux Fleurs** como âncora da manhã sem checar o dia; Tobia avisou que **fecha quase tudo no domingo** (e o mercado de pássaros foi desativado em 2021/2025). Tive que refazer a manhã (trocado por Square du Vert-Galant + Place Dauphine, sempre abertos). Lição: o passo de web_search deve incluir "**<atração> horário domingo/segunda <ano>**" pra toda âncora, especialmente domingo (dia de mais fechamento) — e desconfiar de mercados/lojas/restaurantes nesse dia. Conecta com a lição dos cafés-família (abrem só de tarde): horário é tão crítico quanto distância/preço.
@@ -43,6 +44,14 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ---
 
 ## Evolução da skill
+
+### destination-scout · 2026-06-07 (export PDF · chat-first · briefing)
+Skill `destination-scout` (degrau 0 · levantamento macro antes do roteiro) ganhou nesta sessão:
+- **Export PDF** · `scripts/docx_to_pdf.py` novo (docx→PDF via reportlab · fonte DejaVu embarcada p/ acentos PT-BR · semáforos 🟢🟡🔴 viram bolinhas coloridas ● · auto-install de deps). Cadeia completa: `md_to_docx.py` (md→docx) → `docx_to_pdf.py` (docx→pdf). **Sempre renderizar e conferir o PDF** (pymupdf/fitz) antes de entregar — não chutar layout.
+- **Chat-first, export depois** · entrega SEMPRE no chat primeiro; só depois pergunta se quer Word/PDF. Motivo (pedido do Tobia): dá espaço pra ajustar antes de converter — exportar antes de revisar é retrabalho.
+- **Briefing inicial = 2 inputs** antes de qualquer web_search: **perfil do viajante** + **base/hospedagem** (toda distância sai dela). Formato de output saiu do briefing (virou pergunta pós-entrega).
+- **Integrada ao pipeline principal**: CLAUDE.md passo 3 (viagem nova) agora aponta pra `skills/destination-scout/SKILL.md` como o levantamento macro oficial (buscas + mapeamento 🟢🟡🔴 + histórico).
+- `.docx`/`.pdf` são **descartáveis** (gitignored) · entregáveis regeneráveis, nunca versionados.
 
 ### v1.7 · 2026-06-07 (navegação + privacidade da landing · coletâneas por cidade)
 - **Cidade vira "aba à parte"**: na home cada cidade com `CITY.txt` é **1 card** na seção **🌍 Cidades** → leva pra `<cidade>.html` (ex: `paris.html`). Os roteiros da cidade **NÃO listam inline na home** · só na página da cidade. Pedido explícito do Tobia (quer compartilhar Paris sem misturar com as viagens pessoais).
