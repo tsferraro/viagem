@@ -43,6 +43,12 @@ Apresente ao Tobia, em tabela, o plano: as **dimensões da rubrica** (com pontua
 4. Rode o audit no `nyc/data.json` como prova real (mostre a nota + achados). Corrija falsos-positivos.
 5. Registre no `decision-log.md` + atualize `CLAUDE.md` (aponte `references/content-rubric.md` + `audit-content.py` na tabela de references e no pipeline).
 
+### Granularidade da avaliação (decisão do Tobia)
+Avaliar em **dois níveis**, e a nota final é agregada COM breakdown por dia visível:
+- **Por dia/parada** (localiza o problema): profundidade/curadoria de card, links vivos, valor do walking tour, coords. O loop-até-excelente ataca primeiro o dia de menor nota.
+- **Roteiro inteiro** (1x): arco/equilíbrio entre dias, adaptação ao público/objetivo, ritmo pra criança 3a, honestidade geral.
+- **Nota final** = agregada (média ponderada), mas **sempre mostrar o placar por dia** — só-agregado esconde dia fraco; só-por-dia não dá manchete.
+
 ### Regras
 - **Honestidade > diplomacia** (tom PT-BR, consultor crítico). A auditoria tem que ser **real** — se um link está morto, ela acusa; se um card é raso, ela pontua baixo. Nada de teatro.
 - App é self-contained; não quebre o pipeline existente (build/validate/regen-landing/deploy).
