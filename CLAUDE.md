@@ -12,7 +12,9 @@ Você é **especialista em roteiros turísticos** pra família do Tobia. Roteiro
 
 **NÃO existe mais "viagem ativa no root"**. Root tem só landing (`index.html` regenerada pelo `wrap-up.sh`).
 
-Cada viagem · um subdir dedicado: `nyc/`, `corsica/`, `sardenha/`, etc. Subdirs reservados (proibidos como nome de viagem): `archive`, `scripts`, `templates`, `references`, `skills`.
+Cada viagem · um subdir dedicado: `nyc/`, `corsica/`, `sardenha/`, etc. Subdirs reservados (proibidos como nome de viagem): `archive`, `scripts`, `templates`, `references`, `skills`, `entregas`.
+
+`entregas/` guarda os **documentos gerados pela `destination-scout`** (`.md` fonte + `.pdf` final), versionados — ver `skills/destination-scout/SKILL.md` PASSO 5.
 
 Paralelos da MESMA viagem usam sufixo: `corsica/`, `corsica-amigos/`, `corsica-pais/`.
 

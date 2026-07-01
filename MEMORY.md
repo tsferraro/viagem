@@ -51,7 +51,7 @@ Skill `destination-scout` (degrau 0 · levantamento macro antes do roteiro) ganh
 - **Chat-first, export depois** · entrega SEMPRE no chat primeiro; só depois pergunta se quer Word/PDF. Motivo (pedido do Tobia): dá espaço pra ajustar antes de converter — exportar antes de revisar é retrabalho.
 - **Briefing inicial = 2 inputs** antes de qualquer web_search: **perfil do viajante** + **base/hospedagem** (toda distância sai dela). Formato de output saiu do briefing (virou pergunta pós-entrega).
 - **Integrada ao pipeline principal**: CLAUDE.md passo 3 (viagem nova) agora aponta pra `skills/destination-scout/SKILL.md` como o levantamento macro oficial (buscas + mapeamento 🟢🟡🔴 + histórico).
-- `.docx`/`.pdf` são **descartáveis** (gitignored) · entregáveis regeneráveis, nunca versionados.
+- **Entregas versionadas** (regra mudada pelo Tobia · 2026-06-07): toda entrega vai pra `entregas/` na raiz (fonte `.md` + `.pdf` final), commitada na main. `.docx` segue como intermediário ignorado. Antes eram descartáveis; agora persistem pra Tobia reabrir/reeditar depois. `entregas/` é subdir reservado (não vira "viagem" na landing).
 
 ### v1.7 · 2026-06-07 (navegação + privacidade da landing · coletâneas por cidade)
 - **Cidade vira "aba à parte"**: na home cada cidade com `CITY.txt` é **1 card** na seção **🌍 Cidades** → leva pra `<cidade>.html` (ex: `paris.html`). Os roteiros da cidade **NÃO listam inline na home** · só na página da cidade. Pedido explícito do Tobia (quer compartilhar Paris sem misturar com as viagens pessoais).

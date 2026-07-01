@@ -124,21 +124,19 @@ Mesmas regras anti-invenção. Fatos de web_search. Tom: envolvente mas factual,
 
 Exportar antes de o usuário revisar desperdiça trabalho (ajuste pós-export = reconverter tudo). Se ele já tiver pedido um formato explícito no início ("me manda em PDF"), ainda assim mostre o conteúdo no chat antes de rodar os scripts, pra ele validar.
 
-Fluxo de conversão: salve o levantamento em um `.md`, depois converta. **Word** (`.docx`) e **PDF** compartilham a primeira etapa.
+**Toda entrega vive em `entregas/` (na raiz do repo) e é VERSIONADA** (decisão do Tobia, 2026-06-07). Salve ali a **fonte `.md`** + o **`.pdf` final**, com nome descritivo por destino (ex: `entregas/notre-dame-domingo-jun2026.{md,pdf}`). O `.docx` é só intermediário da conversão — não precisa versionar (o `.gitignore` ignora `.docx` em qualquer lugar; `entregas/**` libera o resto).
+
+Fluxo de conversão: salve o levantamento em `entregas/<slug>.md`, converta pra docx (intermediário) e daí pra PDF:
 
 ```bash
-# Markdown -> Word
-python3 skills/destination-scout/scripts/md_to_docx.py entrada.md "Saída.docx"
-
-# Word -> PDF (cadeia completa: md -> docx -> pdf)
-python3 skills/destination-scout/scripts/docx_to_pdf.py "Saída.docx" "Saída.pdf"
+python3 skills/destination-scout/scripts/md_to_docx.py entregas/<slug>.md /tmp/<slug>.docx
+python3 skills/destination-scout/scripts/docx_to_pdf.py /tmp/<slug>.docx entregas/<slug>.pdf
 ```
 
 - `md_to_docx.py` converte markdown (headings, tabelas, bullets, prosa, **negrito**/*itálico*) em `.docx`. Instala `python-docx` se faltar.
 - `docx_to_pdf.py` renderiza o `.docx` em PDF com fonte DejaVu embarcada (acentos PT-BR), subtítulo cinza, tabelas com cabeçalho colorido. Os semáforos 🟢🟡🔴 viram **bolinhas coloridas** (●) e emojis decorativos que a fonte não cobre são removidos. Instala `reportlab`/`python-docx` se faltarem.
 - Entregar o arquivo via SendUserFile. Se possível, **renderize e confira** o PDF antes de entregar (ex: `pip install pymupdf` + `fitz`) — não chute o layout.
-
-`.docx` e `.pdf` são **descartáveis** (estão no .gitignore) — entregáveis regeneráveis, não versionados.
+- Depois de gerar: `git add entregas/<slug>.md entregas/<slug>.pdf` + commit + push (mesma main de sempre). Manter o `.md` fonte permite re-editar/regerar sem refazer do zero.
 
 ---
 

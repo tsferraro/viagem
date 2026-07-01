@@ -9,9 +9,12 @@
 data-draft*.json
 .draft-*.json
 
-# Entregáveis gerados pela skill destination-scout (regeneráveis · não versionar)
+# Entregáveis gerados pela skill destination-scout
+# .docx é intermediário (regenerável do .md) · ignorado em qualquer lugar
 *.docx
+# .pdf solto é ignorado, MAS as entregas versionadas vivem em entregas/ (liberadas abaixo)
 *.pdf
+!/entregas/**
 
 # Editor cruft
 .DS_Store

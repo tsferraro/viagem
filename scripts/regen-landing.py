@@ -2,7 +2,7 @@
 """
 regen-landing.py — Regenera o index.html da raiz com lista de todas as viagens
 
-Lê cada subpasta que NÃO é reservada (archive/scripts/templates/references/skills),
+Lê cada subpasta que NÃO é reservada (archive/scripts/templates/references/skills/entregas),
 verifica se tem index.html + SLUG.txt, e monta a landing.
 
 Uso:
@@ -15,7 +15,7 @@ Roda automaticamente em:
 
 import os, re, sys
 
-RESERVED = {'archive', 'scripts', 'templates', 'references', 'skills', '.git', 'nyc-lab-bold', 'nyc-lab-evo', 'nyc-lab-hibrido'}
+RESERVED = {'archive', 'scripts', 'templates', 'references', 'skills', 'entregas', '.git', 'nyc-lab-bold', 'nyc-lab-evo', 'nyc-lab-hibrido'}
 
 # Map de mês PT-BR (3 letras) → número
 MONTH_MAP = {'jan':1, 'fev':2, 'mar':3, 'abr':4, 'mai':5, 'jun':6,
