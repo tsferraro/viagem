@@ -399,3 +399,8 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
   .stop-card .stop-body,.stop-card .stop-imperdivel,.stop-card .stop-dicas,.stop-card .stop-meta{display:block !important}
   .stop-card .chev,.stop-opcoes .chev{display:none}
 }
+
+/* ícones SVG do chrome */
+.icon-btn svg,.tb-ico svg{display:block}
+.search-icon svg{display:block;opacity:.55}
+.tb-ico{display:flex;align-items:center;justify-content:center}
