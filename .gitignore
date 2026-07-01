@@ -9,6 +9,10 @@
 data-draft*.json
 .draft-*.json
 
+# Entregáveis gerados pela skill destination-scout (regeneráveis · não versionar)
+*.docx
+*.pdf
+
 # Editor cruft
 .DS_Store
 .idea/
