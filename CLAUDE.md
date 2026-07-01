@@ -50,7 +50,6 @@ viagem/
 │   ├── destination-scout/          ← levantamento macro (atrações+restaurantes+histórico) · degrau 0
 │   ├── walking-tour-designer/
 │   ├── road-trip-designer/
-│   ├── destination-scout/          ← levantamento macro do destino (degrau 0 antes do roteiro)
 │   └── impeccable/                 ← skill de design/UI · avaliar·gerar·polir (Apache 2.0)
 └── archive/
     └── <slug>/                     ← viagens passadas movidas pra cá manualmente
