@@ -287,6 +287,7 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .legend-content .row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;align-items:center}
 .legend-content .text{line-height:1.75;border-top:1px solid var(--line-soft);padding-top:11px;font-size:13px}
 .legend-content strong{color:var(--ink);font-weight:700}
+.reservas-done{display:flex;align-items:center;gap:8px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.28);color:#047857;font-size:12.5px;font-weight:700;padding:9px 12px;border-radius:11px;margin-bottom:12px}
 
 /* ===== STATUS BAR (compact, collapsible · replaces trip-hero) ===== */
 .status-bar{margin:14px 16px 2px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 12px;box-shadow:var(--shadow-sm)}
@@ -308,18 +309,22 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .sb-stat .sbs-num em{font-style:normal;color:var(--muted);font-size:13px;font-weight:700}
 .sb-stat .sbs-lbl{font-size:9.5px;opacity:.72;font-weight:800;text-transform:uppercase;letter-spacing:.4px;margin-top:6px;color:var(--ink-soft)}
 
-/* ===== FEITO left-edge toggle + card done state ===== */
+/* ===== FEITO in-card check (sob o emoji) + card done state ===== */
 .stop-wrap{position:relative}
-.feito-edge{position:absolute;left:0;top:0;bottom:0;width:38px;border-radius:18px 0 0 18px;background:var(--line-soft);border:none;cursor:pointer;display:flex;align-items:flex-start;justify-content:center;padding-top:16px;color:var(--faint);font-size:15px;font-weight:800;z-index:3;transition:background .18s,color .18s;font-family:inherit}
-.feito-edge:active{filter:brightness(.95)}
-.feito-edge .fe-ico{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:2px solid currentColor;font-size:11px;line-height:1}
-.stop-wrap.has-edge .stop-card,.stop-wrap.has-edge .stop-opcoes{padding-left:50px}
-.stop-wrap.is-feito .feito-edge{background:#16a34a;color:#fff;border-right-color:#16a34a}
-.stop-wrap.is-feito .feito-edge .fe-ico{border-color:rgba(255,255,255,.85)}
+/* coluna emoji vira flex-column: tile + botão check embaixo */
+.stop-emoji-col{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0}
+.feito-chk{width:27px;height:27px;border-radius:50%;background:var(--card);border:2px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:12px;font-weight:800;line-height:1;font-family:inherit;transition:background .18s,color .18s,border-color .18s,transform .1s;padding:0}
+.feito-chk:active{transform:scale(.9)}
+.feito-chk:hover{border-color:#16a34a;color:#16a34a}
+.stop-wrap.is-feito .feito-chk{background:#16a34a;border-color:#16a34a;color:#fff}
 .stop-wrap.is-feito .stop-card,.stop-wrap.is-feito .stop-opcoes{opacity:.62}
 .stop-wrap.is-feito .stop-name,.stop-wrap.is-feito .stop-opcoes-name{text-decoration:line-through;text-decoration-color:rgba(11,16,32,.4)}
 @keyframes stopFade{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
 .tl-item .stop-wrap{animation:stopFade .28s cubic-bezier(.2,.7,.3,1)}
+/* First-run hint pro check feito */
+.feito-hint{position:absolute;left:14px;top:56px;z-index:5;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:7px 11px;border-radius:10px;box-shadow:var(--shadow-md);max-width:200px;line-height:1.35;cursor:pointer;animation:hintIn .35s cubic-bezier(.2,.7,.3,1)}
+.feito-hint::before{content:'';position:absolute;left:14px;top:-6px;width:12px;height:12px;background:var(--ink);transform:rotate(45deg)}
+@keyframes hintIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
 /* Feitas hoje section */
 .feitas-section{margin:20px 16px 0}
@@ -384,8 +389,7 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 
 /* ===== PRINT ===== */
 @media print{
-  .topbar,.tabbar,.daystrip-wrap,.overview,.search-wrap,#map,.map-cta,.footer-legend,.status-bar,.feito-edge{display:none !important}
-  .stop-wrap.has-edge .stop-card,.stop-wrap.has-edge .stop-opcoes{padding-left:14px}
+  .topbar,.tabbar,.daystrip-wrap,.overview,.search-wrap,#map,.map-cta,.footer-legend,.status-bar,.feito-chk,.feito-hint{display:none !important}
   body{background:#fff}
   #app{padding:0;max-width:100%}
   .day-hero{box-shadow:none;border-radius:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -456,6 +460,7 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
         <strong>🎆 50ª Fogos Macy's (sáb 4/Jul):</strong> Protetor auricular pra pequena. Multidão controlada em Transmitter Park, mas barulho intenso.<br>
         <strong>⛴️ NYC Ferry:</strong> Doca India St a 5min da base. Forma mais cômoda de cruzar o East River com carrinho. App "NYC Ferry".
       </div>
+      <div id="reservas-note"></div>
     </div>
   </div>
 
@@ -1662,21 +1667,19 @@ function getDefaultDayIdx(){
 }
 const MONTH_MAP={Jan:0,Fev:1,Feb:1,Mar:2,Abr:3,Apr:3,Mai:4,May:4,Jun:5,Jul:6,Ago:7,Aug:7,Set:8,Sep:8,Out:9,Oct:9,Nov:10,Dez:11,Dec:11};
 
-// Data do dia i do roteiro como objeto Date (2026) · null se não parsear
-function dayDate(i){
-  const d=DAYS[i]; if(!d) return null;
-  const m=d.date.match(/(\d+)\/(\w+)/); if(!m) return null;
-  const mi=MONTH_MAP[m[2]]; if(mi===undefined) return null;
-  return new Date(2026,mi,parseInt(m[1]));
-}
 // Índice do dia do roteiro que é HOJE, ou -1 se hoje não é dia de viagem.
-// (getDefaultDayIdx retorna 0 nesse caso — este NÃO.) Aceita override via window.__NOW p/ debug.
+// Mesma lógica exata de getDefaultDayIdx (exact-date-match) mas retorna -1 (não 0) fora da viagem.
 function getTodayTripIdx(){
-  const now=window.__NOW?new Date(window.__NOW):new Date();
-  const tStr=new Date(now.getFullYear(),now.getMonth(),now.getDate()).toISOString().split('T')[0];
+  const today=new Date();
+  const tStr=today.toISOString().split('T')[0]; // YYYY-MM-DD
   for(let i=0;i<DAYS.length;i++){
-    const dd=dayDate(i);
-    if(dd && dd.toISOString().split('T')[0]===tStr) return i;
+    const m=DAYS[i].date.match(/(\d+)\/(\w+)/);
+    if(!m) continue;
+    const dayNum=parseInt(m[1]);
+    const monthIdx=MONTH_MAP[m[2]];
+    if(monthIdx===undefined) continue;
+    const d=new Date(2026,monthIdx,dayNum);
+    if(d.toISOString().split('T')[0]===tStr) return i;
   }
   return -1;
 }
@@ -1688,10 +1691,10 @@ function setFeito(nome,val){ try{localStorage.setItem('feito-'+nome,val?'done':'
 // hora "HH:MM" -> minutos; retorna null se inválido
 function horaToMin(h){ const m=(h||'').match(/(\d{1,2}):(\d{2})/); if(!m) return null; return parseInt(m[1])*60+parseInt(m[2]); }
 
-// Índice do stop "AGORA" · só se dayIdx é o dia de hoje E o relógio está dentro da janela do dia.
+// Índice do stop "AGORA" · só se dayIdx é o dia de hoje E o relógio real está dentro da janela do dia.
 function getNowStopIdx(day,dayIdx){
   if(getTodayTripIdx()!==dayIdx) return -1;
-  const now=window.__NOW?new Date(window.__NOW):new Date();
+  const now=new Date();
   const nowMin=now.getHours()*60+now.getMinutes();
   const timed=day.stops.map((s,i)=>({i,m:horaToMin(s.hora)})).filter(x=>x.m!==null);
   if(!timed.length) return -1;
@@ -1705,6 +1708,30 @@ function getNowStopIdx(day,dayIdx){
     if(nowMin>=start && nowMin<end) return timed[k].i;
   }
   return -1;
+}
+
+// Data de hoje formatada PT-BR: "1/Jul" (sempre correta, independente das datas da viagem)
+const PT_MESES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+function hojeLabel(){
+  const d=new Date();
+  const mes=PT_MESES[d.getMonth()];
+  return d.getDate()+'/'+mes.charAt(0).toUpperCase()+mes.slice(1);
+}
+// Dias da viagem já DECORRIDOS: quantos DAYS têm data estritamente ANTES de hoje.
+// 0 antes da viagem começar · 11 depois de terminar (clamp natural pela contagem).
+function diasElapsed(){
+  const today=new Date();
+  const tStr=today.toISOString().split('T')[0];
+  let elapsed=0;
+  for(let i=0;i<DAYS.length;i++){
+    const m=DAYS[i].date.match(/(\d+)\/(\w+)/);
+    if(!m) continue;
+    const monthIdx=MONTH_MAP[m[2]];
+    if(monthIdx===undefined) continue;
+    const d=new Date(2026,monthIdx,parseInt(m[1]));
+    if(d.toISOString().split('T')[0]<tStr) elapsed++;
+  }
+  return elapsed;
 }
 
 const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null, ovFilter:'roteiro', ovShowPending:false };
@@ -1729,40 +1756,49 @@ function getMapsUrl(stop){
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean+' New York')}`;
 }
 
+// Monta URL de rota do Google Maps na forma path-segment (/dir/Nome1/Nome2/.../).
+// Mostra os NOMES das paradas E desenha o trajeto (a forma ?origin=&waypoints= só marcava pins).
+// Cada nome: parens removidos (conteúdo mantido) + ", New York, NY" pra geocodar certo · segmento URL-encoded.
+// Total de segmentos capado em ~10 (amostra o miolo, mantém 1º + último).
+function dirPathUrl(names){
+  const clean=names.map(n=>n.replace(/[()]/g,'').replace(/\s+/g,' ').trim()).filter(Boolean);
+  if(clean.length<2) return null;
+  let segs=clean;
+  const CAP=10;
+  if(segs.length>CAP){
+    const first=segs[0], last=segs[segs.length-1];
+    const mids=segs.slice(1,-1);
+    const pick=[];
+    const want=CAP-2;
+    for(let k=0;k<want;k++){
+      const idx=Math.round(k*(mids.length-1)/(want-1));
+      pick.push(mids[idx]);
+    }
+    segs=[first,...pick.filter((p,i,a)=>a.indexOf(p)===i),last];
+  }
+  const path=segs.map(s=>encodeURIComponent(s+', New York, NY')).join('/');
+  return `https://www.google.com/maps/dir/${path}/?travelmode=walking`;
+}
+
 function getRouteUrl(day){
   const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
-  const queryName=s=>{
-    let n=s.nome;
-    if(s.tipo==='opcoes' && s.opcoes && s.opcoes.length) n=s.opcoes[0].nome;
-    return n.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
-  };
-  const origin=encodeURIComponent(queryName(stops[0]));
-  const dest=encodeURIComponent(queryName(stops[stops.length-1]));
-  const mid=stops.slice(1,-1).map(s=>encodeURIComponent(queryName(s))).join('|');
-  let url='https://www.google.com/maps/dir/?api=1&origin='+origin+'&destination='+dest+'&travelmode=walking';
-  if(mid) url+='&waypoints='+mid;
-  return url;
+  // Extrai o nome exibido de cada stop (opcoes → nome da 1ª opção)
+  const queryName=s=>(s.tipo==='opcoes' && s.opcoes && s.opcoes.length)?s.opcoes[0].nome:s.nome;
+  return dirPathUrl(stops.map(queryName)) || getMapsUrl(stops[0]);
 }
 
 function getWalkingTourUrl(tour){
-  // V1.5: usa NOME com endereço (parens removidos só na query, conteúdo mantido) em vez de
-  // coords puras · coords puras mostravam "Com alfinete" no Maps · bug Sprockhovel 2026-05-23
-  // (mesmo bug que getRouteUrl V1.4 corrigiu, mas só lá · walking tour ficou pra trás).
+  // V1.7: rota por NOMES na forma path-segment · mostra os nomes das paradas E desenha o trajeto walking.
   if(!tour||tour.length<2) return '#';
-  const queryName=t=>t.nome.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
-  const origin=encodeURIComponent(queryName(tour[0]));
-  const dest=encodeURIComponent(queryName(tour[tour.length-1]));
-  const mid=tour.slice(1,-1).map(t=>encodeURIComponent(queryName(t))).join('|');
-  let url=`https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
-  if(mid) url+=`&waypoints=${mid}`;
-  return url;
+  const queryName=t=>t.nome; // usa o nome da parada (dirPathUrl limpa parens + geocoda)
+  return dirPathUrl(tour.map(queryName)) || '#';
 }
 
 function agoraPillHtml(isNow){ return isNow?'<span class="agora-pill"><span class="agora-dot"></span>Agora</span>':''; }
 
-function renderCard(stop,isNow){
+function renderCard(stop,isNow,done){
   const links=LINKS_MAP[stop.nome]||[];
   const riskLabel={green:'🟢 tranquilo',yellow:'⚠️ atenção',red:'🔴 alta atenção'};
   const riskBadge=stop.risco?`<span class="risk-pill risk-${stop.risco}">${riskLabel[stop.risco]}</span>`:'';
@@ -1771,7 +1807,7 @@ function renderCard(stop,isNow){
     const stored=localStorage.getItem(`reserva-${stop.nome}`);
     const defaultDone=stop.reserva==='reservado';
     const isDone=stored?stored==='done':defaultDone;
-    reservaBadge=`<button class="reserva-badge ${isDone?'ok':'pending'}" data-reserva="${stop.nome.replace(/"/g,'&quot;')}" title="Clique pra alternar">${isDone?'☑ FEITO':'☐ RESERVAR'}</button>`;
+    reservaBadge=`<button class="reserva-badge ${isDone?'ok':'pending'}" data-reserva="${stop.nome.replace(/"/g,'&quot;')}" title="Clique pra alternar reserva">${isDone?'✅ RESERVADO':'☐ RESERVAR'}</button>`;
   }
   // Walking tour flag (busca + visual)
   let walkingTourFlag='';
@@ -1785,7 +1821,10 @@ function renderCard(stop,isNow){
     <div class="chev">▼</div>
     ${walkingTourFlag}
     <div class="stop-head">
-      <div class="stop-emoji">${stop.emoji}</div>
+      <div class="stop-emoji-col">
+        <div class="stop-emoji">${stop.emoji}</div>
+        ${feitoChkHtml(stop.nome,done)}
+      </div>
       <div class="stop-time-name">
         <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${riskBadge}${reservaBadge}</div>
         <div class="stop-name">${stop.nome}</div>
@@ -1809,11 +1848,14 @@ function renderCard(stop,isNow){
   </div>`;
 }
 
-function renderOpcoes(stop,isNow){
+function renderOpcoes(stop,isNow,done){
   return `<div class="stop-opcoes">
     <div class="chev">▼</div>
     <div class="stop-opcoes-head">
-      <div class="stop-opcoes-emoji">${stop.emoji}</div>
+      <div class="stop-emoji-col">
+        <div class="stop-opcoes-emoji">${stop.emoji}</div>
+        ${feitoChkHtml(stop.nome,done)}
+      </div>
       <div class="stop-opcoes-title">
         <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}</div>
         <div class="stop-opcoes-name">${stop.nome}</div>
@@ -1850,14 +1892,17 @@ function renderTransit(stop){
   </div>`;
 }
 
+// Botão de check feito · fica DENTRO do card, embaixo do emoji
+function feitoChkHtml(nome,done){
+  return `<button class="feito-chk" data-feito="${nome.replace(/"/g,'&quot;')}" aria-label="${done?'Marcar como não-feito':'Marcar como feito'}" title="${done?'Feito — toque pra desfazer':'Marcar como feito'}">${done?'✓':'○'}</button>`;
+}
+
 function renderStop(stop,isNow){
-  // Transit: sem check feito, sem edge · fica sempre na timeline
+  // Transit: sem check feito · fica sempre na timeline
   if(stop.tipo==='transit') return renderTransit(stop);
-  const inner=stop.tipo==='card'?renderCard(stop,isNow):renderOpcoes(stop,isNow);
   const done=isFeito(stop.nome);
-  const nameAttr=stop.nome.replace(/"/g,'&quot;');
-  const edge=`<button class="feito-edge" data-feito="${nameAttr}" aria-label="Marcar como feito" title="${done?'Marcar como não-feito':'Marcar como feito'}"><span class="fe-ico">${done?'✓':''}</span></button>`;
-  return `<div class="stop-wrap has-edge${done?' is-feito':''}${isNow?' is-now':''}">${edge}${inner}</div>`;
+  const inner=stop.tipo==='card'?renderCard(stop,isNow,done):renderOpcoes(stop,isNow,done);
+  return `<div class="stop-wrap${done?' is-feito':''}${isNow?' is-now':''}">${inner}</div>`;
 }
 
 function tripStats(){
@@ -1877,27 +1922,37 @@ function tripStats(){
       if(isDone) doneReservas++;
     }
   }));
-  const todayIdx=getTodayTripIdx();
-  const dayPos=todayIdx>=0?todayIdx+1:state.selIdx+1;
   return {days,attractions,tours,totalReservas,doneReservas,
-          totalAttr,doneAttr,totalTours,doneTours,todayIdx,dayPos};
+          totalAttr,doneAttr,totalTours,doneTours};
 }
 
 function renderStatusBar(){
   const st=tripStats();
   const expanded=(()=>{ try{return localStorage.getItem('statusExpanded')==='1';}catch(e){return false;} })();
+  // Chip de reservas só quando NÃO estão todas completas (completas viram nota no rodapé)
+  const reservasComplete=st.totalReservas>0 && st.doneReservas===st.totalReservas;
+  const reservasChip=reservasComplete?'':`<button class="sb-chip" id="sb-reservas" title="Ver reservas pendentes">☐ Reservas <span class="tnum">${st.doneReservas}/${st.totalReservas}</span> <span class="sb-arr">›</span></button>`;
   return `<div class="status-bar" id="status-bar">
     <div class="sb-row">
-      <span class="sb-day">📅 Dia <span class="tnum">${st.dayPos}</span>/${st.days}</span>
-      <button class="sb-chip" id="sb-reservas" title="Ver reservas pendentes">☐ Reservas <span class="tnum">${st.doneReservas}/${st.totalReservas}</span> <span class="sb-arr">›</span></button>
+      <span class="sb-day">📅 Hoje · <span class="tnum">${hojeLabel()}</span></span>
+      ${reservasChip}
       <button class="sb-expand ${expanded?'open':''}" id="sb-expand" aria-expanded="${expanded}">stats <span class="sb-cx">▾</span></button>
     </div>
     <div class="sb-stats ${expanded?'open':''}" id="sb-stats">
-      <button class="sb-stat" data-goto="dia"><div class="sbs-num tnum">${st.dayPos}<em> / ${st.days}</em></div><div class="sbs-lbl">Dia</div></button>
+      <button class="sb-stat" data-goto="dia"><div class="sbs-num tnum">${diasElapsed()}<em> / ${st.days}</em></div><div class="sbs-lbl">Dias</div></button>
       <button class="sb-stat" data-goto="afazer"><div class="sbs-num tnum">${st.doneAttr}<em> / ${st.totalAttr}</em></div><div class="sbs-lbl">Atrações</div></button>
       <button class="sb-stat" data-goto="afazer"><div class="sbs-num tnum">${st.doneTours}<em> / ${st.totalTours}</em></div><div class="sbs-lbl">Walking tours</div></button>
     </div>
   </div>`;
+}
+
+// Nota "Reservas completas" no rodapé · aparece só quando todas as reservas estão feitas
+function updateReservasNote(){
+  const el=document.getElementById('reservas-note');
+  if(!el) return;
+  const st=tripStats();
+  const complete=st.totalReservas>0 && st.doneReservas===st.totalReservas;
+  el.innerHTML=complete?`<div class="reservas-done">✅ Reservas completas (${st.doneReservas}/${st.totalReservas})</div>`:'';
 }
 
 function renderDay(day){
@@ -2285,10 +2340,14 @@ function bindCardHandlers(){
       try{ localStorage.setItem(`reserva-${name}`,willBeDone?'done':'pending'); }catch(e){}
       b.classList.toggle('ok',willBeDone);
       b.classList.toggle('pending',!willBeDone);
-      b.textContent=willBeDone?'☑ FEITO':'☐ RESERVAR';
+      b.textContent=willBeDone?'✅ RESERVADO':'☐ RESERVAR';
+      // Reservas afetam o chip do topo (some quando 4/4) e a nota do rodapé
+      const sb=document.getElementById('status-bar');
+      if(sb && state.view==='guia'){ sb.outerHTML=renderStatusBar(); bindStatusBar(); }
+      updateReservasNote();
     });
   });
-  // FEITO edge toggle (card/opcoes) + botão desfazer na seção Feitas
+  // FEITO check toggle (card/opcoes) + botão desfazer na seção Feitas
   document.querySelectorAll('[data-feito]').forEach(b=>{
     if(b.__bound) return;
     b.__bound=true;
@@ -2297,6 +2356,9 @@ function bindCardHandlers(){
       const name=b.dataset.feito;
       setFeito(name,!isFeito(name));
       renderInnerContent(); // stop migra pra/de Feitas hoje
+      // Stats de Atrações/Tours mudam · atualiza status bar (se aberto)
+      const sb=document.getElementById('status-bar');
+      if(sb && state.view==='guia'){ sb.outerHTML=renderStatusBar(); bindStatusBar(); }
     });
   });
   // Cabeçalho "Feitas hoje": colapsar
@@ -2318,9 +2380,10 @@ function bindCardHandlers(){
     });
   });
   if(state.expandStop){
-    document.querySelectorAll('.stop-card .stop-name').forEach(el=>{
+    // Expande o card OU o bloco de opções cujo nome bate
+    document.querySelectorAll('.stop-card .stop-name, .stop-opcoes .stop-opcoes-name').forEach(el=>{
       if(el.textContent.trim()===state.expandStop){
-        const card=el.closest('.stop-card');
+        const card=el.closest('.stop-card, .stop-opcoes');
         card.classList.add('expanded');
         setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'center'}),150);
       }
@@ -2329,10 +2392,33 @@ function bindCardHandlers(){
   } else if(state.view==='guia'){
     // AGORA: auto-scroll pro stop atual (se houver) no load do dia
     const nowEl=document.querySelector('.stop-wrap.is-now');
-    if(nowEl && !window.__noAgoraScroll){
+    if(nowEl){
       setTimeout(()=>nowEl.scrollIntoView({behavior:'smooth',block:'center'}),200);
     }
   }
+  maybeShowFeitoHint();
+}
+
+// First-run: mostra uma dica sutil no primeiro check ○ · some ao tocar ou após alguns segundos
+function maybeShowFeitoHint(){
+  if(state.view!=='guia') return;
+  let seen=false; try{ seen=localStorage.getItem('hintFeito')==='1'; }catch(e){}
+  if(seen) return;
+  const firstChk=document.querySelector('.tl-stops .stop-wrap:not(.is-feito) .feito-chk');
+  if(!firstChk) return;
+  const wrap=firstChk.closest('.stop-wrap');
+  if(!wrap || wrap.querySelector('.feito-hint')) return;
+  const dismiss=()=>{
+    try{ localStorage.setItem('hintFeito','1'); }catch(e){}
+    const h=wrap.querySelector('.feito-hint'); if(h) h.remove();
+  };
+  const hint=document.createElement('div');
+  hint.className='feito-hint';
+  hint.textContent='Toque ✓ pra marcar como feito';
+  hint.addEventListener('click',dismiss);
+  wrap.appendChild(hint);
+  firstChk.addEventListener('click',dismiss,{once:true});
+  setTimeout(dismiss,5000);
 }
 
 function render(){
@@ -2411,8 +2497,16 @@ function bindStatusBar(){
     if(b.__bound) return;
     b.__bound=true;
     b.addEventListener('click',()=>{
-      if(b.dataset.goto==='afazer') openOverviewSheet('afazer',false);
-      else openOverviewSheet('roteiro',false);
+      if(b.dataset.goto==='afazer'){ openOverviewSheet('afazer',false); return; }
+      if(b.dataset.goto==='dia'){
+        // Pula pro dia de hoje se estivermos dentro da viagem · senão no-op
+        const idx=getTodayTripIdx();
+        if(idx>=0 && idx!==state.selIdx){
+          state.selIdx=idx; state.view='guia'; syncTabbar(); render();
+          window.scrollTo({top:0,behavior:'smooth'});
+        }
+        return;
+      }
     });
   });
 }
@@ -2424,17 +2518,22 @@ function syncTabbar(){
 function init(){
   document.getElementById('overview').innerHTML=renderOverview();
   
-  // Legenda: collapse persistente
+  // Legenda: colapsada POR DEFAULT · expande no toque · "Já li" marca como lida
   const fl=document.getElementById('footer-legend');
   const cb=document.getElementById('legend-cb');
-  if(localStorage.getItem('legendRead')==='1'){
-    fl.classList.add('collapsed');
-    cb.checked=true;
+  fl.classList.add('collapsed'); // default = colapsado
+  if(localStorage.getItem('legendRead')==='1') cb.checked=true;
+  // Tocar no cabeçalho expande/colapsa (menos quando o toque é no checkbox "Já li")
+  const flHead=fl.querySelector('.head-row h3');
+  if(flHead){
+    flHead.style.cursor='pointer';
+    flHead.addEventListener('click',()=>fl.classList.toggle('collapsed'));
   }
   cb.addEventListener('change',()=>{
     try{ localStorage.setItem('legendRead',cb.checked?'1':'0'); }catch(e){}
     fl.classList.toggle('collapsed',cb.checked);
   });
+  updateReservasNote();
   
   // Bottom tab bar
   document.querySelectorAll('.tab-btn').forEach(b=>{
