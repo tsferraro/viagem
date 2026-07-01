@@ -104,5 +104,32 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 
 **Artefatos criados**:
 - `references/content-rubric.md` — rubrica de 10 dimensões com relação destination-scout + pipeline loop-até-excelente
-- `scripts/audit-content.py` — script ~500L (suporta .json e .html · exits 0/1/2 · --check-links opcional)
+- `scripts/audit-content.py` — script ~500L (suporta .json e .html · exits 0/1/2 · --check-links opcional) · **movido pra `skills/critico-roteiro/audit.py` no Passo 3.1**
 - CLAUDE.md atualizado: tabela references + tools section + pipelines create e update
+
+---
+
+## 2026-07-01 · Passo 3.1 — Auditor vira skill `critico-roteiro` + modo scout + FASE 1 completada
+
+**Contexto**: revisão do Passo 3 com o Opus (a pedido do Tobia) + complemento de outra sessão que revisou as entregas da `destination-scout`. Três gatilhos: (1) o auditor deveria ser skill própria, invocável de todo lugar; (2) a FASE 1 (pesquisa externa) foi indevidamente pulada no Sonnet; (3) achado de fork na rubrica.
+
+**Decisões**:
+
+| # | Decisão | Alternativa rejeitada | Motivo |
+|---|---|---|---|
+| 1 | Auditor vira **skill `critico-roteiro`** (`skills/critico-roteiro/audit.py` + SKILL.md) | Manter script solto em `scripts/` | Simetria com `impeccable` (design): régua em `references/`, runnable em `skills/`. Roda como gate dentro das outras skills E standalone |
+| 2 | Nome `critico-roteiro` (escolha do Tobia) | `critico-conteudo` (sugestão Claude · mais preciso pois audita scout tb) | Decisão do Tobia; rename é trivial se quiser depois |
+| 3 | Modo **`--scout`** audita `.md` da destination-scout (5 dim · /20) | Segundo script separado | UMA ferramenta, helpers compartilhados, sem forkar as regras da `mapping-rubric` |
+| 4 | `--terceiros` relaxa seção **Fontes** (opcional pra-terceiros/mini-plano) | Fontes sempre obrigatória | Complemento Tobia: lista de URLs fica no chat, não se manda pra mãe. Auto-detecta mini-plano pela estrutura |
+| 5 | **Loop-até-excelente na destination-scout** (PASSO 4b · gate antes do export) | Só checklist manual | Scout precisava de portão real; pega preço sem data + sem Fontes (furos do Chapada-Guia) |
+| 6 | Alerta de **pacing = P3 advisory**, nunca corta nem bloqueia | Baixar nota/sugerir corte | Tobia: "o peso do dia depende do público e da dinâmica familiar — quero enxergar as opções e decidir" |
+| 7 | Corrigido **fork `risco` ≠ veredito 🟢🟡🔴** na content-rubric | Manter "mesma escala" (errado) | `risco`=multidão/esforço; veredito=recomendação. Escalas diferentes. D8 audita honestidade **na prosa**, não no campo `risco` |
+| 8 | **FASE 1 completada**: fundamentação externa por dimensão (Rick Steves, Lonely Planet, ciência de pacing infantil, route-optimization) | Ancorar só na destination-scout (in-house) | Citar só docs internos é circular; a rubrica ganhou espinha editorial externa |
+| 9 | `walking-tour`/`road-trip` **sem gate próprio** | Loop em todas as 4 skills | Output deles vira card do roteiro → já auditado por D7 no gate do roteiro (evita redundância) |
+
+**Validação real**:
+- Roteiro NYC: **29/40 · Bom · Aprovado** (P0=0) · pacing agora emite 5 alertas P3 não-bloqueantes
+- Notre-Dame (mini-plano): **20/20 · Excelente** (falso-positivo "perto" da etimologia corrigido — check de distância escopado só ao bloco de logística)
+- Fixture macro sintético (padrão Chapada-Guia): **11/20 · Aceitável · NÃO aprovado** — pegou preço sem data (P1) + sem Fontes (P1), exatamente os furos que a revisão manual apontou
+
+**Follow-up sugerido** (não feito): transformar `design-rubric.md` num `critico-design` nativo, simétrico a este, com `impeccable` como ferramenta externa que ele chama.

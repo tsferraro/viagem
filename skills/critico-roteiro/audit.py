@@ -1,20 +1,28 @@
 #!/usr/bin/env python3
 """
-audit-content.py — Rubrica de conteúdo do roteiro-viagem
+audit.py — Crítico de conteúdo (skill critico-roteiro)
 
-Roda checks semi-automáticos sobre data.json (preferido) ou index.html.
-Retorna nota /40 + achados P0-P3 + checklist manual + veredicto de aprovação.
+Portão de qualidade de CONTEÚDO. Dois modos:
+
+  • ROTEIRO (default): audita data.json / index.html · 10 dimensões · /40
+  • SCOUT (--scout):   audita levantamento .md da destination-scout · 5 dim · /20
+
+Roda como gate dentro do pipeline de roteiro E da destination-scout; também
+standalone pra melhorar conteúdo já feito.
 
 Uso:
-    python3 scripts/audit-content.py <viagem>/data.json
-    python3 scripts/audit-content.py <viagem>/data.json --check-links
-    python3 scripts/audit-content.py <viagem>/index.html
-    python3 scripts/audit-content.py <viagem>/data.json --json   # saída JSON
+    python3 skills/critico-roteiro/audit.py <viagem>/data.json
+    python3 skills/critico-roteiro/audit.py <viagem>/data.json --check-links
+    python3 skills/critico-roteiro/audit.py <viagem>/index.html
+    python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout [--terceiros]
+    python3 skills/critico-roteiro/audit.py <arquivo> --json   # saída machine-readable
 
-Exit: 0 = aprovado (P0=0, nota≥28)  ·  1 = não aprovado  ·  2 = erro de input
+Exit: 0 = aprovado  ·  1 = não aprovado  ·  2 = erro de input
+  roteiro: aprovado = nota≥28/40 E P0=0   ·   scout: aprovado = nota≥14/20 E P0=0
 
 Rubrica completa: references/content-rubric.md
-Integração c/ destination-scout: references/content-rubric.md §relação-com-scout
+Fonte de verdade do veredito/preço-datado/fontes (não forkar):
+    skills/destination-scout/references/mapping-rubric.md
 """
 
 import re
@@ -561,6 +569,25 @@ def d6_adaptacao(data: Dict, F: List[Finding]) -> int:
                 score += 1
             break  # só o primeiro
 
+    # Pacing advisory · NÃO pontua · NÃO bloqueia — só alerta pra Tobia decidir.
+    # Especialistas em viagem c/ criança pequena: 1-2 atividades "pesadas"/dia,
+    # ancoradas na janela da criança. Aqui é SINAL, não corte automático: o peso
+    # do dia depende do público e da dinâmica familiar — quem decide é o Tobia.
+    def _is_heavy(s: Dict) -> bool:
+        if s.get('tipo') != 'card':
+            return False
+        if s.get('risco') in ('yellow', 'red'):
+            return True
+        if s.get('walkingTours'):
+            return True
+        return bool(re.search(r'\d+\s*h', s.get('duracao', '')))
+    for day in days:
+        heavy_n = sum(1 for s in day.get('stops', []) if _is_heavy(s))
+        if heavy_n > 2:
+            F.append(Finding(3, 6,
+                f'{heavy_n} atrações "pesadas" em {day.get("date","")} — pode ser '
+                f'corrido pra esse público; avalie remanejar (alerta, NÃO corte automático)'))
+
     return min(4, score)
 
 
@@ -893,6 +920,7 @@ def print_json_result(dim_scores: Dict[int, int], findings: List[Finding]) -> No
     total = sum(dim_scores.values())
     band, _  = score_band(total)
     out = {
+        'mode':       'roteiro',
         'score':      total,
         'max':        40,
         'band':       band,
@@ -911,6 +939,318 @@ def print_json_result(dim_scores: Dict[int, int], findings: List[Finding]) -> No
     print(json.dumps(out, ensure_ascii=False, indent=2))
 
 # ---------------------------------------------------------------------------
+# SCOUT MODE · auditoria dos levantamentos .md da destination-scout
+# ---------------------------------------------------------------------------
+# Mesmos princípios do roteiro (anti-invenção, veredito, honestidade), aplicados
+# ao formato .md (prosa + tabelas). Fonte de verdade das regras:
+# skills/destination-scout/references/mapping-rubric.md — este modo NÃO forka as
+# regras, só as VERIFICA no outro formato. 5 dimensões · /20.
+
+SCOUT_DIM_NAMES = {
+    1: 'S1 Anti-invenção & Preços',
+    2: 'S2 Veredito & Honestidade',
+    3: 'S3 Logística & Precisão',
+    4: 'S4 Fontes & Verificação',
+    5: 'S5 Estrutura & Cobertura',
+}
+
+PRICE_AMOUNT_RE = re.compile(r'(?:R\$|US\$|€|\$)\s?\d[\d.,]*', re.I)
+VERDICT_RE      = re.compile(r'🟢|🟡|🔴')
+FONTES_RE       = re.compile(r'^#{1,4}\s*(fontes|refer[êe]ncias|sources)\b', re.I | re.M)
+ARMADILHA_RE    = re.compile(r'armadilha|cilada|turistada|superestimad|pula sem culpa|fila inútil|não vale a pena', re.I)
+KM_MIN_RE       = re.compile(r'\d+\s?(km|min|minutos|h\b|horas)', re.I)
+SABOR_RE        = re.compile(r'sabor|ingrediente|prato típico|endêmic|assinatura|especialidade|típic', re.I)
+ANCHOR_RE       = re.compile(r'âncora|estar na porta', re.I)
+CONFIRMAR_RE    = re.compile(r'\[a confirmar\]|\[confirmar\]', re.I)
+
+
+def detect_mini_plano(text: str) -> bool:
+    """Mini-plano = 1 bloco/meia-diária com âncora fixa, sem tabela de veredito."""
+    has_table  = bool(re.search(r'esfor[çc]o.*recompensa', text, re.I))
+    n_verdicts = len(VERDICT_RE.findall(text))
+    has_anchor = bool(ANCHOR_RE.search(text))
+    return n_verdicts < 2 and not has_table and has_anchor
+
+
+def logistica_portion(text: str) -> str:
+    """Só o bloco de mapeamento/logística (antes de 'História') — a prosa histórica
+    tem 'perto'/'próximo' em sentido não-geográfico (ex: 'lugar perto do pântano')."""
+    m = re.search(r'^#{1,4}\s*hist[óo]ria', text, re.I | re.M)
+    return text[:m.start()] if m else text
+
+
+def s1_precos(text: str, F: List[Finding]) -> int:
+    """S1 · Anti-invenção: todo preço datado (mapping-rubric: '~R$50, jan/2026')."""
+    prices = PRICE_AMOUNT_RE.findall(text)
+    dated  = len(CUSTO_DATE_RE.findall(text))
+    if not prices:
+        return 3  # sem preços citados: raso mas não há invenção a punir
+    ratio = min(1.0, dated / len(prices))
+    if ratio >= 0.7:
+        return 4
+    if ratio >= 0.4:
+        F.append(Finding(2, 1,
+            f'~{len(prices)-dated}/{len(prices)} preços sem data — mapping-rubric exige "(mês/ano)"'))
+        return 2
+    F.append(Finding(1, 1,
+        f'maioria dos preços sem data ({dated}/{len(prices)} datados) — preço apodrece sem data de referência'))
+    return 1
+
+
+def s2_veredito(text: str, F: List[Finding], is_mini: bool) -> int:
+    """S2 · Veredito 🟢🟡🔴 + honestidade (armadilhas, anti-hype)."""
+    n_verdicts    = len(VERDICT_RE.findall(text))
+    has_armadilha = bool(ARMADILHA_RE.search(text))
+    hype          = len(HYPE_RE.findall(text))
+
+    if is_mini:
+        # mini-plano não dá veredito por atração; valoriza honestidade na prosa
+        score = 2
+        if has_armadilha or re.search(r'fechad|não programem|encarem|opciona|degraus', text, re.I):
+            score += 1
+        if hype <= 2:
+            score += 1
+        else:
+            F.append(Finding(3, 2, f'{hype} termos de hype vazio ("incrível/lindo") — prose-guide pede factual'))
+        return min(4, score)
+
+    score = 0
+    if n_verdicts >= 3:
+        score += 2
+    elif n_verdicts >= 1:
+        score += 1
+        F.append(Finding(2, 2, f'poucos vereditos 🟢🟡🔴 ({n_verdicts}) — cada atração precisa do seu, calibrado ao perfil'))
+    else:
+        F.append(Finding(1, 2, 'nenhum veredito 🟢🟡🔴 — levantamento sem crítica vira folder de agência'))
+    if has_armadilha:
+        score += 1
+    else:
+        F.append(Finding(2, 2, 'sem callout de armadilha/turistada — mapping-rubric: "o valor é DIZER o que ninguém diz"'))
+    if hype <= 2:
+        score += 1
+    else:
+        F.append(Finding(3, 2, f'{hype} termos de hype vazio — prose-guide pede factual, sem floreio'))
+    return min(4, score)
+
+
+def s3_logistica_scout(text: str, F: List[Finding]) -> int:
+    """S3 · Logística: distância quantificada (km/min, não 'perto') + ingresso/reserva/horário."""
+    logtext = logistica_portion(text)  # ignora 'perto' da prosa histórica
+    vague = len(VAGUE_DIST_RE.findall(logtext))
+    quant = len(KM_MIN_RE.findall(logtext))
+    score = 0
+    if quant >= 3:
+        score += 2
+    elif quant >= 1:
+        score += 1
+    else:
+        F.append(Finding(1, 3, 'nenhuma distância/tempo quantificado (km/min) — mapping-rubric: "não perto, número"'))
+    if vague == 0:
+        score += 1
+    else:
+        F.append(Finding(2, 3, f'{vague} distância(s) vaga(s) ("perto/próximo") — trocar por km/min'))
+    if re.search(r'ingresso|reserva|horário|entrada até|abre|fecha|gratuito', text, re.I):
+        score += 1
+    else:
+        F.append(Finding(2, 3, 'sem menção a ingresso/reserva/horário — logística obrigatória (mapping-rubric)'))
+    return min(4, score)
+
+
+def s4_fontes(text: str, F: List[Finding], relax: bool) -> int:
+    """S4 · Fontes citadas. Obrigatória no macro-interno; OPCIONAL pra-terceiros/mini (decisão Tobia)."""
+    if FONTES_RE.search(text):
+        return 4
+    if relax:
+        return 4  # pra-terceiros/mini: lista de URLs fica no chat, não se manda pra mãe — não penaliza
+    F.append(Finding(1, 4,
+        'sem seção Fontes — obrigatória no levantamento macro (verificabilidade); use --terceiros se for pra terceiros/mini'))
+    return 1
+
+
+def s5_estrutura(text: str, F: List[Finding], is_mini: bool) -> int:
+    """S5 · Estrutura & cobertura (ordem, sabores-assinatura, clusters)."""
+    score = 0
+    if is_mini:
+        if ANCHOR_RE.search(text):
+            score += 2
+        else:
+            F.append(Finding(1, 5, 'mini-plano sem âncora fixa clara no topo (compromisso + horário)'))
+        if re.search(r'como chegar', text, re.I):
+            score += 1
+        else:
+            F.append(Finding(2, 5, 'mini-plano sem "como chegar (da base)"'))
+        if re.search(r'\d{1,2}[h:]\d{0,2}', text):
+            score += 1  # faixas de horário
+        return min(4, score)
+
+    if re.search(r'^#{1,3}\s*resumo', text, re.I | re.M):
+        score += 1
+    else:
+        F.append(Finding(2, 5, 'sem "Resumo" no topo (big picture antes do detalhe — princípio #4)'))
+    m_map  = re.search(r'atra[çc][õo]es|mapeamento|esfor[çc]o', text, re.I)
+    m_hist = re.search(r'hist[óo]ria|curiosidad', text, re.I)
+    if m_map and m_hist and m_map.start() < m_hist.start():
+        score += 1
+    elif m_hist and not m_map:
+        F.append(Finding(1, 5, 'história sem bloco de mapeamento antes (ordem fixa: mapeamento → história)'))
+    else:
+        score += 1
+    if re.search(r'restaurante|onde comer|almo[çc]o|gastronomia', text, re.I):
+        if SABOR_RE.search(text):
+            score += 1
+        else:
+            F.append(Finding(2, 5, 'restaurantes sem sabor-assinatura/ingrediente local (mapping-rubric §sabores)'))
+    else:
+        score += 1  # sem seção de comida: N/A
+    if re.search(r'cluster|combinar no mesmo dia|agrupa|núcleo geográfic', text, re.I):
+        score += 1
+    else:
+        F.append(Finding(3, 5, 'sem clusters geográficos ("o que combinar no mesmo dia") — ponte pro roteiro'))
+    return min(4, score)
+
+
+def audit_scout(text: str, F: List[Finding], is_mini: bool, relax_fontes: bool) -> Dict[int, int]:
+    return {
+        1: s1_precos(text, F),
+        2: s2_veredito(text, F, is_mini),
+        3: s3_logistica_scout(text, F),
+        4: s4_fontes(text, F, relax_fontes or is_mini),
+        5: s5_estrutura(text, F, is_mini),
+    }
+
+
+def scout_band(total: int) -> Tuple[str, str]:
+    if total >= 18:
+        return 'Excelente', C.OK
+    if total >= 14:
+        return 'Bom', C.CYAN
+    if total >= 10:
+        return 'Aceitável', C.WARN
+    return 'Ruim', C.ERR
+
+
+def scout_approved(total: int, findings: List[Finding]) -> bool:
+    return total >= 14 and not any(f.sev == 0 for f in findings)
+
+
+SCOUT_CHECKLIST = """
+┌──────────────────────────────────────────────────────────────────────────┐
+│  CHECKLIST MANUAL · levantamento scout (julgamento humano)               │
+├──────────────────────────────────────────────────────────────────────────┤
+│  Perfil & Calibração                                                     │
+│  [ ] veredito 🟢🟡🔴 calibrado ao PERFIL informado (não genérico)?      │
+│  [ ] distâncias medidas a partir da BASE certa?                          │
+│                                                                          │
+│  Prosa (bloco História & Curiosidades)                                   │
+│  [ ] gancho narrativo + factual (sem "paraíso indescritível")?          │
+│  [ ] micro-história por atração (data, lenda, personagem)?              │
+│                                                                          │
+│  Honestidade                                                             │
+│  [ ] turistada/superestimado dito sem diplomacia?                        │
+│  [ ] sabores-assinatura reais (ingrediente endêmico), não genérico?     │
+└──────────────────────────────────────────────────────────────────────────┘
+"""
+
+
+def print_report_scout(dim_scores: Dict[int, int], findings: List[Finding],
+                       show_checklist: bool = True) -> None:
+    total = sum(dim_scores.values())
+    band, bcolor = scout_band(total)
+    pcnts = {0: 0, 1: 0, 2: 0, 3: 0}
+    for f in findings:
+        pcnts[f.sev] += 1
+
+    print(f"\n{C.BOLD}=== Dimensões do Levantamento ==={C.END}\n")
+    for idx in sorted(dim_scores):
+        s     = dim_scores[idx]
+        bar   = '█' * s + '░' * (4 - s)
+        color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
+        print(f"  {color}{bar}{C.END} {s}/4  {SCOUT_DIM_NAMES[idx]}")
+
+    grouped: Dict[int, List[Finding]] = {0: [], 1: [], 2: [], 3: []}
+    for f in findings:
+        grouped[f.sev].append(f)
+    if any(grouped.values()):
+        print(f"\n{C.BOLD}=== Achados ({len(findings)} total) ==={C.END}\n")
+        for sev in [0, 1, 2, 3]:
+            if not grouped[sev]:
+                continue
+            print(f"{SEV_COLOR[sev]}{SEV_LABEL[sev]} — {SEV_DESC[sev]}{C.END}")
+            for f in grouped[sev]:
+                stop_str = f' [{f.stop[:45]}]' if f.stop else ''
+                print(f"  • {f.msg}{C.DIM}{stop_str}{C.END}")
+            print()
+
+    if show_checklist:
+        print(SCOUT_CHECKLIST)
+
+    print('─' * 62)
+    ok_color = C.OK if scout_approved(total, findings) else C.ERR
+    print(f"{C.BOLD}★ Levantamento: {ok_color}{total}/20{C.END}"
+          f" · {bcolor}{band}{C.END}"
+          f"  |  P0: {pcnts[0]}  P1: {pcnts[1]}  P2: {pcnts[2]}  P3: {pcnts[3]}")
+    if scout_approved(total, findings):
+        print(f"{C.OK}✓ Aprovado pra entrega{C.END}")
+    elif pcnts[0] > 0:
+        print(f"{C.ERR}✗ Bloqueado: {pcnts[0]} P0(s) — corrigir antes de continuar{C.END}")
+    else:
+        print(f"{C.WARN}⚠ Iterar: nota {total}/20 < 14 — corrigir P1s listados acima{C.END}")
+    print()
+
+
+def print_json_scout(dim_scores: Dict[int, int], findings: List[Finding]) -> None:
+    total = sum(dim_scores.values())
+    band, _ = scout_band(total)
+    out = {
+        'mode':       'scout',
+        'score':      total,
+        'max':        20,
+        'band':       band,
+        'approved':   scout_approved(total, findings),
+        'dimensions': {SCOUT_DIM_NAMES[i]: s for i, s in sorted(dim_scores.items())},
+        'findings': [
+            {'sev': SEV_LABEL[f.sev], 'dim': SCOUT_DIM_NAMES.get(f.dim, str(f.dim)),
+             'msg': f.msg, 'stop': f.stop}
+            for f in findings
+        ],
+    }
+    print(json.dumps(out, ensure_ascii=False, indent=2))
+
+
+def run_scout(path: Path, flags: List[str], json_out: bool, no_checklist: bool) -> None:
+    if path.suffix != '.md':
+        print(f"{C.ERR}✗{C.END} Modo --scout espera um .md da destination-scout (recebi '{path.suffix}')")
+        sys.exit(2)
+    text    = path.read_text(encoding='utf-8')
+    is_mini = detect_mini_plano(text)
+    relax   = '--terceiros' in flags
+    kind    = 'mini-plano' if is_mini else 'levantamento macro'
+    fontes  = 'Fontes opcional' if (relax or is_mini) else 'Fontes obrigatória'
+    tflag   = '  (--terceiros)' if relax else ''
+
+    findings: List[Finding] = []
+    if not json_out:
+        print(f"\n{C.BOLD}=== Auditando levantamento (scout): {path.name} ==={C.END}\n")
+        print(f"{C.DIM}  modo: {kind} · {fontes}{tflag}{C.END}\n")
+        print(f"{C.DIM}── Rodando 5 dimensões (scout) ──{C.END}")
+
+    dim_scores = audit_scout(text, findings, is_mini, relax)
+
+    if json_out:
+        print_json_scout(dim_scores, findings)
+    else:
+        for idx in sorted(dim_scores):
+            s     = dim_scores[idx]
+            color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
+            icon  = '✓' if s >= 3 else ('⚠' if s >= 2 else '✗')
+            print(f"  {color}{icon}{C.END} {SCOUT_DIM_NAMES[idx]}: {s}/4")
+        print_report_scout(dim_scores, findings, show_checklist=not no_checklist)
+
+    total = sum(dim_scores.values())
+    sys.exit(0 if scout_approved(total, findings) else 1)
+
+
+# ---------------------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------------------
 
@@ -922,9 +1262,14 @@ def main() -> None:
     no_checklist  = '--no-checklist'  in flags
 
     if not args:
-        print(f"{C.BOLD}Uso:{C.END} python3 scripts/audit-content.py <viagem>/data.json [--check-links] [--json]")
-        print("       python3 scripts/audit-content.py <viagem>/index.html [--check-links]")
+        base = 'python3 skills/critico-roteiro/audit.py'
+        print(f"{C.BOLD}Uso:{C.END}")
+        print(f"  {base} <viagem>/data.json [--check-links] [--json]   # roteiro (/40)")
+        print(f"  {base} <viagem>/index.html [--check-links]           # roteiro (fallback HTML)")
+        print(f"  {base} entregas/<slug>.md --scout [--terceiros]      # levantamento scout (/20)")
         print()
+        print("  --scout         Audita um .md da destination-scout (levantamento macro ou mini-plano)")
+        print("  --terceiros     (com --scout) modo pra-terceiros: seção Fontes vira opcional")
         print("  --check-links   Verifica URLs em LINKS_MAP via HTTP HEAD (lento; ~5s/URL)")
         print("  --json          Saída JSON machine-readable além do relatório")
         print("  --no-checklist  Omite checklist manual (útil em CI)")
@@ -935,18 +1280,19 @@ def main() -> None:
         print(f"{C.ERR}✗{C.END} Arquivo não existe: {path}")
         sys.exit(2)
 
-    print(f"\n{C.BOLD}=== Auditando conteúdo: {path.name} ==={C.END}\n")
+    # Desvio pro modo scout (auditoria de levantamento .md · rubrica /20)
+    if '--scout' in flags:
+        run_scout(path, flags, json_out, no_checklist)
+        return
+
+    if not json_out:
+        print(f"\n{C.BOLD}=== Auditando conteúdo: {path.name} ==={C.END}\n")
 
     try:
         data = load_data(path)
     except Exception as e:
         print(f"{C.ERR}✗{C.END} Erro ao carregar dados: {e}")
         sys.exit(2)
-
-    n_days  = len(data.get('days', []))
-    n_cards = len(get_cards(data))
-    n_wt    = len(get_wt_parts(data))
-    print(f"{C.DIM}  {n_days} dias · {n_cards} cards · {n_wt} partes de walking tour{C.END}\n")
 
     findings: List[Finding] = []
 
@@ -963,19 +1309,26 @@ def main() -> None:
         (10, lambda: d10_arco(data, findings)),
     ]
 
-    print(f"{C.DIM}── Rodando 10 dimensões ──{C.END}")
+    if not json_out:
+        n_days  = len(data.get('days', []))
+        n_cards = len(get_cards(data))
+        n_wt    = len(get_wt_parts(data))
+        print(f"{C.DIM}  {n_days} dias · {n_cards} cards · {n_wt} partes de walking tour{C.END}\n")
+        print(f"{C.DIM}── Rodando 10 dimensões ──{C.END}")
+
     dim_scores: Dict[int, int] = {}
     for dim_idx, auditor in AUDITORS:
         s = auditor()
         dim_scores[dim_idx] = s
-        color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
-        icon  = '✓' if s >= 3 else ('⚠' if s >= 2 else '✗')
-        print(f"  {color}{icon}{C.END} {DIM_NAMES[dim_idx]}: {s}/4")
-
-    print_report(dim_scores, findings, show_checklist=not no_checklist)
+        if not json_out:
+            color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
+            icon  = '✓' if s >= 3 else ('⚠' if s >= 2 else '✗')
+            print(f"  {color}{icon}{C.END} {DIM_NAMES[dim_idx]}: {s}/4")
 
     if json_out:
         print_json_result(dim_scores, findings)
+    else:
+        print_report(dim_scores, findings, show_checklist=not no_checklist)
 
     total = sum(dim_scores.values())
     sys.exit(0 if is_approved(total, findings) else 1)

@@ -2,16 +2,24 @@
 
 Régua **repetível** pra avaliar (e elevar) o conteúdo de qualquer roteiro. Complementa — não substitui — a rubrica de design (`references/design-rubric.md`). Nasceu do Passo 3 do projeto viagem (2026-07-01).
 
-## Ferramenta: scripts/audit-content.py
+## Ferramenta: skill `critico-roteiro` (`skills/critico-roteiro/audit.py`)
+
+Esta rubrica é a **régua**; a skill `critico-roteiro` é o **runnable** que a aplica (espelha `design-rubric.md` ↔ `impeccable`). Dois modos:
 
 ```bash
-python3 scripts/audit-content.py <viagem>/data.json              # audit completo
-python3 scripts/audit-content.py <viagem>/data.json --check-links # + verifica URLs HTTP
-python3 scripts/audit-content.py <viagem>/index.html             # fallback sem data.json
-python3 scripts/audit-content.py <viagem>/data.json --json       # saída JSON (machine-readable)
+# ROTEIRO · 10 dimensões · /40
+python3 skills/critico-roteiro/audit.py <viagem>/data.json              # audit completo
+python3 skills/critico-roteiro/audit.py <viagem>/data.json --check-links # + verifica URLs HTTP
+python3 skills/critico-roteiro/audit.py <viagem>/index.html             # fallback sem data.json
+
+# SCOUT · levantamento .md da destination-scout · 5 dimensões · /20
+python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout             # macro (Fontes obrigatória)
+python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros # pra-terceiros (Fontes opcional)
+
+python3 skills/critico-roteiro/audit.py <arquivo> --json                # saída machine-readable
 ```
 
-Retorna: **nota /40** por dimensão + achados P0-P3 + checklist manual + veredicto de aprovação.
+Retorna: **nota** por dimensão + achados P0-P3 + checklist manual + veredito de aprovação. Detalhes de invocação e modos: `skills/critico-roteiro/SKILL.md`.
 
 ---
 
@@ -22,13 +30,18 @@ A `destination-scout` (skill em `skills/destination-scout/`) é o **degrau 0** �
 | Conceito na scout | Dimensão nesta rubrica | Reuso |
 |---|---|---|
 | `audience-profiles.md` · perfis × eixos | D6 Adaptação ao Público | Calibrar pelo elo mais restritivo; sempre perguntar idade |
-| `mapping-rubric.md` · veredito 🟢🟡🔴 | D8 Honestidade · campo `risco` | **Mesma escala** · não criar nova |
+| `mapping-rubric.md` · veredito 🟢🟡🔴 | D8 Honestidade (honestidade **na prosa**) | Recomendação (faça/depende/pula). ⚠️ **NÃO é o campo `risco`** — ver nota abaixo |
 | `mapping-rubric.md` · logística obrigatória | D3 Logística & Precisão | Distância km, ingresso datado, reserva, horário, ⚠️ segurança |
 | `prose-guide.md` · gancho, factual, sem floreio | D1 Storytelling & Escrita | Padrão-ouro Marais + guia que encanta pra gorjeta |
 | Anti-invenção (preços datados, sem URL inventada) | D3, D5, D7 | Base dos checks automatizáveis do audit |
 | Sabores-assinatura (gastronomia com identidade) | D8 Honestidade | Cards de restaurante com ingrediente local |
 
 **Regra de ouro**: UMA fonte de verdade pra veredito/perfil/anti-invenção. Se um conceito precisar mudar, muda na skill-origem. Esta rubrica aponta pra lá.
+
+> ⚠️ **`risco` (roteiro) ≠ veredito 🟢🟡🔴 (scout)** — escalas diferentes, não confundir:
+> - **`risco`** do roteiro = **multidão/esforço** operacional (green=tranquilo · yellow=atenção · red=Times Square lotada). É um aviso de campo, não uma recomendação.
+> - **veredito** da scout = **recomendação** (🟢 faça · 🟡 depende · 🔴 pula sem culpa).
+> - Uma atração linda porém lotada é `risco=red` **mas** 🟢 *faça*. No roteiro o veredito 🔴 já foi "consumido" (o que não valia foi cortado na curadoria); o que sobra expressa honestidade **na prosa** (`sobre`/`dicas` com "pula sem culpa"), não num campo. Por isso **D8 audita honestidade no texto**, e usa a distribuição de `risco` só como proxy de "nem tudo é rosa" — não como se `risco` fosse o veredito.
 
 ---
 
@@ -63,6 +76,26 @@ Roteiro é usado **no campo, uma mão, no sol, com criança de 3 anos** — não
 
 ---
 
+## Fundamentação externa (state of the art)
+
+A rubrica não é achismo — cada dimensão-chave ancora numa best-practice **externa** reconhecida (não só nos docs internos do repo). O levantamento macro da `destination-scout` calibra pra família do Tobia; estas fontes dão a espinha editorial:
+
+| Dimensão | Autoridade externa | Princípio importado |
+|---|---|---|
+| **D1 Storytelling** | Craft de travel writing · Rick Steves | *"Show, don't tell"* + especificidade (o detalhe concreto vence o genérico); *"anticipate what the traveler needs to know just before they realize they need to know it"* |
+| **D2 Profundidade** | Rick Steves (depth > breadth) | *"If a place is covered, it's covered completely"* — profundidade > cobertura; ser **opinativo**, rankear por mérito |
+| **D3 Logística** | Lonely Planet (on-the-ground) | **Recência**: pesquisa verificada nos últimos ~18 meses · preço/horário atuais · "inaccuracies quickly fixed" → preço datado não é capricho, é anti-apodrecimento |
+| **D5 Links** | Lonely Planet · reviews | Filtrar por "mais recente"; link/preço velho engana tanto quanto link morto |
+| **D6 Adaptação** | REI · consenso family-travel | **1-2 atividades _principais_/dia**; ancorar no viajante mais novo; janela da criança (~9h-12h e 16h-18h); pausa de ≥90min no meio |
+| **D8 Honestidade** | Rick Steves · guias anti-turistada | *"Stubbornly selective"*; sinais de cilada: só turistas (poucos locais), retail-heavy, hype "must-see", reviews todas em inglês/na mesma semana |
+| **D10 Arco & Ritmo** | Literatura de route-optimization | **Clustering geográfico**: agrupar por proximidade, minimizar backtracking cross-borough, coerência espacial por dia |
+
+> Nota de recência (D3/D5): todo preço/horário carrega data de referência ("(mês/ano)") **e** se assume validade de ~18 meses (regra Lonely Planet). Levantamento/roteiro com preço sem data perde ponto em D3 — não por formato, mas porque a informação apodrece e vira armadilha silenciosa.
+
+**Fontes**: [Rick Steves — Travel Philosophy](https://www.ricksteves.com/press-room/ricks-travel-philosophy) · [What Makes a Good Guidebook](https://blog.ricksteves.com/cameron/2023/02/good-guidebook) · [Lonely Planet — accuracy](https://support.lonelyplanet.com/hc/en-us/articles/218157937-General-guidebook-information) · [Show, Don't Tell (Reedsy)](https://reedsy.com/blog/show-dont-tell/) · [REI — Traveling with Kids](https://www.rei.com/learn/expert-advice/traveling-with-kids.html) · [Pacing trips with kids](https://noplacelikeanywhere.com/how-can-i-help/planning/how-to-pace-your-trips-with-kids-to-avoid-fatigue-and-burnout/) · [Avoiding tourist traps](https://www.atlasroadtravel.com/blog/how-to-avoid-tourist-traps) · [Route optimization best practices](https://zeorouteplanner.com/route-optimization-best-practices-cut-travel-time-by-30/)
+
+---
+
 ## Severidade dos achados
 
 | Nível | Significado | Exemplo |
@@ -90,9 +123,9 @@ Roteiro é usado **no campo, uma mão, no sol, com criança de 3 anos** — não
 ## Loop-até-excelente
 
 ```
-build.py data.json index.html          ← gera HTML
-validate.py index.html                 ← checks estruturais (P0 técnico)
-audit-content.py data.json             ← checks de conteúdo (P0-P3 + nota /40)
+build.py data.json index.html               ← gera HTML
+validate.py index.html                      ← checks estruturais (P0 técnico)
+critico-roteiro/audit.py data.json          ← checks de conteúdo (P0-P3 + nota /40)
         ↓
   P0 presente? → Claude lê achados → corrige data.json → re-build → re-audit
                  (máx 3 rodadas automáticas)
@@ -124,16 +157,36 @@ O audit gera este checklist automaticamente nas dimensões que não são 100% au
 
 ---
 
-## Pipeline completo (os 3 degraus)
+## Modo scout · auditoria do levantamento `.md` (/20)
+
+A mesma skill (`--scout`) audita os levantamentos da `destination-scout` — outro formato (prosa + tabelas), **mesmos princípios** (mapping-rubric). 5 dimensões × 4 = **/20**:
+
+| # | Dimensão | 4 (excelente) | 0 (ruim) |
+|---|---|---|---|
+| S1 | **Anti-invenção & Preços** | Todo preço datado "(mês/ano)" | Maioria dos preços sem data |
+| S2 | **Veredito & Honestidade** | 🟢🟡🔴 por atração + armadilha sinalizada + zero hype | Nenhum veredito (vira folder de agência) |
+| S3 | **Logística & Precisão** | Distância em km/min (não "perto") + ingresso/reserva/horário | Tudo vago |
+| S4 | **Fontes & Verificação** | Seção Fontes presente | Sem Fontes **no macro** (opcional em pra-terceiros/mini) |
+| S5 | **Estrutura & Cobertura** | Resumo no topo · mapeamento antes de história · sabores-assinatura · clusters | Ordem trocada, sem sabores, sem clusters |
+
+- Bandas: 18-20 Excelente · 14-17 Bom · 10-13 Aceitável · <10 Ruim. **Aprovação: ≥14 E P0=0.**
+- Auto-detecta **mini-plano** (âncora fixa, sem tabela de veredito): veredito-por-atração vira N/A, Fontes opcional.
+- `--terceiros`: relaxa Fontes (lista de URLs fica no chat, não se manda pra terceiros — decisão Tobia).
+
+---
+
+## Pipeline completo (os degraus + os 2 loops)
 
 ```
 destination-scout (curadoria macro do destino)
-    ↓ inventário curado + vereditos + história
+    ↓ rascunho .md
+  [LOOP SCOUT] critico-roteiro --scout → nota /20 → corrige → PDF export
+    ↓ inventário curado + vereditos + história (aprovado)
 roteiro-viagem pipeline (build.py + validate.py)
     ↓ HTML single-file validado
-audit-content.py (portão de qualidade)
-    ↓ nota /40 + P0-P3 + aprovação
+  [LOOP ROTEIRO] critico-roteiro → nota /40 → corrige P1 → aprovado
+    ↓
 deploy.sh → GitHub Pages ao vivo
 ```
 
-O audit pode verificar se o roteiro **honrou os padrões da scout**: veredito por atração, preços datados, distâncias em km, público calibrado.
+O audit verifica se o artefato **honrou os padrões da scout**: veredito por atração, preços datados, distâncias em km, público calibrado, Fontes citadas (quando macro).

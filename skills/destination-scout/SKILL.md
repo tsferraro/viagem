@@ -116,6 +116,26 @@ Mesmas regras anti-invenção. Fatos de web_search. Tom: envolvente mas factual,
 
 ---
 
+## PASSO 4b · Portão de qualidade (loop-até-excelente) · `critico-roteiro --scout`
+
+Antes de considerar o levantamento pronto (e SEMPRE antes de exportar PDF), passe pelo **gate de conteúdo**. Salve o rascunho em `entregas/<slug>.md` e rode:
+
+```bash
+# macro (levantamento interno · Fontes obrigatória)
+python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout
+# pra-terceiros / mini-plano (Fontes opcional)
+python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros
+```
+
+Retorna nota **/20** + achados P0-P3. **Loop-até-excelente**:
+1. **P0** presente → corrige (bloqueio) → re-roda.
+2. **nota < 14 ou P1 aberto** → corrige no `.md` → re-roda (máx ~3 rodadas).
+3. **nota ≥14 e P0=0** → aprovado · segue pro PASSO 5.
+
+O que o gate pega (sem você caçar): preço sem data, veredito 🟢🟡🔴 ausente, "perto" vago em vez de km, sem armadilha sinalizada, restaurante sem sabor-assinatura, ordem mapeamento→história trocada, e — no macro — **seção Fontes ausente**. Régua completa: `references/content-rubric.md` §modo-scout. É o mesmo padrão de qualidade do roteiro, aplicado ao levantamento.
+
+---
+
 ## PASSO 5 · Export Word/PDF (chat primeiro · só sob demanda)
 
 **Entregue SEMPRE no chat primeiro.** Só depois da entrega — e depois de o usuário ter chance de pedir ajustes — pergunte se quer exportar:
@@ -170,4 +190,5 @@ PT-BR, casual, direto, consultor crítico. Tabelas pra comparação. NUNCA conco
 - [ ] Ao menos 1 armadilha de turista sinalizada (se existir)
 - [ ] Resumo no topo (NÃO "TL;DR")
 - [ ] Fontes citadas
+- [ ] **Passou no gate `critico-roteiro --scout`** (nota ≥14/20 · P0=0) antes de exportar
 - [ ] Word/PDF só se pedido (e PDF conferido visualmente antes de entregar)
