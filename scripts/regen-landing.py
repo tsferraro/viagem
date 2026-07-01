@@ -82,14 +82,19 @@ def main():
         city_f = os.path.join(full, 'CITY.txt')
         city = open(city_f).read().strip() if os.path.exists(city_f) else None
         with open(html) as f: c = f.read()
-        h1 = re.search(r'<h1>([^<]+)</h1>', c)
-        sub = re.search(r'class="sub">([^<]+)</div>', c)
+        # Suporta 2 layouts: antigo (<h1>/class="sub") e novo template (brand-title/brand-sub/brand-mark)
+        h1 = re.search(r'class="brand-title">([^<]+)<', c) or re.search(r'<h1[^>]*>([^<]+)</h1>', c)
+        sub = re.search(r'class="brand-sub">([^<]+)<', c) or re.search(r'class="sub">([^<]+)</div>', c)
+        brand = re.search(r'class="brand-mark">([^<]+)<', c)  # emoji separado no novo design
         nome = (h1.group(1) if h1 else d).strip()
         meta = (sub.group(1) if sub else '').strip()
-        # Extrai emoji (1º char não-ASCII) se houver
         emoji = '✈️'
         nome_clean = nome
-        if nome and ord(nome[0]) > 127:
+        if brand and brand.group(1).strip():
+            # novo design: emoji vem do brand-mark, nome fica inteiro
+            emoji = brand.group(1).strip()
+        elif nome and ord(nome[0]) > 127:
+            # design antigo: 1º char(es) não-ASCII do <h1>
             i = 0
             while i < len(nome) and ord(nome[i]) > 127:
                 i += 1
