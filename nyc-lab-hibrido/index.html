@@ -1762,27 +1762,29 @@ function getMapsUrl(stop){
 // Mostra os NOMES das paradas E desenha o trajeto (a forma ?origin=&waypoints= só marcava pins).
 // Cada nome: parens removidos (conteúdo mantido) + ", New York, NY" pra geocodar certo · segmento URL-encoded.
 // Total de segmentos capado em ~10 (amostra o miolo, mantém 1º + último).
-function dirPathUrl(names,mode='walking'){
-  const clean=names.map(n=>n.replace(/[()]/g,'').replace(/\s+/g,' ').trim()).filter(Boolean);
-  if(clean.length<2) return null;
-  let segs=clean;
-  const CAP=10;
-  if(segs.length>CAP){
-    const first=segs[0], last=segs[segs.length-1];
-    const mids=segs.slice(1,-1);
+// Monta URL de rota do Google Maps na forma oficial api=1, por COORDENADAS.
+// Coord é exata (nomes vagos/eventos como "Fogos Macy's" caem no lugar errado).
+// Waypoints intermediários capados em 9 (limite free da api=1): amostra o miolo,
+// sempre mantendo origem (1º) e destino (último).
+function dirCoordUrl(coords,mode='walking'){
+  const pts=coords.filter(c=>c&&typeof c.lat==='number'&&typeof c.lng==='number');
+  if(pts.length<2) return null;
+  const origin=pts[0], dest=pts[pts.length-1];
+  let mids=pts.slice(1,-1);
+  const MAXW=9;
+  if(mids.length>MAXW){
     const pick=[];
-    const want=CAP-2;
-    for(let k=0;k<want;k++){
-      const idx=Math.round(k*(mids.length-1)/(want-1));
+    for(let k=0;k<MAXW;k++){
+      const idx=Math.round(k*(mids.length-1)/(MAXW-1));
       pick.push(mids[idx]);
     }
-    segs=[first,...pick.filter((p,i,a)=>a.indexOf(p)===i),last];
+    mids=pick.filter((p,i,a)=>a.indexOf(p)===i);
   }
-  const path=segs.map(s=>encodeURIComponent(s+', New York, NY')).join('/');
-  // O sufixo data=!4m2!4m1!3e<MODE> gruda o travelmode na forma /dir/A/B/ (o ?travelmode= não).
-  // MODE: 2=walking · 0=driving.
-  const e3=mode==='driving'?0:2;
-  return `https://www.google.com/maps/dir/${path}/data=!4m2!4m1!3e${e3}`;
+  const ll=c=>`${c.lat},${c.lng}`;
+  let url=`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(ll(origin))}&destination=${encodeURIComponent(ll(dest))}`;
+  if(mids.length) url+=`&waypoints=${encodeURIComponent(mids.map(ll).join('|'))}`;
+  url+=`&travelmode=${mode}`;
+  return url;
 }
 
 // Estima o modo de deslocamento do dia pela distância total + maior perna (haversine).
@@ -1807,16 +1809,20 @@ function getRouteUrl(day){
   const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
-  // Extrai o nome exibido de cada stop (opcoes → nome da 1ª opção)
-  const queryName=s=>(s.tipo==='opcoes' && s.opcoes && s.opcoes.length)?s.opcoes[0].nome:s.nome;
-  return dirPathUrl(stops.map(queryName),dayTransport(day)) || getMapsUrl(stops[0]);
+  // Rota por coordenadas (exata) · opcoes usa a própria coord do stop
+  return dirCoordUrl(stops.map(s=>s.coord),dayTransport(day)) || getMapsUrl(stops[0]);
 }
 
 function getWalkingTourUrl(tour){
-  // V1.7: rota por NOMES na forma path-segment · mostra os nomes das paradas E desenha o trajeto walking.
+  // Rota por COORDENADAS (exata) · sempre walking.
   if(!tour||tour.length<2) return '#';
-  const queryName=t=>t.nome; // usa o nome da parada (dirPathUrl limpa parens + geocoda)
-  return dirPathUrl(tour.map(queryName)) || '#';
+  const coordUrl=dirCoordUrl(tour.map(t=>t.coord),'walking');
+  if(coordUrl) return coordUrl;
+  // Fallback (só se faltar coord em alguma parada): rota por nome.
+  const queryName=t=>t.nome;
+  const names=tour.map(queryName).filter(Boolean);
+  if(names.length<2) return '#';
+  return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n.replace(/[()]/g,'').replace(/\s+/g,' ').trim()+', New York, NY')).join('/')}/`;
 }
 
 function agoraPillHtml(isNow){ return isNow?'<span class="agora-pill"><span class="agora-dot"></span>Agora</span>':''; }
@@ -2258,18 +2264,19 @@ function renderMap(){
     if(latlngs.length>1){
       L.polyline(latlngs,{color:day.cor,weight:3,opacity:0.7,dashArray:'6,8'}).addTo(mapInstance);
     }
-    // WALKING TOURS: cada parte com visual próprio (Parte 1: cheia · Parte 2: contorno)
+    // WALKING TOURS: cor fixa ROXA (#6d5efc) · distinta da cor do dia (marcadores + linha)
+    const WT_COLOR='#6d5efc';
     cardsWithTours.forEach(card=>{
       card.walkingTours.forEach((tour,partIdx)=>{
         const tourStops=tour.stops;
         const tourLatLngs=tourStops.map(t=>[t.coord.lat,t.coord.lng]);
         // Polyline: Parte 1 tracejada normal · Parte 2 tracejada mais fina
         const dashStyle=partIdx===0?'4,5':'2,6';
-        L.polyline(tourLatLngs,{color:day.cor,weight:2.5,opacity:0.85,dashArray:dashStyle}).addTo(mapInstance);
-        // Marcadores: Parte 1 preenchidos · Parte 2 contorno (mesma cor)
+        L.polyline(tourLatLngs,{color:WT_COLOR,weight:2.5,opacity:0.85,dashArray:dashStyle}).addTo(mapInstance);
+        // Marcadores: Parte 1 preenchidos roxo · Parte 2 contorno roxo
         const markerStyle=partIdx===0
-          ?`background:${day.cor};color:#fff;border:2px solid #fff`
-          :`background:#fff;color:${day.cor};border:2px solid ${day.cor}`;
+          ?`background:${WT_COLOR};color:#fff;border:2px solid #fff`
+          :`background:#fff;color:${WT_COLOR};border:2px solid ${WT_COLOR}`;
         tourStops.forEach(t=>{
           const icon=L.divIcon({
             className:'wt-marker',
