@@ -1099,7 +1099,32 @@
           ]
         },
         {
-          "hora": "16:30",
+          "hora": "16:00",
+          "emoji": "🍎",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Apple SoHo (103 Prince St)",
+          "cat": "Retirada do notebook · loja histórica desde 2002",
+          "sobre": "Loja emblemática da Apple, aberta em <strong>2002</strong> num antigo prédio de correios de SoHo — foi a <strong>31ª loja da Apple no mundo</strong> e a primeira flagship de Manhattan. Fica no coração de SoHo, a poucos quarteirões ao sul da Washington Square, cercada de arquitetura cast-iron do século 19.",
+          "imperdivel": "Balcão de <em>pickup</em> nos fundos — retirada de pedido online é separada da fila de vendas, costuma ser rápida",
+          "dicas": [
+            "📦 Se for retirada de pedido: confirmar que o pickup está marcado como loja <strong>SoHo</strong> (a Apple NÃO transfere entre lojas na hora)",
+            "🆔 Levar o cartão usado na compra + documento com foto + e-mail/QR de confirmação",
+            "⏱️ Qua 08/Jul a loja abre 9h–21h · pickup leva ~10–15min",
+            "🗺️ Roteirização: SoHo fica ~8min a pé AO SUL da Washington Square. Se quiser evitar backtrack, dá pra fazer a retirada logo após a Washington Square (13:45) e SÓ DEPOIS emendar o walking do Village",
+            "👶 Loja tem 2 andares (escada + elevador) e costuma lotar — se for só pickup, o balcão dos fundos evita o piso de vendas com o carrinho"
+          ],
+          "duracao": "15–30min",
+          "custo": "—",
+          "acessibilidade": "Elevador entre os 2 andares · entrada nivelada pela Prince St",
+          "coord": {
+            "lat": 40.7251,
+            "lng": -73.999
+          }
+        },
+        {
+          "hora": "16:45",
           "emoji": "🚕",
           "periodo": "tarde",
           "tipo": "transit",
