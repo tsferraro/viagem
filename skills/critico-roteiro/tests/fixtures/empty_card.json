@@ -1,0 +1,17 @@
+{
+  "_comment": "Fixture P0: card tipo=card completamente vazio (sem sobre + imperdivel + dicas). Deve emitir P0 e BLOQUEAR o deploy-gate.",
+  "days": [
+    {
+      "date": "D1", "tema": "Teste", "temaCurto": "Teste",
+      "stops": [
+        {
+          "tipo": "card", "risco": "green", "periodo": "manha",
+          "nome": "Card Vazio (sem conteúdo)",
+          "coord": {"lat": 38.7099, "lng": -9.1334}
+        }
+      ]
+    }
+  ],
+  "links_map": {},
+  "transit_map": {}
+}

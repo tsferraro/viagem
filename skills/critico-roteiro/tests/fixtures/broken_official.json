@@ -1,0 +1,27 @@
+{
+  "_comment": "Fixture de rede (só com --check-links): link type=official que NUNCA resolve (.invalid é TLD reservado). Deve virar P0 e bloquear o deploy-gate.",
+  "days": [
+    {
+      "date": "D1", "tema": "Teste", "temaCurto": "Teste",
+      "stops": [
+        {
+          "tipo": "card", "risco": "green", "periodo": "manha",
+          "nome": "Atração com link oficial morto (Rua Teste)",
+          "cat": "Teste",
+          "sobre": "Card válido cujo único problema é o link oficial apontar pra um domínio que nunca resolve — o pior tipo de link, porque parece confiável.",
+          "imperdivel": "O detalhe é justamente o link quebrado no LINKS_MAP",
+          "dicas": ["Abre às 9h", "Ingresso €5 (jun/2026)"],
+          "duracao": "30min", "custo": "€5 (jun/2026)",
+          "acessibilidade": "Plano",
+          "coord": {"lat": 38.7099, "lng": -9.1334}
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Atração com link oficial morto (Rua Teste)": [
+      {"type": "official", "label": "Site oficial (morto)", "url": "https://site-oficial.invalid/"}
+    ]
+  },
+  "transit_map": {}
+}

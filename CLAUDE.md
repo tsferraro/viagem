@@ -132,24 +132,25 @@ Bloqueia deploy se falhar:
 - 11 features-chave presentes (AUTH_KEY · centerActiveTab · renderInnerContent · getMapsUrl · etc)
 - Tamanho ≤ 500KB (warning) · 1500KB (erro)
 
-### skill `critico-roteiro` — portão de qualidade de CONTEÚDO (`skills/critico-roteiro/audit.py`)
+### skill `critico-roteiro` — linter de CONTEÚDO (`skills/critico-roteiro/audit.py`)
 
-Skill runnable (irmã do `impeccable`, que é design). Régua em `references/content-rubric.md`. Dois modos:
+Linter runnable com camada de julgamento (irmã do `impeccable`, que é design). Vive em `skills/` mas é invocado como tool. Régua em `references/content-rubric.md`. Nota em 2 metades: **mecânico /20** (regex é autoridade) + **julgamento ⚖️ /20** (regex é piso · Claude confirma no checklist). Dois modos:
 
 ```bash
-# ROTEIRO · 10 dimensões · /40 · aprovado = nota≥28 E P0=0
+# ROTEIRO · 10 dimensões · /40 · aprovado = nota≥32 E P0=0
 python3 skills/critico-roteiro/audit.py <viagem>/data.json              # audit completo
 python3 skills/critico-roteiro/audit.py <viagem>/data.json --check-links # + verifica URLs HTTP (lento)
 python3 skills/critico-roteiro/audit.py <viagem>/index.html             # fallback sem data.json
+python3 skills/critico-roteiro/audit.py <viagem>/index.html --deploy-gate # usado no deploy.sh (compacto · bloqueia só P0)
 
-# SCOUT · levantamento .md da destination-scout · 5 dimensões · /20 · aprovado = nota≥14 E P0=0
+# SCOUT · levantamento .md da destination-scout · 5 dimensões · /20 · aprovado = nota≥16 E P0=0
 python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout              # macro (Fontes obrigatória)
 python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros  # pra-terceiros (Fontes opcional)
 
 python3 skills/critico-roteiro/audit.py <arquivo> --json                # saída machine-readable
 ```
 
-Retorna nota + achados P0-P3 + checklist manual + veredito. Exit: 0=aprovado, 1=não aprovado, 2=erro. Roda como gate no pipeline de roteiro (9b) E da destination-scout (4b), e standalone. Detalhes: `skills/critico-roteiro/SKILL.md`.
+Retorna nota (2 metades) + achados P0-P3 + checklist manual + veredito. Exit: 0=aprovado, 1=não aprovado, 2=erro. **Enforcement em 2 níveis**: a régua de 32 vive no *loop da sessão* (9b/4b); o `deploy.sh` roda `--deploy-gate` e bloqueia só em **P0** (card vazio, link oficial morto) — `VIAGEM_STRICT=1` no env endurece (bloqueia <32). Detalhes: `skills/critico-roteiro/SKILL.md`.
 
 ### `deploy.sh` — archive + push
 
@@ -166,7 +167,8 @@ Workflow:
 1. Detecta slug atual em `SLUG.txt`
 2. Se mudou (modo principal): archive `index.html` + subpastas paralelas em `archive/<slug-anterior>/`
 3. Substitui target HTML
-4. `validate.py` (BLOQUEIA se falhar)
+4. `validate.py` (BLOQUEIA se falhar · estrutural)
+4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32)
 5. Backup local em `~/.skill-backups/`
 6. Re-gera `archive/index.html` (índice navegável)
 7. `git add` · `commit` · `push origin main`
@@ -182,7 +184,7 @@ Quando Tobia pede mudança em viagem existente:
 3. **Para mudanças pequenas**: edita inline o `const DAYS = [...]` (formato JSON pretty)
 4. **Para mudanças grandes** (novo dia, novo walking tour, troca atração principal): re-gera via `build.py` a partir de data.json
 5. Roda `scripts/validate.py index.html` (obrigatório)
-5b. Roda `skills/critico-roteiro/audit.py <viagem>/data.json` (recomendado) · corrige P1s até nota ≥28 e P0=0
+5b. Roda `skills/critico-roteiro/audit.py <viagem>/data.json` (recomendado) · corrige P1s até nota ≥32 e P0=0 (mecânico primeiro · confirma dims ⚖️ no checklist)
 6. `git add · commit · push origin main` (sem branch)
 7. Confirma pro Tobia com link da URL + nota de conteúdo
 
@@ -198,8 +200,8 @@ Quando Tobia pede mudança em viagem existente:
 7. **Monta `data.json`** com: title/auth/header/password/legend + days + links_map + transit_map + bairros_config
 8. **Roda `build.py data.json index.html`**
 9. **Roda `validate.py index.html`** (BLOQUEIA se falhar)
-9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥28 e P0=0 (máx 3 iterações · fix P1s no data.json → re-build → re-audit)
-10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · reportar nota conteúdo na entrega
+9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥32 e P0=0 (máx 3 iterações · mecânico primeiro → confirma ⚖️ no checklist → re-build → re-audit)
+10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar nota (2 metades) na entrega
 
 ## Schema dos dados (JSON pretty embedded no HTML)
 

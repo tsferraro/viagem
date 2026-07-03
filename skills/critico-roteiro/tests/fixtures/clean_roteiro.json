@@ -1,0 +1,62 @@
+{
+  "days": [
+    {
+      "date": "Sex 5/Set",
+      "tema": "Chegada · Alfama",
+      "temaCurto": "Chegada",
+      "nota": "Dia leve de chegada — só o essencial perto da base.",
+      "stops": [
+        {
+          "hora": "09:00", "emoji": "⛪", "periodo": "manha", "tipo": "card", "risco": "green",
+          "nome": "Sé de Lisboa (Largo da Sé)",
+          "cat": "Catedral 1147 · vista da cidade",
+          "sobre": "Catedral românica mais antiga de Lisboa, fundada em 1147 logo após a reconquista cristã. As torres gêmeas foram pensadas como fortaleza; repare nas ameias no topo, herança do tempo em que igreja também era defesa.",
+          "imperdivel": "A subida ao terraço pelas escadas laterais — a vista do casario de Alfama que o visitante distraído não descobre",
+          "dicas": ["Chega 9h pra evitar a fila do claustro", "Claustro €5 (jun/2026), a nave é grátis"],
+          "duracao": "45min-1h", "custo": "€5 (jun/2026)",
+          "acessibilidade": "Adro acessível de carrinho · interior tem degraus na entrada do claustro",
+          "coord": {"lat": 38.7099, "lng": -9.1334}
+        },
+        {
+          "hora": "11:00", "emoji": "🚋", "periodo": "manha", "tipo": "card", "risco": "yellow",
+          "nome": "Miradouro de Santa Luzia (Largo Santa Luzia)",
+          "cat": "Terraço com azulejos · pode lotar",
+          "sobre": "Terraço debruçado sobre Alfama, com painéis de azulejo do século XVIII contando a tomada de Lisboa aos mouros em 1147. Fica lotado no fim de tarde — de manhã se tem o lugar quase só pra você.",
+          "imperdivel": "O painel de azulejo da Praça do Comércio antes do terramoto de 1755 — o único registro de como era",
+          "dicas": ["Vai de manhã, 11h, pra fugir da multidão da tarde", "Sombra escassa ao meio-dia — leve água pra criança"],
+          "duracao": "20-30min", "custo": "grátis",
+          "acessibilidade": "Plano e acessível de carrinho · bancos à sombra parcial",
+          "coord": {"lat": 38.7118, "lng": -9.1297}
+        }
+      ]
+    },
+    {
+      "date": "Sáb 6/Set",
+      "tema": "Belém · história dos Descobrimentos",
+      "temaCurto": "Belém",
+      "nota": "Manhã em Belém, os monumentos concentrados a pé; tarde livre.",
+      "stops": [
+        {
+          "hora": "09:30", "emoji": "🏰", "periodo": "manha", "tipo": "card", "risco": "green",
+          "nome": "Torre de Belém (Av. Brasília)",
+          "cat": "Fortaleza manuelina 1519 · Patrimônio UNESCO",
+          "sobre": "Fortaleza manuelina concluída em 1519 pra defender a barra do Tejo. Repare no rinoceronte esculpido na base de uma das torres — é o primeiro registro do animal na arte europeia, inspirado no rinoceronte que o rei D. Manuel recebeu da Índia em 1515.",
+          "imperdivel": "O rinoceronte de pedra na base virada pro rio — quase ninguém repara, fica do lado da água",
+          "dicas": ["Reserva online pra pular a fila, €8 (jun/2026)", "Subida ao topo por escada de caracol estreita — sem carrinho"],
+          "duracao": "1h-1h30", "custo": "€8 (jun/2026)",
+          "acessibilidade": "Térreo acessível · torre só por escada estreita (carrinho fica embaixo)",
+          "coord": {"lat": 38.6916, "lng": -9.2160}
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Sé de Lisboa (Largo da Sé)": [
+      {"type": "official", "label": "Patriarcado de Lisboa", "url": "https://www.patriarcado-lisboa.pt/"}
+    ],
+    "Torre de Belém (Av. Brasília)": [
+      {"type": "official", "label": "Torre de Belém", "url": "https://www.torrebelem.gov.pt/"}
+    ]
+  },
+  "transit_map": {}
+}
