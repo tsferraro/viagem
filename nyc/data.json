@@ -104,31 +104,6 @@
           ]
         },
         {
-          "hora": "11:30",
-          "emoji": "💻",
-          "periodo": "manha",
-          "tipo": "card",
-          "risco": "green",
-          "nome": "Apple Williamsburg",
-          "cat": "247 Bedford Ave · loja em ex-banco de 1948",
-          "sobre": "Loja flagship da Apple em Brooklyn, instalada em prédio histórico de 1948 que era um banco. Pé direito alto, fachada de pedra, atendimento típico Apple. Escolha estratégica pra resolver compra grande (MacBook) sem entrar no caos do flagship 5th Ave em Manhattan — clima muito mais relaxado.",
-          "imperdivel": "Atmosfera de loja-no-bairro vs flagship turística: você consegue testar e fechar compra grande sem pressão",
-          "dicas": [
-            "Reservar Personal Setup pelo app Apple Store antes — economiza 30 min",
-            "Pickup de produto reservado online: rápido, 10 min",
-            "Aberto 10h-21h sábado",
-            "⚠️ Smart ring NÃO é Apple — Oura (online + pickup), Samsung Galaxy Ring (Hudson Yards), Ultrahuman (SoHo)",
-            "Banheiro: usar antes (Bagel shop ou cafés Bedford) — Apple não tem público"
-          ],
-          "duracao": "45min-1h",
-          "custo": "Conforme produto",
-          "acessibilidade": "100% acessível",
-          "coord": {
-            "lat": 40.7176,
-            "lng": -73.9572
-          }
-        },
-        {
           "hora": "12:30",
           "emoji": "🍴",
           "periodo": "tarde",
@@ -2105,18 +2080,6 @@
     }
   ],
   "links_map": {
-    "Apple Williamsburg": [
-      {
-        "type": "official",
-        "label": "Apple Store",
-        "url": "https://www.apple.com/retail/williamsburg/"
-      },
-      {
-        "type": "review",
-        "label": "Time Out NY",
-        "url": "https://www.timeout.com/newyork/shopping/apple-store-williamsburg"
-      }
-    ],
     "Smorgasburg Williamsburg": [
       {
         "type": "official",
