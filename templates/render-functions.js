@@ -8,15 +8,14 @@ function getDefaultDayIdx(){
   // Detecta se hoje é um dos dias do roteiro e auto-seleciona; senão volta pro dia 1 (chegada)
   const monthMap={Jan:0,Fev:1,Feb:1,Mar:2,Abr:3,Apr:3,Mai:4,May:4,Jun:5,Jul:6,Ago:7,Aug:7,Set:8,Sep:8,Out:9,Oct:9,Nov:10,Dez:11,Dec:11};
   const today=new Date();
-  const tStr=today.toISOString().split('T')[0]; // YYYY-MM-DD
+  const tM=today.getMonth(), tD=today.getDate(); // compara em horário LOCAL (evita rolagem de dia via UTC)
   for(let i=0;i<DAYS.length;i++){
     const m=(DAYS[i].date||'').match(/(\d+)\/(\w+)/);
     if(!m) continue;
     const dayNum=parseInt(m[1]);
     const monthIdx=monthMap[m[2]];
     if(monthIdx===undefined) continue;
-    const d=new Date(2026,monthIdx,dayNum);
-    if(d.toISOString().split('T')[0]===tStr) return i;
+    if(dayNum===tD && monthIdx===tM) return i;
   }
   return 0;
 }
@@ -26,15 +25,14 @@ const MONTH_MAP={Jan:0,Fev:1,Feb:1,Mar:2,Abr:3,Apr:3,Mai:4,May:4,Jun:5,Jul:6,Ago
 // Mesma lógica exata de getDefaultDayIdx (exact-date-match) mas retorna -1 (não 0) fora da viagem.
 function getTodayTripIdx(){
   const today=new Date();
-  const tStr=today.toISOString().split('T')[0]; // YYYY-MM-DD
+  const tM=today.getMonth(), tD=today.getDate(); // compara em horário LOCAL (evita rolagem de dia via UTC)
   for(let i=0;i<DAYS.length;i++){
     const m=(DAYS[i].date||'').match(/(\d+)\/(\w+)/);
     if(!m) continue;
     const dayNum=parseInt(m[1]);
     const monthIdx=MONTH_MAP[m[2]];
     if(monthIdx===undefined) continue;
-    const d=new Date(2026,monthIdx,dayNum);
-    if(d.toISOString().split('T')[0]===tStr) return i;
+    if(dayNum===tD && monthIdx===tM) return i;
   }
   return -1;
 }
