@@ -359,6 +359,240 @@
     },
     {
       "date": "Seg 6/Jul",
+      "tema": "Lower Manhattan · Wall Street",
+      "temaCurto": "Lower Manhattan",
+      "bairro": "Manhattan — Battery + Financial District",
+      "grupo": false,
+      "nota": "Combinação 5-em-1 muito eficiente: tudo a 10 min a pé. Battery Park abre o dia com SeaGlass Carousel + ferry grátis vendo Statue · pós-almoço 9/11 Memorial + Oculus completam o circuito Lower Manhattan.",
+      "cor": "#3b82f6",
+      "gradA": "#1e3a8a",
+      "gradB": "#1d4ed8",
+      "stops": [
+        {
+          "hora": "9:00",
+          "emoji": "🚕",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → Battery Park",
+          "cat": "~30 min · entrada Whitehall Terminal",
+          "coord": {
+            "lat": 40.7019,
+            "lng": -74.0125
+          }
+        },
+        {
+          "hora": "9:30",
+          "emoji": "🐟",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "SeaGlass Carousel (Battery Park)",
+          "cat": "Carrossel-aquário · 2015",
+          "sobre": "Inaugurado em 2015 no Battery Park, homenagem ao primeiro aquário público dos EUA que ficava bem ali (1896-1941). **30 peixes gigantes esculpidos (5m+) em fibra com iluminação LED interna** que muda de cor durante o passeio. Trilha sonora orquestral, e o carrossel não gira só na horizontal — cada peixe roda em seu próprio eixo. Único no mundo.",
+          "imperdivel": "O efeito imersivo: luz baixa, peixes brilhando, música clássica — a criança fica em transe os 3 minutos do passeio",
+          "dicas": [
+            "$6 por volta · cartão",
+            "Aberto 10h-22h em julho",
+            "Battery Park inteiro vale 30 min: playground, vista Statue of Liberty",
+            "Banheiros públicos limpos no Battery Maritime Building (próximo)",
+            "Fila menor às 10h na abertura (chegar antes do ferry)"
+          ],
+          "duracao": "30-45min",
+          "custo": "$24 família 3 voltas",
+          "acessibilidade": "Plataforma acessível",
+          "coord": {
+            "lat": 40.7022,
+            "lng": -74.015
+          }
+        },
+        {
+          "hora": "10:30",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Staten Island Ferry · vista Statue of Liberty",
+          "cat": "Travessia gratuita · 25 min cada perna",
+          "sobre": "Balsas públicas operando ininterruptamente desde 1817, Manhattan (Whitehall Terminal) ↔ Staten Island (St. George). Atravessa o porto de NY passando MUITO próximo à Statue of Liberty + Ellis Island. **Totalmente GRATUITO desde 1997**. 70.000 passageiros/dia, vibe local (commuters) misturada com turistas. Sem catraca, sem reserva.",
+          "imperdivel": "Os primeiros 7-8 min da travessia, quando a Statue passa a ~600m pelo lado do barco — ângulo lateral icônico, melhor que qualquer foto",
+          "dicas": [
+            "🆓 Totalmente gratuito, sem reserva",
+            "Lado OESTE/DIREITO na ida (Manhattan→Staten): vê Statue + Ellis + Jersey",
+            "Lado LESTE/ESQUERDO na volta: vê Brooklyn Bridge + skyline",
+            "Deck superior tem melhor vista mas mais vento",
+            "Sai a cada 30min de manhã · cumprir o looping: desce em St. George, espera 15min, volta",
+            "Carrinho passa direto, elevador disponível"
+          ],
+          "duracao": "1h-1h15",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7019,
+            "lng": -74.0125
+          }
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Lower Manhattan",
+          "cat": "3 opções a 5-10 min do ferry",
+          "coord": {
+            "lat": 40.7113,
+            "lng": -74.014
+          },
+          "opcoes": [
+            {
+              "nome": "Whole Foods Tribeca (270 Greenwich St)",
+              "desc": "Hot bar grande, saladas, opções saudáveis. Comer no Hudson River Park ou no próprio mezanino.",
+              "preco": "$",
+              "dist": "10 min do ferry"
+            },
+            {
+              "nome": "Brookfield Place Hudson Eats",
+              "desc": "Food hall climatizado com Black Seed Bagels, Sweetgreen, Shake Shack, Mighty Quinn BBQ etc. Vista da World Financial Center.",
+              "preco": "$-$$",
+              "dist": "5 min do 9/11"
+            },
+            {
+              "nome": "Joe's Pizza (180 Bedford NYC) — wait, Joe's Pizza Greenwich Village 7 Carmine St",
+              "desc": "Pizza por fatia clássica, $3-4/fatia. Greenwich Village mas vale o desvio. Pulada de fatia rápida.",
+              "preco": "$",
+              "dist": "Uber 8min"
+            }
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🕊️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "9/11 Memorial",
+          "cat": "Memorial outdoor · gratuito · 24h",
+          "sobre": "Construído no lugar exato das Twin Towers, inaugurado em 2011 (10 anos pós-ataque). **Duas piscinas-fonte quadradas de 1 acre cada**, com cascatas de 9m descendo pelos lados, ocupam as pegadas exatas das torres. Os nomes das 2.977 vítimas do 11 de Setembro, das Twin Towers, do Pentágono, do voo 93 e do ataque de 1993 estão inscritos em parapeito de bronze ao redor das piscinas. Espaço público gratuito. Não confundir com o Museum 9/11 (pago, dentro do prédio adjacente).",
+          "imperdivel": "A Survivor Tree (pereira que sobreviveu ao atentado) · quando familiares colocam uma rosa branca sobre o nome inscrito (gesto silencioso que humaniza o número 2.977)",
+          "dicas": [
+            "Gratuito + aberto 24h, sem reserva pro memorial outdoor",
+            "Banheiros públicos no Oculus a 3 min (próximo prédio)",
+            "Adultos com tempo: Museum 9/11 ($26) tem acervo profundo, 2h de visita",
+            "Atmosfera é solene — não fazer selfies sorrindo",
+            "Carrinho 100% ok"
+          ],
+          "duracao": "45min-1h",
+          "custo": "Gratuito",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7115,
+            "lng": -74.0134
+          }
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Oculus · World Trade Center",
+          "cat": "Estação de trem + arquitetura · 2016",
+          "sobre": "Estação de trem PATH desenhada pelo arquiteto espanhol Santiago Calatrava (mesmo do Auditório Tenerife). Inaugurado em 2016, custou **US$ 4 bilhões — a estação de trem mais cara da história**. A estrutura externa parece uma pomba branca em vôo (intencional: gesto pós-9/11). O interior é catedral-cathedral, all-white, com nervuras de aço de 50m de altura. Tem 100+ lojas, restaurantes, e conexão direta com o 9/11 Memorial. Climatizado — refúgio do calor.",
+          "imperdivel": "O 'eye of the oculus' — clarabóia central que se abre todo 11 de Setembro às 10h28 (hora exata da queda da torre norte)",
+          "dicas": [
+            "Entrada gratuita, não tem ticket",
+            "Aberto 24h (transit station)",
+            "Banheiros públicos limpos no nível inferior",
+            "Vista épica da nave principal das escadas rolantes laterais",
+            "Apple Store no lado norte (climatizado, banheiro)",
+            "Eataly no shopping ali ao lado tem café/gelato decente",
+            "🗺️ WALKING TOUR WALL STREET (45min · 0.6km · 6 paradas) — ver aba Mapa pra rota completa · history packed mile do distrito financeiro",
+            "1️⃣ **Trinity Church** (igreja atual de 1846, primeira igreja desde 1697) · **tumba de Alexander Hamilton** no cemitério + Robert Fulton (inventor do barco a vapor) + Eliza Hamilton",
+            "2️⃣ **Federal Hall** · estátua do **George Washington** no exato lugar onde tomou posse como **1º Presidente dos EUA em 30/Abril/1789**. Edifício atual de 1842, mas o local é o spot do nascimento do governo americano",
+            "3️⃣ **NYSE - New York Stock Exchange** (11 Wall St) · fachada neoclássica de 1903 · não entra sem credencial desde 9/11, mas a fachada com bandeira gigante vale a foto",
+            "4️⃣ **Charging Bull** (Bowling Green) · escultura de 3.200kg do Arturo Di Modica, instalado **clandestinamente em 1989** como protesto pós-crash de 87 · tradição: tocar os 'Wall Street parts' pra sorte (já entendeu)",
+            "5️⃣ 🔍 **Stone Street** · **rua paralelepípedo mais antiga de Manhattan** (calçada em 1658 pelos holandeses), hoje pedonal, cheia de bares/restaurantes de séc. XIX restaurados — ponto perfeito de almoço/café",
+            "6️⃣ **Fraunces Tavern** (54 Pearl St, 1762) · onde **Washington se despediu dos oficiais do Exército Continental em 4/Dez/1783** · ainda funciona como restaurante + tem museum (US$8) com artefatos da Revolução"
+          ],
+          "duracao": "30-45min (Oculus) + 45min walking tour",
+          "custo": "Gratuito (Oculus + tour)",
+          "acessibilidade": "100% acessível",
+          "coord": {
+            "lat": 40.7113,
+            "lng": -74.0118
+          },
+          "walkingTours": [
+            {
+              "nome": "Wall Street · 🏛️ História Americana",
+              "descricao": "Trinity → Federal Hall → Charging Bull → Stone St → Fraunces · ~45min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Trinity Church (Hamilton's tomb)",
+                  "coord": {
+                    "lat": 40.7081,
+                    "lng": -74.0124
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Federal Hall (Washington inauguration)",
+                  "coord": {
+                    "lat": 40.7075,
+                    "lng": -74.0103
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "NYSE - New York Stock Exchange (11 Wall St)",
+                  "coord": {
+                    "lat": 40.7068,
+                    "lng": -74.0113
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Charging Bull (Bowling Green)",
+                  "coord": {
+                    "lat": 40.7055,
+                    "lng": -74.0134
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Stone Street (cobblestone histórico)",
+                  "coord": {
+                    "lat": 40.7044,
+                    "lng": -74.0114
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Fraunces Tavern (54 Pearl St, 1762)",
+                  "coord": {
+                    "lat": 40.7034,
+                    "lng": -74.0114
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Uber Lower Manhattan → Greenpoint",
+          "cat": "~25 min · pequena dorme",
+          "coord": {
+            "lat": 40.7244,
+            "lng": -73.9434
+          }
+        }
+      ]
+    },
+    {
+      "date": "Ter 7/Jul",
       "tema": "Central Park",
       "temaCurto": "Central Park",
       "bairro": "Manhattan — Central Park + UWS",
@@ -592,240 +826,6 @@
           "tipo": "transit",
           "nome": "Uber Central Park → Greenpoint",
           "cat": "~35 min · pequena dorme no carro",
-          "coord": {
-            "lat": 40.7244,
-            "lng": -73.9434
-          }
-        }
-      ]
-    },
-    {
-      "date": "Ter 7/Jul",
-      "tema": "Lower Manhattan · Wall Street",
-      "temaCurto": "Lower Manhattan",
-      "bairro": "Manhattan — Battery + Financial District",
-      "grupo": false,
-      "nota": "Combinação 5-em-1 muito eficiente: tudo a 10 min a pé. Battery Park abre o dia com SeaGlass Carousel + ferry grátis vendo Statue · pós-almoço 9/11 Memorial + Oculus completam o circuito Lower Manhattan.",
-      "cor": "#3b82f6",
-      "gradA": "#1e3a8a",
-      "gradB": "#1d4ed8",
-      "stops": [
-        {
-          "hora": "9:00",
-          "emoji": "🚕",
-          "periodo": "manha",
-          "tipo": "transit",
-          "nome": "Uber Greenpoint → Battery Park",
-          "cat": "~30 min · entrada Whitehall Terminal",
-          "coord": {
-            "lat": 40.7019,
-            "lng": -74.0125
-          }
-        },
-        {
-          "hora": "9:30",
-          "emoji": "🐟",
-          "periodo": "manha",
-          "tipo": "card",
-          "risco": "green",
-          "nome": "SeaGlass Carousel (Battery Park)",
-          "cat": "Carrossel-aquário · 2015",
-          "sobre": "Inaugurado em 2015 no Battery Park, homenagem ao primeiro aquário público dos EUA que ficava bem ali (1896-1941). **30 peixes gigantes esculpidos (5m+) em fibra com iluminação LED interna** que muda de cor durante o passeio. Trilha sonora orquestral, e o carrossel não gira só na horizontal — cada peixe roda em seu próprio eixo. Único no mundo.",
-          "imperdivel": "O efeito imersivo: luz baixa, peixes brilhando, música clássica — a criança fica em transe os 3 minutos do passeio",
-          "dicas": [
-            "$6 por volta · cartão",
-            "Aberto 10h-22h em julho",
-            "Battery Park inteiro vale 30 min: playground, vista Statue of Liberty",
-            "Banheiros públicos limpos no Battery Maritime Building (próximo)",
-            "Fila menor às 10h na abertura (chegar antes do ferry)"
-          ],
-          "duracao": "30-45min",
-          "custo": "$24 família 3 voltas",
-          "acessibilidade": "Plataforma acessível",
-          "coord": {
-            "lat": 40.7022,
-            "lng": -74.015
-          }
-        },
-        {
-          "hora": "10:30",
-          "emoji": "⛴️",
-          "periodo": "manha",
-          "tipo": "card",
-          "risco": "yellow",
-          "nome": "Staten Island Ferry · vista Statue of Liberty",
-          "cat": "Travessia gratuita · 25 min cada perna",
-          "sobre": "Balsas públicas operando ininterruptamente desde 1817, Manhattan (Whitehall Terminal) ↔ Staten Island (St. George). Atravessa o porto de NY passando MUITO próximo à Statue of Liberty + Ellis Island. **Totalmente GRATUITO desde 1997**. 70.000 passageiros/dia, vibe local (commuters) misturada com turistas. Sem catraca, sem reserva.",
-          "imperdivel": "Os primeiros 7-8 min da travessia, quando a Statue passa a ~600m pelo lado do barco — ângulo lateral icônico, melhor que qualquer foto",
-          "dicas": [
-            "🆓 Totalmente gratuito, sem reserva",
-            "Lado OESTE/DIREITO na ida (Manhattan→Staten): vê Statue + Ellis + Jersey",
-            "Lado LESTE/ESQUERDO na volta: vê Brooklyn Bridge + skyline",
-            "Deck superior tem melhor vista mas mais vento",
-            "Sai a cada 30min de manhã · cumprir o looping: desce em St. George, espera 15min, volta",
-            "Carrinho passa direto, elevador disponível"
-          ],
-          "duracao": "1h-1h15",
-          "custo": "Gratuito",
-          "acessibilidade": "100% acessível",
-          "coord": {
-            "lat": 40.7019,
-            "lng": -74.0125
-          }
-        },
-        {
-          "hora": "12:00",
-          "emoji": "🍽️",
-          "periodo": "tarde",
-          "tipo": "opcoes",
-          "nome": "Almoço · Lower Manhattan",
-          "cat": "3 opções a 5-10 min do ferry",
-          "coord": {
-            "lat": 40.7113,
-            "lng": -74.014
-          },
-          "opcoes": [
-            {
-              "nome": "Whole Foods Tribeca (270 Greenwich St)",
-              "desc": "Hot bar grande, saladas, opções saudáveis. Comer no Hudson River Park ou no próprio mezanino.",
-              "preco": "$",
-              "dist": "10 min do ferry"
-            },
-            {
-              "nome": "Brookfield Place Hudson Eats",
-              "desc": "Food hall climatizado com Black Seed Bagels, Sweetgreen, Shake Shack, Mighty Quinn BBQ etc. Vista da World Financial Center.",
-              "preco": "$-$$",
-              "dist": "5 min do 9/11"
-            },
-            {
-              "nome": "Joe's Pizza (180 Bedford NYC) — wait, Joe's Pizza Greenwich Village 7 Carmine St",
-              "desc": "Pizza por fatia clássica, $3-4/fatia. Greenwich Village mas vale o desvio. Pulada de fatia rápida.",
-              "preco": "$",
-              "dist": "Uber 8min"
-            }
-          ]
-        },
-        {
-          "hora": "13:30",
-          "emoji": "🕊️",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "yellow",
-          "nome": "9/11 Memorial",
-          "cat": "Memorial outdoor · gratuito · 24h",
-          "sobre": "Construído no lugar exato das Twin Towers, inaugurado em 2011 (10 anos pós-ataque). **Duas piscinas-fonte quadradas de 1 acre cada**, com cascatas de 9m descendo pelos lados, ocupam as pegadas exatas das torres. Os nomes das 2.977 vítimas do 11 de Setembro, das Twin Towers, do Pentágono, do voo 93 e do ataque de 1993 estão inscritos em parapeito de bronze ao redor das piscinas. Espaço público gratuito. Não confundir com o Museum 9/11 (pago, dentro do prédio adjacente).",
-          "imperdivel": "A Survivor Tree (pereira que sobreviveu ao atentado) · quando familiares colocam uma rosa branca sobre o nome inscrito (gesto silencioso que humaniza o número 2.977)",
-          "dicas": [
-            "Gratuito + aberto 24h, sem reserva pro memorial outdoor",
-            "Banheiros públicos no Oculus a 3 min (próximo prédio)",
-            "Adultos com tempo: Museum 9/11 ($26) tem acervo profundo, 2h de visita",
-            "Atmosfera é solene — não fazer selfies sorrindo",
-            "Carrinho 100% ok"
-          ],
-          "duracao": "45min-1h",
-          "custo": "Gratuito",
-          "acessibilidade": "100% acessível",
-          "coord": {
-            "lat": 40.7115,
-            "lng": -74.0134
-          }
-        },
-        {
-          "hora": "14:30",
-          "emoji": "🏛️",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "green",
-          "nome": "Oculus · World Trade Center",
-          "cat": "Estação de trem + arquitetura · 2016",
-          "sobre": "Estação de trem PATH desenhada pelo arquiteto espanhol Santiago Calatrava (mesmo do Auditório Tenerife). Inaugurado em 2016, custou **US$ 4 bilhões — a estação de trem mais cara da história**. A estrutura externa parece uma pomba branca em vôo (intencional: gesto pós-9/11). O interior é catedral-cathedral, all-white, com nervuras de aço de 50m de altura. Tem 100+ lojas, restaurantes, e conexão direta com o 9/11 Memorial. Climatizado — refúgio do calor.",
-          "imperdivel": "O 'eye of the oculus' — clarabóia central que se abre todo 11 de Setembro às 10h28 (hora exata da queda da torre norte)",
-          "dicas": [
-            "Entrada gratuita, não tem ticket",
-            "Aberto 24h (transit station)",
-            "Banheiros públicos limpos no nível inferior",
-            "Vista épica da nave principal das escadas rolantes laterais",
-            "Apple Store no lado norte (climatizado, banheiro)",
-            "Eataly no shopping ali ao lado tem café/gelato decente",
-            "🗺️ WALKING TOUR WALL STREET (45min · 0.6km · 6 paradas) — ver aba Mapa pra rota completa · history packed mile do distrito financeiro",
-            "1️⃣ **Trinity Church** (igreja atual de 1846, primeira igreja desde 1697) · **tumba de Alexander Hamilton** no cemitério + Robert Fulton (inventor do barco a vapor) + Eliza Hamilton",
-            "2️⃣ **Federal Hall** · estátua do **George Washington** no exato lugar onde tomou posse como **1º Presidente dos EUA em 30/Abril/1789**. Edifício atual de 1842, mas o local é o spot do nascimento do governo americano",
-            "3️⃣ **NYSE - New York Stock Exchange** (11 Wall St) · fachada neoclássica de 1903 · não entra sem credencial desde 9/11, mas a fachada com bandeira gigante vale a foto",
-            "4️⃣ **Charging Bull** (Bowling Green) · escultura de 3.200kg do Arturo Di Modica, instalado **clandestinamente em 1989** como protesto pós-crash de 87 · tradição: tocar os 'Wall Street parts' pra sorte (já entendeu)",
-            "5️⃣ 🔍 **Stone Street** · **rua paralelepípedo mais antiga de Manhattan** (calçada em 1658 pelos holandeses), hoje pedonal, cheia de bares/restaurantes de séc. XIX restaurados — ponto perfeito de almoço/café",
-            "6️⃣ **Fraunces Tavern** (54 Pearl St, 1762) · onde **Washington se despediu dos oficiais do Exército Continental em 4/Dez/1783** · ainda funciona como restaurante + tem museum (US$8) com artefatos da Revolução"
-          ],
-          "duracao": "30-45min (Oculus) + 45min walking tour",
-          "custo": "Gratuito (Oculus + tour)",
-          "acessibilidade": "100% acessível",
-          "coord": {
-            "lat": 40.7113,
-            "lng": -74.0118
-          },
-          "walkingTours": [
-            {
-              "nome": "Wall Street · 🏛️ História Americana",
-              "descricao": "Trinity → Federal Hall → Charging Bull → Stone St → Fraunces · ~45min",
-              "stops": [
-                {
-                  "n": 1,
-                  "nome": "Trinity Church (Hamilton's tomb)",
-                  "coord": {
-                    "lat": 40.7081,
-                    "lng": -74.0124
-                  }
-                },
-                {
-                  "n": 2,
-                  "nome": "Federal Hall (Washington inauguration)",
-                  "coord": {
-                    "lat": 40.7075,
-                    "lng": -74.0103
-                  }
-                },
-                {
-                  "n": 3,
-                  "nome": "NYSE - New York Stock Exchange (11 Wall St)",
-                  "coord": {
-                    "lat": 40.7068,
-                    "lng": -74.0113
-                  }
-                },
-                {
-                  "n": 4,
-                  "nome": "Charging Bull (Bowling Green)",
-                  "coord": {
-                    "lat": 40.7055,
-                    "lng": -74.0134
-                  }
-                },
-                {
-                  "n": 5,
-                  "nome": "Stone Street (cobblestone histórico)",
-                  "coord": {
-                    "lat": 40.7044,
-                    "lng": -74.0114
-                  }
-                },
-                {
-                  "n": 6,
-                  "nome": "Fraunces Tavern (54 Pearl St, 1762)",
-                  "coord": {
-                    "lat": 40.7034,
-                    "lng": -74.0114
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "hora": "15:30",
-          "emoji": "🚕",
-          "periodo": "tarde",
-          "tipo": "transit",
-          "nome": "Uber Lower Manhattan → Greenpoint",
-          "cat": "~25 min · pequena dorme",
           "coord": {
             "lat": 40.7244,
             "lng": -73.9434
