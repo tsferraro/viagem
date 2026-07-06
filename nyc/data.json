@@ -338,7 +338,7 @@
       "temaCurto": "Lower Manhattan",
       "bairro": "Manhattan — Battery + Financial District",
       "grupo": false,
-      "nota": "Combinação 5-em-1 muito eficiente: tudo a 10 min a pé. Battery Park abre o dia com SeaGlass Carousel + ferry grátis vendo Statue · pós-almoço 9/11 Memorial + Oculus completam o circuito Lower Manhattan.",
+      "nota": "Dia adaptado pra CHUVA ☔ · âncoras cobertas (SeaGlass, Museu do Índio, Oculus) seguram o dia seco · o walking tour FiDi tem refúgios no caminho e roda em janelas de estiagem. Staten Island Ferry saiu (sem vista da Statue na chuva) — volta se o tempo abrir.",
       "cor": "#3b82f6",
       "gradA": "#1e3a8a",
       "gradB": "#1d4ed8",
@@ -382,32 +382,121 @@
         },
         {
           "hora": "10:30",
-          "emoji": "⛴️",
+          "emoji": "🪶",
           "periodo": "manha",
           "tipo": "card",
-          "risco": "yellow",
-          "nome": "Staten Island Ferry · vista Statue of Liberty",
-          "cat": "Travessia gratuita · 25 min cada perna",
-          "sobre": "Balsas públicas operando ininterruptamente desde 1817, Manhattan (Whitehall Terminal) ↔ Staten Island (St. George). Atravessa o porto de NY passando MUITO próximo à Statue of Liberty + Ellis Island. **Totalmente GRATUITO desde 1997**. 70.000 passageiros/dia, vibe local (commuters) misturada com turistas. Sem catraca, sem reserva.",
-          "imperdivel": "Os primeiros 7-8 min da travessia, quando a Statue passa a ~600m pelo lado do barco — ângulo lateral icônico, melhor que qualquer foto",
+          "risco": "green",
+          "nome": "Museu Nacional do Índio Americano (1 Bowling Green)",
+          "cat": "Smithsonian · grátis · no Custom House de 1907",
+          "sobre": "Âncora anti-chuva do dia: <strong>entrada gratuita</strong> e instalado dentro do <strong>Alexander Hamilton U.S. Custom House</strong> (1907), obra-prima Beaux-Arts do arquiteto Cass Gilbert (o mesmo do Woolworth Building). O Smithsonian ocupa o prédio desde 1994 com arte, têxteis e cultura viva dos povos nativos das Américas. Fica a 2 min do SeaGlass e é o ponto de partida do walking tour — dá pra emendar sem pegar chuva.",
+          "imperdivel": "A <strong>rotunda oval de 3 andares</strong> com os murais de <em>Reginald Marsh</em> (1937, WPA) no teto, seguindo um navio entrando no porto de NY · e, na escadaria da fachada, as 4 estátuas <em>The Four Continents</em> de <strong>Daniel Chester French</strong> — o mesmo escultor do Lincoln Memorial.",
           "dicas": [
-            "🆓 Totalmente gratuito, sem reserva",
-            "Lado OESTE/DIREITO na ida (Manhattan→Staten): vê Statue + Ellis + Jersey",
-            "Lado LESTE/ESQUERDO na volta: vê Brooklyn Bridge + skyline",
-            "Deck superior tem melhor vista mas mais vento",
-            "Sai a cada 30min de manhã · cumprir o looping: desce em St. George, espera 15min, volta",
-            "Carrinho passa direto, elevador disponível"
+            "Grátis · sem ingresso · abre 10h (qui até 20h)",
+            "Bom pra 3 anos: salas amplas, piso liso pro carrinho, zero fila",
+            "Banheiros limpos dentro · ótimo pit stop antes do walking tour",
+            "Fecha só 25/Dez · aberto normal em julho"
           ],
-          "duracao": "1h-1h15",
-          "custo": "Gratuito",
-          "acessibilidade": "100% acessível",
+          "duracao": "45min-1h",
+          "custo": "Grátis",
+          "acessibilidade": "100% acessível · elevador · carrinho tranquilo (pisos amplos do ex-Custom House)",
           "coord": {
-            "lat": 40.7019,
-            "lng": -74.0125
+            "lat": 40.7041,
+            "lng": -74.0137
           }
         },
         {
-          "hora": "12:00",
+          "hora": "11:15",
+          "emoji": "🚶",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "FiDi Histórico · Wall Street a pé",
+          "cat": "Free walking tour · ~50min · 1.2km · 7 paradas",
+          "sobre": "A <strong>milha fundadora dos EUA</strong> num circuito compacto: do parque mais antigo de NY (Bowling Green, 1733) até a igreja onde Hamilton está enterrado, passando pela taverna onde Washington se despediu do exército e pela rua holandesa mais velha da cidade. Tudo a pé, ~1.2km sem ladeira. Na chuva, roda em janelas de estiagem — e tem refúgios cobertos no caminho (Custom House, Federal Hall, Trinity, e o Oculus no fim).",
+          "imperdivel": "Colar a mão na tumba-pirâmide branca de <strong>Alexander Hamilton</strong> em Trinity e olhar, do outro lado da Broadway, a mesma Wall Street que ele ajudou a inventar como 1º Secretário do Tesouro.",
+          "dicas": [
+            "1️⃣ <strong>Bowling Green</strong> (Broadway & Whitehall) — parque mais antigo de NY (1733). A <em>cerca de ferro original de 1771</em> ainda está lá: repare que faltam as coroas no topo — a multidão as arrancou em 1776 ao derrubar a estátua do rei George III pra fundir em balas.",
+            "2️⃣ <strong>Charging Bull</strong> — o touro de 3.200kg do Arturo Di Modica, largado <em>clandestinamente</em> na frente da Bolsa em 1989 como protesto pós-crash de 87. A cidade tentou remover, a multidão não deixou.",
+            "3️⃣ <strong>Fraunces Tavern</strong> (54 Pearl St, 1762) — na <em>Long Room</em> do 2º andar, em 4/Dez/1783, Washington se despediu dos oficiais do Exército Continental, um a um. Ainda é restaurante + museu (US$8) com um cacho de cabelo de Washington.",
+            "4️⃣ 🔍 <strong>Stone Street</strong> — a <em>rua mais antiga de NY</em>, primeira a ser calçada (1658, pelos holandeses). Pedonal, fachadas do séc. XIX e mesas com toldo — ponto perfeito de almoço/refúgio de chuva.",
+            "5️⃣ <strong>NYSE</strong> (11 Wall St) — fachada neoclássica de 1903 com colunas coríntias e a bandeira gigante. Não entra desde o 11/Set, mas o frontão esculpido vale a foto.",
+            "6️⃣ <strong>Federal Hall</strong> (26 Wall St) — a estátua de Washington marca o <em>exato</em> ponto onde ele tomou posse como 1º Presidente em 30/Abr/1789. O prédio grego é de 1842, mas o chão é o do nascimento do governo americano.",
+            "7️⃣ <strong>Trinity Church</strong> (89 Broadway) — gótica de 1846 (3ª igreja no local desde 1697). No adro à esquerda, a <em>tumba-pirâmide branca de Hamilton</em>, ao lado de Eliza e de Robert Fulton (o do barco a vapor). Daqui, 3 min a pé até o Oculus."
+          ],
+          "duracao": "~50min a pé (+tempo nas paradas)",
+          "custo": "Grátis (museus internos à parte)",
+          "acessibilidade": "Calçadas planas · alguns paralelepípedos na Stone St (carrinho chacoalha mas passa)",
+          "coord": {
+            "lat": 40.7049,
+            "lng": -74.0137
+          },
+          "walkingTours": [
+            {
+              "nome": "FiDi · 🏛️ Milha Fundadora",
+              "descricao": "Bowling Green → Charging Bull → Fraunces → Stone St → NYSE → Federal Hall → Trinity · ~50min · 1.2km",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Bowling Green (Broadway & Whitehall)",
+                  "coord": {
+                    "lat": 40.7049,
+                    "lng": -74.0137
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Charging Bull (Bowling Green)",
+                  "coord": {
+                    "lat": 40.7056,
+                    "lng": -74.0135
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Fraunces Tavern (54 Pearl St)",
+                  "coord": {
+                    "lat": 40.7034,
+                    "lng": -74.0113
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Stone Street (Historic District)",
+                  "coord": {
+                    "lat": 40.7043,
+                    "lng": -74.0111
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "NYSE (11 Wall St)",
+                  "coord": {
+                    "lat": 40.7069,
+                    "lng": -74.0113
+                  }
+                },
+                {
+                  "n": 6,
+                  "nome": "Federal Hall (26 Wall St)",
+                  "coord": {
+                    "lat": 40.7073,
+                    "lng": -74.0102
+                  }
+                },
+                {
+                  "n": 7,
+                  "nome": "Trinity Church (89 Broadway · Hamilton's tomb)",
+                  "coord": {
+                    "lat": 40.7081,
+                    "lng": -74.0122
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:30",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
@@ -439,7 +528,7 @@
           ]
         },
         {
-          "hora": "13:30",
+          "hora": "13:45",
           "emoji": "🕊️",
           "periodo": "tarde",
           "tipo": "card",
@@ -449,6 +538,7 @@
           "sobre": "Construído no lugar exato das Twin Towers, inaugurado em 2011 (10 anos pós-ataque). **Duas piscinas-fonte quadradas de 1 acre cada**, com cascatas de 9m descendo pelos lados, ocupam as pegadas exatas das torres. Os nomes das 2.977 vítimas do 11 de Setembro, das Twin Towers, do Pentágono, do voo 93 e do ataque de 1993 estão inscritos em parapeito de bronze ao redor das piscinas. Espaço público gratuito. Não confundir com o Museum 9/11 (pago, dentro do prédio adjacente).",
           "imperdivel": "A Survivor Tree (pereira que sobreviveu ao atentado) · quando familiares colocam uma rosa branca sobre o nome inscrito (gesto silencioso que humaniza o número 2.977)",
           "dicas": [
+            "☔ Outdoor — na chuva forte, pula e vai direto pro Oculus (coberto, 3 min)",
             "Gratuito + aberto 24h, sem reserva pro memorial outdoor",
             "Banheiros públicos no Oculus a 3 min (próximo prédio)",
             "Adultos com tempo: Museum 9/11 ($26) tem acervo profundo, 2h de visita",
@@ -479,78 +569,15 @@
             "Banheiros públicos limpos no nível inferior",
             "Vista épica da nave principal das escadas rolantes laterais",
             "Apple Store no lado norte (climatizado, banheiro)",
-            "Eataly no shopping ali ao lado tem café/gelato decente",
-            "🗺️ WALKING TOUR WALL STREET (45min · 0.6km · 6 paradas) — ver aba Mapa pra rota completa · history packed mile do distrito financeiro",
-            "1️⃣ **Trinity Church** (igreja atual de 1846, primeira igreja desde 1697) · **tumba de Alexander Hamilton** no cemitério + Robert Fulton (inventor do barco a vapor) + Eliza Hamilton",
-            "2️⃣ **Federal Hall** · estátua do **George Washington** no exato lugar onde tomou posse como **1º Presidente dos EUA em 30/Abril/1789**. Edifício atual de 1842, mas o local é o spot do nascimento do governo americano",
-            "3️⃣ **NYSE - New York Stock Exchange** (11 Wall St) · fachada neoclássica de 1903 · não entra sem credencial desde 9/11, mas a fachada com bandeira gigante vale a foto",
-            "4️⃣ **Charging Bull** (Bowling Green) · escultura de 3.200kg do Arturo Di Modica, instalado **clandestinamente em 1989** como protesto pós-crash de 87 · tradição: tocar os 'Wall Street parts' pra sorte (já entendeu)",
-            "5️⃣ 🔍 **Stone Street** · **rua paralelepípedo mais antiga de Manhattan** (calçada em 1658 pelos holandeses), hoje pedonal, cheia de bares/restaurantes de séc. XIX restaurados — ponto perfeito de almoço/café",
-            "6️⃣ **Fraunces Tavern** (54 Pearl St, 1762) · onde **Washington se despediu dos oficiais do Exército Continental em 4/Dez/1783** · ainda funciona como restaurante + tem museum (US$8) com artefatos da Revolução"
+            "Eataly no shopping ali ao lado tem café/gelato decente"
           ],
-          "duracao": "30-45min (Oculus) + 45min walking tour",
-          "custo": "Gratuito (Oculus + tour)",
+          "duracao": "30-45min",
+          "custo": "Gratuito",
           "acessibilidade": "100% acessível",
           "coord": {
             "lat": 40.7113,
             "lng": -74.0118
-          },
-          "walkingTours": [
-            {
-              "nome": "Wall Street · 🏛️ História Americana",
-              "descricao": "Trinity → Federal Hall → Charging Bull → Stone St → Fraunces · ~45min",
-              "stops": [
-                {
-                  "n": 1,
-                  "nome": "Trinity Church (Hamilton's tomb)",
-                  "coord": {
-                    "lat": 40.7081,
-                    "lng": -74.0124
-                  }
-                },
-                {
-                  "n": 2,
-                  "nome": "Federal Hall (Washington inauguration)",
-                  "coord": {
-                    "lat": 40.7075,
-                    "lng": -74.0103
-                  }
-                },
-                {
-                  "n": 3,
-                  "nome": "NYSE - New York Stock Exchange (11 Wall St)",
-                  "coord": {
-                    "lat": 40.7068,
-                    "lng": -74.0113
-                  }
-                },
-                {
-                  "n": 4,
-                  "nome": "Charging Bull (Bowling Green)",
-                  "coord": {
-                    "lat": 40.7055,
-                    "lng": -74.0134
-                  }
-                },
-                {
-                  "n": 5,
-                  "nome": "Stone Street (cobblestone histórico)",
-                  "coord": {
-                    "lat": 40.7044,
-                    "lng": -74.0114
-                  }
-                },
-                {
-                  "n": 6,
-                  "nome": "Fraunces Tavern (54 Pearl St, 1762)",
-                  "coord": {
-                    "lat": 40.7034,
-                    "lng": -74.0114
-                  }
-                }
-              ]
-            }
-          ]
+          }
         },
         {
           "hora": "15:30",
@@ -2425,6 +2452,30 @@
         "type": "official",
         "label": "brooklynbrewery.com",
         "url": "https://brooklynbrewery.com/visit-us/"
+      }
+    ],
+    "Museu Nacional do Índio Americano (1 Bowling Green)": [
+      {
+        "type": "official",
+        "label": "Smithsonian NMAI",
+        "url": "https://americanindian.si.edu/visit/ny"
+      }
+    ],
+    "FiDi Histórico · Wall Street a pé": [
+      {
+        "type": "official",
+        "label": "Trinity Church",
+        "url": "https://trinitychurchnyc.org/"
+      },
+      {
+        "type": "official",
+        "label": "Federal Hall (NPS)",
+        "url": "https://www.nps.gov/feha/index.htm"
+      },
+      {
+        "type": "official",
+        "label": "Fraunces Tavern Museum",
+        "url": "https://www.frauncestavernmuseum.org/"
       }
     ]
   },
