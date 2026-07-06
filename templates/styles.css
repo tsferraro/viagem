@@ -388,8 +388,15 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
   .hero-title{font-size:31px}
 }
 
+/* ===== STORAGE WARNING ===== */
+#storage-warn{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:#7f1d1d;color:#fff;font-size:13px;line-height:1.4;box-shadow:0 -2px 12px rgba(0,0,0,.35)}
+#storage-warn .sw-txt{flex:1}
+#storage-warn strong{color:#fecaca}
+#storage-warn .sw-x{flex:none;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:15px;line-height:1;padding:6px 9px;border-radius:6px;cursor:pointer}
+
 /* ===== PRINT ===== */
 @media print{
+  #storage-warn{display:none !important}
   .topbar,.tabbar,.daystrip-wrap,.overview,.search-wrap,#map,.map-cta,.footer-legend,.status-bar,.feito-chk,.feito-hint{display:none !important}
   body{background:#fff}
   #app{padding:0;max-width:100%}

@@ -397,8 +397,15 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
   .hero-title{font-size:31px}
 }
 
+/* ===== STORAGE WARNING ===== */
+#storage-warn{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:#7f1d1d;color:#fff;font-size:13px;line-height:1.4;box-shadow:0 -2px 12px rgba(0,0,0,.35)}
+#storage-warn .sw-txt{flex:1}
+#storage-warn strong{color:#fecaca}
+#storage-warn .sw-x{flex:none;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:15px;line-height:1;padding:6px 9px;border-radius:6px;cursor:pointer}
+
 /* ===== PRINT ===== */
 @media print{
+  #storage-warn{display:none !important}
   .topbar,.tabbar,.daystrip-wrap,.overview,.search-wrap,#map,.map-cta,.footer-legend,.status-bar,.feito-chk,.feito-hint{display:none !important}
   body{background:#fff}
   #app{padding:0;max-width:100%}
@@ -3143,6 +3150,33 @@ function getTodayTripIdx(){
 function isFeito(nome){ try{return localStorage.getItem('feito-'+nome)==='done';}catch(e){return false;} }
 function setFeito(nome,val){ try{localStorage.setItem('feito-'+nome,val?'done':'undone');}catch(e){} }
 
+// ===== Storage health · reservas/feitos vivem no localStorage · avisa quando o navegador NÃO vai persistir
+// (modo privado, storage bloqueado, ou navegador embutido em app — que usa storage efêmero e limpa ao fechar).
+// A persistência em si é correta (verificada end-to-end); este aviso cobre o caso "some ao fechar o app".
+function storagePersists(){
+  try{ const k='__probe'; localStorage.setItem(k,'1'); const ok=localStorage.getItem(k)==='1'; localStorage.removeItem(k); return ok; }
+  catch(e){ return false; }
+}
+function isInAppBrowser(){
+  const ua=navigator.userAgent||'';
+  // webviews embutidas (WhatsApp/Instagram/FB/Telegram/etc) costumam descartar o localStorage ao fechar
+  return /(FBAN|FBAV|FB_IAB|Instagram|Line\/|Twitter|WhatsApp|Telegram|Snapchat|Pinterest|MicroMessenger|GSA\/)/i.test(ua);
+}
+function maybeWarnStorage(){
+  const broken=!storagePersists();
+  const inApp=isInAppBrowser();
+  if(!broken && !inApp) return;
+  if(document.getElementById('storage-warn')) return;
+  const msg = broken
+    ? '⚠️ O navegador está em <strong>modo privado</strong> ou com o armazenamento bloqueado — reservas e “feitos” <strong>não vão ficar salvos</strong>. Abra no Safari/Chrome normal.'
+    : '⚠️ Você abriu o link <strong>dentro de um app</strong> (WhatsApp, Instagram…). Assim o progresso <strong>some ao fechar</strong>. Toque em <strong>•••</strong> → “Abrir no Safari/Chrome”, ou Compartilhar → “Adicionar à Tela de Início”.';
+  const bar=document.createElement('div');
+  bar.id='storage-warn';
+  bar.innerHTML='<div class="sw-txt">'+msg+'</div><button class="sw-x" aria-label="Fechar aviso">✕</button>';
+  document.body.appendChild(bar);
+  bar.querySelector('.sw-x').addEventListener('click',()=>bar.remove());
+}
+
 // hora "HH:MM" -> minutos; retorna null se inválido
 function horaToMin(h){ const m=(h||'').match(/(\d{1,2}):(\d{2})/); if(!m) return null; return parseInt(m[1])*60+parseInt(m[2]); }
 
@@ -4070,6 +4104,7 @@ function syncTabbar(){
 }
 
 function init(){
+  maybeWarnStorage();
   document.getElementById('overview').innerHTML=renderOverview();
   
   // Legenda: aberta + desmarcada no 1º acesso · SÓ o "Já li" colapsa · persiste entre sessões

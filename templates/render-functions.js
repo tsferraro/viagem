@@ -41,6 +41,33 @@ function getTodayTripIdx(){
 function isFeito(nome){ try{return localStorage.getItem('feito-'+nome)==='done';}catch(e){return false;} }
 function setFeito(nome,val){ try{localStorage.setItem('feito-'+nome,val?'done':'undone');}catch(e){} }
 
+// ===== Storage health · reservas/feitos vivem no localStorage · avisa quando o navegador NÃO vai persistir
+// (modo privado, storage bloqueado, ou navegador embutido em app — que usa storage efêmero e limpa ao fechar).
+// A persistência em si é correta (verificada end-to-end); este aviso cobre o caso "some ao fechar o app".
+function storagePersists(){
+  try{ const k='__probe'; localStorage.setItem(k,'1'); const ok=localStorage.getItem(k)==='1'; localStorage.removeItem(k); return ok; }
+  catch(e){ return false; }
+}
+function isInAppBrowser(){
+  const ua=navigator.userAgent||'';
+  // webviews embutidas (WhatsApp/Instagram/FB/Telegram/etc) costumam descartar o localStorage ao fechar
+  return /(FBAN|FBAV|FB_IAB|Instagram|Line\/|Twitter|WhatsApp|Telegram|Snapchat|Pinterest|MicroMessenger|GSA\/)/i.test(ua);
+}
+function maybeWarnStorage(){
+  const broken=!storagePersists();
+  const inApp=isInAppBrowser();
+  if(!broken && !inApp) return;
+  if(document.getElementById('storage-warn')) return;
+  const msg = broken
+    ? '⚠️ O navegador está em <strong>modo privado</strong> ou com o armazenamento bloqueado — reservas e “feitos” <strong>não vão ficar salvos</strong>. Abra no Safari/Chrome normal.'
+    : '⚠️ Você abriu o link <strong>dentro de um app</strong> (WhatsApp, Instagram…). Assim o progresso <strong>some ao fechar</strong>. Toque em <strong>•••</strong> → “Abrir no Safari/Chrome”, ou Compartilhar → “Adicionar à Tela de Início”.';
+  const bar=document.createElement('div');
+  bar.id='storage-warn';
+  bar.innerHTML='<div class="sw-txt">'+msg+'</div><button class="sw-x" aria-label="Fechar aviso">✕</button>';
+  document.body.appendChild(bar);
+  bar.querySelector('.sw-x').addEventListener('click',()=>bar.remove());
+}
+
 // hora "HH:MM" -> minutos; retorna null se inválido
 function horaToMin(h){ const m=(h||'').match(/(\d{1,2}):(\d{2})/); if(!m) return null; return parseInt(m[1])*60+parseInt(m[2]); }
 
@@ -968,6 +995,7 @@ function syncTabbar(){
 }
 
 function init(){
+  maybeWarnStorage();
   document.getElementById('overview').innerHTML=renderOverview();
   
   // Legenda: aberta + desmarcada no 1º acesso · SÓ o "Já li" colapsa · persiste entre sessões
