@@ -175,3 +175,6 @@ Padrões pra road-trips de **fim-de-semana com destino único** (festa/evento ·
 - **Skill impeccable = avaliador de design** (`skills/impeccable/`): detector determinístico (`detect.mjs`) + heurísticas de Nielsen. Trend NYC: **31→39/40**.
 - **LIÇÃO (custou retrabalho)**: antes de mexer em URL do Google Maps, **ler `references/` primeiro**. Um sub-agente trocou a rota coords→nomes sem checar o doc, reintroduzindo o bug "nomes erráticos em waypoints" que o §3.7 já resolvia.
 - **Delegação**: sub-agentes se confundem com o próprio histórico em rodadas longas → pra mudança nova, **spawn com contexto limpo + âncoras exatas** > resumir agente antigo.
+
+## Pendências
+- [ ] Propagar o aviso de storage não-persistente (maybeWarnStorage · template) pros outros roteiros: rebuildar corsica, marais, valencia, pais-sardenha via build.py (só NYC foi reconstruído em 2026-07-08).

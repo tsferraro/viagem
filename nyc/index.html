@@ -1365,29 +1365,132 @@ const DAYS = [
   },
   {
     "date": "Qua 8/Jul",
-    "tema": "MOMA + Greenwich Village",
-    "temaCurto": "Greenwich Village",
+    "tema": "Greenwich Village + MOMA",
+    "temaCurto": "Village + MOMA",
     "bairro": "Manhattan — Midtown + Greenwich Village",
     "grupo": false,
-    "nota": "Único dia de Manhattan iconic da esposa antes da família chegar. MOMA pela manhã (foco em destaques) + Greenwich Village walking à tarde (Washington Sq splash pad pra distração da pequena). Pequena vai no carrinho · pausas em cafés.",
+    "nota": "Dia INVERTIDO (↩️): Greenwich Village de manhã, MOMA ao meio-dia (chegada 12:30-13:00). Entra pela Union Square (greenmarket na quarta) e desce a pé até Washington Square. Walking tour reformulado — fora os pontos de série, dentro o que é bonito + lojas de design + o café histórico Caffe Reggio. Tarde livre: almoço no Midtown e retirada do notebook na Apple SoHo. Pequena no carrinho · splash pad em Washington Sq pra distração.",
     "cor": "#6366f1",
     "gradA": "#312e81",
     "gradB": "#4338ca",
     "stops": [
       {
-        "hora": "9:30",
-        "emoji": "🚕",
+        "hora": "10:15",
+        "emoji": "🚇",
         "periodo": "manha",
         "tipo": "transit",
-        "nome": "Uber Greenpoint → Midtown",
-        "cat": "~25 min · entrada MOMA 53rd & 5th",
+        "nome": "Metrô Greenpoint → Union Square",
+        "cat": "[G]→[L] ou Uber · ~25min · desce em Union Sq (14th St)",
+        "coord": {
+          "lat": 40.7359,
+          "lng": -73.9911
+        }
+      },
+      {
+        "hora": "10:45",
+        "emoji": "🚶",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "nome": "Village · Bonito, Design & Café a pé",
+        "cat": "Walking tour · ~1h30 · 1.6km · 7 paradas",
+        "sobre": "A versão do Village pra quem <strong>não</strong> quer ponto de série/turistada: da Union Square (greenmarket às quartas!) descendo até Washington Square e serpenteando o West Village atrás do que é <strong>genuinamente bonito</strong> — becos de paralelepípedo escondidos, a livraria mais icônica de NY, uma biblioteca gótica de tirar o fôlego, boas lojas de design e o café histórico onde nasceu o cappuccino americano.",
+        "imperdivel": "<strong>Washington Mews</strong>: o beco de cavalariças de 1830 em paralelepípedo, portões de ferro fechados e hera nas casinhas — a foto mais bonita e menos óbvia do Village, meia quadra ao norte do parque.",
+        "dicas": [
+          "1️⃣ <strong>Union Square</strong> — hoje é quarta, então o <em>greenmarket</em> está montado (140+ produtores). Estátua do Lincoln, degraus sempre vivos. Desça pela Broadway.",
+          "2️⃣ <strong>Strand</strong> (828 Broadway) — <em>“18 milhas de livros”</em> desde 1927, a maior livraria de usados do mundo. Mesas de saldo na calçada e os carrinhos vermelhos icônicos.",
+          "3️⃣ <strong>Washington Mews</strong> (entre 5th Ave e University Pl) — beco privado de cavalariças (1830), paralelepípedo e hera. Espia pelos portões · é a parada mais fotogênica.",
+          "4️⃣ <strong>Washington Square Arch</strong> — arco de mármore de 1892 (Stanford White). Fonte com <em>splash pad</em> (alívio pra pequena no calor), pianistas e artistas de rua no entorno.",
+          "5️⃣ ☕ <strong>Caffe Reggio</strong> (119 MacDougal, 1927) — trouxe o <em>1º cappuccino aos EUA</em>; máquina de espresso original de 1902 no fundo, telas renascentistas, mesas de mármore. É O café da parada.",
+          "6️⃣ 🛍️ <strong>Greenwich Letterpress</strong> (15 Christopher) — papelaria/letterpress de irmãs desde 2006, design lindo. No caminho, mais design: <em>Bookmarc</em> (400 Bleecker) e as vitrines da Bleecker St.",
+          "7️⃣ <strong>Jefferson Market Library</strong> (425 6th Ave) — ex-tribunal gótico-vitoriano de 1877 (Calvert Vaux), torre de relógio e vitrais; hoje biblioteca pública, entra pra ver o interior. Daqui, metrô [F/M] no W 4th direto pro MOMA."
+        ],
+        "duracao": "~1h30 (com café + pausas)",
+        "custo": "Grátis (café/compras à parte)",
+        "acessibilidade": "Calçadas planas · carrinho ok · Washington Mews é só olhar do portão · Jefferson Market tem degraus na entrada",
+        "coord": {
+          "lat": 40.7359,
+          "lng": -73.9911
+        },
+        "walkingTours": [
+          {
+            "nome": "Village · 🎨 Bonito, Design & Café",
+            "descricao": "Union Sq → Strand → Washington Mews → Arch → Caffe Reggio → Greenwich Letterpress → Jefferson Market · ~1h30 · 1.6km",
+            "stops": [
+              {
+                "n": 1,
+                "nome": "Union Square (14th St · Greenmarket)",
+                "coord": {
+                  "lat": 40.7359,
+                  "lng": -73.9911
+                }
+              },
+              {
+                "n": 2,
+                "nome": "Strand Bookstore (828 Broadway)",
+                "coord": {
+                  "lat": 40.7332,
+                  "lng": -73.9908
+                }
+              },
+              {
+                "n": 3,
+                "nome": "Washington Mews (University Pl)",
+                "coord": {
+                  "lat": 40.7314,
+                  "lng": -73.9953
+                }
+              },
+              {
+                "n": 4,
+                "nome": "Washington Square Arch",
+                "coord": {
+                  "lat": 40.7308,
+                  "lng": -73.9974
+                }
+              },
+              {
+                "n": 5,
+                "nome": "Caffe Reggio (119 MacDougal)",
+                "coord": {
+                  "lat": 40.7297,
+                  "lng": -73.9988
+                }
+              },
+              {
+                "n": 6,
+                "nome": "Greenwich Letterpress (15 Christopher St)",
+                "coord": {
+                  "lat": 40.7341,
+                  "lng": -74.0005
+                }
+              },
+              {
+                "n": 7,
+                "nome": "Jefferson Market Library (425 6th Ave)",
+                "coord": {
+                  "lat": 40.7346,
+                  "lng": -73.9991
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "hora": "12:15",
+        "emoji": "🚇",
+        "periodo": "tarde",
+        "tipo": "transit",
+        "nome": "Metrô Village → MOMA",
+        "cat": "[F/M] W 4th → 47-50 Rockefeller · ~15min · MOMA 2 quadras",
         "coord": {
           "lat": 40.7614,
           "lng": -73.9776
         }
       },
       {
-        "hora": "10:00",
+        "hora": "12:45",
         "emoji": "🎨",
         "periodo": "manha",
         "tipo": "card",
@@ -1414,11 +1517,11 @@ const DAYS = [
         }
       },
       {
-        "hora": "12:30",
+        "hora": "14:15",
         "emoji": "🍽️",
         "periodo": "tarde",
         "tipo": "opcoes",
-        "nome": "Almoço · Midtown",
+        "nome": "Almoço · Midtown (pós-MOMA)",
         "cat": "3 opções perto do MOMA",
         "coord": {
           "lat": 40.7619,
@@ -1446,196 +1549,13 @@ const DAYS = [
         ]
       },
       {
-        "hora": "13:30",
-        "emoji": "🚕",
-        "periodo": "tarde",
-        "tipo": "transit",
-        "nome": "Uber Midtown → Washington Square",
-        "cat": "~15 min",
-        "coord": {
-          "lat": 40.7308,
-          "lng": -73.9973
-        }
-      },
-      {
-        "hora": "13:45",
-        "emoji": "🌳",
-        "periodo": "tarde",
-        "tipo": "card",
-        "risco": "green",
-        "nome": "Washington Square Park",
-        "cat": "Coração de Greenwich Village · NYU",
-        "sobre": "Praça pública desde 1828, construída sobre um antigo cemitério de epidemia de febre amarela (~20.000 corpos enterrados embaixo). O **Washington Square Arch** (1892) é réplica do Arc de Triomphe parisiense. Hoje é coração do Greenwich Village + ponto de encontro de estudantes da NYU. Atmosfera bohemia: músicos de rua, jogadores de xadrez profissionais, performers.",
-        "imperdivel": "O arco enquadrando a Empire State Building no fim da 5th Avenue · **a fonte central liga sprinklers em julho — splash pad pra pequena**",
-        "dicas": [
-          "Fonte central = splash pad gratuito improvisado em julho",
-          "Carrinho passa por toda a praça (todos os caminhos pavimentados)",
-          "Banheiros públicos no canto sudeste",
-          "Mesas de xadrez no canto sudoeste (jogadores profissionais $5/partida)",
-          "Café-bookstore Three Lives & Co a 4 min — uma das melhores livrarias de NY"
-        ],
-        "duracao": "45min",
-        "custo": "Gratuito",
-        "acessibilidade": "100% acessível",
-        "coord": {
-          "lat": 40.7308,
-          "lng": -73.9973
-        }
-      },
-      {
-        "hora": "14:45",
-        "emoji": "🚶",
-        "periodo": "tarde",
-        "tipo": "card",
-        "risco": "green",
-        "nome": "Greenwich Village walking",
-        "cat": "Free walking tour · ~1h30 · 2km · curiosidades + hidden gems",
-        "sobre": "Único bairro de Manhattan que **escapa da grade ortogonal** — ruas tortas e curtas, brownstones, prédios de 3-5 andares (raríssimo em Manhattan). 3 camadas de história sobrepostas: **Bohemian (1910s)**, **Beat/Folk (50s-60s)** — Bob Dylan, Hendrix, Joni Mitchell começaram aqui — e **Stonewall LGBTQ+ (1969)**. Rota sugerida abaixo cobre 10 paradas em ~1h30 de Washington Square até Christopher St.",
-        "imperdivel": "**Caffe Reggio** (MacDougal) — desde 1927, **primeira cafeteria dos EUA a servir cappuccino**. Bob Dylan tirou aqui a foto com Suze Rotolo que virou capa de 'The Freewheelin' Bob Dylan' (1963)",
-        "dicas": [
-          "🗺️ ROTEIRO SUGERIDO (1h30 · 2km · ponto a ponto)",
-          "1️⃣ **Washington Sq Arch** — réplica do Arc de Triomphe (1892). Curiosidade: sob a praça estão ~20.000 corpos enterrados (cemitério de febre amarela 1797-1825)",
-          "2️⃣ Walk sul pela **MacDougal St** → #119 **Caffe Reggio** · primeira cafeteria EUA a servir cappuccino (1927). Pausa pra café aqui é parte da experiência",
-          "3️⃣ #117 **Comedy Cellar** · Louis CK, Chris Rock, Seinfeld testam material toda semana. Larry David filmou Curb Your Enthusiasm aqui",
-          "4️⃣ #144 MacDougal · **Bob Dylan's apartment** (1961-64) — onde escreveu 'Blowin' in the Wind'. Plaque na fachada",
-          "5️⃣ Cross Bleecker → **Joe's Pizza** (7 Carmine St) · fatia $3 desde 1975. **Apareceu em Spider-Man 2** (2004) — placa idêntica até hoje",
-          "6️⃣ Continue Bleecker oeste → #254 **Murray's Cheese** (1940) · loja de queijos mais antiga de NY. **Degustação grátis no balcão**",
-          "7️⃣ #385 Bleecker · primeira loja **Marc Jacobs** (1986)",
-          "8️⃣ #401 Bleecker · **Magnolia Bakery** · cupcakes Sex and the City (Ep. 3.05, 2000). Honestidade: lotada de turista, pula sem culpa",
-          "9️⃣ 🔍 **HIDDEN GEM** · **Patchin Place** (entre 6th Ave e Greenwich, off W 10th St) · viela com 10 casas em fila. **e.e. cummings + Marlon Brando moraram aqui**. Portão tranca mas dá pra ver de fora",
-          "🔟 **Stonewall Inn** (53 Christopher St) · monumento nacional desde 2016 · marco zero do movimento LGBTQ+ (motim de 28/Jun/1969)",
-          "1️⃣1️⃣ 🔍 **HIDDEN GEM** · **AIDS Memorial** (Greenwich Ave & 12th St) · triângulo aço inox 5m no antigo St. Vincent's Hospital, epicentro AIDS nos anos 80",
-          "1️⃣2️⃣ 🔍 **HIDDEN GEM** · **Northern Dispensary** (152 Waverly Pl) · clínica médica de 1831 onde **Edgar Allan Poe foi tratado**. Prédio triangular único",
-          "⏱️ Tempo total: 1h30 caminhando devagar com pausas. Pausa pra café no Caffe Reggio recomendada",
-          "♿ Calçadas estreitas, alguns trechos com pedra portuguesa — carrinho passa mas mais lento",
-          "🛝 Se a pequena cansar: **Bleecker Playground** (Hudson & Bleecker) tem sprinklers no verão"
-        ],
-        "duracao": "1h30-2h",
-        "custo": "Gratuito + café/pizza opcional",
-        "acessibilidade": "Calçadas estreitas em trechos",
-        "coord": {
-          "lat": 40.7325,
-          "lng": -74.003
-        },
-        "walkingTours": [
-          {
-            "nome": "Parte 1 · 🎶 Bohemian Trail (Folk + Comedy)",
-            "descricao": "Washington Sq → MacDougal → Bleecker · ~40min",
-            "stops": [
-              {
-                "n": 1,
-                "nome": "Washington Sq Arch",
-                "coord": {
-                  "lat": 40.7308,
-                  "lng": -73.9974
-                }
-              },
-              {
-                "n": 2,
-                "nome": "Caffe Reggio (119 MacDougal)",
-                "coord": {
-                  "lat": 40.7297,
-                  "lng": -73.9988
-                }
-              },
-              {
-                "n": 3,
-                "nome": "Comedy Cellar (117 MacDougal)",
-                "coord": {
-                  "lat": 40.7296,
-                  "lng": -73.9988
-                }
-              },
-              {
-                "n": 4,
-                "nome": "Bob Dylan's apartment (144 MacDougal)",
-                "coord": {
-                  "lat": 40.7293,
-                  "lng": -73.999
-                }
-              },
-              {
-                "n": 5,
-                "nome": "Joe's Pizza (7 Carmine St)",
-                "coord": {
-                  "lat": 40.7305,
-                  "lng": -74.002
-                }
-              },
-              {
-                "n": 6,
-                "nome": "Murray's Cheese (254 Bleecker)",
-                "coord": {
-                  "lat": 40.7314,
-                  "lng": -74.0033
-                }
-              }
-            ]
-          },
-          {
-            "nome": "Parte 2 · 🌈 Stonewall + Hidden Gems",
-            "descricao": "Bleecker → Christopher → Greenwich Ave · ~40min",
-            "stops": [
-              {
-                "n": 1,
-                "nome": "Marc Jacobs original (385 Bleecker)",
-                "coord": {
-                  "lat": 40.7341,
-                  "lng": -74.0044
-                }
-              },
-              {
-                "n": 2,
-                "nome": "Magnolia Bakery (401 Bleecker)",
-                "coord": {
-                  "lat": 40.735,
-                  "lng": -74.0049
-                }
-              },
-              {
-                "n": 3,
-                "nome": "Patchin Place (off W 10th St)",
-                "coord": {
-                  "lat": 40.7345,
-                  "lng": -74.0017
-                }
-              },
-              {
-                "n": 4,
-                "nome": "Stonewall Inn (53 Christopher)",
-                "coord": {
-                  "lat": 40.7339,
-                  "lng": -74.0026
-                }
-              },
-              {
-                "n": 5,
-                "nome": "AIDS Memorial (Greenwich Ave & 12th)",
-                "coord": {
-                  "lat": 40.7372,
-                  "lng": -74.0009
-                }
-              },
-              {
-                "n": 6,
-                "nome": "Northern Dispensary (152 Waverly Pl)",
-                "coord": {
-                  "lat": 40.7346,
-                  "lng": -74.0009
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "hora": "16:00",
+        "hora": "15:30",
         "emoji": "🍎",
         "periodo": "tarde",
         "tipo": "card",
         "risco": "green",
         "nome": "Apple SoHo (103 Prince St)",
-        "cat": "Retirada do notebook · loja histórica desde 2002",
+        "cat": "Retirada do notebook · loja histórica desde 2002 · Uber Midtown→SoHo ~15min",
         "sobre": "Loja emblemática da Apple, aberta em <strong>2002</strong> num antigo prédio de correios de SoHo — foi a <strong>31ª loja da Apple no mundo</strong> e a primeira flagship de Manhattan. Fica no coração de SoHo, a poucos quarteirões ao sul da Washington Square, cercada de arquitetura cast-iron do século 19.",
         "imperdivel": "Balcão de <em>pickup</em> nos fundos — retirada de pedido online é separada da fila de vendas, costuma ser rápida",
         "dicas": [
@@ -1654,12 +1574,12 @@ const DAYS = [
         }
       },
       {
-        "hora": "16:45",
+        "hora": "16:15",
         "emoji": "🚕",
         "periodo": "tarde",
         "tipo": "transit",
-        "nome": "Uber Greenwich Village → Greenpoint",
-        "cat": "~25 min · pequena dorme",
+        "nome": "Uber SoHo → Greenpoint",
+        "cat": "~20min · pequena dorme",
         "coord": {
           "lat": 40.7244,
           "lng": -73.9434
@@ -2795,30 +2715,6 @@ const LINKS_MAP = {
       "url": "https://www.timeout.com/newyork/museums/museum-of-modern-art-moma"
     }
   ],
-  "Washington Square Park": [
-    {
-      "type": "official",
-      "label": "Parks NYC",
-      "url": "https://www.nycgovparks.org/parks/washington-square-park"
-    },
-    {
-      "type": "review",
-      "label": "Atlas Obscura",
-      "url": "https://www.atlasobscura.com/places/washington-square-park"
-    }
-  ],
-  "Greenwich Village walking": [
-    {
-      "type": "review",
-      "label": "NYT 36 Hours",
-      "url": "https://www.nytimes.com/interactive/2023/05/04/travel/things-to-do-greenwich-village.html"
-    },
-    {
-      "type": "review",
-      "label": "Time Out NY",
-      "url": "https://www.timeout.com/newyork/things-to-do/best-things-to-do-in-greenwich-village"
-    }
-  ],
   "The Vessel · Hudson Yards": [
     {
       "type": "official",
@@ -3006,6 +2902,23 @@ const LINKS_MAP = {
       "type": "official",
       "label": "Century 21",
       "url": "https://c21stores.com/"
+    }
+  ],
+  "Village · Bonito, Design & Café a pé": [
+    {
+      "type": "official",
+      "label": "Strand",
+      "url": "https://www.strandbooks.com/"
+    },
+    {
+      "type": "official",
+      "label": "Greenwich Letterpress",
+      "url": "https://greenwichletterpress.com/"
+    },
+    {
+      "type": "official",
+      "label": "Jefferson Market Library",
+      "url": "https://www.nypl.org/locations/jefferson-market"
     }
   ]
 };
