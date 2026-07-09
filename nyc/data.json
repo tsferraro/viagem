@@ -121,11 +121,11 @@
             "Outros stands: Mao's Bao, Yakitori Tatsu, Coco Bread jamaicano"
           ],
           "duracao": "1h-1h30",
-          "custo": "$40-60 família",
+          "custo": "$40-60 família (jul/2026)",
           "acessibilidade": "Plano, gramado parcial",
           "coord": {
-            "lat": 40.7239,
-            "lng": -73.961
+            "lat": 40.722,
+            "lng": -73.9626
           }
         },
         {
@@ -158,7 +158,7 @@
             "WiFi público funciona — útil pra acompanhar contagem regressiva NBC"
           ],
           "duracao": "3h30 até os fogos",
-          "custo": "~$30 lanches",
+          "custo": "~$30 lanches (jul/2026)",
           "acessibilidade": "Carrinho ok no pier",
           "coord": {
             "lat": 40.7298,
@@ -184,7 +184,7 @@
           ],
           "duracao": "25min show + 30min volta",
           "custo": "Gratuito",
-          "acessibilidade": "Pier acessível",
+          "acessibilidade": "Pier acessível · carrinho ok, mas MUITA gente — chegue cedo pra garantir lugar plano",
           "coord": {
             "lat": 40.7298,
             "lng": -73.9608
@@ -291,7 +291,7 @@
             "Sem cozinha própria — petiscos/food trucks variam; o jantar é logo depois"
           ],
           "duracao": "1h-1h30",
-          "custo": "$8-10/chope",
+          "custo": "$8-10/chope (jul/2026)",
           "acessibilidade": "Térreo acessível",
           "coord": {
             "lat": 40.7217,
@@ -394,14 +394,14 @@
           "dicas": [
             "☔ Outdoor — na chuva forte, pula e vai direto pro Oculus (coberto, 3 min)",
             "Gratuito + aberto 24h, sem reserva pro memorial outdoor",
-            "Banheiros públicos no Oculus a 3 min (próximo prédio)",
+            "Banheiros públicos no Oculus (~250m · prédio ao lado)",
             "Adultos com tempo: Museum 9/11 ($26) tem acervo profundo, 2h de visita",
             "Atmosfera é solene — não fazer selfies sorrindo",
             "Carrinho 100% ok"
           ],
           "duracao": "45min-1h",
           "custo": "Gratuito",
-          "acessibilidade": "100% acessível",
+          "acessibilidade": "100% acessível · piso plano em granito · sem degraus · carrinho livre entre as duas piscinas · rampas em todos os acessos",
           "coord": {
             "lat": 40.7115,
             "lng": -74.0134
@@ -530,8 +530,8 @@
           "nome": "Almoço · Lower Manhattan",
           "cat": "3 opções a 5-10 min do ferry",
           "coord": {
-            "lat": 40.7113,
-            "lng": -74.014
+            "lat": 40.7128,
+            "lng": -74.0145
           },
           "opcoes": [
             {
@@ -568,15 +568,15 @@
             "$6 por volta · cartão",
             "Aberto 10h-22h em julho",
             "Battery Park inteiro vale 30 min: playground, vista Statue of Liberty",
-            "Banheiros públicos limpos no Battery Maritime Building (próximo)",
+            "Banheiros públicos limpos no Battery Maritime Building (~200m)",
             "Fila menor às 10h na abertura (chegar antes do ferry)"
           ],
           "duracao": "30-45min",
-          "custo": "$24 família 3 voltas",
+          "custo": "$24 família 3 voltas (jul/2026)",
           "acessibilidade": "Plataforma acessível",
           "coord": {
-            "lat": 40.7022,
-            "lng": -74.015
+            "lat": 40.7038,
+            "lng": -74.0166
           }
         },
         {
@@ -636,7 +636,7 @@
           ],
           "duracao": "1h30-2h",
           "custo": "$55 família (pequena grátis)",
-          "acessibilidade": "100% acessível",
+          "acessibilidade": "100% acessível · carrinho tranquilo nas trilhas do zoo",
           "coord": {
             "lat": 40.7676,
             "lng": -73.9719
@@ -702,7 +702,7 @@
           "custo": "Gratuito",
           "acessibilidade": "100% acessível, rampas",
           "coord": {
-            "lat": 40.774,
+            "lat": 40.7739,
             "lng": -73.9712
           },
           "walkingTours": [
@@ -781,7 +781,7 @@
             "Roosevelt Island tem o Four Freedoms Park (FDR memorial) — opcional 30 min se sobrar tempo"
           ],
           "duracao": "30-45min",
-          "custo": "$11.60 casal",
+          "custo": "$11.60 casal (jul/2026)",
           "acessibilidade": "100% acessível",
           "coord": {
             "lat": 40.7615,
@@ -981,7 +981,7 @@
             "Aberto 10h30-17h30 · quarta abre 10h30 ✓"
           ],
           "duracao": "2h-2h30",
-          "custo": "$60 casal",
+          "custo": "$60 casal (jul/2026)",
           "acessibilidade": "100% acessível, elevadores",
           "coord": {
             "lat": 40.7614,
@@ -1041,8 +1041,8 @@
           "custo": "—",
           "acessibilidade": "Elevador entre os 2 andares · entrada nivelada pela Prince St",
           "coord": {
-            "lat": 40.7251,
-            "lng": -73.999
+            "lat": 40.7247,
+            "lng": -73.9982
           }
         },
         {
@@ -1320,8 +1320,8 @@
             "Picnic Performances grátis sex 19h em julho-ago — bedtime da pequena"
           ],
           "duracao": "30-45min",
-          "custo": "$8 1 volta no carrossel",
-          "acessibilidade": "100% acessível",
+          "custo": "$8 1 volta no carrossel (jul/2026)",
+          "acessibilidade": "100% acessível · caminhos planos · carrinho livre",
           "coord": {
             "lat": 40.7536,
             "lng": -73.9832
@@ -1355,7 +1355,7 @@
           ],
           "duracao": "1h-1h30 (TOR) + 45min walking tour",
           "custo": "Já pago",
-          "acessibilidade": "100% acessível",
+          "acessibilidade": "Acessível · elevadores até o deck de observação · carrinho sobe",
           "coord": {
             "lat": 40.7587,
             "lng": -73.9787
@@ -1482,11 +1482,12 @@
           ],
           "duracao": "2h30",
           "custo": "$60 casal (pequena grátis)",
-          "acessibilidade": "100% acessível",
+          "acessibilidade": "100% acessível · elevadores entre as alas · carrinho ok",
           "coord": {
             "lat": 40.7794,
             "lng": -73.9632
-          }
+          },
+          "reserva": "reservado"
         },
         {
           "hora": "16:30",
@@ -1522,7 +1523,7 @@
           "cat": "~30 min · entrada AMNH 79th St",
           "coord": {
             "lat": 40.7813,
-            "lng": -73.974
+            "lng": -73.9737
           }
         },
         {
@@ -1531,7 +1532,7 @@
           "periodo": "manha",
           "tipo": "card",
           "risco": "red",
-          "reserva": "pendente",
+          "reserva": "reservado",
           "nome": "American Museum of Natural History",
           "cat": "Museu de história natural · desde 1869",
           "sobre": "Um dos maiores museus de história natural do mundo, fundado em 1869, com 32 milhões de espécimes em 45 salas permanentes. Conhecido pelo **Hall of Saurischian Dinosaurs (T-Rex original, Apatossauro)**, pela baleia azul de 28m suspensa no teto do Milstein Hall, e pela Rose Center for Earth and Space (planetário dentro de cubo de vidro). Cenário do filme Night at the Museum.",
@@ -1546,11 +1547,11 @@
             "Banheiros: 1º andar perto entrada principal, 4º andar perto dinossauros"
           ],
           "duracao": "2h30",
-          "custo": "$72 família",
-          "acessibilidade": "100% acessível",
+          "custo": "$72 família (jul/2026)",
+          "acessibilidade": "100% acessível · elevadores · carrinho tranquilo (museu enorme, planeje paradas)",
           "coord": {
             "lat": 40.7813,
-            "lng": -73.974
+            "lng": -73.9737
           }
         },
         {
@@ -1561,8 +1562,8 @@
           "nome": "Almoço · Upper West Side",
           "cat": "3 opções perto do AMNH",
           "coord": {
-            "lat": 40.78,
-            "lng": -73.981
+            "lat": 40.7805,
+            "lng": -73.9812
           },
           "opcoes": [
             {
@@ -1602,24 +1603,20 @@
           "emoji": "🐝",
           "periodo": "manha",
           "tipo": "card",
-          "risco": "yellow",
-          "reserva": "pendente",
-          "nome": "The Vessel · Hudson Yards",
-          "cat": "Escultura escalável · timed entry",
-          "sobre": "Estrutura de 45m projetada por Thomas Heatherwick em 2019. **154 lances de escada interconectados, 80 patamares, 2.500 degraus**. Aço cor cobre, formato hexagonal de favo de mel. Após fechamento longo por incidentes, **reabriu em março 2026** com mesh de segurança. Andares superiores hoje têm acesso parcial. Localização: Hudson Yards (extremidade norte da High Line).",
-          "imperdivel": "A vista do topo (até onde dá): skyline Hudson + West Side + High Line abaixo · arquitetura de dentro pra fora",
+          "risco": "green",
+          "nome": "The Vessel · Hudson Yards (visto de baixo)",
+          "cat": "Escultura favo de mel · a gente vê de baixo (não sobe)",
+          "sobre": "Estrutura de 45m projetada por <strong>Thomas Heatherwick</strong> (2019): 154 lances de escada interconectados, 2.500 degraus, em aço cor-de-cobre num formato hexagonal de favo de mel. A gente <strong>não sobe</strong> — mas de baixo a peça já impressiona, refletindo o céu e a skyline de Hudson Yards ao redor.",
+          "imperdivel": "Ver o favo de mel de baixo pra cima, no centro da praça — a geometria repetida some no alto e o aço reflete a luz do dia. Foto garantida sem pagar ticket.",
           "dicas": [
-            "⚠️ TICKET TIMED ENTRY obrigatório em vesselnyc.com",
-            "$10 adulto · crianças <5 grátis (mas precisa ticket)",
-            "Criança 3 anos não anda sozinha — adulto carrega no colo OU fica embaixo com carrinho (estrutura impressionante de baixo também)",
-            "Elevador limitado (só algumas áreas)",
-            "Não pode entrar com comida/bebida",
-            "Carrinho fica no térreo",
-            "Banheiros próximos no Hudson Yards mall"
+            "Acesso à praça é livre e grátis — não precisa de ticket pra ver de baixo",
+            "Fica na extremidade norte da High Line (emenda direto no passeio)",
+            "Banheiros no Hudson Yards mall, a 2 min (coberto)",
+            "Café/gelato no mall se a pequena precisar de pausa"
           ],
-          "duracao": "30-45min",
-          "custo": "$30-40 grupo",
-          "acessibilidade": "Térreo acessível · elevador parcial",
+          "duracao": "15-20min (só de baixo)",
+          "custo": "Grátis",
+          "acessibilidade": "Praça 100% acessível · piso plano · carrinho livre",
           "coord": {
             "lat": 40.7539,
             "lng": -74.0021
@@ -1652,7 +1649,7 @@
           ],
           "duracao": "45min-1h (caminhada) + paradas annotations",
           "custo": "Gratuito",
-          "acessibilidade": "5 elevadores",
+          "acessibilidade": "Piso plano e contínuo · carrinho 100% ok · 5 elevadores de acesso (30th/23rd/16th/14th/Gansevoort) · bancos frequentes pra pausa · pouca sombra, leve água",
           "coord": {
             "lat": 40.7559,
             "lng": -74.0042
@@ -1801,10 +1798,10 @@
           ],
           "duracao": "1h-1h15 (BBP) + 40min walking tour",
           "custo": "Gratuito",
-          "acessibilidade": "100% acessível",
+          "acessibilidade": "100% acessível · caminhos planos à beira-rio · carrinho livre",
           "coord": {
             "lat": 40.7016,
-            "lng": -73.997
+            "lng": -73.9968
           },
           "walkingTours": [
             {
@@ -2011,7 +2008,7 @@
       "temaCurto": "Bedford Ave",
       "bairro": "Williamsburg + Greenpoint · saída noturna",
       "grupo": true,
-      "nota": "Voo 23h EWR · sair de Greenpoint 19h30. Manhã leve em Williamsburg · sesta · arrumar mala · embarque. Plano enxuto deliberadamente: voo internacional + criança pequena exige reserva de energia.",
+      "nota": "Despedida: brunch em Williamsburg, um giro rápido de NYC Ferry no East River e o <strong>Intrepid</strong> (reservado) fechando com chave de ouro pra pequena. Volta pra base à tarde pra arrumar mala e sesta antes do voo noturno. Dia com bastante deslocamento — se apertar, o ferry é o item cortável.",
       "cor": "#475569",
       "gradA": "#1e293b",
       "gradB": "#334155",
@@ -2067,7 +2064,7 @@
             "Saída do Pier 11 Wall St: 5 min do Oculus se quiser parada extra"
           ],
           "duracao": "1h-1h30",
-          "custo": "$16 casal",
+          "custo": "$16 casal (jul/2026)",
           "acessibilidade": "100% acessível",
           "coord": {
             "lat": 40.7351,
@@ -2075,32 +2072,44 @@
           }
         },
         {
-          "hora": "12:00",
-          "emoji": "🛍️",
+          "hora": "11:15",
+          "emoji": "🚕",
           "periodo": "tarde",
-          "tipo": "card",
-          "risco": "green",
-          "nome": "Bedford Ave · shopping de despedida",
-          "cat": "Williamsburg principal · souvenirs locais",
-          "sobre": "Bedford Avenue é a rua principal de Williamsburg — entre N 5th e N 12th tem a maior densidade de lojinhas locais, cafés, vintage shops, livrarias. Vantagem pra despedida: souvenirs autênticos Brooklyn (não 'I ♥ NY' genérico de Times Square). Caminhada de ~1h cobre tudo.",
-          "imperdivel": "Mast Brothers Chocolate · chocolate artesanal de Brooklyn, embalagens icônicas, ótimo presente pra trazer · Spoonbill & Sugartown · livraria icônica de Williamsburg (livros raros + arte)",
-          "dicas": [
-            "Mast Brothers Chocolate (111 N 3rd St) — tour de fábrica grátis se rolar",
-            "Spoonbill & Sugartown Booksellers — livros usados raros + arte. Compra peça única",
-            "Brooklyn Industries — camisetas/sacolas com brand local",
-            "Bedford Cheese Shop — queijos artesanais locais (transporte: cuidado com aduana FR)",
-            "Strand Bookstore tem outlet em Williamsburg, mas a flagship em Union Square é melhor (se sobrar tempo num dia anterior)"
-          ],
-          "duracao": "1h-1h30",
-          "custo": "Conforme compras",
-          "acessibilidade": "Calçadas Williamsburg ok pra carrinho",
+          "tipo": "transit",
+          "nome": "Uber Greenpoint → Intrepid",
+          "cat": "~30min · Pier 86",
           "coord": {
-            "lat": 40.7177,
-            "lng": -73.9569
+            "lat": 40.7645,
+            "lng": -73.9997
           }
         },
         {
-          "hora": "13:30",
+          "hora": "12:00",
+          "emoji": "✈️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "reserva": "reservado",
+          "nome": "Intrepid Museum (Pier 86, W 46th St)",
+          "cat": "Porta-aviões + Space Shuttle + submarino · reservado",
+          "sobre": "Museu montado no porta-aviões <strong>USS Intrepid</strong> (1943, veterano da 2ª Guerra e navio de recuperação de cápsulas da NASA), ancorado no Pier 86. Abriga o <strong>Space Shuttle Enterprise</strong> (o protótipo original — único no leste dos EUA), o submarino <strong>USS Growler</strong> (único submarino de mísseis aberto ao público) e um <strong>Concorde</strong>, o avião comercial mais rápido já feito.",
+          "imperdivel": "Subir ao <strong>flight deck</strong> entre caças de verdade e entrar no Space Shuttle Pavilion cara a cara com o Enterprise — a pequena vai surtar com os aviões.",
+          "dicas": [
+            "✅ Já reservado · confirme o horário do seu timed-entry",
+            "Concorde exige tour guiado à parte — confere disponibilidade no balcão ao chegar",
+            "Ótimo pra 3 anos: deck aberto, aviões pra ver de pertinho",
+            "~2h de visita · o flight deck pega vento, leve casaquinho"
+          ],
+          "duracao": "2-2h30",
+          "custo": "$33 adulto · <5 grátis (jul/2026)",
+          "acessibilidade": "Deck principal e Space Shuttle Pavilion acessíveis por elevador · submarino Growler NÃO acessível (escadas apertadas, deixe o carrinho no deck)",
+          "coord": {
+            "lat": 40.7645,
+            "lng": -73.9997
+          }
+        },
+        {
+          "hora": "14:30",
           "emoji": "😴",
           "periodo": "tarde",
           "tipo": "transit",
@@ -2535,8 +2544,8 @@
       "uber": "$70-90 · 45-60min porta a porta"
     },
     "NYC Ferry · India St → DUMBO": {
-      "ferry": "[East River] India St → Greenpoint → N Wmsb → S Wmsb → DUMBO/Fulton Ferry · 4 paradas · 15min · $4",
-      "uber": "$15-18 · 12min · backup se ferry overcrowded ou chuva"
+      "uber": "—",
+      "metro": "NYC Ferry East River · India St → DUMBO · ~15min · $4.50"
     },
     "Uber Tribeca → Greenpoint": {
       "ferry": "[East River] Wall St/Pier 11 → DUMBO → S/N Wmsb → Greenpoint · direto · ~30min · $4",
@@ -2544,8 +2553,8 @@
       "uber": "$22-28 · 25min porta a porta"
     },
     "Uber Greenpoint → Central Park (entrada Plaza)": {
-      "metro": "[G] Greenpoint Av → Court Sq (10min) · [E] → 5 Av/53 St (7min) · walk 8min até entrada Plaza · ~35min · 1 transferência · $2.90",
-      "uber": "$25-30 · 25-30min porta a porta"
+      "uber": "~$30-40 · 30min",
+      "metro": "[G]→[N/W] em Court Sq → 5 Av-59 St · ~35min"
     },
     "Uber Central Park → Greenpoint": {
       "metro": "[E] 5 Av/53 St → Court Sq (7min) · [G] → Greenpoint Av (12min) · ~25min · 1 transferência · $2.90",
@@ -2580,16 +2589,16 @@
       "uber": "$25-30 · 22-25min porta a porta"
     },
     "Uber Greenpoint → Bryant Park": {
-      "metro": "[G] Greenpoint Av → Court Sq (10min) · [7] → 5 Av-Bryant Park (8min) · ~22min · 1 transferência · $2.90",
-      "uber": "$22-25 · 22min porta a porta"
+      "uber": "~$28-38 · 30min",
+      "metro": "[G]→[7] em Court Sq → 5 Av-Bryant Pk · ~30min"
     },
     "Uber Times Square → Greenpoint": {
       "metro": "[7] Times Sq-42 St → Court Sq (15min) · [G] → Greenpoint Av (10min) · ~28min · 1 transferência · $2.90",
       "uber": "$22-28 · 25min porta a porta"
     },
     "Uber Greenpoint → UWS": {
-      "metro": "[G] Greenpoint Av → Court Sq (10min) · [7] → Times Sq (15min) · [1] → 79 St (8min) · walk 5min até AMNH · ~42min · 2 transferências · $2.90",
-      "uber": "$25-30 · 28-30min porta a porta"
+      "uber": "~$30-40 · 30min",
+      "metro": "[G]→[C] em Hoyt-Schermerhorn → 81 St-Museum · ~40min"
     },
     "Uber UWS → Greenpoint": {
       "metro": "[1] 79 St → Times Sq (8min) · [7] → Court Sq (15min) · [G] → Greenpoint Av (10min) · ~38min · 2 transferências · $2.90",
@@ -2608,8 +2617,60 @@
       "uber": "$22-28 · 22-25min porta a porta · pequena já dormindo com babá"
     },
     "Uber Greenpoint → EWR": {
-      "metro": "[G] → Court Sq + [7] → Times Sq → walk Penn Station · NJ Transit → EWR Airport · AirTrain → Terminal · ~1h30 com bagagem · $13 NJT + $2.90 metrô",
-      "uber": "$70-90 · 45-60min porta a porta com bagagem"
+      "uber": "~$65-85 · 45-60min",
+      "metro": "Sem metrô direto pra EWR de Greenpoint · Uber/táxi recomendado"
+    },
+    "Metrô Greenpoint → Grand Central": {
+      "uber": "~$28-38 · 30min",
+      "metro": "[G] Greenpoint Av → [7] em Court Sq → Grand Central · ~30min · $3"
+    },
+    "Uber Rockefeller → Chelsea Market": {
+      "uber": "~$18-25 · 15min",
+      "metro": "[B/D/F/M] 47-50 St → [A/C/E] 14 St + 5min a pé · ~20min"
+    },
+    "Metrô Greenpoint → Union Square": {
+      "uber": "~$25-35 · 25min",
+      "metro": "[G] → [L] em Lorimer → Union Sq · ~30min · $3"
+    },
+    "Metrô Village → MOMA": {
+      "uber": "~$18-25 · 20min",
+      "metro": "[F/M] W 4 St → 47-50 Rockefeller + 2 quadras · ~15min · $3"
+    },
+    "Uber UWS → Hudson Yards": {
+      "uber": "~$18-25 · 20min",
+      "metro": "[1] 79 St → Times Sq → [7] 34 St-Hudson Yards · ~25min"
+    },
+    "Uber Midtown → MET": {
+      "uber": "~$15-22 · 15min",
+      "metro": "[4/5/6] → 86 St + 3 quadras · ~15min"
+    },
+    "Uber Greenpoint → WTC / Oculus": {
+      "uber": "~$25-35 · 30min",
+      "metro": "[G]→[A/C] em Hoyt → Fulton St · ~30min"
+    },
+    "Uber Greenpoint → Intrepid": {
+      "uber": "~$30-40 · 30min",
+      "metro": "[G]→[7] 34 St-Hudson Yards + 10min a pé até Pier 86"
+    },
+    "Uber Battery Park → Greenpoint": {
+      "uber": "~0-40 · 25min",
+      "metro": "[R/W] Whitehall → [G] em Court Sq · ~40min"
+    },
+    "Uber SoHo → Greenpoint": {
+      "uber": "~5-35 · 25min",
+      "metro": "[C/E] Spring St → [G] em Hoyt · ~35min"
+    },
+    "Uber Chelsea Market → Greenpoint": {
+      "uber": "~8-38 · 25min",
+      "metro": "[A/C/E] 14 St → [G] em Hoyt · ~35min"
+    },
+    "Uber MET → Greenpoint": {
+      "uber": "~5-45 · 35min",
+      "metro": "[4/5/6] 86 St → [G] em Court Sq · ~45min"
+    },
+    "Uber Tribeca → Neil Simon Theatre": {
+      "uber": "~8-25 · 20min",
+      "metro": "[1/2/3] Chambers → Times Sq-42 St · ~20min"
     }
   },
   "bairros_config": [
