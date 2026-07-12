@@ -42,6 +42,18 @@ Exit code: `0` aprovado · `1` não aprovado · `2` erro de input.
 
 O modo **scout** auto-detecta **mini-plano** (âncora fixa, sem tabela de veredito) vs **macro**: no mini-plano, veredito-por-atração vira N/A e Fontes fica opcional. `--terceiros` relaxa Fontes em qualquer levantamento (a lista de URLs fica no chat, não se manda pra mãe — decisão Tobia).
 
+## Os 3 instrumentos (2026-07-12 · avaliação em camadas)
+
+O `audit.py` é o 1º de **três instrumentos** desta skill — cada um enxerga o que o outro não vê:
+
+| Instrumento | Mede | Como | Quando |
+|---|---|---|---|
+| **`audit.py`** (regex) | **Forma** — raso, sem data, sem veredito, link morto | script offline, grátis | sempre (todo edit) |
+| **`FACTCHECK.md`** (protocolo) | **Verdade** — preço/coord/fato confere na fonte? | sub-agentes céticos + web_search | entregas · pré-viagem (nunca em edit pequeno) |
+| **`JUDGE.md`** (protocolo) | **Substância** — interessante? bem curado? nível do exemplar-ouro? | sub-agente cético de contexto limpo, comparação pareada c/ exemplar | 1× por entrega, só APÓS audit limpo · teto 1+1 |
+
+Ordem obrigatória: **audit → factcheck → judge** (barato antes do caro; nunca julgar o que o regex já reprovaria). Régua de fontes dos dois protocolos: `references/source-credibility.md`.
+
 ## Onde roda (loop-até-excelente)
 
 | Pipeline | Onde entra |

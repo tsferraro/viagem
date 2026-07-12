@@ -62,6 +62,11 @@ Cada stop pertence a um de 3 tipos: `card`, `opcoes`, `transit`.
   coord:          Object,     // {lat: Number, lng: Number} · 4 casas decimais
   reserva:        String,     // (opcional) "reservado" | "pendente"
   walkingTours:   Array,      // (opcional) ver seção 4 abaixo
+  fontes:         Array,      // (opcional · 2026-07-12) proveniência: [{url: String, tier: String}]
+                              // tier: "official" | "editorial" | "local" | "crowd"
+                              // Obrigatório só em cards-ÂNCORA e afirmações de preço/horário.
+                              // Régua: references/source-credibility.md · usado pelo FACTCHECK
+                              // (afirmação com T1 recente registrada não é re-verificada)
 }
 ```
 

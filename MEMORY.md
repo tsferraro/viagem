@@ -54,6 +54,13 @@ Tobia pediu explicitamente que a entrega `entregas/roma-toscana-florenca-set2026
 - **Como travamos isso (guardrails):** (1) exemplar-ouro apontado em `destination-scout/SKILL.md` §Padrão-ouro + `content-rubric.md`; (2) método fan-out + ≥10-12 buscas/polo codificado no PASSO 2 + checklist; (3) barra de aspiração ≥18/20 (scout) e ≥36/40 (roteiro) nas bandas — **guidance, não hard gate** (piso de aprovação segue ≥14/≥28 pra não travar entregas enxutas legítimas). Anti-invenção/veredito continuam hard P0/P1.
 - **Ferramenta interativa falhou 3x na sessão** (`AskUserQuestion` · "permission stream closed") · fallback: perguntar em texto no chat funcionou. Registrar caso recorra.
 
+### Avaliação em camadas + credibilidade de fontes · 2026-07-12 (mesma sessão Itália)
+Fechamos os buracos que o `audit.py` (regex, só FORMA) não cobre. Arquitetura: **audit (forma, grátis, sempre) → FACTCHECK.md (verdade, sub-agentes céticos, só em entregas) → JUDGE.md (substância vs exemplar-ouro, 1×+1 por entrega) → Tobia em campo**. Novidades:
+- `references/source-credibility.md` · tiers T1-T5 + padrão de prova por TIPO de afirmação (preço=T1 oficial · logística vivida=T3/T4 · veredito 🟢=convergência 2-3 fontes independentes + busca negativa + fit ao perfil que é NOSSO, não da fonte). Inversão-chave: pra "carrinho passa?", blog de mãe recente > site oficial.
+- **Proveniência**: campo `fontes: [{url, tier}]` nos cards-âncora (data-schema) · anotar na hora da pesquisa custa ~zero e barateia o fact-check de ~200k pra ~50-80k (não re-caça o que tem T1 recente).
+- **Anti-desperdício codificado**: gatilhos por situação no CLAUDE.md (edit pequeno = só audit · entrega = pilha completa · pré-viagem = re-check operacional). Redundâncias cortadas: factcheck não re-checa URL (--check-links faz), não re-pesquisa o que o scout citou, judge só roda pós-audit-limpo, busca negativa dedupe com busca de armadilha.
+- **Reuso fase-0**: se existe `entregas/<slug>.md` aprovado, o roteiro NÃO refaz pesquisa — consome (vereditos→cards, clusters→esqueleto, prosa→app, Fontes→proveniência herdada).
+
 ### destination-scout · 2026-06-07 (export PDF · chat-first · briefing)
 Skill `destination-scout` (degrau 0 · levantamento macro antes do roteiro) ganhou nesta sessão:
 - **Export PDF** · `scripts/docx_to_pdf.py` novo (docx→PDF via reportlab · fonte DejaVu embarcada p/ acentos PT-BR · semáforos 🟢🟡🔴 viram bolinhas coloridas ● · auto-install de deps). Cadeia completa: `md_to_docx.py` (md→docx) → `docx_to_pdf.py` (docx→pdf). **Sempre renderizar e conferir o PDF** (pymupdf/fitz) antes de entregar — não chutar layout.

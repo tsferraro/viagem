@@ -69,6 +69,7 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
 | Vai avaliar ou elevar design/UI de um roteiro | `references/design-rubric.md` + `skills/impeccable/` |
 | Vai auditar/elevar CONTEÚDO (escrita, links, coords, logística, levantamento) | `references/content-rubric.md` + skill `skills/critico-roteiro/` (roda `audit.py`) |
+| Vai avaliar credibilidade de fonte · provar um 🟢 imperdível · rodar fact-check/judge | `references/source-credibility.md` + `skills/critico-roteiro/FACTCHECK.md` / `JUDGE.md` |
 | Vai criar viagem nova · quer pesquisa macro do destino | `skills/destination-scout/SKILL.md` (degrau 0 antes do roteiro) |
 | Vai entender por que código JS é assim | `references/ui-patterns.md` |
 | Quer ver decisões históricas + lições | `decision-log.md` + `references/lessons-learned.md` |
@@ -150,6 +151,17 @@ python3 skills/critico-roteiro/audit.py <arquivo> --json                # saída
 ```
 
 Retorna nota + achados P0-P3 + checklist manual + veredito. Exit: 0=aprovado, 1=não aprovado, 2=erro. Roda como gate no pipeline de roteiro (9b) E da destination-scout (4b), e standalone. Detalhes: `skills/critico-roteiro/SKILL.md`.
+
+**Avaliação em camadas (2026-07-12)** · o audit é o 1º de 3 instrumentos da `critico-roteiro` — os outros dois são protocolos executados pelo Claude: `FACTCHECK.md` (verdade · sub-agentes céticos + web_search) e `JUDGE.md` (substância · comparação com o exemplar-ouro). Gatilhos por situação (anti-desperdício · nunca rodar a pilha completa em edit pequeno):
+
+| Situação | Roda |
+|---|---|
+| Edit pequeno (stop, dica) | validate + audit (como sempre) |
+| Viagem nova / entrega scout | pesquisa c/ proveniência → audit → FACTCHECK lean → JUDGE 1×(+1) → deploy |
+| Aprofundamento de roteiro | audit → FACTCHECK só do alterado → JUDGE nos cards tocados |
+| Pré-viagem (1-2 sem antes) | FACTCHECK modo re-check (só fatos operacionais — preço/horário apodrecem) |
+
+Régua de fontes (tiers T1-T5 + o que prova um 🟢 imperdível): `references/source-credibility.md`.
 
 ### `deploy.sh` — archive + push
 

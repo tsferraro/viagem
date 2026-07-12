@@ -24,6 +24,8 @@ Saída: **chat sempre** · **Word (.docx) / PDF só quando pedido**.
 
 Ela é o **degrau 0**: levantamento → valida com o Tobia → só então constrói roteiro. Por ser separada do roteiro, é reutilizável pra pesquisas avulsas (ex: pesquisa pra terceiros que nunca vira app).
 
+**Regra de reuso (2026-07-12 · anti-desperdício):** se já existe `entregas/<slug>.md` **aprovado** pro destino, a fase de roteiro **NÃO refaz a pesquisa** — consome o levantamento como fonte: vereditos → seleção de cards, logística → campos custo/duracao/acessibilidade, clusters → esqueleto dos dias, prosa História & Curiosidades → conteúdo do app, seção Fontes → proveniência herdada. Pesquisa nova só pro que o scout não cobriu (e essas afirmações novas são as que o FACTCHECK verifica).
+
 ## Quando triggera
 
 - **Standalone**: "pesquisa o que fazer em X", "traz atrações e restaurantes de Y", "panorama de Z", "história e curiosidades de W"
@@ -70,6 +72,11 @@ Regras anti-invenção (do CLAUDE.md):
 - **Distância sempre da BASE informada**
 - **NUNCA inventar URL** — só de web_search confirmado
 - Se info não achada: marcar `[a confirmar]` em vez de chutar
+
+Credibilidade + proveniência (2026-07-12 · `references/source-credibility.md`):
+- **Escolher fonte pelo tier certo por tipo de afirmação**: preço/horário = T1 oficial · logística vivida (carrinho/fila/sombra) = T3/T4 recentes · veredito = convergência T2/T3. Não citar SEO-farm (T5).
+- **Registrar proveniência NA HORA da pesquisa** (url + tier) — custa ~zero agora e barateia o fact-check depois. Afirmação com T1 recente registrada não é re-verificada.
+- **Busca negativa obrigatória pros 🟢-âncora** (`<POI> superestimado / not worth it`) — dedupe: só pros que a busca de armadilhas (item 8) não cobriu. Crítica credível achada entra no texto mesmo mantendo o 🟢.
 
 ---
 
