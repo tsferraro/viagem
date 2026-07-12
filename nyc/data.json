@@ -233,7 +233,11 @@
               "preco": "$",
               "dist": "5-10 min da base",
               "poiCat": "padaria",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "coord": {
+                "lat": 40.7261,
+                "lng": -73.9522
+              }
             },
             {
               "nome": "Esme (999 Manhattan Ave)",
@@ -338,7 +342,11 @@
               "preco": "$$",
               "dist": "Williamsburg",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "coord": {
+                "lat": 40.7122,
+                "lng": -73.9557
+              }
             },
             {
               "nome": "Karczma (136 Greenpoint Ave)",
@@ -346,7 +354,11 @@
               "preco": "$",
               "dist": "Greenpoint",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "coord": {
+                "lat": 40.73,
+                "lng": -73.9551
+              }
             },
             {
               "nome": "Bernie's (332 Driggs Ave)",
@@ -354,7 +366,11 @@
               "preco": "$$",
               "dist": "Greenpoint",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "coord": {
+                "lat": 40.7219,
+                "lng": -73.9506
+              }
             }
           ]
         }
@@ -592,7 +608,11 @@
               "preco": "$",
               "dist": "Uber 8min",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "coord": {
+                "lat": 40.7305,
+                "lng": -74.0022
+              }
             }
           ]
         },
@@ -1072,7 +1092,11 @@
               "preco": "$10/pessoa",
               "dist": "3 min do MOMA",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "coord": {
+                "lat": 40.7617,
+                "lng": -73.9797
+              }
             },
             {
               "nome": "Le Pain Quotidien (53rd & 7th)",
@@ -2013,7 +2037,11 @@
               "preco": "$$",
               "dist": "8 min da ponte",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "coord": {
+                "lat": 40.7198,
+                "lng": -74.0084
+              }
             },
             {
               "nome": "Whole Foods Tribeca",
