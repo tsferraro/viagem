@@ -690,10 +690,26 @@ function renderTudoMapa(){
     <div class="tm-filters">
       <div class="tm-row">${tierBtn(3,'⭐⭐⭐')}${tierBtn(2,'⭐⭐+')}${tierBtn(0,'Tudo')}</div>
       <div class="tm-row">${['atracao','comida','loja','parque'].map(catBtn).join('')}</div>
-      <div class="tm-row"><select class="tm-day" id="tm-day">${dayOpts}</select></div>
+      <div class="tm-row"><select class="tm-day" id="tm-day">${dayOpts}</select>
+        <button class="tm-chip tm-locate" id="tm-locate">📍 Onde estou</button></div>
     </div>
     <div id="tudo-map"></div>
   </div>`;
+}
+
+let userLoc=null;   // {lat,lng} da geolocalização (sessão)
+function locateMe(){
+  const btn=document.getElementById('tm-locate');
+  if(!navigator.geolocation){ if(btn) btn.textContent='📍 Sem GPS'; return; }
+  if(btn){ btn.textContent='📍 Localizando…'; btn.disabled=true; }
+  navigator.geolocation.getCurrentPosition(pos=>{
+    userLoc={lat:pos.coords.latitude,lng:pos.coords.longitude};
+    if(btn){ btn.textContent='📍 Centralizar em mim'; btn.disabled=false; }
+    plotTudoMapa();
+    if(tudoMapInstance) tudoMapInstance.setView([userLoc.lat,userLoc.lng],15);
+  },err=>{
+    if(btn){ btn.textContent='📍 GPS negado'; btn.disabled=false; }
+  },{enableHighAccuracy:true,timeout:10000,maximumAge:60000});
 }
 
 function plotTudoMapa(){
@@ -725,16 +741,23 @@ function plotTudoMapa(){
     const popup=`<div class="pp-name">${p.nome}</div>
       <div class="pp-notes">${POI_EMOJI[p.poiCat]||''} ${p.dia}</div>
       ${starLine}${riscoLine}
-      ${p.mapsUrl?`<a class="pp-link" href="${p.mapsUrl}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`:''}`;
+      ${p.mapsUrl?`<a class="pp-link" style="background:${POI_COLOR[p.poiCat]||'#2563eb'}" href="${p.mapsUrl}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`:''}`;
     L.marker([p.coord.lat,p.coord.lng],{icon}).bindPopup(popup,{maxWidth:240}).addTo(tudoMapInstance);
     pts.push([p.coord.lat,p.coord.lng]);
   });
+  // Marcador "você está aqui" (se geolocalizado)
+  if(userLoc){
+    const meIcon=L.divIcon({className:'poi-marker',
+      html:`<div class="me-dot"></div>`,iconSize:[18,18],iconAnchor:[9,9]});
+    L.marker([userLoc.lat,userLoc.lng],{icon:meIcon,zIndexOffset:1000}).bindPopup('📍 Você está aqui').addTo(tudoMapInstance);
+  }
   tudoMapInstance.fitBounds(pts,{padding:[40,40],maxZoom:15});
   const el=document.getElementById('tm-count'); if(el) el.textContent=pois.length;
   // bind filtros (idempotente)
   const wrap=div.closest('.tudomapa-wrap');
   if(wrap && !wrap.__bound){
     wrap.__bound=true;
+    const lb=wrap.querySelector('#tm-locate'); if(lb) lb.addEventListener('click',locateMe);
     wrap.querySelectorAll('[data-tier]').forEach(b=>b.addEventListener('click',()=>{
       state.mapFilter.minStar=parseInt(b.dataset.tier);
       wrap.querySelectorAll('[data-tier]').forEach(x=>x.classList.toggle('on',x===b));
