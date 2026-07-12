@@ -202,6 +202,8 @@ Padrões pra road-trips de **fim-de-semana com destino único** (festa/evento ·
 - **Default do mapa = subconjunto curado (⭐⭐⭐), não todos os ~70 pinos** (senão vira sopa no celular). Filtro aumenta densidade por opção, não socorre dela. Paradas de walking tour (sem `valeAPena`) contam como tier ⭐ → só aparecem no "Tudo".
 - **Trailing zero quebra o check de 4 casas**: coord `40.751` (repr do float) falha o check de precisão mesmo sendo "4 dp na intenção" — use 4ª casa **não-zero** (nudge de ~1m).
 - **WT URL coords→nomes é SEGURO com `MAPS_REGION`**: a mudança 2026-07-12 (rota do walking tour por NOME) **NÃO** é o bug antigo de "nomes erráticos em waypoints" — cada nome recebe `", New York, NY"` (region-qualified), então geocoda certo. **Não reverter** achando que é regressão.
+- **Link de download no iOS precisa de `target="_blank"`**: o iOS Safari **ignora o atributo `download`** e navega a aba atual pro arquivo → o app fica "preso no CSV" (Tobia reportou). Fix: `target="_blank" rel="noopener"` abre em nova aba, o app fica intacto. Regra geral pra qualquer link de arquivo servido pelo Pages.
+- **My Maps não importa no celular**: o "Importar CSV" só existe no My Maps **desktop** (não há app iOS/Android com import). Fluxo real = criar no computador 1×, consultar em campo via Google Maps → Salvos → Mapas. Documentado num `<details class="tm-help">` ao lado do botão de download, pra Tobia não tentar importar do celular e travar.
 
 ## Pendências
 - [ ] Propagar o aviso de storage não-persistente (maybeWarnStorage · template) pros outros roteiros: rebuildar corsica, marais, valencia, pais-sardenha via build.py (só NYC foi reconstruído em 2026-07-08).

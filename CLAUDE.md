@@ -468,7 +468,9 @@ Todo `card` e todo item de `opcoes` carrega DOIS eixos ortogonais (ver `referenc
 ```bash
 python3 scripts/export-gmaps.py <viagem>/data.json <viagem>/pois.csv
 ```
-Gera CSV de todos os POIs (nome+categoria+★+dia+endereço+coord). No **Google My Maps**: Criar mapa → Importar CSV → posicionar por `Endereço` → agrupar por `Categoria`. O My Maps **geocodifica endereços sozinho** — por isso o CSV é o caminho robusto pro mapa do Google (não precisa de coord na mão). Regenerar sempre que o `data.json` mudar.
+Gera CSV de todos os POIs (nome+categoria+★+dia+endereço+coord). No **Google My Maps**: Criar mapa → Importar CSV → posicionar por `Endereço` → agrupar por `Categoria`. O My Maps **geocodifica endereços sozinho** — por isso o CSV é o caminho robusto pro mapa do Google (não precisa de coord na mão). Regenerar sempre que o `data.json` mudar. O CSV vive versionado como `<viagem>/pois.csv` (servido pelo Pages → baixável no app).
+
+**Botão de download in-app + mini-guia** (aba "Tudo no Mapa" · `tm-dl`/`tm-help` no template · 2026-07-12): a aba tem um link `⬇️ Baixar CSV` que aponta pra `pois.csv` com `target="_blank"` — **obrigatório o `_blank`**: sem ele, o iOS Safari (que ignora o atributo `download`) navega a aba atual pro CSV e **prende o app**. Ao lado, um `<details class="tm-help">` explica o fluxo: **importar CSV no My Maps é tarefa de desktop** (o app mobile do My Maps não tem "Importar"); depois de criado, o mapa sincroniza e é consultável no celular via Google Maps → Salvos → Mapas. Pra uso puro-mobile, a própria aba "Tudo no Mapa" (filtros + 📍 onde estou + "Abrir no Maps" por pino) já resolve sem My Maps.
 
 ## Roteiros paralelos
 
