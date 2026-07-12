@@ -707,6 +707,20 @@ function renderTudoMapa(){
       <div class="tm-title">🗺️ Tudo no Mapa</div>
       <div class="tm-sub">Tamanho do pino = ★ recompensa · anel = 🟢🟡🔴 risco (eixos independentes)</div>
       <a class="tm-dl" href="pois.csv" download="pois.csv" target="_blank" rel="noopener">⬇️ Baixar CSV (pro Google My Maps · abre em nova aba)</a>
+      <details class="tm-help">
+        <summary>Como uso esse CSV no Google My Maps?</summary>
+        <div class="tm-help-body">
+          <p><strong>Pra usar em campo no celular, você nem precisa disso</strong> — este mapa aqui já tem tudo (filtro por dia/★/categoria, 📍 onde estou, e "Abrir no Maps" em cada pino). O My Maps só vale se quiser uma camada Google persistente e compartilhável.</p>
+          <p><strong>Importar é tarefa de computador</strong> (o My Maps só tem "Importar" no navegador de desktop · não existe no app do celular):</p>
+          <ol>
+            <li>Baixe o <code>pois.csv</code> (botão acima)</li>
+            <li>No computador: <code>mymaps.google.com</code> → <strong>Criar novo mapa</strong> → <strong>Importar</strong> → escolha o CSV</li>
+            <li>Posicionar por coluna <strong>Endereço</strong> · colorir/agrupar por <strong>Categoria</strong></li>
+            <li>Pronto — o mapa salva na sua conta Google</li>
+          </ol>
+          <p><strong>Ver no celular depois:</strong> app Google Maps → <strong>Salvos</strong> → <strong>Mapas</strong>. Sincroniza sozinho.</p>
+        </div>
+      </details>
     </div>
     <div class="tm-filters">
       <div class="tm-row">${tierBtn(3,'⭐⭐⭐')}${tierBtn(2,'⭐⭐+')}${tierBtn(0,'Tudo')}</div>
