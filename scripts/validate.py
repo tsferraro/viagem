@@ -254,6 +254,42 @@ def check_temaCurto(days_text):
     else:
         ok(f"Todos {len(curtos)} temaCurto ≤ 15 chars")
 
+def check_no_raw_markdown(days_text):
+    """Bloqueia markdown cru (**bold**) nos campos de texto do DAYS.
+    O template injeta dicas/sobre/imperdivel via innerHTML SEM converter markdown
+    (render-functions.js) — então **texto** renderiza como asterisco LITERAL no app.
+    Convenção do repo (CLAUDE.md): usar HTML cru <strong>/<em>, nunca markdown.
+    Guardrail criado no aprofundamento NYC (2026-07-12): 56 pares ** em 11 cards
+    passaram batido pelo audit/validate e renderizavam asterisco na tela da família.
+    Escaneia só o DAYS (dados), não o HTML inteiro — evita falso-positivo com o
+    operador ** de exponenciação no JS do template (ex: Math.sin(x)**2)."""
+    if not days_text:
+        return
+    BOLD_RE = re.compile(r'\*\*(.+?)\*\*')
+    hits = []
+    def scan(obj, ctx):
+        if isinstance(obj, str):
+            for m in BOLD_RE.findall(obj):
+                hits.append((ctx, m[:40]))
+        elif isinstance(obj, list):
+            for x in obj:
+                scan(x, ctx)
+        elif isinstance(obj, dict):
+            c = obj.get('nome', ctx)
+            for v in obj.values():
+                scan(v, c)
+    try:
+        scan(json.loads(days_text), '?')
+    except Exception:
+        # DAYS minificado / não-JSON → fallback regex no texto cru dos dados
+        hits = [('(DAYS)', m[:40]) for m in BOLD_RE.findall(days_text)]
+    if hits:
+        preview = [f'"{m}" [{c[:30]}]' for c, m in hits[:5]]
+        err(f"markdown cru **bold** em {len(hits)} lugar(es) do DAYS · o template "
+            f"renderiza asterisco literal · trocar por <strong>…</strong>: {preview}")
+    else:
+        ok("Sem markdown cru (**bold**) · texto usa HTML <strong>/<em>")
+
 def check_links_alive(content, timeout=5):
     """Checa LINKS_MAP entries via HTTP HEAD. Opcional · só roda com --check-links.
     Marca como warning (não bloqueia) URLs que retornam 4xx/5xx ou timeout."""
@@ -405,7 +441,8 @@ def main():
     check_poi_classification(days_text)
     check_walking_tours(days_text)
     check_temaCurto(days_text)
-    
+    check_no_raw_markdown(days_text)
+
     # Features
     print(f"\n{C.DIM}── Features-chave ──{C.END}")
     check_required_features(content)
