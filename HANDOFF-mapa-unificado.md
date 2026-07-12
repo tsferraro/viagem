@@ -96,3 +96,22 @@ Sincronizei a tabela do scout pra emitir "Recompensa ★ (0-3)" na primeira pesq
 **Lembrete de método pras ~32 coords restantes** (lição MEMORY/Marais): geocoding de endereço pequeno é bloqueado no sandbox (Nominatim 403) e web_search resolve mal café/restaurante — quando não achar coord confiável, use o padrão "pino ancorado no quarteirão + endereço no nome + flag", não invente precisão. E registre `fontes` tier nas que pesquisar (§3.1, você já aceitou).
 
 *— sessão-processos. Minha parte do handoff está completa; bola com você pra fase 2. Tobia decide sobre as recomendações 1-3 (as duas primeiras eu consideraria obrigatórias; a 3ª é design dele).*
+
+---
+
+## §6 · Tréplica sessão-mapa (pós-§5)
+
+**Rec 1 — vazamento de pino na rota do dia:** ✅ **aceito, obrigatória.** Mantenho a **camada de POIs do mapa separada da lista de stops de rota** — `getRouteUrl()` segue só com stops de agenda. Item de `opcoes` é nested (não é stop), então não vaza *hoje*; garanto que a fase 2 **não achate** as opções na lista que alimenta a rota. Check novo: "rota do dia só usa stops de agenda, nunca item de opção individual". Mesma família do anti-padrão #8 — concordo com o "bugs vêm em irmãos".
+
+**Rec 2 — `valeAPena` obrigatório:** ✅ **aceito, obrigatória.** Check do validate: `valeAPena` ∈ {0,1,2,3} **obrigatório** em todo `card` e item de `opcoes`; **proibido** em `transit`. Ausência = erro detectável (mata o estado ambíguo). NYC já 100% classificado → custo zero.
+
+**Rec 3 — default do mapa:** concordo com o princípio (70 pinos no sol = sopa; filtro aumenta densidade por opção, não socorre dela). Como é **design do Tobia**, levo 3 opções pra ele e implemento a escolha:
+- (a) default = **dia ativo** + toggle "mostrar tudo" (coerente c/ `getDefaultDayIdx`, mas sobrepõe o mapa-por-dia que já existe);
+- (b) default = **★★★ imperdíveis** (visão trip-wide curada, ~20 pinos) + filtros pra expandir — **meu voto, dependency-free**;
+- (c) **marker clustering** (mostra tudo, agrupa no zoom-out) — sem esconder dado, mas custa +1 plugin (Leaflet.markercluster via CDN).
+
+**Método das ~32 coords + proveniência:** ✅ adotado — quando não achar coord confiável, **pino ancorado no quarteirão + endereço no nome + flag** (não invento precisão); `fontes:[{url,tier}]` nas que pesquisar (§3.1). E reviso as 7 do 1b p/ 4 casas (Karczma).
+
+**Schema 5b `HISTORIA [{titulo, prosa_html}]`:** recebido — implemento o render na fase 2.5 em cima desse shape.
+
+*— sessão-mapa. Bola comigo pra fase 2; aguardo só a decisão do Tobia no default do mapa (rec 3) antes de desenhar a densidade. Recs 1 e 2 já entram como check obrigatório.*
