@@ -397,6 +397,22 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
   .hero-title{font-size:31px}
 }
 
+/* ===== HISTÓRIA & CURIOSIDADES ===== */
+.hist-wrap{padding:14px 16px 20px;max-width:720px;margin:0 auto}
+.hist-title{font-size:21px;font-weight:800}
+.hist-sub{font-size:13px;color:#6b7280;margin:2px 0 14px}
+.hist-block{border-bottom:1px solid #e5e7eb;padding:4px 0}
+.hist-polo{font-size:16px;font-weight:700;padding:12px 4px;cursor:pointer;list-style:none}
+.hist-polo::-webkit-details-marker{display:none}
+.hist-polo::before{content:'▸ ';color:#9ca3af}
+details[open] .hist-polo::before{content:'▾ '}
+.hist-prosa{font-size:15px;line-height:1.65;color:#374151;padding:2px 4px 14px}
+.hist-prosa p{margin:0 0 10px}
+.hist-empty{color:#9ca3af;padding:20px;text-align:center}
+@media(prefers-color-scheme:dark){
+  .hist-sub{color:#9ca3af}.hist-block{border-color:#374151}.hist-prosa{color:#d1d5db}
+}
+
 /* ===== TUDO NO MAPA ===== */
 .tudomapa-wrap{padding:12px 14px 0}
 .tm-head{margin-bottom:10px}
@@ -527,6 +543,7 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
       <button class="tab-btn" data-view="mapa"><span class="tb-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3Z"/><path d="M9 3v15M15 6v15"/></svg></span><span class="tb-lbl">Mapa</span></button>
       <button class="tab-btn" data-view="bairros"><span class="tb-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 21v-4h4v4"/></svg></span><span class="tb-lbl">Bairros</span></button>
       <button class="tab-btn" data-view="tudomapa"><span class="tb-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/></svg></span><span class="tb-lbl">Tudo</span></button>
+      <button class="tab-btn" data-view="historia" id="tab-historia" style="display:none"><span class="tb-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span><span class="tb-lbl">História</span></button>
     </div>
   </nav>
 </div>
@@ -3522,6 +3539,9 @@ const APP_MODE = "trip";
 // Se vazio, rotas de walking tour caem no fallback por coordenadas.
 const MAPS_REGION = "New York, NY";
 
+// ============== HISTÓRIA & CURIOSIDADES (prosa por polo · aba condicional) ==============
+const HISTORIA = [];
+
 // ============== RENDER ==============
 // ============== RENDER ==============
 // APP_MODE ("trip" | "city") é declarado no bloco DATA (shell.html) ANTES deste script.
@@ -4162,6 +4182,22 @@ function renderBairros(){
   </div>`;
 }
 
+// ============== HISTÓRIA & CURIOSIDADES (prosa por polo · estilo coletânea Marais) ==============
+// Conteúdo vem do array HISTORIA [{titulo, prosa_html}] (fornecido pela destination-scout).
+// A aba só aparece se HISTORIA tiver conteúdo (revelada no init()).
+function renderHistoria(){
+  if(typeof HISTORIA==='undefined' || !HISTORIA.length)
+    return `<div class="hist-wrap"><div class="hist-empty">Sem conteúdo de história ainda.</div></div>`;
+  return `<div class="hist-wrap">
+    <div class="hist-head"><div class="hist-title">📖 História & Curiosidades</div>
+      <div class="hist-sub">O porquê de cada lugar — leitura solta, sem mapa nem horário</div></div>
+    ${HISTORIA.map((h,i)=>`<details class="hist-block" ${i===0?'open':''}>
+      <summary class="hist-polo">${h.titulo}</summary>
+      <div class="hist-prosa">${h.prosa_html||''}</div>
+    </details>`).join('')}
+  </div>`;
+}
+
 // ============== TUDO NO MAPA (mapa unificado · todos os POIs) ==============
 // Sinais independentes (handoff §4.3): recompensa ★ = tamanho do pino · risco = anel colorido.
 const POI_COLOR={atracao:'#2563eb',restaurante:'#ea580c',cafe:'#92400e',padaria:'#db2777',
@@ -4581,6 +4617,8 @@ function render(){
     content=renderBairros();
   } else if(state.view==='tudomapa'){
     content=renderTudoMapa();
+  } else if(state.view==='historia'){
+    content=renderHistoria();
   }
   document.getElementById('content').innerHTML=content;
   
@@ -4668,6 +4706,10 @@ function syncTabbar(){
 
 function init(){
   maybeWarnStorage();
+  // revela a aba História só se houver conteúdo
+  if(typeof HISTORIA!=='undefined' && HISTORIA.length){
+    const th=document.getElementById('tab-historia'); if(th) th.style.display='';
+  }
   document.getElementById('overview').innerHTML=renderOverview();
   
   // Legenda: aberta + desmarcada no 1º acesso · SÓ o "Já li" colapsa · persiste entre sessões

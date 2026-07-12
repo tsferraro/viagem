@@ -388,6 +388,22 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
   .hero-title{font-size:31px}
 }
 
+/* ===== HISTÓRIA & CURIOSIDADES ===== */
+.hist-wrap{padding:14px 16px 20px;max-width:720px;margin:0 auto}
+.hist-title{font-size:21px;font-weight:800}
+.hist-sub{font-size:13px;color:#6b7280;margin:2px 0 14px}
+.hist-block{border-bottom:1px solid #e5e7eb;padding:4px 0}
+.hist-polo{font-size:16px;font-weight:700;padding:12px 4px;cursor:pointer;list-style:none}
+.hist-polo::-webkit-details-marker{display:none}
+.hist-polo::before{content:'▸ ';color:#9ca3af}
+details[open] .hist-polo::before{content:'▾ '}
+.hist-prosa{font-size:15px;line-height:1.65;color:#374151;padding:2px 4px 14px}
+.hist-prosa p{margin:0 0 10px}
+.hist-empty{color:#9ca3af;padding:20px;text-align:center}
+@media(prefers-color-scheme:dark){
+  .hist-sub{color:#9ca3af}.hist-block{border-color:#374151}.hist-prosa{color:#d1d5db}
+}
+
 /* ===== TUDO NO MAPA ===== */
 .tudomapa-wrap{padding:12px 14px 0}
 .tm-head{margin-bottom:10px}

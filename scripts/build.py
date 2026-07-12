@@ -62,6 +62,7 @@ def build(data_path: Path, output_path: Path, minify=False):
         "{{LINKS_MAP_JSON}}": js_value(data.get("links_map", {}), minify=minify),
         "{{TRANSIT_MAP_JSON}}": js_value(data.get("transit_map", {}), minify=minify),
         "{{BAIRROS_CONFIG_JSON}}": js_value(data.get("bairros_config", [{"nome": "📍 Outros", "fallback": True}]), minify=minify),
+        "{{HISTORIA_JSON}}": js_value(data.get("historia", []), minify=minify),
     }
 
     # Substituições simples nos textos

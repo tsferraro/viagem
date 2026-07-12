@@ -637,6 +637,22 @@ function renderBairros(){
   </div>`;
 }
 
+// ============== HISTÓRIA & CURIOSIDADES (prosa por polo · estilo coletânea Marais) ==============
+// Conteúdo vem do array HISTORIA [{titulo, prosa_html}] (fornecido pela destination-scout).
+// A aba só aparece se HISTORIA tiver conteúdo (revelada no init()).
+function renderHistoria(){
+  if(typeof HISTORIA==='undefined' || !HISTORIA.length)
+    return `<div class="hist-wrap"><div class="hist-empty">Sem conteúdo de história ainda.</div></div>`;
+  return `<div class="hist-wrap">
+    <div class="hist-head"><div class="hist-title">📖 História & Curiosidades</div>
+      <div class="hist-sub">O porquê de cada lugar — leitura solta, sem mapa nem horário</div></div>
+    ${HISTORIA.map((h,i)=>`<details class="hist-block" ${i===0?'open':''}>
+      <summary class="hist-polo">${h.titulo}</summary>
+      <div class="hist-prosa">${h.prosa_html||''}</div>
+    </details>`).join('')}
+  </div>`;
+}
+
 // ============== TUDO NO MAPA (mapa unificado · todos os POIs) ==============
 // Sinais independentes (handoff §4.3): recompensa ★ = tamanho do pino · risco = anel colorido.
 const POI_COLOR={atracao:'#2563eb',restaurante:'#ea580c',cafe:'#92400e',padaria:'#db2777',
@@ -1056,6 +1072,8 @@ function render(){
     content=renderBairros();
   } else if(state.view==='tudomapa'){
     content=renderTudoMapa();
+  } else if(state.view==='historia'){
+    content=renderHistoria();
   }
   document.getElementById('content').innerHTML=content;
   
@@ -1143,6 +1161,10 @@ function syncTabbar(){
 
 function init(){
   maybeWarnStorage();
+  // revela a aba História só se houver conteúdo
+  if(typeof HISTORIA!=='undefined' && HISTORIA.length){
+    const th=document.getElementById('tab-historia'); if(th) th.style.display='';
+  }
   document.getElementById('overview').innerHTML=renderOverview();
   
   // Legenda: aberta + desmarcada no 1º acesso · SÓ o "Já li" colapsa · persiste entre sessões
