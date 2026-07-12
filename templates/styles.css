@@ -417,6 +417,8 @@ details[open] .hist-polo::before{content:'▾ '}
 #tudo-map{width:100%;height:60vh;min-height:380px;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08)}
 .poi-marker{background:none;border:none}
 .poi-dot{display:flex;align-items:center;justify-content:center;border-radius:50%;border-style:solid;border-width:3px;box-shadow:0 1px 4px rgba(0,0,0,.35);line-height:1}
+.tm-dl{display:inline-block;margin-top:8px;font-size:13px;font-weight:600;color:#2563eb;text-decoration:none}
+.tm-dl:active{opacity:.6}
 .tm-locate{background:#2563eb;color:#fff;border-color:#2563eb;font-weight:600}
 .me-dot{width:18px;height:18px;border-radius:50%;background:#2563eb;border:3px solid #fff;box-shadow:0 0 0 3px rgba(37,99,235,.4),0 1px 5px rgba(0,0,0,.4)}
 @media(prefers-color-scheme:dark){

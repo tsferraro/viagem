@@ -706,6 +706,7 @@ function renderTudoMapa(){
     <div class="tm-head">
       <div class="tm-title">🗺️ Tudo no Mapa</div>
       <div class="tm-sub">Tamanho do pino = ★ recompensa · anel = 🟢🟡🔴 risco (eixos independentes)</div>
+      <a class="tm-dl" href="pois.csv" download="pois.csv">⬇️ Baixar pro Google My Maps (CSV)</a>
     </div>
     <div class="tm-filters">
       <div class="tm-row">${tierBtn(3,'⭐⭐⭐')}${tierBtn(2,'⭐⭐+')}${tierBtn(0,'Tudo')}</div>

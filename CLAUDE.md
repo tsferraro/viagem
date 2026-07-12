@@ -466,7 +466,7 @@ Todo `card` e todo item de `opcoes` carrega DOIS eixos ortogonais (ver `referenc
 ## export-gmaps.py — CSV pro Google My Maps
 
 ```bash
-python3 scripts/export-gmaps.py <viagem>/data.json <saida>.csv
+python3 scripts/export-gmaps.py <viagem>/data.json <viagem>/pois.csv
 ```
 Gera CSV de todos os POIs (nome+categoria+★+dia+endereço+coord). No **Google My Maps**: Criar mapa → Importar CSV → posicionar por `Endereço` → agrupar por `Categoria`. O My Maps **geocodifica endereços sozinho** — por isso o CSV é o caminho robusto pro mapa do Google (não precisa de coord na mão). Regenerar sempre que o `data.json` mudar.
 
