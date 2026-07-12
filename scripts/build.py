@@ -57,6 +57,7 @@ def build(data_path: Path, output_path: Path, minify=False):
         "{{LEGEND_GROUP_TEXT}}": data.get("legend_group_text", "Dia com família"),
         "{{LEGEND_NOTES_HTML}}": data.get("legend_notes_html", ""),
         "{{MODE}}": data.get("mode", "trip"),
+        "{{MAPS_REGION}}": data.get("maps_region", ""),
         "{{DAYS_JSON}}": js_value(data.get("days", []), minify=minify),
         "{{LINKS_MAP_JSON}}": js_value(data.get("links_map", {}), minify=minify),
         "{{TRANSIT_MAP_JSON}}": js_value(data.get("transit_map", {}), minify=minify),

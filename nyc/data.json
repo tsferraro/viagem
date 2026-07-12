@@ -7,6 +7,7 @@
   "header_sub": "3–13 Jul 2026 · Base Greenpoint",
   "password": "jujuba",
   "mode": "trip",
+  "maps_region": "New York, NY",
   "legend_group_text": "Dia com família (9-13/Jul)",
   "legend_notes_html": "        <strong>🚇 Metrô com carrinho:</strong> Estações G (Greenpoint Av, Nassau Av) e L (Lorimer St) NÃO têm elevador. Cabe carregar no braço como em Paris — sem panic.<br>\n        <strong>🌡️ Julho em NY:</strong> +32°C frequente. Protetor solar, água e pausas na sombra inegociáveis.<br>\n        <strong>🎆 50ª Fogos Macy's (sáb 4/Jul):</strong> Protetor auricular pra pequena. Multidão controlada em Transmitter Park, mas barulho intenso.<br>\n        <strong>⛴️ NYC Ferry:</strong> Doca India St a 5min da base. Forma mais cômoda de cruzar o East River com carrinho. App \"NYC Ferry\".",
   "days": [
@@ -248,7 +249,7 @@
               "valeAPena": 2
             },
             {
-              "nome": "Milk and Roses (1110 Manhattan Ave)",
+              "nome": "Milk and Roses (35 Box St)",
               "desc": "Americano com pegada do sul da Itália + jardim secreto nos fundos. Ambiente de livraria-bistrô, kid-ok, ótimo pra grupo demorar.",
               "preco": "$$",
               "dist": "10 min",
@@ -2115,8 +2116,8 @@
               "valeAPena": 3
             },
             {
-              "nome": "Joe's Shanghai",
-              "desc": "Xiao long bao (soup dumplings) é o pedido obrigatório. Chinês de Shanghai autêntico.",
+              "nome": "Kung Fu Little Steamed Buns (811 8th Ave)",
+              "desc": "Soup dumplings (xiao long bao) e ramen · clássico de Hell's Kitchen, rápido e barato",
               "preco": "$$",
               "dist": "10 min do teatro",
               "poiCat": "restaurante",

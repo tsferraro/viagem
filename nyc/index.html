@@ -776,7 +776,7 @@ const DAYS = [
             "valeAPena": 2
           },
           {
-            "nome": "Milk and Roses (1110 Manhattan Ave)",
+            "nome": "Milk and Roses (35 Box St)",
             "desc": "Americano com pegada do sul da Itália + jardim secreto nos fundos. Ambiente de livraria-bistrô, kid-ok, ótimo pra grupo demorar.",
             "preco": "$$",
             "dist": "10 min",
@@ -2643,8 +2643,8 @@ const DAYS = [
             "valeAPena": 3
           },
           {
-            "nome": "Joe's Shanghai",
-            "desc": "Xiao long bao (soup dumplings) é o pedido obrigatório. Chinês de Shanghai autêntico.",
+            "nome": "Kung Fu Little Steamed Buns (811 8th Ave)",
+            "desc": "Soup dumplings (xiao long bao) e ramen · clássico de Hell's Kitchen, rápido e barato",
             "preco": "$$",
             "dist": "10 min do teatro",
             "poiCat": "restaurante",
@@ -3367,6 +3367,10 @@ const BAIRROS_CONFIG = [
 // ============== MODE ("trip" datada | "city" coletânea sem datas) ==============
 const APP_MODE = "trip";
 
+// ============== REGIÃO p/ geocodar rotas por NOME (ex: "New York, NY") ==============
+// Se vazio, rotas de walking tour caem no fallback por coordenadas.
+const MAPS_REGION = "New York, NY";
+
 // ============== RENDER ==============
 // ============== RENDER ==============
 // APP_MODE ("trip" | "city") é declarado no bloco DATA (shell.html) ANTES deste script.
@@ -3562,16 +3566,23 @@ function getRouteUrl(day){
   return dirCoordUrl(stops.map(s=>s.coord),dayTransport(day)) || getMapsUrl(stops[0]);
 }
 
+// Limpa o nome de uma parada de walking tour p/ virar query geocodável:
+// tira parênteses (mantém o endereço dentro), corta descrições após "·", normaliza espaços.
+// Ex: "Trinity Church (89 Broadway · Hamilton's tomb)" → "Trinity Church 89 Broadway"
+function wtStopQuery(nome){
+  return (nome||'').replace(/[()]/g,' ').split('·')[0].replace(/\s+/g,' ').trim();
+}
 function getWalkingTourUrl(tour){
-  // Rota por COORDENADAS (exata) · sempre walking.
   if(!tour||tour.length<2) return '#';
-  const coordUrl=dirCoordUrl(tour.map(t=>t.coord),'walking');
-  if(coordUrl) return coordUrl;
-  // Fallback (só se faltar coord em alguma parada): rota por nome.
-  const queryName=t=>t.nome;
-  const names=tour.map(queryName).filter(Boolean);
-  if(names.length<2) return '#';
-  return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n.replace(/[()]/g,'').replace(/\s+/g,' ').trim()+', New York, NY')).join('/')}/`;
+  // Preferência: rota por NOME das paradas (legível no Google Maps) · exige MAPS_REGION p/ geocodar certo.
+  const region=(typeof MAPS_REGION!=='undefined'&&MAPS_REGION)?(', '+MAPS_REGION):'';
+  if(region){
+    const names=tour.map(t=>wtStopQuery(t.nome)).filter(Boolean);
+    if(names.length>=2)
+      return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n+region)).join('/')}/`;
+  }
+  // Fallback (sem região definida ou nomes ausentes): rota por COORDENADAS.
+  return dirCoordUrl(tour.map(t=>t.coord),'walking') || '#';
 }
 
 function agoraPillHtml(isNow){ return isNow?'<span class="agora-pill"><span class="agora-dot"></span>Agora</span>':''; }

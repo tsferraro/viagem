@@ -192,16 +192,23 @@ function getRouteUrl(day){
   return dirCoordUrl(stops.map(s=>s.coord),dayTransport(day)) || getMapsUrl(stops[0]);
 }
 
+// Limpa o nome de uma parada de walking tour p/ virar query geocodável:
+// tira parênteses (mantém o endereço dentro), corta descrições após "·", normaliza espaços.
+// Ex: "Trinity Church (89 Broadway · Hamilton's tomb)" → "Trinity Church 89 Broadway"
+function wtStopQuery(nome){
+  return (nome||'').replace(/[()]/g,' ').split('·')[0].replace(/\s+/g,' ').trim();
+}
 function getWalkingTourUrl(tour){
-  // Rota por COORDENADAS (exata) · sempre walking.
   if(!tour||tour.length<2) return '#';
-  const coordUrl=dirCoordUrl(tour.map(t=>t.coord),'walking');
-  if(coordUrl) return coordUrl;
-  // Fallback (só se faltar coord em alguma parada): rota por nome.
-  const queryName=t=>t.nome;
-  const names=tour.map(queryName).filter(Boolean);
-  if(names.length<2) return '#';
-  return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n.replace(/[()]/g,'').replace(/\s+/g,' ').trim()+', New York, NY')).join('/')}/`;
+  // Preferência: rota por NOME das paradas (legível no Google Maps) · exige MAPS_REGION p/ geocodar certo.
+  const region=(typeof MAPS_REGION!=='undefined'&&MAPS_REGION)?(', '+MAPS_REGION):'';
+  if(region){
+    const names=tour.map(t=>wtStopQuery(t.nome)).filter(Boolean);
+    if(names.length>=2)
+      return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n+region)).join('/')}/`;
+  }
+  // Fallback (sem região definida ou nomes ausentes): rota por COORDENADAS.
+  return dirCoordUrl(tour.map(t=>t.coord),'walking') || '#';
 }
 
 function agoraPillHtml(isNow){ return isNow?'<span class="agora-pill"><span class="agora-dot"></span>Agora</span>':''; }

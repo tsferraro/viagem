@@ -298,7 +298,7 @@ def check_required_features(content):
         'Popup color forçado white':  'color:#fff !important',
         'getDefaultDayIdx':           'function getDefaultDayIdx',
         'getWalkingTourUrl':          'function getWalkingTourUrl',
-        'WT URL fallback usa nome':   'queryName=t=>t.nome',
+        'WT URL por nome de parada':  'wtStopQuery',
         'Walking tour flag':          'walking-tour-flag',
         'Search WT index':            "hay+=' walking tour '",
         'Overview WT button':         'ov-wt-btn',
