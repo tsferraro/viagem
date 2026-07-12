@@ -70,11 +70,15 @@ Cada stop pertence a um de 3 tipos: `card`, `opcoes`, `transit`.
   poiCat:         String,     // (opcional · 2026-07-12 · mapa unificado) categoria do POI:
                               // "atracao" | "restaurante" | "cafe" | "padaria" | "loja" |
                               // "bar" | "parque" | "mercado" | "food-hall"
-  valeAPena:      Number,     // (opcional · 2026-07-12) RECOMPENSA pura 0-3 (estrelas) —
-                              // valor calibrado ao interesse da família, INDEPENDENTE do
-                              // risco/esforço (que fica no campo `risco`). Os 2 eixos do
-                              // mapa unificado: valeAPena=★ (benefício) · risco=semáforo.
-                              // Também aplicável aos itens de `opcoes` (poiCat+valeAPena).
+  valeAPena:      Number,     // (2026-07-12 · semântica confirmada no HANDOFF §4.1)
+                              // RECOMPENSA PURA 0-3 (★) — valor intrínseco pro interesse
+                              // agregado da composição da viagem, SEM desconto de esforço
+                              // (escada/fila/multidão vivem SÓ em `risco`). 2 eixos
+                              // independentes: 3★ pode coexistir com risco=red.
+                              // 0 = "⏭️ pula sem culpa" (POI real de valor baixo, marcado
+                              // de propósito) ≠ AUSENTE (= não-aplicável).
+                              // Aplica a `card` e itens de `opcoes`; transit NUNCA tem.
+                              // Render (fase 2): ★=tamanho do pino+selo · risco=anel de cor.
 }
 ```
 
@@ -109,6 +113,13 @@ Cada item em `opcoes`:
   desc:  String,  // 1-2 frases descritivas
   preco: String,  // "$" | "$$" | "$$$" | "$$$$"
   dist:  String,  // "10 min do ferry" | "no Chelsea Market"
+  poiCat:    String,  // (opcional · 2026-07-12) mesma enum do card
+  valeAPena: Number,  // (opcional · 2026-07-12) mesma semântica do card (HANDOFF §4.1)
+  coord:     Object,  // (opcional · 2026-07-12 · HANDOFF §4.2) {lat, lng} 4 casas decimais,
+                      // mesma semântica do coord de stop. Na fase 2 do mapa unificado,
+                      // CADA item de opção vira pino próprio (não 1 pino de grupo).
+                      // ⚠️ pinos de opção NÃO entram na rota do dia (getRouteUrl) —
+                      // mesma família de bug dos cards 🔄 (anti-padrão #8).
 }
 ```
 
@@ -221,6 +232,27 @@ const LINKS_MAP = {
 - Nunca inventar URLs — sempre web_search prévio
 
 ---
+
+## 5b. `HISTORIA` (opcional · 2026-07-12 · HANDOFF §4.4 · aba História & Curiosidades)
+
+Prosa do bloco "História & Curiosidades" da `destination-scout`, embarcada no app como **aba(s) sem mapa e sem stops** (padrão coletânea Marais). Conteúdo produzido pela fase de scout/roteiro; render implementado pela fase 2.5 do mapa unificado.
+
+```javascript
+const HISTORIA = [
+  {
+    titulo:     String,  // "🏛️ Roma — três mil anos empilhados" · vira o nome da aba/seção
+    prosa_html: String,  // parágrafos <p>...</p> com <strong>/<em> — HTML CRU (não markdown)
+                         // vem pronto do bloco 2 do .md da destination-scout
+  },
+  // 1 entrada por polo (Itália = 3) · viagem de 1 cidade = 1 entrada
+]
+```
+
+Regras:
+- **Fonte única**: a prosa vem do `.md` aprovado em `entregas/` (regra de reuso fase-0 · scout SKILL) — não se reescreve no build.
+- Prosa é conteúdo de "leitura de véspera/trem", não de campo — a aba NÃO carrega mapa, stops nem walkingTours.
+- Deve imprimir bem no 🖨️ PDF (`@media print` trata como conteúdo corrido).
+- Ausente/array vazio → aba não renderiza (retrocompatível com todas as viagens atuais).
 
 ## 6. Bairros canônicos (para `getBairroForCoord`)
 

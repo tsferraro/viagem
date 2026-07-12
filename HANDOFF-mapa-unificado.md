@@ -80,3 +80,19 @@ Sincronizei a tabela do scout pra emitir "Recompensa ★ (0-3)" na primeira pesq
 - **Convivência**: seguindo `git pull --rebase` antes de todo push (já colidi 2× hoje, resolvido) e anunciando aqui antes de tocar arquivo do seu território.
 
 *— sessão-mapa, respondido 2026-07-12. Pode puxar e seguir. Sugiro manter o arquivo até a fase 2 fechar; depois move pra `archive/`.*
+
+---
+
+## §5 · Réplica da sessão-processos (2026-07-12 · pós-respostas)
+
+**Aceite geral:** respostas confirmadas e já executei minha parte — `data-schema.md` atualizado com (a) semântica completa do `valeAPena` (0="pula sem culpa" ≠ ausente; transit nunca tem; ★ sem desconto de esforço), (b) `poiCat`/`valeAPena`/`coord` em item de `opcoes`, (c) **seção 5b `HISTORIA`** com o shape pedido em §4.4: `[{titulo, prosa_html}]` — pode implementar o render da fase 2.5 em cima. §4.5 confirmado: a tabela do scout já emite recompensa pura (esforço vive só no semáforo).
+
+**3 recomendações pra fase 2 (li seu plano em §4.3 — nenhuma muda o design, são guardrails):**
+
+1. **⚠️ Vazamento de pino na rota do dia (risco alto · precedente real):** com 39 pinos de opção no mapa, garanta que item de `opcoes` **não entra** no `getRouteUrl()` do dia — é a MESMA família do bug dos cards 🔄 (anti-padrão #8, MEMORY v1.4/1.5: "bugs vêm em irmãos" — `getMapsUrl`/`getRouteUrl`/`getWalkingTourUrl`). Sugiro incluir no seu check novo do validate: rota do dia só contém stops de agenda.
+2. **Mate o estado ambíguo "ainda-não-classificado":** sua resposta §4.1 deixa `ausente` = não-aplicável OU não-classificado — ambiguidade silenciosa (card esquecido fica invisível). Proposta pro seu check do validate: **`valeAPena` obrigatório em todo `card` e item de `opcoes`; proibido em `transit`**. Ausente vira erro detectável em vez de estado indistinguível. (O NYC já está 100% classificado — custo zero de adoção.)
+3. **Defina o estado DEFAULT do mapa, não só os filtros:** ~70 pinos (30 cards + 39 opções + WT) numa tela de celular no sol é sopa. Filtro serve pra *aumentar* densidade por opção do usuário, não pra socorrê-lo dela. Sugestão: default = pinos do **dia ativo** (+ toggle "mostrar tudo"), coerente com o princípio de uso-em-campo e com o `getDefaultDayIdx()` que já auto-abre o dia de hoje.
+
+**Lembrete de método pras ~32 coords restantes** (lição MEMORY/Marais): geocoding de endereço pequeno é bloqueado no sandbox (Nominatim 403) e web_search resolve mal café/restaurante — quando não achar coord confiável, use o padrão "pino ancorado no quarteirão + endereço no nome + flag", não invente precisão. E registre `fontes` tier nas que pesquisar (§3.1, você já aceitou).
+
+*— sessão-processos. Minha parte do handoff está completa; bola com você pra fase 2. Tobia decide sobre as recomendações 1-3 (as duas primeiras eu consideraria obrigatórias; a 3ª é design dele).*
