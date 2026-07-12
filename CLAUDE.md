@@ -203,15 +203,16 @@ Quando Tobia pede mudança em viagem existente:
 1. **Briefing parse**: destino, datas, base, composição, voos, reservas, mobilidade
 2. **UMA pergunta por vez** pra preencher lacunas críticas (NÃO checklist)
 2b. **Pergunta de profundidade** (sempre, pra walking tours/roteiros/road trips/levantamentos): _versão **básica** (essencial enxuto), **profunda** (história, curiosidades, o que observar parada-a-parada — padrão Marais), ou **as 2 com toggle** (botão Básico↔Profundo no mesmo dia, via stops marcados `essencial: true`)?_ Default = profunda.
-3. **Levantamento macro** (degrau 0) via `skills/destination-scout/SKILL.md`: ~5-10 buscas (bairros, eventos, restaurantes, transit, hidden gems) → mapeamento de atrações+restaurantes (veredito 🟢🟡🔴) + histórico/curiosidades · valida com Tobia antes de sequenciar dias
+3. **Levantamento macro** (degrau 0) via `skills/destination-scout/SKILL.md`: fan-out de pesquisa (≥10-12 buscas/polo no macro) → mapeamento de atrações+restaurantes (veredito 🟢🟡🔴 + Recompensa ★ + proveniência) + histórico/curiosidades · valida com Tobia antes de sequenciar dias. **Se já existe `entregas/<slug>.md` APROVADO: consome, NÃO re-pesquisa** (vereditos→cards · ★→valeAPena · clusters→esqueleto · prosa→HISTORIA[] · Fontes→proveniência)
 4. **Esqueleto** em tabela (1 linha/dia: data/bairro/tema/atração) · valida com Tobia antes de detalhar
 5. **Expansão dia-a-dia** · se viagem >14 dias, **OBRIGATÓRIO** dividir em blocos de 5-7 dias com validação entre cada
 6. **Walking tours** com rubrica de valor (alto/médio/baixo) + justificativa
-7. **Monta `data.json`** com: title/auth/header/password/legend + days + links_map + transit_map + bairros_config
+7. **Monta `data.json`** com: title/auth/header/password/legend + days + links_map + transit_map + bairros_config + `historia[]` (prosa do scout · schema §5b) · cards/opções com `poiCat` + `valeAPena` (obrigatórios) e `fontes` nos âncora
 8. **Roda `build.py data.json index.html`**
 9. **Roda `validate.py index.html`** (BLOQUEIA se falhar)
-9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥28 e P0=0 (máx 3 iterações · fix P1s no data.json → re-build → re-audit)
-10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · reportar nota conteúdo na entrega
+9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥28 e P0=0 (máx 3 iterações · fix P1s no data.json → re-build → re-audit) · aspiração ≥36
+9c. **FACTCHECK lean + JUDGE 1×(+1)** (é entrega → pilha completa da tabela de gatilhos · `skills/critico-roteiro/FACTCHECK.md` e `JUDGE.md`) · só após audit limpo
+10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · reportar na entrega: nota audit + placar factcheck + veredito judge
 
 ## Schema dos dados (JSON pretty embedded no HTML)
 

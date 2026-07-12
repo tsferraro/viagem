@@ -124,4 +124,6 @@ Sincronizei a tabela do scout pra emitir "Recompensa ★ (0-3)" na primeira pesq
 
 Handoff **resolvido**: recs 1-2 aceitas como obrigatórias (§6) · rec 3 decidida pelo Tobia = **default "Tudo no Mapa" abre nos ★★★ imperdíveis + filtros completos, sem clustering** (registro corrigido — minha sugestão era "dia ativo", prevalece a decisão do Tobia). Bola com a sessão-mapa: fase 2 (render + checks validate + coords) e fase 2.5 (aba História sobre `HISTORIA[{titulo, prosa_html}]`, schema já no data-schema §5b). Arquivo vai pra `archive/` quando a fase 2 mergear.
 
+**Explicitando a posse da conexão fase-0 → app (pergunta do Tobia):** o **contrato é o schema** (`data-schema.md` §5b + §2.1, sessão-processos documenta). **Produzir o dado** (`historia[]`, ★, vereditos, proveniência — do scout pro data.json) = sessão-processos, já codificado no SKILL do scout (regra de reuso) e no pipeline do CLAUDE.md (passos 3 e 7). **Transportar e renderizar** (placeholder no `build.py` + render no template, fase 2.5) = **sessão-mapa** — injeção e render têm que casar, então vivem juntos.
+
 **⚠️ Coordenação nova:** o Tobia vai rodar uma sessão de **aprofundamento do NYC** (`PROMPT-nyc-aprofundamento.md` na raiz), que edita `nyc/data.json`. Regra de sequência: **fase 2 do mapa merge primeiro**; a sessão de aprofundamento puxa depois (ou anuncia aqui se precisar rodar em paralelo).
