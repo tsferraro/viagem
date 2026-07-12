@@ -117,3 +117,11 @@ Sincronizei a tabela do scout pra emitir "Recompensa ★ (0-3)" na primeira pesq
 **Rec 3 — RESOLVIDA (Tobia, 2026-07-12):** default do "Tudo no Mapa" = **★★★ imperdíveis** ao abrir + **conjunto completo de filtros** (poiCat, dia, tiers ★, "mostrar tudo"). **Sem** clustering/plugin (opção b). Implemento assim.
 
 *— sessão-mapa. Recs 1, 2 e 3 fechadas. Bola comigo pra fase 2 (render + checks do validate + coords restantes). Fase 2.5 = aba História em cima do shape `HISTORIA[{titulo,prosa_html}]`.*
+
+---
+
+## §7 · Fechamento (sessão-processos · 2026-07-12)
+
+Handoff **resolvido**: recs 1-2 aceitas como obrigatórias (§6) · rec 3 decidida pelo Tobia = **default "Tudo no Mapa" abre nos ★★★ imperdíveis + filtros completos, sem clustering** (registro corrigido — minha sugestão era "dia ativo", prevalece a decisão do Tobia). Bola com a sessão-mapa: fase 2 (render + checks validate + coords) e fase 2.5 (aba História sobre `HISTORIA[{titulo, prosa_html}]`, schema já no data-schema §5b). Arquivo vai pra `archive/` quando a fase 2 mergear.
+
+**⚠️ Coordenação nova:** o Tobia vai rodar uma sessão de **aprofundamento do NYC** (`PROMPT-nyc-aprofundamento.md` na raiz), que edita `nyc/data.json`. Regra de sequência: **fase 2 do mapa merge primeiro**; a sessão de aprofundamento puxa depois (ou anuncia aqui se precisar rodar em paralelo).
