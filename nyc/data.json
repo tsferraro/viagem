@@ -87,19 +87,25 @@
               "nome": "The Bagel Store (Williamsburg)",
               "desc": "Rainbow bagels icônicos do Instagram + clássicos. Tem fila domingo, sábado tranquilo.",
               "preco": "$5-9",
-              "dist": "15 min a pé"
+              "dist": "15 min a pé",
+              "poiCat": "padaria",
+              "valeAPena": 2
             },
             {
               "nome": "Bagel Pub (Williamsburg)",
               "desc": "Bagel artesanal clássico, atmosfera local, sem turistada.",
               "preco": "$4-8",
-              "dist": "15 min a pé"
+              "dist": "15 min a pé",
+              "poiCat": "padaria",
+              "valeAPena": 2
             },
             {
               "nome": "Eberle Bakery (Greenpoint)",
               "desc": "Bakery local desde 1925, polonesa + bagels. Mais perto da base.",
               "preco": "$4-7",
-              "dist": "5 min a pé"
+              "dist": "5 min a pé",
+              "poiCat": "padaria",
+              "valeAPena": 2
             }
           ]
         },
@@ -126,7 +132,9 @@
           "coord": {
             "lat": 40.722,
             "lng": -73.9626
-          }
+          },
+          "poiCat": "mercado",
+          "valeAPena": 3
         },
         {
           "hora": "14:00",
@@ -163,7 +171,9 @@
           "coord": {
             "lat": 40.7298,
             "lng": -73.9608
-          }
+          },
+          "poiCat": "parque",
+          "valeAPena": 2
         },
         {
           "hora": "21:25",
@@ -188,7 +198,9 @@
           "coord": {
             "lat": 40.7298,
             "lng": -73.9608
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         }
       ]
     },
@@ -219,19 +231,25 @@
               "nome": "Peter Pan Donut & Pastry Shop (727 Manhattan Ave)",
               "desc": "Instituição de Greenpoint desde 1950 — donuts lendários (o blueberry é cult), breakfast sandwiches e milkshakes. Barato, balcão retrô, ímã pra criança. Fila anda rápido.",
               "preco": "$",
-              "dist": "5-10 min da base"
+              "dist": "5-10 min da base",
+              "poiCat": "padaria",
+              "valeAPena": 3
             },
             {
               "nome": "Esme (999 Manhattan Ave)",
               "desc": "Brunch moderno num espaço claríssimo e colorido, indoor + outdoor. Aceita reserva — bom pra grupo grande sentar junto.",
               "preco": "$$",
-              "dist": "8 min"
+              "dist": "8 min",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Milk and Roses (1110 Manhattan Ave)",
               "desc": "Americano com pegada do sul da Itália + jardim secreto nos fundos. Ambiente de livraria-bistrô, kid-ok, ótimo pra grupo demorar.",
               "preco": "$$",
-              "dist": "10 min"
+              "dist": "10 min",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             }
           ]
         },
@@ -258,7 +276,9 @@
           "coord": {
             "lat": 40.7148,
             "lng": -73.9679
-          }
+          },
+          "poiCat": "parque",
+          "valeAPena": 2
         },
         {
           "hora": "14:00",
@@ -296,7 +316,9 @@
           "coord": {
             "lat": 40.7217,
             "lng": -73.9576
-          }
+          },
+          "poiCat": "bar",
+          "valeAPena": 1
         },
         {
           "hora": "18:30",
@@ -314,19 +336,25 @@
               "nome": "Emmy Squared (364 Grand St)",
               "desc": "Pizza Detroit (quadrada, borda crocante caramelizada) + a famosa Emmy burger estilo In-N-Out turbinada. Animado, ótimo pra dividir em grupo, criança adora.",
               "preco": "$$",
-              "dist": "Williamsburg"
+              "dist": "Williamsburg",
+              "poiCat": "restaurante",
+              "valeAPena": 3
             },
             {
               "nome": "Karczma (136 Greenpoint Ave)",
               "desc": "Polonês autêntico de Greenpoint, garçonetes a caráter, pierogi tido como o melhor do bairro + grelhados pra dividir. Barato, divertido, kid-ok. Reserva no fim de semana.",
               "preco": "$",
-              "dist": "Greenpoint"
+              "dist": "Greenpoint",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Bernie's (332 Driggs Ave)",
               "desc": "Americano retrô red-sauce de Greenpoint, vibe nostálgica, porções generosas pra mesa grande. Walk-in fácil, bom pra grupo com criança.",
               "preco": "$$",
-              "dist": "Greenpoint"
+              "dist": "Greenpoint",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             }
           ]
         }
@@ -379,7 +407,9 @@
           "coord": {
             "lat": 40.7113,
             "lng": -74.0118
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "11:15",
@@ -405,7 +435,9 @@
           "coord": {
             "lat": 40.7115,
             "lng": -74.0134
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "12:00",
@@ -429,7 +461,9 @@
           "coord": {
             "lat": 40.7101,
             "lng": -74.0102
-          }
+          },
+          "poiCat": "loja",
+          "valeAPena": 1
         },
         {
           "hora": "12:30",
@@ -520,7 +554,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "14:00",
@@ -538,19 +574,25 @@
               "nome": "Whole Foods Tribeca (270 Greenwich St)",
               "desc": "Hot bar grande, saladas, opções saudáveis. Comer no Hudson River Park ou no próprio mezanino.",
               "preco": "$",
-              "dist": "10 min do ferry"
+              "dist": "10 min do ferry",
+              "poiCat": "mercado",
+              "valeAPena": 1
             },
             {
               "nome": "Brookfield Place Hudson Eats",
               "desc": "Food hall climatizado com Black Seed Bagels, Sweetgreen, Shake Shack, Mighty Quinn BBQ etc. Vista da World Financial Center.",
               "preco": "$-$$",
-              "dist": "5 min do 9/11"
+              "dist": "5 min do 9/11",
+              "poiCat": "food-hall",
+              "valeAPena": 2
             },
             {
-              "nome": "Joe's Pizza (180 Bedford NYC) — wait, Joe's Pizza Greenwich Village 7 Carmine St",
+              "nome": "Joe's Pizza (7 Carmine St)",
               "desc": "Pizza por fatia clássica, $3-4/fatia. Greenwich Village mas vale o desvio. Pulada de fatia rápida.",
               "preco": "$",
-              "dist": "Uber 8min"
+              "dist": "Uber 8min",
+              "poiCat": "restaurante",
+              "valeAPena": 3
             }
           ]
         },
@@ -577,7 +619,9 @@
           "coord": {
             "lat": 40.7038,
             "lng": -74.0166
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "16:15",
@@ -640,7 +684,9 @@
           "coord": {
             "lat": 40.7676,
             "lng": -73.9719
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "12:00",
@@ -658,19 +704,25 @@
               "nome": "Whole Foods Columbus Circle",
               "desc": "Hot bar enorme + saladas + sushi pra montar prato. Comer na praça aberta do TWC ou montar piquenique pro Central Park.",
               "preco": "$",
-              "dist": "10 min do zoo"
+              "dist": "10 min do zoo",
+              "poiCat": "mercado",
+              "valeAPena": 1
             },
             {
               "nome": "Trader Joe's 670 Columbus Ave",
               "desc": "Mercado mais barato, ótimo pra piquenique (sanduíches prontos, frutas, snacks).",
               "preco": "$",
-              "dist": "15 min do zoo"
+              "dist": "15 min do zoo",
+              "poiCat": "mercado",
+              "valeAPena": 1
             },
             {
               "nome": "Le Pain Quotidien Columbus Circle",
               "desc": "Sit-down rápido com high chair, cardápio infantil, salgadas/saladas saudáveis.",
               "preco": "$$",
-              "dist": "10 min do zoo"
+              "dist": "10 min do zoo",
+              "poiCat": "cafe",
+              "valeAPena": 2
             }
           ]
         },
@@ -760,7 +812,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "14:30",
@@ -786,7 +840,9 @@
           "coord": {
             "lat": 40.7615,
             "lng": -73.9633
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "15:30",
@@ -805,19 +861,25 @@
               "nome": "Heckscher Playground",
               "desc": "Maior playground do Central Park, área de spray d'água em julho. Sul do parque (62nd St).",
               "preco": "Grátis",
-              "dist": "15 min do Tramway"
+              "dist": "15 min do Tramway",
+              "poiCat": "parque",
+              "valeAPena": 2
             },
             {
               "nome": "Ancient Playground",
               "desc": "Tema egípcio, perto do MET (84th St). Spray d'água. Bom se vão pro lado leste.",
               "preco": "Grátis",
-              "dist": "20 min do Tramway"
+              "dist": "20 min do Tramway",
+              "poiCat": "parque",
+              "valeAPena": 2
             },
             {
               "nome": "Diana Ross Playground",
               "desc": "West Side (81st St), perto do AMNH. Sombra densa.",
               "preco": "Grátis",
-              "dist": "25 min do Tramway"
+              "dist": "25 min do Tramway",
+              "poiCat": "parque",
+              "valeAPena": 2
             }
           ]
         },
@@ -947,7 +1009,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "12:15",
@@ -986,7 +1050,9 @@
           "coord": {
             "lat": 40.7614,
             "lng": -73.9776
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "14:15",
@@ -1004,19 +1070,25 @@
               "nome": "The Halal Guys (53rd & 6th)",
               "desc": "Food cart original desde 1990, chicken & rice combo com molho branco + hot sauce. Comer no banco do parque ou Bryant Park (5min).",
               "preco": "$10/pessoa",
-              "dist": "3 min do MOMA"
+              "dist": "3 min do MOMA",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Le Pain Quotidien (53rd & 7th)",
               "desc": "Sit-down com high chair, cardápio infantil, salgadas/saladas, ambiente tranquilo pra criança.",
               "preco": "$$",
-              "dist": "5 min do MOMA"
+              "dist": "5 min do MOMA",
+              "poiCat": "cafe",
+              "valeAPena": 2
             },
             {
               "nome": "Whole Foods Bryant Park",
               "desc": "Hot bar grande + comer no Bryant Park (10 min). Funciona bem como piquenique.",
               "preco": "$",
-              "dist": "10 min do MOMA"
+              "dist": "10 min do MOMA",
+              "poiCat": "mercado",
+              "valeAPena": 1
             }
           ]
         },
@@ -1043,7 +1115,9 @@
           "coord": {
             "lat": 40.7247,
             "lng": -73.9982
-          }
+          },
+          "poiCat": "loja",
+          "valeAPena": 1
         },
         {
           "hora": "16:15",
@@ -1118,7 +1192,9 @@
           "coord": {
             "lat": 40.7527,
             "lng": -73.9772
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "12:15",
@@ -1218,7 +1294,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "18:00",
@@ -1280,7 +1358,9 @@
           "coord": {
             "lat": 40.7536,
             "lng": -73.9832
-          }
+          },
+          "poiCat": "parque",
+          "valeAPena": 2
         },
         {
           "hora": "11:00",
@@ -1370,7 +1450,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "12:30",
@@ -1388,19 +1470,25 @@
               "nome": "Grand Central Dining Concourse",
               "desc": "Food hall histórico abaixo da estação. Murray's Cheese Bar, Shake Shack, Cipriani, Magnolia Bakery. Atmosfera grand.",
               "preco": "$-$$",
-              "dist": "5 min do Top of Rock"
+              "dist": "5 min do Top of Rock",
+              "poiCat": "food-hall",
+              "valeAPena": 2
             },
             {
               "nome": "Whole Foods Bryant Park",
               "desc": "Hot bar + saladas + tomar no Bryant Park (caminho de volta).",
               "preco": "$",
-              "dist": "5 min do Top of Rock"
+              "dist": "5 min do Top of Rock",
+              "poiCat": "mercado",
+              "valeAPena": 1
             },
             {
               "nome": "Sweetgreen (5th Ave)",
               "desc": "Saladas customizáveis, sem espera longa, kid-friendly.",
               "preco": "$",
-              "dist": "5 min do Top of Rock"
+              "dist": "5 min do Top of Rock",
+              "poiCat": "restaurante",
+              "valeAPena": 1
             }
           ]
         },
@@ -1442,7 +1530,9 @@
             "lat": 40.7794,
             "lng": -73.9632
           },
-          "reserva": "reservado"
+          "reserva": "reservado",
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "16:30",
@@ -1507,7 +1597,9 @@
           "coord": {
             "lat": 40.7813,
             "lng": -73.9737
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "12:30",
@@ -1525,19 +1617,25 @@
               "nome": "Trader Joe's 670 Columbus Ave",
               "desc": "Mercado pra montar piquenique. Comer no Central Park (Sheep Meadow a 10min) ou Diana Ross Playground.",
               "preco": "$",
-              "dist": "5 min do AMNH"
+              "dist": "5 min do AMNH",
+              "poiCat": "mercado",
+              "valeAPena": 1
             },
             {
               "nome": "Shake Shack Columbus Circle",
               "desc": "Burger clássico NYC, kid menu, cardápio rápido. Mais 5 min de caminhada.",
               "preco": "$$",
-              "dist": "10 min do AMNH"
+              "dist": "10 min do AMNH",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Café Mezz (dentro do AMNH)",
               "desc": "Café do próprio museu, conveniência total mas comida fraca. Vale só se quiserem ficar dentro.",
               "preco": "$$",
-              "dist": "No museu"
+              "dist": "No museu",
+              "poiCat": "cafe",
+              "valeAPena": 1
             }
           ]
         },
@@ -1575,7 +1673,9 @@
           "coord": {
             "lat": 40.7539,
             "lng": -74.0021
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 1
         },
         {
           "hora": "15:00",
@@ -1664,7 +1764,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "poiCat": "parque",
+          "valeAPena": 3
         },
         {
           "hora": "15:30",
@@ -1683,19 +1785,25 @@
               "nome": "Los Tacos No.1",
               "desc": "Tacos mexicanos autênticos com tortilla feita na hora. Al pastor com abacaxi é icônico. Fila rotativa rápida.",
               "preco": "$15/pessoa",
-              "dist": "No Chelsea Market"
+              "dist": "No Chelsea Market",
+              "poiCat": "restaurante",
+              "valeAPena": 3
             },
             {
               "nome": "The Lobster Place",
               "desc": "Lobster roll fresco, ostras, sushi de qualidade. Aquário ao vivo encanta criança.",
               "preco": "$$$",
-              "dist": "No Chelsea Market"
+              "dist": "No Chelsea Market",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Amy's Bread + Buon Italia",
               "desc": "Sanduíches em pão artesanal + opções italianas. Mais leve, kid-friendly.",
               "preco": "$",
-              "dist": "No Chelsea Market"
+              "dist": "No Chelsea Market",
+              "poiCat": "padaria",
+              "valeAPena": 2
             }
           ]
         },
@@ -1722,7 +1830,9 @@
           "coord": {
             "lat": 40.7421,
             "lng": -74.0107
-          }
+          },
+          "poiCat": "parque",
+          "valeAPena": 2
         },
         {
           "hora": "17:30",
@@ -1846,7 +1956,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "poiCat": "parque",
+          "valeAPena": 2
         },
         {
           "hora": "11:00",
@@ -1871,7 +1983,9 @@
           "coord": {
             "lat": 40.7061,
             "lng": -73.9969
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "12:30",
@@ -1889,19 +2003,25 @@
               "nome": "Locanda Verde",
               "desc": "Restaurante de Andrew Carmellini, parceria com Robert De Niro. Italiano elevado em ambiente de loft. Reserva via Resy.",
               "preco": "$$$",
-              "dist": "10 min do fim da ponte"
+              "dist": "10 min do fim da ponte",
+              "poiCat": "restaurante",
+              "valeAPena": 3
             },
             {
               "nome": "Bubby's Tribeca",
               "desc": "All-day American comfort, café da manhã servido o dia todo. Bom pra grupo.",
               "preco": "$$",
-              "dist": "8 min da ponte"
+              "dist": "8 min da ponte",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Whole Foods Tribeca",
               "desc": "Hot bar + saladas pra montar prato + comer no Hudson River Park (Pier 25). Mais rápido se o tempo apertar.",
               "preco": "$",
-              "dist": "15 min da ponte"
+              "dist": "15 min da ponte",
+              "poiCat": "mercado",
+              "valeAPena": 1
             }
           ]
         },
@@ -1942,7 +2062,9 @@
           "coord": {
             "lat": 40.7631,
             "lng": -73.9844
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "18:00",
@@ -1960,19 +2082,25 @@
               "nome": "X'ian Famous Foods",
               "desc": "Macarrão biang-biang puxado à mão + lamb cumin (sabor da Rota da Seda). Picante REAL. $15-20/pessoa.",
               "preco": "$",
-              "dist": "10 min do teatro"
+              "dist": "10 min do teatro",
+              "poiCat": "restaurante",
+              "valeAPena": 3
             },
             {
               "nome": "Joe's Shanghai",
               "desc": "Xiao long bao (soup dumplings) é o pedido obrigatório. Chinês de Shanghai autêntico.",
               "preco": "$$",
-              "dist": "10 min do teatro"
+              "dist": "10 min do teatro",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Pio Pio",
               "desc": "Frango assado peruano, ótimo pra criança (pré-musical caso família queira algo mais simples).",
               "preco": "$$",
-              "dist": "15 min do teatro"
+              "dist": "15 min do teatro",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             }
           ]
         },
@@ -2017,19 +2145,25 @@
               "nome": "Five Leaves (Greenpoint)",
               "desc": "Restaurante institution Greenpoint, ricotta pancakes lendária, atmosfera de café Australia-meets-Brooklyn. Reservar via Resy (lotado domingo, segunda mais tranquilo).",
               "preco": "$$$",
-              "dist": "10 min da base"
+              "dist": "10 min da base",
+              "poiCat": "restaurante",
+              "valeAPena": 3
             },
             {
               "nome": "Cafe Mogador (Williamsburg)",
               "desc": "Brunch marroquino, tagine + ovos pochés. Vibe colorida, kid-friendly.",
               "preco": "$$",
-              "dist": "15 min"
+              "dist": "15 min",
+              "poiCat": "restaurante",
+              "valeAPena": 2
             },
             {
               "nome": "Sweetleaf Coffee (Greenpoint)",
               "desc": "Café terceira-onda, sanduíches simples, atmosfera de coworking local. Mais quick.",
               "preco": "$",
-              "dist": "5 min"
+              "dist": "5 min",
+              "poiCat": "cafe",
+              "valeAPena": 2
             }
           ]
         },
@@ -2057,7 +2191,9 @@
           "coord": {
             "lat": 40.7351,
             "lng": -73.9591
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 2
         },
         {
           "hora": "11:15",
@@ -2094,7 +2230,9 @@
           "coord": {
             "lat": 40.7645,
             "lng": -73.9997
-          }
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
         },
         {
           "hora": "14:30",
