@@ -88,9 +88,15 @@ Estrutura de saída (markdown, pronto pra copiar):
 Big picture antes do detalhe (princípio #4 do repo). O que o destino É, pra esse perfil, e o nº1 imperdível. Use o título "Resumo" (PT-BR) — NÃO "TL;DR" (gíria, fica esquisito em guia pra família).
 
 ### 3.2 · Tabela "esforço × recompensa"
-| Atração | Base p/ acesso | Esforço | Veredito |
+| Atração | Base p/ acesso | Recompensa ★ | Esforço | Veredito |
 
 Veredito = 🟢 (faça) · 🟡 (depende/avalie) · 🔴 (pula sem culpa). Calibrado pelo perfil. Rubrica em `references/mapping-rubric.md`.
+
+**Sincronização com o app (2026-07-12 · mapa unificado do roteiro-design):** a tabela agora registra os **2 eixos decompostos** que o app consome direto, além do veredito-síntese:
+- **Recompensa ★** (0-3) → vira `valeAPena` no data.json — valor puro pro perfil, independente do esforço
+- **Esforço** (baixo/médio/alto + o porquê: carrinho/escada/fila) → informa `risco` (semáforo)
+- **Veredito** 🟢🟡🔴 = a síntese dos dois pro perfil (recompensa alta + esforço incompatível = 🔴 mesmo com 3★)
+Registrar ★ já na primeira pesquisa + anotar `poiCat` (atracao/restaurante/cafe/padaria/loja/bar/parque/mercado/food-hall) por item = a fase de roteiro monta o mapa unificado **sem reavaliar nada**. Enums em `references/data-schema.md`.
 
 ### 3.3 · Atrações detalhadas
 Por atração: o que é · distância da base · esforço/acesso · ingresso datado · reserva? · **veredito honesto** + ⚠️ alertas de segurança quando houver (ex: cabeça d'água).

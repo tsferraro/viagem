@@ -67,6 +67,14 @@ Cada stop pertence a um de 3 tipos: `card`, `opcoes`, `transit`.
                               // Obrigatório só em cards-ÂNCORA e afirmações de preço/horário.
                               // Régua: references/source-credibility.md · usado pelo FACTCHECK
                               // (afirmação com T1 recente registrada não é re-verificada)
+  poiCat:         String,     // (opcional · 2026-07-12 · mapa unificado) categoria do POI:
+                              // "atracao" | "restaurante" | "cafe" | "padaria" | "loja" |
+                              // "bar" | "parque" | "mercado" | "food-hall"
+  valeAPena:      Number,     // (opcional · 2026-07-12) RECOMPENSA pura 0-3 (estrelas) —
+                              // valor calibrado ao interesse da família, INDEPENDENTE do
+                              // risco/esforço (que fica no campo `risco`). Os 2 eixos do
+                              // mapa unificado: valeAPena=★ (benefício) · risco=semáforo.
+                              // Também aplicável aos itens de `opcoes` (poiCat+valeAPena).
 }
 ```
 
