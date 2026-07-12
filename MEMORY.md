@@ -194,5 +194,15 @@ Padrões pra road-trips de **fim-de-semana com destino único** (festa/evento ·
 - **LIÇÃO (custou retrabalho)**: antes de mexer em URL do Google Maps, **ler `references/` primeiro**. Um sub-agente trocou a rota coords→nomes sem checar o doc, reintroduzindo o bug "nomes erráticos em waypoints" que o §3.7 já resolvia.
 - **Delegação**: sub-agentes se confundem com o próprio histórico em rodadas longas → pra mudança nova, **spawn com contexto limpo + âncoras exatas** > resumir agente antigo.
 
+### Mapa unificado + classificação (Fase 1/2) · 2026-07-12
+
+- **Grind de coord → CSV é o pivot certo pro Google Maps**: o **My Maps geocodifica endereços na importação**, então NÃO vale hand-grindar 39 coords pro output do Google — basta nome+endereço no CSV. Coord na mão só pro mapa **in-app** (Leaflet precisa de lat/lng). Lição geral: antes de um grind, pergunte "o output precisa mesmo de lat/lng, ou o endereço basta?".
+- **"Reservas não persistem" ≈ navegador efêmero, NÃO bug de código**: verifiquei a persistência end-to-end (Playwright) — o código estava correto; a causa real é **webview de app (WhatsApp/Instagram) ou modo privado** que descarta o localStorage. `maybeWarnStorage()` detecta e avisa. Lição: **verificar o código antes de "consertar"** um bug de persistência.
+- **Grind de coord revela apodrecimento de dado**: pesquisar as coords achou **5 spots fechados/mudados** (Esme fechou · Joe's Shanghai fechou · Xi'an relocou 24→60 W 45th · Bagel Store/Bagel Pub/Eberle eram fantasmas). Opções de comida apodrecem → revalidar "ainda aberto?" é parte do FACTCHECK pré-viagem.
+- **Default do mapa = subconjunto curado (⭐⭐⭐), não todos os ~70 pinos** (senão vira sopa no celular). Filtro aumenta densidade por opção, não socorre dela. Paradas de walking tour (sem `valeAPena`) contam como tier ⭐ → só aparecem no "Tudo".
+- **Trailing zero quebra o check de 4 casas**: coord `40.751` (repr do float) falha o check de precisão mesmo sendo "4 dp na intenção" — use 4ª casa **não-zero** (nudge de ~1m).
+- **WT URL coords→nomes é SEGURO com `MAPS_REGION`**: a mudança 2026-07-12 (rota do walking tour por NOME) **NÃO** é o bug antigo de "nomes erráticos em waypoints" — cada nome recebe `", New York, NY"` (region-qualified), então geocoda certo. **Não reverter** achando que é regressão.
+
 ## Pendências
 - [ ] Propagar o aviso de storage não-persistente (maybeWarnStorage · template) pros outros roteiros: rebuildar corsica, marais, valencia, pais-sardenha via build.py (só NYC foi reconstruído em 2026-07-08).
+- [ ] Propagar a **aba "Tudo no Mapa" + classificação `poiCat`/`valeAPena`** pros outros roteiros (o template já herda a aba; falta classificar os POIs e dar coord às opções de cada viagem).

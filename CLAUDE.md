@@ -449,6 +449,26 @@ O toggle continua no template pronto pra reuso — é só (re)adicionar `essenci
 - **Busca global na landing** (`regen-landing.py`): campo que filtra os cards por nome+descrição e esconde seções vazias (na home e em cada página de cidade).
 - **CITY.txt** numa viagem → ela é uma **coletânea de cidade**. Na **home** a cidade aparece como **1 card** na seção "🌍 Passeios por cidade" que leva pra página da cidade — os roteiros NÃO listam inline na home (pedido Tobia 2026-06-07). Sem CITY.txt → viagem datada normal em "✈️ Viagens" (ordem cronológica), inline na home.
 - **Página standalone por cidade** (`regen-landing.py`): gera um `<cidade>.html` na raiz pra CADA cidade com CITY.txt (ex: `paris.html`) · lista os passeios daquela cidade, sem arquivo, sem outras viagens e **sem link pra home** · é O link pra compartilhar (`tsferraro.github.io/viagem/paris.html`) sem expor as viagens pessoais. Auto-regenerada · é arquivo na raiz (não subpasta), então não vira "viagem" na detecção.
+- **Aba "Tudo no Mapa"** (mapa unificado · 2026-07-12): 4ª aba com TODOS os POIs da viagem (cards + itens de `opcoes` + paradas de walking tour) numa tela. Default = ⭐⭐⭐ imperdíveis (limpo) + filtros por tier ★, categoria (`poiCat`) e dia. **Pino: tamanho = recompensa `valeAPena` · anel = risco 🟢🟡🔴 · cor = categoria** (2 eixos independentes). Botão **📍 "Onde estou"** (geolocalização, centra o mapa em você). Paradas de WT entram como tier ⭐ (só no "Tudo", não poluem o default).
+- **Aba "História & Curiosidades"** (condicional · 2026-07-12): 5ª aba, aparece SÓ se o `data.json` tiver `historia: [{titulo, prosa_html}]`. Prosa por polo em `<details>`, estilo coletânea Marais, sem mapa/horário. Conteúdo vem pronto da `destination-scout`.
+- **Aviso de storage não-persistente** (`maybeWarnStorage` · 2026-07-12): detecta modo privado / navegador embutido em app (WhatsApp/Instagram) e mostra banner explicando que reservas/feitos não vão salvar. Não aparece em navegador normal.
+- **Rota de walking tour por NOME** (2026-07-12): `getWalkingTourUrl` monta `/dir/Nome1/Nome2/…` (legível no Google Maps) usando o global **`MAPS_REGION`** (ex: `"New York, NY"`, injetado do `data.json`). Se `maps_region` vazio, cai pro fallback por coordenadas.
+- **Auto-abrir dia de hoje** usa comparação em horário LOCAL (`getMonth()/getDate()`), não `toISOString()` UTC (senão rola o dia em fuso ≠ UTC · corrigido 2026-07-12).
+
+## Classificação de POI · 2 eixos independentes (2026-07-12)
+
+Todo `card` e todo item de `opcoes` carrega DOIS eixos ortogonais (ver `references/data-schema.md`):
+- **`valeAPena`** (recompensa ★, 0-3): `3`=⭐⭐⭐ vale a viagem · `2`=⭐⭐ vale o desvio · `1`=⭐ se sobrar · `0`=⏭️ pula sem culpa. **Recompensa PURA** (valor/interesse do lugar), calibrada ao público **por interesse** (bar=3★ adulto/1★ criança), NUNCA descontada por esforço. **Obrigatório** em card/opção · **proibido** em `transit` (o `validate.py` bloqueia).
+- **`risco`** (🟢🟡🔴): o esforço/atrito (fila, multidão, físico, logística) — independente. Um lugar pode ser ⭐⭐⭐ E 🔴.
+- **`poiCat`** (categoria, 9 valores): `atracao·restaurante·cafe·padaria·loja·bar·parque·mercado·food-hall`.
+- Itens de `opcoes` também ganham **`coord`** própria (4 casas) → viram pino individual no mapa.
+
+## export-gmaps.py — CSV pro Google My Maps
+
+```bash
+python3 scripts/export-gmaps.py <viagem>/data.json <saida>.csv
+```
+Gera CSV de todos os POIs (nome+categoria+★+dia+endereço+coord). No **Google My Maps**: Criar mapa → Importar CSV → posicionar por `Endereço` → agrupar por `Categoria`. O My Maps **geocodifica endereços sozinho** — por isso o CSV é o caminho robusto pro mapa do Google (não precisa de coord na mão). Regenerar sempre que o `data.json` mudar.
 
 ## Roteiros paralelos
 
