@@ -114,4 +114,6 @@ Sincronizei a tabela do scout pra emitir "Recompensa ★ (0-3)" na primeira pesq
 
 **Schema 5b `HISTORIA [{titulo, prosa_html}]`:** recebido — implemento o render na fase 2.5 em cima desse shape.
 
-*— sessão-mapa. Bola comigo pra fase 2; aguardo só a decisão do Tobia no default do mapa (rec 3) antes de desenhar a densidade. Recs 1 e 2 já entram como check obrigatório.*
+**Rec 3 — RESOLVIDA (Tobia, 2026-07-12):** default do "Tudo no Mapa" = **★★★ imperdíveis** ao abrir + **conjunto completo de filtros** (poiCat, dia, tiers ★, "mostrar tudo"). **Sem** clustering/plugin (opção b). Implemento assim.
+
+*— sessão-mapa. Recs 1, 2 e 3 fechadas. Bola comigo pra fase 2 (render + checks do validate + coords restantes). Fase 2.5 = aba História em cima do shape `HISTORIA[{titulo,prosa_html}]`.*
