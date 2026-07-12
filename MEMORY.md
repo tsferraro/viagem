@@ -45,6 +45,15 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 
 ## Evolução da skill
 
+### Padrão-ouro de profundidade · 2026-07-12 (Itália: Roma+Toscana+Florença)
+Tobia pediu explicitamente que a entrega `entregas/roma-toscana-florenca-set2026.{md,pdf}` (levantamento macro família multigeracional · casal + filha 2a + avó 63a · nota **19/20** no gate `--scout`) vire o **padrão de profundidade** pra `destination-scout` E pro roteiro-design. O que a fez excelente e virou regra:
+- **Fan-out paralelo de pesquisa** · 1 sub-agente por polo (Roma, Toscana, Florença) em paralelo, ≥10-12 buscas cada, fontes reais citadas por bloco → costurado num `.md` único. Bem mais denso que pesquisa sequencial de um agente só.
+- **Seção transversal que DESAFIA o plano** · a análise de aluguel de carro descobriu que pegar em Florença gerava ~4h de backtracking (Chiusi está no meio do caminho Roma↔Florença) → recomendou pegar em Chiusi. Levantamento bom não só executa o plano do viajante, questiona onde faz sentido.
+- **Elo mais restritivo DUPLO** · criança 2a + avó 63a simultâneos calibrando cada veredito (não só "família com criança").
+- **Honestidade com alternativa concreta** · 🔴 sempre acompanhado do plano B (Vaticano: um adulto solo de manhã enquanto o resto fica no parque; Cúpula de Florença 🔴 → vista do Piazzale de ônibus).
+- **Como travamos isso (guardrails):** (1) exemplar-ouro apontado em `destination-scout/SKILL.md` §Padrão-ouro + `content-rubric.md`; (2) método fan-out + ≥10-12 buscas/polo codificado no PASSO 2 + checklist; (3) barra de aspiração ≥18/20 (scout) e ≥36/40 (roteiro) nas bandas — **guidance, não hard gate** (piso de aprovação segue ≥14/≥28 pra não travar entregas enxutas legítimas). Anti-invenção/veredito continuam hard P0/P1.
+- **Ferramenta interativa falhou 3x na sessão** (`AskUserQuestion` · "permission stream closed") · fallback: perguntar em texto no chat funcionou. Registrar caso recorra.
+
 ### destination-scout · 2026-06-07 (export PDF · chat-first · briefing)
 Skill `destination-scout` (degrau 0 · levantamento macro antes do roteiro) ganhou nesta sessão:
 - **Export PDF** · `scripts/docx_to_pdf.py` novo (docx→PDF via reportlab · fonte DejaVu embarcada p/ acentos PT-BR · semáforos 🟢🟡🔴 viram bolinhas coloridas ● · auto-install de deps). Cadeia completa: `md_to_docx.py` (md→docx) → `docx_to_pdf.py` (docx→pdf). **Sempre renderizar e conferir o PDF** (pymupdf/fitz) antes de entregar — não chutar layout.

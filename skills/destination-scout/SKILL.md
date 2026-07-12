@@ -48,9 +48,13 @@ Detalhes e matriz de calibração por perfil: `references/audience-profiles.md`.
 
 ---
 
-## PASSO 2 · Web research (~6-10 buscas)
+## PASSO 2 · Web research (profundidade é o produto · ver §Padrão-ouro)
 
-Obrigatório antes de escrever qualquer coisa. Buscar:
+Obrigatório antes de escrever qualquer coisa. **Piso: ~6-10 buscas** pra levantamento de 1 destino/mini-plano. **Padrão-ouro pra levantamento macro sério (multi-polo ou destino rico): ≥10-12 buscas POR polo/cidade**, com fontes reais citadas. A densidade vem da pesquisa, não do preenchimento de schema.
+
+**Método de fan-out paralelo (quando há múltiplos polos — ex: Roma+Toscana+Florença):** dispare **um agente de pesquisa por polo em paralelo**, cada um com prompt profundo (atrações + restaurantes + logística da base exata + história + armadilhas), retornando markdown já estruturado com fontes. Depois costure num `.md` único e rode o gate. Isso foi o que gerou a densidade do exemplar-ouro (ver §Padrão-ouro de profundidade). Sub-agentes com contexto limpo + âncoras exatas > um só agente sequencial cansando.
+
+Buscar (por polo):
 
 1. "o que fazer em <destino> atrações imperdíveis"
 2. "<destino> melhores restaurantes onde comer <ano>"
@@ -174,6 +178,21 @@ Estrutura do mini-plano:
 
 Quando NÃO usar: se é a viagem inteira → é o pipeline de roteiro (`build.py`). Exemplo trabalhado: um mini-plano de meia-diária em Paris (Notre-Dame domingo).
 
+## Padrão-ouro de profundidade (referência: `entregas/roma-toscana-florenca-set2026`)
+
+Assim como a coletânea **Marais** é o padrão-ouro de *prosa/storytelling*, a entrega **`entregas/roma-toscana-florenca-set2026.{md,pdf}`** é o **padrão-ouro de profundidade de levantamento macro** (decisão Tobia 2026-07-12 · nota 19/20 no gate `--scout`). Toda entrega macro deve mirar esse nível. O que a define:
+
+- **Pesquisa em fan-out paralelo** · ≥10-12 buscas por polo, fontes reais citadas por bloco (ver PASSO 2).
+- **Multi-polo costurado num só documento** · cada polo com a ordem fixa (mapeamento → história), + seção transversal quando faz sentido (ex: a análise crítica de **aluguel de carro / logística** que desafia o plano do viajante, não só executa).
+- **Calibragem pelo elo mais restritivo explícita** · aqui, criança 2a **+** avó 63a simultâneos → cada veredito justificado por esse duplo elo.
+- **Honestidade que muda a viagem** · não só marcar 🔴, mas propor a alternativa concreta (pegar o carro em Chiusi em vez de Florença; um adulto solo no Vaticano enquanto o resto fica no parque).
+- **Preços datados "(mês/ano)" em quase todo valor** · e `[a confirmar]` transparente onde a pesquisa não achou valor confiável (nunca inventar).
+- **História em prosa com fato concreto** por polo (data, personagem, lenda verificada) — padrão prose-guide.
+- **QA visual do PDF antes de entregar** (pymupdf/fitz) · conferir tabelas, semáforos-bolinha e negrito renderizados — não chutar layout.
+- **Passou no gate ≥18/20** antes de exportar.
+
+Quando for fazer um levantamento novo, **abrir esse `.md` como referência de barra** — igualar densidade, honestidade e estrutura.
+
 ## Tom (herdado do CLAUDE.md)
 
 PT-BR, casual, direto, consultor crítico. Tabelas pra comparação. NUNCA concordar por educação. Se é turistada/pulável, **dizer**. Honestidade > diplomacia.
@@ -190,5 +209,6 @@ PT-BR, casual, direto, consultor crítico. Tabelas pra comparação. NUNCA conco
 - [ ] Ao menos 1 armadilha de turista sinalizada (se existir)
 - [ ] Resumo no topo (NÃO "TL;DR")
 - [ ] Fontes citadas
-- [ ] **Passou no gate `critico-roteiro --scout`** (nota ≥14/20 · P0=0) antes de exportar
-- [ ] Word/PDF só se pedido (e PDF conferido visualmente antes de entregar)
+- [ ] **Passou no gate `critico-roteiro --scout`** (piso ≥14/20 · P0=0 · **mira Excelente ≥18/20** no macro — ver §Padrão-ouro) antes de exportar
+- [ ] **≥10-12 buscas por polo** no macro (fan-out paralelo quando multi-polo)
+- [ ] Word/PDF só se pedido (e PDF conferido visualmente antes de entregar — tabelas/semáforos/negrito)

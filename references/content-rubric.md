@@ -116,7 +116,7 @@ A rubrica não é achismo — cada dimensão-chave ancora numa best-practice **e
 | 20-27 | **Aceitável** | Iterar: corrigir P1s até ≥28 |
 | <20 | **Ruim** | Refazer seções afetadas |
 
-**Aprovação automática**: nota ≥28 E P0=0. Claude aspira ≥32 antes de desistir.
+**Aprovação automática**: nota ≥28 E P0=0. **Barra de aspiração (padrão-ouro, decisão Tobia 2026-07-12): mira Excelente ≥36/40** — ≥28 é o piso que libera deploy, não o alvo. A profundidade do roteiro herda a do levantamento: um scout raso gera roteiro raso. Se o levantamento foi feito no padrão-ouro (ver `skills/destination-scout/SKILL.md` §Padrão-ouro de profundidade), os cards do roteiro já nascem com `sobre` factual, `imperdivel` = "o que observar", dicas com hora/preço e vereditos calibrados — que é o que puxa a nota de "Bom" pra "Excelente".
 
 ---
 
@@ -170,6 +170,7 @@ A mesma skill (`--scout`) audita os levantamentos da `destination-scout` — out
 | S5 | **Estrutura & Cobertura** | Resumo no topo · mapeamento antes de história · sabores-assinatura · clusters | Ordem trocada, sem sabores, sem clusters |
 
 - Bandas: 18-20 Excelente · 14-17 Bom · 10-13 Aceitável · <10 Ruim. **Aprovação: ≥14 E P0=0.**
+- **Barra de aspiração (padrão-ouro, decisão Tobia 2026-07-12):** aprovar em ≥14 é o *piso* (não travar entregas enxutas legítimas — pra-terceiros, mini-plano). Mas o **alvo de toda entrega macro é Excelente ≥18/20** — a profundidade da entrega `entregas/roma-toscana-florenca-set2026.md` (19/20) é a referência concreta a igualar (ver `skills/destination-scout/SKILL.md` §Padrão-ouro de profundidade). Não desistir em "Bom" quando dá pra chegar em "Excelente".
 - Auto-detecta **mini-plano** (âncora fixa, sem tabela de veredito): veredito-por-atração vira N/A, Fontes opcional.
 - `--terceiros`: relaxa Fontes (lista de URLs fica no chat, não se manda pra terceiros — decisão Tobia).
 
