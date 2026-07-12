@@ -2,6 +2,24 @@
 
 Como atribuir 🟢🟡🔴 a cada atração, sem diplomacia. Honestidade > educação (princípio do repo).
 
+## Os 2 eixos + a síntese (2026-07-12 · régua única scout ↔ app)
+
+Desde o mapa unificado do roteiro-design, o scout avalia cada POI em **2 eixos independentes + 1 síntese** — avaliado UMA vez na fase 0, consumido direto pelo app (zero reavaliação):
+
+| Eixo | Escala | O que mede | Vira no app |
+|---|---|---|---|
+| **Recompensa ★** | 0-3 | Valor intrínseco pro interesse **agregado da composição** — SEM desconto de esforço | `valeAPena` (tamanho do pino + selo) |
+| **Esforço** | baixo/médio/alto + o porquê (carrinho/escada/fila/distância) | Custo operacional de ir | `risco` green/yellow/red (anel do pino) |
+| **Veredito 🟢🟡🔴** | faça/depende/pula | **A síntese dos dois pro perfil** | decisão de curadoria (🔴 corta ou entra como "pula sem culpa") |
+
+### Régua do ★ (recompensa pura)
+- **3★** — único no destino/mundo; a viagem fica incompleta sem (Coliseu, David, Val d'Orcia)
+- **2★** — muito bom; merece esforço moderado (Pantheon, Pienza, mercado vivo)
+- **1★** — bom se estiver no caminho/sobrar tempo (foto icônica de 5 min, praça agradável)
+- **0★** — turistada/valor baixo, incluído só pra sinalizar "⏭️ pula sem culpa" de propósito
+
+Regras: ★ **nunca** desconta esforço (escada/fila/multidão vivem no eixo Esforço) · ★ é relativo ao **interesse da composição** (enoteca: 3★ pra casal, 1★ com criança de 2a no grupo — interesse, não perrengue) · **os eixos são independentes**: Museus Vaticanos = 3★ + esforço alto → veredito 🔴 pro grupo com carrinho+avó; mesma evidência, síntese diferente por perfil.
+
 ## O veredito em 3 níveis
 
 | Cor | Significado | Quando |

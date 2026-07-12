@@ -1106,6 +1106,13 @@ def s5_estrutura(text: str, F: List[Finding], is_mini: bool) -> int:
         score += 1
     else:
         F.append(Finding(3, 5, 'sem clusters geográficos ("o que combinar no mesmo dia") — ponte pro roteiro'))
+    # Régua única scout↔app (2026-07-12): tabela esforço×recompensa deve emitir a coluna
+    # Recompensa ★ (vira valeAPena no app · mapping-rubric §2 eixos). Advisory (P2, não
+    # muda score) pra não reprovar entregas anteriores ao padrão.
+    if re.search(r'esfor[çc]o\s*×\s*recompensa', text, re.I) and '★' not in text:
+        F.append(Finding(2, 5,
+            'tabela esforço×recompensa sem coluna "Recompensa ★" — padrão 2026-07-12: '
+            'scout emite os 2 eixos (★=valeAPena · esforço=risco) pro app consumir sem reavaliar'))
     return min(4, score)
 
 
