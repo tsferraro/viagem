@@ -3564,6 +3564,9 @@ const MAPS_REGION = "New York, NY";
 // ============== HISTÓRIA & CURIOSIDADES (prosa por polo · aba condicional) ==============
 const HISTORIA = [];
 
+// ============== POIs EXTRAS (recomendações soltas · não presas a um dia · só no mapa "Tudo") ==============
+const EXTRAS = [];
+
 // ============== RENDER ==============
 // ============== RENDER ==============
 // APP_MODE ("trip" | "city") é declarado no bloco DATA (shell.html) ANTES deste script.
@@ -4254,6 +4257,10 @@ function collectPOIs(){
       }
     });
   });
+  // POIs extras (recomendações soltas · di=-1 → aparecem só com filtro de dia "todos")
+  if(typeof EXTRAS!=='undefined') EXTRAS.forEach(e=>{ if(e.coord) out.push({
+    nome:e.nome,poiCat:e.poiCat||'atracao',va:e.valeAPena,risco:e.risco,coord:e.coord,
+    dia:'💡 Dica do chat',di:-1,mapsUrl:getMapsUrl({nome:e.nome,coord:e.coord}),cat:e.cat||''}); });
   return out;
 }
 

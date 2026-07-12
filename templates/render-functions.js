@@ -687,6 +687,10 @@ function collectPOIs(){
       }
     });
   });
+  // POIs extras (recomendações soltas · di=-1 → aparecem só com filtro de dia "todos")
+  if(typeof EXTRAS!=='undefined') EXTRAS.forEach(e=>{ if(e.coord) out.push({
+    nome:e.nome,poiCat:e.poiCat||'atracao',va:e.valeAPena,risco:e.risco,coord:e.coord,
+    dia:'💡 Dica do chat',di:-1,mapsUrl:getMapsUrl({nome:e.nome,coord:e.coord}),cat:e.cat||''}); });
   return out;
 }
 

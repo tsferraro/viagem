@@ -79,6 +79,9 @@ def build_rows(data):
                 for o in s.get('opcoes', []):
                     add(o['nome'], o.get('poiCat'), o.get('valeAPena'), o.get('coord'), dia,
                         re.sub('<[^>]+>', '', o.get('desc', '')))
+    for e in data.get('extras', []):
+        add(e['nome'], e.get('poiCat'), e.get('valeAPena'), e.get('coord'), '💡 Dica',
+            re.sub('<[^>]+>', '', e.get('cat', '')))
     return rows
 
 
