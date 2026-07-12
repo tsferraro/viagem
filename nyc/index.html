@@ -3565,7 +3565,388 @@ const MAPS_REGION = "New York, NY";
 const HISTORIA = [];
 
 // ============== POIs EXTRAS (recomendações soltas · não presas a um dia · só no mapa "Tudo") ==============
-const EXTRAS = [];
+const EXTRAS = [
+  {
+    "nome": "Levain Bakery (351 Amsterdam Ave)",
+    "poiCat": "padaria",
+    "valeAPena": 3,
+    "cat": "O cookie mais famoso de NY (170g, gooey) · perto do AMNH",
+    "coord": {
+      "lat": 40.7812,
+      "lng": -73.9796
+    }
+  },
+  {
+    "nome": "Maman (429 Amsterdam Ave)",
+    "poiCat": "cafe",
+    "valeAPena": 2,
+    "cat": "Nutty chocolate chip cookie · café francês charmoso",
+    "coord": {
+      "lat": 40.7837,
+      "lng": -73.9781
+    }
+  },
+  {
+    "nome": "Insomnia Cookies (405 Amsterdam Ave)",
+    "poiCat": "padaria",
+    "valeAPena": 1,
+    "cat": "Cookies servidos quentes · casual, barato",
+    "coord": {
+      "lat": 40.7829,
+      "lng": -73.9786
+    }
+  },
+  {
+    "nome": "Crumbl Cookies (301 Columbus Ave)",
+    "poiCat": "padaria",
+    "valeAPena": 1,
+    "cat": "6 sabores rotativos por semana",
+    "coord": {
+      "lat": 40.7787,
+      "lng": -73.9801
+    }
+  },
+  {
+    "nome": "5 Napkin Burger (2315 Broadway)",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "Hambúrguer sit-down sério · perto do AMNH",
+    "coord": {
+      "lat": 40.7871,
+      "lng": -73.9781
+    }
+  },
+  {
+    "nome": "7th Street Burger (424 Amsterdam Ave)",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "Smash burger cult · rápido",
+    "coord": {
+      "lat": 40.7835,
+      "lng": -73.9784
+    }
+  },
+  {
+    "nome": "Blue Bottle Coffee (Rockefeller Center)",
+    "poiCat": "cafe",
+    "valeAPena": 2,
+    "cat": "Café de especialidade dentro do Rock Center",
+    "coord": {
+      "lat": 40.7587,
+      "lng": -73.9791
+    }
+  },
+  {
+    "nome": "Breads Bakery (1230 6th Ave)",
+    "poiCat": "padaria",
+    "valeAPena": 3,
+    "cat": "Babka de chocolate lendária",
+    "coord": {
+      "lat": 40.7588,
+      "lng": -73.9808
+    }
+  },
+  {
+    "nome": "Bryant Park Grill (25 W 40th St)",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "Sit-down com jardim atrás da NYPL · kid-ok",
+    "coord": {
+      "lat": 40.7535,
+      "lng": -73.9832
+    }
+  },
+  {
+    "nome": "Sarabeth's (40 Central Park South)",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "Panquecas/waffles · muito kid-friendly",
+    "coord": {
+      "lat": 40.7651,
+      "lng": -73.9757
+    }
+  },
+  {
+    "nome": "BCD Tofu House (5 W 32nd St)",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "Sopa de tofu coreana · aberto sempre, mild",
+    "coord": {
+      "lat": 40.7475,
+      "lng": -73.9861
+    }
+  },
+  {
+    "nome": "Koreatown · W 32nd St",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "A rua coreana de Midtown · frango frito, BBQ, tofu",
+    "coord": {
+      "lat": 40.7476,
+      "lng": -73.9862
+    }
+  },
+  {
+    "nome": "Shake Shack · Madison Square Park (original)",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "O Shake Shack ORIGINAL + parque pra criança correr",
+    "coord": {
+      "lat": 40.7415,
+      "lng": -73.9882
+    }
+  },
+  {
+    "nome": "Eataly NYC Flatiron (200 5th Ave)",
+    "poiCat": "food-hall",
+    "valeAPena": 2,
+    "cat": "Mercado/food hall italiano · massa/pizza",
+    "coord": {
+      "lat": 40.7421,
+      "lng": -73.9901
+    }
+  },
+  {
+    "nome": "Nordstrom Rack (60 E 14th St)",
+    "poiCat": "loja",
+    "valeAPena": 1,
+    "cat": "Off-price · forte em sapatos e Levi's",
+    "coord": {
+      "lat": 40.7345,
+      "lng": -73.9908
+    }
+  },
+  {
+    "nome": "Uniqlo 5th Ave (660 5th Ave)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Básicos de qualidade/preço · do lado do MoMA",
+    "coord": {
+      "lat": 40.7606,
+      "lng": -73.9757
+    }
+  },
+  {
+    "nome": "TJ Maxx (620 6th Ave)",
+    "poiCat": "loja",
+    "valeAPena": 1,
+    "cat": "Off-price · cluster da 6th Ave 'Ladies' Mile'",
+    "coord": {
+      "lat": 40.7387,
+      "lng": -73.9945
+    }
+  },
+  {
+    "nome": "Macy's Herald Square (151 W 34th St)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Flagship icônico · marcas em liquidação",
+    "coord": {
+      "lat": 40.7508,
+      "lng": -73.9896
+    }
+  },
+  {
+    "nome": "Target East Village (500 E 14th St)",
+    "poiCat": "loja",
+    "valeAPena": 1,
+    "cat": "Big-box barato · Fruit of the Loom, básicos family",
+    "coord": {
+      "lat": 40.7291,
+      "lng": -73.9783
+    }
+  },
+  {
+    "nome": "Beacon's Closet (74 Guernsey St, Greenpoint)",
+    "poiCat": "loja",
+    "valeAPena": 3,
+    "cat": "Melhor brechó buy/sell/trade · a pé da base",
+    "coord": {
+      "lat": 40.7251,
+      "lng": -73.9514
+    }
+  },
+  {
+    "nome": "Awoke Vintage Williamsburg (132 N 5th St)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Vintage bem curado",
+    "coord": {
+      "lat": 40.7167,
+      "lng": -73.9593
+    }
+  },
+  {
+    "nome": "Buffalo Exchange Williamsburg (504 Driggs Ave)",
+    "poiCat": "loja",
+    "valeAPena": 1,
+    "cat": "Usado de marca, preço justo",
+    "coord": {
+      "lat": 40.7182,
+      "lng": -73.9553
+    }
+  },
+  {
+    "nome": "Artists & Fleas · Williamsburg (70 N 7th St)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Mercado de makers indie (fim de semana)",
+    "coord": {
+      "lat": 40.7199,
+      "lng": -73.9613
+    }
+  },
+  {
+    "nome": "Artists & Fleas · Chelsea Market (88 10th Ave)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Vintage + makers DENTRO do Chelsea Market",
+    "coord": {
+      "lat": 40.7423,
+      "lng": -74.0062
+    }
+  },
+  {
+    "nome": "Housing Works Thrift · Chelsea (143 W 17th St)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Brechó de caridade · grife a preço de thrift",
+    "coord": {
+      "lat": 40.7404,
+      "lng": -73.9967
+    }
+  },
+  {
+    "nome": "MoMA Design Store SoHo (81 Spring St)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Objetos de design · a parada certa de design",
+    "coord": {
+      "lat": 40.7228,
+      "lng": -73.9981
+    }
+  },
+  {
+    "nome": "La Colombe SoHo (270 Lafayette St)",
+    "poiCat": "cafe",
+    "valeAPena": 2,
+    "cat": "Inventaram o draft latte · espresso sério",
+    "coord": {
+      "lat": 40.7242,
+      "lng": -73.9962
+    }
+  },
+  {
+    "nome": "La Cabra SoHo (284 Lafayette St)",
+    "poiCat": "cafe",
+    "valeAPena": 2,
+    "cat": "Escandinavo minimalista · cardamom bun",
+    "coord": {
+      "lat": 40.7246,
+      "lng": -73.9961
+    }
+  },
+  {
+    "nome": "Balthazar (80 Spring St)",
+    "poiCat": "restaurante",
+    "valeAPena": 2,
+    "cat": "Brasserie parisiense icônica · padaria forte",
+    "coord": {
+      "lat": 40.7227,
+      "lng": -73.9984
+    }
+  },
+  {
+    "nome": "Dominique Ansel Bakery (189 Spring St)",
+    "poiCat": "padaria",
+    "valeAPena": 2,
+    "cat": "O cronut · kouign-amann excelente",
+    "coord": {
+      "lat": 40.7253,
+      "lng": -74.0037
+    }
+  },
+  {
+    "nome": "Haughwout Building (488 Broadway)",
+    "poiCat": "atracao",
+    "valeAPena": 1,
+    "cat": "'Partenon do ferro fundido' (1857) · 1º elevador Otis",
+    "coord": {
+      "lat": 40.7218,
+      "lng": -73.9996
+    }
+  },
+  {
+    "nome": "Little Singer Building (561 Broadway)",
+    "poiCat": "atracao",
+    "valeAPena": 1,
+    "cat": "Fachada de ferro azul + terracota (1902)",
+    "coord": {
+      "lat": 40.7242,
+      "lng": -73.9983
+    }
+  },
+  {
+    "nome": "B&H Photo Video (420 9th Ave)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Eletrônico com preço excelente · FECHA sábado (Shabat)",
+    "coord": {
+      "lat": 40.7529,
+      "lng": -73.9963
+    }
+  },
+  {
+    "nome": "Morgan Library & Museum (225 Madison Ave)",
+    "poiCat": "atracao",
+    "valeAPena": 3,
+    "cat": "Biblioteca-museu deslumbrante · refúgio de chuva",
+    "coord": {
+      "lat": 40.7492,
+      "lng": -73.9816
+    }
+  },
+  {
+    "nome": "Radio City Music Hall (6th Ave & 50th)",
+    "poiCat": "atracao",
+    "valeAPena": 2,
+    "cat": "Maior teatro indoor do mundo · tour dos bastidores",
+    "coord": {
+      "lat": 40.7599,
+      "lng": -73.9801
+    }
+  },
+  {
+    "nome": "Nintendo NY (10 Rockefeller Plaza)",
+    "poiCat": "loja",
+    "valeAPena": 2,
+    "cat": "Loja/experiência de games · kid win, indoor",
+    "coord": {
+      "lat": 40.7581,
+      "lng": -73.9794
+    }
+  },
+  {
+    "nome": "Saks Fifth Avenue (611 5th Ave)",
+    "poiCat": "loja",
+    "valeAPena": 1,
+    "cat": "Loja de departamento clássica · coberta",
+    "coord": {
+      "lat": 40.7583,
+      "lng": -73.9774
+    }
+  },
+  {
+    "nome": "Whitney Museum (99 Gansevoort St)",
+    "poiCat": "atracao",
+    "valeAPena": 3,
+    "cat": "Arte americana · Biennial · no pé sul do High Line",
+    "coord": {
+      "lat": 40.7396,
+      "lng": -74.0091
+    }
+  }
+];
 
 // ============== RENDER ==============
 // ============== RENDER ==============
