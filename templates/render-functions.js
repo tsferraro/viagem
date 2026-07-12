@@ -114,7 +114,8 @@ function diasElapsed(){
   return elapsed;
 }
 
-const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null, ovFilter:'roteiro', ovShowPending:false };
+const state = { view:'guia', selIdx:getDefaultDayIdx(), search:'', expandStop:null, ovFilter:'roteiro', ovShowPending:false,
+  mapFilter:{ minStar:3, groups:new Set(['atracao','comida','loja','parque']), day:-1 } };
 
 function getPeriodoMeta(p){
   return {
@@ -636,6 +637,120 @@ function renderBairros(){
   </div>`;
 }
 
+// ============== TUDO NO MAPA (mapa unificado · todos os POIs) ==============
+// Sinais independentes (handoff §4.3): recompensa ★ = tamanho do pino · risco = anel colorido.
+const POI_COLOR={atracao:'#2563eb',restaurante:'#ea580c',cafe:'#92400e',padaria:'#db2777',
+  loja:'#7c3aed',bar:'#0891b2',parque:'#0d9488',mercado:'#64748b','food-hall':'#ca8a04'};
+const POI_EMOJI={atracao:'🎯',restaurante:'🍽️',cafe:'☕',padaria:'🥐',loja:'🛍️',bar:'🍸',
+  parque:'🌳',mercado:'🛒','food-hall':'🍴'};
+const RISCO_RING={green:'#22c55e',yellow:'#eab308',red:'#ef4444'};
+const STAR_SIZE={3:34,2:26,1:20,0:17};
+const STAR_TXT={3:'⭐⭐⭐ Vale a viagem',2:'⭐⭐ Vale o desvio',1:'⭐ Se sobrar',0:'⏭️ Pula sem culpa'};
+// grupos de filtro por categoria
+const POI_GROUP={atracao:'atracao',restaurante:'comida',cafe:'comida',padaria:'comida',bar:'comida',
+  mercado:'comida','food-hall':'comida',loja:'loja',parque:'parque'};
+const GROUP_LABEL={atracao:'🎯 Atrações',comida:'🍴 Comida',loja:'🛍️ Lojas',parque:'🌳 Parques'};
+
+// Achata todos os POIs da viagem (cards + itens de opcoes + paradas de walking tour).
+function collectPOIs(){
+  const out=[];
+  DAYS.forEach((day,di)=>{
+    day.stops.forEach(s=>{
+      if(s.tipo==='transit') return;
+      if(s.tipo==='card' && s.coord){
+        out.push({nome:s.nome,poiCat:s.poiCat||'atracao',va:s.valeAPena,risco:s.risco,
+          coord:s.coord,dia:day.date,di,mapsUrl:getMapsUrl(s),cat:s.cat||''});
+        (s.walkingTours||[]).forEach(t=>t.stops.forEach(st=>{
+          if(st.coord) out.push({nome:st.nome,poiCat:'atracao',va:undefined,risco:undefined,
+            coord:st.coord,dia:day.date,di,mapsUrl:getMapsUrl({nome:st.nome,coord:st.coord}),cat:'Parada · '+t.nome});
+        }));
+      } else if(s.tipo==='opcoes'){
+        (s.opcoes||[]).forEach(o=>{ if(o.coord) out.push({nome:o.nome,poiCat:o.poiCat||'restaurante',
+          va:o.valeAPena,risco:undefined,coord:o.coord,dia:day.date,di,
+          mapsUrl:getMapsUrl({nome:o.nome,coord:o.coord}),cat:o.desc||''}); });
+      }
+    });
+  });
+  return out;
+}
+
+let tudoMapInstance=null;
+function renderTudoMapa(){
+  const f=state.mapFilter;
+  const tierBtn=(v,l)=>`<button class="tm-chip ${f.minStar===v?'on':''}" data-tier="${v}">${l}</button>`;
+  const catBtn=g=>`<button class="tm-chip ${f.groups.has(g)?'on':''}" data-group="${g}">${GROUP_LABEL[g]}</button>`;
+  const dayOpts=['<option value="-1">Todos os dias</option>']
+    .concat(DAYS.map((d,i)=>`<option value="${i}" ${f.day===i?'selected':''}>${d.date}</option>`)).join('');
+  setTimeout(plotTudoMapa,0);
+  return `<div class="tudomapa-wrap">
+    <div class="tm-head">
+      <div class="tm-title">🗺️ Tudo no Mapa</div>
+      <div class="tm-sub">Tamanho do pino = ★ recompensa · anel = 🟢🟡🔴 risco (eixos independentes)</div>
+    </div>
+    <div class="tm-filters">
+      <div class="tm-row">${tierBtn(3,'⭐⭐⭐')}${tierBtn(2,'⭐⭐+')}${tierBtn(0,'Tudo')}</div>
+      <div class="tm-row">${['atracao','comida','loja','parque'].map(catBtn).join('')}</div>
+      <div class="tm-row"><select class="tm-day" id="tm-day">${dayOpts}</select></div>
+    </div>
+    <div id="tudo-map"></div>
+  </div>`;
+}
+
+function plotTudoMapa(){
+  const div=document.getElementById('tudo-map'); if(!div) return;
+  if(tudoMapInstance){ tudoMapInstance.remove(); tudoMapInstance=null; }
+  tudoMapInstance=L.map(div,{zoomControl:true,scrollWheelZoom:true});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:19}).addTo(tudoMapInstance);
+  const f=state.mapFilter;
+  const pois=collectPOIs().filter(p=>{
+    const va=(p.va===undefined||p.va===null)?1:p.va;   // WT stops (sem va) = tier ⭐ · só no "Tudo", não poluem o default ⭐⭐⭐
+    if(va<f.minStar) return false;
+    if(!f.groups.has(POI_GROUP[p.poiCat]||'atracao')) return false;
+    if(f.day>=0 && p.di!==f.day) return false;
+    return true;
+  });
+  if(!pois.length){ tudoMapInstance.setView([40.75,-73.97],12);
+    const el=document.getElementById('tm-count'); if(el) el.textContent='0'; return; }
+  const pts=[];
+  pois.forEach(p=>{
+    const va=(p.va===undefined||p.va===null)?1:p.va;
+    const size=STAR_SIZE[va]||20;
+    const ring=RISCO_RING[p.risco]||'#cbd5e1';
+    const color=POI_COLOR[p.poiCat]||'#2563eb';
+    const icon=L.divIcon({className:'poi-marker',
+      html:`<div class="poi-dot" style="width:${size}px;height:${size}px;background:${color};border-color:${ring};font-size:${Math.round(size*0.5)}px">${POI_EMOJI[p.poiCat]||'📍'}</div>`,
+      iconSize:[size,size],iconAnchor:[size/2,size/2],popupAnchor:[0,-size/2]});
+    const starLine=(p.va===undefined||p.va===null)?'':`<div class="pp-notes">${STAR_TXT[p.va]||''}</div>`;
+    const riscoLine=p.risco?`<div class="pp-notes">Risco: ${({green:'🟢 tranquilo',yellow:'🟡 atenção',red:'🔴 alta atenção'})[p.risco]}</div>`:'';
+    const popup=`<div class="pp-name">${p.nome}</div>
+      <div class="pp-notes">${POI_EMOJI[p.poiCat]||''} ${p.dia}</div>
+      ${starLine}${riscoLine}
+      ${p.mapsUrl?`<a class="pp-link" href="${p.mapsUrl}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`:''}`;
+    L.marker([p.coord.lat,p.coord.lng],{icon}).bindPopup(popup,{maxWidth:240}).addTo(tudoMapInstance);
+    pts.push([p.coord.lat,p.coord.lng]);
+  });
+  tudoMapInstance.fitBounds(pts,{padding:[40,40],maxZoom:15});
+  const el=document.getElementById('tm-count'); if(el) el.textContent=pois.length;
+  // bind filtros (idempotente)
+  const wrap=div.closest('.tudomapa-wrap');
+  if(wrap && !wrap.__bound){
+    wrap.__bound=true;
+    wrap.querySelectorAll('[data-tier]').forEach(b=>b.addEventListener('click',()=>{
+      state.mapFilter.minStar=parseInt(b.dataset.tier);
+      wrap.querySelectorAll('[data-tier]').forEach(x=>x.classList.toggle('on',x===b));
+      plotTudoMapa();
+    }));
+    wrap.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{
+      const g=b.dataset.group; const gs=state.mapFilter.groups;
+      if(gs.has(g)) gs.delete(g); else gs.add(g);
+      b.classList.toggle('on',gs.has(g));
+      plotTudoMapa();
+    }));
+    const sel=wrap.querySelector('#tm-day');
+    if(sel) sel.addEventListener('change',()=>{ state.mapFilter.day=parseInt(sel.value); plotTudoMapa(); });
+  }
+}
+
 let mapInstance=null;
 function renderMap(){
   const day=DAYS[state.selIdx];
@@ -916,6 +1031,8 @@ function render(){
     content=heroHtml+tabsHtml+'<div id="inner-content">'+innerHtml+'</div>';
   } else if(state.view==='bairros'){
     content=renderBairros();
+  } else if(state.view==='tudomapa'){
+    content=renderTudoMapa();
   }
   document.getElementById('content').innerHTML=content;
   

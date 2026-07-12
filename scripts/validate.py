@@ -185,6 +185,52 @@ def check_enums(days_text):
     elif reservas:
         ok(f"Todas {len(reservas)} 'reserva' válidas")
 
+# Classificação de POI (mapa unificado · handoff §4/§6):
+#  - poiCat ∈ enum(9)
+#  - valeAPena ∈ {0,1,2,3} OBRIGATÓRIO em card + item de opcoes · PROIBIDO em transit
+#  - coord em item de opcoes: se presente, 4 casas decimais (missing → warn até popular tudo)
+POI_CATS = {'atracao','restaurante','cafe','padaria','loja','bar','parque','mercado','food-hall'}
+def _dec4(v):
+    s = repr(float(v)); return '.' in s and len(s.split('.')[1]) >= 4
+def check_poi_classification(days_text):
+    if not days_text:
+        return
+    try:
+        days = json.loads(days_text)
+    except Exception:
+        warn("check_poi_classification: DAYS não é JSON parseável (minificado?) — pulando")
+        return
+    bad_cat, missing_va, forbidden_va, opt_coord_bad, opt_no_coord = [], [], [], [], []
+    def check_cat_va(obj, ctx):
+        pc = obj.get('poiCat')
+        if pc is not None and pc not in POI_CATS: bad_cat.append((ctx, pc))
+        va = obj.get('valeAPena')
+        if va is None: missing_va.append(ctx)
+        elif va not in (0,1,2,3): bad_cat.append((ctx, f'valeAPena={va}'))
+    for day in days:
+        for s in day.get('stops', []):
+            t, nome = s.get('tipo'), s.get('nome','?')[:32]
+            if t == 'card':
+                check_cat_va(s, nome)
+            elif t == 'opcoes':
+                if 'valeAPena' in s or 'poiCat' in s: forbidden_va.append(f'{nome} (stop opcoes)')
+                for o in s.get('opcoes', []):
+                    onome = o.get('nome','?')[:32]
+                    check_cat_va(o, onome)
+                    c = o.get('coord')
+                    if not c: opt_no_coord.append(onome)
+                    elif not (_dec4(c.get('lat',0)) and _dec4(c.get('lng',0))): opt_coord_bad.append(onome)
+            elif t == 'transit':
+                if s.get('valeAPena') is not None or s.get('poiCat') is not None:
+                    forbidden_va.append(f'{nome} (transit)')
+    if bad_cat: err(f"poiCat/valeAPena inválido: {bad_cat[:5]}")
+    if missing_va: err(f"valeAPena AUSENTE em {len(missing_va)} card/opção (obrigatório): {missing_va[:5]}")
+    if forbidden_va: err(f"valeAPena/poiCat PROIBIDO presente: {forbidden_va[:5]}")
+    if opt_coord_bad: err(f"coord de opção com <4 casas: {opt_coord_bad[:5]}")
+    if opt_no_coord: warn(f"{len(opt_no_coord)} opção(ões) ainda sem coord (pino não aparece no mapa): {opt_no_coord[:5]}")
+    if not (bad_cat or missing_va or forbidden_va or opt_coord_bad):
+        ok(f"Classificação POI ok (poiCat/valeAPena) · {len(opt_no_coord)} opção(ões) sem coord ainda")
+
 def check_walking_tours(days_text):
     if not days_text:
         return
@@ -356,6 +402,7 @@ def main():
     days_text = extract_days_array(content)
     check_coords(days_text)
     check_enums(days_text)
+    check_poi_classification(days_text)
     check_walking_tours(days_text)
     check_temaCurto(days_text)
     

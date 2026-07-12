@@ -357,7 +357,7 @@
               "poiCat": "restaurante",
               "valeAPena": 2,
               "coord": {
-                "lat": 40.73,
+                "lat": 40.7301,
                 "lng": -73.9551
               }
             },
@@ -1497,7 +1497,11 @@
               "preco": "$-$$",
               "dist": "5 min do Top of Rock",
               "poiCat": "food-hall",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "coord": {
+                "lat": 40.7527,
+                "lng": -73.9772
+              }
             },
             {
               "nome": "Whole Foods Bryant Park",
@@ -1660,7 +1664,11 @@
               "preco": "$$",
               "dist": "No museu",
               "poiCat": "cafe",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "coord": {
+                "lat": 40.7813,
+                "lng": -73.9737
+              }
             }
           ]
         },
@@ -1812,7 +1820,11 @@
               "preco": "$15/pessoa",
               "dist": "No Chelsea Market",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "coord": {
+                "lat": 40.7424,
+                "lng": -74.0061
+              }
             },
             {
               "nome": "The Lobster Place",
@@ -1820,7 +1832,11 @@
               "preco": "$$$",
               "dist": "No Chelsea Market",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "coord": {
+                "lat": 40.7424,
+                "lng": -74.0061
+              }
             },
             {
               "nome": "Amy's Bread + Buon Italia",
@@ -1828,7 +1844,11 @@
               "preco": "$",
               "dist": "No Chelsea Market",
               "poiCat": "padaria",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "coord": {
+                "lat": 40.7424,
+                "lng": -74.0061
+              }
             }
           ]
         },
