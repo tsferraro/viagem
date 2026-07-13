@@ -199,6 +199,12 @@ function getRouteUrl(day){
 function wtStopQuery(nome){
   return (nome||'').replace(/[()]/g,' ').split('·')[0].replace(/\s+/g,' ').trim();
 }
+// Rótulo de parada de walking tour · casa com o Google Maps (que rotula waypoints A,B,C…)
+// quando WT_LABELS==='letters'. Default numérico (retrocompatível com viagens antigas).
+function wtLabel(n){
+  return (typeof WT_LABELS!=='undefined' && WT_LABELS==='letters' && n>=1 && n<=26)
+    ? String.fromCharCode(64+n) : n;
+}
 function getWalkingTourUrl(tour){
   if(!tour||tour.length<2) return '#';
   // Preferência: rota por NOME das paradas (legível no Google Maps) · exige MAPS_REGION p/ geocodar certo.
@@ -863,12 +869,12 @@ function renderMap(){
         tourStops.forEach(t=>{
           const icon=L.divIcon({
             className:'wt-marker',
-            html:`<div style="${markerStyle}">${t.n}</div>`,
+            html:`<div style="${markerStyle}">${wtLabel(t.n)}</div>`,
             iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
           });
           const searchName=cleanForSearch(t.nome);
           const url=`https://www.google.com/maps/search/${encodeURIComponent(searchName)}/@${t.coord.lat},${t.coord.lng},17z`;
-          const popupHtml=`<div class="pp-time" style="color:${day.cor}">${tour.nome.split('·')[0].trim()} · parada ${t.n}</div>
+          const popupHtml=`<div class="pp-time" style="color:${day.cor}">${tour.nome.split('·')[0].trim()} · parada ${wtLabel(t.n)}</div>
             <div class="pp-name">${t.nome}</div>
             <a class="pp-link" style="background:${day.cor}" href="${url}" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>`;
           L.marker([t.coord.lat,t.coord.lng],{icon})

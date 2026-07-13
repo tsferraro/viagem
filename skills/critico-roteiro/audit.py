@@ -179,7 +179,9 @@ HONESTY_RE = re.compile(
     re.I
 )
 
-NUM_DICA_RE = re.compile(r'[1-9]️⃣|[①②③④⑤⑥⑦⑧⑨]|\b[1-9]\. ')
+# Marcadores de parada-a-parada: keycap (1️⃣), circled numbers (①), circled letters
+# (Ⓐ-Ⓩ · convenção pra casar com as letras A,B,C… do Google Maps · 2026-07), ou "1. ".
+NUM_DICA_RE = re.compile(r'[1-9]️⃣|[①②③④⑤⑥⑦⑧⑨]|[Ⓐ-Ⓩ]|\b[1-9]\. ')
 
 
 def coord_4dec(coord: Optional[Dict]) -> bool:
