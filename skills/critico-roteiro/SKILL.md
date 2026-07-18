@@ -29,7 +29,8 @@ python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout             #
 python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros # pra-terceiros (Fontes opcional)
 
 # comum aos dois
---json          # saída machine-readable
+--suggest       # PLANO DE CONSERTO: roteia cada achado + top-5 + patches prontos
+--json          # saída machine-readable (inclui station/hint/half por achado)
 --no-checklist  # omite checklist manual (CI)
 ```
 
@@ -83,6 +84,23 @@ Ordem obrigatória: **audit → factcheck → judge** (barato antes do caro; nun
 **Dois níveis de enforcement, de propósito**: a régua de **32** vive no *loop da sessão* (Claude itera até bater); o **deploy** bloqueia só em **P0** (erro objetivo: card vazio, link oficial morto) — heurística mole não deve brickar o acesso da família ao roteiro. Quer barra máxima no push? `VIAGEM_STRICT=1`.
 
 `walking-tour-designer` e `road-trip-designer` **não** têm gate próprio — o output deles vira card do roteiro e é pego pela dimensão **D7 (Walking Tours)** do audit de roteiro.
+
+## `--suggest` · o grader vira router
+
+Sem isto o audit diagnostica e **para**. Com `--suggest`, cada achado é despachado pra uma das **4 estações de conserto** — e a taxonomia **herda** o split mecânico/⚖️, não inventa outro eixo:
+
+| Estação | Quando | Vem no `hint` |
+|---|---|---|
+| 🔧 **Corrigir** | conserto determinístico | o patch pronto pra colar |
+| 🔎 **Pesquisar** | falta um fato externo (preço, coord, URL, história) | a busca a fazer + como gravar |
+| ✍️ **Reescrever** | o fato existe, falta a escrita | o que a prosa precisa ter |
+| 🤔 **Você decide** | julgamento do Tobia (ritmo, "isso é fraco?") | **nunca** vira patch |
+
+Também imprime **top-5 cards** (severidade × peso do card: âncora vale 2, filler 1) e **densidade por dia** — triagem pra saber onde atacar. A densidade **não é nota por dia**: D9/D10 só existem no roteiro inteiro, então nota diária seria incompleta ou enganosa.
+
+⚠️ **Guarda anti-Goodhart** (governa os hints): perseguir o número só é alvo legítimo na metade **mecânica**, onde o regex é autoridade. Nas dims ⚖️ o número é proxy — inflar `sobre` até 150 chars ou salpicar um ano de 4 dígitos sobe a nota sem melhorar o roteiro. Por isso nenhum hint de dim ⚖️ manda "faça X pra subir a nota"; manda o que a prosa precisa ter, e quem valida é o checklist.
+
+No `--json`, cada achado carrega `station`, `hint` e `half` — um sub-agente despacha lendo JSON, sem parsear texto.
 
 ## Regras da avaliação (herança do repo)
 

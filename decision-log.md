@@ -169,3 +169,28 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 - Insight do split: a metade MECÂNICA é onde estão os gaps reais e objetivos (nyc mec 11/20: coords <4 casas, custo sem data, TRANSIT_MAP) — a metade de julgamento inflava (18/20 = proxy de escrita, não qualidade real).
 
 **Artefatos alterados**: `skills/critico-roteiro/audit.py` (P0, split, --deploy-gate, thresholds, dedup) · `scripts/deploy.sh` (gate wire) · `references/content-rubric.md` · `skills/critico-roteiro/SKILL.md` · `skills/destination-scout/SKILL.md` · `CLAUDE.md`.
+
+---
+
+## 2026-07-02 · Fase A — grader vira router (`--suggest`) + resolução da divergência
+
+**Contexto**: o auditor diagnosticava e parava — nota + achados, sem dizer *o que fazer com eles*. Fase A do roadmap grader→router (plano revisado pela sessão-arquiteto, 6 correções incorporadas). Antes disso foi preciso resolver uma **divergência de branch** que estava mascarada.
+
+**Divergência (achado, não decisão)**: a partir de `9275ca9`, `origin/main` ganhou 53 commits (conteúdo NYC/mapa/WT) enquanto a `main` local ganhou 2 (auditor com dentes) — sem push, porque o `guard-git-push.sh` da outra sessão trava. `git push` era rejeitado. Resolvido por **merge (não force-push)**: `audit.py` fez merge limpo, conflitaram 4 markdowns, resolvidos por **união** com os números novos (32/16) vencendo os antigos (28/14). Causa-raiz (o guard) fica com a sessão-arquiteto.
+
+**Decisões**:
+
+| # | Decisão | Alternativa rejeitada | Motivo |
+|---|---|---|---|
+| 1 | `station` + `hint` como **campos do `Finding`**, emitidos no `--json` | Só render no relatório | Machine-consumable: sub-agente despacha lendo JSON, sem parsear texto |
+| 2 | Roteamento **por mensagem** (tabela `ROUTING`), não por call-site | Taggear os ~60 `F.append()` | Diff mínimo, auditores intactos, tabela legível num lugar só · zero risco pros 14 testes |
+| 3 | Taxonomia das estações **herda** `MECHANICAL_DIMS`/`JUDGMENT_DIMS` | Criar eixo novo | O que dá pra perseguir é exatamente o que dá pra automatizar — alinhamento quase perfeito |
+| 4 | **Guarda anti-Goodhart** codificada nos hints | Deixar implícito | "Subir a nota" só vale na metade mecânica. Nas ⚖️ o hint manda o que a PROSA precisa, nunca "faça X pra subir" |
+| 5 | `_is_heavy` promovido a `is_heavy_card()` de módulo | Duplicar a heurística | UMA definição de "card âncora", dois usos: alerta de ritmo (D6) + peso na priorização |
+| 6 | Densidade **por dia**, nunca nota por dia | Nota /40 diária | D9/D10 só existem no roteiro inteiro — nota diária seria incompleta ou enganosa |
+| 7 | **Fase B extinta**, dobrada na A | Auto-patcher próprio | Com `temaCurto` fora (dono = validate.py), sobrava pouco. `hint` com patch colável resolve sem o risco de escrita automática |
+| 8 | Ritmo continua **🤔 (nunca patch)** | Auto-sugerir corte | Decisão Tobia: "o peso do dia depende do público — quero enxergar as opções e decidir" |
+
+**Validação**: 14/14 testes (rede do arquiteto) antes e depois · NYC 39/40 Excelente, 4 advertências de ritmo roteadas pra 🤔 · fixture `unverified_coord` exercitando as 4 estações + top-5 + heat map. Prova viva da guarda anti-Goodhart: card com `sobre` de **148 chars** (2 abaixo do piso) recebe hint *"NÃO encher linguiça pra bater char count"*.
+
+**Próximo**: Fase C (estação de pesquisa · contrato anti-invenção no write-back) → Fase D (reescrita padrão-Marais, depende dos fatos da C).

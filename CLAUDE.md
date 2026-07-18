@@ -148,7 +148,8 @@ python3 skills/critico-roteiro/audit.py <viagem>/index.html --deploy-gate # usad
 python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout              # macro (Fontes obrigatória)
 python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros  # pra-terceiros (Fontes opcional)
 
-python3 skills/critico-roteiro/audit.py <arquivo> --json                # saída machine-readable
+python3 skills/critico-roteiro/audit.py <viagem>/data.json --suggest    # PLANO DE CONSERTO (roteia achados + patches)
+python3 skills/critico-roteiro/audit.py <arquivo> --json                # saída machine-readable (station/hint/half)
 ```
 
 Retorna nota (2 metades) + achados P0-P3 + checklist manual + veredito. Exit: 0=aprovado, 1=não aprovado, 2=erro. **Enforcement em 2 níveis**: a régua de 32 vive no *loop da sessão* (9b/4b); o `deploy.sh` roda `--deploy-gate` e bloqueia só em **P0** (card vazio, link oficial morto) — `VIAGEM_STRICT=1` no env endurece (bloqueia <32). Detalhes: `skills/critico-roteiro/SKILL.md`.

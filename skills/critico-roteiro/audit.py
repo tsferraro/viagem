@@ -68,6 +68,8 @@ class Finding:
     dim: int       # 1-10
     msg: str
     stop: str = ''
+    station: str = ''   # 🔧/🔎/✍️/🤔 · preenchido por assign_stations() (ver §ROTEAMENTO)
+    hint: str = ''      # "o que bom parece" · nos 🔧 determinísticos, o patch colável
 
 SEV_LABEL = {0: 'P0', 1: 'P1', 2: 'P2', 3: 'P3'}
 SEV_COLOR = {0: C.ERR, 1: C.ERR, 2: C.WARN, 3: C.DIM}
@@ -99,6 +101,127 @@ JUDGMENT_DIMS   = {1, 6, 7, 8, 10}
 def dim_label(idx: int) -> str:
     mark = ' ⚖️' if idx in JUDGMENT_DIMS else ''
     return DIM_NAMES[idx] + mark
+
+# ---------------------------------------------------------------------------
+# ROTEAMENTO · grader → router
+# ---------------------------------------------------------------------------
+# O audit diagnostica; sem roteamento ele para aí. Cada achado é despachado pra
+# UMA estação de conserto. A taxonomia HERDA o split mecânico/julgamento — não
+# inventa outro eixo:
+#
+#   MECHANICAL_DIMS → 🔧 corrigir (determinístico) · 🔎 pesquisar (falta um fato)
+#   JUDGMENT_DIMS   → ✍️ reescrever (falta escrita)  · 🤔 você decide (julgamento)
+#
+# ⚠️ GUARDA ANTI-GOODHART — a regra que governa os hints:
+# "subir a nota" só é alvo legítimo na metade MECÂNICA, onde o regex é autoridade.
+# Perseguir o número das dims ⚖️ otimiza o proxy (inflar `sobre` até 150 chars,
+# salpicar ano de 4 dígitos) e a nota sobe sem o roteiro melhorar. Por isso nenhum
+# hint de dim ⚖️ manda "faça X pra subir a nota" — manda o que a PROSA precisa ter.
+# Quem valida a metade ⚖️ é o checklist manual, nunca o número.
+
+ST_FIX      = '🔧'   # determinístico — o hint traz o patch pronto pra colar
+ST_RESEARCH = '🔎'   # falta um fato externo (preço, coord, URL, história)
+ST_REWRITE  = '✍️'   # o fato existe, falta a escrita (padrão Marais)
+ST_HUMAN    = '🤔'   # julgamento do Tobia — o script sinaliza, não decide
+
+STATION_DESC = {
+    ST_FIX:      'Corrigir · determinístico (patch pronto no hint)',
+    ST_RESEARCH: 'Pesquisar · falta fato externo',
+    ST_REWRITE:  'Reescrever · padrão Marais',
+    ST_HUMAN:    'Você decide · julgamento (nunca vira patch)',
+}
+
+# (regex na msg, estação, hint). Primeira que casar vence; sem match cai no default
+# da metade. Roteia POR MENSAGEM em vez de tocar os ~60 call-sites de F.append() —
+# mantém os auditores intactos e a tabela de roteamento legível num lugar só.
+ROUTING = [
+    # --- 🔧 determinístico (conserto não precisa de fato novo) ---------------
+    (r'distância vaga|perto/próximo', ST_FIX,
+     'trocar por distância medida — ex: "banheiro a 300m", "a 1,2 km da base"'),
+    (r'endereço entre parens|parens', ST_FIX,
+     'nome: "Nome do Lugar (Rua Tal 123)" — o parêntese é o que faz o Maps acertar'),
+    (r'esperado 2-4|sem preco ou dist', ST_FIX,
+     '"opcoes": [{"nome":"…","desc":"…","preco":"$$","dist":"5 min a pé"}] · 2-4 itens'),
+    (r'dia sem tema', ST_FIX, '"tema": "<Bairro> · <o que define o dia>"'),
+    (r'paternalista', ST_FIX,
+     'remover o aviso — Tobia mora em Paris (princípio #2: não patronizar metrô)'),
+    (r'dicas numeradas|numeração', ST_FIX,
+     'numerar as dicas 1️⃣2️⃣3️⃣ (ou Ⓐ Ⓑ Ⓒ) pra casar com os pinos do mapa'),
+    (r'markdown', ST_FIX,
+     'trocar **bold** por <strong>bold</strong> — o template não converte markdown'),
+
+    # --- 🤔 julgamento do Tobia (NUNCA vira patch automático) ----------------
+    (r'pesadas|ritmo família|corrido pra esse público', ST_HUMAN,
+     'ALERTA, não corte: o peso do dia depende do público e da dinâmica. Você decide'),
+    (r'ordem temporal', ST_HUMAN,
+     'reordenar é decisão de plano do dia — confira se a sequência faz sentido no chão'),
+    (r'green|pula sem culpa|crítica rara', ST_HUMAN,
+     'algum stop aqui é fraco de verdade? se for, diga na prosa ("pula sem culpa")'),
+
+    # --- 🔎 falta fato externo ----------------------------------------------
+    (r'sem data|datad|mês/ano', ST_RESEARCH,
+     'web_search do preço atual → gravar com "(mês/ano)". Sem data, o preço apodrece'),
+    (r'TRANSIT_MAP', ST_RESEARCH,
+     'pesquisar a rota real (linha, tempo, preço) → entrada no transit_map'),
+    (r'casas decimais|coord', ST_RESEARCH,
+     'web_search da coord (4 casas). Não confirmou → coord_unverified: true, NUNCA chute'),
+    (r'LINKS_MAP|link|HTTP|4xx|404', ST_RESEARCH,
+     'web_search do site oficial → confirmar 2xx ANTES de gravar. Morto: remover'),
+    (r'acessibilidade', ST_RESEARCH,
+     'pesquisar o acesso real (degraus? elevador? carrinho passa?) — detalhe concreto'),
+    (r'duracao ausente|custo ausente', ST_RESEARCH,
+     'valor real → duracao como range ("45min-1h"); custo real ou "Gratuito"'),
+    (r'sem fato', ST_RESEARCH,
+     'pesquisar a história (fundação, personagem, lenda) — é o insumo do `sobre`'),
+
+    # --- ✍️ o fato existe, falta a escrita ----------------------------------
+    (r'imperdivel genérico|hipérbole|hype', ST_REWRITE,
+     'imperdivel = O QUE OBSERVAR (o detalhe que o distraído perde), não adjetivo'),
+    (r'sobre médio|padrão-ouro ≥150|raso', ST_REWRITE,
+     'contar a história (data/personagem/lenda). NÃO encher linguiça pra bater char count'),
+]
+
+SEV_WEIGHT = {0: 100, 1: 3, 2: 2, 3: 1}   # P0 domina a fila; resto conforme severidade
+
+
+def route_finding(f: Finding) -> Tuple[str, str]:
+    for pat, st, hint in ROUTING:
+        if re.search(pat, f.msg, re.I):
+            return st, hint
+    if f.dim in MECHANICAL_DIMS:
+        return ST_RESEARCH, 'gap objetivo — buscar o dado que falta e gravar com fonte'
+    return ST_REWRITE, 'confirme no checklist ⚖️ e ajuste a PROSA (o número não é o alvo)'
+
+
+def assign_stations(findings: List[Finding]) -> None:
+    """Despacha cada achado pra sua estação. Idempotente."""
+    for f in findings:
+        if not f.station:
+            f.station, f.hint = route_finding(f)
+
+
+def is_heavy_card(s: Dict) -> bool:
+    """Card 'pesado' = âncora do dia (vs filler). UMA definição, dois usos: o alerta
+    de ritmo (D6) e o peso na priorização de conserto."""
+    if s.get('tipo') != 'card':
+        return False
+    if s.get('risco') in ('yellow', 'red'):
+        return True
+    if s.get('walkingTours'):
+        return True
+    return bool(re.search(r'\d+\s*h', s.get('duracao', '')))
+
+
+def build_stop_index(data: Dict) -> Dict[str, Dict]:
+    """nome do stop → {dia, peso}. Peso = âncora(2) vs filler(1)."""
+    idx: Dict[str, Dict] = {}
+    for day in data.get('days', []):
+        for s in day.get('stops', []):
+            nome = s.get('nome', '')
+            if nome:
+                idx[nome] = {'dia': day.get('date', ''),
+                             'peso': 2 if is_heavy_card(s) else 1}
+    return idx
 
 # ---------------------------------------------------------------------------
 # DATA LOADING
@@ -612,16 +735,8 @@ def d6_adaptacao(data: Dict, F: List[Finding]) -> int:
     # Especialistas em viagem c/ criança pequena: 1-2 atividades "pesadas"/dia,
     # ancoradas na janela da criança. Aqui é SINAL, não corte automático: o peso
     # do dia depende do público e da dinâmica familiar — quem decide é o Tobia.
-    def _is_heavy(s: Dict) -> bool:
-        if s.get('tipo') != 'card':
-            return False
-        if s.get('risco') in ('yellow', 'red'):
-            return True
-        if s.get('walkingTours'):
-            return True
-        return bool(re.search(r'\d+\s*h', s.get('duracao', '')))
     for day in days:
-        heavy_n = sum(1 for s in day.get('stops', []) if _is_heavy(s))
+        heavy_n = sum(1 for s in day.get('stops', []) if is_heavy_card(s))
         if heavy_n > 2:
             F.append(Finding(3, 6,
                 f'{heavy_n} atrações "pesadas" em {day.get("date","")} — pode ser '
@@ -988,15 +1103,98 @@ def print_json_result(dim_scores: Dict[int, int], findings: List[Finding]) -> No
         'dimensions': {DIM_NAMES[i]: s for i, s in sorted(dim_scores.items())},
         'findings': [
             {
-                'sev':  SEV_LABEL[f.sev],
-                'dim':  DIM_NAMES.get(f.dim, str(f.dim)),
-                'msg':  f.msg,
-                'stop': f.stop,
+                'sev':     SEV_LABEL[f.sev],
+                'dim':     DIM_NAMES.get(f.dim, str(f.dim)),
+                'half':    'mechanical' if f.dim in MECHANICAL_DIMS else 'judgment',
+                'msg':     f.msg,
+                'stop':    f.stop,
+                'station': f.station,   # 🔧 corrigir · 🔎 pesquisar · ✍️ reescrever · 🤔 decidir
+                'hint':    f.hint,      # o que bom parece (patch colável nos 🔧)
             }
             for f in findings
         ],
     }
     print(json.dumps(out, ensure_ascii=False, indent=2))
+
+
+def print_suggest(findings: List[Finding], data: Dict) -> None:
+    """Visão de CONSERTO (--suggest): despacha os achados por estação, prioriza
+    ponderado e lista os patches prontos. É o que transforma o grader em coach."""
+    if not findings:
+        print(f"\n{C.OK}✓ Nada a rotear — zero achados.{C.END}\n")
+        return
+
+    idx = build_stop_index(data)
+
+    print(f"\n{C.BOLD}=== 🛠️  Plano de conserto (--suggest) ==={C.END}\n")
+
+    # --- por estação
+    by_st: Dict[str, List[Finding]] = {}
+    for f in findings:
+        by_st.setdefault(f.station, []).append(f)
+    print(f"{C.BOLD}Por estação{C.END}")
+    for st in (ST_FIX, ST_RESEARCH, ST_REWRITE, ST_HUMAN):
+        fs = by_st.get(st, [])
+        if fs:
+            print(f"  {st}  {len(fs):>2} achado(s) — {C.DIM}{STATION_DESC[st]}{C.END}")
+    print(f"\n  {C.DIM}⚠️  Perseguir o número só vale nas dims MECÂNICAS. Nas ⚖️, o alvo é a"
+          f" prosa —\n     confirmada no checklist, não no score.{C.END}\n")
+
+    # --- top-5 cards (ponderado: severidade × peso do card)
+    scores: Dict[str, int] = {}
+    for f in findings:
+        if not f.stop:
+            continue
+        peso = idx.get(f.stop, {}).get('peso', 1)
+        scores[f.stop] = scores.get(f.stop, 0) + SEV_WEIGHT[f.sev] * peso
+    if scores:
+        print(f"{C.BOLD}Top 5 cards (severidade × peso do card){C.END}")
+        for nome, sc in sorted(scores.items(), key=lambda kv: -kv[1])[:5]:
+            meta = idx.get(nome, {})
+            tag  = '⚓ âncora' if meta.get('peso') == 2 else 'filler'
+            sts  = ''.join(sorted({f.station for f in findings if f.stop == nome}))
+            n    = sum(1 for f in findings if f.stop == nome)
+            print(f"  {sc:>4} pts · {n} achado(s) {sts:<6} {nome[:44]} {C.DIM}({tag}){C.END}")
+        print()
+
+    # --- heat map por dia (densidade ponderada · NÃO é nota)
+    per_day: Dict[str, int] = {}
+    for f in findings:
+        dia = idx.get(f.stop, {}).get('dia', '') if f.stop else ''
+        if dia:
+            per_day[dia] = per_day.get(dia, 0) + SEV_WEIGHT[f.sev]
+    if per_day:
+        mx = max(per_day.values())
+        print(f"{C.BOLD}Densidade por dia{C.END} {C.DIM}(triagem — NÃO é nota por dia:"
+              f" D9/D10 só existem no roteiro inteiro){C.END}")
+        for dia, sc in sorted(per_day.items(), key=lambda kv: -kv[1])[:6]:
+            bar = '█' * max(1, round(sc / mx * 22))
+            print(f"  {dia:<12} {C.WARN}{bar}{C.END} {sc}")
+        print()
+
+    # --- patches prontos (só os 🔧 determinísticos)
+    fixes = by_st.get(ST_FIX, [])
+    if fixes:
+        print(f"{C.BOLD}🔧 Patches prontos pra colar{C.END} {C.DIM}(determinísticos){C.END}")
+        for f in fixes[:8]:
+            where = f' [{f.stop[:38]}]' if f.stop else ''
+            print(f"  • {C.DIM}{f.msg[:66]}{where}{C.END}")
+            print(f"    → {f.hint}")
+        if len(fixes) > 8:
+            print(f"  {C.DIM}… +{len(fixes)-8} outro(s) — veja no --json{C.END}")
+        print()
+
+    # --- o que precisa de pesquisa (a alavanca dominante)
+    res = by_st.get(ST_RESEARCH, [])
+    if res:
+        print(f"{C.BOLD}🔎 Fila de pesquisa{C.END} {C.DIM}(cada valor volta com fonte + data ·"
+              f" não confirmou = [a confirmar] / coord_unverified){C.END}")
+        for f in res[:6]:
+            where = f' [{f.stop[:38]}]' if f.stop else ''
+            print(f"  • {C.DIM}{f.msg[:66]}{where}{C.END}\n    → {f.hint}")
+        if len(res) > 6:
+            print(f"  {C.DIM}… +{len(res)-6} outro(s) — veja no --json{C.END}")
+        print()
 
 # ---------------------------------------------------------------------------
 # SCOUT MODE · auditoria dos levantamentos .md da destination-scout
@@ -1332,6 +1530,7 @@ def main() -> None:
     json_out      = '--json'          in flags
     no_checklist  = '--no-checklist'  in flags
     deploy_gate   = '--deploy-gate'   in flags
+    suggest       = '--suggest'       in flags
     if deploy_gate:
         no_checklist = True   # gate de deploy é compacto (sem checklist manual)
 
@@ -1348,6 +1547,7 @@ def main() -> None:
         print("  --json          Saída JSON machine-readable além do relatório")
         print("  --no-checklist  Omite checklist manual (útil em CI)")
         print("  --deploy-gate   Modo deploy.sh: compacto · bloqueia só em P0 · nota baixa = aviso")
+        print("  --suggest       Plano de CONSERTO: roteia cada achado (🔧/🔎/✍️/🤔) + top-5 + patches")
         print("                  (VIAGEM_STRICT=1 no env também bloqueia nota < aprovação)")
         sys.exit(2)
 
@@ -1403,6 +1603,8 @@ def main() -> None:
             icon  = '✓' if s >= 3 else ('⚠' if s >= 2 else '✗')
             print(f"  {color}{icon}{C.END} {dim_label(dim_idx)}: {s}/4")
 
+    assign_stations(findings)   # despacha cada achado pra sua estação de conserto
+
     total    = sum(dim_scores.values())
     n_p0     = sum(1 for f in findings if f.sev == 0)
     approved = is_approved(total, findings)
@@ -1436,6 +1638,8 @@ def main() -> None:
         print_json_result(dim_scores, findings)
     else:
         print_report(dim_scores, findings, show_checklist=not no_checklist)
+        if suggest:
+            print_suggest(findings, data)
 
     sys.exit(0 if approved else 1)
 
