@@ -1,6 +1,6 @@
 ---
 name: critico-roteiro
-description: Portão de qualidade de CONTEÚDO dos roteiros e levantamentos. É o irmão do impeccable (que cuida do design) — aqui o eixo é conteúdo: escrita/storytelling, profundidade de card, logística e preços datados, coords, links vivos, adaptação ao público (família c/ criança), walking tours, honestidade ("pula sem culpa"), cobertura e arco/ritmo. Roda o script audit.py em DOIS modos — (1) ROTEIRO (data.json/index.html · 10 dimensões · /40) e (2) SCOUT (--scout · levantamento .md da destination-scout · 5 dimensões · /20). Use quando (1) vai ENTREGAR um roteiro ou levantamento e precisa passar pelo gate de qualidade (loop-até-excelente); (2) quer AVALIAR/MELHORAR conteúdo já feito; (3) roda embutido no pipeline da roteiro-viagem (passo 9b) e da destination-scout (antes do export). Retorna nota + achados P0-P3 + checklist manual + veredito de aprovação. Fonte de verdade do veredito/preço-datado/fontes é skills/destination-scout/references/mapping-rubric.md — esta skill VERIFICA essas regras, não as reescreve. Rubrica detalhada em references/content-rubric.md.
+description: 'Portão de qualidade de CONTEÚDO dos roteiros e levantamentos. É o irmão do impeccable (que cuida do design) — aqui o eixo é conteúdo: escrita/storytelling, profundidade de card, logística e preços datados, coords, links vivos, adaptação ao público (família c/ criança), walking tours, honestidade ("pula sem culpa"), cobertura e arco/ritmo. Roda o script audit.py em DOIS modos — (1) ROTEIRO (data.json/index.html · 10 dimensões · /40) e (2) SCOUT (--scout · levantamento .md da destination-scout · 5 dimensões · /20). Use quando (1) vai ENTREGAR um roteiro ou levantamento e precisa passar pelo gate de qualidade (loop-até-excelente); (2) quer AVALIAR/MELHORAR conteúdo já feito; (3) roda embutido no pipeline da roteiro-viagem (passo 9b) e da destination-scout (antes do export). Retorna nota + achados P0-P3 + checklist manual + veredito de aprovação. Fonte de verdade do veredito/preço-datado/fontes é skills/destination-scout/references/mapping-rubric.md — esta skill VERIFICA essas regras, não as reescreve. Rubrica detalhada em references/content-rubric.md.'
 ---
 
 # Crítico de Roteiro · portão de qualidade de conteúdo
@@ -37,8 +37,19 @@ Exit code: `0` aprovado · `1` não aprovado · `2` erro de input.
 
 | Modo | Nota | Aprovação | Bandas |
 |---|---|---|---|
-| Roteiro | /40 (10 dim × 4) | ≥28 **E** P0=0 | 36-40 Excelente · 28-35 Bom · 20-27 Aceitável · <20 Ruim |
-| Scout | /20 (5 dim × 4) | ≥14 **E** P0=0 | 18-20 Excelente · 14-17 Bom · 10-13 Aceitável · <10 Ruim |
+| Roteiro | /40 (10 dim × 4) | **≥32** **E** P0=0 | 36-40 Excelente · 32-35 Bom · 28-31 Aceitável · <28 Ruim |
+| Scout | /20 (5 dim × 4) | **≥16** **E** P0=0 | 18-20 Excelente · 16-17 Bom · 12-15 Aceitável · <12 Ruim |
+
+Régua elevada de 28→32 em 2026-07-01 (a 28, 4 de 5 roteiros reais passavam com 3-8 P1s não corrigidos). Aspira-se **≥36**.
+
+### A nota tem 2 metades (não misturar)
+
+| Metade | Dims | Confiança | Como usar |
+|---|---|---|---|
+| **Mecânico** /20 | D2·D3·D4·D5·D9 | alta — regex checa o verificável | corrigir aqui primeiro (gaps objetivos: datas, coords, schema) |
+| **Julgamento** ⚖️ /20 | D1·D6·D7·D8·D10 | baixa — regex é só piso | **Claude confirma no checklist**; não confiar no número |
+
+O relatório imprime as duas metades separadas (`mec 15/20 · julg⚖️ 19/20`). O regex não sabe se a prosa encanta — a metade ⚖️ existe pra apontar onde olhar, não pra dar veredito.
 
 O modo **scout** auto-detecta **mini-plano** (âncora fixa, sem tabela de veredito) vs **macro**: no mini-plano, veredito-por-atração vira N/A e Fontes fica opcional. `--terceiros` relaxa Fontes em qualquer levantamento (a lista de URLs fica no chat, não se manda pra mãe — decisão Tobia).
 
@@ -54,13 +65,22 @@ O `audit.py` é o 1º de **três instrumentos** desta skill — cada um enxerga 
 
 Ordem obrigatória: **audit → factcheck → judge** (barato antes do caro; nunca julgar o que o regex já reprovaria). Régua de fontes dos dois protocolos: `references/source-credibility.md`.
 
-## Onde roda (loop-até-excelente)
+## O que isto É (honestidade de framing)
 
-| Pipeline | Onde entra |
-|---|---|
-| **roteiro-viagem** | passo 9b: build → validate → **audit** → corrige P1 → deploy |
-| **destination-scout** | antes do PASSO 5 (export): rascunho .md → **audit --scout** → corrige → gera PDF |
-| **standalone** | pra auditar/melhorar um roteiro ou levantamento já entregue |
+É um **linter de conteúdo com camada de julgamento** — não uma IA que julga escrita. O `audit.py` é determinístico (irmão do `validate.py`, que é estrutural); a metade mecânica é autoridade, a metade ⚖️ é piso que o **Claude** confirma. Fica em `skills/` (não `scripts/`) porque consolida régua + runnable + guia de julgamento num lugar só, e roda de qualquer sessão (desktop/cloud) via `python3 skills/critico-roteiro/audit.py`.
+
+**Tem suite de regressão própria** (`tests/run_tests.py` · 15 checks): o auditor testando a si mesmo. Rode sempre que mexer no `audit.py` — trava nota/severidade contra drift de regex. Ver `tests/README.md`.
+
+## Onde roda (loop-até-excelente + enforcement no deploy)
+
+| Pipeline | Onde entra | Enforça? |
+|---|---|---|
+| **roteiro-viagem** | passo 9b: build → validate → **audit** → corrige P1 até ≥32 → deploy | loop (Claude) |
+| **deploy.sh** | após validate: `audit.py --deploy-gate` no HTML que vai pro ar | **sim** — bloqueia em P0 (`VIAGEM_STRICT=1` bloqueia <32) |
+| **destination-scout** | antes do PASSO 5 (export): rascunho .md → **audit --scout** → corrige → gera PDF | loop (Claude) |
+| **standalone** | pra auditar/melhorar um roteiro ou levantamento já entregue | não |
+
+**Dois níveis de enforcement, de propósito**: a régua de **32** vive no *loop da sessão* (Claude itera até bater); o **deploy** bloqueia só em **P0** (erro objetivo: card vazio, link oficial morto) — heurística mole não deve brickar o acesso da família ao roteiro. Quer barra máxima no push? `VIAGEM_STRICT=1`.
 
 `walking-tour-designer` e `road-trip-designer` **não** têm gate próprio — o output deles vira card do roteiro e é pego pela dimensão **D7 (Walking Tours)** do audit de roteiro.
 
@@ -82,7 +102,9 @@ S1 Anti-invenção & preços (datados) · S2 Veredito 🟢🟡🔴 & honestidade
 ## Loop-até-excelente · como iterar
 
 1. Roda o audit no artefato.
-2. **P0 presente** → corrige (é bloqueio) → re-roda.
-3. **nota < limiar ou P1 aberto** → corrige P1s no data.json / .md → re-roda.
-4. **nota ≥ limiar e P0=0** → APROVADO · mostra a nota na entrega.
+2. **P0 presente** → corrige (é bloqueio objetivo) → re-roda.
+3. **nota < limiar (32 roteiro / 16 scout) ou P1 aberto** → corrige, priorizando:
+   - **a) metade mecânica primeiro** (D2·D3·D4·D5·D9): gaps objetivos e baratos — preço sem data, coord <4 casas, TRANSIT_MAP incompleto, campo faltando. É onde o número é confiável e o ganho é rápido.
+   - **b) metade ⚖️ julgamento** (D1·D6·D7·D8·D10): abre o artefato e o checklist manual e **decide** — a prosa encanta? o veredito calibra pro perfil? Não persegue o número do regex; persegue a qualidade real.
+4. **nota ≥ limiar e P0=0** → APROVADO · confirma as dims ⚖️ no checklist · mostra a nota (com as 2 metades) na entrega.
 5. Máx ~3 rodadas automáticas; se não converge, o problema é de conteúdo (pesquisa/curadoria), não de formato — leva pro Tobia.

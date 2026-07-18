@@ -2,23 +2,34 @@
 """
 audit.py — Crítico de conteúdo (skill critico-roteiro)
 
-Portão de qualidade de CONTEÚDO. Dois modos:
+Linter de CONTEÚDO com camada de julgamento. Dois modos:
 
   • ROTEIRO (default): audita data.json / index.html · 10 dimensões · /40
   • SCOUT (--scout):   audita levantamento .md da destination-scout · 5 dim · /20
 
-Roda como gate dentro do pipeline de roteiro E da destination-scout; também
-standalone pra melhorar conteúdo já feito.
+A nota tem DUAS metades, reportadas separadas porque têm confiabilidade diferente:
+  • MECÂNICO  (dims D2·D3·D4·D5·D9): checagem verificável (campo presente, preço
+    datado, coord 4-casas, link vivo, schema). O regex é autoridade — número confiável.
+  • JULGAMENTO (dims D1·D6·D7·D8·D10 · marcadas ⚖️): o regex só flagra falha grosseira
+    e dá um PISO; se a prosa encanta / o veredito está calibrado é o Claude que decide
+    no checklist manual. NÃO trate o número dessas como veredito de qualidade.
+
+Roda como gate no pipeline de roteiro E da destination-scout; também standalone.
+No deploy (deploy.sh) roda com --deploy-gate: BLOQUEIA só em P0 (erro objetivo);
+nota < aprovação vira aviso alto, não bloqueio (a régua de 32 é enforçada no LOOP da
+sessão, não no push — heurística mole não deve brickar o acesso da família ao roteiro).
 
 Uso:
     python3 skills/critico-roteiro/audit.py <viagem>/data.json
     python3 skills/critico-roteiro/audit.py <viagem>/data.json --check-links
     python3 skills/critico-roteiro/audit.py <viagem>/index.html
+    python3 skills/critico-roteiro/audit.py <viagem>/index.html --deploy-gate   # usado no deploy.sh
     python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout [--terceiros]
     python3 skills/critico-roteiro/audit.py <arquivo> --json   # saída machine-readable
 
 Exit: 0 = aprovado  ·  1 = não aprovado  ·  2 = erro de input
-  roteiro: aprovado = nota≥28/40 E P0=0   ·   scout: aprovado = nota≥14/20 E P0=0
+  roteiro: aprovado = nota≥32/40 E P0=0   ·   scout: aprovado = nota≥16/20 E P0=0
+  --deploy-gate: exit≠0 só se P0>0 (ou VIAGEM_STRICT=1 e nota<aprovação)
 
 Rubrica completa: references/content-rubric.md
 Fonte de verdade do veredito/preço-datado/fontes (não forkar):
@@ -26,6 +37,7 @@ Fonte de verdade do veredito/preço-datado/fontes (não forkar):
 """
 
 import re
+import os
 import sys
 import json
 import urllib.request
@@ -78,6 +90,15 @@ DIM_NAMES = {
     9:  'D9 Cobertura & Schema',
     10: 'D10 Arco & Ritmo',
 }
+
+# Metade MECÂNICA (regex é autoridade · número confiável) vs metade de JULGAMENTO
+# (regex é só piso · Claude confirma no checklist · marcada ⚖️). Ver docstring.
+MECHANICAL_DIMS = {2, 3, 4, 5, 9}
+JUDGMENT_DIMS   = {1, 6, 7, 8, 10}
+
+def dim_label(idx: int) -> str:
+    mark = ' ⚖️' if idx in JUDGMENT_DIMS else ''
+    return DIM_NAMES[idx] + mark
 
 # ---------------------------------------------------------------------------
 # DATA LOADING
@@ -287,6 +308,14 @@ def d2_profundidade(data: Dict, F: List[Finding]) -> int:
         name  = c.get('nome', '(sem nome)')
         pts   = 0.0
 
+        # P0 · card tipo=card completamente vazio (sem sobre + sem imperdivel + sem dicas)
+        # — não é "raso", é lixo estrutural: BLOQUEIA deploy (content-rubric §severidade)
+        if (not c.get('sobre') and not c.get('imperdivel')
+                and not c.get('dicas')):
+            F.append(Finding(0, 2,
+                'card tipo=card VAZIO (sem sobre + imperdivel + dicas) — sem valor pro viajante',
+                stop=name))
+
         # sobre ≥ 100 chars
         sobre = c.get('sobre', '')
         if len(sobre) >= 100:
@@ -438,14 +467,17 @@ def d4_coords(data: Dict, F: List[Finding]) -> int:
     else:
         score += 1  # sem WT: N/A
 
-    # coord_unverified sem aviso explícito
+    # coord_unverified = P1 forte (não P0): desconta ponto e aparece alto, mas NÃO
+    # bloqueia deploy — miradouro/vista é aproximado por natureza e a flag é honesta.
+    # Resolver: web_search e confirmar, OU remover a flag conscientemente. Quem quer
+    # barra máxima usa VIAGEM_STRICT=1 no deploy (bloqueia qualquer nota < aprovação).
     unverified = [s.get('nome', '') for s, _ in all_stops_list
                   if s.get('coord_unverified') is True]
     if not unverified:
         score += 1
     else:
         for name in unverified[:3]:
-            F.append(Finding(1, 4, 'coord marcada coord_unverified:true — validar com web_search antes de entregar', stop=name))
+            F.append(Finding(1, 4, 'coord coord_unverified:true — validar com web_search ou remover a flag conscientemente', stop=name))
 
     return min(4, score)
 
@@ -475,33 +507,38 @@ def d5_links(data: Dict, F: List[Finding], check_links: bool) -> int:
             'LINKS_MAP sem entradas type="official" — faltam links ao site oficial das atrações'))
 
     if check_links:
+        # rastreia quais URLs são 'official' — link oficial morto é P0 (engana mais
+        # que ausência); review/outro morto é P1.
+        official_urls = {l['url'] for links in lmap.values() for l in links
+                         if l.get('url') and l.get('type') == 'official'}
         all_urls = [l['url'] for links in lmap.values() for l in links if l.get('url')]
         print(f"  {C.DIM}Checando {len(all_urls)} URLs via HTTP HEAD...{C.END}")
-        broken = []
+        broken = []  # (url, reason, is_official)
         for url in all_urls:
             try:
                 req = urllib.request.Request(
                     url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
                 with urllib.request.urlopen(req, timeout=5) as resp:
                     if resp.status >= 400:
-                        broken.append((url, f'HTTP {resp.status}'))
+                        broken.append((url, f'HTTP {resp.status}', url in official_urls))
             except urllib.error.HTTPError as e:
                 if e.code >= 400:
-                    broken.append((url, f'HTTP {e.code}'))
+                    broken.append((url, f'HTTP {e.code}', url in official_urls))
             except Exception as e:
-                broken.append((url, f'err: {str(e)[:60]}'))
+                broken.append((url, f'err: {str(e)[:60]}', url in official_urls))
 
         if not broken:
             score += 2
-        elif len(broken) <= 2:
-            score += 1
-            for url, reason in broken:
-                F.append(Finding(1, 5, f'link quebrado: {url} ({reason}) — remover do LINKS_MAP'))
         else:
-            for url, reason in broken[:5]:
-                F.append(Finding(1, 5, f'link quebrado: {url} ({reason})'))
-            if len(broken) > 5:
-                F.append(Finding(1, 5, f'... +{len(broken)-5} URLs com problema'))
+            if len(broken) <= 2:
+                score += 1
+            for url, reason, is_off in broken[:6]:
+                sev = 0 if is_off else 1
+                tag = ' [OFICIAL]' if is_off else ''
+                F.append(Finding(sev, 5,
+                    f'link quebrado{tag}: {url} ({reason}) — remover do LINKS_MAP'))
+            if len(broken) > 6:
+                F.append(Finding(1, 5, f'... +{len(broken)-6} URLs com problema'))
     else:
         score += 1  # assume ok sem verificar
         F.append(Finding(3, 5,
@@ -710,31 +747,24 @@ def d8_honestidade(data: Dict, F: List[Finding]) -> int:
 
 
 def d9_cobertura(data: Dict, F: List[Finding]) -> int:
-    """D9 · Cobertura & Schema (completude estrutural)"""
+    """D9 · Cobertura & Schema (completude de conteúdo · o structural fica no validate.py)
+
+    NÃO re-checa temaCurto/enums/coord-range: isso é dono do validate.py (uma fonte
+    de verdade pro estrutural). D9 cuida do que é conteúdo: dia sem card, opcoes bem
+    formadas, nota do dia."""
     days  = data.get('days', [])
     score = 0
 
-    # Todos dias com ≥1 card
+    # Todos dias com ≥1 card (vale 2 pts — é o sinal de cobertura mais forte)
     ARRIVAL_RE = re.compile(r'chegada|saída|voo|partida|regresso|volta', re.I)
     no_card_days = [(d.get('date', ''), d.get('tema', '')) for d in days
                     if not any(s.get('tipo') == 'card' for s in d.get('stops', []))]
     if not no_card_days:
-        score += 1
+        score += 2
     else:
         for date, tema in no_card_days[:2]:
             sev = 2 if ARRIVAL_RE.search(tema) else 1
             F.append(Finding(sev, 9, f'dia sem nenhum stop tipo=card: {date}'))
-
-    # temaCurto ≤ 15
-    long_tc = [(d.get('date', ''), d.get('temaCurto', '')) for d in days
-               if len(d.get('temaCurto', '')) > 15]
-    if not long_tc:
-        score += 1
-    else:
-        for date, tc in long_tc[:2]:
-            F.append(Finding(2, 9,
-                f'temaCurto longo ({len(tc)} chars): "{tc}" — máx 15',
-                stop=date))
 
     # opcoes bem formadas (2-4 items com preco+dist)
     bad_op = 0
@@ -816,17 +846,26 @@ def d10_arco(data: Dict, F: List[Finding]) -> int:
 # SCORING & REPORT
 # ---------------------------------------------------------------------------
 
+APPROVAL_MIN = 32  # régua elevada 28→32 (Tobia 2026-07-01): 28 carimbava roteiros
+                   # com 3-8 P1s não corrigidos. Aspira-se 36+ (Excelente).
+
 def score_band(total: int) -> Tuple[str, str]:
     if total >= 36:
         return 'Excelente', C.OK
-    if total >= 28:
+    if total >= 32:
         return 'Bom', C.CYAN
-    if total >= 20:
+    if total >= 28:
         return 'Aceitável', C.WARN
     return 'Ruim', C.ERR
 
 def is_approved(total: int, findings: List[Finding]) -> bool:
-    return total >= 28 and not any(f.sev == 0 for f in findings)
+    return total >= APPROVAL_MIN and not any(f.sev == 0 for f in findings)
+
+def split_scores(dim_scores: Dict[int, int]) -> Tuple[int, int]:
+    """Retorna (mecânico, julgamento) — as duas metades da nota /40."""
+    mech = sum(s for i, s in dim_scores.items() if i in MECHANICAL_DIMS)
+    judg = sum(s for i, s in dim_scores.items() if i in JUDGMENT_DIMS)
+    return mech, judg
 
 MANUAL_CHECKLIST = """
 ┌──────────────────────────────────────────────────────────────────────────┐
@@ -871,13 +910,24 @@ def print_report(dim_scores: Dict[int, int], findings: List[Finding],
     for f in findings:
         pcnts[f.sev] += 1
 
-    # Dimension scores table
-    print(f"\n{C.BOLD}=== Dimensões de Conteúdo ==={C.END}\n")
-    for idx in sorted(dim_scores):
-        s      = dim_scores[idx]
-        bar    = '█' * s + '░' * (4 - s)
-        color  = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
-        print(f"  {color}{bar}{C.END} {s}/4  {DIM_NAMES[idx]}")
+    # Dimension scores table — separadas por confiabilidade
+    mech, judg = split_scores(dim_scores)
+
+    def _row(idx):
+        s     = dim_scores[idx]
+        bar   = '█' * s + '░' * (4 - s)
+        color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
+        print(f"  {color}{bar}{C.END} {s}/4  {dim_label(idx)}")
+
+    print(f"\n{C.BOLD}=== Mecânico · {mech}/20 "
+          f"{C.DIM}(regex é autoridade · número confiável){C.END} ===\n")
+    for idx in sorted(d for d in dim_scores if d in MECHANICAL_DIMS):
+        _row(idx)
+
+    print(f"\n{C.BOLD}=== Julgamento ⚖️ · {judg}/20 "
+          f"{C.DIM}(regex = piso · Claude confirma no checklist){C.END} ===\n")
+    for idx in sorted(d for d in dim_scores if d in JUDGMENT_DIMS):
+        _row(idx)
 
     # Findings grouped by severity
     grouped: Dict[int, List[Finding]] = {0: [], 1: [], 2: [], 3: []}
@@ -903,30 +953,38 @@ def print_report(dim_scores: Dict[int, int], findings: List[Finding],
         print(MANUAL_CHECKLIST)
 
     # Summary line
+    mech, judg = split_scores(dim_scores)
     print('─' * 62)
     ok_color = C.OK if is_approved(total, findings) else C.ERR
     print(f"{C.BOLD}★ Conteúdo: {ok_color}{total}/40{C.END}"
           f" · {bcolor}{band}{C.END}"
+          f" {C.DIM}(mec {mech}/20 · julg⚖️ {judg}/20){C.END}"
           f"  |  P0: {pcnts[0]}  P1: {pcnts[1]}  P2: {pcnts[2]}  P3: {pcnts[3]}")
 
     if is_approved(total, findings):
-        print(f"{C.OK}✓ Aprovado pra entrega{C.END}")
+        print(f"{C.OK}✓ Aprovado pra entrega{C.END} "
+              f"{C.DIM}(confirme as dims ⚖️ no checklist antes de fechar){C.END}")
     elif pcnts[0] > 0:
-        print(f"{C.ERR}✗ Bloqueado: {pcnts[0]} P0(s) — corrigir antes de continuar{C.END}")
+        print(f"{C.ERR}✗ Bloqueado: {pcnts[0]} P0(s) — erro objetivo, corrigir antes de continuar{C.END}")
     else:
-        print(f"{C.WARN}⚠ Iterar: nota {total}/40 < 28 — corrigir P1s listados acima{C.END}")
+        print(f"{C.WARN}⚠ Iterar: nota {total}/40 < {APPROVAL_MIN} — corrigir P1s listados acima{C.END}")
     print()
 
 
 def print_json_result(dim_scores: Dict[int, int], findings: List[Finding]) -> None:
     total = sum(dim_scores.values())
     band, _  = score_band(total)
+    mech, judg = split_scores(dim_scores)
     out = {
-        'mode':       'roteiro',
-        'score':      total,
-        'max':        40,
-        'band':       band,
-        'approved':   is_approved(total, findings),
+        'mode':          'roteiro',
+        'score':         total,
+        'max':           40,
+        'mechanical':    mech,   # /20 · confiável
+        'judgment':      judg,   # /20 · proxy, Claude confirma
+        'approval_min':  APPROVAL_MIN,
+        'band':          band,
+        'approved':      is_approved(total, findings),
+        'p0':            sum(1 for f in findings if f.sev == 0),
         'dimensions': {DIM_NAMES[i]: s for i, s in sorted(dim_scores.items())},
         'findings': [
             {
@@ -1128,18 +1186,20 @@ def audit_scout(text: str, F: List[Finding], is_mini: bool, relax_fontes: bool) 
     }
 
 
+SCOUT_APPROVAL_MIN = 16  # 80% de 20 — mesma barra proporcional do roteiro (32/40)
+
 def scout_band(total: int) -> Tuple[str, str]:
     if total >= 18:
         return 'Excelente', C.OK
-    if total >= 14:
+    if total >= 16:
         return 'Bom', C.CYAN
-    if total >= 10:
+    if total >= 12:
         return 'Aceitável', C.WARN
     return 'Ruim', C.ERR
 
 
 def scout_approved(total: int, findings: List[Finding]) -> bool:
-    return total >= 14 and not any(f.sev == 0 for f in findings)
+    return total >= SCOUT_APPROVAL_MIN and not any(f.sev == 0 for f in findings)
 
 
 SCOUT_CHECKLIST = """
@@ -1203,7 +1263,7 @@ def print_report_scout(dim_scores: Dict[int, int], findings: List[Finding],
     elif pcnts[0] > 0:
         print(f"{C.ERR}✗ Bloqueado: {pcnts[0]} P0(s) — corrigir antes de continuar{C.END}")
     else:
-        print(f"{C.WARN}⚠ Iterar: nota {total}/20 < 14 — corrigir P1s listados acima{C.END}")
+        print(f"{C.WARN}⚠ Iterar: nota {total}/20 < {SCOUT_APPROVAL_MIN} — corrigir P1s listados acima{C.END}")
     print()
 
 
@@ -1211,11 +1271,13 @@ def print_json_scout(dim_scores: Dict[int, int], findings: List[Finding]) -> Non
     total = sum(dim_scores.values())
     band, _ = scout_band(total)
     out = {
-        'mode':       'scout',
-        'score':      total,
-        'max':        20,
-        'band':       band,
-        'approved':   scout_approved(total, findings),
+        'mode':          'scout',
+        'score':         total,
+        'max':           20,
+        'approval_min':  SCOUT_APPROVAL_MIN,
+        'band':          band,
+        'approved':      scout_approved(total, findings),
+        'p0':            sum(1 for f in findings if f.sev == 0),
         'dimensions': {SCOUT_DIM_NAMES[i]: s for i, s in sorted(dim_scores.items())},
         'findings': [
             {'sev': SEV_LABEL[f.sev], 'dim': SCOUT_DIM_NAMES.get(f.dim, str(f.dim)),
@@ -1269,6 +1331,9 @@ def main() -> None:
     check_links   = '--check-links'   in flags
     json_out      = '--json'          in flags
     no_checklist  = '--no-checklist'  in flags
+    deploy_gate   = '--deploy-gate'   in flags
+    if deploy_gate:
+        no_checklist = True   # gate de deploy é compacto (sem checklist manual)
 
     if not args:
         base = 'python3 skills/critico-roteiro/audit.py'
@@ -1282,6 +1347,8 @@ def main() -> None:
         print("  --check-links   Verifica URLs em LINKS_MAP via HTTP HEAD (lento; ~5s/URL)")
         print("  --json          Saída JSON machine-readable além do relatório")
         print("  --no-checklist  Omite checklist manual (útil em CI)")
+        print("  --deploy-gate   Modo deploy.sh: compacto · bloqueia só em P0 · nota baixa = aviso")
+        print("                  (VIAGEM_STRICT=1 no env também bloqueia nota < aprovação)")
         sys.exit(2)
 
     path = Path(args[0])
@@ -1294,7 +1361,9 @@ def main() -> None:
         run_scout(path, flags, json_out, no_checklist)
         return
 
-    if not json_out:
+    verbose = not json_out and not deploy_gate  # deploy-gate = compacto (só a ★ line)
+
+    if verbose:
         print(f"\n{C.BOLD}=== Auditando conteúdo: {path.name} ==={C.END}\n")
 
     try:
@@ -1318,7 +1387,7 @@ def main() -> None:
         (10, lambda: d10_arco(data, findings)),
     ]
 
-    if not json_out:
+    if verbose:
         n_days  = len(data.get('days', []))
         n_cards = len(get_cards(data))
         n_wt    = len(get_wt_parts(data))
@@ -1329,18 +1398,46 @@ def main() -> None:
     for dim_idx, auditor in AUDITORS:
         s = auditor()
         dim_scores[dim_idx] = s
-        if not json_out:
+        if verbose:
             color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
             icon  = '✓' if s >= 3 else ('⚠' if s >= 2 else '✗')
-            print(f"  {color}{icon}{C.END} {DIM_NAMES[dim_idx]}: {s}/4")
+            print(f"  {color}{icon}{C.END} {dim_label(dim_idx)}: {s}/4")
 
+    total    = sum(dim_scores.values())
+    n_p0     = sum(1 for f in findings if f.sev == 0)
+    approved = is_approved(total, findings)
+
+    # --- Modo gate de deploy: compacto · bloqueia SÓ em P0 (ou VIAGEM_STRICT) ---
+    if deploy_gate:
+        strict = os.environ.get('VIAGEM_STRICT', '') == '1'
+        mech, judg = split_scores(dim_scores)
+        band, _ = score_band(total)
+        blocked = n_p0 > 0 or (strict and not approved)
+        print(f"{C.BOLD}★ Conteúdo (gate deploy): {total}/40 · {band}{C.END} "
+              f"(mec {mech}/20 · julg⚖️ {judg}/20) | P0:{n_p0} P1:{sum(1 for f in findings if f.sev==1)}")
+        if n_p0 > 0:
+            for f in findings:
+                if f.sev == 0:
+                    stop = f' [{f.stop}]' if f.stop else ''
+                    print(f"  {C.ERR}P0{C.END} {f.msg}{stop}")
+        if blocked:
+            why = f'{n_p0} P0' if n_p0 > 0 else f'nota {total}<{APPROVAL_MIN} (VIAGEM_STRICT)'
+            print(f"{C.ERR}✗ deploy BLOQUEADO: {why}{C.END}")
+            sys.exit(1)
+        if not approved:
+            print(f"{C.WARN}⚠ nota {total}/40 < {APPROVAL_MIN} — passa no gate mas revise "
+                  f"(a régua de {APPROVAL_MIN} é do loop da sessão, não do push){C.END}")
+        else:
+            print(f"{C.OK}✓ passa no gate de deploy{C.END}")
+        sys.exit(0)
+
+    # --- Modo normal (pipeline/standalone) ---
     if json_out:
         print_json_result(dim_scores, findings)
     else:
         print_report(dim_scores, findings, show_checklist=not no_checklist)
 
-    total = sum(dim_scores.values())
-    sys.exit(0 if is_approved(total, findings) else 1)
+    sys.exit(0 if approved else 1)
 
 
 if __name__ == '__main__':

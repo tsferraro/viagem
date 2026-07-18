@@ -54,9 +54,22 @@ echo "→ Subpasta: $SUBDIR · slug: $NEW_SLUG"
 cp "$SRC_HTML" "$TARGET_HTML"
 echo "$NEW_SLUG" > "$TARGET_SLUG"
 
-# Validar
-echo "→ Validando..."
+# Validar (estrutural · bloqueia sempre que falhar)
+echo "→ Validando (estrutura)..."
 python3 "$VALIDATE_PY" "$TARGET_HTML" || { echo "❌ validate.py falhou · ABORTADO"; exit 1; }
+
+# Gate de CONTEÚDO (critico-roteiro · advisory): roda no HTML que vai pro ar.
+# Bloqueia SÓ em P0 (erro objetivo: card vazio, link oficial morto). Nota < 32 vira
+# aviso — a régua de 32 é enforçada no LOOP da sessão, não no push (heurística mole
+# não deve brickar o acesso da família). VIAGEM_STRICT=1 endurece (bloqueia < 32).
+AUDIT_PY="$REPO_DIR/skills/critico-roteiro/audit.py"
+if [ -f "$AUDIT_PY" ]; then
+  echo "→ Gate de conteúdo (critico-roteiro)..."
+  python3 "$AUDIT_PY" "$TARGET_HTML" --deploy-gate \
+    || { echo "❌ Gate de conteúdo BLOQUEOU (P0 · erro objetivo) · ABORTADO"; exit 1; }
+else
+  echo "⚠️  critico-roteiro não encontrado · pulando gate de conteúdo"
+fi
 
 # Regenerar landing AUTOMATICAMENTE (lê todas subpastas atuais + monta cards)
 # Decisão 2026-05-23: integrado ao deploy pra nunca esquecer · sessão Sardenha esqueceu rodar wrap-up

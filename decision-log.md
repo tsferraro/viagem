@@ -133,3 +133,39 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 - Fixture macro sintético (padrão Chapada-Guia): **11/20 · Aceitável · NÃO aprovado** — pegou preço sem data (P1) + sem Fontes (P1), exatamente os furos que a revisão manual apontou
 
 **Follow-up sugerido** (não feito): transformar `design-rubric.md` num `critico-design` nativo, simétrico a este, com `impeccable` como ferramenta externa que ele chama.
+
+---
+
+## 2026-07-01 · Passo 3.2 — Revisão arquitetural do gate (Opus) + endurecimento
+
+**Contexto**: Tobia pediu revisão crítica do desenho do "portão de qualidade" (sem diplomacia). Diagnóstico do Opus achou **teatro de enforcement em 3 camadas**, verificado no código: (F1) o tier P0 nunca era emitido — nenhum `Finding(0,...)`; (F2) logo `aprovado = nota≥28 E P0=0` degenerava pra só `nota≥28`; (F3) nada em `scripts/` chamava o auditor — o "gate" só existia se uma sessão lembrasse. Baseline nos 5 roteiros reais: a régua a 28 carimbou 4 de 5 com 3-8 P1s não corrigidos.
+
+**Decisões**:
+
+| # | Decisão | Alternativa rejeitada | Motivo |
+|---|---|---|---|
+| 1 | **Régua 28 → 32** (roteiro) · 14 → 16 (scout · 80%) | Manter 28 | 28 carimbava roteiros com 3-8 P1s. A 32, só valencia (34) passa; os outros 4 iteram. Tobia pediu 32 explícito |
+| 2 | **Emitir P0 de verdade**: card vazio (sem sobre+dicas+imperdivel) · link **oficial** 404 | Deixar P0 como texto aspiracional | Sem P0 real, o tier de bloqueio era código morto (F1/F2) |
+| 3 | `coord_unverified` = **P1 forte, não P0** | P0 (bloqueia) | Bloquear re-deploy de miradouro estimado (2 das 5 viagens têm) treina bypass; a flag é honesta. Desconta ponto e empurra no loop |
+| 4 | **Wire no `deploy.sh`**: `audit.py --deploy-gate` após validate | Hook do Claude Code · nada | deploy.sh é o funil por onde todo push passa. Enforcement real, não "se a sessão lembrar" (F3) |
+| 5 | **Deploy bloqueia só em P0**; nota <32 = aviso. `VIAGEM_STRICT=1` endurece | Hard-block <32 no push | Heurística mole não deve brickar acesso da família; false-positive vira `--no-verify`. A régua de 32 vive no LOOP da sessão |
+| 6 | **Nota em 2 metades**: Mecânico /20 (D2·D3·D4·D5·D9 · regex é autoridade) + Julgamento ⚖️ /20 (D1·D6·D7·D8·D10 · regex é piso · Claude confirma) | Um número /40 único | `sobre≥150 chars` mede comprimento, não storytelling. Separar impede confiar cego no proxy de escrita |
+| 7 | **Fica em `skills/`** (não move pra `scripts/`) | Mover audit.py pra scripts/ (recomendação inicial do Opus) | Revertido à luz do objetivo do Tobia: skill consolida régua+runnable+guia de julgamento; mover quebra N cross-refs por ganho funcional zero. O framing "é linter" foi resolvido dando dentes + honestidade no report, não realocando |
+| 8 | **Dedup**: `d9` para de re-checar `temaCurto` (dono = validate.py) | Manter check duplo | `temaCurto≤15` estava em validate.py E audit.py. Uma fonte de verdade pro estrutural |
+| 9 | Honestidade no doc sobre "uma fonte de verdade" | Manter claim forte | Conceitos apontam pro mapping-rubric, mas thresholds viram regex no audit.py (redefinição lossy · sync manual). Documentado como é |
+
+**Validação real** (5 roteiros + 1 scout, pós-mudança):
+
+| Artefato | Nota | Metades | P0 | Aprovado (≥32/16) |
+|---|---|---|---|---|
+| valencia | 34/40 | mec 15 · julg 19 | 0 | ✅ |
+| marais | 30/40 | mec 15 · julg 15 | 0 | ❌ itera |
+| nyc | 29/40 | mec 11 · julg 18 | 0 | ❌ itera |
+| corsica | 28/40 | mec 12 · julg 16 | 0 | ❌ itera |
+| pais-sardenha | 28/40 | mec 11 · julg 17 | 0 | ❌ itera |
+| notre-dame (scout) | 20/20 | — | 0 | ✅ |
+
+- `--deploy-gate` testado: aprovado→exit0 · nota baixa sem P0→exit0+aviso · `VIAGEM_STRICT=1`→bloqueia · card vazio (fixture)→exit1 bloqueado.
+- Insight do split: a metade MECÂNICA é onde estão os gaps reais e objetivos (nyc mec 11/20: coords <4 casas, custo sem data, TRANSIT_MAP) — a metade de julgamento inflava (18/20 = proxy de escrita, não qualidade real).
+
+**Artefatos alterados**: `skills/critico-roteiro/audit.py` (P0, split, --deploy-gate, thresholds, dedup) · `scripts/deploy.sh` (gate wire) · `references/content-rubric.md` · `skills/critico-roteiro/SKILL.md` · `skills/destination-scout/SKILL.md` · `CLAUDE.md`.

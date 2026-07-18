@@ -1,0 +1,25 @@
+{
+  "_comment": "Fixture decisão-A (Tobia 2026-07-01): coord_unverified=true é P1 forte, NUNCA P0. Deve descontar ponto em D4 e emitir P1, mas NÃO bloquear o deploy-gate.",
+  "days": [
+    {
+      "date": "D1", "tema": "Vista", "temaCurto": "Vista",
+      "nota": "Um dia só, com uma vista de coord estimada.",
+      "stops": [
+        {
+          "tipo": "card", "risco": "green", "periodo": "manha",
+          "nome": "Miradouro estimado (vista do vale)",
+          "cat": "Vista panorâmica",
+          "sobre": "Um miradouro de estrada com vista ampla do vale, coord aproximada porque não achei o ponto exato no mapa — marcado como não-verificado de propósito.",
+          "imperdivel": "A curva onde o vale se abre inteiro à direita",
+          "dicas": ["Para no acostamento largo depois do túnel", "Melhor luz no fim da tarde"],
+          "duracao": "15min", "custo": "grátis",
+          "acessibilidade": "Acostamento plano · sem estrutura",
+          "coord": {"lat": 40.1234, "lng": 9.4321},
+          "coord_unverified": true
+        }
+      ]
+    }
+  ],
+  "links_map": {},
+  "transit_map": {}
+}

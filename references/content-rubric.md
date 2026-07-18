@@ -38,6 +38,8 @@ A `destination-scout` (skill em `skills/destination-scout/`) é o **degrau 0** �
 
 **Regra de ouro**: UMA fonte de verdade pra veredito/perfil/anti-invenção. Se um conceito precisar mudar, muda na skill-origem. Esta rubrica aponta pra lá.
 
+> ⚠️ **Honestidade sobre "uma fonte de verdade"**: os *conceitos* (semântica do veredito, anti-invenção) têm dono único (`mapping-rubric.md`). Mas os *thresholds operacionais* (preço datado = `(mês/ano)`, ≤6 cards/dia, 4-8 stops/WT, ≥150 chars) estão **operacionalizados como regex no `audit.py`** — que é uma redefinição lossy da regra em prosa. Ou seja: mudar a regra na prosa NÃO propaga sozinho pro regex; é sincronização manual. Estrutural puro (temaCurto, enums, coord-range) tem dono único de verdade: o `validate.py` (o `audit.py` **não** re-checa isso, pra não duplicar).
+
 > ⚠️ **`risco` (roteiro) ≠ veredito 🟢🟡🔴 (scout)** — escalas diferentes, não confundir:
 > - **`risco`** do roteiro = **multidão/esforço** operacional (green=tranquilo · yellow=atenção · red=Times Square lotada). É um aviso de campo, não uma recomendação.
 > - **veredito** da scout = **recomendação** (🟢 faça · 🟡 depende · 🔴 pula sem culpa).
@@ -96,14 +98,29 @@ A rubrica não é achismo — cada dimensão-chave ancora numa best-practice **e
 
 ---
 
+## Duas metades da nota (confiabilidade diferente)
+
+A nota /40 é reportada em DUAS metades porque não têm a mesma confiabilidade — não misturar:
+
+| Metade | Dims | O regex é… | Como ler o número |
+|---|---|---|---|
+| **Mecânico** /20 | D2 · D3 · D4 · D5 · D9 | **autoridade** — checa o verificável (campo presente, preço datado, coord 4-casas, link vivo, schema) | Confiável. Um gap aqui é objetivo e corrigível |
+| **Julgamento** ⚖️ /20 | D1 · D6 · D7 · D8 · D10 | **só um piso** — flagra falha grosseira, mas NÃO sabe se a prosa encanta / o veredito calibra | Proxy. **Claude confirma no checklist manual** antes de fechar. Não é veredito de qualidade |
+
+> Por que separar: `sobre ≥ 150 chars` mede comprimento, não storytelling; um número de 4 dígitos não é "tem fato". A metade de julgamento existe pra você **não confiar cegamente** no número dela — ela aponta onde olhar, o Claude decide se está bom.
+
+---
+
 ## Severidade dos achados
 
-| Nível | Significado | Exemplo |
+| Nível | Significado | O que emite (no código) |
 |---|---|---|
-| **P0** | Bloqueia deploy | Coord inventada sem flag; URL 404 em link oficial; card tipo=card completamente vazio (sem sobre + dicas + imperdivel) |
-| **P1** | Corrigir antes de entregar | `sobre` < 50 chars; `imperdivel` genérico ("incrível!"); `acessibilidade` ausente em risco yellow/red; WT parte >8 stops sem partition |
-| **P2** | Recomendado · não bloqueia | `custo` sem data de referência; só 1 dica; TRANSIT_MAP incompleto; link review ausente em card principal |
-| **P3** | Sugestão · opcional | Links não checados via HTTP; `nota` ausente; temaCurto poderia ser mais específico; WT sem dicas numeradas |
+| **P0** | **Bloqueia deploy** (erro objetivo) | card tipo=card completamente vazio (sem sobre + dicas + imperdivel); URL **oficial** 404 (com `--check-links`) |
+| **P1** | Corrigir antes de entregar | coord `coord_unverified:true`; coord <4 casas (>2 stops); `imperdivel` genérico; `acessibilidade` ausente em risco yellow/red; WT parte >8 stops sem partition; preço sem data (scout) |
+| **P2** | Recomendado · não bloqueia | `custo` sem data; só 1 dica; TRANSIT_MAP incompleto; distância vaga ("perto") |
+| **P3** | Sugestão · opcional | Links não checados via HTTP; `nota` ausente; pacing "pesado" (advisory, nunca corta); WT sem dicas numeradas |
+
+> **Só P0 bloqueia deploy.** Coord inventada SEM flag seria P0 mas é indetectável (parece coord real) — por isso a defesa é o `coord_unverified:true` (P1) + regra anti-invenção no CLAUDE.md. `coord_unverified` NÃO é P0 (miradouro é aproximado por natureza; a flag é honesta): desconta ponto e empurra resolução no loop, sem brickar re-deploy.
 
 ---
 
@@ -112,11 +129,15 @@ A rubrica não é achismo — cada dimensão-chave ancora numa best-practice **e
 | Nota | Banda | Ação no loop |
 |---|---|---|
 | 36-40 | **Excelente** | Entrega automática |
-| 28-35 | **Bom** | Entrega se sem P0s e sem P1s abertos |
-| 20-27 | **Aceitável** | Iterar: corrigir P1s até ≥28 |
-| <20 | **Ruim** | Refazer seções afetadas |
+| 32-35 | **Bom** | **Aprovado** se P0=0 (confirmar dims ⚖️ no checklist) |
+| 28-31 | **Aceitável** | Iterar: corrigir P1s até ≥32 |
+| <28 | **Ruim** | Refazer seções afetadas |
 
-**Aprovação automática**: nota ≥28 E P0=0. **Barra de aspiração (padrão-ouro, decisão Tobia 2026-07-12): mira Excelente ≥36/40** — ≥28 é o piso que libera deploy, não o alvo. A profundidade do roteiro herda a do levantamento: um scout raso gera roteiro raso. Se o levantamento foi feito no padrão-ouro (ver `skills/destination-scout/SKILL.md` §Padrão-ouro de profundidade), os cards do roteiro já nascem com `sobre` factual, `imperdivel` = "o que observar", dicas com hora/preço e vereditos calibrados — que é o que puxa a nota de "Bom" pra "Excelente".
+**Aprovação automática**: nota **≥32** E P0=0. Claude aspira **≥36** (Excelente) antes de desistir. *(Régua elevada de 28→32 em 2026-07-01: a 28, 4 de 5 roteiros reais passavam com 3-8 P1s não corrigidos.)*
+
+**Barra de aspiração (padrão-ouro, decisão Tobia 2026-07-12): mira Excelente ≥36/40** — ≥32 é o piso que libera entrega, não o alvo. A profundidade do roteiro herda a do levantamento: um scout raso gera roteiro raso. Se o levantamento foi feito no padrão-ouro (ver `skills/destination-scout/SKILL.md` §Padrão-ouro de profundidade), os cards do roteiro já nascem com `sobre` factual, `imperdivel` = "o que observar", dicas com hora/preço e vereditos calibrados — que é o que puxa a nota de "Bom" pra "Excelente".
+
+**No deploy** (`deploy.sh` → `audit.py --deploy-gate`): bloqueia SÓ em P0. Nota <32 vira aviso alto, não bloqueio — a régua de 32 é enforçada no **loop da sessão**, não no push (heurística mole não deve impedir a família de acessar o roteiro). `VIAGEM_STRICT=1` no env endurece (bloqueia deploy < 32).
 
 ---
 
@@ -124,20 +145,22 @@ A rubrica não é achismo — cada dimensão-chave ancora numa best-practice **e
 
 ```
 build.py data.json index.html               ← gera HTML
-validate.py index.html                      ← checks estruturais (P0 técnico)
+validate.py index.html                      ← checks estruturais (bloqueia se falhar)
 critico-roteiro/audit.py data.json          ← checks de conteúdo (P0-P3 + nota /40)
         ↓
   P0 presente? → Claude lê achados → corrige data.json → re-build → re-audit
                  (máx 3 rodadas automáticas)
         ↓ sem P0
-  nota < 28 ou P1 aberto?
+  nota < 32 ou P1 aberto?
     → Claude corrige P1s no data.json → re-build → re-audit
+    → foca no MECÂNICO primeiro (gaps objetivos: datas, coords, TRANSIT_MAP)
+    → confirma as dims ⚖️ (julgamento) no checklist manual — não confia no número
         ↓
-  nota ≥ 28 e sem P0 → APROVADO
+  nota ≥ 32 e sem P0 → APROVADO
         ↓
-deploy.sh → exibe na entrega:
+deploy.sh → validate → audit --deploy-gate (bloqueia só em P0) → push. Exibe:
   ✓ Estrutura:  validate.py  0 erros
-  ★ Conteúdo:   34/40 · Bom  |  P0: 0  P1: 0  P2: 2  P3: 1
+  ★ Conteúdo:   34/40 · Bom  (mec 15/20 · julg⚖️ 19/20)  |  P0:0 P1:0 P2:2 P3:1
   URL: https://tsferraro.github.io/viagem/<slug>/
 ```
 
@@ -169,8 +192,8 @@ A mesma skill (`--scout`) audita os levantamentos da `destination-scout` — out
 | S4 | **Fontes & Verificação** | Seção Fontes presente | Sem Fontes **no macro** (opcional em pra-terceiros/mini) |
 | S5 | **Estrutura & Cobertura** | Resumo no topo · mapeamento antes de história · sabores-assinatura · clusters | Ordem trocada, sem sabores, sem clusters |
 
-- Bandas: 18-20 Excelente · 14-17 Bom · 10-13 Aceitável · <10 Ruim. **Aprovação: ≥14 E P0=0.**
-- **Barra de aspiração (padrão-ouro, decisão Tobia 2026-07-12):** aprovar em ≥14 é o *piso* (não travar entregas enxutas legítimas — pra-terceiros, mini-plano). Mas o **alvo de toda entrega macro é Excelente ≥18/20** — a profundidade da entrega `entregas/roma-toscana-florenca-set2026.md` (19/20) é a referência concreta a igualar (ver `skills/destination-scout/SKILL.md` §Padrão-ouro de profundidade). Não desistir em "Bom" quando dá pra chegar em "Excelente".
+- Bandas: 18-20 Excelente · 16-17 Bom · 12-15 Aceitável · <12 Ruim. **Aprovação: ≥16 E P0=0** (80%, mesma barra proporcional do roteiro 32/40).
+- **Barra de aspiração (padrão-ouro, decisão Tobia 2026-07-12):** aprovar em ≥16 é o *piso* (não travar entregas enxutas legítimas — pra-terceiros, mini-plano). Mas o **alvo de toda entrega macro é Excelente ≥18/20** — a profundidade da entrega `entregas/roma-toscana-florenca-set2026.md` (19/20) é a referência concreta a igualar (ver `skills/destination-scout/SKILL.md` §Padrão-ouro de profundidade). Não desistir em "Bom" quando dá pra chegar em "Excelente".
 - Auto-detecta **mini-plano** (âncora fixa, sem tabela de veredito): veredito-por-atração vira N/A, Fontes opcional.
 - `--terceiros`: relaxa Fontes (lista de URLs fica no chat, não se manda pra terceiros — decisão Tobia).
 

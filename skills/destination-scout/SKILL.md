@@ -146,8 +146,8 @@ python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros
 
 Retorna nota **/20** + achados P0-P3. **Loop-até-excelente**:
 1. **P0** presente → corrige (bloqueio) → re-roda.
-2. **nota < 14 ou P1 aberto** → corrige no `.md` → re-roda (máx ~3 rodadas).
-3. **nota ≥14 e P0=0** → aprovado · segue pro PASSO 5.
+2. **nota < 16 ou P1 aberto** → corrige no `.md` → re-roda (máx ~3 rodadas).
+3. **nota ≥16 e P0=0** → aprovado · segue pro PASSO 5.
 
 O que o gate pega (sem você caçar): preço sem data, veredito 🟢🟡🔴 ausente, "perto" vago em vez de km, sem armadilha sinalizada, restaurante sem sabor-assinatura, ordem mapeamento→história trocada, e — no macro — **seção Fontes ausente**. Régua completa: `references/content-rubric.md` §modo-scout. É o mesmo padrão de qualidade do roteiro, aplicado ao levantamento.
 
@@ -222,6 +222,6 @@ PT-BR, casual, direto, consultor crítico. Tabelas pra comparação. NUNCA conco
 - [ ] Ao menos 1 armadilha de turista sinalizada (se existir)
 - [ ] Resumo no topo (NÃO "TL;DR")
 - [ ] Fontes citadas
-- [ ] **Passou no gate `critico-roteiro --scout`** (piso ≥14/20 · P0=0 · **mira Excelente ≥18/20** no macro — ver §Padrão-ouro) antes de exportar
+- [ ] **Passou no gate `critico-roteiro --scout`** (piso ≥16/20 · P0=0 · **mira Excelente ≥18/20** no macro — ver §Padrão-ouro) antes de exportar
 - [ ] **≥10-12 buscas por polo** no macro (fan-out paralelo quando multi-polo)
 - [ ] Word/PDF só se pedido (e PDF conferido visualmente antes de entregar — tabelas/semáforos/negrito)
