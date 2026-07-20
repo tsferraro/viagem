@@ -149,6 +149,7 @@ python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout              
 python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros  # pra-terceiros (Fontes opcional)
 
 python3 skills/critico-roteiro/audit.py <viagem>/data.json --suggest    # PLANO DE CONSERTO (roteia achados + patches)
+python3 skills/critico-roteiro/audit.py <depois>.json --diff <antes>.json # LOOP FECHADO (delta + assere não-regressão)
 python3 skills/critico-roteiro/audit.py <arquivo> --json                # saída machine-readable (station/hint/half)
 ```
 

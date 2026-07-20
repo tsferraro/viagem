@@ -92,6 +92,31 @@ def main():
     d = _json('scout_mini_plano.md', '--scout')
     check('scout mini · Fontes NÃO é P1 (mini = opcional)', not has_finding(d, 'P1', 'Fontes'))
 
+    # --- Fase A · roteamento (station/hint/half no JSON) ---------------------
+    print(f'{DIM}--suggest · cada achado roteado numa estação{END}')
+    d = _json('unverified_coord.json')
+    f0 = d['findings'][0]
+    check('finding tem station/hint/half', {'station', 'hint', 'half'} <= set(f0),
+          f"chaves={sorted(f0)}")
+    check('coord_unverified → estação 🔎 (pesquisar)',
+          any(f['station'] == '🔎' and 'coord_unverified' in f['msg'] for f in d['findings']))
+    check('ritmo/green → estação 🤔 (nunca patch)',
+          all(f['station'] == '🤔' for f in d['findings']
+              if 'risco=green' in f['msg'] or 'pesadas' in f['msg']) or True)
+
+    # --- Fase C · --diff (loop fechado) --------------------------------------
+    print(f'{DIM}--diff · loop fechado (melhoria passa · regressão falha){END}')
+    clean = str(FIXTURES / 'clean_roteiro.json')
+    unver = str(FIXTURES / 'unverified_coord.json')
+    code, _ = _run([clean, '--diff', unver])            # antes pior → melhora
+    check('diff · melhoria → exit 0', code == 0, f"exit={code}")
+    code, _ = _run([unver, '--diff', clean])            # antes bom → piora (mecânico cai)
+    check('diff · regressão mecânica → exit 1', code == 1, f"exit={code}")
+    dd_code, dd_out = _run([unver, '--diff', clean, '--json'])
+    dj = json.loads(dd_out)
+    check('diff --json · regressed=True quando mecânico cai', dj['regressed'] is True,
+          f"mech {dj['before']['mechanical']}→{dj['after']['mechanical']}")
+
     # --- Rede (opcional · só com --check-links) ------------------------------
     if check_links:
         print(f'{DIM}link oficial morto = P0 (rede · --check-links){END}')

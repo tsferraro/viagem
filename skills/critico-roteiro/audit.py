@@ -982,6 +982,136 @@ def split_scores(dim_scores: Dict[int, int]) -> Tuple[int, int]:
     judg = sum(s for i, s in dim_scores.items() if i in JUDGMENT_DIMS)
     return mech, judg
 
+# ---------------------------------------------------------------------------
+# LOOP FECHADO · --diff (re-audita antes/depois de um lote de patch)
+# ---------------------------------------------------------------------------
+# Toda fase (patch da A, pesquisa da C, reescrita da D) fecha o loop aqui:
+# aplica o lote → roda `audit.py depois.json --diff antes.json` → o modo mostra
+# o que resolveu, o que apareceu de novo, e ASSERE que o mecânico não regrediu.
+# Regra dura: a metade MECÂNICA nunca pode cair — lá o número é verdade, então
+# queda = o patch quebrou algo objetivo. A metade ⚖️ pode oscilar (é proxy), mas
+# a gente MOSTRA a oscilação em vez de esconder no agregado — é o modo de falha
+# clássico (mecânico +3 mascarando julgamento −1, total "saudável", roteiro pior).
+
+def audit_roteiro(data: Dict, check_links: bool = False) -> Tuple[Dict[int, int], List[Finding]]:
+    """Roda as 10 dimensões e devolve (dim_scores, findings já roteados).
+    Função pura — sem prints. main() imprime; --diff chama duas vezes."""
+    findings: List[Finding] = []
+    auditors = [
+        (1,  lambda: d1_storytelling(data, findings)),
+        (2,  lambda: d2_profundidade(data, findings)),
+        (3,  lambda: d3_logistica(data, findings)),
+        (4,  lambda: d4_coords(data, findings)),
+        (5,  lambda: d5_links(data, findings, check_links)),
+        (6,  lambda: d6_adaptacao(data, findings)),
+        (7,  lambda: d7_walking_tours(data, findings)),
+        (8,  lambda: d8_honestidade(data, findings)),
+        (9,  lambda: d9_cobertura(data, findings)),
+        (10, lambda: d10_arco(data, findings)),
+    ]
+    dim_scores = {i: fn() for i, fn in auditors}
+    assign_stations(findings)
+    return dim_scores, findings
+
+
+def _finding_key(f: Finding) -> Tuple:
+    """Identidade estável de um achado entre dois runs. Números são zerados porque
+    contadores mudam ('1/1 cards' → '2/3 cards') sem o achado ser 'outro'."""
+    base = re.sub(r'\d+', '#', f.msg)
+    return (f.dim, f.stop, base)
+
+
+def compute_diff(before: List[Finding], after: List[Finding]):
+    b = {_finding_key(f): f for f in before}
+    a = {_finding_key(f): f for f in after}
+    resolved = [b[k] for k in b if k not in a]          # sumiu → consertado
+    new      = [a[k] for k in a if k not in b]          # apareceu → efeito colateral?
+    kept     = [a[k] for k in a if k in b]              # intacto
+    return resolved, new, kept
+
+
+def print_diff(bs: Dict[int, int], bf: List[Finding],
+               as_: Dict[int, int], af: List[Finding]) -> bool:
+    """Mostra o delta. Retorna True se houve REGRESSÃO (mecânico caiu ou surgiu
+    P0/P1 mecânico novo) — o caller usa pro exit code."""
+    b_mech, b_judg = split_scores(bs)
+    a_mech, a_judg = split_scores(as_)
+    b_tot, a_tot   = sum(bs.values()), sum(as_.values())
+    resolved, new, kept = compute_diff(bf, af)
+
+    def delta(x):
+        d = f'+{x}' if x > 0 else (str(x) if x < 0 else '±0')
+        col = C.OK if x > 0 else (C.ERR if x < 0 else C.DIM)
+        return f'{col}{d}{C.END}'
+
+    print(f"\n{C.BOLD}=== 🔁 Diff de conteúdo (loop fechado) ==={C.END}\n")
+    print(f"  Total      {b_tot:>2}/40 → {a_tot:>2}/40  ({delta(a_tot-b_tot)})")
+    print(f"  🔩 Mecânico {b_mech:>2}/20 → {a_mech:>2}/20  ({delta(a_mech-b_mech)})"
+          f"  {C.DIM}número é verdade{C.END}")
+    print(f"  ⚖️  Julgamento {b_judg:>2}/20 → {a_judg:>2}/20  ({delta(a_judg-b_judg)})"
+          f"  {C.DIM}proxy — confirme na prosa{C.END}")
+    print(f"\n  {C.OK}✓ resolvido: {len(resolved)}{C.END}   "
+          f"{C.ERR}✧ novo: {len(new)}{C.END}   {C.DIM}• intacto: {len(kept)}{C.END}")
+
+    if resolved:
+        print(f"\n{C.OK}Resolvido{C.END}")
+        for f in resolved[:8]:
+            where = f' [{f.stop[:36]}]' if f.stop else ''
+            print(f"  ✓ {C.DIM}{f.msg[:64]}{where}{C.END}")
+    if new:
+        print(f"\n{C.ERR}Novo (efeito colateral?){C.END}")
+        for f in new[:8]:
+            where = f' [{f.stop[:36]}]' if f.stop else ''
+            print(f"  {SEV_LABEL[f.sev]} {f.station} {f.msg[:60]}{C.DIM}{where}{C.END}")
+
+    # --- veredito de regressão
+    mech_regress = a_mech < b_mech
+    new_mech_pf  = [f for f in new if f.dim in MECHANICAL_DIMS and f.sev <= 1]
+    regressed    = mech_regress or bool(new_mech_pf)
+
+    print()
+    if regressed:
+        why = []
+        if mech_regress:      why.append(f'mecânico caiu {b_mech}→{a_mech}')
+        if new_mech_pf:       why.append(f'{len(new_mech_pf)} P0/P1 mecânico novo')
+        print(f"{C.ERR}✗ REGRESSÃO: {' · '.join(why)} — o lote quebrou algo objetivo{C.END}")
+    elif a_judg < b_judg:
+        print(f"{C.WARN}⚠ mecânico ok, mas julgamento caiu {b_judg}→{a_judg} — "
+              f"o agregado esconde isso. Confirme a prosa antes de fechar{C.END}")
+    else:
+        print(f"{C.OK}✓ sem regressão — mecânico não caiu, nenhum P0/P1 objetivo novo{C.END}")
+    return regressed
+
+
+def run_diff(after_path: Path, before_path: Path, check_links: bool, json_out: bool) -> None:
+    for p in (after_path, before_path):
+        if not p or not p.exists():
+            print(f"{C.ERR}✗{C.END} --diff precisa de 2 arquivos: <depois> --diff <antes>")
+            sys.exit(2)
+    bs, bf  = audit_roteiro(load_data(before_path), check_links)
+    as_, af = audit_roteiro(load_data(after_path), check_links)
+    b_mech, _ = split_scores(bs)
+    a_mech, _ = split_scores(as_)
+    resolved, new, kept = compute_diff(bf, af)
+    new_mech_pf = [f for f in new if f.dim in MECHANICAL_DIMS and f.sev <= 1]
+    regressed   = a_mech < b_mech or bool(new_mech_pf)
+
+    if json_out:
+        b_m, b_j = split_scores(bs); a_m, a_j = split_scores(as_)
+        print(json.dumps({
+            'mode': 'diff',
+            'before': {'total': sum(bs.values()), 'mechanical': b_m, 'judgment': b_j},
+            'after':  {'total': sum(as_.values()), 'mechanical': a_m, 'judgment': a_j},
+            'resolved': len(resolved), 'new': len(new), 'kept': len(kept),
+            'regressed': regressed,
+            'new_findings': [{'sev': SEV_LABEL[f.sev], 'dim': f.dim, 'station': f.station,
+                              'msg': f.msg, 'stop': f.stop} for f in new],
+        }, ensure_ascii=False, indent=2))
+    else:
+        print_diff(bs, bf, as_, af)
+
+    sys.exit(1 if regressed else 0)
+
 MANUAL_CHECKLIST = """
 ┌──────────────────────────────────────────────────────────────────────────┐
 │  CHECKLIST MANUAL · dimensões que exigem julgamento humano               │
@@ -1548,6 +1678,7 @@ def main() -> None:
         print("  --no-checklist  Omite checklist manual (útil em CI)")
         print("  --deploy-gate   Modo deploy.sh: compacto · bloqueia só em P0 · nota baixa = aviso")
         print("  --suggest       Plano de CONSERTO: roteia cada achado (🔧/🔎/✍️/🤔) + top-5 + patches")
+        print("  --diff <antes>  Loop fechado: <depois>.json --diff <antes>.json · delta + regressão")
         print("                  (VIAGEM_STRICT=1 no env também bloqueia nota < aprovação)")
         sys.exit(2)
 
@@ -1559,6 +1690,12 @@ def main() -> None:
     # Desvio pro modo scout (auditoria de levantamento .md · rubrica /20)
     if '--scout' in flags:
         run_scout(path, flags, json_out, no_checklist)
+        return
+
+    # Desvio pro loop fechado (compara antes/depois · assere não-regressão)
+    if '--diff' in flags:
+        before = Path(args[1]) if len(args) > 1 else None
+        run_diff(path, before, check_links, json_out)
         return
 
     verbose = not json_out and not deploy_gate  # deploy-gate = compacto (só a ★ line)

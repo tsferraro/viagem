@@ -30,6 +30,7 @@ python3 skills/critico-roteiro/audit.py entregas/<slug>.md --scout --terceiros #
 
 # comum aos dois
 --suggest       # PLANO DE CONSERTO: roteia cada achado + top-5 + patches prontos
+--diff <antes>  # LOOP FECHADO: <depois>.json --diff <antes>.json · delta + regressão
 --json          # saída machine-readable (inclui station/hint/half por achado)
 --no-checklist  # omite checklist manual (CI)
 ```
@@ -66,11 +67,13 @@ O `audit.py` é o 1º de **três instrumentos** desta skill — cada um enxerga 
 
 Ordem obrigatória: **audit → factcheck → judge** (barato antes do caro; nunca julgar o que o regex já reprovaria). Régua de fontes dos dois protocolos: `references/source-credibility.md`.
 
+E um 4º, de **conserto** (não de avaliação): `RESEARCH.md` — executa a fila 🔎 do `--suggest` com o contrato anti-invenção (preço datado, coord verificada ou `coord_unverified`, URL 2xx, senão `[a confirmar]`). Roda `research → --diff → factcheck`.
+
 ## O que isto É (honestidade de framing)
 
 É um **linter de conteúdo com camada de julgamento** — não uma IA que julga escrita. O `audit.py` é determinístico (irmão do `validate.py`, que é estrutural); a metade mecânica é autoridade, a metade ⚖️ é piso que o **Claude** confirma. Fica em `skills/` (não `scripts/`) porque consolida régua + runnable + guia de julgamento num lugar só, e roda de qualquer sessão (desktop/cloud) via `python3 skills/critico-roteiro/audit.py`.
 
-**Tem suite de regressão própria** (`tests/run_tests.py` · 15 checks): o auditor testando a si mesmo. Rode sempre que mexer no `audit.py` — trava nota/severidade contra drift de regex. Ver `tests/README.md`.
+**Tem suite de regressão própria** (`tests/run_tests.py` · 20 checks): o auditor testando a si mesmo. Rode sempre que mexer no `audit.py` — trava nota/severidade/roteamento/`--diff` contra drift de regex. Ver `tests/README.md`.
 
 ## Onde roda (loop-até-excelente + enforcement no deploy)
 

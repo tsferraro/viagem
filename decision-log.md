@@ -194,3 +194,33 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 **Validação**: 14/14 testes (rede do arquiteto) antes e depois · NYC 39/40 Excelente, 4 advertências de ritmo roteadas pra 🤔 · fixture `unverified_coord` exercitando as 4 estações + top-5 + heat map. Prova viva da guarda anti-Goodhart: card com `sobre` de **148 chars** (2 abaixo do piso) recebe hint *"NÃO encher linguiça pra bater char count"*.
 
 **Próximo**: Fase C (estação de pesquisa · contrato anti-invenção no write-back) → Fase D (reescrita padrão-Marais, depende dos fatos da C).
+
+---
+
+## 2026-07-02 · Fase C — estação de pesquisa (`--diff` + `RESEARCH.md`)
+
+**Contexto**: a fila 🔎 do `--suggest` (Fase A) aponta o que pesquisar; faltava *executar* com disciplina anti-invenção. Ao entrar na C, um reframe de arquitetura mudou o que ela é.
+
+**Reframe (decisão fundadora da fase)**: `audit.py` é um linter determinístico offline — fazer web_search e escrever fato no `data.json` é trabalho **agêntico**, molde de **protocolo** (como FACTCHECK/JUDGE), não de código. E o contrato anti-invenção **já é enforçado pela metade mecânica existente**: preço sem data → D3; coord chutada → D4; URL morta → D5 (`--check-links`); fato falso → FACTCHECK. Logo a Fase C não precisa de gate novo — precisa de (1) protocolo e (2) a trava de loop fechado.
+
+**Decisões**:
+
+| # | Decisão | Alternativa rejeitada | Motivo |
+|---|---|---|---|
+| 1 | Fase C = **`RESEARCH.md` (protocolo) + `--diff` (código)** | Um "robô de pesquisa" dentro do audit.py | Pesquisa é agêntica; linter é offline. Misturar violaria a arquitetura da própria skill |
+| 2 | Contrato anti-invenção **reusa a metade mecânica**, não cria gate | Novo validador de write-back | D3/D4/D5 + FACTCHECK já cobrem forma+verdade. DRY, uma fonte de verdade |
+| 3 | `--diff <antes>`: delta das 2 metades + veredito de regressão | Só re-rodar o audit e comparar na mão | A trava barata entre lotes; **mecânico não pode cair** (lá o número é verdade), julgamento pode oscilar mas é MOSTRADO (não escondido no agregado) |
+| 4 | Regressão = mecânico caiu **OU** P0/P1 mecânico novo → exit 1 | Bloquear em qualquer queda de total | Julgamento é proxy; queda ⚖️ vira aviso, não bloqueio (senão o Goodhart inverte: trava melhora real de prosa que mexeu num proxy) |
+| 5 | `audit_roteiro()` fatorado como função pura (sem prints) | Duplicar o loop das 10 dims | `--diff` roda o audit 2×; main() intacto → zero risco pros testes |
+| 6 | `_finding_key` zera dígitos na identidade do achado | Casar msg exata | Contadores mudam ("1/1"→"2/3 cards") sem o achado ser "outro" — senão o diff vira ruído |
+| 7 | Contrato: não confirmou = `[a confirmar]` / `coord_unverified`, **nunca** chute | "Quase certo" grava | É o ponto onde alucinação entra no doc que a família abre na rua. Honesto > completo |
+
+**Validação**: suite 14→**20 checks** (3 de roteamento da Fase A + 3 do `--diff`: melhoria→exit 0, regressão→exit 1, `regressed` no JSON). NYC intacto. `--diff` provado nos dois sentidos (clean↔unverified).
+
+**Próximo**: Fase D (reescrita padrão-Marais dos cards que a C municiou com fato) — usa `--diff` como trava a cada card reescrito.
+
+---
+
+## 2026-07-02 · `impeccable` marcada como vendorizada (fora do backlog de higiene)
+
+`skills/impeccable/` é skill de terceiro (Apache 2.0, design/UI). No sweep do gate de design de skill dá 10/16 — mas **não é débito nosso**: editar é alterar código vendorizado, decisão de política, não higiene. Acordo com a sessão-arquiteto: ela exclui `impeccable` do sweep do lado do ecossistema; aqui fica o registro. Não tocar sem decisão explícita do Tobia.
