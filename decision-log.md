@@ -224,3 +224,23 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 ## 2026-07-02 · `impeccable` marcada como vendorizada (fora do backlog de higiene)
 
 `skills/impeccable/` é skill de terceiro (Apache 2.0, design/UI). No sweep do gate de design de skill dá 10/16 — mas **não é débito nosso**: editar é alterar código vendorizado, decisão de política, não higiene. Acordo com a sessão-arquiteto: ela exclui `impeccable` do sweep do lado do ecossistema; aqui fica o registro. Não tocar sem decisão explícita do Tobia.
+
+---
+
+## 2026-07-02 · Fase D — reescrita padrão-Marais (`REWRITE.md`) · ciclo grader→router FECHADO
+
+**Contexto**: última fase do roadmap. A A roteia, a C municia com fato; a D transforma fato em prosa que encanta (padrão Marais). Fecha o ciclo "avaliar → consertar".
+
+**Decisões**:
+
+| # | Decisão | Alternativa rejeitada | Motivo |
+|---|---|---|---|
+| 1 | Fase D = **protocolo puro** (`REWRITE.md`), zero código novo | Um "reescritor" no audit.py | Reescrever bem é julgamento de escrita, não regex. E o enforcement JÁ existe todo (ver #2) |
+| 2 | Enforcement **reusa 3 redes que já existem** | Gate de reescrita novo | markdown cru → `validate.py`; regressão mecânica → `--diff`; substância → `JUDGE.md`. Nada a construir |
+| 3 | **Grava direto** no data.json, sem portão de aprovação card-a-card | Diff-pra-aprovar a cada card | Decisão Tobia: "escreve direto pra me facilitar; se eu quiser ajuste, peço — senão trava demais". Redes automáticas seguram o objetivo |
+| 4 | Anti-Goodhart é a guarda central da fase | Mirar o número do D1 | "sobre de 90 chars com 1 fato bom > 200 de floreio"; sem fato → "raso mas honesto", não inventa lenda |
+| 5 | RESEARCH + REWRITE = **2 protocolos de conserto** (par das 3 de avaliação) | Instrumento solto | Taxonomia limpa: audit/factcheck/judge avaliam; research/rewrite consertam; `--suggest` despacha 🔎→RESEARCH, ✍️→REWRITE |
+
+**Validação (prova end-to-end do ciclo)**: fixture com prosa de 1 card destruída → `--suggest` marca ✍️ + top-5 âncora (10 pts) → reescrita Marais → `--diff`: **mecânico 18→18 (±0), julgamento 19→20 (+1)**, 2 achados ✍️ resolvidos, zero regressão, exit 0. É a prova viva do anti-Goodhart: melhora real de prosa aparece no **julgamento**, sem tocar (nem inflar) o mecânico. Suite 20/20.
+
+**Roadmap grader→router FECHADO**: A (`--suggest`) · C (`--diff` + RESEARCH) · D (REWRITE) entregues. B extinta. O audit deixou de ser só grader — diagnostica, roteia, e cada estação tem seu protocolo de conserto com loop fechado.

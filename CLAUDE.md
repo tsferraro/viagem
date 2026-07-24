@@ -70,6 +70,7 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Vai avaliar ou elevar design/UI de um roteiro | `references/design-rubric.md` + `skills/impeccable/` |
 | Vai auditar/elevar CONTEÚDO (escrita, links, coords, logística, levantamento) | `references/content-rubric.md` + skill `skills/critico-roteiro/` (roda `audit.py`) |
 | Vai avaliar credibilidade de fonte · provar um 🟢 imperdível · rodar fact-check/judge | `references/source-credibility.md` + `skills/critico-roteiro/FACTCHECK.md` / `JUDGE.md` |
+| Vai CONSERTAR achados do `--suggest` (pesquisar 🔎 · reescrever ✍️) | `skills/critico-roteiro/RESEARCH.md` / `REWRITE.md` (loop fechado c/ `--diff`) |
 | Vai criar viagem nova · quer pesquisa macro do destino | `skills/destination-scout/SKILL.md` (degrau 0 antes do roteiro) |
 | Vai entender por que código JS é assim | `references/ui-patterns.md` |
 | Quer ver decisões históricas + lições | `decision-log.md` + `references/lessons-learned.md` |

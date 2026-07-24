@@ -67,7 +67,14 @@ O `audit.py` é o 1º de **três instrumentos** desta skill — cada um enxerga 
 
 Ordem obrigatória: **audit → factcheck → judge** (barato antes do caro; nunca julgar o que o regex já reprovaria). Régua de fontes dos dois protocolos: `references/source-credibility.md`.
 
-E um 4º, de **conserto** (não de avaliação): `RESEARCH.md` — executa a fila 🔎 do `--suggest` com o contrato anti-invenção (preço datado, coord verificada ou `coord_unverified`, URL 2xx, senão `[a confirmar]`). Roda `research → --diff → factcheck`.
+Os 3 acima **avaliam**. Há mais **2 protocolos de conserto** — o que o `--suggest` despacha pra 🔎 e ✍️:
+
+| Protocolo | Estação | Faz |
+|---|---|---|
+| **`RESEARCH.md`** | 🔎 | executa a fila de pesquisa com o contrato anti-invenção (preço datado · coord verificada ou `coord_unverified` · URL 2xx · senão `[a confirmar]`) |
+| **`REWRITE.md`** | ✍️ | eleva a prosa ao padrão-ouro Marais (`sobre` conta história · `imperdivel` = o que observar · dicas parada-a-parada), grava direto |
+
+Ciclo completo de conserto: **research → rewrite → `--diff` → factcheck → judge**. O `--diff` é a trava barata entre lotes (mecânico não pode cair); factcheck/judge rodam 1× na entrega.
 
 ## O que isto É (honestidade de framing)
 
@@ -95,8 +102,8 @@ Sem isto o audit diagnostica e **para**. Com `--suggest`, cada achado é despach
 | Estação | Quando | Vem no `hint` |
 |---|---|---|
 | 🔧 **Corrigir** | conserto determinístico | o patch pronto pra colar |
-| 🔎 **Pesquisar** | falta um fato externo (preço, coord, URL, história) | a busca a fazer + como gravar |
-| ✍️ **Reescrever** | o fato existe, falta a escrita | o que a prosa precisa ter |
+| 🔎 **Pesquisar** | falta um fato externo (preço, coord, URL, história) | a busca a fazer + como gravar → executa via `RESEARCH.md` |
+| ✍️ **Reescrever** | o fato existe, falta a escrita | o que a prosa precisa ter → executa via `REWRITE.md` |
 | 🤔 **Você decide** | julgamento do Tobia (ritmo, "isso é fraco?") | **nunca** vira patch |
 
 Também imprime **top-5 cards** (severidade × peso do card: âncora vale 2, filler 1) e **densidade por dia** — triagem pra saber onde atacar. A densidade **não é nota por dia**: D9/D10 só existem no roteiro inteiro, então nota diária seria incompleta ou enganosa.
