@@ -186,7 +186,9 @@ function dayTransport(day){
 }
 
 function getRouteUrl(day){
-  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord);
+  // Cards 🔄 ALT são alternativas que SUBSTITUEM um stop principal · nunca entram na rota
+  // do dia (senão o desvio vira waypoint e a rota vira lixo · bug Sprockhovel 2026-05-23).
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord && !(s.nome||'').startsWith('🔄'));
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
   // Rota por coordenadas (exata) · opcoes usa a própria coord do stop
