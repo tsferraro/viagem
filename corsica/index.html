@@ -622,6 +622,56 @@ const DAYS = [
         }
       },
       {
+        "hora": "16:15",
+        "emoji": "🛒",
+        "periodo": "tarde",
+        "tipo": "opcoes",
+        "nome": "Compras de chegada · supermercado na estrada",
+        "cat": "Estoque da semana ANTES de chegar · 4 opções",
+        "coord": {
+          "lat": 41.6681,
+          "lng": 8.9227
+        },
+        "opcoes": [
+          {
+            "nome": "Carrefour Market (RN196, lieu-dit Trevole, Viggianello)",
+            "desc": "A MELHOR opção · o maior da rota e fica na própria N196, sem desviar pra dentro de Propriano · ~25min de Porto Pollo · Seg-Sáb 8h-20h · tel 04 95 76 00 76",
+            "preco": "€80-120 semana",
+            "dist": "~1h10 do aeroporto · na estrada",
+            "poiCat": "mercado",
+            "valeAPena": 3,
+            "coord": {
+              "lat": 41.6681,
+              "lng": 8.9227
+            }
+          },
+          {
+            "nome": "Spar (Route Nationale, Figari)",
+            "desc": "O seguro: 5min do aeroporto e abre 7h30-21h TODO DIA, inclusive domingo · pra água, lanche e fralda na hora, ou se o voo atrasar e os outros fecharem",
+            "preco": "€15-30 essenciais",
+            "dist": "5min do aeroporto",
+            "poiCat": "mercado",
+            "valeAPena": 2
+          },
+          {
+            "nome": "Casino (288 Av. Jean Nicoli, Sartène)",
+            "desc": "Meio do caminho · Seg-Sáb 8h-19h30 e Dom 8h-13h (é o único que abre domingo de manhã) · menor que o Carrefour mas resolve",
+            "preco": "€60-90",
+            "dist": "~45min do aeroporto",
+            "poiCat": "mercado",
+            "valeAPena": 2
+          },
+          {
+            "nome": "Spar (2 Cours Général de Gaulle, Sartène)",
+            "desc": "Pula sem culpa na chegada · fica no centro histórico (ruim de estacionar com mala) e FECHA 12h30-15h30 · útil só depois, no dia 31/Jul, quando vocês já estiverem em Sartène a pé",
+            "preco": "€",
+            "dist": "Centro de Sartène",
+            "poiCat": "mercado",
+            "valeAPena": 1
+          }
+        ]
+      },
+      {
         "hora": "17:00",
         "emoji": "🏠",
         "periodo": "tarde",
@@ -633,7 +683,7 @@ const DAYS = [
         "imperdivel": "Pôr do sol da Praia de Porto Pollo · o gulf inteiro vira laranja",
         "dicas": [
           "Confirma estacionamento da casa antes de chegar · ruas estreitas",
-          "Mercado pequeno fecha 13h-16h · compras de chegada antes ou no Carrefour de Propriano (20min)",
+          "Mercado pequeno fecha 13h-16h · compras de chegada antes ou no Carrefour Market de Viggianello, na N196 (20min)",
           "Wi-fi pode ser fraco · downloada mapas offline da região no Google Maps"
         ],
         "duracao": "Resto da tarde",
@@ -752,7 +802,7 @@ const DAYS = [
           },
           {
             "nome": "Picnic na praia",
-            "desc": "Padaria local + Carrefour Propriano · charcuterie, queijos, frutas",
+            "desc": "Padaria local + Carrefour Market Viggianello (N196) · charcuterie, queijos, frutas",
             "preco": "€15 total",
             "dist": "Mercado",
             "poiCat": "mercado",
@@ -783,7 +833,7 @@ const DAYS = [
         "sobre": "Pequeno porto comercial no fundo do Golfo Valinco. Combina pesca artesanal + marina turística. Não é hidden gem — é a 'cidade grande' (5k habitantes) da região: farmácia, banco, Carrefour, sorveteria. Promenade de uns 800m com bares e restaurantes na água.",
         "imperdivel": "Caminhada do quai com pôr do sol e sorvete",
         "dicas": [
-          "Carrefour fica 5min do porto · estoque pra semana da casa de Porto Pollo",
+          "Carrefour Market Viggianello fica ~5min de carro do porto (RN196) · Seg-Sáb 8h-20h · estoque pra semana da casa",
           "Sorveteria L'Artigianale ou Gelateria do quai · sabores corsos (castanha, mel)",
           "Estacionamento azul (€) ou gratuito 100m do porto"
         ],
@@ -1482,7 +1532,7 @@ const DAYS = [
         "sobre": "Última manhã antes de descer pra Bonifacio (amanhã). Aproveita pra desfrutar a água calma, fechar com a filha rotina que ela já gosta. Almoço em casa pra organizar mala da tarde.",
         "imperdivel": "Café com croissant na praia · padaria abre 7h",
         "dicas": [
-          "Compra última coisa no Carrefour Propriano pra estoque da próxima base",
+          "Compra última coisa no Carrefour Market Viggianello (N196) pra estoque da próxima base",
           "Organizar mala à tarde · checkout amanhã 10h",
           "Confirma Hôtel/Airbnb Bonifacio · horário check-in"
         ],
@@ -2634,7 +2684,7 @@ const TRANSIT_MAP = {
   "Figari → Porto Pollo": {
     "uber": "Não opera na zona · use táxi",
     "metro": "Sem metrô · sem trem direto",
-    "taxi": "€100-130 · ~1h30 · NÃO recomendado com 5 pessoas/bagagem",
+    "taxi": "€100-130 · ~1h30 · NÃO recomendado com 5 pessoas/bagagem · Compras: Spar Figari (5min, abre até 21h todo dia) ou Carrefour Market Viggianello na N196 (Seg-Sáb até 20h)",
     "carro": "1h30 · N196 + D157 via Sartène · estrada boa · 0 pedágios"
   },
   "Porto Pollo → Propriano": {
