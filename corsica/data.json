@@ -312,8 +312,8 @@
     },
     {
       "date": "Qua 29/Jul",
-      "tema": "Filitosa + Praia de Cupabia",
-      "temaCurto": "Filitosa",
+      "tema": "Praia de Cupabia · dia selvagem",
+      "temaCurto": "Cupabia",
       "bairro": "🏖️ Porto Pollo & Valinco",
       "grupo": false,
       "cor": "#84cc16",
@@ -321,72 +321,19 @@
       "gradB": "#4d7c0f",
       "stops": [
         {
-          "hora": "09:00",
-          "emoji": "🗿",
+          "hora": "09:30",
+          "emoji": "🚗",
           "periodo": "manha",
-          "tipo": "card",
-          "risco": "yellow",
-          "nome": "Sítio Pré-histórico de Filitosa",
-          "cat": "Menires 8000 anos · arqueologia corsa",
-          "sobre": "Sítio megalítico descoberto em 1946 pelo proprietário do terreno (Charles-Antoine Cesari). Concentra menires antropomórficos esculpidos (alguns com armas e rostos), torre megalítica e oppidum (assentamento fortificado). Considerado o conjunto megalítico mais importante do Mediterrâneo. Não é Stonehenge — escala humana e enxuta. Visita ~1h-1h30 num percurso ao ar livre por entre oliveiras e carvalhos.",
-          "imperdivel": "O menir Filitosa V · figura com espada esculpida no granito",
-          "dicas": [
-            "Sítio abre 9h · MUSEU só abre 10h em dia de semana (9h fim de semana) · o menir V está no sítio, não no museu",
-            "Fecha 1h antes do pôr do sol · em agosto isso é ~20h · sem pressa de horário de saída",
-            "Áudio-guia incluso · vale pelo contexto, o sítio sem narração é só pedra no mato",
-            "Cantina/snack-bar na entrada, ou volta a Porto Pollo pra almoçar (25min)",
-            "Tel. 04 95 74 00 91 se quiser confirmar na véspera"
-          ],
-          "duracao": "1h30-2h com museu",
-          "custo": "€9 adulto · €7 (6-18a) · grátis <6a — filha não paga (jul/2026)",
-          "acessibilidade": "DIFÍCIL com carrinho · trilha sem piso firme, raízes, entre vegetação · canguru/pochete pra filha é melhor",
+          "tipo": "transit",
+          "nome": "Porto Pollo → Praia de Cupabia",
+          "cat": "~30min · estrada de terra rodável no fim",
           "coord": {
-            "lat": 41.7451,
-            "lng": 8.8702
-          },
-          "poiCat": "atracao",
-          "valeAPena": 3
+            "lat": 41.7366,
+            "lng": 8.7822
+          }
         },
         {
-          "hora": "12:00",
-          "emoji": "🍽️",
-          "periodo": "tarde",
-          "tipo": "opcoes",
-          "nome": "Almoço pós-Filitosa",
-          "cat": "3 opções no caminho",
-          "coord": {
-            "lat": 41.7451,
-            "lng": 8.8702
-          },
-          "opcoes": [
-            {
-              "nome": "Cantina Filitosa (entrada)",
-              "desc": "Snack simples no sítio · sanduíches, salads · prático",
-              "preco": "€10-15",
-              "dist": "Entrada",
-              "poiCat": "cafe",
-              "valeAPena": 1
-            },
-            {
-              "nome": "Volta a Porto Pollo (Le Lido)",
-              "desc": "Almoço na praia + tarde piscina d'água",
-              "preco": "€18-25",
-              "dist": "30min carro",
-              "poiCat": "restaurante",
-              "valeAPena": 2
-            },
-            {
-              "nome": "Bar du Stade Olmeto",
-              "desc": "Bistrô local · prato do dia €15 · 100% corso · sem turistada",
-              "preco": "€15-20",
-              "dist": "10min carro",
-              "poiCat": "restaurante",
-              "valeAPena": 2
-            }
-          ]
-        },
-        {
-          "hora": "14:30",
+          "hora": "10:00",
           "emoji": "🏖️",
           "periodo": "tarde",
           "tipo": "card",
@@ -409,9 +356,97 @@
           },
           "poiCat": "parque",
           "valeAPena": 2
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🧺",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · piquenique em Cupabia",
+          "cat": "Não há comércio na praia · tem que sair pronto de casa",
+          "coord": {
+            "lat": 41.7366,
+            "lng": 8.7822
+          },
+          "opcoes": [
+            {
+              "nome": "Piquenique levado de casa",
+              "desc": "Padaria de Porto Pollo abre 7h · pão fresco + charcutaria + fruta · a única opção que não custa 40min de carro",
+              "preco": "€20 família",
+              "dist": "Na praia",
+              "poiCat": "mercado",
+              "valeAPena": 3
+            },
+            {
+              "nome": "Bar du Stade (Olmeto)",
+              "desc": "Se cansarem da areia · bistrô local, prato do dia, 100% corso e sem turistada · ~25min",
+              "preco": "€15-20",
+              "dist": "~25min",
+              "poiCat": "restaurante",
+              "valeAPena": 2
+            },
+            {
+              "nome": "Volta a Porto Pollo (Le Lido)",
+              "desc": "Encurta o dia mas resolve se ela derreter no sol · pé na areia",
+              "preco": "€18-25",
+              "dist": "~30min",
+              "poiCat": "restaurante",
+              "valeAPena": 1
+            }
+          ]
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Cupabia → Porto Pollo",
+          "cat": "~30min de volta",
+          "coord": {
+            "lat": 41.7071,
+            "lng": 8.7946
+          }
+        },
+        {
+          "hora": "19:30",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar · Porto Pollo",
+          "cat": "Depois de um dia de sol · simples",
+          "coord": {
+            "lat": 41.7071,
+            "lng": 8.7946
+          },
+          "opcoes": [
+            {
+              "nome": "A Pignata (Départementale 757)",
+              "desc": "Terraço panorâmico sobre o Valinco · cozinha corsa · reserva obrigatória · fecha quartas — checa antes",
+              "preco": "€35-50",
+              "dist": "Porto",
+              "poiCat": "restaurante",
+              "valeAPena": 3
+            },
+            {
+              "nome": "Le Lido (praia)",
+              "desc": "Pé na areia, casual · funciona com criança cansada",
+              "preco": "€20-30",
+              "dist": "Praia",
+              "poiCat": "restaurante",
+              "valeAPena": 2
+            },
+            {
+              "nome": "Jantar em casa",
+              "desc": "Dia de sol cansa · massa + queijo corso na varanda",
+              "preco": "€15 família",
+              "dist": "—",
+              "poiCat": "mercado",
+              "valeAPena": 1
+            }
+          ]
         }
       ],
-      "nota": "O único dia de história pura da primeira base. Filitosa cedo (antes do calor e do ônibus de turismo), Cupabia à tarde como recompensa. Filitosa é a atração ⭐⭐⭐ do Valinco — não deixa pra depois."
+      "nota": "Dia de praia sem estrutura nenhuma — e é esse o ponto. Cupabia não tem comércio, salva-vidas nem banheiro, então tudo entra no carro antes de sair. Em troca vocês ganham a praia mais bonita do golfo quase vazia. Filitosa saiu daqui e foi pro domingo."
     },
     {
       "date": "Qui 30/Jul",
@@ -555,41 +590,185 @@
     },
     {
       "date": "Sex 31/Jul",
-      "tema": "Sartène + Saparale + Tizzano",
-      "temaCurto": "Sartène",
-      "bairro": "🏛️ Sartène & Sul",
+      "tema": "Day off · Porto Pollo",
+      "temaCurto": "Day off",
+      "bairro": "🏖️ Porto Pollo & Valinco",
       "grupo": false,
       "cor": "#b45309",
       "gradA": "#78350f",
       "gradB": "#92400e",
       "stops": [
         {
-          "hora": "09:00",
+          "hora": "09:30",
+          "emoji": "🏖️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 2,
+          "nome": "Praia de Porto Pollo · manhã longa",
+          "cat": "Sem hora pra sair · o dia é dela",
+          "sobre": "Dia deliberadamente vazio no meio da primeira semana. A essa altura ela já conhece a praia, sabe onde fica a padaria e criou rotina — e é justamente isso que faz um dia assim render mais que um passeio. O <strong>Golfo de Valinco</strong> é abrigado e sem onda, com fundo raso por dezenas de metros: a mesma condição que fixou gente aqui desde o Neolítico. Aproveitem pra alugar caiaque ou stand-up se ainda não fizeram — o golfo é ideal pra iniciante.",
+          "imperdivel": "Caiaque sit-on-top com ela sentada entre as pernas · 20min já bastam pra virar a memória do dia",
+          "dicas": [
+            "Aluguel de SUP/caiaque na praia · €15-20/hora (jul/2026)",
+            "Padaria abre 7h · pão fresco e croissant pro café antes de todo mundo acordar",
+            "Banheiro público na entrada da praia · o único da região com criança",
+            "Estacionamento gratuito na entrada · enche depois das 10h",
+            "Sombra é escassa · guarda-sol ou espreguiçadeira alugada resolve"
+          ],
+          "duracao": "Manhã inteira",
+          "custo": "Grátis · caiaque €15-20/h (jul/2026)",
+          "acessibilidade": "Total · rampa de entrada e areia plana · banheiro público",
+          "coord": {
+            "lat": 41.7095,
+            "lng": 8.795
+          }
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Porto Pollo",
+          "cat": "Sem sair da vila",
+          "coord": {
+            "lat": 41.7071,
+            "lng": 8.7946
+          },
+          "opcoes": [
+            {
+              "nome": "Le Lido (praia)",
+              "desc": "Pé na areia · sai da água e senta · o mais prático com ela molhada",
+              "preco": "€18-25",
+              "dist": "Praia",
+              "poiCat": "restaurante",
+              "valeAPena": 2
+            },
+            {
+              "nome": "A Pignata (terraço)",
+              "desc": "Almoço com vista do golfo · pratos corsos · fecha quartas",
+              "preco": "€30-45",
+              "dist": "Porto",
+              "poiCat": "restaurante",
+              "valeAPena": 3
+            },
+            {
+              "nome": "Piquenique na varanda",
+              "desc": "Tomate corso + brocciu + Lonzu + pão fresco · e sesta logo depois",
+              "preco": "€25 família",
+              "dist": "—",
+              "poiCat": "mercado",
+              "valeAPena": 2
+            }
+          ]
+        },
+        {
+          "hora": "17:00",
+          "emoji": "🚶",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "nome": "Vila de Porto Pollo · fim de tarde a pé",
+          "cat": "Reconhecer o quintal · sem carro",
+          "sobre": "Porto Pollo é uma antiga vila de pescadores do <strong>Golfo de Valinco</strong> que virou base de férias: cerca de sete restaurantes, uma padaria e um mini-mercado. Nada mais. Um fim de tarde a pé pela vila e pelo pequeno porto de recreio é o suficiente pra fechar o dia sem entrar no carro — e é a hora em que os barcos voltam e a luz fica boa sobre o golfo.",
+          "imperdivel": "O sol caindo atrás da ponta do golfo · a água inteira vira laranja por uns 20 minutos",
+          "dicas": [
+            "Mini-mercado fecha 13h-16h · se precisar de algo, vai depois das 16h",
+            "Padaria costuma fechar no fim da tarde · pão do jantar tem que ser pego antes",
+            "O porto é plano · carrinho circula bem no fim de tarde",
+            "Amanhã é dia de Sartène com saída cedo · jantar leve e cedo hoje"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "Grátis (jul/2026)",
+          "acessibilidade": "Vila plana · carrinho fácil em toda a extensão",
+          "coord": {
+            "lat": 41.7071,
+            "lng": 8.7946
+          }
+        },
+        {
+          "hora": "20:00",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar · Porto Pollo",
+          "cat": "Cedo · amanhã sai 8h30",
+          "coord": {
+            "lat": 41.7071,
+            "lng": 8.7946
+          },
+          "opcoes": [
+            {
+              "nome": "A Pignata (Départementale 757)",
+              "desc": "O melhor da vila · terraço sobre o Valinco · reserva obrigatória · fecha quartas",
+              "preco": "€35-50",
+              "dist": "Porto",
+              "poiCat": "restaurante",
+              "valeAPena": 3
+            },
+            {
+              "nome": "L'Escale (porto)",
+              "desc": "Crepes, peixe grelhado, coisas simples · funciona bem com ela",
+              "preco": "€18-25",
+              "dist": "Porto",
+              "poiCat": "restaurante",
+              "valeAPena": 2
+            },
+            {
+              "nome": "Jantar em casa",
+              "desc": "Amanhã é dia cheio · dormir cedo vale mais que jantar fora",
+              "preco": "€15 família",
+              "dist": "—",
+              "poiCat": "mercado",
+              "valeAPena": 1
+            }
+          ]
+        }
+      ],
+      "nota": "Dia sem carro e sem agenda, de propósito. Sartène foi pro sábado e o Col de Bavella saiu do roteiro de vez. Aqui é praia de casa, sesta e vila — o tipo de dia que sustenta os outros doze."
+    },
+    {
+      "date": "Sáb 1/Ago",
+      "tema": "Sartène (mercado) + Ponte Spin'a Cavallu",
+      "temaCurto": "Sartène",
+      "bairro": "🏛️ Sartène & Sul",
+      "grupo": false,
+      "cor": "#15803d",
+      "gradA": "#14532d",
+      "gradB": "#166534",
+      "stops": [
+        {
+          "hora": "08:30",
           "emoji": "🚗",
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Porto Pollo → Sartène",
-          "cat": "~45min · via Propriano",
+          "cat": "~45min · via Propriano e T40",
           "coord": {
             "lat": 41.6207,
             "lng": 8.9741
           }
         },
         {
-          "hora": "09:45",
+          "hora": "09:15",
           "emoji": "🏛️",
           "periodo": "manha",
           "tipo": "card",
           "risco": "yellow",
-          "nome": "Sartène · cidade velha (Place de la Libération)",
-          "cat": "'A mais corsa das cidades corsas' · Mérimée",
+          "nome": "Sartène · cidade velha e mercado (Place Porta / Place de la Libération)",
+          "cat": "A mais corsa das cidades corsas · mercado de sábado",
           "sobre": "Vila medieval encravada na rocha 300m acima do mar. Casas de granito cinza, ruas de paralelepípedo, becos de Maniguedda (bairro antigo). Capital cultural do sul corso · fortemente identitária, pouca turistada de ônibus. Place de la Libération é o coração: terraço sombreado, café Le Cyrnos, vista do Vale do Ortolo. Sexta-feira tem mercado matinal — produtos corsos (queijo brocciu, charcutaria Lonzu/Coppa/Figatellu, mel de castanha, vinho AOC Sartène).",
-          "imperdivel": "Mercado de sexta na Place de la Libération · charcutaria corsa direto do produtor",
+          "imperdivel": "O mercado de sábado na Place Porta · charcutaria, mel AOC de Sartène, queijo de ovelha e azeite direto de quem produziu",
           "dicas": [
-            "Estacionamento azul ao redor da praça · €2/h · grátis 12h-14h",
-            "Não tenta levar carrinho na cidade velha · escadas, becos, arcos",
-            "Église Sainte-Marie tem a Procissão do Catenacciu na Sexta Santa · vê o cenário",
-            "Museu de Pré-História corsa (Centre Préhistorique): ótimo complemento de Filitosa, €5"
+            "Mercado é de manhã e desmonta por volta das 12h · chega até as 10h30 pra pegar tudo montado",
+            "Sábado é o dia principal do mercado o ano inteiro · em julho e agosto tem feira quase todo dia, mas sábado é o forte",
+            "Estacionamento azul ao redor da praça · €2/h · grátis das 12h às 14h (jul/2026)",
+            "NÃO leva o carrinho na cidade velha (bairro de Santa Anna) · são escadas, becos e arcos · 30min no colo resolve",
+            "Museu de Pré-História corsa (Centre Préhistorique) · €5 · ótimo complemento pro Filitosa de domingo",
+            "Mel AOC de Sartène e charcutaria viajam bem na mala · é aqui que se compra"
           ],
           "duracao": "2h-3h com mercado",
           "custo": "€2-5 estacionamento · €5 museu (jul/2026)",
@@ -602,117 +781,50 @@
           "valeAPena": 3
         },
         {
-          "hora": "12:30",
-          "emoji": "🍷",
+          "hora": "12:15",
+          "emoji": "🍽️",
           "periodo": "tarde",
-          "tipo": "card",
-          "risco": "yellow",
-          "nome": "Domaine de Saparale (Vallée de l'Ortolo)",
-          "cat": "Vinícola família · degustação AOC Sartène",
-          "sobre": "Propriedade de <strong>52 hectares</strong> no vale do Ortolo, fundada no século XIX e <em>abandonada por décadas</em> até 1998, quando <strong>Philippe Farinelli</strong> — descendente direto do fundador — voltou pra ressuscitar o vinhedo da família. Hoje é conduzido em orgânico e engarrafa AOC Sartène com uvas autóctones corsas: <strong>Sciaccarellu</strong> no tinto (a uva que dá o perfume de maquis) e <strong>Vermentinu</strong> no branco. A cave de degustação fica no casario original do século XIX — vale tanto pela arquitetura quanto pelo vinho.",
-          "imperdivel": "O contraste do vale: você sobe de Sartène por uma estrada seca de maquis e de repente abre um vale verde irrigado pelo Ortolo · é o único trecho fértil da região",
-          "dicas": [
-            "LIGA ANTES · 04 95 10 74 58 · confirma horário e se aceitam criança na cave",
-            "Domingo fechado no verão · vocês vão numa sexta, que é dia bom",
-            "Tasting €0-10 · garrafa €12-25 · leva 2-3 pra casa de Porto Pollo (jul/2026)",
-            "São ~20min de Sartène descendo o vale do Ortolo pela D48",
-            "Piquenique: compra na padaria de Sartène ANTES de descer · no vale não tem comércio"
-          ],
-          "duracao": "1h-1h30 visita",
-          "custo": "Tasting €0-10 · garrafa €12-25 (jul/2026)",
-          "acessibilidade": "Cave acessível · áreas externas com chão de terra",
-          "coord": {
-            "lat": 41.58,
-            "lng": 8.95
-          },
-          "coord_unverified": true,
-          "poiCat": "atracao",
-          "valeAPena": 2
-        },
-        {
-          "hora": "15:00",
-          "emoji": "🏖️",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "green",
-          "nome": "Plage de Tizzano",
-          "cat": "Cala abrigada · vila de pescadores",
-          "sobre": "Cala de 300m de areia fina em vila de pescadores ao sul de Sartène. Águas calmas tipo piscina, sombra natural de falésias no final da tarde, acesso direto de carro com parking. Comércio na vila (3-4 restaurantes na enseada vizinha, peixe direto do barco). Considerada uma das melhores praias família-friendly da Córsega do Sul · mais protegida que Cupabia, mais acessível que Roccapina.",
-          "imperdivel": "Almoço/jantar de peixe na enseada vizinha · pescado do dia",
-          "dicas": [
-            "30min de carro de Sartène pela D48",
-            "Vila pequena · 2-3 restaurantes só · reserva fim de tarde",
-            "Sombra começa às ~16h por causa das falésias W",
-            "Filha pode brincar nas pedrinhas da extremidade · fundo bem raso"
-          ],
-          "duracao": "3h-4h tarde + jantar",
-          "custo": "Grátis · €5 estacionamento se cheio (jul/2026)",
-          "acessibilidade": "Carrinho ok do parking até a areia",
-          "coord": {
-            "lat": 41.5423,
-            "lng": 8.8468
-          },
-          "poiCat": "parque",
-          "valeAPena": 2
-        },
-        {
-          "hora": "19:30",
-          "emoji": "🐟",
-          "periodo": "noite",
           "tipo": "opcoes",
-          "nome": "Jantar · Tizzano enseada",
-          "cat": "Peixe direto do mar",
+          "nome": "Almoço · Sartène",
+          "cat": "Antes de descer pro rio",
           "coord": {
-            "lat": 41.543,
-            "lng": 8.8475
+            "lat": 41.6207,
+            "lng": 8.9741
           },
           "opcoes": [
             {
-              "nome": "Chez Antoine (Tizzano)",
-              "desc": "Vila pesqueira · grelhados de peixe, lagosta · vista enseada",
-              "preco": "€40-60",
-              "dist": "Enseada",
-              "poiCat": "restaurante",
+              "nome": "Piquenique comprado no mercado",
+              "desc": "A melhor opção do dia: charcutaria, queijo e pão da feira, comidos na margem do rio daqui a pouco",
+              "preco": "€20 família",
+              "dist": "Come na ponte",
+              "poiCat": "mercado",
               "valeAPena": 3
             },
             {
-              "nome": "Le Pirate (Tizzano)",
-              "desc": "Mais casual · pizza + peixe · ok família",
+              "nome": "Restaurante da Place de la Libération",
+              "desc": "Terraço na praça principal · cozinha corsa · sombra e banheiro antes de encarar o rio",
               "preco": "€25-35",
-              "dist": "Enseada",
+              "dist": "Centro",
               "poiCat": "restaurante",
               "valeAPena": 2
             },
             {
-              "nome": "Volta Porto Pollo (rápido)",
-              "desc": "Se filha cansou · janta em casa",
-              "preco": "—",
-              "dist": "1h carro",
-              "poiCat": "restaurante",
+              "nome": "Casino (288 Av. Jean Nicoli)",
+              "desc": "Se preferirem só reabastecer · Seg-Sáb 8h-19h30 · na saída da cidade",
+              "preco": "€",
+              "dist": "Saída de Sartène",
+              "poiCat": "mercado",
               "valeAPena": 1
             }
           ]
-        }
-      ],
-      "nota": "O dia mais 'corso' do roteiro: a cidade de granito, o vinho do vale e uma praia escondida. Três paradas é o limite — se a filha derreter em Sartène, corta o Saparale sem dó e vai direto pra Tizzano."
-    },
-    {
-      "date": "Sáb 1/Ago",
-      "tema": "Spin'a Cavallu + Sainte-Lucie-de-Tallano",
-      "temaCurto": "Alta Rocca",
-      "bairro": "🏞️ Alta Rocca & Rizzanese",
-      "grupo": false,
-      "cor": "#15803d",
-      "gradA": "#14532d",
-      "gradB": "#166534",
-      "stops": [
+        },
         {
-          "hora": "09:30",
+          "hora": "13:45",
           "emoji": "🚗",
-          "periodo": "manha",
+          "periodo": "tarde",
           "tipo": "transit",
-          "nome": "Porto Pollo → Spin'a Cavallu",
-          "cat": "~40min · via Propriano → T40 → D268",
+          "nome": "Sartène → Spin'a Cavallu",
+          "cat": "~15min · T40 e depois D268",
           "coord": {
             "lat": 41.66,
             "lng": 8.96
@@ -729,13 +841,14 @@
           "valeAPena": 3,
           "nome": "Ponte Spin'a Cavallu (Ponte, 20100 Sartène)",
           "cat": "Ponte do séc. XIII + piscina natural no Rizzanese",
-          "sobre": "Ponte em arco do <strong>século XIII</strong> sobre o Rizzanese, tombada como monumento histórico desde 1976. O nome é literal e ninguém explica melhor que os próprios corsos: <em>spin'a cavallu</em> = <strong>\"espinha de cavalo\"</strong>, pelo tabuleiro corcunda no meio, que sobe e desce como o lombo de um animal. São 64m de comprimento por apenas <strong>2,60m de largura</strong> — ela foi feita pra mula e pedestre, não pra carroça. O arco vence 7,7m acima da água. Costuma ser chamada de genovesa, mas a construção é de <em>estilo pisano</em>, anterior ao domínio de Gênova. Em 1993 uma cheia do Rizzanese levou parte dela embora; foi reconstruída em 1995 — repare que a pedra não tem a mesma cor nos dois lados do vão.",
+          "sobre": "Ponte em arco do <strong>século XIII</strong> sobre o Rizzanese, tombada como monumento histórico desde 1976. O nome é literal e ninguém explica melhor que os próprios corsos: <em>spin'a cavallu</em> = <strong>\"espinha de cavalo\"</strong>, pelo tabuleiro corcunda no meio, que sobe e desce como o lombo de um animal. São 64m de comprimento por apenas <strong>2,60m de largura</strong> — ela foi feita pra mula e pedestre, não pra carroça. O arco vence 7,7m acima da água. Costuma ser chamada de genovesa, mas a construção é de <em>estilo pisano</em>, anterior ao domínio de Gênova. Em 1993 uma cheia do Rizzanese levou parte dela embora; foi reconstruída em 1995 — repare que a pedra não tem a mesma cor nos dois lados do vão. É <strong>ponto de banho oficialmente reconhecido</strong>, com monitoramento de qualidade da água e temporada de <strong>15/06 a 31/08</strong> — vocês pegam bem no meio dela.",
           "imperdivel": "Desça até a margem e olhe a ponte de baixo, contra a luz: é daí que a curva do 'lombo de cavalo' aparece de verdade. De cima, andando nela, você não vê a forma",
           "dicas": [
             "São 2,6km na D268 depois de sair da T40 (estrada Propriano–Sartène) · bem sinalizado",
             "Estacionamento de terra em frente à ponte, do lado direito · grátis · cabe bastante carro",
             "Chega antes das 11h · é o horário em que a água ainda está parada e o sol bate no vão",
             "Margem é de seixo, não areia · sapato de água pros três (a mesma sandália do resto da viagem)",
+            "Banho NÃO é vigiado · não há salva-vidas em nenhum momento da temporada",
             "Piscina natural rasa ao lado da ponte · fundo visível · dá pé com folga pra ela",
             "Zero comércio no local · leva água, lanche e sombra · o almoço é depois, na vila"
           ],
@@ -749,147 +862,42 @@
           "coord_unverified": true
         },
         {
-          "hora": "12:45",
-          "emoji": "🚗",
-          "periodo": "tarde",
-          "tipo": "transit",
-          "nome": "Spin'a Cavallu → Sainte-Lucie-de-Tallano",
-          "cat": "~20min subindo o vale pela D268",
-          "coord": {
-            "lat": 41.6978,
-            "lng": 9.0642
-          }
-        },
-        {
-          "hora": "13:00",
-          "emoji": "🍽️",
-          "periodo": "tarde",
-          "tipo": "opcoes",
-          "nome": "Almoço Sainte-Lucie-de-Tallano",
-          "cat": "Vila de montanha · cozinha corsa do interior",
-          "coord": {
-            "lat": 41.6978,
-            "lng": 9.0642
-          },
-          "opcoes": [
-            {
-              "nome": "Restaurante da praça central (Sainte-Lucie-de-Tallano)",
-              "desc": "Terraço na praça sob os plátanos · cozinha corsa do interior · sopa corsa, charcutaria, queijo de cabra",
-              "preco": "€20-30",
-              "dist": "Centro da vila",
-              "poiCat": "restaurante",
-              "valeAPena": 2
-            },
-            {
-              "nome": "Piquenique com azeite da vila",
-              "desc": "Compra azeite local + pão + queijo na vila e come na sombra · Sainte-Lucie é a capital corsa do azeite",
-              "preco": "€18 família",
-              "dist": "Vila",
-              "poiCat": "mercado",
-              "valeAPena": 3
-            },
-            {
-              "nome": "Volta a Propriano pra almoçar",
-              "desc": "Se a vila não empolgar · 35min descendo · mais opções e o Carrefour pra reabastecer",
-              "preco": "€25-35",
-              "dist": "35min",
-              "poiCat": "restaurante",
-              "valeAPena": 1
-            }
-          ]
-        },
-        {
-          "hora": "14:30",
-          "emoji": "🫒",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "green",
-          "poiCat": "atracao",
-          "valeAPena": 2,
-          "nome": "Sainte-Lucie-de-Tallano (vila · Alta Rocca)",
-          "cat": "Capital do azeite corso · 500m de altitude",
-          "sobre": "Vila de granito a <strong>500m de altitude</strong>, 363 habitantes, ruas estreitas de pedra — a Córsega que não é praia. É a <strong>capital corsa do azeite</strong>: aqui se cultiva a oliveira <em>Germaine d'Alta Rocca</em>, e o moinho de água do século XVIII (U Fraghjonu) virou ecomuseu da olivicultura. Mas a curiosidade que ninguém conta está no <strong>monumento aos mortos</strong>: a base é esculpida em <strong>diorito orbicular</strong>, uma rocha rara com desenhos concêntricos que parecem <em>olhos</em>. A coincidência é perfeita — a padroeira da vila é <strong>Santa Luzia, protetora dos olhos</strong>. Essa mesma pedra corsa foi parar na ornamentação das <em>capelas dos Médici, em Florença</em>.",
-          "imperdivel": "Os círculos concêntricos na base do monumento aos mortos · são bolhas de cristal formadas no resfriamento do magma, e quase não existem no mundo. Passa a mão",
-          "dicas": [
-            "Estaciona na entrada da vila · as ruas do centro são estreitas demais pra manobrar",
-            "Igreja barroca de Santa Luzia: baixo-relevo em mármore branco e uma Crucifixão atribuída ao Mestre de Castelsardo",
-            "Convento de São Francisco (séc. XV) tem altar-mor em mármore policromado do séc. XVII",
-            "Compra azeite direto na vila · é o produto da casa e viaja bem na mala",
-            "Vila é vertical · carrinho sofre nas ruas de pedra · ela vai preferir o colo",
-            "1h a 1h30 já cobre tudo sem pressa · não é vila de passar o dia"
-          ],
-          "duracao": "1h-1h30",
-          "custo": "Grátis · azeite €12-18 o litro (jul/2026)",
-          "acessibilidade": "Vila em ladeira com ruas de pedra · carrinho ruim · canguru/colo pra filha",
-          "coord": {
-            "lat": 41.6978,
-            "lng": 9.0642
-          }
-        },
-        {
-          "hora": "16:00",
+          "hora": "16:30",
           "emoji": "🔄",
           "periodo": "tarde",
           "tipo": "card",
-          "risco": "yellow",
+          "risco": "green",
           "poiCat": "atracao",
-          "valeAPena": 3,
-          "nome": "🔄 Col de Bavella + banho de rio (o plano de montanha · leia antes de trocar)",
-          "cat": "Alternativa · troca o dia inteiro · ~4h30 de carro",
-          "sobre": "Este era o plano original do dia, guardado aqui caso vocês queiram a montanha de verdade. O <strong>Col de Bavella (1218m)</strong> é a paisagem-ícone do interior corso: sete agulhas de granito rosa esculpidas pela erosão, pinheiro laricio e ~10°C a menos que a praia. Emendaria com banho nas piscinas naturais de <strong>U Rosumarinu</strong>, no rio Solenzara, descendo a D268. <strong>O custo é o carro: ~2h30 pra ir e ~2h pra voltar, num dia só.</strong> Foi por isso que saiu do plano. Atenção se cogitarem as <em>Cascades du Polischellu</em> no lugar do Rosumarinu: estão <strong>proibidas sem guia credenciado o ano inteiro</strong> (arrêté de Quenza · €135 de multa por pessoa · idade mínima 8 anos com guia).",
-          "imperdivel": "A vista do col com as sete agulhas alinhadas · 360° entre o Tirreno e o maciço corso",
+          "valeAPena": 2,
+          "nome": "🔄 Esticar o vale · Saparale (vinho) ou Sainte-Lucie-de-Tallano (azeite)",
+          "cat": "Alternativa · escolham UMA, não as duas",
+          "sobre": "Se sobrar disposição depois do rio, há duas esticadas de ~20min a partir dali — em direções diferentes, então é uma ou outra.<br><br><strong>Domaine de Saparale</strong>, no vale do Ortolo: propriedade de 52 hectares fundada no século XIX, <em>abandonada por décadas</em> até 1998, quando <strong>Philippe Farinelli</strong> — descendente direto do fundador — voltou pra ressuscitar o vinhedo. Hoje é orgânico e engarrafa AOC Sartène com uvas autóctones: <strong>Sciaccarellu</strong> no tinto, <strong>Vermentinu</strong> no branco. É a única parada de vinho da viagem.<br><br><strong>Sainte-Lucie-de-Tallano</strong>, subindo o Rizzanese: vila de granito a 500m de altitude, capital corsa do azeite. A curiosidade está no monumento aos mortos, esculpido em <strong>diorito orbicular</strong> — rocha rara com círculos concêntricos que parecem <em>olhos</em>. E a padroeira da vila é <strong>Santa Luzia, protetora dos olhos</strong>. A mesma pedra está nas capelas dos Médici, em Florença.",
+          "imperdivel": "No Saparale, o tinto Sciaccarellu com o azeite da casa · em Sainte-Lucie, os círculos concêntricos na base do monumento — passa a mão na pedra",
           "dicas": [
-            "Saída às 7h30 é obrigatória se trocarem · o col lota por volta das 11h em agosto",
-            "Rota cênica por Aullène/Zonza · é o passeio em si, não só o traslado",
-            "Auberge du Col de Bavella tem terraço com vista · almoço €25-40 (jul/2026)",
-            "Suéter pra filha · venta e é fresco mesmo em agosto",
-            "Trou de la Bombe (2h ida e volta) NÃO é viável com ela · pula sem culpa",
-            "Rosumarinu: parking grátis se almoçar no restaurante, €5 se não · escada até o rio"
+            "Saparale: LIGA ANTES · 04 95 10 74 58 · confirma horário e se aceitam criança na cave",
+            "Saparale: tasting €0-10 · garrafa €12-25 · leva 2-3 pra casa (jul/2026)",
+            "Sainte-Lucie: vila vertical com ruas de pedra · carrinho sofre, ela vai preferir o colo",
+            "Sainte-Lucie: azeite direto na vila, €12-18 o litro · viaja bem na mala (jul/2026)",
+            "Se a filha já estiver derrubada do rio, pula as duas sem culpa · o dia já rendeu"
           ],
-          "duracao": "Dia inteiro · ~4h30 só de carro",
-          "custo": "Grátis · parking Rosumarinu €0-5 (jul/2026)",
-          "acessibilidade": "Mirador do col é plano · trilhas com pedra · rio tem escada e pedra molhada",
+          "duracao": "1h-1h30 a mais no dia",
+          "custo": "Saparale tasting €0-10 · Sainte-Lucie grátis (jul/2026)",
+          "acessibilidade": "Saparale: cave acessível, externo de terra · Sainte-Lucie: ladeira e pedra, sem carrinho",
           "coord": {
-            "lat": 41.796,
-            "lng": 9.2248
+            "lat": 41.6978,
+            "lng": 9.0642
           }
         },
         {
-          "hora": "16:30",
+          "hora": "17:00",
           "emoji": "🚗",
           "periodo": "tarde",
           "tipo": "transit",
-          "nome": "Sainte-Lucie-de-Tallano → Porto Pollo",
-          "cat": "~50min · descendo pela D268 → T40 → Propriano",
+          "nome": "Spin'a Cavallu → Porto Pollo",
+          "cat": "~40min · D268, T40 e Propriano",
           "coord": {
             "lat": 41.7071,
             "lng": 8.7946
-          }
-        },
-        {
-          "hora": "17:30",
-          "emoji": "🏖️",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "green",
-          "poiCat": "parque",
-          "valeAPena": 2,
-          "nome": "Praia de Porto Pollo · fim de tarde",
-          "cat": "O dia que sobrou · banho antes do jantar",
-          "sobre": "Esta é a recompensa direta da troca: no plano de Bavella, a esta hora vocês ainda estariam na estrada. Aqui, dá tempo de um banho de mar antes do jantar. A luz do fim de tarde no Golfo de Valinco é a melhor do dia — o sol se põe atrás da ponta e o golfo inteiro fica laranja. É também a hora em que a praia esvazia.",
-          "imperdivel": "O golfo virando laranja por volta das 20h · a praia já quase vazia",
-          "dicas": [
-            "Depois das 17h o estacionamento da praia já tem vaga fácil",
-            "Padaria fecha no fim da tarde · se quiser pão pro jantar, passa antes",
-            "Água ainda quente do dia · melhor hora pra ela entrar sem reclamar do frio",
-            "Aperitivo na praia e jantar leve em casa fecha bem um dia de interior"
-          ],
-          "duracao": "1h30-2h",
-          "custo": "Grátis (jul/2026)",
-          "acessibilidade": "Total · rampa de entrada e areia plana · banheiro público na entrada",
-          "coord": {
-            "lat": 41.7095,
-            "lng": 8.795
           }
         },
         {
@@ -931,12 +939,12 @@
           ]
         }
       ],
-      "nota": "Dia do interior, sem litoral e sem maratona de carro. O plano original era Bavella (4h30 de estrada ida e volta) — trocado por um vale a 40min: ponte medieval, banho de rio raso e uma vila de granito a 500m de altitude. Sobra fim de tarde na praia de casa. Quem quiser a montanha, o plano antigo está no card 🔄."
+      "nota": "A ordem do dia foi pensada: <strong>mercado de Sartène de manhã</strong> (feira fecha ao meio-dia e sábado é o dia forte do ano), cidade velha na sequência, e banho de rio à tarde, quando o calor justifica. Sartène e a ponte ficam a 15min uma da outra — o dia inteiro cabe num raio pequeno."
     },
     {
       "date": "Dom 2/Ago",
-      "tema": "Day off · Praia + Roccapina opcional",
-      "temaCurto": "Day off",
+      "tema": "Filitosa + última tarde em Porto Pollo",
+      "temaCurto": "Filitosa",
       "bairro": "🏖️ Porto Pollo & Valinco",
       "grupo": false,
       "cor": "#0ea5e9",
@@ -944,19 +952,110 @@
       "gradB": "#075985",
       "stops": [
         {
+          "hora": "09:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Porto Pollo → Filitosa",
+          "cat": "~25min · vale do Taravo",
+          "coord": {
+            "lat": 41.7451,
+            "lng": 8.8702
+          }
+        },
+        {
           "hora": "09:30",
-          "emoji": "🏖️",
+          "emoji": "🗿",
           "periodo": "manha",
           "tipo": "card",
-          "risco": "green",
-          "nome": "Praia de Porto Pollo · manhã preguiça",
-          "cat": "Última manhã na base · sem agenda",
-          "sobre": "Última manhã antes de descer pra Bonifacio (amanhã). Aproveita pra desfrutar a água calma, fechar com a filha rotina que ela já gosta. Almoço em casa pra organizar mala da tarde.",
-          "imperdivel": "Café com croissant na praia · padaria abre 7h",
+          "risco": "yellow",
+          "nome": "Sítio Pré-histórico de Filitosa",
+          "cat": "Menires 8000 anos · arqueologia corsa",
+          "sobre": "Sítio megalítico descoberto em 1946 pelo proprietário do terreno (Charles-Antoine Cesari). Concentra menires antropomórficos esculpidos (alguns com armas e rostos), torre megalítica e oppidum (assentamento fortificado). Considerado o conjunto megalítico mais importante do Mediterrâneo. Não é Stonehenge — escala humana e enxuta. Visita ~1h-1h30 num percurso ao ar livre por entre oliveiras e carvalhos.",
+          "imperdivel": "O menir Filitosa V · figura com espada esculpida no granito",
           "dicas": [
-            "Compra última coisa no Carrefour Market Viggianello (N196) pra estoque da próxima base",
-            "Organizar mala à tarde · checkout amanhã 10h",
-            "Confirma Hôtel/Airbnb Bonifacio · horário check-in"
+            "Domingo o MUSEU abre 9h (em dia de semana só às 10h) · o sítio abre 9h todo dia",
+            "Vai cedo · evita o sol de meio-dia e o turismo de ônibus",
+            "Fecha 1h antes do pôr do sol · em agosto isso é ~20h · sem pressa de saída",
+            "Áudio-guia incluso · vale muito · sem narração o sítio é só pedra no mato",
+            "€9 adulto · €7 (6-18a) · grátis abaixo de 6 — sua filha não paga (jul/2026)",
+            "Tel. 04 95 74 00 91 se quiser confirmar na véspera"
+          ],
+          "duracao": "1h30-2h com museu",
+          "custo": "€9 adulto · €7 (6-18a) · grátis <6a — filha não paga (jul/2026)",
+          "acessibilidade": "DIFÍCIL com carrinho · trilha sem piso firme, raízes, entre vegetação · canguru/pochete pra filha é melhor",
+          "coord": {
+            "lat": 41.7451,
+            "lng": 8.8702
+          },
+          "poiCat": "atracao",
+          "valeAPena": 3
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço pós-Filitosa",
+          "cat": "3 opções no caminho",
+          "coord": {
+            "lat": 41.7451,
+            "lng": 8.8702
+          },
+          "opcoes": [
+            {
+              "nome": "Cantina Filitosa (entrada)",
+              "desc": "Snack simples no sítio · sanduíches, salads · prático",
+              "preco": "€10-15",
+              "dist": "Entrada",
+              "poiCat": "cafe",
+              "valeAPena": 1
+            },
+            {
+              "nome": "Volta a Porto Pollo (Le Lido)",
+              "desc": "Almoço na praia + tarde piscina d'água",
+              "preco": "€18-25",
+              "dist": "30min carro",
+              "poiCat": "restaurante",
+              "valeAPena": 2
+            },
+            {
+              "nome": "Bar du Stade Olmeto",
+              "desc": "Bistrô local · prato do dia €15 · 100% corso · sem turistada",
+              "preco": "€15-20",
+              "dist": "10min carro",
+              "poiCat": "restaurante",
+              "valeAPena": 2
+            }
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Filitosa → Porto Pollo",
+          "cat": "~25min de volta",
+          "coord": {
+            "lat": 41.7071,
+            "lng": 8.7946
+          }
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🏖️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Praia de Porto Pollo · última tarde",
+          "cat": "Despedida do Valinco · mala à noite",
+          "sobre": "Última tarde antes de descer pra Bonifacio amanhã. Aproveitem a água calma e fechem com ela a rotina que já conhece — é a praia que ela vai lembrar. Mala à noite, porque o dia de amanhã tem entrega de carro no aeroporto e traslado sem carro até Bonifacio.",
+          "imperdivel": "O último pôr do sol do golfo · o laranja na água que ela já aprendeu a esperar",
+          "dicas": [
+            "Última compra no Carrefour Market Viggianello (N196) se quiserem levar algo pra Bonifacio",
+            "Organizar a mala hoje à noite · amanhã o check-out é cedo e o dia é longo",
+            "Confirma o check-in de Bonifacio e o horário da navette de Figari",
+            "Padaria abre 7h · café da manhã de despedida amanhã antes de sair"
           ],
           "duracao": "Manhã + almoço",
           "custo": "—",
@@ -966,32 +1065,6 @@
             "lng": 8.7939
           },
           "poiCat": "parque",
-          "valeAPena": 2
-        },
-        {
-          "hora": "14:00",
-          "emoji": "🦁",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "yellow",
-          "nome": "Belvédère Roccapina (rocha do Leão) · OPCIONAL",
-          "cat": "Mirador da pista N196 · não desce na praia",
-          "sobre": "A praia de Roccapina é uma das mais bonitas da Córsega (formação rochosa em forma de leão deitado), mas o acesso é 4km de pista de terra esburacada — INVIÁVEL com carro alugado standard e filha 3a no carrinho. ALTERNATIVA: belvédère oficial da N196 (Col de Coralli), entrega vista perfeita do leão e da praia abaixo. Parada de 20min e segue viagem.",
-          "imperdivel": "Vista do leão deitado · formação granítica esculpida pelo vento",
-          "dicas": [
-            "Belvédère bem sinalizado na N196 · parking gratuito",
-            "Quem quiser DESCER na praia: vai a pé ~45min ida (1h30 round trip) por pista exposta · NÃO com filha em pleno agosto",
-            "Pousada Coralli serve café no mirador",
-            "Pula sem culpa se cansou · belvédère já entrega o frame icônico"
-          ],
-          "duracao": "20min belvédère · 3h se descer (não recomendado)",
-          "custo": "Grátis",
-          "acessibilidade": "Belvédère ok carrinho · descida zero",
-          "coord": {
-            "lat": 41.4958,
-            "lng": 8.936
-          },
-          "poiCat": "atracao",
           "valeAPena": 2
         },
         {
@@ -1033,11 +1106,11 @@
           ]
         }
       ],
-      "nota": "Último dia da base norte. Manhã de despedida na praia, tarde de mala. Roccapina é opcional de verdade: se o dia estiver rendendo, é um mirador de 15min na estrada; se não, pula."
+      "nota": "Filitosa veio da quarta pra cá, e o domingo até favorece: o <strong>museu abre 9h no fim de semana</strong> (em dia útil só às 10h). Manhã de história, tarde de despedida da praia de casa e mala à noite — amanhã a base muda pra Bonifacio."
     },
     {
       "date": "Seg 3/Ago",
-      "tema": "Transição · Porto Pollo → Bonifacio",
+      "tema": "Roccapina → Figari (entrega do carro) → Bonifacio",
       "temaCurto": "Transição",
       "bairro": "🛫 Transit",
       "grupo": false,
@@ -1053,12 +1126,13 @@
           "risco": "green",
           "nome": "Check-out Porto Pollo · partida sul",
           "cat": "Finalizar mala · entregar chaves",
-          "sobre": "Check-out tranquilo. Confirma se deixou nada na casa, devolve chaves, parte direto pra Bonifacio. Roteiro: Porto Pollo → Olmeto → Propriano → Sartène → Roccapina (passa pelo belvédère se quis) → Pianottoli → Bonifacio.",
-          "imperdivel": "Tomar café da manhã decente antes (filha + 1h30 carro)",
+          "sobre": "Check-out e partida para o sul. O trajeto de hoje tem três etapas: Porto Pollo → Roccapina (mirador, ~1h) → aeroporto de Figari (~20min, entrega do carro) → Bonifacio de navette ou táxi (~30min). Confirmem se não ficou nada na casa e saiam com o tanque cheio — o carro tem que ser devolvido abastecido.",
+          "imperdivel": "Café da manhã decente antes de sair · o dia tem 3 baldeações e ela vai sentir",
           "dicas": [
-            "Tanque cheio em Propriano antes da N196",
-            "Banheiro · filha vai precisar no meio do caminho · usa restaurante Pianottoli",
-            "Confirma check-in Bonifacio · normalmente 15h"
+            "Tanque cheio em Propriano antes de pegar a N196 · é a última bomba conveniente",
+            "Banheiro: usa o do restaurante em Sartène ou Roccapina · a N196 tem poucas paradas",
+            "Confirma o check-in de Bonifacio (normalmente 15h) e o horário da navette de Figari",
+            "Tira TUDO do carro antes de entregar · com criança sempre fica algo embaixo do banco"
           ],
           "duracao": "1h check-out",
           "custo": "—",
@@ -1071,73 +1145,154 @@
           "valeAPena": 1
         },
         {
-          "hora": "11:00",
+          "hora": "10:15",
           "emoji": "🚗",
-          "periodo": "tarde",
+          "periodo": "manha",
           "tipo": "transit",
-          "nome": "Porto Pollo → Bonifacio",
-          "cat": "~1h30 · N196 via Sartène/Pianottoli",
+          "nome": "Porto Pollo → Belvédère de Roccapina",
+          "cat": "~1h · via Propriano, Sartène e N196",
           "coord": {
-            "lat": 41.3875,
-            "lng": 9.1544
+            "lat": 41.4958,
+            "lng": 8.936
           }
         },
         {
-          "hora": "13:00",
+          "hora": "11:00",
+          "emoji": "🦁",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Belvédère de Roccapina (N196 · rocha do Leão)",
+          "cat": "Parada de 30min na estrada · não é desvio",
+          "sobre": "Formação de granito esculpida pelo vento que desenha um <strong>leão deitado</strong> sobre a enseada — um dos frames mais conhecidos da Córsega. O belvédère fica <strong>na própria N196</strong>, com estacionamento gratuito: hoje ele deixa de ser um passeio dedicado e vira o que sempre deveria ter sido, uma parada de 30 minutos no caminho. A praia lá embaixo é linda e <em>inacessível na prática</em>: são 4km de pista de terra esburacada ou ~45min a pé por trilha exposta. Com a filha, em agosto, com o carro cheio e horário pra cumprir: nem cogite.",
+          "imperdivel": "O leão deitado no alto da crista · procura a cabeça à esquerda e a garupa à direita",
+          "dicas": [
+            "Belvédère bem sinalizado na N196 · estacionamento gratuito · sem desvio",
+            "30min bastam · é mirador, não programa",
+            "Pousada Coralli no local serve café · último banheiro decente antes de Figari",
+            "NÃO descer à praia hoje: 4km de pista ruim ou 1h30 a pé ida e volta, com mala no carro",
+            "Luz da manhã bate de frente na rocha · é melhor agora do que era às 14h"
+          ],
+          "duracao": "30min",
+          "custo": "Grátis (jul/2026)",
+          "acessibilidade": "Belvédère plano e colado no estacionamento · carrinho ok · descida à praia inviável",
+          "coord": {
+            "lat": 41.4958,
+            "lng": 8.936
+          },
+          "poiCat": "atracao",
+          "valeAPena": 2
+        },
+        {
+          "hora": "11:45",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Roccapina → Aeroporto Figari",
+          "cat": "~20min pela N196",
+          "coord": {
+            "lat": 41.5044,
+            "lng": 9.0978
+          }
+        },
+        {
+          "hora": "12:15",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
-          "nome": "Almoço Bonifacio · porto",
-          "cat": "Marina · prático com filha cansada",
+          "nome": "Almoço antes da entrega do carro",
+          "cat": "Última refeição com autonomia de carro",
           "coord": {
-            "lat": 41.3875,
-            "lng": 9.1544
+            "lat": 41.5044,
+            "lng": 9.0978
           },
           "opcoes": [
             {
-              "nome": "Da Passano (porto)",
-              "desc": "Tapas corsas pra dividir · perfeito com filha · vários pratinhos",
-              "preco": "€30-45",
-              "dist": "Quai",
-              "poiCat": "restaurante",
-              "valeAPena": 3
-            },
-            {
-              "nome": "Les Quatre Vents (porto)",
-              "desc": "Frutos do mar e pasta · vista marina · reserva",
-              "preco": "€35-50",
-              "dist": "Quai",
+              "nome": "Restaurante em Figari (vila)",
+              "desc": "A vila fica a ~3km do aeroporto · almoço tranquilo antes da burocracia da devolução",
+              "preco": "€20-30",
+              "dist": "~5min de carro",
               "poiCat": "restaurante",
               "valeAPena": 2
             },
             {
-              "nome": "Picnic na praia Catena",
-              "desc": "Padaria do porto + frutas · come na areia · descontrai filha",
-              "preco": "€20",
-              "dist": "Praia Catena",
+              "nome": "Spar (Route Nationale, Figari)",
+              "desc": "Sanduíche e bebida pra comer rápido · abre 7h30-21h todo dia · também serve pra estocar antes de ficar sem carro",
+              "preco": "€12-18",
+              "dist": "~5min de carro",
               "poiCat": "mercado",
               "valeAPena": 2
+            },
+            {
+              "nome": "Comer já em Bonifacio",
+              "desc": "Entrega o carro direto e almoça no porto ~15h30 · arriscado com criança faminta",
+              "preco": "€30-45",
+              "dist": "Depois do traslado",
+              "poiCat": "restaurante",
+              "valeAPena": 1
             }
           ]
         },
         {
-          "hora": "15:00",
+          "hora": "13:45",
+          "emoji": "🔑",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "nome": "Entrega do carro · Aeroporto Figari Sud-Corse (FSC)",
+          "cat": "Fim da autonomia de carro · a partir daqui é a pé",
+          "sobre": "Devolução do carro no balcão da locadora no terminal de Figari. <strong>É o momento que muda a natureza da viagem</strong>: os cinco dias em Bonifacio passam a ser sem carro. A cidadela, o porto, os barcos pras Lavezzi e o ferry pra Sardenha funcionam a pé — mas <strong>Piantarella (5/Ago) e Rondinara (6/Ago) são praias só de carro</strong>, sem linha de ônibus. Leiam as dicas: há solução, mas precisa ser decidida antes.",
+          "imperdivel": "Revistar o carro inteiro antes de entregar · porta-luvas, bolsos das portas e embaixo das cadeirinhas",
+          "dicas": [
+            "Tanque cheio antes de chegar · combustível cobrado pela locadora sai muito mais caro",
+            "Tira foto do carro dos 4 lados e do painel com o nível de combustível · seguro contra cobrança indevida",
+            "Guarda o comprovante de devolução até a cobrança do cartão fechar",
+            "Cadeirinha da filha: confirma se é da locadora (devolve) ou de vocês (vai junto)",
+            "PIANTARELLA E RONDINARA precisam de carro · as opções são alugar 1-2 dias em Bonifacio (balcões na marina), táxi (~€45-55 por trecho até Rondinara) ou trocar por praias a pé",
+            "Bagagem: da entrega até a navette são poucos metros dentro do terminal"
+          ],
+          "duracao": "30-45min com fila em agosto",
+          "custo": "Sem custo extra se o contrato começou em Figari (jul/2026)",
+          "acessibilidade": "Terminal plano e pequeno · carrinho circula bem · balcões no saguão",
+          "coord": {
+            "lat": 41.5044,
+            "lng": 9.0978
+          }
+        },
+        {
+          "hora": "14:45",
+          "emoji": "🚌",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Figari (FSC) → Bonifacio",
+          "cat": "~21km · navette €4/pessoa (jul-ago) ou táxi ~€50",
+          "coord": {
+            "lat": 41.3872,
+            "lng": 9.1597
+          }
+        },
+        {
+          "hora": "15:45",
           "emoji": "🏠",
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
           "nome": "Check-in Bonifacio · base 5 noites",
           "cat": "Reorganização · cidadela ou porto?",
-          "sobre": "Bonifacio tem 2 zonas: cidade alta (cidadela medieval, na rocha) e cidade baixa (porto/marina, no fjord). Estacionar na cidadela é caos no verão — checa o esquema com o anfitrião antes. Se a casa for na cidadela, descarrega bagagem e estaciona no parking sob a cidadela (€20/dia) ou na marina (mais barato).",
-          "imperdivel": "Reconhecer onde fica padaria, mercado, restaurante do bairro · primeira tarde",
+          "sobre": "Bonifacio tem duas zonas: a cidade alta (a cidadela medieval, na rocha) e a cidade baixa (porto e marina, no fiorde). <strong>Sem carro, a localização passa a ser tudo</strong> — confiram na chegada a distância a pé até padaria, mercado e o cais de onde saem os barcos das Lavezzi. A boa notícia: essa era a parte do roteiro que menos dependia do carro, e estacionar na cidadela em agosto era caos de qualquer jeito. O que vocês economizam em parking (€15-25/dia) paga boa parte de um aluguel de 1-2 dias, se decidirem por ele.",
+          "imperdivel": "Mapear no primeiro passeio: padaria, mercado e o cais dos barcos · são os 3 pontos da semana",
           "dicas": [
-            "Mini-mercado U Spar e Carrefour Express na cidade baixa · estoque pra semana",
-            "Parking · €15-25/dia conforme zona · pergunta ao anfitrião alternativas",
-            "Sieste com filha · tarde foi longa"
+            "U Spar e Carrefour Express ficam na cidade baixa · estoque da semana no primeiro dia",
+            "Sem carro: zero gasto de parking (economia de €15-25/dia · jul/2026)",
+            "Locadoras têm balcão na marina, se quiserem carro pra Piantarella e Rondinara",
+            "Táxi local: pede o contato ao anfitrião hoje · em agosto não se acha na hora",
+            "Sesta com ela · o dia teve 3 etapas e foi longo"
           ],
           "duracao": "1h-2h",
           "custo": "Parking €15-25/dia (jul/2026)",
-          "acessibilidade": "Cidade alta tem ladeira · cidade baixa plana",
+          "acessibilidade": "Cidade baixa plana · cidade alta tem ladeira · sem carro, a subida à cidadela é a pé ou de trenzinho turístico",
           "coord": {
             "lat": 41.3872,
             "lng": 9.1597
@@ -1211,7 +1366,7 @@
           ]
         }
       ],
-      "nota": "Dia de transição com uma tarde de brinde. Só 1h30 de carro, então dá pra chegar, respirar e ainda pegar a cidadela na hora dourada — que é o melhor momento dela na semana inteira."
+      "nota": "Dia de mudança de base com três etapas encadeadas: mirador de Roccapina como parada na estrada, entrega do carro no aeroporto de Figari e traslado sem carro até Bonifacio. <strong>A partir daqui vocês estão a pé</strong> — vale reler o card da entrega do carro antes de sair."
     },
     {
       "date": "Ter 4/Ago",
@@ -1884,20 +2039,20 @@
           "periodo": "manha",
           "tipo": "card",
           "risco": "red",
-          "nome": "Check-out + devolução carro Bonifacio",
-          "cat": "Dia LOGÍSTICA · risco alto",
-          "sobre": "Dia complexo: balsa + táxi/ônibus + retirada de carro + drive 3h. Plano consultor: simplificar. Devolver carro em Bonifacio antes do ferry (algumas locadoras tem balcão na cidade — Sixt, Avis · conferir contrato). Atravessam SEM carro pra Santa Teresa (ferry passageiro mais barato e prático com filha). Em Santa Teresa pegam ônibus/táxi até Olbia · novo carro alugado em Olbia (one-way Sardenha · evita taxa cross-border).",
-          "imperdivel": "Check-list mental: passaportes/documentos · medicamento filha · vinho Saparale pra Sardenha",
+          "nome": "Check-out Bonifacio · embarque no ferry",
+          "cat": "Sem carro · tudo a pé até o cais",
+          "sobre": "Dia de travessia. <strong>Ficou mais simples do que era</strong>: como o carro foi entregue em Figari no dia 3, hoje não há devolução nem estacionamento pra resolver — é check-out, caminhada até o cais e embarque. A cadeia do dia segue longa (ferry, traslado até Olbia, retirada do carro novo e ~3h de estrada), então o que puder ser confirmado na véspera, confirma na véspera.",
+          "imperdivel": "Check-list: passaportes e documentos · medicamento dela · vinho comprado · carregadores",
           "dicas": [
-            "CONFIRMA na véspera: horário do ferry (1ª saída 08h30) e se a locadora abre cedo o bastante",
-            "Devolve o carro em Bonifacio ANTES do ferry · levar carro na balsa custa €30-60 e complica",
+            "CONFIRMA na véspera: horário do ferry (1ª saída 08h30, travessia ~50min)",
+            "Sem carro = sem fila de embarque de veículo · vocês entram como pedestres, é mais rápido",
             "Café da manhã em casa antes de embarcar · ela enjoa de barco com estômago vazio",
-            "Avós vão de carro próprio Olbia↔Bonifacio · não dependem da balsa",
-            "Check-list: passaportes · medicamento dela · vinho Saparale · carregadores"
+            "Distância da casa até o cais: mede hoje com a mala na mão, não no dia",
+            "Avós vão de carro próprio Olbia↔Bonifacio · não dependem da balsa"
           ],
           "duracao": "2h check-out + ida porto",
           "custo": "—",
-          "acessibilidade": "Terminal do ferry é plano e curto · carrinho ok até o embarque · a balsa tem escada entre conveses, mas dá pra ficar no deck de baixo com o carrinho",
+          "acessibilidade": "Cidade baixa plana até o cais · com mala e carrinho é tranquilo · a balsa tem escada entre conveses, dá pra ficar no deck de baixo",
           "coord": {
             "lat": 41.3872,
             "lng": 9.1597
@@ -2029,13 +2184,6 @@
         "url": "https://www.filitosa.fr/"
       }
     ],
-    "Domaine de Saparale (Vallée de l'Ortolo)": [
-      {
-        "type": "official",
-        "label": "Saparale · site oficial",
-        "url": "https://www.saparale.com"
-      }
-    ],
     "Arquipélago das Ilhas Lavezzi": [
       {
         "type": "official",
@@ -2083,18 +2231,23 @@
         "url": "https://fr.wikipedia.org/wiki/Pont_de_Spina-Cavallu"
       }
     ],
-    "Sainte-Lucie-de-Tallano (vila · Alta Rocca)": [
+    "🔄 Esticar o vale · Saparale (vinho) ou Sainte-Lucie-de-Tallano (azeite)": [
       {
         "type": "official",
-        "label": "Alta Rocca · a vila",
+        "label": "Domaine Saparale",
+        "url": "https://www.saparale.com"
+      },
+      {
+        "type": "official",
+        "label": "Sainte-Lucie-de-Tallano · Alta Rocca",
         "url": "https://www.alta-rocca.com/village/sainte-lucie-de-tallano/"
       }
     ],
-    "🔄 Col de Bavella + banho de rio (o plano de montanha · leia antes de trocar)": [
+    "Entrega do carro · Aeroporto Figari Sud-Corse (FSC)": [
       {
         "type": "official",
-        "label": "Aiguilles de Bavella",
-        "url": "https://aiguillesdebavella.fr"
+        "label": "Aéroport Figari Sud-Corse",
+        "url": "https://www.2a.cci.fr/Aeroport-Figari-Sud-Corse.html"
       }
     ]
   },
@@ -2112,16 +2265,9 @@
       "carro": "20min · D157 · litoral suave"
     },
     "Porto Pollo → Sartène": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€60 · 45min",
-      "carro": "45min · D157 + N196 via Propriano"
-    },
-    "Porto Pollo → Bonifacio": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€140-170 · 1h30",
-      "carro": "1h30 · N196 via Sartène/Pianottoli · estrada boa"
+      "uber": "Carro próprio · ~45min",
+      "metro": "Porto Pollo → Propriano (22min) → T40 subindo até Sartène (300m de altitude)",
+      "taxi": "~€60-75"
     },
     "Embarque Lavezzi · Porto Bonifacio": {
       "uber": "Não aplicável",
@@ -2184,20 +2330,50 @@
       "metro": "De Santa Teresa a Olbia são ~1h de carro / ~1h30-2h de ônibus ARST",
       "taxi": "Santa Teresa → Olbia de táxi ~€120 · reserva na véspera"
     },
-    "Porto Pollo → Spin'a Cavallu": {
+    "Porto Pollo → Praia de Cupabia": {
+      "uber": "Carro próprio · ~30min",
+      "metro": "Estrada da costa até Serra-di-Ferro e depois desvio de terra (rodável com carro normal)",
+      "taxi": "~€40-50 · sem transporte público"
+    },
+    "Cupabia → Porto Pollo": {
+      "uber": "Carro próprio · ~30min",
+      "metro": "Mesmo caminho de volta",
+      "taxi": "~€40-50"
+    },
+    "Sartène → Spin'a Cavallu": {
+      "uber": "Carro próprio · ~15min",
+      "metro": "T40 sentido Propriano e depois D268 à direita · a ponte fica 2,6km depois da entrada",
+      "taxi": "~€25-30"
+    },
+    "Spin'a Cavallu → Porto Pollo": {
       "uber": "Carro próprio · ~40min",
-      "metro": "Porto Pollo → Propriano (22min) → T40 sentido Sartène → D268 à esquerda (Sainte-Lucie-de-Tallano) · a ponte fica 2,6km depois da entrada",
-      "taxi": "~€55-70 · inviável como rotina"
+      "metro": "D268 até a T40 → Propriano → estrada da costa",
+      "taxi": "~€55-70"
     },
-    "Spin'a Cavallu → Sainte-Lucie-de-Tallano": {
+    "Porto Pollo → Filitosa": {
+      "uber": "Carro próprio · ~25min",
+      "metro": "Subindo o vale do Taravo até Sollacaro · estrada estreita com curvas, sem dificuldade",
+      "taxi": "~€35-45"
+    },
+    "Filitosa → Porto Pollo": {
+      "uber": "Carro próprio · ~25min",
+      "metro": "Mesmo caminho de volta pelo vale do Taravo",
+      "taxi": "~€35-45"
+    },
+    "Porto Pollo → Belvédère de Roccapina": {
+      "uber": "Carro próprio · ~1h",
+      "metro": "Propriano → Sartène → N196 sentido sul · o belvédère é sinalizado na própria nacional",
+      "taxi": "~€90-110"
+    },
+    "Roccapina → Aeroporto Figari": {
       "uber": "Carro próprio · ~20min",
-      "metro": "Continua subindo a D268 pelo vale do Rizzanese · estrada estreita com curvas, sem dificuldade",
-      "taxi": "—"
+      "metro": "N196 sentido sul até o desvio do aeroporto (FSC fica 3km a noroeste da vila de Figari)",
+      "taxi": "~€35-45"
     },
-    "Sainte-Lucie-de-Tallano → Porto Pollo": {
-      "uber": "Carro próprio · ~50min",
-      "metro": "D268 descendo até a T40 → Propriano → estrada da costa até Porto Pollo",
-      "taxi": "~€70-85"
+    "Figari (FSC) → Bonifacio": {
+      "uber": "NAVETTE Corsica Bus · €4/pessoa · ~30min até o centro de Bonifacio · circula SÓ em julho e agosto · confirma horário no 04 95 71 10 10",
+      "metro": "~21-22km · sem trem · a navette é a única opção coletiva e é sazonal (existe justamente em agosto)",
+      "taxi": "Táxi ~€48-82 conforme veículo · ~25min · ponto de táxi do aeroporto 04 95 71 04 45 · transfer privado (van até 8 lugares) ~€126"
     }
   },
   "bairros_config": [
