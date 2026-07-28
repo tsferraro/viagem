@@ -1110,8 +1110,8 @@
     },
     {
       "date": "Seg 3/Ago",
-      "tema": "Roccapina → Figari (entrega do carro) → Bonifacio",
-      "temaCurto": "Transição",
+      "tema": "Rondinara → Bonifacio → entrega do carro em Figari",
+      "temaCurto": "Rondinara",
       "bairro": "🛫 Transit",
       "grupo": false,
       "cor": "#dc2626",
@@ -1119,20 +1119,21 @@
       "gradB": "#991b1b",
       "stops": [
         {
-          "hora": "09:30",
+          "hora": "07:30",
           "emoji": "🧳",
           "periodo": "manha",
           "tipo": "card",
           "risco": "green",
           "nome": "Check-out Porto Pollo · partida sul",
-          "cat": "Finalizar mala · entregar chaves",
-          "sobre": "Check-out e partida para o sul. O trajeto de hoje tem três etapas: Porto Pollo → Roccapina (mirador, ~1h) → aeroporto de Figari (~20min, entrega do carro) → Bonifacio de navette ou táxi (~30min). Confirmem se não ficou nada na casa e saiam com o tanque cheio — o carro tem que ser devolvido abastecido.",
-          "imperdivel": "Café da manhã decente antes de sair · o dia tem 3 baldeações e ela vai sentir",
+          "cat": "Saída cedo · o dia depende disso",
+          "sobre": "Check-out cedo, e a hora importa: <strong>saindo às 7h30 vocês chegam em Rondinara por volta das 10h15</strong>, ainda dentro da janela em que há vaga no estacionamento. Saindo às 9h, chegam com o parking cheio em pleno agosto. O roteiro do dia é Porto Pollo → Roccapina → Bonifacio (largar malas) → Rondinara → Bonifacio (deixar a família) → Figari (devolver o carro) → táxi de volta.",
+          "imperdivel": "Café da manhã antes de sair · o próximo assento fixo é daqui a 2h de estrada",
           "dicas": [
-            "Tanque cheio em Propriano antes de pegar a N196 · é a última bomba conveniente",
-            "Banheiro: usa o do restaurante em Sartène ou Roccapina · a N196 tem poucas paradas",
-            "Confirma o check-in de Bonifacio (normalmente 15h) e o horário da navette de Figari",
-            "Tira TUDO do carro antes de entregar · com criança sempre fica algo embaixo do banco"
+            "Confirme a véspera se o check-out às 7h30 é possível · se não, deixe a chave combinada",
+            "Tanque cheio em Propriano · o carro tem que voltar abastecido e é a última bomba conveniente",
+            "Separe a bolsa de praia do resto: as malas ficam no hotel, a bolsa vai pro carro",
+            "RESERVE O TÁXI de Figari pra ~16h45 hoje de manhã · 04 95 71 04 45",
+            "Sacuda os tapetes do carro antes de devolver · areia de praia rende cobrança de limpeza"
           ],
           "duracao": "1h check-out",
           "custo": "—",
@@ -1145,30 +1146,30 @@
           "valeAPena": 1
         },
         {
-          "hora": "10:15",
+          "hora": "08:00",
           "emoji": "🚗",
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Porto Pollo → Belvédère de Roccapina",
-          "cat": "~1h · via Propriano, Sartène e N196",
+          "cat": "~1h · Propriano, Sartène e N196 sul",
           "coord": {
             "lat": 41.4958,
             "lng": 8.936
           }
         },
         {
-          "hora": "11:00",
+          "hora": "09:00",
           "emoji": "🦁",
           "periodo": "manha",
           "tipo": "card",
           "risco": "yellow",
           "nome": "Belvédère de Roccapina (N196 · rocha do Leão)",
-          "cat": "Parada de 30min na estrada · não é desvio",
+          "cat": "Parada de 30min na estrada · a caminho de Rondinara",
           "sobre": "Formação de granito esculpida pelo vento que desenha um <strong>leão deitado</strong> sobre a enseada — um dos frames mais conhecidos da Córsega. O belvédère fica <strong>na própria N196</strong>, com estacionamento gratuito: hoje ele deixa de ser um passeio dedicado e vira o que sempre deveria ter sido, uma parada de 30 minutos no caminho. A praia lá embaixo é linda e <em>inacessível na prática</em>: são 4km de pista de terra esburacada ou ~45min a pé por trilha exposta. Com a filha, em agosto, com o carro cheio e horário pra cumprir: nem cogite.",
           "imperdivel": "O leão deitado no alto da crista · procura a cabeça à esquerda e a garupa à direita",
           "dicas": [
             "Belvédère bem sinalizado na N196 · estacionamento gratuito · sem desvio",
-            "30min bastam · é mirador, não programa",
+            "30min bastam · hoje ele é parada de estrada, não programa · Rondinara espera",
             "Pousada Coralli no local serve café · último banheiro decente antes de Figari",
             "NÃO descer à praia hoje: 4km de pista ruim ou 1h30 a pé ida e volta, com mala no carro",
             "Luz da manhã bate de frente na rocha · é melhor agora do que era às 14h"
@@ -1184,115 +1185,139 @@
           "valeAPena": 2
         },
         {
-          "hora": "11:45",
+          "hora": "09:35",
           "emoji": "🚗",
-          "periodo": "tarde",
+          "periodo": "manha",
           "tipo": "transit",
-          "nome": "Roccapina → Aeroporto Figari",
-          "cat": "~20min pela N196",
-          "coord": {
-            "lat": 41.5044,
-            "lng": 9.0978
-          }
-        },
-        {
-          "hora": "12:15",
-          "emoji": "🍽️",
-          "periodo": "tarde",
-          "tipo": "opcoes",
-          "nome": "Almoço antes da entrega do carro",
-          "cat": "Última refeição com autonomia de carro",
-          "coord": {
-            "lat": 41.5044,
-            "lng": 9.0978
-          },
-          "opcoes": [
-            {
-              "nome": "Restaurante em Figari (vila)",
-              "desc": "A vila fica a ~3km do aeroporto · almoço tranquilo antes da burocracia da devolução",
-              "preco": "€20-30",
-              "dist": "~5min de carro",
-              "poiCat": "restaurante",
-              "valeAPena": 2
-            },
-            {
-              "nome": "Spar (Route Nationale, Figari)",
-              "desc": "Sanduíche e bebida pra comer rápido · abre 7h30-21h todo dia · também serve pra estocar antes de ficar sem carro",
-              "preco": "€12-18",
-              "dist": "~5min de carro",
-              "poiCat": "mercado",
-              "valeAPena": 2
-            },
-            {
-              "nome": "Comer já em Bonifacio",
-              "desc": "Entrega o carro direto e almoça no porto ~15h30 · arriscado com criança faminta",
-              "preco": "€30-45",
-              "dist": "Depois do traslado",
-              "poiCat": "restaurante",
-              "valeAPena": 1
-            }
-          ]
-        },
-        {
-          "hora": "13:45",
-          "emoji": "🔑",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "yellow",
-          "poiCat": "atracao",
-          "valeAPena": 1,
-          "nome": "Entrega do carro · Aeroporto Figari Sud-Corse (FSC)",
-          "cat": "Fim da autonomia de carro · a partir daqui é a pé",
-          "sobre": "Devolução do carro no balcão da locadora no terminal de Figari. <strong>É o momento que muda a natureza da viagem</strong>: os cinco dias em Bonifacio passam a ser sem carro. A cidadela, o porto, os barcos pras Lavezzi e o ferry pra Sardenha funcionam a pé — mas <strong>Piantarella (5/Ago) e Rondinara (6/Ago) são praias só de carro</strong>, sem linha de ônibus. Leiam as dicas: há solução, mas precisa ser decidida antes. <strong>Atenção ao traslado até Bonifacio</strong>: não existe ônibus direto do aeroporto — as navettes servem Porto-Vecchio. Conte com táxi (~€48-82) e reserve antes.",
-          "imperdivel": "Revistar o carro inteiro antes de entregar · porta-luvas, bolsos das portas e embaixo das cadeirinhas",
-          "dicas": [
-            "RESERVE O TÁXI NA VÉSPERA · 04 95 71 04 45 · não há linha de ônibus direta Figari→Bonifacio (as navettes do aeroporto vão pra Porto-Vecchio)",
-            "Tanque cheio antes de chegar · combustível cobrado pela locadora sai muito mais caro",
-            "Tira foto do carro dos 4 lados e do painel com o nível de combustível · seguro contra cobrança indevida",
-            "Guarda o comprovante de devolução até a cobrança do cartão fechar",
-            "Cadeirinha da filha: confirma se é da locadora (devolve) ou de vocês (vai junto)",
-            "PIANTARELLA E RONDINARA precisam de carro · as opções são alugar 1-2 dias em Bonifacio (balcões na marina), táxi (~€45-55 por trecho até Rondinara) ou trocar por praias a pé"
-          ],
-          "duracao": "30-45min com fila em agosto",
-          "custo": "Sem custo extra se o contrato começou em Figari (jul/2026)",
-          "acessibilidade": "Terminal plano e pequeno · carrinho circula bem · balcões no saguão",
-          "coord": {
-            "lat": 41.5044,
-            "lng": 9.0978
-          }
-        },
-        {
-          "hora": "14:45",
-          "emoji": "🚌",
-          "periodo": "tarde",
-          "tipo": "transit",
-          "nome": "Figari (FSC) → Bonifacio",
-          "cat": "~21km · táxi ~€48-82 (25min) · ônibus direto NÃO existe",
+          "nome": "Roccapina → Bonifacio",
+          "cat": "~40min pela N196 · passa perto de Figari",
           "coord": {
             "lat": 41.3872,
             "lng": 9.1597
           }
         },
         {
-          "hora": "15:45",
+          "hora": "10:15",
+          "emoji": "🧳",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Parada em Bonifacio · largar as malas no hotel",
+          "cat": "20min · Bonifacio é no caminho de Rondinara · combine na véspera",
+          "coord": {
+            "lat": 41.3872,
+            "lng": 9.1597
+          }
+        },
+        {
+          "hora": "10:40",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Bonifacio → Praia de Rondinara",
+          "cat": "~25min · N198 sentido norte, depois D158 (Suartone) · NÃO passa por Porto-Vecchio",
+          "coord": {
+            "lat": 41.4679,
+            "lng": 9.2665
+          }
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🏖️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Praia de Rondinara · baía em concha",
+          "cat": "A praia ⭐⭐⭐ da viagem · feita hoje, com o carro que já é seu",
+          "sobre": "Baía em forma de concha quase perfeitamente circular, com entrada estreita que cria efeito de <em>piscina natural</em>: água espelhada, fundo raso por longa distância e declive suavíssimo. É a praia mais fácil do roteiro — o estacionamento fica colado na areia, sem caminhada. Curiosidade de geografia: a península de Rondinara tem <strong>duas enseadas</strong>, e só uma delas é de areia fina — <strong>a outra é de seixos multicoloridos</strong>. Vocês vão na de areia; se caminharem até o outro lado, o chão muda completamente em poucos metros.",
+          "imperdivel": "A baía vista de cima do estacionamento · postal raro",
+          "dicas": [
+            "Parking €6/dia colado na areia · chegando ~10h15 ainda há vaga · depois das 11h em agosto, esquece (jul/2026)",
+            "'Chez Ange' é o restaurante de pé na areia · reserve ao chegar, não na hora do almoço",
+            "Lado direito (sul) pega menos vento · é o melhor com ela",
+            "Saída às 15h é firme · depois dela ainda tem check-in, Figari e devolução do carro",
+            "Areia fina entra em tudo · saco plástico pro equipamento e sacuda tudo antes de entrar no carro",
+            "Sem sombra natural · guarda-sol ou tenda leve é obrigatório em agosto"
+          ],
+          "duracao": "Dia inteiro",
+          "custo": "€6 parking · refeições à parte (jul/2026)",
+          "acessibilidade": "Total · parking colado na areia",
+          "coord": {
+            "lat": 41.4679,
+            "lng": 9.2665
+          },
+          "poiCat": "parque",
+          "valeAPena": 3
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço Rondinara",
+          "cat": "Pé-na-areia",
+          "coord": {
+            "lat": 41.4679,
+            "lng": 9.2665
+          },
+          "opcoes": [
+            {
+              "nome": "Chez Ange (praia)",
+              "desc": "Restaurante de praia · grelhados, peixe · reserva obrigatória",
+              "preco": "€35-50",
+              "dist": "Praia",
+              "poiCat": "restaurante",
+              "valeAPena": 3
+            },
+            {
+              "nome": "La Voile (Rondinara)",
+              "desc": "Mais informal · pizza, sanduíches · filha-friendly",
+              "preco": "€20-30",
+              "dist": "Praia",
+              "poiCat": "restaurante",
+              "valeAPena": 2
+            },
+            {
+              "nome": "Picnic",
+              "desc": "Estoque Spar de manhã · esticar dia na praia",
+              "preco": "€25",
+              "dist": "—",
+              "poiCat": "mercado",
+              "valeAPena": 2
+            }
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Rondinara → Bonifacio",
+          "cat": "~25min de volta",
+          "coord": {
+            "lat": 41.3872,
+            "lng": 9.1597
+          }
+        },
+        {
+          "hora": "15:30",
           "emoji": "🏠",
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
           "nome": "Check-in Bonifacio · base 5 noites",
-          "cat": "Reorganização · cidadela ou porto?",
-          "sobre": "Bonifacio tem duas zonas: a cidade alta (a cidadela medieval, na rocha) e a cidade baixa (porto e marina, no fiorde). <strong>Sem carro, a localização passa a ser tudo</strong> — confiram na chegada a distância a pé até padaria, mercado e o cais de onde saem os barcos das Lavezzi. A boa notícia: essa era a parte do roteiro que menos dependia do carro, e estacionar na cidadela em agosto era caos de qualquer jeito. O que vocês economizam em parking (€15-25/dia) paga boa parte de um aluguel de 1-2 dias, se decidirem por ele.",
-          "imperdivel": "Mapear no primeiro passeio: padaria, mercado e o cais dos barcos · são os 3 pontos da semana",
+          "cat": "Elas ficam · ele segue pra Figari",
+          "sobre": "Chegada em Bonifacio depois do dia em Rondinara. <strong>Aqui o grupo se divide</strong>: esposa e filha ficam no hotel — banho, descanso e o quarto já com as malas dentro — enquanto o Tobia segue sozinho pra Figari devolver o carro. É de longe a melhor divisão possível: ninguém arrasta uma criança cansada e cheia de areia até um balcão de locadora às 16h. Sem carro a partir de hoje, e isso é neutro: a cidadela, o porto, os barcos e o ferry de sábado funcionam todos a pé, e vocês economizam €15-25/dia de estacionamento.",
+          "imperdivel": "A divisão de tarefas · elas no chuveiro às 15h40, ele na estrada com o carro vazio",
           "dicas": [
-            "U Spar e Carrefour Express ficam na cidade baixa · estoque da semana no primeiro dia",
-            "Sem carro: zero gasto de parking (economia de €15-25/dia · jul/2026)",
-            "Locadoras têm balcão na marina, se quiserem carro pra Piantarella e Rondinara",
-            "Táxi local: pede o contato ao anfitrião hoje · em agosto não se acha na hora",
-            "Sesta com ela · o dia teve 3 etapas e foi longo"
+            "Combine antes quem fica com o quê · a bolsa de praia molhada não precisa ir pra Figari",
+            "U Spar e Carrefour Express na cidade baixa · estoque da semana pode esperar amanhã",
+            "Ele volta por volta das 17h15-17h30 de táxi · jantar a partir das 20h é confortável",
+            "Peça hoje ao anfitrião o contato de um táxi local · serve pro resto da semana",
+            "Se sobrar corda depois das 17h30: a cidadela ao pôr do sol é logo ali e a luz nas falésias começa ~19h30 · mas sem culpa nenhuma em pular — a versão narrada, com os avós, é na sexta"
           ],
           "duracao": "1h-2h",
           "custo": "Parking €15-25/dia (jul/2026)",
-          "acessibilidade": "Cidade baixa plana · cidade alta tem ladeira · sem carro, a subida à cidadela é a pé ou de trenzinho turístico",
+          "acessibilidade": "Cidade baixa plana · cidade alta em ladeira · a pé a partir de agora",
           "coord": {
             "lat": 41.3872,
             "lng": 9.1597
@@ -1301,31 +1326,56 @@
           "valeAPena": 1
         },
         {
-          "hora": "18:30",
-          "emoji": "🌅",
-          "periodo": "noite",
+          "hora": "15:50",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Bonifacio → Aeroporto Figari",
+          "cat": "~30min · ele sozinho, com o carro vazio",
+          "coord": {
+            "lat": 41.5044,
+            "lng": 9.0978
+          }
+        },
+        {
+          "hora": "16:20",
+          "emoji": "🔑",
+          "periodo": "tarde",
           "tipo": "card",
-          "risco": "green",
-          "nome": "Cidadela · pôr do sol nas falésias",
-          "cat": "Primeiro contato com a haute ville",
-          "sobre": "Caminhada introdutória pela cidadela com a luz do fim de tarde. Entra-se pela <strong>Porte de Gênes</strong>, cujo sistema de pont-levis por contrapesos data de <strong>1598</strong> e ainda funciona — e que foi, <strong>até 1854, a única entrada da cidade alta</strong>. Passa pela Place du Marché e segue até o mirante sul das muralhas. A citadela foi erguida pelos genoveses a partir do <strong>século XII</strong> e é a <strong>mais bem preservada da Córsega</strong>. Hoje é só reconhecimento de terreno: a versão narrada, com os avós, é no dia 7.",
-          "imperdivel": "Mirador sul das ramparts · falésia branca + Sardenha + barcos saindo do porto",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "nome": "Entrega do carro · Aeroporto Figari Sud-Corse (FSC)",
+          "cat": "Sozinho · devolução até as 17h",
+          "sobre": "Devolução no balcão da locadora no terminal de Figari, <strong>com o contrato vencendo às 17h</strong> — saindo de Bonifacio às 15h50 sobra folga de uns 15 minutos, que é pouco mas é real. Ir sozinho é o acerto do plano: elas já estão instaladas. A partir daqui a viagem é a pé, e isso já está resolvido — <strong>Rondinara, que era o único problema real de ficar sem carro, acabou de ser feita</strong>.",
+          "imperdivel": "Revistar o carro inteiro antes de entregar · porta-luvas, bolsos das portas e embaixo das cadeirinhas",
           "dicas": [
-            "Sai 18h30 · em agosto o sol cai ~20h30 e a luz dourada nas falésias começa 19h30",
-            "Porte de Gênes é a entrada plana · evita a Montée Rastello (escadaria) com carrinho",
-            "Sorveteria 'Da Mémé' na Place du Marché · ~€3-4 a bola",
-            "Só água e câmera · deixa mochila em casa, a subida é curta mas quente",
-            "Se a filha aguentar, emenda o jantar na cidadela · senão desce e come no porto"
+            "TÁXI JÁ RESERVADO pra ~16h45 · 04 95 71 04 45 · não há ônibus direto Figari→Bonifacio",
+            "Chegue com o tanque cheio · combustível cobrado pela locadora é muito mais caro",
+            "Foto dos 4 lados do carro e do painel com o nível · seguro contra cobrança indevida",
+            "Sacuda tapetes e bancos · o carro passou o dia numa praia de areia fina",
+            "Revista porta-luvas, bolsos das portas e embaixo da cadeirinha antes de entregar",
+            "Guarde o comprovante até a cobrança do cartão fechar"
           ],
-          "duracao": "1h30 caminhada",
-          "custo": "Grátis",
-          "acessibilidade": "Ramparts e Place du Marché plana · carrinho ok",
+          "duracao": "30-40min com fila em agosto",
+          "custo": "Sem custo extra se o contrato começou em Figari (jul/2026)",
+          "acessibilidade": "Terminal pequeno e plano · sozinho e sem bagagem, é rápido",
+          "coord": {
+            "lat": 41.5044,
+            "lng": 9.0978
+          }
+        },
+        {
+          "hora": "16:50",
+          "emoji": "🚕",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Figari (FSC) → Bonifacio",
+          "cat": "Táxi reservado · ~25min · ~€48-82",
           "coord": {
             "lat": 41.3872,
             "lng": 9.1597
-          },
-          "poiCat": "atracao",
-          "valeAPena": 3
+          }
         },
         {
           "hora": "20:30",
@@ -1366,7 +1416,7 @@
           ]
         }
       ],
-      "nota": "Dia de mudança de base com três etapas encadeadas: mirador de Roccapina como parada na estrada, entrega do carro no aeroporto de Figari e traslado sem carro até Bonifacio. <strong>A partir daqui vocês estão a pé</strong> — vale reler o card da entrega do carro antes de sair."
+      "nota": "<strong>O dia mais cheio da viagem — e o mais bem aproveitado.</strong> Em vez de alugar carro depois, Rondinara entra hoje, com o carro que ainda é seu. Saída cedo, malas largadas em Bonifacio no caminho, dia inteiro na melhor praia do roteiro, e só então a devolução em Figari — que o Tobia faz sozinho, enquanto elas já estão no hotel. Isso libera o dia 6 por completo e dispensa qualquer aluguel."
     },
     {
       "date": "Ter 4/Ago",
@@ -1655,101 +1705,133 @@
     },
     {
       "date": "Qui 6/Ago",
-      "tema": "Praia de Rondinara",
-      "temaCurto": "Rondinara",
-      "bairro": "🛥️ Rondinara & Norte",
+      "tema": "Dia leve a pé + barco nas falésias",
+      "temaCurto": "Falésias",
+      "bairro": "🏰 Bonifacio Cidadela",
       "grupo": false,
       "cor": "#14b8a6",
       "gradA": "#134e4a",
       "gradB": "#115e59",
       "stops": [
         {
-          "hora": "09:00",
-          "emoji": "🚗",
-          "periodo": "manha",
-          "tipo": "transit",
-          "nome": "Bonifacio → Rondinara",
-          "cat": "~25min · N198 + D158 (estrada de terra final)",
-          "coord": {
-            "lat": 41.4679,
-            "lng": 9.2665
-          }
-        },
-        {
-          "hora": "09:30",
+          "hora": "10:00",
           "emoji": "🏖️",
           "periodo": "manha",
           "tipo": "card",
           "risco": "green",
-          "nome": "Praia de Rondinara · baía em concha",
-          "cat": "Top-3 praia da Córsega · perfeita pra filha",
-          "sobre": "Baía em forma de concha quase perfeitamente circular, com entrada estreita que cria efeito de <em>piscina natural</em>: água espelhada, fundo raso por longa distância e declive suavíssimo. É a praia mais fácil do roteiro — o estacionamento fica colado na areia, sem caminhada. Curiosidade de geografia: a península de Rondinara tem <strong>duas enseadas</strong>, e só uma delas é de areia fina — <strong>a outra é de seixos multicoloridos</strong>. Vocês vão na de areia; se caminharem até o outro lado, o chão muda completamente em poucos metros.",
-          "imperdivel": "A baía vista de cima do estacionamento · postal raro",
-          "dicas": [
-            "Parking €6/dia direto na praia · não precisa caminhar",
-            "Chega antes das 10h · enche em agosto",
-            "'Chez Ange' é o restaurante de pé na areia · reserva almoço",
-            "Lado direito (sul) menos vento · melhor com filha",
-            "Areia fina entra em tudo · saco plástico pra equipamentos"
-          ],
-          "duracao": "Dia inteiro",
-          "custo": "€6 parking · refeições à parte (jul/2026)",
-          "acessibilidade": "Total · parking colado na areia",
-          "coord": {
-            "lat": 41.4679,
-            "lng": 9.2665
-          },
           "poiCat": "parque",
-          "valeAPena": 3
+          "valeAPena": 2,
+          "nome": "Praia da Arinella ou da Catena (a pé, saindo do porto)",
+          "cat": "As duas enseadas alcançáveis sem carro",
+          "sobre": "Duas pequenas enseadas logo na saída da entrada do porto de Bonifacio, alcançadas por trilha a pé. A <strong>Arinella</strong> tem areia fina e água turquesa e é a melhor das duas pra passar uma manhã com ela; a <strong>Catena</strong> é ainda menor e mais abrigada. Nenhuma das duas é Rondinara — são pequenas e enchem — mas hoje o ponto não é a praia perfeita, é não precisar de carro nem de horário. Quem quiser algo mais curto: a <strong>Sutta Rocca</strong> fica a 5min a pé da cidade alta, descendo pela capela na Av. Charles de Gaulle, mas é estreita e só de seixos — sapato de água obrigatório.",
+          "imperdivel": "Olhar pra cima da água: a cidade alta aparece pendurada na falésia, do ângulo que ninguém fotografa",
+          "dicas": [
+            "Trilha sai da zona do porto · 15-25min a pé conforme a enseada · sombra escassa no caminho",
+            "Vá de manhã · são pequenas e enchem depois das 11h em agosto",
+            "Leve água e lanche · não há comércio em nenhuma das duas",
+            "Fundo com pedra na entrada · sapato de água facilita muito pra ela",
+            "Se o dia estiver muito quente, troque por manhã tranquila no porto e sesta longa · hoje é dia de descanso, não de meta"
+          ],
+          "duracao": "2h-3h",
+          "custo": "Grátis (jul/2026)",
+          "acessibilidade": "Trilha de terra e pedra · carrinho NÃO passa · canguru ou colo pra ela",
+          "coord": {
+            "lat": 41.3875,
+            "lng": 9.1544
+          },
+          "coord_unverified": true
         },
         {
           "hora": "13:00",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
-          "nome": "Almoço Rondinara",
-          "cat": "Pé-na-areia",
+          "nome": "Almoço · porto de Bonifacio",
+          "cat": "Volta da praia · a pé",
           "coord": {
-            "lat": 41.4679,
-            "lng": 9.2665
+            "lat": 41.3875,
+            "lng": 9.1544
           },
           "opcoes": [
             {
-              "nome": "Chez Ange (praia)",
-              "desc": "Restaurante de praia · grelhados, peixe · reserva obrigatória",
-              "preco": "€35-50",
-              "dist": "Praia",
+              "nome": "Da Passano (porto)",
+              "desc": "Tapas corsas pra dividir · o mais fácil com ela cansada da trilha",
+              "preco": "€30-45",
+              "dist": "Porto",
               "poiCat": "restaurante",
               "valeAPena": 3
             },
             {
-              "nome": "La Voile (Rondinara)",
-              "desc": "Mais informal · pizza, sanduíches · filha-friendly",
-              "preco": "€20-30",
-              "dist": "Praia",
-              "poiCat": "restaurante",
+              "nome": "Piquenique no quai",
+              "desc": "Padaria do porto + Carrefour Express · come com pé na água e sobra tempo de sesta",
+              "preco": "€20 família",
+              "dist": "Porto",
+              "poiCat": "mercado",
               "valeAPena": 2
             },
             {
-              "nome": "Picnic",
-              "desc": "Estoque Spar de manhã · esticar dia na praia",
-              "preco": "€25",
-              "dist": "—",
-              "poiCat": "mercado",
+              "nome": "U Castillé (cidadela)",
+              "desc": "Se quiserem subir · familiar, porções generosas · mas custa a ladeira",
+              "preco": "€25-40",
+              "dist": "Cidade alta",
+              "poiCat": "restaurante",
               "valeAPena": 2
             }
           ]
         },
         {
-          "hora": "17:30",
-          "emoji": "🚗",
+          "hora": "15:00",
+          "emoji": "😴",
           "periodo": "tarde",
-          "tipo": "transit",
-          "nome": "Rondinara → Bonifacio",
-          "cat": "~25min volta",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "nome": "Sesta · o único compromisso da tarde",
+          "cat": "Deliberado · amanhã chegam os avós",
+          "sobre": "Este é o único dia da segunda metade da viagem sem nada marcado, e ele está entre o dia mais pesado (segunda, com Rondinara e a devolução do carro) e a chegada dos avós amanhã, que vai agitar a filha. <strong>A sesta aqui não é preguiça, é manutenção</strong> — e garante que ela aguente o barco no fim da tarde.",
+          "imperdivel": "Ninguém olhar o relógio entre 15h e 17h",
+          "dicas": [
+            "Compre os bilhetes do barco na guichê da SPMB até as 12h · aí a tarde não tem pendência (€18,50-26/adulto · jul/2026)",
+            "Confirme com os pais o horário de chegada de amanhã e o restaurante do almoço",
+            "Estoque de mercado pra sexta e sábado · U Spar e Carrefour Express na cidade baixa",
+            "É o melhor dia da semana pra lavar roupa de praia · amanhã e depois não sobra tempo"
+          ],
+          "duracao": "2h",
+          "custo": "Grátis (jul/2026)",
+          "acessibilidade": "Total · o dia é em casa e no porto, tudo plano e a pé",
           "coord": {
             "lat": 41.3872,
             "lng": 9.1597
+          }
+        },
+        {
+          "hora": "17:30",
+          "emoji": "⛵",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Grutas e falésias de barco · SPMB Circuito 1 (bilheteria no porto)",
+          "cat": "~1h de barco · a única forma de ver Bonifacio por baixo",
+          "sobre": "<strong>É a coisa que não dá pra fazer de outro jeito.</strong> Bonifacio inteira está equilibrada no alto de uma falésia de calcário branco que o mar cavou por baixo — e isso só se vê <em>do mar</em>. O circuito passa ao pé do paredão, mostra o <strong>Escalier du Roi d'Aragon</strong> talhado na vertical (os mesmos 187 degraus da lenda aragonesa, vistos de baixo, onde a escala fica óbvia), o <strong>Grain de Sable</strong> — o bloco de calcário que se desprendeu da falésia e ficou de pé no mar — as calanques de Fazzio e a Pointe Saint-Antoine, <em>o ponto mais ao sul da Córsega</em>.<br><br><strong>Ressalva honesta:</strong> a célebre <em>grotte du Sdragonato</em>, com o buraco no teto em forma da própria Córsega, está <strong>interditada por risco de desabamento</strong>. Os barcos passam pelas grutas mas não entram mais. Se você viu essa foto e é ela que te move, saiba disso antes de comprar o bilhete — o passeio continua valendo pelas falésias, não pela gruta.",
+          "imperdivel": "O casario da cidade alta visto de baixo, com a falésia escavada por baixo dele · de terra é impossível entender por que Bonifacio é famosa; do mar, é imediato",
+          "dicas": [
+            "Circuito 1 (grutas, falésias e calanques) · ~1h · €18,50-26 por adulto conforme o circuito — confirme na bilheteria (jul/2026)",
+            "Saídas a cada 30min, aproximadamente das 9h às 19h · vá no fim da tarde, quando o calcário esquenta de cor",
+            "NÃO dá pra reservar online · bilhete só na guichê da SPMB no porto · compre de manhã pro horário da tarde",
+            "1h é a duração certa com criança de 3 anos · os circuitos de 2h repetem as Lavezzi, que vocês já fizeram na terça",
+            "Sente do lado voltado pra terra na ida · é de lá que se vê a cidade",
+            "Vento entra no canal no fim da tarde · leve um casaco leve pra ela mesmo em agosto",
+            "A SPMB oferece estacionamento gratuito a quem faz o passeio — irrelevante pra vocês, que estão a pé"
+          ],
+          "duracao": "1h de barco + ~30min de bilheteria e embarque",
+          "custo": "€18,50-26/adulto · tarifa infantil a confirmar no guichê (jul/2026)",
+          "acessibilidade": "Embarque no cais é plano · barco tem banco corrido · carrinho fica no cais · colo com ela sentada",
+          "coord": {
+            "lat": 41.3875,
+            "lng": 9.1544
           }
         },
         {
@@ -1791,7 +1873,7 @@
           ]
         }
       ],
-      "nota": "Dia de praia única, sem segunda parada. Rondinara é a mais bonita e a mais fácil do roteiro (parking colado na areia) — merece o dia inteiro em vez de virar item de lista."
+      "nota": "Rondinara já foi feita na segunda, então este dia ficou <strong>livre — e leve de propósito</strong>: é o descanso entre o dia mais puxado da viagem e a chegada dos avós amanhã. Manhã de praia a pé, sesta, e o barco no fim da tarde, quando a falésia branca muda de cor. Zero carro, zero horário apertado."
     },
     {
       "date": "Sex 7/Ago",
@@ -2249,6 +2331,13 @@
         "label": "Aéroport Figari Sud-Corse",
         "url": "https://www.2a.cci.fr/Aeroport-Figari-Sud-Corse.html"
       }
+    ],
+    "Grutas e falésias de barco · SPMB Circuito 1 (bilheteria no porto)": [
+      {
+        "type": "official",
+        "label": "SPMB · os circuitos",
+        "url": "https://www.spmbonifacio.com/circuits"
+      }
     ]
   },
   "transit_map": {
@@ -2281,12 +2370,6 @@
       "taxi": "€20-25 · 15min",
       "carro": "15min · D260 · estrada estreita"
     },
-    "Bonifacio → Rondinara": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€60-70 · 25min",
-      "carro": "25min · N198 + D158 (último trecho terra)"
-    },
     "Ferry Bonifacio → Santa Teresa di Gallura": {
       "uber": "Não aplicável",
       "metro": "Sem opção",
@@ -2314,11 +2397,6 @@
       "uber": "Shuttle SPMB · retornos de hora em hora a partir das 12h30",
       "metro": "Volta costuma levar ~1h (passa pelas falésias) contra 30min na ida",
       "taxi": "Último retorno em agosto ~17h-18h · confirma o horário no guichê ao embarcar"
-    },
-    "Rondinara → Bonifacio": {
-      "uber": "Carro próprio · ~25min",
-      "metro": "Estrada da praia até a N198, depois sul até Bonifacio",
-      "taxi": "~€45-55 se precisar"
     },
     "Chegada dos avós em Bonifacio": {
       "uber": "De carro próprio desde Olbia",
@@ -2374,6 +2452,26 @@
       "uber": "TÁXI é a opção confiável · ~€48-82 · ~25min · ponto de táxi do aeroporto 04 95 71 04 45 · reserve na véspera em agosto",
       "metro": "NÃO há linha direta aeroporto→Bonifacio. As navettes do aeroporto ligam Figari ↔ rodoviária de PORTO-VECCHIO (rede A Berlina, ~5 rotações/dia no verão). Bonifacio só por conexão, com espera. Confirmar no 04 95 71 25 15 antes de contar com isso.",
       "taxi": "Transfer privado (van até 8 lugares) ~€126 · vale se forem muitas malas"
+    },
+    "Roccapina → Bonifacio": {
+      "uber": "Carro próprio · ~40min",
+      "metro": "N196 sentido sul · passa perto do desvio de Figari antes de chegar",
+      "taxi": "~€70-90"
+    },
+    "Bonifacio → Praia de Rondinara": {
+      "uber": "Carro próprio · ~25min · 15-16km",
+      "metro": "N198 sentido Bastia por ~16km, depois à direita na D158 (placa Suartone/Rondinara) · o desvio é MUITO antes de Porto-Vecchio, que fica a ~28km",
+      "taxi": "~€45-55 por trecho · sem transporte público nenhum até a praia"
+    },
+    "Rondinara → Bonifacio": {
+      "uber": "Carro próprio · ~25min",
+      "metro": "D158 de volta até a N198 e sentido sul",
+      "taxi": "~€45-55"
+    },
+    "Bonifacio → Aeroporto Figari": {
+      "uber": "Carro próprio · ~30min · 21-22km pela N196",
+      "metro": "Não há linha direta · as navettes do aeroporto servem Porto-Vecchio",
+      "taxi": "~€48-82 se precisar fazer no sentido inverso"
     }
   },
   "bairros_config": [
