@@ -312,8 +312,8 @@
     },
     {
       "date": "Qua 29/Jul",
-      "tema": "Praia de Cupabia · dia selvagem",
-      "temaCurto": "Cupabia",
+      "tema": "Porto Pollo livre · dia sem plano",
+      "temaCurto": "Livre",
       "bairro": "🏖️ Porto Pollo & Valinco",
       "grupo": false,
       "cor": "#84cc16",
@@ -322,90 +322,69 @@
       "stops": [
         {
           "hora": "09:30",
-          "emoji": "🚗",
-          "periodo": "manha",
-          "tipo": "transit",
-          "nome": "Porto Pollo → Praia de Cupabia",
-          "cat": "~30min · estrada de terra rodável no fim",
-          "coord": {
-            "lat": 41.7366,
-            "lng": 8.7822
-          }
-        },
-        {
-          "hora": "10:00",
           "emoji": "🏖️",
-          "periodo": "tarde",
+          "periodo": "manha",
           "tipo": "card",
           "risco": "green",
-          "nome": "Praia de Cupabia",
-          "cat": "Praia secreta · 5km norte de Porto Pollo",
-          "sobre": "Praia de <strong>areia branca muito fina</strong> em Coti-Chiavari, bem mais selvagem que Porto Pollo, no extremo norte do Golfo de Valinco. Acesso por estrada de terra perfeitamente rodável com carro normal. Sem comércio, sem salva-vidas, sem estrutura — e é exatamente por isso que ela ainda é o que é. Junto com a Cala d'Orzu, é apontada como a mais bonita do golfo. A contrapartida da beleza é logística: <strong>tudo o que vocês precisarem tem que entrar no carro antes</strong>, inclusive sombra e banheiro (não há).",
-          "imperdivel": "Caminhar até a extremidade norte · fica quase deserta",
+          "nome": "Praia de Porto Pollo · dia aberto",
+          "cat": "Sem meta · vocês decidem na hora",
+          "sobre": "Dia sem programação, no meio da primeira semana. A essa altura ela já conhece a praia e criou rotina — e é isso que faz um dia assim render. O <strong>Golfo de Valinco</strong> é abrigado e raso por dezenas de metros, ideal pra ela entrar sozinha. Se der vontade de sair da inércia, as dicas abaixo listam o que cabe num dia curto a partir daqui, sem comprometer o resto da semana.",
+          "imperdivel": "Um dia inteiro sem ninguém olhar o relógio · é o que sustenta os dias cheios",
           "dicas": [
-            "Sem barraca, sem snack-bar · leva água + lanche + sombra",
-            "Parking de terra · 5min a pé até a água",
-            "Banheiro: zero · planeja sair em ~3h se for com filha"
+            "Caiaque ou stand-up alugado na praia · €15-20/hora · o golfo é ideal pra iniciante (jul/2026)",
+            "Se quiserem sair: Propriano fica a 22min · porto, sorveteria e o Carrefour Market na N196",
+            "Cala d'Orzu, vizinha de Cupabia, é a outra praia bonita do norte do golfo · ~40min",
+            "Padaria (Casabianca ou Igliastrolo) abre 7h · café da manhã na praia antes de todo mundo",
+            "Banheiro público na entrada da praia · o único da região com criança",
+            "Mercado da vila fecha 13h-16h · compras antes ou depois"
           ],
-          "duracao": "3h-4h tarde",
-          "custo": "Grátis",
-          "acessibilidade": "Trilha de terra até a areia · carrinho de 4 rodas firmes ok · stroller fino sofre",
+          "duracao": "Manhã + almoço",
+          "custo": "—",
+          "acessibilidade": "Total · rampa de entrada e areia plana · banheiro público na entrada",
           "coord": {
-            "lat": 41.7366,
-            "lng": 8.7822
+            "lat": 41.7071,
+            "lng": 8.7939
           },
           "poiCat": "parque",
           "valeAPena": 2
         },
         {
           "hora": "13:00",
-          "emoji": "🧺",
+          "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
-          "nome": "Almoço · piquenique em Cupabia",
-          "cat": "Não há comércio na praia · tem que sair pronto de casa",
+          "nome": "Almoço · Porto Pollo",
+          "cat": "Sem sair da vila",
           "coord": {
-            "lat": 41.7366,
-            "lng": 8.7822
+            "lat": 41.7071,
+            "lng": 8.7946
           },
           "opcoes": [
             {
-              "nome": "Piquenique levado de casa",
-              "desc": "Padaria de Porto Pollo abre 7h · pão fresco + charcutaria + fruta · a única opção que não custa 40min de carro",
-              "preco": "€20 família",
-              "dist": "Na praia",
-              "poiCat": "mercado",
+              "nome": "L'Escale (paillote · Porto Pollo)",
+              "desc": "Paillote pé na areia · sai da água e senta · o mais prático com ela molhada",
+              "preco": "€20-30",
+              "dist": "Praia",
+              "poiCat": "restaurante",
               "valeAPena": 3
             },
             {
-              "nome": "Bar du Stade (Olmeto)",
-              "desc": "Se cansarem da areia · bistrô local, prato do dia, 100% corso e sem turistada · ~25min",
-              "preco": "€15-20",
-              "dist": "~25min",
+              "nome": "L'Espace Porto Pollo",
+              "desc": "Pizza e vista do golfo · funciona pra comer no local ou levar",
+              "preco": "€18-28",
+              "dist": "Porto Pollo",
               "poiCat": "restaurante",
               "valeAPena": 2
             },
             {
-              "nome": "Volta a Porto Pollo (L'Escale)",
-              "desc": "Encurta o dia mas resolve se ela derreter no sol · paillote pé na areia",
-              "preco": "€20-30",
-              "dist": "~30min",
-              "poiCat": "restaurante",
-              "valeAPena": 1
+              "nome": "Piquenique na praia",
+              "desc": "Padaria + Spar da vila (feche antes das 13h) · come com pé na água",
+              "preco": "€20 família",
+              "dist": "Praia",
+              "poiCat": "mercado",
+              "valeAPena": 2
             }
           ]
-        },
-        {
-          "hora": "16:30",
-          "emoji": "🚗",
-          "periodo": "tarde",
-          "tipo": "transit",
-          "nome": "Cupabia → Porto Pollo",
-          "cat": "~30min de volta",
-          "coord": {
-            "lat": 41.7071,
-            "lng": 8.7946
-          }
         },
         {
           "hora": "19:30",
@@ -446,7 +425,7 @@
           ]
         }
       ],
-      "nota": "Dia de praia sem estrutura nenhuma — e é esse o ponto. Cupabia não tem comércio, salva-vidas nem banheiro, então tudo entra no carro antes de sair. Em troca vocês ganham a praia mais bonita do golfo quase vazia. Filitosa saiu daqui e foi pro domingo."
+      "nota": "Cupabia saiu daqui e foi pro domingo, então este dia ficou <strong>deliberadamente em aberto</strong>. É o terceiro dia de viagem: bom momento pra deixar a filha ditar o ritmo e vocês decidirem na hora se querem praia, caiaque ou uma volta a Propriano. <strong>Se preferirem encher o dia, há sugestões nas dicas do card</strong>."
     },
     {
       "date": "Qui 30/Jul",
@@ -943,7 +922,7 @@
     },
     {
       "date": "Dom 2/Ago",
-      "tema": "Filitosa + última tarde em Porto Pollo",
+      "tema": "Filitosa + Praia de Cupabia",
       "temaCurto": "Filitosa",
       "bairro": "🏖️ Porto Pollo & Valinco",
       "grupo": false,
@@ -1034,11 +1013,11 @@
           "emoji": "🚗",
           "periodo": "tarde",
           "tipo": "transit",
-          "nome": "Filitosa → Porto Pollo",
-          "cat": "~25min de volta",
+          "nome": "Filitosa → Praia de Cupabia",
+          "cat": "~25min · descendo o Taravo e virando pra Coti-Chiavari",
           "coord": {
-            "lat": 41.7071,
-            "lng": 8.7946
+            "lat": 41.7366,
+            "lng": 8.7822
           }
         },
         {
@@ -1047,25 +1026,38 @@
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
-          "nome": "Praia de Porto Pollo · última tarde",
-          "cat": "Despedida do Valinco · mala à noite",
-          "sobre": "Última tarde antes de descer pra Bonifacio amanhã. Aproveitem a água calma e fechem com ela a rotina que já conhece — é a praia que ela vai lembrar. Mala à noite, porque o dia de amanhã tem entrega de carro no aeroporto e traslado sem carro até Bonifacio.",
-          "imperdivel": "O último pôr do sol do golfo · o laranja na água que ela já aprendeu a esperar",
+          "nome": "Praia de Cupabia",
+          "cat": "Areia branca fina · despedida do Golfo de Valinco",
+          "sobre": "Praia de <strong>areia branca muito fina</strong> em Coti-Chiavari, bem mais selvagem que Porto Pollo, no extremo norte do Golfo de Valinco. Acesso por estrada de terra perfeitamente rodável com carro normal. Sem comércio, sem salva-vidas, sem estrutura — e é exatamente por isso que ela ainda é o que é. Junto com a Cala d'Orzu, é apontada como a mais bonita do golfo. A contrapartida da beleza é logística: <strong>tudo o que vocês precisarem tem que entrar no carro antes</strong>, inclusive sombra e banheiro (não há).",
+          "imperdivel": "Caminhar até a extremidade norte, onde ela fica quase deserta · e o último mergulho no Valinco antes de descer pro sul amanhã",
           "dicas": [
-            "Última compra no Carrefour Market Viggianello (N196) se quiserem levar algo pra Bonifacio",
-            "Organizar a mala hoje à noite · amanhã o check-out é cedo e o dia é longo",
-            "Confirma o check-in de Bonifacio e o horário da navette de Figari",
-            "Padaria (Casabianca ou Igliastrolo, em Porto Pollo) abre 7h · café da manhã de despedida amanhã antes de sair"
+            "Sem barraca, sem snack-bar, sem salva-vidas · água, lanche e sombra saem de casa",
+            "Parking de terra · ~5min a pé até a água",
+            "Banheiro: zero · com ela, planeje ~3h no máximo",
+            "Volte até as 18h · amanhã o check-out é às 7h30 e a mala tem que estar pronta hoje",
+            "Sacuda tudo antes de entrar no carro · a areia daqui é fina e vai junto pra Bonifacio"
           ],
-          "duracao": "Manhã + almoço",
-          "custo": "—",
-          "acessibilidade": "Total · rampa de entrada e areia plana · banheiro público na entrada",
+          "duracao": "3h-4h tarde",
+          "custo": "Grátis",
+          "acessibilidade": "Trilha de terra até a areia · carrinho de 4 rodas firmes ok · stroller fino sofre",
           "coord": {
-            "lat": 41.7071,
-            "lng": 8.7939
+            "lat": 41.7366,
+            "lng": 8.7822
           },
           "poiCat": "parque",
           "valeAPena": 2
+        },
+        {
+          "hora": "18:00",
+          "emoji": "🚗",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Cupabia → Porto Pollo",
+          "cat": "~30min · última volta pra casa",
+          "coord": {
+            "lat": 41.7071,
+            "lng": 8.7946
+          }
         },
         {
           "hora": "19:30",
@@ -1106,7 +1098,7 @@
           ]
         }
       ],
-      "nota": "Filitosa veio da quarta pra cá, e o domingo até favorece: o <strong>museu abre 9h no fim de semana</strong> (em dia útil só às 10h). Manhã de história, tarde de despedida da praia de casa e mala à noite — amanhã a base muda pra Bonifacio."
+      "nota": "Último dia no Valinco, e ele fecha os dois extremos da região: <strong>3.500 anos de história de manhã</strong> em Filitosa, <strong>a praia mais bonita do golfo à tarde</strong> em Cupabia. As duas ficam ao norte de Porto Pollo, então o dia é um arco curto sem backtrack. Atenção ao fim: Cupabia não tem estrutura nenhuma e amanhã a saída é <strong>7h30</strong> — voltem com tempo de fazer a mala com calma."
     },
     {
       "date": "Seg 3/Ago",
@@ -2408,11 +2400,6 @@
       "metro": "De Santa Teresa a Olbia são ~1h de carro / ~1h30-2h de ônibus ARST",
       "taxi": "Santa Teresa → Olbia de táxi ~€120 · reserva na véspera"
     },
-    "Porto Pollo → Praia de Cupabia": {
-      "uber": "Carro próprio · ~30min",
-      "metro": "Estrada da costa até Serra-di-Ferro e depois desvio de terra (rodável com carro normal)",
-      "taxi": "~€40-50 · sem transporte público"
-    },
     "Cupabia → Porto Pollo": {
       "uber": "Carro próprio · ~30min",
       "metro": "Mesmo caminho de volta",
@@ -2472,6 +2459,11 @@
       "uber": "Carro próprio · ~30min · 21-22km pela N196",
       "metro": "Não há linha direta · as navettes do aeroporto servem Porto-Vecchio",
       "taxi": "~€48-82 se precisar fazer no sentido inverso"
+    },
+    "Filitosa → Praia de Cupabia": {
+      "uber": "Carro próprio · ~25min",
+      "metro": "Desce o vale do Taravo e vira pra Coti-Chiavari · trecho final em estrada de terra rodável com carro normal",
+      "taxi": "~€35-45 · sem transporte público"
     }
   },
   "bairros_config": [
