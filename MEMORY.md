@@ -37,6 +37,29 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 - Cafés-família abrem **só de tarde em dias de semana** (Hippolatte qua 16-20h). Sempre conferir horário do dia exato antes de cravar — salvou o encaixe pós-Oceanogràfic.
 - **Grupo grande (8+) com várias crianças** (ex: Paris/Luxembourg, 10 pessoas · 4 crianças 2-7a): o filtro que decide **não** é "melhor comida", é **espaço + aceita reserva de grupo + criança pode circular**. Priorizar lugar com terraço/jardim onde a criança se distrai (ex: La Terrasse de Madame, dentro do Jardin du Luxembourg · menu enfant + reserva de grupo). Sempre **flag pra ligar e reservar com antecedência** — mesa pra 10 num domingo sem aviso é furada. Ter um **plano B "à prova de falha"** (rede tipo Léon/Hippopotamus: menu enfant, cadeirão, aceita grupo fácil) vale mais que um 2º lugar chique.
 
+### Preferências do Tobia · observadas em campo (Córsega · ago/2026)
+Inferidas do comportamento durante a viagem e **confirmadas por ele**. Valem como default
+pra montagem de qualquer roteiro futuro.
+
+- **Prefere reordenar a cortar.** Toda vez que a sobrecarga de um dia foi apontada, ele mexeu
+  na *sequência* (mover Filitosa pro domingo, Sartène pro sábado, Cupabia pra tarde de domingo)
+  em vez de remover conteúdo. Antes de propor corte, proponha remanejamento.
+- **Quer alternativas legíveis, não decisões fechadas.** Pediu duas vezes que a opção descartada
+  ficasse documentada pra ele julgar em campo (Col de Bavella, Polischellu-com-guia). Foi a
+  origem do uso sistemático de cards `🔄` nesta viagem. Não delete a alternativa — rebaixe-a a
+  card `🔄` com o custo explícito.
+- **Pensa logística melhor que o roteiro proposto.** A ideia de fazer Rondinara no dia da mudança
+  de base, usando o carro que já estava com ele antes de devolvê-lo em Figari, era superior às
+  seis opções que eu havia levantado num PDF de decisão. Quando ele propõe uma alternativa
+  logística, avaliar a sério antes de defender a própria.
+- **Verifica no chão e reporta rápido — é a fonte mais confiável do roteiro.** Dois erros
+  factuais pegos em campo em três dias (Le Lido, Auberge Coralli), nenhum deles detectável por
+  pesquisa. Relato dele tem autoridade sobre qualquer fonte web.
+
+**Em aberto** (não promover sem resposta dele): se "sem desvio" é preferência geral de rota ou
+gestão de prazo em manhãs com hora marcada. Os 3 casos observados tinham deadline (mercado que
+desmonta, parking que enche, devolução de carro) — confound não resolvido.
+
 ### O que precisou ajustar mid-trip
 - **SEMPRE verificar horário/dia de funcionamento ANTES de propor uma atração** — não basta ela existir e ser boa, tem que estar aberta no dia certo. Caso real (Paris · Notre-Dame domingo 7/jun/2026): propus o **Marché aux Fleurs** como âncora da manhã sem checar o dia; Tobia avisou que **fecha quase tudo no domingo** (e o mercado de pássaros foi desativado em 2021/2025). Tive que refazer a manhã (trocado por Square du Vert-Galant + Place Dauphine, sempre abertos). Lição: o passo de web_search deve incluir "**<atração> horário domingo/segunda <ano>**" pra toda âncora, especialmente domingo (dia de mais fechamento) — e desconfiar de mercados/lojas/restaurantes nesse dia. Conecta com a lição dos cafés-família (abrem só de tarde): horário é tão crítico quanto distância/preço.
 - **Geocoding bloqueado em ambiente mobile-cloud**: a rede do sandbox é allowlist-only · Nominatim/openalfa/callejero deram `Host not in allowlist` ou HTTP 403 no WebFetch. WebSearch resolve coords de POIs grandes (museus, zoos, parques) mas **não de endereços de rua específicos** (cafés, restaurantes pequenos). Workaround usado: endereço exato no `nome` (o "Abrir no Maps" navega certo via nome+endereço) + pino ancorado no quarteirão a partir de coord verificada vizinha + **flag transparente pro Tobia** de que aquele pino é aproximado. Não inventar coord precisa quando só dá pra ancorar — avisar é melhor que fingir precisão.
