@@ -397,6 +397,47 @@ def check_legend_no_dup(content):
     else:
         ok("Legenda sem duplicação · pills + notes complementares")
 
+def check_no_hardcoded_region(content):
+    """BLOQUEIA literal de cidade/região cravado na construção de URL do Google Maps.
+
+    Bug ago/2026 (reportado em campo, na Córsega): o template tinha `destStr+', New York, NY'`
+    em renderTransit e `clean+' New York'` no fallback de getMapsUrl — valor da PRIMEIRA viagem
+    cristalizado no template. Resultado: o botão de transporte público de um roteiro na Córsega
+    buscava "Praia de Rondinara, New York, NY". Passou pelo validate sem ninguém notar.
+
+    A regra: o sufixo de região vem SEMPRE do global MAPS_REGION (via regionSuffix()), nunca de
+    literal. O check varre só as linhas que montam URL de Maps — a prosa dos DAYS pode citar
+    qualquer cidade à vontade, e um roteiro de NYC não é falso-positivo.
+    """
+    if 'MAPS_REGION' not in content:
+        # Build anterior a ago/2026. Avisa (rotas por nome geocodam sem região), mas não
+        # bloqueia: quem só está corrigindo uma dica num roteiro antigo não deve travar aqui.
+        warn("MAPS_REGION ausente · HTML gerado por template antigo · rebuild com build.py "
+             "depois de adicionar maps_region ao data.json")
+        return
+
+    # Sufixo suspeito: literal que começa com vírgula ou espaço e segue com nome próprio
+    # — a forma exata de ", New York, NY" e " New York".
+    suffix_re = re.compile(r"""(['"])([,\s][ ]*[A-ZÀ-Þ][A-Za-zÀ-ÿ.'\-, ]{2,30})\1""")
+    offenders = []
+    for i, raw in enumerate(content.split('\n'), 1):
+        # tira comentário de linha · o (?<!:) evita comer a URL a partir de "https://"
+        line = re.sub(r'(?<!:)//.*$', '', raw)
+        if not re.search(r'google\.com/maps|encodeURIComponent', line):
+            continue
+        if 'MAPS_REGION' in line or 'regionSuffix' in line:
+            continue                               # já usa a fonte certa
+        for _, lit in suffix_re.findall(line):
+            offenders.append((i, lit.strip()))
+
+    if offenders:
+        amostra = ' · '.join(f'linha {n}: "{lit}"' for n, lit in offenders[:3])
+        err(f"Região hardcoded na URL do Maps ({len(offenders)} ocorrência(s)): {amostra} · "
+            f"o sufixo de região tem que vir de MAPS_REGION/regionSuffix(), nunca de literal")
+    else:
+        ok("Sem região hardcoded nas URLs do Maps · sufixo vem de MAPS_REGION")
+
+
 def check_alt_cards_excluded_from_route(content, days_text):
     """Cards 🔄 ALT devem ser EXCLUÍDOS da rota do dia (getRouteUrl).
     Convenção: cards de alternativa começam com '🔄' no nome.
@@ -491,6 +532,7 @@ def main():
     print(f"\n{C.DIM}── Features-chave ──{C.END}")
     check_required_features(content)
     check_legend_no_dup(content)
+    check_no_hardcoded_region(content)
     check_alt_cards_excluded_from_route(content, days_text)
 
     # Links (opcional)

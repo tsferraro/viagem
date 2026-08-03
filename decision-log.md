@@ -244,3 +244,50 @@ Decisões estruturais tomadas durante criação da skill. Cada entry: data · co
 **Validação (prova end-to-end do ciclo)**: fixture com prosa de 1 card destruída → `--suggest` marca ✍️ + top-5 âncora (10 pts) → reescrita Marais → `--diff`: **mecânico 18→18 (±0), julgamento 19→20 (+1)**, 2 achados ✍️ resolvidos, zero regressão, exit 0. É a prova viva do anti-Goodhart: melhora real de prosa aparece no **julgamento**, sem tocar (nem inflar) o mecânico. Suite 20/20.
 
 **Roadmap grader→router FECHADO**: A (`--suggest`) · C (`--diff` + RESEARCH) · D (REWRITE) entregues. B extinta. O audit deixou de ser só grader — diagnostica, roteia, e cada estação tem seu protocolo de conserto com loop fechado.
+
+---
+
+## 2026-08-03 · `pais-sardenha/` fica com o nome errado, de propósito
+
+**Contexto**: a convenção do `CLAUDE.md` pra roteiros paralelos da mesma viagem é
+`<viagem>-<sufixo>` — logo, o roteiro dos pais deveria estar em `sardenha-pais/`, não em
+`pais-sardenha/`. A pasta foi criada antes da convenção existir.
+
+**Decisão**: **não renomear**. A URL `tsferraro.github.io/viagem/pais-sardenha` já está com os
+pais, a viagem começa em 06/Ago (três dias depois desta sessão) e renomear quebraria o link
+com o roteiro em uso — sem contar o `localStorage` das reservas e dos "feitos", que é
+chaveado por página.
+
+**Alternativas rejeitadas**:
+
+| Alternativa | Por que não |
+|---|---|
+| Renomear pra `sardenha-pais/` | Quebra o link já compartilhado, três dias antes da viagem |
+| Renomear + redirect HTML em `pais-sardenha/` | Duas pastas pra mesma viagem, pior que o problema |
+
+**Ação pra próxima viagem**: quando `sardenha/` (o roteiro da família, 16-23/Ago) for criado
+em outra sessão, ele nasce com o nome certo. Se um dia o `pais-sardenha/` for arquivado,
+arquiva como `sardenha-pais` e o débito morre com ele.
+
+---
+
+## 2026-08-03 · `validate.py` passa a bloquear região hardcoded em URL do Maps
+
+**Contexto**: o bug do `', New York, NY'` cravado em `renderTransit` e do `' New York'` no
+fallback de `getMapsUrl` (HANDOFF-bugs-app-ago2026.md) foi reportado **em campo, na Córsega**,
+e passou pelo `validate.py` sem ser detectado. O próprio handoff pedia o check.
+
+**Decisão**: novo `check_no_hardcoded_region()` no `validate.py`. Varre **só as linhas que
+montam URL de Maps** (`google.com/maps` ou `encodeURIComponent`), ignora as que já usam
+`MAPS_REGION`/`regionSuffix()`, e **bloqueia** (erro, não aviso) qualquer literal com cara de
+sufixo geográfico — `', New York, NY'`, `' Sardegna'`. A prosa dos `DAYS` fica livre pra citar
+qualquer cidade: um roteiro de NYC não vira falso-positivo.
+
+**Duas armadilhas encontradas escrevendo o check** (ambas viraram teste):
+1. O strip de comentário `//` comia a própria URL a partir do `https://`. Fix: `(?<!:)//`.
+2. A classe de caracteres do sufixo não aceitava vírgula, então `', New York, NY'` — a forma
+   exata do bug real — não casava. Fix: vírgula na classe.
+
+**MAPS_REGION ausente é aviso, não erro**: builds anteriores a ago/2026 (marais, nyc-lab-*)
+não têm o global. Bloquear travaria uma correção de dica num roteiro antigo por um motivo que
+não é o da correção.
