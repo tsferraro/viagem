@@ -235,5 +235,24 @@ Padrões pra road-trips de **fim-de-semana com destino único** (festa/evento ·
 - **My Maps não importa no celular**: o "Importar CSV" só existe no My Maps **desktop** (não há app iOS/Android com import). Fluxo real = criar no computador 1×, consultar em campo via Google Maps → Salvos → Mapas. Documentado num `<details class="tm-help">` ao lado do botão de download, pra Tobia não tentar importar do celular e travar.
 
 ## Pendências
+
+### ⚠️ Conector Google Drive · bloqueado em sessão cloud (2026-08-03)
+Toda chamada — **leitura E escrita** — retorna `MCP error -32003: MCP tool call requires
+approval`, mesmo com o Tobia aprovando. Testado 4× escrita + 1× leitura, de celular e de
+desktop, na mesma sessão. **Não é o cliente.**
+
+Consequência prática: o plano de "eu leio a planilha de relatos direto do Drive" **não funciona
+hoje**. Não replanejar em cima dele sem testar antes com uma chamada barata (`search_files`).
+
+Alternativas que funcionam sem o conector, em ordem de esforço do Tobia:
+1. **Ele cola as linhas no chat** — zero setup, sempre funciona, é o que já vinha sendo feito
+2. **Publicar a planilha na web como CSV** (Arquivo → Compartilhar → Publicar na web → CSV) e me
+   passar a URL pública → tentar `WebFetch`. Não testado ainda; o proxy do sandbox dá 403 em
+   vários domínios, então pode não passar
+3. Conector voltar a funcionar numa sessão futura
+
+O desenho da captura **não muda**: o app segue escrevendo na planilha com as 4 colunas. O que
+está em aberto é só o transporte da planilha até mim.
+
 - [ ] Propagar o aviso de storage não-persistente (maybeWarnStorage · template) pros outros roteiros: rebuildar corsica, marais, valencia, pais-sardenha via build.py (só NYC foi reconstruído em 2026-07-08).
 - [ ] Propagar a **aba "Tudo no Mapa" + classificação `poiCat`/`valeAPena`** pros outros roteiros (o template já herda a aba; falta classificar os POIs e dar coord às opções de cada viagem).
