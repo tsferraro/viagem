@@ -62,8 +62,10 @@ Nenhuma dessas foi dita — foram inferidas do comportamento ao longo da sessão
 - **Quer alternativas legíveis, não decisões fechadas.** Pediu duas vezes (Bavella,
   Polischellu-com-guia) que a opção descartada ficasse documentada pra ele julgar em campo.
   Foi o que originou o uso sistemático de cards `🔄`.
-- **"Sem desvio" é critério, não detalhe.** Apareceu em três perguntas distintas — otimiza
-  eficiência de estrada de forma consciente.
+- ~~**"Sem desvio" é critério de rota.**~~ ❌ **INFERÊNCIA ERRADA — corrigida pelo Tobia em
+  2026-08-03**: *"num dia sem prazo com algo que realmente vale a pena eu vou sim"*. Era gestão de
+  prazo, não preferência de eixo. Os 3 casos tinham deadline. Regra correta registrada no
+  `MEMORY.md`.
 - **Pensa logística melhor que o roteiro.** A ideia de usar o carro no dia da mudança de base
   (Rondinara em 3/Ago) era superior às seis opções que eu havia levantado.
 - **Verifica no chão e reporta rápido.** Dois erros pegos em campo em três dias. É a fonte
@@ -73,7 +75,13 @@ Nenhuma dessas foi dita — foram inferidas do comportamento ao longo da sessão
 
 ## Erros meus · padrão acumulado
 
-Dois erros, mesma raiz: **descrever estabelecimentos a partir de busca, com confiança de
+**Terceiro erro, de outra natureza (2026-08-03)**: inferi uma preferência ("sem desvio") a partir
+de 3 observações que compartilhavam um confound (todas em manhãs com prazo). O confound eu tinha
+identificado e escrito — mas listei a inferência junto das outras, como se tivesse o mesmo peso.
+**Lição**: inferência de preferência com confound conhecido não deve ir pra mesma lista das
+observadas limpas. Separar e perguntar ANTES de listar.
+
+Dois erros de conteúdo, mesma raiz: **descrever estabelecimentos a partir de busca, com confiança de
 quem verificou.** A correção certa não é só o texto — é a régua. Proposta para a
 `critico-roteiro`: exigir marcação quando a localização de um estabelecimento não foi
 confirmada por fonte que a estabeleça explicitamente.

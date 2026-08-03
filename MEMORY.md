@@ -56,9 +56,15 @@ pra montagem de qualquer roteiro futuro.
   factuais pegos em campo em três dias (Le Lido, Auberge Coralli), nenhum deles detectável por
   pesquisa. Relato dele tem autoridade sobre qualquer fonte web.
 
-**Em aberto** (não promover sem resposta dele): se "sem desvio" é preferência geral de rota ou
-gestão de prazo em manhãs com hora marcada. Os 3 casos observados tinham deadline (mercado que
-desmonta, parking que enche, devolução de carro) — confound não resolvido.
+- **"Sem desvio" é gestão de prazo, NÃO preferência de rota.** Inferi errado durante a viagem e
+  ele corrigiu: *"num dia sem prazo, com algo que realmente vale a pena, eu vou sim"*. Os 3 casos
+  que observei tinham deadline (mercado que desmonta ao meio-dia, parking que enche às 11h,
+  devolução de carro às 17h) — era o prazo que ele estava protegendo, não o eixo da estrada.
+  **Regra prática**: em dia com compromisso rígido, otimizar pelo eixo e oferecer só o que está
+  na linha; em dia sem compromisso, **oferecer o desvio que vale, com o custo em minutos
+  explícito**, e deixar ele decidir. Nunca suprimir uma opção boa em nome de eficiência de rota.
+- **O fio que liga tudo: ele quer o custo explícito pra decidir, não a decisão pronta.** Vale pros
+  cards `🔄`, pros desvios e pras trocas de dia. Suprimir opção "pra facilitar" é o anti-padrão.
 
 ### O que precisou ajustar mid-trip
 - **SEMPRE verificar horário/dia de funcionamento ANTES de propor uma atração** — não basta ela existir e ser boa, tem que estar aberta no dia certo. Caso real (Paris · Notre-Dame domingo 7/jun/2026): propus o **Marché aux Fleurs** como âncora da manhã sem checar o dia; Tobia avisou que **fecha quase tudo no domingo** (e o mercado de pássaros foi desativado em 2021/2025). Tive que refazer a manhã (trocado por Square du Vert-Galant + Place Dauphine, sempre abertos). Lição: o passo de web_search deve incluir "**<atração> horário domingo/segunda <ano>**" pra toda âncora, especialmente domingo (dia de mais fechamento) — e desconfiar de mercados/lojas/restaurantes nesse dia. Conecta com a lição dos cafés-família (abrem só de tarde): horário é tão crítico quanto distância/preço.
