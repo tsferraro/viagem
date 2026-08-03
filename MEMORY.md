@@ -244,12 +244,19 @@ desktop, na mesma sessão. **Não é o cliente.**
 Consequência prática: o plano de "eu leio a planilha de relatos direto do Drive" **não funciona
 hoje**. Não replanejar em cima dele sem testar antes com uma chamada barata (`search_files`).
 
-Alternativas que funcionam sem o conector, em ordem de esforço do Tobia:
-1. **Ele cola as linhas no chat** — zero setup, sempre funciona, é o que já vinha sendo feito
-2. **Publicar a planilha na web como CSV** (Arquivo → Compartilhar → Publicar na web → CSV) e me
-   passar a URL pública → tentar `WebFetch`. Não testado ainda; o proxy do sandbox dá 403 em
-   vários domínios, então pode não passar
-3. Conector voltar a funcionar numa sessão futura
+**E o acesso HTTP direto também não existe**: `curl` a `docs.google.com` retorna **HTTP 000**
+(conexão não se estabelece) — o host está bloqueado na rede do sandbox, igual a
+`tsferraro.github.io`. O 403 do `WebFetch` era o proxy recusando, **não** o Google.
+Testado com a planilha aberta a "qualquer pessoa com o link": mesmo resultado.
+
+⛔ **Permissão nunca foi o problema. Não peça ao Tobia pra abrir a planilha — não resolve e
+expõe o diário da família à toa.** (Já aconteceu uma vez; ele abriu e teve que fechar de volta.)
+
+Caminho que funciona:
+1. **Ele cola as linhas no chat** — zero setup, sempre funciona. Foi assim que os 2 erros de
+   campo da Córsega (Le Lido, Auberge Coralli) chegaram e foram corrigidos no mesmo dia.
+2. Conector ou rede mudarem numa sessão futura — testar com 1 chamada barata antes de planejar
+   em cima.
 
 O desenho da captura **não muda**: o app segue escrevendo na planilha com as 4 colunas. O que
 está em aberto é só o transporte da planilha até mim.
