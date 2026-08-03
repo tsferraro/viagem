@@ -125,6 +125,18 @@ function getPeriodoMeta(p){
   }[p];
 }
 
+// Sufixo de região pra geocodar buscas (vem do data.json · MAPS_REGION).
+// BUG ago/2026: estava ", New York, NY" hardcoded — quebrava toda viagem fora de NY.
+function regionSuffix(){
+  return (typeof MAPS_REGION!=='undefined' && MAPS_REGION) ? ', '+MAPS_REGION : '';
+}
+// Centro de fallback do mapa: 1ª coord da viagem (antes era coord de NYC hardcoded).
+function fallbackCenter(){
+  for(const d of DAYS) for(const st of d.stops)
+    if(st.coord && typeof st.coord.lat==='number') return [st.coord.lat, st.coord.lng];
+  return [41.39, 9.16];
+}
+
 function getMapsUrl(stop){
   if(stop.noMaps) return '';
   // Pra opcoes (3+ alternativas), usar nome da PRIMEIRA opção pra link específico
@@ -135,12 +147,12 @@ function getMapsUrl(stop){
   // Remove parens MAS mantém conteúdo (endereços como "144 MacDougal" ajudam a busca)
   const clean=queryName.replace(/[()]/g,'').replace(/[^\p{L}\p{N}\s\-'&.,/:!?]/gu,'').replace(/\s+/g,' ').trim();
   if(stop.coord) return `https://www.google.com/maps/search/${encodeURIComponent(clean)}/@${stop.coord.lat},${stop.coord.lng},17z`;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean+' New York')}`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean+regionSuffix())}`;
 }
 
 // Monta URL de rota do Google Maps na forma path-segment (/dir/Nome1/Nome2/.../).
 // Mostra os NOMES das paradas E desenha o trajeto (a forma ?origin=&waypoints= só marcava pins).
-// Cada nome: parens removidos (conteúdo mantido) + ", New York, NY" pra geocodar certo · segmento URL-encoded.
+// Cada nome: parens removidos (conteúdo mantido) + sufixo de MAPS_REGION pra geocodar certo · segmento URL-encoded.
 // Total de segmentos capado em ~10 (amostra o miolo, mantém 1º + último).
 // Monta URL de rota do Google Maps na forma oficial api=1, por COORDENADAS.
 // Coord é exata (nomes vagos/eventos como "Fogos Macy's" caem no lugar errado).
@@ -160,6 +172,8 @@ function dirCoordUrl(coords,mode='walking'){
     }
     mids=pick.filter((p,i,a)=>a.indexOf(p)===i);
   }
+  dirCoordUrl.lastTotal = pts.length;
+  dirCoordUrl.lastUsed  = mids.length + 2;
   const ll=c=>`${c.lat},${c.lng}`;
   let url=`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(ll(origin))}&destination=${encodeURIComponent(ll(dest))}`;
   if(mids.length) url+=`&waypoints=${encodeURIComponent(mids.map(ll).join('|'))}`;
@@ -300,21 +314,50 @@ function nextStopName(day,idx){
   for(let j=idx+1;j<day.stops.length;j++){
     const s=day.stops[j];
     if(s.tipo!=='transit'){
-      if(s.tipo==='opcoes' && s.opcoes && s.opcoes.length) return s.opcoes[0].nome;
-      return s.nome;
+      if(s.tipo==='opcoes' && s.opcoes && s.opcoes.length)
+        return {nome:s.opcoes[0].nome, coord:s.opcoes[0].coord||s.coord, endereco:s.opcoes[0].endereco};
+      return {nome:s.nome, coord:s.coord, endereco:s.endereco};
     }
   }
   return null;
 }
 
+// Rótulos por modo de transporte. BUG ago/2026: era "🚕 Uber" hardcoded — em viagem de
+// carro próprio renderizava "Uber Carro próprio · ~40min".
+const MODO_META={
+  carro:{e:'🚗',l:'Carro'}, uber:{e:'🚕',l:'Uber'}, taxi:{e:'🚖',l:'Táxi'},
+  metro:{e:'🚇',l:'Metrô'}, onibus:{e:'🚌',l:'Ônibus'}, ferry:{e:'⛴️',l:'Ferry'},
+  trem:{e:'🚆',l:'Trem'}, 'a-pe':{e:'🚶',l:'A pé'}, rota:{e:'🗺️',l:'Como chegar'}
+};
+function transitOpcoes(t){
+  if(!t) return [];
+  if(Array.isArray(t.opcoes)) return t.opcoes;           // schema novo
+  return ['ferry','metro','uber','taxi']                  // legado
+    .filter(k=>t[k]).map(k=>({modo:k,texto:t[k]}));
+}
+
 function renderTransit(stop,dest){
   const t=TRANSIT_MAP[stop.nome];
-  const hasRoutes=t&&(t.ferry||t.metro||t.uber);
-  const destStr=dest||stop.nome;
-  const destAttr=destStr.replace(/"/g,'&quot;');
-  const transitUrl=`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destStr+', New York, NY')}&travelmode=transit`;
-  const uberLine=t&&t.uber?`<div class="route-option"><strong>🚕 Uber</strong> ${t.uber}<button class="route-act" type="button" data-copy="${destAttr}">📋 Copiar endereço</button></div>`:'';
-  const metroLine=t&&t.metro?`<div class="route-option"><strong>🚇 Metrô</strong> ${t.metro}<a class="route-act" href="${transitUrl}" target="_blank" rel="noopener">🚇 Transporte público</a></div>`:'';
+  const ops=transitOpcoes(t);
+  const hasRoutes=ops.length>0;
+  const destObj=(dest&&typeof dest==='object')?dest:null;
+  const destStr=(destObj?destObj.nome:dest)||stop.nome;
+  // BUG ago/2026: "Copiar endereço" copiava o NOME do próximo stop (descrição em português).
+  // Agora copia endereço se houver, senão a coordenada — que é o que se cola num GPS.
+  const destCoord=(destObj&&destObj.coord)||stop.coord;
+  const copyTxt=(destObj&&destObj.endereco) || (destCoord?`${destCoord.lat},${destCoord.lng}`:destStr);
+  const copyLbl=(destObj&&destObj.endereco)?'📋 Copiar endereço':(destCoord?'📋 Copiar coordenada':'📋 Copiar destino');
+  const destAttr=String(copyTxt).replace(/"/g,'&quot;');
+  const transitUrl=`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destStr+regionSuffix())}&travelmode=transit`;
+  const linhas=ops.map(o=>{
+    const m=MODO_META[o.modo]||{e:'📍',l:o.modo||''};
+    const emoji=o.emoji||m.e, label=o.label||m.l;
+    const isPublico=['metro','onibus','trem'].includes(o.modo);
+    const acao=isPublico
+      ? `<a class="route-act" href="${transitUrl}" target="_blank" rel="noopener">🚇 Transporte público</a>`
+      : `<button class="route-act" type="button" data-copy="${destAttr}">${copyLbl}</button>`;
+    return `<div class="route-option"><strong>${emoji} ${label}</strong> ${o.texto||''}${acao}</div>`;
+  }).join('');
   return `<div class="stop-transit ${hasRoutes?'collapsible':''}">
     <div class="stop-transit-header">
       <span class="stop-transit-emoji">${stop.emoji}</span>
@@ -323,11 +366,7 @@ function renderTransit(stop,dest){
       ${hasRoutes?'<span class="stop-transit-chev">▼</span>':''}
     </div>
     ${stop.cat?`<div class="stop-transit-cat">${stop.cat}</div>`:''}
-    ${hasRoutes?`<div class="stop-transit-routes">
-      ${t.ferry?`<div class="route-option"><strong>⛴️ Ferry</strong> ${t.ferry}</div>`:''}
-      ${metroLine}
-      ${uberLine}
-    </div>`:''}
+    ${hasRoutes?`<div class="stop-transit-routes">${linhas}</div>`:''}
   </div>`;
 }
 
@@ -602,17 +641,16 @@ function renderDayTabs(){
 }
 
 function getBairroForCoord(lat, lng){
-  // Detecção canônica de bairro por coordenadas
-  if(lat>40.715 && lat<40.745 && lng>-73.97 && lng<-73.93) return '🏘️ Greenpoint / Williamsburg';
-  if(lat>40.69 && lat<40.715 && lng>-74.00 && lng<-73.985) return '🌉 DUMBO / Brooklyn Bridge Park';
-  if(lat>40.70 && lat<40.72 && lng>-74.02 && lng<-74.00) return '🗽 Lower Manhattan / Financial';
-  if(lat>40.726 && lat<40.74 && lng>-74.01 && lng<-73.99) return '🎨 Greenwich Village / West Village';
-  if(lat>40.74 && lat<40.76 && lng>-74.015 && lng<-73.99) return '🌿 Chelsea / Meatpacking / Hudson Yards';
-  if(lat>40.75 && lat<40.77 && lng>-74.00 && lng<-73.97) return '🏢 Midtown';
-  if(lat>40.76 && lat<40.79 && lng>-73.99 && lng<-73.96) return '🌳 Central Park / Upper West Side';
-  if(lat>40.76 && lat<40.79 && lng>-73.97 && lng<-73.94) return '🏛️ Upper East Side';
-  if(lat>40.55 && lat<40.60) return '🏖️ Brooklyn Sul';
-  if(lat>40.68 && lat<40.70) return '🌴 Prospect Park area';
+  // BUG ago/2026: eram 10 bounding boxes de bairros de NYC hardcoded, e o BAIRROS_CONFIG
+  // do data.json era simplesmente ignorado — fora de NY tudo caía em "Outros".
+  if(typeof BAIRROS_CONFIG!=='undefined' && BAIRROS_CONFIG.length){
+    for(const b of BAIRROS_CONFIG){
+      if(b.fallback) continue;
+      if(lat>=b.latMin && lat<=b.latMax && lng>=b.lngMin && lng<=b.lngMax) return b.nome;
+    }
+    const fb=BAIRROS_CONFIG.find(b=>b.fallback);
+    if(fb) return fb.nome;
+  }
   return '📍 Outros';
 }
 
@@ -768,7 +806,7 @@ function plotTudoMapa(){
     if(f.day>=0 && p.di!==f.day) return false;
     return true;
   });
-  if(!pois.length){ tudoMapInstance.setView([40.75,-73.97],12);
+  if(!pois.length){ tudoMapInstance.setView(fallbackCenter(),12);
     const el=document.getElementById('tm-count'); if(el) el.textContent='0'; return; }
   const pts=[];
   pois.forEach(p=>{
@@ -833,7 +871,7 @@ function renderMap(){
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
       attribution:'© OpenStreetMap',maxZoom:19
     }).addTo(mapInstance);
-    if(stops.length===0){ mapInstance.setView([40.72,-73.95],12); return; }
+    if(stops.length===0){ mapInstance.setView(fallbackCenter(),12); return; }
     const latlngs=stops.map(s=>[s.coord.lat,s.coord.lng]);
     stops.forEach((s,i)=>{
       const isOpcoes=s.tipo==='opcoes' && s.opcoes && s.opcoes.length>0;

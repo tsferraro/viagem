@@ -2335,136 +2335,366 @@
   },
   "transit_map": {
     "Figari → Porto Pollo": {
-      "uber": "Não opera na zona · use táxi",
-      "metro": "Sem metrô · sem trem direto",
-      "taxi": "€100-130 · ~1h30 · NÃO recomendado com 5 pessoas/bagagem · Compras: Spar Figari (5min, abre até 21h todo dia) ou Carrefour Market Viggianello na N196 (Seg-Sáb até 20h)",
-      "carro": "1h30 · N196 + D157 via Sartène · estrada boa · 0 pedágios"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera na zona · use táxi"
+        },
+        {
+          "modo": "rota",
+          "texto": "Sem metrô · sem trem direto"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€100-130 · ~1h30 · NÃO recomendado com 5 pessoas/bagagem · Compras: Spar Figari (5min, abre até 21h todo dia) ou Carrefour Market Viggianello na N196 (Seg-Sáb até 20h)"
+        }
+      ]
     },
     "Porto Pollo → Propriano": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€30-40 · 20min",
-      "carro": "20min · D157 · litoral suave"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€30-40 · 20min"
+        }
+      ]
     },
     "Porto Pollo → Sartène": {
-      "uber": "Carro próprio · ~45min",
-      "metro": "Porto Pollo → Propriano (22min) → T40 subindo até Sartène (300m de altitude)",
-      "taxi": "~€60-75"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~45min"
+        },
+        {
+          "modo": "rota",
+          "texto": "Porto Pollo → Propriano (22min) → T40 subindo até Sartène (300m de altitude)"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€60-75"
+        }
+      ]
     },
     "Embarque Lavezzi · Porto Bonifacio": {
-      "uber": "Não aplicável",
-      "metro": "Sem opção",
-      "taxi": "—",
-      "carro": "Estacionamento marina · €15-20/dia"
+      "opcoes": []
     },
     "Piantarella → Phare de Pertusato": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€20-25 · 15min",
-      "carro": "15min · D260 · estrada estreita"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€20-25 · 15min"
+        }
+      ]
     },
     "Ferry Bonifacio → Santa Teresa di Gallura": {
-      "uber": "Não aplicável",
-      "metro": "Sem opção",
-      "taxi": "—",
-      "carro": "Ferry passageiro: €17-39 · 50min-1h · operadores Moby/Ichnusa · reservar antes verão"
+      "opcoes": []
     },
     "Santa Teresa → Olbia (bus/táxi)": {
-      "uber": "Limitado · taxi melhor",
-      "metro": "Sem opção",
-      "taxi": "€80-100 · 50min · prático com bagagem/5 pessoas",
-      "carro": "ARST bus público · ~€5/pessoa · 1h-1h15"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Limitado · taxi melhor"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€80-100 · 50min · prático com bagagem/5 pessoas"
+        }
+      ]
     },
     "Olbia → Càbras/Oristano": {
-      "uber": "Limitado",
-      "metro": "Tren Sardegna direto NÃO · ~5h+ baldeação",
-      "taxi": "€300+ · proibitivo",
-      "carro": "2h30-3h · SS131 (autoestrada gratuita) · centro-oeste"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Limitado"
+        },
+        {
+          "modo": "rota",
+          "texto": "Tren Sardegna direto NÃO · ~5h+ baldeação"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€300+ · proibitivo"
+        }
+      ]
     },
     "Aeroporto Figari Sud-Corse (FSC)": {
-      "uber": "Não existe Uber em Figari · locadoras no terminal",
-      "metro": "Sem transporte público útil pro Valinco · carro é obrigatório",
-      "taxi": "Táxi Figari → Porto Pollo ~€120-150 · só como plano B se a locação falhar"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não existe Uber em Figari · locadoras no terminal"
+        },
+        {
+          "modo": "rota",
+          "texto": "Sem transporte público útil pro Valinco · carro é obrigatório"
+        },
+        {
+          "modo": "taxi",
+          "texto": "Táxi Figari → Porto Pollo ~€120-150 · só como plano B se a locação falhar"
+        }
+      ]
     },
     "Retorno Lavezzi → Bonifacio": {
-      "uber": "Shuttle SPMB · retornos de hora em hora a partir das 12h30",
-      "metro": "Volta costuma levar ~1h (passa pelas falésias) contra 30min na ida",
-      "taxi": "Último retorno em agosto ~17h-18h · confirma o horário no guichê ao embarcar"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Shuttle SPMB · retornos de hora em hora a partir das 12h30"
+        },
+        {
+          "modo": "rota",
+          "texto": "Volta costuma levar ~1h (passa pelas falésias) contra 30min na ida"
+        },
+        {
+          "modo": "taxi",
+          "texto": "Último retorno em agosto ~17h-18h · confirma o horário no guichê ao embarcar"
+        }
+      ]
     },
     "Chegada dos avós em Bonifacio": {
-      "uber": "De carro próprio desde Olbia",
-      "metro": "Via ferry Santa Teresa → Bonifacio (~50min de travessia) OU por terra via Sassari/N133 (~4h, sem balsa)",
-      "taxi": "Combinar ponto de encontro no porto · estacionamento da cidade baixa é mais fácil que o da cidadela"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "De carro próprio desde Olbia"
+        },
+        {
+          "modo": "rota",
+          "texto": "Via ferry Santa Teresa → Bonifacio (~50min de travessia) OU por terra via Sassari/N133 (~4h, sem balsa)"
+        },
+        {
+          "modo": "taxi",
+          "texto": "Combinar ponto de encontro no porto · estacionamento da cidade baixa é mais fácil que o da cidadela"
+        }
+      ]
     },
     "Pickup carro alugado · Olbia": {
-      "uber": "Aeroporto Olbia Costa Smeralda (OLB) · balcões no terminal",
-      "metro": "De Santa Teresa a Olbia são ~1h de carro / ~1h30-2h de ônibus ARST",
-      "taxi": "Santa Teresa → Olbia de táxi ~€120 · reserva na véspera"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Aeroporto Olbia Costa Smeralda (OLB) · balcões no terminal"
+        },
+        {
+          "modo": "rota",
+          "texto": "De Santa Teresa a Olbia são ~1h de carro / ~1h30-2h de ônibus ARST"
+        },
+        {
+          "modo": "taxi",
+          "texto": "Santa Teresa → Olbia de táxi ~€120 · reserva na véspera"
+        }
+      ]
     },
     "Cupabia → Porto Pollo": {
-      "uber": "Carro próprio · ~30min",
-      "metro": "Mesmo caminho de volta",
-      "taxi": "~€40-50"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~30min"
+        },
+        {
+          "modo": "rota",
+          "texto": "Mesmo caminho de volta"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€40-50"
+        }
+      ]
     },
     "Sartène → Spin'a Cavallu": {
-      "uber": "Carro próprio · ~15min",
-      "metro": "T40 sentido Propriano e depois D268 à direita · a ponte fica 2,6km depois da entrada",
-      "taxi": "~€25-30"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~15min"
+        },
+        {
+          "modo": "rota",
+          "texto": "T40 sentido Propriano e depois D268 à direita · a ponte fica 2,6km depois da entrada"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€25-30"
+        }
+      ]
     },
     "Spin'a Cavallu → Porto Pollo": {
-      "uber": "Carro próprio · ~40min",
-      "metro": "D268 até a T40 → Propriano → estrada da costa",
-      "taxi": "~€55-70"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~40min"
+        },
+        {
+          "modo": "rota",
+          "texto": "D268 até a T40 → Propriano → estrada da costa"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€55-70"
+        }
+      ]
     },
     "Porto Pollo → Filitosa": {
-      "uber": "Carro próprio · ~25min",
-      "metro": "Subindo o vale do Taravo até Sollacaro · estrada estreita com curvas, sem dificuldade",
-      "taxi": "~€35-45"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~25min"
+        },
+        {
+          "modo": "rota",
+          "texto": "Subindo o vale do Taravo até Sollacaro · estrada estreita com curvas, sem dificuldade"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€35-45"
+        }
+      ]
     },
     "Filitosa → Porto Pollo": {
-      "uber": "Carro próprio · ~25min",
-      "metro": "Mesmo caminho de volta pelo vale do Taravo",
-      "taxi": "~€35-45"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~25min"
+        },
+        {
+          "modo": "rota",
+          "texto": "Mesmo caminho de volta pelo vale do Taravo"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€35-45"
+        }
+      ]
     },
     "Porto Pollo → Belvédère de Roccapina": {
-      "uber": "Carro próprio · ~1h",
-      "metro": "Propriano → Sartène → N196 sentido sul · o belvédère é sinalizado na própria nacional",
-      "taxi": "~€90-110"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~1h"
+        },
+        {
+          "modo": "rota",
+          "texto": "Propriano → Sartène → N196 sentido sul · o belvédère é sinalizado na própria nacional"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€90-110"
+        }
+      ]
     },
     "Roccapina → Aeroporto Figari": {
-      "uber": "Carro próprio · ~20min",
-      "metro": "N196 sentido sul até o desvio do aeroporto (FSC fica 3km a noroeste da vila de Figari)",
-      "taxi": "~€35-45"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~20min"
+        },
+        {
+          "modo": "rota",
+          "texto": "N196 sentido sul até o desvio do aeroporto (FSC fica 3km a noroeste da vila de Figari)"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€35-45"
+        }
+      ]
     },
     "Figari (FSC) → Bonifacio": {
-      "uber": "TÁXI é a opção confiável · ~€48-82 · ~25min · ponto de táxi do aeroporto 04 95 71 04 45 · reserve na véspera em agosto",
-      "metro": "NÃO há linha direta aeroporto→Bonifacio. As navettes do aeroporto ligam Figari ↔ rodoviária de PORTO-VECCHIO (rede A Berlina, ~5 rotações/dia no verão). Bonifacio só por conexão, com espera. Confirmar no 04 95 71 25 15 antes de contar com isso.",
-      "taxi": "Transfer privado (van até 8 lugares) ~€126 · vale se forem muitas malas"
+      "opcoes": [
+        {
+          "modo": "taxi",
+          "texto": "TÁXI é a opção confiável · ~€48-82 · ~25min · ponto de táxi do aeroporto 04 95 71 04 45 · reserve na véspera em agosto"
+        },
+        {
+          "modo": "rota",
+          "texto": "NÃO há linha direta aeroporto→Bonifacio. As navettes do aeroporto ligam Figari ↔ rodoviária de PORTO-VECCHIO (rede A Berlina, ~5 rotações/dia no verão). Bonifacio só por conexão, com espera. Confirmar no 04 95 71 25 15 antes de contar com isso."
+        },
+        {
+          "modo": "taxi",
+          "texto": "Transfer privado (van até 8 lugares) ~€126 · vale se forem muitas malas"
+        }
+      ]
     },
     "Roccapina → Bonifacio": {
-      "uber": "Carro próprio · ~40min",
-      "metro": "N196 sentido sul · passa perto do desvio de Figari antes de chegar",
-      "taxi": "~€70-90"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~40min"
+        },
+        {
+          "modo": "rota",
+          "texto": "N196 sentido sul · passa perto do desvio de Figari antes de chegar"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€70-90"
+        }
+      ]
     },
     "Bonifacio → Praia de Rondinara": {
-      "uber": "Carro próprio · ~25min · 15-16km",
-      "metro": "N198 sentido Bastia por ~16km, depois à direita na D158 (placa Suartone/Rondinara) · o desvio é MUITO antes de Porto-Vecchio, que fica a ~28km",
-      "taxi": "~€45-55 por trecho · sem transporte público nenhum até a praia"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~25min · 15-16km"
+        },
+        {
+          "modo": "rota",
+          "texto": "N198 sentido Bastia por ~16km, depois à direita na D158 (placa Suartone/Rondinara) · o desvio é MUITO antes de Porto-Vecchio, que fica a ~28km"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€45-55 por trecho · sem transporte público nenhum até a praia"
+        }
+      ]
     },
     "Rondinara → Bonifacio": {
-      "uber": "Carro próprio · ~25min",
-      "metro": "D158 de volta até a N198 e sentido sul",
-      "taxi": "~€45-55"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~25min"
+        },
+        {
+          "modo": "rota",
+          "texto": "D158 de volta até a N198 e sentido sul"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€45-55"
+        }
+      ]
     },
     "Bonifacio → Aeroporto Figari": {
-      "uber": "Carro próprio · ~30min · 21-22km pela N196",
-      "metro": "Não há linha direta · as navettes do aeroporto servem Porto-Vecchio",
-      "taxi": "~€48-82 se precisar fazer no sentido inverso"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~30min · 21-22km pela N196"
+        },
+        {
+          "modo": "rota",
+          "texto": "Não há linha direta · as navettes do aeroporto servem Porto-Vecchio"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€48-82 se precisar fazer no sentido inverso"
+        }
+      ]
     },
     "Filitosa → Praia de Cupabia": {
-      "uber": "Carro próprio · ~25min",
-      "metro": "Desce o vale do Taravo e vira pra Coti-Chiavari · trecho final em estrada de terra rodável com carro normal",
-      "taxi": "~€35-45 · sem transporte público"
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "Carro próprio · ~25min"
+        },
+        {
+          "modo": "rota",
+          "texto": "Desce o vale do Taravo e vira pra Coti-Chiavari · trecho final em estrada de terra rodável com carro normal"
+        },
+        {
+          "modo": "taxi",
+          "texto": "~€35-45 · sem transporte público"
+        }
+      ]
     }
   },
   "bairros_config": [

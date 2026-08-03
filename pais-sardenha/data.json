@@ -26,7 +26,10 @@
           "tipo": "transit",
           "nome": "Aeroporto Olbia Costa Smeralda (OLB)",
           "cat": "Chegada · pickup carro alugado",
-          "coord": {"lat": 40.8987, "lng": 9.5176}
+          "coord": {
+            "lat": 40.8987,
+            "lng": 9.5176
+          }
         },
         {
           "hora": "17:00",
@@ -47,7 +50,10 @@
           "duracao": "1h check-in",
           "custo": "€72-115 noite",
           "acessibilidade": "Centro plano · totalmente walkable",
-          "coord": {"lat": 40.9238, "lng": 9.5026}
+          "coord": {
+            "lat": 40.9238,
+            "lng": 9.5026
+          }
         },
         {
           "hora": "18:30",
@@ -67,7 +73,10 @@
           "duracao": "1h30 a 2h",
           "custo": "€15-25 aperitivos",
           "acessibilidade": "Total",
-          "coord": {"lat": 40.9238, "lng": 9.5026}
+          "coord": {
+            "lat": 40.9238,
+            "lng": 9.5026
+          }
         },
         {
           "hora": "20:30",
@@ -76,11 +85,29 @@
           "tipo": "opcoes",
           "nome": "Jantar Olbia · 1ª noite Sardenha",
           "cat": "3 opções no centro",
-          "coord": {"lat": 40.9238, "lng": 9.5026},
+          "coord": {
+            "lat": 40.9238,
+            "lng": 9.5026
+          },
           "opcoes": [
-            {"nome": "Ristorante Gallura (Corso Umberto)", "desc": "Cozinha tradicional sarda · fregola con vongole, polpo grelhado · ambiente clássico", "preco": "€35-50", "dist": "Centro"},
-            {"nome": "Da Rino (perto do porto)", "desc": "Peixe fresco · bottarga, ravioli sardi · familiar · clássico", "preco": "€30-45", "dist": "Porto"},
-            {"nome": "Trattoria Da Romolo", "desc": "Mais casual · carne de cordeiro grelhada, queijos sardos · preço bom", "preco": "€25-35", "dist": "Centro"}
+            {
+              "nome": "Ristorante Gallura (Corso Umberto)",
+              "desc": "Cozinha tradicional sarda · fregola con vongole, polpo grelhado · ambiente clássico",
+              "preco": "€35-50",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Da Rino (perto do porto)",
+              "desc": "Peixe fresco · bottarga, ravioli sardi · familiar · clássico",
+              "preco": "€30-45",
+              "dist": "Porto"
+            },
+            {
+              "nome": "Trattoria Da Romolo",
+              "desc": "Mais casual · carne de cordeiro grelhada, queijos sardos · preço bom",
+              "preco": "€25-35",
+              "dist": "Centro"
+            }
           ]
         }
       ]
@@ -114,7 +141,10 @@
           "duracao": "1h30",
           "custo": "—",
           "acessibilidade": "—",
-          "coord": {"lat": 40.9238, "lng": 9.5026}
+          "coord": {
+            "lat": 40.9238,
+            "lng": 9.5026
+          }
         },
         {
           "hora": "09:00",
@@ -123,7 +153,10 @@
           "tipo": "transit",
           "nome": "Olbia → Santa Teresa di Gallura",
           "cat": "~1h-1h15 · SS125 + SP90 · costa nordeste",
-          "coord": {"lat": 41.2380, "lng": 9.1944}
+          "coord": {
+            "lat": 41.238,
+            "lng": 9.1944
+          }
         },
         {
           "hora": "11:00",
@@ -132,7 +165,10 @@
           "tipo": "transit",
           "nome": "Ferry Santa Teresa → Bonifacio",
           "cat": "~50min · Moby/Ichnusa · passageiro €17-35",
-          "coord": {"lat": 41.3875, "lng": 9.1544}
+          "coord": {
+            "lat": 41.3875,
+            "lng": 9.1544
+          }
         },
         {
           "hora": "13:00",
@@ -153,7 +189,10 @@
           "duracao": "Resto da tarde",
           "custo": "—",
           "acessibilidade": "Cidadela tem ladeiras · descansa do almoço",
-          "coord": {"lat": 41.3875, "lng": 9.1544}
+          "coord": {
+            "lat": 41.3875,
+            "lng": 9.1544
+          }
         },
         {
           "hora": "16:30",
@@ -174,17 +213,55 @@
           "duracao": "2h",
           "custo": "Escalier €2.50",
           "acessibilidade": "MISTA · ramparts ok · Escalier inacessível com problema de joelho",
-          "coord": {"lat": 41.3872, "lng": 9.1597},
+          "coord": {
+            "lat": 41.3872,
+            "lng": 9.1597
+          },
           "walkingTours": [
             {
               "nome": "Cidadela · 🏰 Caminho Histórico",
               "descricao": "Porte de Gênes → Bastion → Sainte-Marie → Loggia (mirador) → Escalier (topo) · ~2h · 5 stops",
               "stops": [
-                {"n": 1, "nome": "Porte de Gênes (entrada principal)", "coord": {"lat": 41.3874, "lng": 9.1583}},
-                {"n": 2, "nome": "Bastion de l'Etendard (museu + vista)", "coord": {"lat": 41.3876, "lng": 9.1589}},
-                {"n": 3, "nome": "Église Sainte-Marie-Majeure (cisterna)", "coord": {"lat": 41.3870, "lng": 9.1597}},
-                {"n": 4, "nome": "Loggia · mirador sul (falésias)", "coord": {"lat": 41.3855, "lng": 9.1578}},
-                {"n": 5, "nome": "Escalier du Roi d'Aragon (topo)", "coord": {"lat": 41.3840, "lng": 9.1558}}
+                {
+                  "n": 1,
+                  "nome": "Porte de Gênes (entrada principal)",
+                  "coord": {
+                    "lat": 41.3874,
+                    "lng": 9.1583
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Bastion de l'Etendard (museu + vista)",
+                  "coord": {
+                    "lat": 41.3876,
+                    "lng": 9.1589
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Église Sainte-Marie-Majeure (cisterna)",
+                  "coord": {
+                    "lat": 41.387,
+                    "lng": 9.1597
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Loggia · mirador sul (falésias)",
+                  "coord": {
+                    "lat": 41.3855,
+                    "lng": 9.1578
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Escalier du Roi d'Aragon (topo)",
+                  "coord": {
+                    "lat": 41.384,
+                    "lng": 9.1558
+                  }
+                }
               ]
             }
           ]
@@ -196,11 +273,29 @@
           "tipo": "opcoes",
           "nome": "Jantar especial · família reunida",
           "cat": "Marcado por Tobia",
-          "coord": {"lat": 41.3872, "lng": 9.1597},
+          "coord": {
+            "lat": 41.3872,
+            "lng": 9.1597
+          },
           "opcoes": [
-            {"nome": "Les Quatre Vents (porto)", "desc": "Classy · frutos do mar · vista marina iluminada · reserva", "preco": "€50-70", "dist": "Porto"},
-            {"nome": "L'Archivolto (cidadela)", "desc": "Trattoria acolhedora · pasta com brocciu, cordeiro mel", "preco": "€40-55", "dist": "Cidadela"},
-            {"nome": "Da Passano (porto)", "desc": "Tapas corsas pra partilhar · perfeito com a neta", "preco": "€35-50", "dist": "Porto"}
+            {
+              "nome": "Les Quatre Vents (porto)",
+              "desc": "Classy · frutos do mar · vista marina iluminada · reserva",
+              "preco": "€50-70",
+              "dist": "Porto"
+            },
+            {
+              "nome": "L'Archivolto (cidadela)",
+              "desc": "Trattoria acolhedora · pasta com brocciu, cordeiro mel",
+              "preco": "€40-55",
+              "dist": "Cidadela"
+            },
+            {
+              "nome": "Da Passano (porto)",
+              "desc": "Tapas corsas pra partilhar · perfeito com a neta",
+              "preco": "€35-50",
+              "dist": "Porto"
+            }
           ]
         }
       ]
@@ -234,7 +329,10 @@
           "duracao": "—",
           "custo": "—",
           "acessibilidade": "—",
-          "coord": {"lat": 41.3872, "lng": 9.1597}
+          "coord": {
+            "lat": 41.3872,
+            "lng": 9.1597
+          }
         },
         {
           "hora": "09:00",
@@ -243,7 +341,10 @@
           "tipo": "transit",
           "nome": "Ferry Bonifacio → Santa Teresa di Gallura",
           "cat": "~50min · todos juntos · passageiros",
-          "coord": {"lat": 41.2380, "lng": 9.1944}
+          "coord": {
+            "lat": 41.238,
+            "lng": 9.1944
+          }
         },
         {
           "hora": "10:30",
@@ -252,11 +353,29 @@
           "tipo": "opcoes",
           "nome": "Almoço rápido Santa Teresa",
           "cat": "30-45min · prático",
-          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          },
           "opcoes": [
-            {"nome": "Caffè do porto", "desc": "Panini + café · 30min · economiza tempo", "preco": "€10-15", "dist": "Porto"},
-            {"nome": "Trattoria Piazza Vittorio Emanuele", "desc": "Prato do dia €15 · sem perda de tempo · simples", "preco": "€15-20", "dist": "10min a pé"},
-            {"nome": "Picnic comprado", "desc": "Padaria local · come no caminho · economia de 1h", "preco": "€10", "dist": "—"}
+            {
+              "nome": "Caffè do porto",
+              "desc": "Panini + café · 30min · economiza tempo",
+              "preco": "€10-15",
+              "dist": "Porto"
+            },
+            {
+              "nome": "Trattoria Piazza Vittorio Emanuele",
+              "desc": "Prato do dia €15 · sem perda de tempo · simples",
+              "preco": "€15-20",
+              "dist": "10min a pé"
+            },
+            {
+              "nome": "Picnic comprado",
+              "desc": "Padaria local · come no caminho · economia de 1h",
+              "preco": "€10",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -266,7 +385,10 @@
           "tipo": "transit",
           "nome": "Santa Teresa → Càbras",
           "cat": "~3h30 · SS131 Carlo Felice · sul",
-          "coord": {"lat": 39.9300, "lng": 8.5314}
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          }
         },
         {
           "hora": "16:00",
@@ -287,7 +409,10 @@
           "duracao": "Resto do dia",
           "custo": "—",
           "acessibilidade": "Vila plana · ok",
-          "coord": {"lat": 39.9300, "lng": 8.5314}
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          }
         },
         {
           "hora": "20:00",
@@ -296,11 +421,29 @@
           "tipo": "opcoes",
           "nome": "Jantar Càbras · 1ª noite",
           "cat": "Foco bottarga + peixe",
-          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          },
           "opcoes": [
-            {"nome": "Il Caminetto (Via Cristoforo Colombo 8)", "desc": "Michelin Guide · spaghetti bottarga, vongole · institução · reservar", "preco": "€35-50", "dist": "Centro"},
-            {"nome": "Sa Funta (Via Garibaldi 25)", "desc": "Cozinha tradicional sarda · enguia defumada, choco em Vernaccia · adventurous", "preco": "€30-45", "dist": "Centro"},
-            {"nome": "Trattoria Sa Bell'e Crabasa", "desc": "Mais simples · peixe fresco · jantar tranquilo com a neta", "preco": "€20-30", "dist": "Centro"}
+            {
+              "nome": "Il Caminetto (Via Cristoforo Colombo 8)",
+              "desc": "Michelin Guide · spaghetti bottarga, vongole · institução · reservar",
+              "preco": "€35-50",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Sa Funta (Via Garibaldi 25)",
+              "desc": "Cozinha tradicional sarda · enguia defumada, choco em Vernaccia · adventurous",
+              "preco": "€30-45",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Trattoria Sa Bell'e Crabasa",
+              "desc": "Mais simples · peixe fresco · jantar tranquilo com a neta",
+              "preco": "€20-30",
+              "dist": "Centro"
+            }
           ]
         }
       ]
@@ -312,7 +455,10 @@
       "bairro": "🏖️ Sinis & Oristano",
       "grupo": true,
       "transport": "driving",
-      "baseCoord": {"lat": 39.9300, "lng": 8.5314},
+      "baseCoord": {
+        "lat": 39.93,
+        "lng": 8.5314
+      },
       "baseName": "Càbras, Sardinia",
       "cor": "#0d9488",
       "gradA": "#134e4a",
@@ -325,7 +471,10 @@
           "tipo": "transit",
           "nome": "Càbras → Is Arutas",
           "cat": "~15min · SP6 direção San Giovanni di Sinis",
-          "coord": {"lat": 39.9513, "lng": 8.3997}
+          "coord": {
+            "lat": 39.9513,
+            "lng": 8.3997
+          }
         },
         {
           "hora": "09:00",
@@ -347,7 +496,10 @@
           "duracao": "Manhã inteira",
           "custo": "€10 parking · €15-20 aluguel cadeira",
           "acessibilidade": "Trilha curta do parking · areia firme, fácil andar",
-          "coord": {"lat": 39.9513, "lng": 8.3997}
+          "coord": {
+            "lat": 39.9513,
+            "lng": 8.3997
+          }
         },
         {
           "hora": "12:30",
@@ -356,11 +508,29 @@
           "tipo": "opcoes",
           "nome": "Almoço San Giovanni di Sinis",
           "cat": "Vila pesqueira próxima",
-          "coord": {"lat": 39.8960, "lng": 8.4340},
+          "coord": {
+            "lat": 39.896,
+            "lng": 8.434
+          },
           "opcoes": [
-            {"nome": "Beach restaurant San Giovanni", "desc": "Pé na areia · peixe grelhado, fregola alle vongole · simples", "preco": "€25-35", "dist": "Praia"},
-            {"nome": "Ristorante Mediterraneo", "desc": "Praia · mais elaborado · reserve antecipado", "preco": "€35-45", "dist": "San Giovanni"},
-            {"nome": "Picnic na praia", "desc": "Comprou na padaria de Càbras antes · come com vista", "preco": "€15", "dist": "—"}
+            {
+              "nome": "Beach restaurant San Giovanni",
+              "desc": "Pé na areia · peixe grelhado, fregola alle vongole · simples",
+              "preco": "€25-35",
+              "dist": "Praia"
+            },
+            {
+              "nome": "Ristorante Mediterraneo",
+              "desc": "Praia · mais elaborado · reserve antecipado",
+              "preco": "€35-45",
+              "dist": "San Giovanni"
+            },
+            {
+              "nome": "Picnic na praia",
+              "desc": "Comprou na padaria de Càbras antes · come com vista",
+              "preco": "€15",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -383,7 +553,10 @@
           "duracao": "1h30-2h",
           "custo": "€6.50 sozinho · €10 combinado Museu Cabras",
           "acessibilidade": "Trilha de pedra · degraus em alguns pontos · sapato firme",
-          "coord": {"lat": 39.8938, "lng": 8.4341},
+          "coord": {
+            "lat": 39.8938,
+            "lng": 8.4341
+          },
           "coord_unverified": true
         },
         {
@@ -404,7 +577,10 @@
           "duracao": "2h-3h",
           "custo": "Parking €5-8",
           "acessibilidade": "Total",
-          "coord": {"lat": 40.0302, "lng": 8.4058}
+          "coord": {
+            "lat": 40.0302,
+            "lng": 8.4058
+          }
         },
         {
           "hora": "20:30",
@@ -413,11 +589,29 @@
           "tipo": "opcoes",
           "nome": "Jantar · Càbras ou Putzu Idu",
           "cat": "Conforme cansaço",
-          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          },
           "opcoes": [
-            {"nome": "Da Cesare (Putzu Idu beach)", "desc": "Pé na areia · peixe direto · jantar com luz pôr do sol", "preco": "€30-45", "dist": "Praia"},
-            {"nome": "Volta Càbras · Il Caminetto", "desc": "Bottarga · institução · reserva", "preco": "€35-50", "dist": "Càbras"},
-            {"nome": "Jantar leve em casa/airbnb", "desc": "Compra Carrefour · descanso · neta dorme cedo", "preco": "€20", "dist": "—"}
+            {
+              "nome": "Da Cesare (Putzu Idu beach)",
+              "desc": "Pé na areia · peixe direto · jantar com luz pôr do sol",
+              "preco": "€30-45",
+              "dist": "Praia"
+            },
+            {
+              "nome": "Volta Càbras · Il Caminetto",
+              "desc": "Bottarga · institução · reserva",
+              "preco": "€35-50",
+              "dist": "Càbras"
+            },
+            {
+              "nome": "Jantar leve em casa/airbnb",
+              "desc": "Compra Carrefour · descanso · neta dorme cedo",
+              "preco": "€20",
+              "dist": "—"
+            }
           ]
         }
       ]
@@ -429,7 +623,10 @@
       "bairro": "🏛️ Bosa",
       "grupo": true,
       "transport": "driving",
-      "baseCoord": {"lat": 39.9300, "lng": 8.5314},
+      "baseCoord": {
+        "lat": 39.93,
+        "lng": 8.5314
+      },
       "baseName": "Càbras, Sardinia",
       "cor": "#c2410c",
       "gradA": "#7c2d12",
@@ -442,7 +639,10 @@
           "tipo": "transit",
           "nome": "Càbras → Bosa via SS292 costeira",
           "cat": "~1h15 · estrada panorâmica entre falésias",
-          "coord": {"lat": 40.2993, "lng": 8.4983}
+          "coord": {
+            "lat": 40.2993,
+            "lng": 8.4983
+          }
         },
         {
           "hora": "10:00",
@@ -464,16 +664,47 @@
           "duracao": "3h-4h walking tour + Castello",
           "custo": "€3 castelo · €5 estacionamento",
           "acessibilidade": "Cidade velha = escadas + ladeiras · castelo só pra fit · Lungofiume plano",
-          "coord": {"lat": 40.2993, "lng": 8.4983},
+          "coord": {
+            "lat": 40.2993,
+            "lng": 8.4983
+          },
           "walkingTours": [
             {
               "nome": "Bosa · 🏛️ Cidade Medieval Colorida",
               "descricao": "Lungofiume Temo → Sas Conzas (tanarias) → Sa Costa → Castello Malaspina · ~2h30 · 4 stops",
               "stops": [
-                {"n": 1, "nome": "Lungofiume Temo (promenade ribeirinha)", "coord": {"lat": 40.2980, "lng": 8.4990}},
-                {"n": 2, "nome": "Sas Conzas (antigas tanarias)", "coord": {"lat": 40.2955, "lng": 8.5020}},
-                {"n": 3, "nome": "Sa Costa (cidade velha colorida)", "coord": {"lat": 40.2995, "lng": 8.5010}},
-                {"n": 4, "nome": "Castello Malaspina (mirador)", "coord": {"lat": 40.3005, "lng": 8.5015}}
+                {
+                  "n": 1,
+                  "nome": "Lungofiume Temo (promenade ribeirinha)",
+                  "coord": {
+                    "lat": 40.298,
+                    "lng": 8.499
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Sas Conzas (antigas tanarias)",
+                  "coord": {
+                    "lat": 40.2955,
+                    "lng": 8.502
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Sa Costa (cidade velha colorida)",
+                  "coord": {
+                    "lat": 40.2995,
+                    "lng": 8.501
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Castello Malaspina (mirador)",
+                  "coord": {
+                    "lat": 40.3005,
+                    "lng": 8.5015
+                  }
+                }
               ]
             }
           ]
@@ -485,11 +716,29 @@
           "tipo": "opcoes",
           "nome": "Almoço Bosa · à beira do Temo",
           "cat": "3 opções",
-          "coord": {"lat": 40.2980, "lng": 8.4990},
+          "coord": {
+            "lat": 40.298,
+            "lng": 8.499
+          },
           "opcoes": [
-            {"nome": "Ai Pescatori (Lungofiume)", "desc": "Beira do rio · spaghetti bottarga, peixe local · clássico", "preco": "€30-40", "dist": "Rio"},
-            {"nome": "Borgo Sant'Ignazio", "desc": "Cidade velha · mais romântico · cordeiro sardo, pasta caseira", "preco": "€35-45", "dist": "Sa Costa"},
-            {"nome": "Pizzeria Locanda di Corte", "desc": "Casual · pizza forno lenha · ok com a neta", "preco": "€20-25", "dist": "Centro"}
+            {
+              "nome": "Ai Pescatori (Lungofiume)",
+              "desc": "Beira do rio · spaghetti bottarga, peixe local · clássico",
+              "preco": "€30-40",
+              "dist": "Rio"
+            },
+            {
+              "nome": "Borgo Sant'Ignazio",
+              "desc": "Cidade velha · mais romântico · cordeiro sardo, pasta caseira",
+              "preco": "€35-45",
+              "dist": "Sa Costa"
+            },
+            {
+              "nome": "Pizzeria Locanda di Corte",
+              "desc": "Casual · pizza forno lenha · ok com a neta",
+              "preco": "€20-25",
+              "dist": "Centro"
+            }
           ]
         },
         {
@@ -510,7 +759,10 @@
           "duracao": "1h30",
           "custo": "Grátis",
           "acessibilidade": "Total",
-          "coord": {"lat": 40.2740, "lng": 8.4830}
+          "coord": {
+            "lat": 40.274,
+            "lng": 8.483
+          }
         },
         {
           "hora": "18:30",
@@ -519,7 +771,10 @@
           "tipo": "transit",
           "nome": "Bosa → Càbras",
           "cat": "~1h volta · SS292 ou SS129",
-          "coord": {"lat": 39.9300, "lng": 8.5314}
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          }
         },
         {
           "hora": "20:30",
@@ -528,11 +783,29 @@
           "tipo": "opcoes",
           "nome": "Jantar leve Càbras",
           "cat": "Dia foi cheio",
-          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          },
           "opcoes": [
-            {"nome": "Trattoria Sa Bell'e Crabasa", "desc": "Simples · prato do dia · descanso", "preco": "€20-30", "dist": "Centro"},
-            {"nome": "Casa", "desc": "Salada + queijo sardo + vinho Vermentino · descontração", "preco": "€15", "dist": "—"},
-            {"nome": "Sa Funta (se ainda aguentam)", "desc": "Repete · pratos diferentes · vale", "preco": "€30-45", "dist": "Centro"}
+            {
+              "nome": "Trattoria Sa Bell'e Crabasa",
+              "desc": "Simples · prato do dia · descanso",
+              "preco": "€20-30",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Casa",
+              "desc": "Salada + queijo sardo + vinho Vermentino · descontração",
+              "preco": "€15",
+              "dist": "—"
+            },
+            {
+              "nome": "Sa Funta (se ainda aguentam)",
+              "desc": "Repete · pratos diferentes · vale",
+              "preco": "€30-45",
+              "dist": "Centro"
+            }
           ]
         }
       ]
@@ -567,7 +840,10 @@
           "duracao": "1h30",
           "custo": "Grátis",
           "acessibilidade": "Estacionamento na pista · curta caminhada plana",
-          "coord": {"lat": 39.9503, "lng": 8.4833}
+          "coord": {
+            "lat": 39.9503,
+            "lng": 8.4833
+          }
         },
         {
           "hora": "09:00",
@@ -587,7 +863,10 @@
           "duracao": "1h",
           "custo": "€10 família",
           "acessibilidade": "Total",
-          "coord": {"lat": 39.9300, "lng": 8.5314}
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          }
         },
         {
           "hora": "10:30",
@@ -608,7 +887,10 @@
           "duracao": "1h30",
           "custo": "€5 sozinho · €10 combinado",
           "acessibilidade": "Total · museu acessível",
-          "coord": {"lat": 39.9296, "lng": 8.5330}
+          "coord": {
+            "lat": 39.9296,
+            "lng": 8.533
+          }
         },
         {
           "hora": "13:00",
@@ -617,11 +899,29 @@
           "tipo": "opcoes",
           "nome": "Almoço Càbras · com bottarga",
           "cat": "Dia mais leve · vale comer bem",
-          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          },
           "opcoes": [
-            {"nome": "Sa Funta", "desc": "Adventurous · enguia, choco · pratos diferentes", "preco": "€30-45", "dist": "Centro"},
-            {"nome": "Il Caminetto", "desc": "Repete bottarga · vale a 2ª vez", "preco": "€35-50", "dist": "Centro"},
-            {"nome": "Mercado de Càbras + picnic", "desc": "Compra direto do mercado · tomate, bottarga, pão · come perto do mar", "preco": "€20 família", "dist": "—"}
+            {
+              "nome": "Sa Funta",
+              "desc": "Adventurous · enguia, choco · pratos diferentes",
+              "preco": "€30-45",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Il Caminetto",
+              "desc": "Repete bottarga · vale a 2ª vez",
+              "preco": "€35-50",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Mercado de Càbras + picnic",
+              "desc": "Compra direto do mercado · tomate, bottarga, pão · come perto do mar",
+              "preco": "€20 família",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -642,7 +942,10 @@
           "duracao": "Resto da tarde",
           "custo": "—",
           "acessibilidade": "Total",
-          "coord": {"lat": 39.9300, "lng": 8.5314}
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          }
         },
         {
           "hora": "20:30",
@@ -651,11 +954,29 @@
           "tipo": "opcoes",
           "nome": "Jantar despedida Càbras",
           "cat": "Última noite",
-          "coord": {"lat": 39.9300, "lng": 8.5314},
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          },
           "opcoes": [
-            {"nome": "Il Caminetto (reserva)", "desc": "Última chance · bottarga top + vinho Vernaccia di Oristano · noite especial", "preco": "€35-50", "dist": "Centro"},
-            {"nome": "Sa Funta", "desc": "Pratos diferentes do almoço · enguia defumada", "preco": "€30-45", "dist": "Centro"},
-            {"nome": "Casa", "desc": "Jantar simples · descanso · amanhã é dia de drive", "preco": "€20", "dist": "—"}
+            {
+              "nome": "Il Caminetto (reserva)",
+              "desc": "Última chance · bottarga top + vinho Vernaccia di Oristano · noite especial",
+              "preco": "€35-50",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Sa Funta",
+              "desc": "Pratos diferentes do almoço · enguia defumada",
+              "preco": "€30-45",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Casa",
+              "desc": "Jantar simples · descanso · amanhã é dia de drive",
+              "preco": "€20",
+              "dist": "—"
+            }
           ]
         }
       ]
@@ -688,7 +1009,10 @@
           "duracao": "1h checkout",
           "custo": "—",
           "acessibilidade": "—",
-          "coord": {"lat": 39.9300, "lng": 8.5314}
+          "coord": {
+            "lat": 39.93,
+            "lng": 8.5314
+          }
         },
         {
           "hora": "11:00",
@@ -697,7 +1021,10 @@
           "tipo": "transit",
           "nome": "Càbras → Maladroxia (Sant'Antioco)",
           "cat": "~2h · SS131 + SS195 · entra em Sant'Antioco pela ponte",
-          "coord": {"lat": 38.9989, "lng": 8.4489}
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          }
         },
         {
           "hora": "13:30",
@@ -706,11 +1033,29 @@
           "tipo": "opcoes",
           "nome": "Almoço · Iglesias ou chegada Maladroxia",
           "cat": "Cidade mineira ou direto base",
-          "coord": {"lat": 39.0664, "lng": 8.4522},
+          "coord": {
+            "lat": 39.0664,
+            "lng": 8.4522
+          },
           "opcoes": [
-            {"nome": "Trattoria Iglesias centro", "desc": "Cidade mineira · 30min desvio · culinária do interior · prato do dia €15-20", "preco": "€20-30", "dist": "Iglesias"},
-            {"nome": "Continua até Maladroxia (rápido)", "desc": "Almoço tardio na praia · ganha tempo · mais cedo na hospedagem", "preco": "—", "dist": "—"},
-            {"nome": "Hotel Ristorante Lounge Maladroxia", "desc": "Praia · terraço com vista mar · cozinha simples", "preco": "€25-35", "dist": "Praia"}
+            {
+              "nome": "Trattoria Iglesias centro",
+              "desc": "Cidade mineira · 30min desvio · culinária do interior · prato do dia €15-20",
+              "preco": "€20-30",
+              "dist": "Iglesias"
+            },
+            {
+              "nome": "Continua até Maladroxia (rápido)",
+              "desc": "Almoço tardio na praia · ganha tempo · mais cedo na hospedagem",
+              "preco": "—",
+              "dist": "—"
+            },
+            {
+              "nome": "Hotel Ristorante Lounge Maladroxia",
+              "desc": "Praia · terraço com vista mar · cozinha simples",
+              "preco": "€25-35",
+              "dist": "Praia"
+            }
           ]
         },
         {
@@ -732,7 +1077,10 @@
           "duracao": "Resto da tarde",
           "custo": "—",
           "acessibilidade": "Praia plana · ok carrinho neta",
-          "coord": {"lat": 38.9989, "lng": 8.4489}
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          }
         },
         {
           "hora": "20:00",
@@ -741,11 +1089,29 @@
           "tipo": "opcoes",
           "nome": "Jantar Maladroxia · 1ª noite",
           "cat": "Opções limitadas · reservar",
-          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
           "opcoes": [
-            {"nome": "Hotel Ristorante Lounge Bar Maladroxia", "desc": "Praia · terraço panorâmico · cozinha sarda casual", "preco": "€25-35", "dist": "Praia"},
-            {"nome": "Ittiturismo I Due Fratelli", "desc": "Cooperativa pescadores Sant'Antioco · 15min carro · peixe top fresco · noite especial", "preco": "€35-50", "dist": "15min"},
-            {"nome": "Ristorante Da Silvana (lagoa)", "desc": "Sant'Antioco · rústico · preços bons · local favorito", "preco": "€25-35", "dist": "20min"}
+            {
+              "nome": "Hotel Ristorante Lounge Bar Maladroxia",
+              "desc": "Praia · terraço panorâmico · cozinha sarda casual",
+              "preco": "€25-35",
+              "dist": "Praia"
+            },
+            {
+              "nome": "Ittiturismo I Due Fratelli",
+              "desc": "Cooperativa pescadores Sant'Antioco · 15min carro · peixe top fresco · noite especial",
+              "preco": "€35-50",
+              "dist": "15min"
+            },
+            {
+              "nome": "Ristorante Da Silvana (lagoa)",
+              "desc": "Sant'Antioco · rústico · preços bons · local favorito",
+              "preco": "€25-35",
+              "dist": "20min"
+            }
           ]
         }
       ]
@@ -757,7 +1123,10 @@
       "bairro": "🏛️ Sant'Antioco",
       "grupo": true,
       "transport": "driving",
-      "baseCoord": {"lat": 38.9989, "lng": 8.4489},
+      "baseCoord": {
+        "lat": 38.9989,
+        "lng": 8.4489
+      },
       "baseName": "Maladroxia, Sardinia",
       "cor": "#b91c1c",
       "gradA": "#7f1d1d",
@@ -770,7 +1139,10 @@
           "tipo": "transit",
           "nome": "Maladroxia → Sant'Antioco town",
           "cat": "~15min · SS126",
-          "coord": {"lat": 39.0664, "lng": 8.4522}
+          "coord": {
+            "lat": 39.0664,
+            "lng": 8.4522
+          }
         },
         {
           "hora": "09:30",
@@ -792,17 +1164,55 @@
           "duracao": "3h-4h walking tour",
           "custo": "€10-15 entradas combinadas",
           "acessibilidade": "Centro tem ladeira leve · catacumbas têm escada estreita",
-          "coord": {"lat": 39.0706, "lng": 8.4500},
+          "coord": {
+            "lat": 39.0706,
+            "lng": 8.45
+          },
           "walkingTours": [
             {
               "nome": "Sant'Antioco · 🏛️ Caminho Fenício-Cristão",
               "descricao": "Tophet → MAB → Basilica/Catacumbas → Necrópole púnica → Tonnara Cala Sapone · ~3h · 5 stops",
               "stops": [
-                {"n": 1, "nome": "Tophet di Sant'Antioco (cemitério ritual)", "coord": {"lat": 39.0706, "lng": 8.4500}},
-                {"n": 2, "nome": "Museo Barreca MAB (artefatos)", "coord": {"lat": 39.0706, "lng": 8.4500}},
-                {"n": 3, "nome": "Basilica Sant'Antioco Martire + catacumbas", "coord": {"lat": 39.0672, "lng": 8.4522}},
-                {"n": 4, "nome": "Necrópole púnica subterrânea", "coord": {"lat": 39.0670, "lng": 8.4524}},
-                {"n": 5, "nome": "Tonnara ruins · Cala Sapone", "coord": {"lat": 39.0590, "lng": 8.4480}}
+                {
+                  "n": 1,
+                  "nome": "Tophet di Sant'Antioco (cemitério ritual)",
+                  "coord": {
+                    "lat": 39.0706,
+                    "lng": 8.45
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Museo Barreca MAB (artefatos)",
+                  "coord": {
+                    "lat": 39.0706,
+                    "lng": 8.45
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Basilica Sant'Antioco Martire + catacumbas",
+                  "coord": {
+                    "lat": 39.0672,
+                    "lng": 8.4522
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Necrópole púnica subterrânea",
+                  "coord": {
+                    "lat": 39.067,
+                    "lng": 8.4524
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Tonnara ruins · Cala Sapone",
+                  "coord": {
+                    "lat": 39.059,
+                    "lng": 8.448
+                  }
+                }
               ]
             }
           ]
@@ -814,11 +1224,29 @@
           "tipo": "opcoes",
           "nome": "Almoço Sant'Antioco centro",
           "cat": "Mid-walking tour",
-          "coord": {"lat": 39.0664, "lng": 8.4522},
+          "coord": {
+            "lat": 39.0664,
+            "lng": 8.4522
+          },
           "opcoes": [
-            {"nome": "Trattoria de Sant'Antioco", "desc": "Centro · pratos sardos clássicos · preço bom", "preco": "€20-30", "dist": "Centro"},
-            {"nome": "Locanda del Borgo", "desc": "Romântico · cozinha de mar e terra · reserva", "preco": "€35-45", "dist": "Centro"},
-            {"nome": "Picnic mira-mar", "desc": "Comprou padaria local · come perto da Basílica", "preco": "€15", "dist": "—"}
+            {
+              "nome": "Trattoria de Sant'Antioco",
+              "desc": "Centro · pratos sardos clássicos · preço bom",
+              "preco": "€20-30",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Locanda del Borgo",
+              "desc": "Romântico · cozinha de mar e terra · reserva",
+              "preco": "€35-45",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Picnic mira-mar",
+              "desc": "Comprou padaria local · come perto da Basílica",
+              "preco": "€15",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -839,7 +1267,10 @@
           "duracao": "2h-3h",
           "custo": "—",
           "acessibilidade": "Total",
-          "coord": {"lat": 38.9989, "lng": 8.4489}
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          }
         },
         {
           "hora": "20:30",
@@ -848,11 +1279,29 @@
           "tipo": "opcoes",
           "nome": "Jantar Maladroxia",
           "cat": "Vila",
-          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
           "opcoes": [
-            {"nome": "Hotel Ristorante Lounge", "desc": "Praia · vista mar · variedade de pratos", "preco": "€25-35", "dist": "Praia"},
-            {"nome": "Ittiturismo I Due Fratelli", "desc": "Peixe top · sai Maladroxia 15min · vale o jantar especial", "preco": "€35-50", "dist": "15min"},
-            {"nome": "Casa", "desc": "Compra Sant'Antioco · simples · relax", "preco": "€20", "dist": "—"}
+            {
+              "nome": "Hotel Ristorante Lounge",
+              "desc": "Praia · vista mar · variedade de pratos",
+              "preco": "€25-35",
+              "dist": "Praia"
+            },
+            {
+              "nome": "Ittiturismo I Due Fratelli",
+              "desc": "Peixe top · sai Maladroxia 15min · vale o jantar especial",
+              "preco": "€35-50",
+              "dist": "15min"
+            },
+            {
+              "nome": "Casa",
+              "desc": "Compra Sant'Antioco · simples · relax",
+              "preco": "€20",
+              "dist": "—"
+            }
           ]
         }
       ]
@@ -864,7 +1313,10 @@
       "bairro": "🏝️ Carloforte",
       "grupo": true,
       "transport": "driving",
-      "baseCoord": {"lat": 38.9989, "lng": 8.4489},
+      "baseCoord": {
+        "lat": 38.9989,
+        "lng": 8.4489
+      },
       "baseName": "Maladroxia, Sardinia",
       "cor": "#0e7490",
       "gradA": "#155e75",
@@ -877,7 +1329,10 @@
           "tipo": "transit",
           "nome": "Maladroxia → Calasetta (ferry Carloforte)",
           "cat": "~25min · norte da ilha · ferry porto",
-          "coord": {"lat": 39.1078, "lng": 8.3686}
+          "coord": {
+            "lat": 39.1078,
+            "lng": 8.3686
+          }
         },
         {
           "hora": "09:45",
@@ -886,7 +1341,10 @@
           "tipo": "transit",
           "nome": "Ferry Calasetta → Carloforte",
           "cat": "~30min · Delcomar · €4-5 passageiro · €17 carro",
-          "coord": {"lat": 39.1451, "lng": 8.3073}
+          "coord": {
+            "lat": 39.1451,
+            "lng": 8.3073
+          }
         },
         {
           "hora": "10:30",
@@ -908,7 +1366,10 @@
           "duracao": "Dia inteiro · 6-7h na ilha",
           "custo": "€8-10 ferry total · refeições à parte",
           "acessibilidade": "Caruggi com paralelepípedo + escadas · cidade plana mas íngreme em pontos",
-          "coord": {"lat": 39.1451, "lng": 8.3073}
+          "coord": {
+            "lat": 39.1451,
+            "lng": 8.3073
+          }
         },
         {
           "hora": "13:00",
@@ -917,11 +1378,29 @@
           "tipo": "opcoes",
           "nome": "Almoço Carloforte · ATUM",
           "cat": "Comer bem aqui é obrigatório",
-          "coord": {"lat": 39.1451, "lng": 8.3073},
+          "coord": {
+            "lat": 39.1451,
+            "lng": 8.3073
+          },
           "opcoes": [
-            {"nome": "Al Tonno di Corsa (Via Marconi 47)", "desc": "Michelin · institução desde 1980 · ventresca seared, tagliatelle ragù atum · reserva absoluta", "preco": "€60-90", "dist": "Centro"},
-            {"nome": "Osteria della Tonnara (porto)", "desc": "Casual · atum em mil formas · waterfront com vista", "preco": "€30-45", "dist": "Porto"},
-            {"nome": "Da Nicolo", "desc": "Trattoria simples · atum a preço bom · local-favorito", "preco": "€25-35", "dist": "Centro"}
+            {
+              "nome": "Al Tonno di Corsa (Via Marconi 47)",
+              "desc": "Michelin · institução desde 1980 · ventresca seared, tagliatelle ragù atum · reserva absoluta",
+              "preco": "€60-90",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Osteria della Tonnara (porto)",
+              "desc": "Casual · atum em mil formas · waterfront com vista",
+              "preco": "€30-45",
+              "dist": "Porto"
+            },
+            {
+              "nome": "Da Nicolo",
+              "desc": "Trattoria simples · atum a preço bom · local-favorito",
+              "preco": "€25-35",
+              "dist": "Centro"
+            }
           ]
         },
         {
@@ -942,7 +1421,10 @@
           "duracao": "2h-2h30",
           "custo": "—",
           "acessibilidade": "La Bobba mais fácil · Cala Lunga tem pedras",
-          "coord": {"lat": 39.1230, "lng": 8.2950}
+          "coord": {
+            "lat": 39.123,
+            "lng": 8.295
+          }
         },
         {
           "hora": "18:30",
@@ -951,7 +1433,10 @@
           "tipo": "transit",
           "nome": "Ferry Carloforte → Calasetta",
           "cat": "~30min · volta tranquila",
-          "coord": {"lat": 39.1078, "lng": 8.3686}
+          "coord": {
+            "lat": 39.1078,
+            "lng": 8.3686
+          }
         },
         {
           "hora": "19:30",
@@ -960,11 +1445,29 @@
           "tipo": "opcoes",
           "nome": "Jantar leve Maladroxia · vila",
           "cat": "Almoço foi pesado",
-          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
           "opcoes": [
-            {"nome": "Hotel Ristorante Lounge", "desc": "Praia · jantar leve · vinho · descanso", "preco": "€25-35", "dist": "Praia"},
-            {"nome": "Casa", "desc": "Salada + queijo + vinho · neta dorme cedo", "preco": "€15", "dist": "—"},
-            {"nome": "Pizza Sant'Antioco", "desc": "Pizzaria simples · 15min · ok família · take away possível", "preco": "€20-25", "dist": "15min"}
+            {
+              "nome": "Hotel Ristorante Lounge",
+              "desc": "Praia · jantar leve · vinho · descanso",
+              "preco": "€25-35",
+              "dist": "Praia"
+            },
+            {
+              "nome": "Casa",
+              "desc": "Salada + queijo + vinho · neta dorme cedo",
+              "preco": "€15",
+              "dist": "—"
+            },
+            {
+              "nome": "Pizza Sant'Antioco",
+              "desc": "Pizzaria simples · 15min · ok família · take away possível",
+              "preco": "€20-25",
+              "dist": "15min"
+            }
           ]
         }
       ]
@@ -976,7 +1479,10 @@
       "bairro": "⛏️ Costa SO",
       "grupo": true,
       "transport": "driving",
-      "baseCoord": {"lat": 38.9989, "lng": 8.4489},
+      "baseCoord": {
+        "lat": 38.9989,
+        "lng": 8.4489
+      },
       "baseName": "Maladroxia, Sardinia",
       "cor": "#475569",
       "gradA": "#1e293b",
@@ -989,7 +1495,10 @@
           "tipo": "transit",
           "nome": "Maladroxia → Porto Flavia",
           "cat": "~1h15 · SP83 via Iglesias e Buggerru",
-          "coord": {"lat": 39.3371, "lng": 8.4126}
+          "coord": {
+            "lat": 39.3371,
+            "lng": 8.4126
+          }
         },
         {
           "hora": "09:30",
@@ -1011,7 +1520,10 @@
           "duracao": "2h tour",
           "custo": "€10/€6.50 senior",
           "acessibilidade": "Túnel horizontal sem degraus · estacionamento perto",
-          "coord": {"lat": 39.3371, "lng": 8.4126}
+          "coord": {
+            "lat": 39.3371,
+            "lng": 8.4126
+          }
         },
         {
           "hora": "12:30",
@@ -1020,7 +1532,10 @@
           "tipo": "transit",
           "nome": "Porto Flavia → Cala Domestica",
           "cat": "~15min · SP83 norte",
-          "coord": {"lat": 39.3738, "lng": 8.3797}
+          "coord": {
+            "lat": 39.3738,
+            "lng": 8.3797
+          }
         },
         {
           "hora": "13:00",
@@ -1041,7 +1556,10 @@
           "duracao": "3h-4h",
           "custo": "€5 parking",
           "acessibilidade": "Passarela de madeira do parking · plana · ok",
-          "coord": {"lat": 39.3738, "lng": 8.3797}
+          "coord": {
+            "lat": 39.3738,
+            "lng": 8.3797
+          }
         },
         {
           "hora": "17:30",
@@ -1050,7 +1568,10 @@
           "tipo": "transit",
           "nome": "Cala Domestica → Maladroxia",
           "cat": "~1h15 volta · SP83 + SS126",
-          "coord": {"lat": 38.9989, "lng": 8.4489}
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          }
         },
         {
           "hora": "20:30",
@@ -1059,11 +1580,29 @@
           "tipo": "opcoes",
           "nome": "Jantar especial · última noite todos juntos",
           "cat": "Amanhã vocês partem sozinhos",
-          "coord": {"lat": 38.9989, "lng": 8.4489},
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
           "opcoes": [
-            {"nome": "Ittiturismo I Due Fratelli (Sant'Antioco)", "desc": "Cooperativa pescadores · peixe top · vinho · noite especial · 15min", "preco": "€40-55", "dist": "15min"},
-            {"nome": "Hotel Ristorante Lounge", "desc": "Praia · romântico · jantar tranquilo", "preco": "€30-40", "dist": "Praia"},
-            {"nome": "Locanda del Borgo (Sant'Antioco)", "desc": "Charme · cozinha de terra e mar", "preco": "€35-45", "dist": "15min"}
+            {
+              "nome": "Ittiturismo I Due Fratelli (Sant'Antioco)",
+              "desc": "Cooperativa pescadores · peixe top · vinho · noite especial · 15min",
+              "preco": "€40-55",
+              "dist": "15min"
+            },
+            {
+              "nome": "Hotel Ristorante Lounge",
+              "desc": "Praia · romântico · jantar tranquilo",
+              "preco": "€30-40",
+              "dist": "Praia"
+            },
+            {
+              "nome": "Locanda del Borgo (Sant'Antioco)",
+              "desc": "Charme · cozinha de terra e mar",
+              "preco": "€35-45",
+              "dist": "15min"
+            }
           ]
         }
       ]
@@ -1097,7 +1636,10 @@
           "duracao": "1h preparação",
           "custo": "—",
           "acessibilidade": "—",
-          "coord": {"lat": 38.9989, "lng": 8.4489}
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          }
         },
         {
           "hora": "08:30",
@@ -1106,7 +1648,10 @@
           "tipo": "transit",
           "nome": "Maladroxia → Nuoro",
           "cat": "~3h · SS131 Carlo Felice · estrada principal",
-          "coord": {"lat": 40.3216, "lng": 9.3303}
+          "coord": {
+            "lat": 40.3216,
+            "lng": 9.3303
+          }
         },
         {
           "hora": "12:00",
@@ -1115,11 +1660,29 @@
           "tipo": "opcoes",
           "nome": "Almoço Nuoro · cultura interior",
           "cat": "Capital do interior · culinária da Barbagia",
-          "coord": {"lat": 40.3216, "lng": 9.3303},
+          "coord": {
+            "lat": 40.3216,
+            "lng": 9.3303
+          },
           "opcoes": [
-            {"nome": "Trattoria Marrosu (Nuoro centro)", "desc": "Cordeiro da Barbagia · pasta caseira · clássico", "preco": "€25-35", "dist": "Centro Nuoro"},
-            {"nome": "Ristorante Il Rifugio", "desc": "Tradicional · cinghiale (javali), pecorino · ambiente rústico", "preco": "€30-40", "dist": "Centro"},
-            {"nome": "Sandes na estrada", "desc": "Pra ganhar tempo · Autogrill SS131 · evita parada longa", "preco": "€10", "dist": "—"}
+            {
+              "nome": "Trattoria Marrosu (Nuoro centro)",
+              "desc": "Cordeiro da Barbagia · pasta caseira · clássico",
+              "preco": "€25-35",
+              "dist": "Centro Nuoro"
+            },
+            {
+              "nome": "Ristorante Il Rifugio",
+              "desc": "Tradicional · cinghiale (javali), pecorino · ambiente rústico",
+              "preco": "€30-40",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Sandes na estrada",
+              "desc": "Pra ganhar tempo · Autogrill SS131 · evita parada longa",
+              "preco": "€10",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -1129,7 +1692,10 @@
           "tipo": "transit",
           "nome": "Nuoro → Dorgali → Cala Gonone",
           "cat": "~1h15 · SP38 + SS125 cênica · 'Route 66 sarda'",
-          "coord": {"lat": 40.2804, "lng": 9.6272}
+          "coord": {
+            "lat": 40.2804,
+            "lng": 9.6272
+          }
         },
         {
           "hora": "15:30",
@@ -1149,7 +1715,10 @@
           "duracao": "15min",
           "custo": "—",
           "acessibilidade": "Layby · saída do carro só",
-          "coord": {"lat": 40.2890, "lng": 9.6280},
+          "coord": {
+            "lat": 40.289,
+            "lng": 9.628
+          },
           "coord_unverified": true
         },
         {
@@ -1170,7 +1739,10 @@
           "duracao": "Resto da tarde",
           "custo": "—",
           "acessibilidade": "Vila plana mas há rampas íngremes em alguns pontos",
-          "coord": {"lat": 40.2804, "lng": 9.6272}
+          "coord": {
+            "lat": 40.2804,
+            "lng": 9.6272
+          }
         },
         {
           "hora": "20:30",
@@ -1179,11 +1751,29 @@
           "tipo": "opcoes",
           "nome": "Jantar Cala Gonone · 1ª noite",
           "cat": "Marina · pé na água",
-          "coord": {"lat": 40.2804, "lng": 9.6272},
+          "coord": {
+            "lat": 40.2804,
+            "lng": 9.6272
+          },
           "opcoes": [
-            {"nome": "Il Pescatore (marina)", "desc": "Frutos do mar · vista barcos · cozinha de costa", "preco": "€35-50", "dist": "Marina"},
-            {"nome": "Bue Marino (centro)", "desc": "Trattoria sarda · culurgiones (raviolis sardos), cordeiro · ambiente acolhedor", "preco": "€30-40", "dist": "Centro"},
-            {"nome": "Pizzeria Pulcinella", "desc": "Casual · pizza forno lenha · simples · descanso", "preco": "€20-25", "dist": "Centro"}
+            {
+              "nome": "Il Pescatore (marina)",
+              "desc": "Frutos do mar · vista barcos · cozinha de costa",
+              "preco": "€35-50",
+              "dist": "Marina"
+            },
+            {
+              "nome": "Bue Marino (centro)",
+              "desc": "Trattoria sarda · culurgiones (raviolis sardos), cordeiro · ambiente acolhedor",
+              "preco": "€30-40",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Pizzeria Pulcinella",
+              "desc": "Casual · pizza forno lenha · simples · descanso",
+              "preco": "€20-25",
+              "dist": "Centro"
+            }
           ]
         }
       ]
@@ -1205,7 +1795,10 @@
           "tipo": "transit",
           "nome": "Embarque Marina Cala Gonone",
           "cat": "Tour escolhido na véspera",
-          "coord": {"lat": 40.2804, "lng": 9.6272}
+          "coord": {
+            "lat": 40.2804,
+            "lng": 9.6272
+          }
         },
         {
           "hora": "09:00",
@@ -1227,7 +1820,10 @@
           "duracao": "7-8h",
           "custo": "€60-90/pessoa shuttle full-day",
           "acessibilidade": "Embarque ok · algumas praias têm seixos · canguru não relevante",
-          "coord": {"lat": 40.1233, "lng": 9.6763}
+          "coord": {
+            "lat": 40.1233,
+            "lng": 9.6763
+          }
         },
         {
           "hora": "17:00",
@@ -1247,7 +1843,10 @@
           "duracao": "1h-1h30",
           "custo": "€5-8 sorvetes",
           "acessibilidade": "Total",
-          "coord": {"lat": 40.2804, "lng": 9.6272}
+          "coord": {
+            "lat": 40.2804,
+            "lng": 9.6272
+          }
         },
         {
           "hora": "20:00",
@@ -1256,11 +1855,29 @@
           "tipo": "opcoes",
           "nome": "Jantar leve · dia foi cheio",
           "cat": "Recarga",
-          "coord": {"lat": 40.2804, "lng": 9.6272},
+          "coord": {
+            "lat": 40.2804,
+            "lng": 9.6272
+          },
           "opcoes": [
-            {"nome": "Bue Marino", "desc": "Trattoria sarda · culurgiones, ravioli · ambiente acolhedor", "preco": "€30-40", "dist": "Centro"},
-            {"nome": "Trattoria del Marinaio (marina)", "desc": "Pé na água · peixe simples e fresco", "preco": "€30-40", "dist": "Marina"},
-            {"nome": "Pizza + cerveja", "desc": "Casual · descanso · dorme cedo · amanhã dirige", "preco": "€20", "dist": "Centro"}
+            {
+              "nome": "Bue Marino",
+              "desc": "Trattoria sarda · culurgiones, ravioli · ambiente acolhedor",
+              "preco": "€30-40",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Trattoria del Marinaio (marina)",
+              "desc": "Pé na água · peixe simples e fresco",
+              "preco": "€30-40",
+              "dist": "Marina"
+            },
+            {
+              "nome": "Pizza + cerveja",
+              "desc": "Casual · descanso · dorme cedo · amanhã dirige",
+              "preco": "€20",
+              "dist": "Centro"
+            }
           ]
         }
       ]
@@ -1293,7 +1910,10 @@
           "duracao": "30min",
           "custo": "—",
           "acessibilidade": "—",
-          "coord": {"lat": 40.2804, "lng": 9.6272}
+          "coord": {
+            "lat": 40.2804,
+            "lng": 9.6272
+          }
         },
         {
           "hora": "09:30",
@@ -1302,7 +1922,10 @@
           "tipo": "transit",
           "nome": "Cala Gonone → Santa Teresa di Gallura",
           "cat": "~2h30 · SS125+SS131DCN · costa norte",
-          "coord": {"lat": 41.2380, "lng": 9.1944}
+          "coord": {
+            "lat": 41.238,
+            "lng": 9.1944
+          }
         },
         {
           "hora": "12:30",
@@ -1311,11 +1934,29 @@
           "tipo": "opcoes",
           "nome": "Almoço Olbia ou Santa Teresa",
           "cat": "No caminho · prático",
-          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          },
           "opcoes": [
-            {"nome": "Almoço Olbia (Corso Umberto)", "desc": "30min desvio · cidade conhecida · café + trattoria", "preco": "€20-30", "dist": "30min"},
-            {"nome": "Trattoria Santa Teresa", "desc": "Cidade do norte · ambiente marítimo · culinária da Gallura", "preco": "€25-35", "dist": "Centro"},
-            {"nome": "Picnic na estrada", "desc": "Pra ganhar tempo · Autogrill ou padaria · prático", "preco": "€10", "dist": "—"}
+            {
+              "nome": "Almoço Olbia (Corso Umberto)",
+              "desc": "30min desvio · cidade conhecida · café + trattoria",
+              "preco": "€20-30",
+              "dist": "30min"
+            },
+            {
+              "nome": "Trattoria Santa Teresa",
+              "desc": "Cidade do norte · ambiente marítimo · culinária da Gallura",
+              "preco": "€25-35",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Picnic na estrada",
+              "desc": "Pra ganhar tempo · Autogrill ou padaria · prático",
+              "preco": "€10",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -1336,7 +1977,10 @@
           "duracao": "1h check-in",
           "custo": "—",
           "acessibilidade": "Vila Santa Teresa plana · Capo Testa tem trilhas",
-          "coord": {"lat": 41.2389, "lng": 9.1907}
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          }
         },
         {
           "hora": "17:00",
@@ -1358,16 +2002,47 @@
           "duracao": "2h-3h",
           "custo": "Grátis",
           "acessibilidade": "Trilha em granito · sem rampas formais · só pra fit",
-          "coord": {"lat": 41.2365, "lng": 9.1617},
+          "coord": {
+            "lat": 41.2365,
+            "lng": 9.1617
+          },
           "walkingTours": [
             {
               "nome": "Capo Testa · 🌄 Paisagem Lunar",
               "descricao": "Parking → Valle della Luna → Cala Grande → Farol → volta · ~6km · 2-3h · 4 stops",
               "stops": [
-                {"n": 1, "nome": "Parking Capo Testa (info point)", "coord": {"lat": 41.2365, "lng": 9.1617}},
-                {"n": 2, "nome": "Valle della Luna (formações graníticas)", "coord": {"lat": 41.2443, "lng": 9.1488}},
-                {"n": 3, "nome": "Cala Grande (praia escondida)", "coord": {"lat": 41.2410, "lng": 9.1480}},
-                {"n": 4, "nome": "Faro di Capo Testa", "coord": {"lat": 41.2376, "lng": 9.1480}}
+                {
+                  "n": 1,
+                  "nome": "Parking Capo Testa (info point)",
+                  "coord": {
+                    "lat": 41.2365,
+                    "lng": 9.1617
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Valle della Luna (formações graníticas)",
+                  "coord": {
+                    "lat": 41.2443,
+                    "lng": 9.1488
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Cala Grande (praia escondida)",
+                  "coord": {
+                    "lat": 41.241,
+                    "lng": 9.148
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Faro di Capo Testa",
+                  "coord": {
+                    "lat": 41.2376,
+                    "lng": 9.148
+                  }
+                }
               ]
             }
           ]
@@ -1379,11 +2054,29 @@
           "tipo": "opcoes",
           "nome": "Jantar Santa Teresa",
           "cat": "Centro · vários restaurantes",
-          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          },
           "opcoes": [
-            {"nome": "Ristorante La Torre", "desc": "Centro · clássico gallurese · pasta caseira, cordeiro · reservado · bom vinho", "preco": "€35-45", "dist": "Centro"},
-            {"nome": "Trattoria del Borgo", "desc": "Cozinha tradicional · culurgiones, fregola · ambiente acolhedor", "preco": "€30-40", "dist": "Centro"},
-            {"nome": "L'Osteria", "desc": "Mais informal · peixe e frutos do mar · waterfront", "preco": "€25-35", "dist": "Porto"}
+            {
+              "nome": "Ristorante La Torre",
+              "desc": "Centro · clássico gallurese · pasta caseira, cordeiro · reservado · bom vinho",
+              "preco": "€35-45",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Trattoria del Borgo",
+              "desc": "Cozinha tradicional · culurgiones, fregola · ambiente acolhedor",
+              "preco": "€30-40",
+              "dist": "Centro"
+            },
+            {
+              "nome": "L'Osteria",
+              "desc": "Mais informal · peixe e frutos do mar · waterfront",
+              "preco": "€25-35",
+              "dist": "Porto"
+            }
           ]
         }
       ]
@@ -1395,7 +2088,10 @@
       "bairro": "🏝️ La Maddalena & Caprera",
       "grupo": false,
       "transport": "driving",
-      "baseCoord": {"lat": 41.2389, "lng": 9.1907},
+      "baseCoord": {
+        "lat": 41.2389,
+        "lng": 9.1907
+      },
       "baseName": "Santa Teresa di Gallura, Sardinia",
       "cor": "#14b8a6",
       "gradA": "#134e4a",
@@ -1408,7 +2104,10 @@
           "tipo": "transit",
           "nome": "Santa Teresa → Palau (ferry)",
           "cat": "~30min · SP90 · estrada costeira",
-          "coord": {"lat": 41.1809, "lng": 9.3788}
+          "coord": {
+            "lat": 41.1809,
+            "lng": 9.3788
+          }
         },
         {
           "hora": "09:30",
@@ -1417,7 +2116,10 @@
           "tipo": "transit",
           "nome": "Ferry Palau → La Maddalena",
           "cat": "15min · Maddalena Lines/Delcomar · ~€16/carro",
-          "coord": {"lat": 41.2169, "lng": 9.4026}
+          "coord": {
+            "lat": 41.2169,
+            "lng": 9.4026
+          }
         },
         {
           "hora": "10:00",
@@ -1439,17 +2141,55 @@
           "duracao": "Dia inteiro · 8h+",
           "custo": "€16 ferry carro + €8 museu Garibaldi",
           "acessibilidade": "La Maddalena town plana · Cala Coticcio = trail moderado",
-          "coord": {"lat": 41.2169, "lng": 9.4026},
+          "coord": {
+            "lat": 41.2169,
+            "lng": 9.4026
+          },
           "walkingTours": [
             {
               "nome": "La Maddalena · 🏝️ Vila do Arquipélago",
               "descricao": "Porto → Piazza Garibaldi → Piazza Umberto → Cala Francese → Spiaggia Tegge · ~2h · 5 stops",
               "stops": [
-                {"n": 1, "nome": "Porto La Maddalena (chegada ferry)", "coord": {"lat": 41.2169, "lng": 9.4026}},
-                {"n": 2, "nome": "Piazza Garibaldi (centro)", "coord": {"lat": 41.2169, "lng": 9.4026}},
-                {"n": 3, "nome": "Piazza Umberto I", "coord": {"lat": 41.2175, "lng": 9.4030}},
-                {"n": 4, "nome": "Cala Francese (rochas rosa)", "coord": {"lat": 41.2210, "lng": 9.4050}},
-                {"n": 5, "nome": "Spiaggia di Tegge", "coord": {"lat": 41.2220, "lng": 9.4080}}
+                {
+                  "n": 1,
+                  "nome": "Porto La Maddalena (chegada ferry)",
+                  "coord": {
+                    "lat": 41.2169,
+                    "lng": 9.4026
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Piazza Garibaldi (centro)",
+                  "coord": {
+                    "lat": 41.2169,
+                    "lng": 9.4026
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Piazza Umberto I",
+                  "coord": {
+                    "lat": 41.2175,
+                    "lng": 9.403
+                  }
+                },
+                {
+                  "n": 4,
+                  "nome": "Cala Francese (rochas rosa)",
+                  "coord": {
+                    "lat": 41.221,
+                    "lng": 9.405
+                  }
+                },
+                {
+                  "n": 5,
+                  "nome": "Spiaggia di Tegge",
+                  "coord": {
+                    "lat": 41.222,
+                    "lng": 9.408
+                  }
+                }
               ]
             }
           ]
@@ -1461,11 +2201,29 @@
           "tipo": "opcoes",
           "nome": "Almoço La Maddalena",
           "cat": "Centro · ambiente marítimo",
-          "coord": {"lat": 41.2169, "lng": 9.4026},
+          "coord": {
+            "lat": 41.2169,
+            "lng": 9.4026
+          },
           "opcoes": [
-            {"nome": "Da Lucio (centro)", "desc": "Trattoria local · pasta com frutos do mar · waterfront", "preco": "€30-40", "dist": "Centro"},
-            {"nome": "Trattoria Aurora", "desc": "Família · culurgiones, peixe · bom valor", "preco": "€25-35", "dist": "Centro"},
-            {"nome": "Picnic em Cala Coticcio", "desc": "Compra padaria · come na praia · economia + cenário", "preco": "€15", "dist": "—"}
+            {
+              "nome": "Da Lucio (centro)",
+              "desc": "Trattoria local · pasta com frutos do mar · waterfront",
+              "preco": "€30-40",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Trattoria Aurora",
+              "desc": "Família · culurgiones, peixe · bom valor",
+              "preco": "€25-35",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Picnic em Cala Coticcio",
+              "desc": "Compra padaria · come na praia · economia + cenário",
+              "preco": "€15",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -1487,7 +2245,10 @@
           "duracao": "2h-3h",
           "custo": "€8 museu (opcional)",
           "acessibilidade": "Trail moderado · não recomendado pra problemas de joelho",
-          "coord": {"lat": 41.2050, "lng": 9.4670}
+          "coord": {
+            "lat": 41.205,
+            "lng": 9.467
+          }
         },
         {
           "hora": "18:30",
@@ -1496,7 +2257,10 @@
           "tipo": "transit",
           "nome": "Ferry La Maddalena → Palau",
           "cat": "15min · volta",
-          "coord": {"lat": 41.1809, "lng": 9.3788}
+          "coord": {
+            "lat": 41.1809,
+            "lng": 9.3788
+          }
         },
         {
           "hora": "19:30",
@@ -1505,7 +2269,10 @@
           "tipo": "transit",
           "nome": "Palau → Santa Teresa",
           "cat": "~30min volta",
-          "coord": {"lat": 41.2389, "lng": 9.1907}
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          }
         },
         {
           "hora": "20:30",
@@ -1514,11 +2281,29 @@
           "tipo": "opcoes",
           "nome": "Jantar Santa Teresa · noite tranquila",
           "cat": "Após dia cheio",
-          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          },
           "opcoes": [
-            {"nome": "Trattoria del Borgo", "desc": "Cozinha tradicional · jantar tranquilo", "preco": "€30-40", "dist": "Centro"},
-            {"nome": "Pizzeria do centro", "desc": "Casual · pizza no forno lenha · descanso", "preco": "€20-25", "dist": "Centro"},
-            {"nome": "Casa", "desc": "Charcutaria + queijo + Vermentino · neta dorme", "preco": "€20", "dist": "—"}
+            {
+              "nome": "Trattoria del Borgo",
+              "desc": "Cozinha tradicional · jantar tranquilo",
+              "preco": "€30-40",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Pizzeria do centro",
+              "desc": "Casual · pizza no forno lenha · descanso",
+              "preco": "€20-25",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Casa",
+              "desc": "Charcutaria + queijo + Vermentino · neta dorme",
+              "preco": "€20",
+              "dist": "—"
+            }
           ]
         }
       ]
@@ -1530,7 +2315,10 @@
       "bairro": "🏛️ Arzachena & San Pantaleo",
       "grupo": false,
       "transport": "driving",
-      "baseCoord": {"lat": 41.2389, "lng": 9.1907},
+      "baseCoord": {
+        "lat": 41.2389,
+        "lng": 9.1907
+      },
       "baseName": "Santa Teresa di Gallura, Sardinia",
       "cor": "#7c3aed",
       "gradA": "#4c1d95",
@@ -1543,7 +2331,10 @@
           "tipo": "transit",
           "nome": "Santa Teresa → San Pantaleo",
           "cat": "~50min · SS133 + SP14 · interior Gallura",
-          "coord": {"lat": 41.0456, "lng": 9.4675}
+          "coord": {
+            "lat": 41.0456,
+            "lng": 9.4675
+          }
         },
         {
           "hora": "09:30",
@@ -1564,7 +2355,10 @@
           "duracao": "3h-3h30",
           "custo": "Variável · €40-100 compras",
           "acessibilidade": "Vila plana · ok",
-          "coord": {"lat": 41.0456, "lng": 9.4675}
+          "coord": {
+            "lat": 41.0456,
+            "lng": 9.4675
+          }
         },
         {
           "hora": "13:00",
@@ -1573,11 +2367,29 @@
           "tipo": "opcoes",
           "nome": "Almoço San Pantaleo",
           "cat": "Pós-mercado",
-          "coord": {"lat": 41.0456, "lng": 9.4675},
+          "coord": {
+            "lat": 41.0456,
+            "lng": 9.4675
+          },
           "opcoes": [
-            {"nome": "Ristorante Giagoni (igreja)", "desc": "Tradicional · clientela seleta · pasta caseira, cordeiro · caro mas excelente", "preco": "€45-65", "dist": "Centro"},
-            {"nome": "Café Nina", "desc": "Casual · sandes, salads · perfeito após mercado", "preco": "€15-25", "dist": "Centro"},
-            {"nome": "Picnic do mercado", "desc": "Queijo + pão + tomate + vinho · come na praça", "preco": "€25 casal", "dist": "—"}
+            {
+              "nome": "Ristorante Giagoni (igreja)",
+              "desc": "Tradicional · clientela seleta · pasta caseira, cordeiro · caro mas excelente",
+              "preco": "€45-65",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Café Nina",
+              "desc": "Casual · sandes, salads · perfeito após mercado",
+              "preco": "€15-25",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Picnic do mercado",
+              "desc": "Queijo + pão + tomate + vinho · come na praça",
+              "preco": "€25 casal",
+              "dist": "—"
+            }
           ]
         },
         {
@@ -1599,7 +2411,10 @@
           "duracao": "1h",
           "custo": "€3-5",
           "acessibilidade": "Trilha curta plana",
-          "coord": {"lat": 41.0500, "lng": 9.3556}
+          "coord": {
+            "lat": 41.05,
+            "lng": 9.3556
+          }
         },
         {
           "hora": "16:30",
@@ -1620,7 +2435,10 @@
           "duracao": "1h-1h30",
           "custo": "€5-10 estacionamento",
           "acessibilidade": "Piazzetta + marina plana · ok",
-          "coord": {"lat": 41.1347, "lng": 9.5375}
+          "coord": {
+            "lat": 41.1347,
+            "lng": 9.5375
+          }
         },
         {
           "hora": "18:30",
@@ -1629,7 +2447,10 @@
           "tipo": "transit",
           "nome": "Porto Cervo → Santa Teresa",
           "cat": "~50min · SS125 norte · estrada cênica",
-          "coord": {"lat": 41.2389, "lng": 9.1907}
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          }
         },
         {
           "hora": "20:30",
@@ -1638,11 +2459,29 @@
           "tipo": "opcoes",
           "nome": "Jantar especial · última noite Sardenha",
           "cat": "Despedida",
-          "coord": {"lat": 41.2389, "lng": 9.1907},
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          },
           "opcoes": [
-            {"nome": "Ristorante La Torre", "desc": "Centro · clássico gallurese · noite especial · vinho top", "preco": "€40-55", "dist": "Centro"},
-            {"nome": "Trattoria del Borgo", "desc": "Acolhedor · pasta caseira · ambiente bom pra retrospectiva", "preco": "€30-40", "dist": "Centro"},
-            {"nome": "Restaurante porto Santa Teresa", "desc": "Waterfront · peixe + Vermentino · romântico", "preco": "€35-50", "dist": "Porto"}
+            {
+              "nome": "Ristorante La Torre",
+              "desc": "Centro · clássico gallurese · noite especial · vinho top",
+              "preco": "€40-55",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Trattoria del Borgo",
+              "desc": "Acolhedor · pasta caseira · ambiente bom pra retrospectiva",
+              "preco": "€30-40",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Restaurante porto Santa Teresa",
+              "desc": "Waterfront · peixe + Vermentino · romântico",
+              "preco": "€35-50",
+              "dist": "Porto"
+            }
           ]
         }
       ]
@@ -1676,7 +2515,10 @@
           "duracao": "1h30",
           "custo": "—",
           "acessibilidade": "—",
-          "coord": {"lat": 41.2389, "lng": 9.1907}
+          "coord": {
+            "lat": 41.2389,
+            "lng": 9.1907
+          }
         },
         {
           "hora": "09:30",
@@ -1685,7 +2527,10 @@
           "tipo": "transit",
           "nome": "Santa Teresa → Olbia airport",
           "cat": "~1h15 · SP90 + SS125",
-          "coord": {"lat": 40.8987, "lng": 9.5176}
+          "coord": {
+            "lat": 40.8987,
+            "lng": 9.5176
+          }
         },
         {
           "hora": "11:00",
@@ -1694,11 +2539,29 @@
           "tipo": "opcoes",
           "nome": "Almoço Olbia · despedida",
           "cat": "Centro ou aeroporto",
-          "coord": {"lat": 40.9238, "lng": 9.5026},
+          "coord": {
+            "lat": 40.9238,
+            "lng": 9.5026
+          },
           "opcoes": [
-            {"nome": "Trattoria Da Romolo (centro)", "desc": "Última refeição decente · pasta sarda · ambiente local", "preco": "€25-35", "dist": "Centro"},
-            {"nome": "Ristorante Gallura (Corso Umberto)", "desc": "Volta ao 1º almoço · circular fechando · clássico", "preco": "€30-45", "dist": "Centro"},
-            {"nome": "Aeroporto · sanduba", "desc": "Voo cedo · sem opções gourmet · prático", "preco": "€10-15", "dist": "OLB"}
+            {
+              "nome": "Trattoria Da Romolo (centro)",
+              "desc": "Última refeição decente · pasta sarda · ambiente local",
+              "preco": "€25-35",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Ristorante Gallura (Corso Umberto)",
+              "desc": "Volta ao 1º almoço · circular fechando · clássico",
+              "preco": "€30-45",
+              "dist": "Centro"
+            },
+            {
+              "nome": "Aeroporto · sanduba",
+              "desc": "Voo cedo · sem opções gourmet · prático",
+              "preco": "€10-15",
+              "dist": "OLB"
+            }
           ]
         },
         {
@@ -1708,7 +2571,10 @@
           "tipo": "transit",
           "nome": "Voo de retorno · Olbia (OLB)",
           "cat": "Devolução carro + check-in",
-          "coord": {"lat": 40.8987, "lng": 9.5176}
+          "coord": {
+            "lat": 40.8987,
+            "lng": 9.5176
+          }
         },
         {
           "hora": "15:00",
@@ -1728,161 +2594,360 @@
           "duracao": "—",
           "custo": "—",
           "acessibilidade": "—",
-          "coord": {"lat": 40.8987, "lng": 9.5176}
+          "coord": {
+            "lat": 40.8987,
+            "lng": 9.5176
+          }
         }
       ]
     }
   ],
   "links_map": {
     "Tharros · ruínas fenício-romanas no mar": [
-      {"type": "review", "label": "Italia.it · Tharros", "url": "https://www.italia.it/en/sardegna/cabras/cultural-places/tharros-archaeological-area"}
+      {
+        "type": "review",
+        "label": "Italia.it · Tharros",
+        "url": "https://www.italia.it/en/sardegna/cabras/cultural-places/tharros-archaeological-area"
+      }
     ],
     "Sant'Antioco · cidade fenícia 8 sec a.C.": [
-      {"type": "official", "label": "MAB · Tophet + Museu", "url": "https://mabsantantioco.it/?lang=en"}
+      {
+        "type": "official",
+        "label": "MAB · Tophet + Museu",
+        "url": "https://mabsantantioco.it/?lang=en"
+      }
     ],
     "Porto Flavia · mina dentro do penhasco": [
-      {"type": "official", "label": "Porto Flavia · reserva", "url": "https://www.portoflaviatours.it"}
+      {
+        "type": "official",
+        "label": "Porto Flavia · reserva",
+        "url": "https://www.portoflaviatours.it"
+      }
     ],
     "Boat Tour Golfo di Orosei · dia inteiro": [
-      {"type": "official", "label": "Excursões Cala Gonone", "url": "https://www.excursionscalagonone.com/"}
+      {
+        "type": "official",
+        "label": "Excursões Cala Gonone",
+        "url": "https://www.excursionscalagonone.com/"
+      }
     ],
     "Grotta Bue Marino (referência)": [
-      {"type": "official", "label": "Grotta Bue Marino · oficial", "url": "https://www.grottabuemarino.com/en-informazioni"}
+      {
+        "type": "official",
+        "label": "Grotta Bue Marino · oficial",
+        "url": "https://www.grottabuemarino.com/en-informazioni"
+      }
     ],
     "Bosa · cidade medieval colorida do rio Temo": [
-      {"type": "review", "label": "SardegnaTurismo · Bosa tanarias", "url": "https://www.sardegnaturismo.it/en/explore/ancient-tanneries-bosa"}
+      {
+        "type": "review",
+        "label": "SardegnaTurismo · Bosa tanarias",
+        "url": "https://www.sardegnaturismo.it/en/explore/ancient-tanneries-bosa"
+      }
     ],
     "Carloforte · vila genovesa do atum": [
-      {"type": "official", "label": "Carloforte Turismo", "url": "https://www.carloforteturismo.it/en/practical-information/"}
+      {
+        "type": "official",
+        "label": "Carloforte Turismo",
+        "url": "https://www.carloforteturismo.it/en/practical-information/"
+      }
     ],
     "Ferry Calasetta → Carloforte": [
-      {"type": "official", "label": "Delcomar · ferry", "url": "https://delcomar.it/en/"}
+      {
+        "type": "official",
+        "label": "Delcomar · ferry",
+        "url": "https://delcomar.it/en/"
+      }
     ],
     "Ferry Palau → La Maddalena": [
-      {"type": "official", "label": "Maddalena Lines", "url": "https://www.maddalenalines.it/en/"}
+      {
+        "type": "official",
+        "label": "Maddalena Lines",
+        "url": "https://www.maddalenalines.it/en/"
+      }
     ],
     "Ferry Santa Teresa → Bonifacio": [
-      {"type": "official", "label": "Moby Lines", "url": "https://www.mobylines.com/routes/ferries-sardinia/santa-teresa-bonifacio-santa-teresa/"}
+      {
+        "type": "official",
+        "label": "Moby Lines",
+        "url": "https://www.mobylines.com/routes/ferries-sardinia/santa-teresa-bonifacio-santa-teresa/"
+      }
     ]
   },
   "transit_map": {
     "Aeroporto Olbia Costa Smeralda (OLB)": {
-      "uber": "Não opera · use táxi",
-      "metro": "Sem opção",
-      "taxi": "€20-30 · 15min · pra centro",
-      "carro": "Aluguel no aeroporto · evita transfer · mantém pelos 16 dias"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera · use táxi"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€20-30 · 15min · pra centro"
+        }
+      ]
     },
     "Olbia → Santa Teresa di Gallura": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€100+ · proibitivo",
-      "carro": "1h-1h15 · SS125 + SP90 · costa nordeste · estrada boa"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€100+ · proibitivo"
+        }
+      ]
     },
     "Ferry Santa Teresa → Bonifacio": {
-      "uber": "—",
-      "metro": "—",
-      "taxi": "—",
-      "carro": "Passageiro €17-35 · carro €80-130 · 50min · Moby/Ichnusa · reservar antecipado"
+      "opcoes": []
     },
     "Santa Teresa → Càbras": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€350+ · proibitivo",
-      "carro": "3h30 · SS131 (Carlo Felice) · principal rodovia sarda"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€350+ · proibitivo"
+        }
+      ]
     },
     "Càbras → Bosa via SS292 costeira": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€100+ · não recomendado",
-      "carro": "1h15 · SS292 · estrada cênica entre falésias · um dos drives mais bonitos da Sardenha"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€100+ · não recomendado"
+        }
+      ]
     },
     "Càbras → Maladroxia (Sant'Antioco)": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€220+",
-      "carro": "2h · SS131 + SS130 + SS195 · entra Sant'Antioco pela ponte"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€220+"
+        }
+      ]
     },
     "Maladroxia → Calasetta (ferry Carloforte)": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€30",
-      "carro": "25min · norte da ilha de Sant'Antioco · estrada simples"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€30"
+        }
+      ]
     },
     "Ferry Calasetta → Carloforte": {
-      "uber": "—",
-      "metro": "—",
-      "taxi": "—",
-      "carro": "30min · €4-5 passageiro · €17 carro · Delcomar · ~1/h"
+      "opcoes": []
     },
     "Maladroxia → Porto Flavia": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€120+",
-      "carro": "1h15 · SP83 via Iglesias e Buggerru · estrada cênica costa SO"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€120+"
+        }
+      ]
     },
     "Maladroxia → Nuoro": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€350+",
-      "carro": "3h · SS131 norte"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€350+"
+        }
+      ]
     },
     "Nuoro → Dorgali → Cala Gonone": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€80",
-      "carro": "1h15 · SP38 + SS125 cênica · trecho 'Route 66 sarda'"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€80"
+        }
+      ]
     },
     "Cala Gonone → Santa Teresa di Gallura": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€300+",
-      "carro": "2h30 · SS125+SS131DCN · costa norte"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€300+"
+        }
+      ]
     },
     "Santa Teresa → Palau (ferry)": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€40",
-      "carro": "30min · SP90 · costeira"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€40"
+        }
+      ]
     },
     "Ferry Palau → La Maddalena": {
-      "uber": "—",
-      "metro": "—",
-      "taxi": "—",
-      "carro": "15min · ~€16 carro · Maddalena Lines · cada 30min"
+      "opcoes": []
     },
     "Santa Teresa → San Pantaleo": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€60",
-      "carro": "50min · SS133 + SP14 · interior Gallura"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€60"
+        }
+      ]
     },
     "Porto Cervo → Santa Teresa": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€80",
-      "carro": "50min · SS125 norte · estrada cênica"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€80"
+        }
+      ]
     },
     "Santa Teresa → Olbia airport": {
-      "uber": "Não opera",
-      "metro": "Sem opção",
-      "taxi": "€100+",
-      "carro": "1h15 · SP90 + SS125 · costa nordeste"
+      "opcoes": [
+        {
+          "modo": "uber",
+          "texto": "Não opera"
+        },
+        {
+          "modo": "taxi",
+          "texto": "€100+"
+        }
+      ]
     }
   },
   "bairros_config": [
-    {"nome": "🛫 Olbia & Norte", "latMin": 40.85, "latMax": 40.95, "lngMin": 9.45, "lngMax": 9.55},
-    {"nome": "🏰 Bonifacio (visita)", "latMin": 41.36, "latMax": 41.40, "lngMin": 9.14, "lngMax": 9.20},
-    {"nome": "🏖️ Sinis & Oristano", "latMin": 39.80, "latMax": 40.05, "lngMin": 8.35, "lngMax": 8.55},
-    {"nome": "🏛️ Bosa", "latMin": 40.27, "latMax": 40.32, "lngMin": 8.45, "lngMax": 8.55},
-    {"nome": "🏖️ Maladroxia", "latMin": 38.95, "latMax": 39.05, "lngMin": 8.42, "lngMax": 8.50},
-    {"nome": "🏛️ Sant'Antioco", "latMin": 39.05, "latMax": 39.15, "lngMin": 8.32, "lngMax": 8.46},
-    {"nome": "🏝️ Carloforte", "latMin": 39.10, "latMax": 39.16, "lngMin": 8.28, "lngMax": 8.32},
-    {"nome": "⛏️ Costa SO", "latMin": 39.30, "latMax": 39.40, "lngMin": 8.36, "lngMax": 8.42},
-    {"nome": "🌊 Cala Gonone & Orosei", "latMin": 40.08, "latMax": 40.30, "lngMin": 9.60, "lngMax": 9.70},
-    {"nome": "🏔️ Nuoro (transit)", "latMin": 40.30, "latMax": 40.35, "lngMin": 9.30, "lngMax": 9.35},
-    {"nome": "🌄 Capo Testa & Santa Teresa", "latMin": 41.20, "latMax": 41.26, "lngMin": 9.14, "lngMax": 9.25},
-    {"nome": "🏝️ La Maddalena & Caprera", "latMin": 41.18, "latMax": 41.23, "lngMin": 9.38, "lngMax": 9.48},
-    {"nome": "🏛️ Arzachena & San Pantaleo", "latMin": 41.03, "latMax": 41.15, "lngMin": 9.30, "lngMax": 9.55},
-    {"nome": "📍 Outros", "fallback": true}
+    {
+      "nome": "🛫 Olbia & Norte",
+      "latMin": 40.85,
+      "latMax": 40.95,
+      "lngMin": 9.45,
+      "lngMax": 9.55
+    },
+    {
+      "nome": "🏰 Bonifacio (visita)",
+      "latMin": 41.36,
+      "latMax": 41.4,
+      "lngMin": 9.14,
+      "lngMax": 9.2
+    },
+    {
+      "nome": "🏖️ Sinis & Oristano",
+      "latMin": 39.8,
+      "latMax": 40.05,
+      "lngMin": 8.35,
+      "lngMax": 8.55
+    },
+    {
+      "nome": "🏛️ Bosa",
+      "latMin": 40.27,
+      "latMax": 40.32,
+      "lngMin": 8.45,
+      "lngMax": 8.55
+    },
+    {
+      "nome": "🏖️ Maladroxia",
+      "latMin": 38.95,
+      "latMax": 39.05,
+      "lngMin": 8.42,
+      "lngMax": 8.5
+    },
+    {
+      "nome": "🏛️ Sant'Antioco",
+      "latMin": 39.05,
+      "latMax": 39.15,
+      "lngMin": 8.32,
+      "lngMax": 8.46
+    },
+    {
+      "nome": "🏝️ Carloforte",
+      "latMin": 39.1,
+      "latMax": 39.16,
+      "lngMin": 8.28,
+      "lngMax": 8.32
+    },
+    {
+      "nome": "⛏️ Costa SO",
+      "latMin": 39.3,
+      "latMax": 39.4,
+      "lngMin": 8.36,
+      "lngMax": 8.42
+    },
+    {
+      "nome": "🌊 Cala Gonone & Orosei",
+      "latMin": 40.08,
+      "latMax": 40.3,
+      "lngMin": 9.6,
+      "lngMax": 9.7
+    },
+    {
+      "nome": "🏔️ Nuoro (transit)",
+      "latMin": 40.3,
+      "latMax": 40.35,
+      "lngMin": 9.3,
+      "lngMax": 9.35
+    },
+    {
+      "nome": "🌄 Capo Testa & Santa Teresa",
+      "latMin": 41.2,
+      "latMax": 41.26,
+      "lngMin": 9.14,
+      "lngMax": 9.25
+    },
+    {
+      "nome": "🏝️ La Maddalena & Caprera",
+      "latMin": 41.18,
+      "latMax": 41.23,
+      "lngMin": 9.38,
+      "lngMax": 9.48
+    },
+    {
+      "nome": "🏛️ Arzachena & San Pantaleo",
+      "latMin": 41.03,
+      "latMax": 41.15,
+      "lngMin": 9.3,
+      "lngMax": 9.55
+    },
+    {
+      "nome": "📍 Outros",
+      "fallback": true
+    }
   ]
 }
