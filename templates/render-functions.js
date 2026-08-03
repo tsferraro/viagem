@@ -236,10 +236,21 @@ function getWalkingTourUrl(tour){
 
 function agoraPillHtml(isNow){ return isNow?'<span class="agora-pill"><span class="agora-dot"></span>Agora</span>':''; }
 
+// Os DOIS eixos são independentes e ambos aparecem no card:
+// recompensa (valeAPena ★) = quanto o lugar vale · risco (🟢🟡🔴) = quanto custa de atrito.
+// Um lugar pode ser ⭐⭐⭐ E 🔴 ao mesmo tempo — não existe nota consolidada, de propósito.
+// BUG ago/2026: o ★ só existia na aba "Tudo no Mapa", invisível na tela onde a família
+// planeja o dia. A prosa então "fingia" o eixo com ⭐ digitada à mão, inconsistente.
+const STAR_PILL ={3:'⭐⭐⭐',2:'⭐⭐',1:'⭐',0:'⏭️'};
+const STAR_TITLE={3:'Vale a viagem',2:'Vale o desvio',1:'Se sobrar',0:'Pula sem culpa'};
+
 function renderCard(stop,isNow,done){
   const links=LINKS_MAP[stop.nome]||[];
   const riskLabel={green:'🟢 tranquilo',yellow:'⚠️ atenção',red:'🔴 alta atenção'};
   const riskBadge=stop.risco?`<span class="risk-pill risk-${stop.risco}">${riskLabel[stop.risco]}</span>`:'';
+  const va=stop.valeAPena;
+  const vaBadge=(va!==undefined&&va!==null&&STAR_PILL[va])
+    ? `<span class="va-pill va-${va}" title="${STAR_TITLE[va]}">${STAR_PILL[va]}</span>` : '';
   let reservaBadge='';
   if(stop.reserva){
     const stored=localStorage.getItem(`reserva-${stop.nome}`);
@@ -263,7 +274,7 @@ function renderCard(stop,isNow,done){
         <div class="stop-emoji">${stop.emoji}</div>
       </div>
       <div class="stop-time-name">
-        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${riskBadge}${reservaBadge}${feitoChkHtml(stop.nome,done)}</div>
+        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${vaBadge}${riskBadge}${reservaBadge}${feitoChkHtml(stop.nome,done)}</div>
         <div class="stop-name">${stop.nome}</div>
         <div class="stop-cat">${stop.cat}</div>
       </div>

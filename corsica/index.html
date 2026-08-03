@@ -205,6 +205,12 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .search-wt-tag{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.4px;padding:3px 7px;border-radius:999px;margin-left:8px;background:linear-gradient(95deg,#6d5efc,#a855f7);color:#fff;text-transform:uppercase;vertical-align:1px}
 
 /* RISCO pills */
+/* Recompensa ★ · eixo independente do risco · ambos no header do card */
+.va-pill{display:inline-flex;align-items:center;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;letter-spacing:-1px}
+.va-3{background:rgba(202,138,4,.16);color:#a16207}
+.va-2{background:rgba(202,138,4,.10);color:#b45309}
+.va-1{background:rgba(100,116,139,.12);color:#64748b}
+.va-0{background:rgba(100,116,139,.10);color:#94a3b8}
 .risk-pill{display:inline-flex;align-items:center;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px}
 .risk-green{background:rgba(16,185,129,.13);color:#059669}
 .risk-yellow{background:rgba(245,158,11,.16);color:#d97706}
@@ -1798,7 +1804,7 @@ const DAYS = [
         "tipo": "card",
         "risco": "green",
         "nome": "Praia de Rondinara · baía em concha",
-        "cat": "A praia ⭐⭐⭐ da viagem · feita hoje, com o carro que já é seu",
+        "cat": "A praia da viagem · feita hoje, com o carro que já é seu",
         "sobre": "Baía em forma de concha quase perfeitamente circular, com entrada estreita que cria efeito de <em>piscina natural</em>: água espelhada, fundo raso por longa distância e declive suavíssimo. É a praia mais fácil do roteiro — o estacionamento fica colado na areia, sem caminhada. Curiosidade de geografia: a península de Rondinara tem <strong>duas enseadas</strong>, e só uma delas é de areia fina — <strong>a outra é de seixos multicoloridos</strong>. Vocês vão na de areia; se caminharem até o outro lado, o chão muda completamente em poucos metros.",
         "imperdivel": "A baía vista de cima do estacionamento · postal raro",
         "dicas": [
@@ -2117,7 +2123,7 @@ const DAYS = [
         ]
       }
     ],
-    "nota": "O passeio ⭐⭐⭐ do sul. Dia inteiro fora, dependente de barco e sem sombra: é o dia que mais exige preparo (água, tenda, sapato de água) e o que mais devolve."
+    "nota": "O passeio do sul. Dia inteiro fora, dependente de barco e sem sombra: é o dia que mais exige preparo (água, tenda, sapato de água) e o que mais devolve."
   },
   {
     "date": "Qua 5/Ago",
@@ -3623,10 +3629,21 @@ function getWalkingTourUrl(tour){
 
 function agoraPillHtml(isNow){ return isNow?'<span class="agora-pill"><span class="agora-dot"></span>Agora</span>':''; }
 
+// Os DOIS eixos são independentes e ambos aparecem no card:
+// recompensa (valeAPena ★) = quanto o lugar vale · risco (🟢🟡🔴) = quanto custa de atrito.
+// Um lugar pode ser ⭐⭐⭐ E 🔴 ao mesmo tempo — não existe nota consolidada, de propósito.
+// BUG ago/2026: o ★ só existia na aba "Tudo no Mapa", invisível na tela onde a família
+// planeja o dia. A prosa então "fingia" o eixo com ⭐ digitada à mão, inconsistente.
+const STAR_PILL ={3:'⭐⭐⭐',2:'⭐⭐',1:'⭐',0:'⏭️'};
+const STAR_TITLE={3:'Vale a viagem',2:'Vale o desvio',1:'Se sobrar',0:'Pula sem culpa'};
+
 function renderCard(stop,isNow,done){
   const links=LINKS_MAP[stop.nome]||[];
   const riskLabel={green:'🟢 tranquilo',yellow:'⚠️ atenção',red:'🔴 alta atenção'};
   const riskBadge=stop.risco?`<span class="risk-pill risk-${stop.risco}">${riskLabel[stop.risco]}</span>`:'';
+  const va=stop.valeAPena;
+  const vaBadge=(va!==undefined&&va!==null&&STAR_PILL[va])
+    ? `<span class="va-pill va-${va}" title="${STAR_TITLE[va]}">${STAR_PILL[va]}</span>` : '';
   let reservaBadge='';
   if(stop.reserva){
     const stored=localStorage.getItem(`reserva-${stop.nome}`);
@@ -3650,7 +3667,7 @@ function renderCard(stop,isNow,done){
         <div class="stop-emoji">${stop.emoji}</div>
       </div>
       <div class="stop-time-name">
-        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${riskBadge}${reservaBadge}${feitoChkHtml(stop.nome,done)}</div>
+        <div class="stop-time"><span class="tnum">${stop.hora}</span>${agoraPillHtml(isNow)}${vaBadge}${riskBadge}${reservaBadge}${feitoChkHtml(stop.nome,done)}</div>
         <div class="stop-name">${stop.nome}</div>
         <div class="stop-cat">${stop.cat}</div>
       </div>

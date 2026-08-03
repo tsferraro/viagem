@@ -254,6 +254,49 @@ def check_temaCurto(days_text):
     else:
         ok(f"Todos {len(curtos)} temaCurto ≤ 15 chars")
 
+def check_no_manual_stars(days_text):
+    """Bloqueia ⭐ digitada à mão nos campos de texto do DAYS.
+
+    A recompensa é um EIXO DE DADO (`valeAPena` 0-3), renderizado pelo template como
+    pill no header do card e como tamanho de pino no "Tudo no Mapa". Escrever ⭐ na
+    prosa cria uma segunda fonte de verdade que não filtra, não ordena e fica
+    inconsistente — o card com ⭐ digitada parece classificado e o resto parece sem
+    classificação, mesmo quando TODOS têm valeAPena preenchido.
+
+    Guardrail criado ago/2026: o Tobia viu "⭐⭐⭐" no card da Rondinara (Córsega),
+    perguntou por que só ali, e a resposta era que eu tinha digitado à mão num campo
+    `cat`. Era a única ocorrência em 13 dias.
+
+    Correto: preencher `valeAPena` e deixar o template renderizar.
+    """
+    if not days_text:
+        return
+    STAR_RE = re.compile(r'⭐|⏭️')
+    hits = []
+    def scan(obj, ctx):
+        if isinstance(obj, str):
+            if STAR_RE.search(obj):
+                hits.append((ctx, obj[:50]))
+        elif isinstance(obj, list):
+            for x in obj:
+                scan(x, ctx)
+        elif isinstance(obj, dict):
+            for k, v in obj.items():
+                if k in ('emoji',):
+                    continue
+                scan(v, k)
+    try:
+        scan(json.loads(days_text), 'DAYS')
+    except Exception:
+        hits = [('(DAYS)', m) for m in STAR_RE.findall(days_text)]
+    if hits:
+        preview = [f'"{t}" [{c[:22]}]' for c, t in hits[:4]]
+        err(f"⭐ digitada à mão em {len(hits)} campo(s) do DAYS · recompensa é dado "
+            f"(valeAPena 0-3), o template renderiza a pill sozinho · remova do texto: {preview}")
+    else:
+        ok("Sem ⭐ manual no texto · recompensa vem de valeAPena")
+
+
 def check_no_raw_markdown(days_text):
     """Bloqueia markdown cru (**bold**) nos campos de texto do DAYS.
     O template injeta dicas/sobre/imperdivel via innerHTML SEM converter markdown
@@ -441,6 +484,7 @@ def main():
     check_poi_classification(days_text)
     check_walking_tours(days_text)
     check_temaCurto(days_text)
+    check_no_manual_stars(days_text)
     check_no_raw_markdown(days_text)
 
     # Features

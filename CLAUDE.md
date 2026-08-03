@@ -132,6 +132,7 @@ Bloqueia deploy se falhar:
 - Enums: tipo (card/opcoes/transit) · risco (green/yellow/red) · periodo (manha/tarde/noite) · reserva (reservado/pendente)
 - temaCurto ≤ 15 chars
 - 11 features-chave presentes (AUTH_KEY · centerActiveTab · renderInnerContent · getMapsUrl · etc)
+- ⭐ digitada à mão no texto do DAYS (recompensa é `valeAPena`, não prosa)
 - Tamanho ≤ 500KB (warning) · 1500KB (erro)
 
 ### skill `critico-roteiro` — linter de CONTEÚDO (`skills/critico-roteiro/audit.py`)
@@ -467,6 +468,26 @@ Todo `card` e todo item de `opcoes` carrega DOIS eixos ortogonais (ver `referenc
 - **`risco`** (🟢🟡🔴): o esforço/atrito (fila, multidão, físico, logística) — independente. Um lugar pode ser ⭐⭐⭐ E 🔴.
 - **`poiCat`** (categoria, 9 valores): `atracao·restaurante·cafe·padaria·loja·bar·parque·mercado·food-hall`.
 - Itens de `opcoes` também ganham **`coord`** própria (4 casas) → viram pino individual no mapa.
+
+### Onde cada eixo APARECE (2026-08-03 · nunca escrever ⭐ na prosa)
+
+| Eixo | Card do dia | Aba "Tudo no Mapa" |
+|---|---|---|
+| **risco** 🟢🟡🔴 | pill no header | anel do pino + popup |
+| **valeAPena** ★ | **pill no header** (⭐⭐⭐/⭐⭐/⭐/⏭️) | tamanho do pino + popup + filtro |
+
+**NÃO existe nota consolidada dos dois eixos — é de propósito.** Recompensa e atrito são
+ortogonais: um lugar pode ser ⭐⭐⭐ *e* 🔴 (Lavezzi é exatamente isso). Colapsar destrói a
+informação que interessa: *vale muito, mas vai custar*.
+
+⛔ **NUNCA digite ⭐ em `nome`/`cat`/`sobre`/`imperdivel`/`dicas`/`desc`/`nota`.** A recompensa é
+DADO (`valeAPena` 0-3); o template renderiza a pill sozinho. Escrever na prosa cria segunda
+fonte de verdade que não filtra, não ordena e fica inconsistente — o `validate.py` **bloqueia**
+(`check_no_manual_stars`).
+
+Origem: até ago/2026 o ★ só existia na aba "Tudo no Mapa", invisível na tela onde a família
+planeja o dia. A prosa passou a "fingir" o eixo com ⭐ manual — na Córsega havia exatamente
+UMA ocorrência em 13 dias, e o Tobia perguntou, com razão, por que só ali.
 
 ## export-gmaps.py — CSV pro Google My Maps
 
