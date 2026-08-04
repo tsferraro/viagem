@@ -459,7 +459,8 @@
             "Carrefour ou Tigotà no centro · estoque pra semana",
             "Càbras é menor que Oristano · poucos restaurantes · reservar",
             "Museu Mont'e Prama (gigantes de pedra) vale visita · vai amanhã ou dia após (5 min do hotel)",
-            "Mercado de peixe pela manhã na cooperativa"
+            "Mercado de peixe pela manhã na cooperativa",
+            "<strong>Bottarga</strong>: Càbras é a capital dela. Comprar na cooperativa de pescadores ou na loja da fábrica sai bem mais barato que em loja de souvenir · uma <em>baffa</em> inteira a vácuo ~€70, ralada em vidro a partir de ~€12 (ago/2026) · viaja a vácuo sem gelo"
           ],
           "duracao": "Resto do dia",
           "custo": "Grátis",
@@ -754,7 +755,8 @@
             "Ⓐ <strong>Sas Conzas</strong> — 400m rio abaixo, na margem esquerda, junto à Ponte Vecchia · repare nas janelinhas altas e estreitas: era por ali que o couro secava ao vento",
             "Ⓑ <strong>Sa Costa</strong> — a subida começa aqui e é toda de escada e ladeira · as cores das fachadas não são decoração turística, são a marcação de propriedade das famílias",
             "Ⓒ <strong>Castello Malaspina</strong> — 700m de subida a partir de Sa Costa · €4 (ago/2026) · erguido em <strong>1112</strong> pelos Malaspina dello Spino Secco, com a torre-mestra acrescentada em 1300 por Giovanni Càpula · dentro dos muros, a igreja de Nostra Signora de sos Regnos Altos guarda afrescos toscano-provençais de 1350-1370",
-            "A SS292 costeira que traz vocês até aqui vale o desvio sozinha — na volta, faça de novo ao pôr do sol"
+            "A SS292 costeira que traz vocês até aqui vale o desvio sozinha — na volta, faça de novo ao pôr do sol",
+            "<strong>Malvasia di Bosa DOC</strong> é um vinho raro que praticamente só se compra aqui — se quiserem levar uma garrafa da viagem, é esta, não o Cannonau (que tem em todo lugar)"
           ],
           "duracao": "3h-4h walking tour + Castello",
           "custo": "€4 castelo · €2-3/h estacionamento no Lungofiume (ago/2026)",
@@ -1570,7 +1572,8 @@
             "Ⓐ <strong>Basilica di San Carlo Borromeo</strong> — no alto do centro, dedicada ao santo genovês que dá nome à vila (Carlo Forte = Carlos, o Forte, por Carlo Emanuele III de Savoia)",
             "Ⓑ <strong>Tonnara</strong> — só com visita guiada e agendamento prévio · foi uma das últimas armações de atum tradicionais do Mediterrâneo",
             "Ⓒ <strong>La Bobba ou Cala Lunga</strong> — 6km ao sul pela estrada costeira (~15min de carro) · procure a pedra com 'Bobba' escrito e vire à esquerda no caminho de terra",
-            "Ferry de volta pra Calasetta sai ao longo de todo o dia, a cada ~1h · última travessia por volta das 22h em agosto [a confirmar no porto na ida]"
+            "Ferry de volta pra Calasetta sai ao longo de todo o dia, a cada ~1h · última travessia por volta das 22h em agosto [a confirmar no porto na ida]",
+            "<strong>Levar da ilha</strong>: atum em conserva, <em>ventresca</em> e bottarga de atum (diferente da de tainha de Càbras) · as lojas do centro vendem a vácuo, próprio pra bagagem"
           ],
           "duracao": "Dia inteiro · 6-7h na ilha",
           "custo": "€17,40 ferry ida com carro (ago/2026) · refeições à parte",
@@ -2715,7 +2718,8 @@
             "Feira termina 13h · vai cedo (10h)",
             "Compra: queijo pecorino, mel, frutas, peças artesão",
             "Estacionamento na entrada da vila · grátis",
-            "Almoço em Giagoni se quiser mais sentado · senão snack na feira"
+            "Almoço em Giagoni se quiser mais sentado · senão snack na feira",
+            "O artesanato de verdade está nas bancas de <strong>faca, filigrana e cesto</strong> · as <em>resolzas</em> boas vêm de Pattada e custam a partir de ~€80 (ago/2026); abaixo de €30 é aço estampado, não artesanal"
           ],
           "duracao": "3h-3h30",
           "custo": "Entrar é grátis · €40-100 se comprarem alguma coisa (ago/2026)",
@@ -2727,6 +2731,31 @@
           "valeAPena": 2,
           "poiCat": "mercado",
           "mapsQuery": "San Pantaleo, Olbia"
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🛍️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "O que levar da Sardenha · checklist de compras",
+          "cat": "Último dia inteiro · o que ainda dá pra comprar e o que pode viajar",
+          "noMaps": true,
+          "valeAPena": 1,
+          "poiCat": "loja",
+          "sobre": "A Sardenha não é ilha de <em>compras</em> — é ilha de <em>produto</em>. Não existe rua de grifes, e o que vale a pena levar cabe em quatro categorias: <strong>comida</strong> (bottarga, pecorino, pane carasau), <strong>bebida</strong> (Cannonau, Vermentino, a rara Malvasia di Bosa, mirto), <strong>artesanato</strong> (as facas <em>resolzas</em>, filigrana, cestaria de asfódelo, cerâmica, cortiça) e <strong>coral</strong>. Boa parte disso vocês já passaram: a bottarga é de Càbras (dias 8-11), o atum é de Carloforte (14/Ago) e a Malvasia é de Bosa (10/Ago). O que ainda está aberto hoje é a feira de artesãos de San Pantaleo, de manhã — e o supermercado, que resolve comida e vinho por um terço do preço da loja de souvenir.",
+          "imperdivel": "Numa banca de facas, peça pra ver a lâmina aberta: a <em>resolza</em> de Pattada abre e trava <strong>sem mola nenhuma</strong>, só por atrito, e o cabo é de chifre de carneiro — por isso não existem duas iguais. É o que separa a artesanal da lembrancinha de aço estampado",
+          "dicas": [
+            "<strong>Bottarga de tainha de Càbras</strong> — a mais cara da Itália, até €250/kg; uma <em>baffa</em> (peça inteira a vácuo) sai por volta de €70 (ago/2026). Comprada na cooperativa de pescadores de Càbras custa bem menos que em loja de aeroporto",
+            "<strong>Vinho</strong>: Cannonau e Vermentino se acham em qualquer supermercado por €6-12; a <strong>Malvasia di Bosa DOC</strong> é rara e praticamente só se compra em Bosa",
+            "<strong>Feira de San Pantaleo</strong>: só de manhã, termina 13h · o artesanato bom está nas bancas de faca, filigrana e cesto, não nas de camiseta",
+            "<strong>Líquido vai na despachada</strong> — mirto e vinho passam de 100ml e a segurança confisca na de mão, sem discussão",
+            "⚠️ <strong>Queijo, bottarga e embutido dependem do DESTINO do voo</strong>: dentro da União Europeia é livre; entrando em país de fora (Brasil, por exemplo) há restrição sanitária a produto de origem animal, com regra que muda por país e por ano. <strong>[a confirmar com a companhia aérea antes de despachar]</strong> — não vale arriscar a bottarga de €70",
+            "🚫 <strong>Areia, seixo e concha: NÃO</strong> · lei regional 16/2017, multa de €500 a €3.000, e em agosto os scanners do aeroporto de Olbia procuram exatamente isso"
+          ],
+          "duracao": "30min-1h de compras",
+          "custo": "€40-150 dependendo do que levarem (ago/2026)",
+          "acessibilidade": "A feira de San Pantaleo é plana na praça · supermercados com estacionamento no caminho de volta"
         },
         {
           "hora": "13:00",
@@ -2878,7 +2907,7 @@
           ]
         }
       ],
-      "nota": "Último dia inteiro, e ele é de contrastes: a feira de artesãos de San Pantaleo de manhã, uma tumba nurágica de 3.500 anos no meio da tarde, e a vitrine bilionária de Porto Cervo no fim — se ainda houver vontade."
+      "nota": "Último dia inteiro — e o último de compras, então o que faltar levar da ilha se resolve hoje. É um dia de contrastes: a feira de artesãos de San Pantaleo de manhã, uma tumba nurágica de 3.500 anos no meio da tarde, e a vitrine bilionária de Porto Cervo no fim — se ainda houver vontade."
     },
     {
       "date": "Sex 21/Ago",
