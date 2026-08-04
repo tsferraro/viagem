@@ -343,8 +343,10 @@ Três camadas, nesta ordem:
 | `"noMaps": true` | Não é lugar nenhum: check-in/out, café da manhã, despedida, fim da viagem. Remove o link. |
 | (nada) | O template limpa sozinho: corta no `·` e **descarta o parêntese quando é descrição**, mantendo quando é endereço (`(Via Marconi 47)` fica · `(museu + vista)` sai). |
 
-⛔ **`mapsQuery` é obrigatório em toda parada de walking tour e em todo ponto de rota do dia** —
-`validate.py` **bloqueia** (`check_wt_maps_query`). E preencher não basta: cada query tem que ser
+⛔ **`mapsQuery` é obrigatório nas duas estruturas que montam ROTA**: parada de
+**walking tour** e ponto de **road trip** (dia com `transport: "driving"`, o que a skill
+`road-trip-designer` gera). `validate.py` **bloqueia** (`check_wt_maps_query`). Dia comum de
+rota só recebe aviso — ganha nome quando alguém preencher, sem travar a entrega. E preencher não basta: cada query tem que ser
 conferida **uma a uma** (`FACTCHECK.md` §4a). Derivar em massa do nome não conta — numa derivação
 de 39 paradas, duas saíram erradas.
 

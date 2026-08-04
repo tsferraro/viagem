@@ -236,3 +236,20 @@ Mesmos passos + seção "Como inserir no roteiro":
 - `references/family-driving.md` — regras pit stop, sombra, horário pra criança pequena
 - `examples/sardenha-hub-spoke.md` — 3 dias reais hub-spoke calibrados
 - `examples/sardenha-ferry-loop.md` — 2 dias reais com ferry integrado
+
+## `mapsQuery` obrigatório em todo ponto do dia (2026-08-04)
+
+Um dia `transport: "driving"` vira uma **rota de vários pontos** no Google Maps, igual a um
+walking tour. Se qualquer ponto não tiver `mapsQuery`, a rota inteira cai pra coordenada e o
+Maps rotula tudo como **"Dropped pin"** — funciona, e é inútil pra quem está dirigindo e quer
+saber para onde está indo.
+
+`validate.py` **bloqueia** (`check_wt_maps_query`). Regras:
+
+- Um `mapsQuery` por ponto roteável (card e stop de `opcoes` — este entra pela 1ª alternativa).
+- `noMaps: true` no que não é lugar (check-in, "almoço em casa", "manhã livre"): sai da rota.
+- `mapsQuery` **não** recebe `MAPS_REGION` — escreva inequívoco, com cidade e país se preciso.
+- Preencher não basta: conferir **uma a uma** (`critico-roteiro/FACTCHECK.md` §4a). Derivar em
+  massa do nome não conta — já produziu `porto`, `cidadela` e `Départementale 757`.
+
+Confira o resultado com `python3 scripts/maps-audit.py <viagem>/index.html --urls`.

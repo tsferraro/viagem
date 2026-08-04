@@ -441,18 +441,21 @@ def check_maps_query(days_text):
 
 
 def check_wt_maps_query(days_text):
-    """BLOQUEIA parada de walking tour ou ponto de rota do dia sem `mapsQuery`.
+    """BLOQUEIA parada sem `mapsQuery` em walking tour e em ROAD TRIP.
 
     Pedido do Tobia (ago/2026), depois de dois prints em campo: *"force pra sempre verificar
-    uma a uma nos walking tours ou roadtrips"*. A razão é que o fallback é silencioso — sem
-    `mapsQuery` em TODAS as paradas, a rota cai pra coordenada e o Google Maps mostra
-    "Dropped pin" em vez do nome do lugar. Funciona, e é inútil pra quem está dirigindo.
+    uma a uma nos walking tours ou roadtrips"*. Road trip aqui é a estrutura da skill
+    `road-trip-designer`: **dia com `transport: "driving"`** (+ `baseCoord`/`baseName`) — o
+    análogo de carro do walking tour. NÃO é "todo dia com dois pontos".
 
-    Exigir o campo obriga alguém a decidir, ponto a ponto, qual é o nome do lugar — que é
-    metade da verificação. A outra metade (o Maps acha esse nome?) é o `FACTCHECK.md` §4a.
+    Por que bloquear só nessas duas: são os dois casos em que o app monta uma ROTA de vários
+    pontos encadeados. Sem `mapsQuery` em todos, a rota cai pra coordenada em silêncio e o
+    Google Maps mostra "Dropped pin" — funciona, e é inútil pra quem está dirigindo.
+    Exigir o campo obriga a decidir o nome ponto a ponto, que é metade da verificação; a
+    outra metade (o Maps acha esse nome?) é o `FACTCHECK.md` §4a.
 
-    Não se aplica a stop `transit`, a card `noMaps` (não é lugar) nem a card 🔄 ALT (fora da
-    rota por convenção). Dia com menos de 2 pontos roteáveis não é rota.
+    Dia comum de rota vira AVISO: ganha nome quando alguém preencher, sem travar a entrega.
+    Fora da regra sempre: `transit`, `noMaps` e cards 🔄 ALT.
     """
     if not days_text:
         return
@@ -465,7 +468,18 @@ def check_wt_maps_query(days_text):
         opts = s.get('opcoes') or []
         return opts[0] if (s.get('tipo') == 'opcoes' and opts) else s
 
-    sem_wt, sem_rota, tours = [], [], 0
+    def sem_query(s):
+        a = alvo(s)
+        if a.get('noMaps'):
+            return False
+        return not ((a.get('mapsQuery') or '') or (s.get('mapsQuery') or '')).strip()
+
+    def roteaveis(day):
+        return [s for s in day.get('stops', [])
+                if s.get('tipo') != 'transit' and s.get('coord') and not s.get('noMaps')
+                and not (s.get('nome') or '').startswith('🔄')]
+
+    sem_wt, sem_rt, sem_dia, tours, rts = [], [], [], 0, 0
     for day in days:
         for s in day.get('stops', []):
             for t in s.get('walkingTours', []):
@@ -473,31 +487,34 @@ def check_wt_maps_query(days_text):
                 for w in t.get('stops', []):
                     if not (w.get('mapsQuery') or '').strip():
                         sem_wt.append(f"{t.get('nome','?')[:22]} · {w.get('nome','?')[:26]}")
-        roteaveis = [s for s in day.get('stops', [])
-                     if s.get('tipo') != 'transit' and s.get('coord') and not s.get('noMaps')
-                     and not (s.get('nome') or '').startswith('🔄')]
-        if len(roteaveis) < 2:
+        pts = roteaveis(day)
+        if len(pts) < 2:
             continue
-        for s in roteaveis:
-            a = alvo(s)
-            if a.get('noMaps'):
-                continue
-            if not ((a.get('mapsQuery') or '') or (s.get('mapsQuery') or '')).strip():
-                sem_rota.append(f"[{day.get('date','?')}] {s.get('nome','?')[:34]}")
+        faltando = [f"[{day.get('date','?')}] {s.get('nome','?')[:34]}" for s in pts if sem_query(s)]
+        if day.get('transport') == 'driving':      # road trip · a skill road-trip-designer
+            rts += 1
+            sem_rt += faltando
+        else:                                       # dia comum · aviso, não trava
+            sem_dia += faltando
 
     if sem_wt:
-        err(f"{len(sem_wt)} parada(s) de walking tour sem mapsQuery — a rota cai pra coordenada "
+        err(f"{len(sem_wt)} parada(s) de WALKING TOUR sem mapsQuery — a rota cai pra coordenada "
             f'("Dropped pin" no Maps): {" · ".join(sem_wt[:3])}'
             + (f" · +{len(sem_wt)-3}" if len(sem_wt) > 3 else ""))
     elif tours:
         ok(f"Walking tours: todas as paradas com mapsQuery ({tours} tour(s))")
 
-    if sem_rota:
-        err(f"{len(sem_rota)} ponto(s) de rota do dia sem mapsQuery — a rota do dia vira "
-            f'"Dropped pin": {" · ".join(sem_rota[:3])}'
-            + (f" · +{len(sem_rota)-3}" if len(sem_rota) > 3 else ""))
-    else:
-        ok("Rotas do dia: todos os pontos com mapsQuery")
+    if sem_rt:
+        err(f"{len(sem_rt)} ponto(s) de ROAD TRIP (dia driving) sem mapsQuery — a rota do dia "
+            f'vira "Dropped pin": {" · ".join(sem_rt[:3])}'
+            + (f" · +{len(sem_rt)-3}" if len(sem_rt) > 3 else ""))
+    elif rts:
+        ok(f"Road trips: todos os pontos com mapsQuery ({rts} dia(s) driving)")
+
+    if sem_dia:
+        warn(f"{len(sem_dia)} ponto(s) de rota em dia comum sem mapsQuery — a rota funciona por "
+             f'coordenada, mas o Maps mostra "Dropped pin": {sem_dia[0]}'
+             + (f" · +{len(sem_dia)-1}" if len(sem_dia) > 1 else ""))
 
 
 def check_no_hardcoded_region(content):

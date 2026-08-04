@@ -167,3 +167,33 @@ Documentar pendência em `HANDOFF-PENDENTE.md` (root) e deixar Tobia decidir.
 - `references/tipos-tour.md` — 4 tipos com exemplos
 - `references/coord-validation.md` — regras estritas + parens + range checks
 - `examples/nyc-wt-examples.md` — 6 walking tours validados do projeto NYC com justificativa de cada
+
+## `mapsQuery` obrigatório em toda parada (2026-08-04)
+
+Bug pego em campo com print: a rota do walking tour de Bonifacio devolvia **"Can't seem to find
+that place"**, porque `"Porte de Gênes (entrada principal)"` virava a busca `Porte de Gênes
+entrada principal`. E o pino do card `"Walking tour Cidadela · com os avós"` abria o Maps **no
+meio do mar** — nome de card descreve uma *atividade*, o Maps precisa de um *lugar*.
+
+`validate.py` **bloqueia** parada de walking tour sem `mapsQuery` (`check_wt_maps_query`).
+
+- **Uma `mapsQuery` por parada**, com o nome canônico do POI — o que o Google indexa, não a
+  tradução nem o apelido. Casos que só a verificação pegou: *"Loggia · mirador sul"* não é POI
+  (é **Falaises de Bonifacio**) · *"Necrópole púnica"* é **Villaggio Ipogeo** · *"Spiaggia di
+  Tegge"* é **Punta Tegge**.
+- **Não recebe `MAPS_REGION`** — escreva inequívoco. Um walking tour pode estar num roteiro de
+  outra região (Bonifacio, na Córsega, dentro do roteiro da Sardenha).
+- A rota só usa nomes quando **TODAS** as paradas têm `mapsQuery`; uma parada ruim mata a rota
+  inteira, e o fallback por coordenada mostra "Dropped pin".
+- O card-pai do tour normalmente precisa de `mapsQuery` próprio (`"Citadelle de Bonifacio"`).
+- Conferir **uma a uma** (`critico-roteiro/FACTCHECK.md` §4a). Derivar em massa não conta: numa
+  derivação de 39 paradas do Marais, duas saíram erradas.
+
+### Rótulo das paradas: `wt_labels: "letters"`
+
+Com esse campo no `data.json`, as paradas usam **o mesmo rótulo que o Google Maps desenha**: a
+primeira é a origem (círculo, sem letra) e as seguintes são A, B, C. Cinco paradas viram
+**`○ A B C D`**, não `A B C D E`. As dicas parada-a-parada devem usar os mesmos símbolos
+(`○ Ⓐ Ⓑ Ⓒ Ⓓ`) pra que card e Maps se leiam lado a lado sem tradução mental.
+
+Confira com `python3 scripts/maps-audit.py <viagem>/index.html --urls`.
