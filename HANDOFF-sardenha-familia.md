@@ -119,3 +119,46 @@ Fechamento semanal a respeitar (conferir contra as datas do roteiro novo):
 | Compendio Garibaldino (Caprera) | segundas |
 
 No roteiro dos pais isso já causou um erro: **Sa Bell'e Crabasa estava como jantar de segunda 10/Ago**.
+
+---
+
+## 🔬 FACTCHECK completo · 2026-08-04 · 13 correções factuais
+
+Protocolo `skills/critico-roteiro/FACTCHECK.md` rodado sobre o roteiro inteiro, postura adversarial
+(tentar refutar cada afirmação). Placar: **9 confirmados · 11 desatualizados/refutados (corrigidos) ·
+1 não encontrado (removido)**. Tudo abaixo vale para o roteiro da família também.
+
+### Refutados
+
+| Afirmação | Verdade |
+|---|---|
+| Sant'Antioco ligada por "ponte romana **ainda em uso**" | O **Pontimannu** é monumento desde **1954** — a ligação hoje é a estrada de variante |
+| Base americana em La Maddalena "até 2007" | US Navy de **1/jan/1973 a 25/jan/2008**, na ilha de Santo Stefano, ~4.000 americanos |
+| Estrada Dorgali–Cala Gonone feita por "engenheiros suíços" | **Sem fonte nenhuma** — removido. O verificável: túnel de **115m escavado à mão entre 1838 e 1860** |
+| Bosa: "35 tanarias fechadas desde 1960" | **~30 curtumes**, o último fechou em **1962** |
+| Stella Maris (Porto Cervo) de "1968", quadro doado por "um frequentador" | **1966**, projeto de Michele Busiri Vici · a *Mater Dolorosa* foi doada pela **baronesa Tissen-Bentinck**, mulher do embaixador holandês em Paris |
+
+### Desatualizados — preços e regras que mudaram
+
+| Item | Estava | É |
+|---|---|---|
+| **Compendio Garibaldino** | €6 · 9h-20h · sem reserva | **€8** · **só com reserva**, grupos de 20 a cada 15min entre 8h30 e 18h30 · visita de **máx. 40min** · chegar 10min antes |
+| **Coddu Vecchiu** | €2,50 | **€3,00** (€2,50 só grupos de 20+) |
+| **Ferry Santa Teresa ↔ Bonifacio** | ~€29/passageiro | **~€31-40** por trecho · e as tabelas de Moby (4 partidas 07h-18h30) e Blu Navy (09h/12h/17h/20h) **não coincidem** — confirmar na compra |
+| **Porto Flavia** | "reserva obrigatória" | Reserva **exclusivamente online**, e a venda **fecha à meia-noite do dia anterior** — nem bilheteria, nem telefone, nem e-mail |
+| **Cala Coticcio** | "~€25/pessoa de guia" | €3 do Parque (grátis até 12 anos) + valor da guia **a combinar direto com ela** — varia por duração e tamanho do grupo |
+
+### Confirmados (sem alteração)
+
+Tharros/Museu **€18 integrado · €15 acima de 65** (CoopCulture) · Porto Flavia **€10/€6,50** e horários ·
+Castello Malaspina **1112** · Pan di Zucchero **133m** · Porto Flavia **500 t/h** · nuraghi **>7.000**,
+Idade do Bronze **1800-1100 a.C.** · Gigantes de Mont'e Prama **séc. IX-VIII a.C.** · relógio de Garibaldi
+parado às **18h20** · Sant'Antioco e Compendio fecham **segundas**.
+
+### Ganhos de precisão colhidos no caminho
+
+- Carloforte foi fundada em **17 de abril de 1738**, com ~500 colonos desembarcando.
+- O cerco de Bonifacio durou de **21/out/1420 a 5/jan/1421** — Afonso V chegou com 31 naus e 23 trirremes.
+- Quem parou o relógio de Garibaldi foi o filho **Menotti**. Na tarde de 2/jun/1882 ele viu **duas toutinegras** no peitoril, pensou nas duas filhas mortas e pediu que não as espantassem.
+- O granito de Capo Testa é *provavelmente* (não certamente) o das colunas do Panteão · em **1162** o pedreiro pisano **Cioneto** tirou dali as colunas do Duomo de Pisa.
+- Castello Malaspina: torre-mestra acrescentada em **1300** por Giovanni Càpula.
