@@ -508,7 +508,7 @@
           "risco": "green",
           "nome": "Mirador da trilha da Tour de Capanella (início · estrada do porto)",
           "cat": "Mirador opcional · sem subir trilha",
-          "sobre": "Torre genovesa do séc. XVI (Tour de Capanella) num promontório que separa Porto Pollo de Cupabia. Trilha completa até ela são 8km / 3h — INVIÁVEL com filha. Mas o mirador no início do trail (~200m do parking) já entrega vista panorâmica do Golfo de Valinco inteiro. Vai pro fim da tarde, golden hour.",
+          "sobre": "A <strong>Tour de Capanella</strong> é de <strong>1589</strong> — uma das ~85 torres que Gênova plantou no litoral corso entre 1530 e 1620 contra os piratas berberes. O sistema era de alarme em cadeia: cada torre via a seguinte, e uma fogueira acesa aqui chegava ao outro lado da ilha em poucas horas. Fica num promontório que separa Porto Pollo de Cupabia. Trilha completa até ela são 8km / 3h — INVIÁVEL com filha. Mas o mirador no início do trail (~200m do parking) já entrega vista panorâmica do Golfo de Valinco inteiro. Vai pro fim da tarde, golden hour.",
           "imperdivel": "Pôr do sol com gulf de Valinco abaixo · luz dourada na água",
           "dicas": [
             "Parking no início da estrada do porto, em frente a A Pignata",
@@ -739,18 +739,18 @@
           "risco": "yellow",
           "nome": "Sartène · cidade velha e mercado (Place Porta / Place de la Libération)",
           "cat": "A mais corsa das cidades corsas · mercado de sábado",
-          "sobre": "Vila medieval encravada na rocha 300m acima do mar. Casas de granito cinza, ruas de paralelepípedo, becos de Maniguedda (bairro antigo). Capital cultural do sul corso · fortemente identitária, pouca turistada de ônibus. Place de la Libération é o coração: terraço sombreado, café Le Cyrnos, vista do Vale do Ortolo. Sexta-feira tem mercado matinal — produtos corsos (queijo brocciu, charcutaria Lonzu/Coppa/Figatellu, mel de castanha, vinho AOC Sartène).",
+          "sobre": "Vila medieval encravada na rocha 300m acima do mar. Casas de granito cinza, ruas de paralelepípedo, becos de Maniguedda (bairro antigo). Capital cultural do sul corso · fortemente identitária, pouca turistada de ônibus. Place de la Libération é o coração: terraço sombreado, café Le Cyrnos, vista do Vale do Ortolo. Sábado de manhã é dia de mercado — produtos corsos (queijo brocciu, charcutaria Lonzu/Coppa/Figatellu, mel de castanha, vinho AOC Sartène).",
           "imperdivel": "O mercado de sábado na Place Porta · charcutaria, mel AOC de Sartène, queijo de ovelha e azeite direto de quem produziu",
           "dicas": [
             "Mercado é de manhã e desmonta por volta das 12h · chega até as 10h30 pra pegar tudo montado",
             "Sábado é o dia principal do mercado o ano inteiro · em julho e agosto tem feira quase todo dia, mas sábado é o forte",
             "Estacionamento azul ao redor da praça · €2/h · grátis das 12h às 14h (jul/2026)",
             "NÃO leva o carrinho na cidade velha (bairro de Santa Anna) · são escadas, becos e arcos · 30min no colo resolve",
-            "Museu de Pré-História corsa (Centre Préhistorique) · €5 · ótimo complemento pro Filitosa de domingo",
+            "Museu de Pré-História corsa · <strong>€4 inteira / €2,50 meia</strong> · no verão abre <strong>todos os dias, 10h-18h</strong> · ótimo complemento pro Filitosa de domingo — e o bilhete ainda dá entrada no museu de Levie por até 2 meses (ago/2026)",
             "Mel AOC de Sartène e charcutaria viajam bem na mala · é aqui que se compra"
           ],
           "duracao": "2h-3h com mercado",
-          "custo": "€2-5 estacionamento · €5 museu (jul/2026)",
+          "custo": "€2-5 estacionamento · €4 museu (ago/2026)",
           "acessibilidade": "MISTA · Place da Libération ok · cidade velha = escadas e becos · carrega filha 30min",
           "coord": {
             "lat": 41.6207,
@@ -1224,7 +1224,7 @@
           "sobre": "Baía em forma de concha quase perfeitamente circular, com entrada estreita que cria efeito de <em>piscina natural</em>: água espelhada, fundo raso por longa distância e declive suavíssimo. É a praia mais fácil do roteiro — o estacionamento fica colado na areia, sem caminhada. Curiosidade de geografia: a península de Rondinara tem <strong>duas enseadas</strong>, e só uma delas é de areia fina — <strong>a outra é de seixos multicoloridos</strong>. Vocês vão na de areia; se caminharem até o outro lado, o chão muda completamente em poucos metros.",
           "imperdivel": "A baía vista de cima do estacionamento · postal raro",
           "dicas": [
-            "Parking €6/dia colado na areia · chegando ~10h15 ainda há vaga · depois das 11h em agosto, esquece (jul/2026)",
+            "Parking colado na areia · <strong>€6-8/dia [a confirmar]</strong> (era €6 em 2025, há indício de reajuste) · há estacionamento <strong>gratuito</strong> mais acima, junto ao camping, a ~10min a pé · chegando ~10h15 ainda há vaga · depois das 11h em agosto, esquece (jul/2026)",
             "'Chez Ange' é o restaurante de pé na areia · reserve ao chegar, não na hora do almoço",
             "Lado direito (sul) pega menos vento · é o melhor com ela",
             "Saída às 15h é firme · depois dela ainda tem check-in, Figari e devolução do carro",
@@ -1232,7 +1232,7 @@
             "Sem sombra natural · guarda-sol ou tenda leve é obrigatório em agosto"
           ],
           "duracao": "Dia inteiro",
-          "custo": "€6 parking · refeições à parte (jul/2026)",
+          "custo": "Parking €6-8 [a confirmar] · gratuito no alto · refeições à parte (ago/2026)",
           "acessibilidade": "Total · parking colado na areia",
           "coord": {
             "lat": 41.4679,
@@ -1562,14 +1562,14 @@
           "sobre": "1,5km de praia com lagoa rasa formada por um banco de areia — a água fica na altura do joelho por dezenas de metros. Areia branca ultrafina, mas <strong>largamente coberta por herbáceas de posidônia</strong> (a planta marinha que sustenta o ecossistema mediterrâneo), e a entrada se faz por passagens sobre rocha. O que quase ninguém sabe: a poucos passos daqui está o <strong>sítio arqueológico de Piantarella</strong>, uma <em>villa marítima romana</em> ocupada <strong>do século I ao fim do século IV d.C.</strong>, com cerca de <strong>4.500m²</strong> de armazéns e cais, tombada como monumento histórico em 2007. Ela provavelmente servia de escala portuária e posto de posta — e não por acaso: bem em frente, a <strong>ilha Cavallo</strong> que vocês veem da areia tinha <strong>pedreiras romanas</strong> em atividade. O granito saía dali de barco.",
           "imperdivel": "Ela pode andar 50m dentro d'água sem passar do joelho · e, olhando pra ilha Cavallo, você está vendo a pedreira que abastecia os navios romanos que atracavam nesta mesma enseada",
           "dicas": [
-            "Estacionamento de terra ~5min a pé da praia · €5",
+            "Estacionamento de terra ~5min a pé · <strong>preço [a confirmar]</strong>: o parking de 50 vagas com banheiros estava <em>em obras</em> pra temporada 2026 · até a entrega, tolera-se estacionar na beira da estrada, de graça",
             "Chega antes das 10h em agosto · enche fácil",
             "Lado sul (mais calmo) = preferência com filha · norte tem windsurf",
             "Snack-bar de praia simples · ou leva picnic da padaria",
             "Sombra escassa · leva tenda de praia leve"
           ],
           "duracao": "Manhã + tarde",
-          "custo": "€5 parking · grátis praia (jul/2026)",
+          "custo": "Praia grátis · parking [a confirmar] (obras 2026 · pode ser gratuito na estrada) (ago/2026)",
           "acessibilidade": "Caminhada 5min do parking até areia · carrinho de praia ok",
           "coord": {
             "lat": 41.3738,
@@ -1636,8 +1636,8 @@
           "risco": "yellow",
           "nome": "Phare de Pertusato · falésias golden hour",
           "cat": "Mirador das falésias brancas",
-          "sobre": "Farol quadrado de 16,5m construído em 1844 no ponto mais ao sul da França metropolitana (lente Fresnel). Vista 360°: falésias brancas verticais de calcário, Bocas de Bonifacio, Sardenha no horizonte, ilhas Lavezzi à esquerda. Pôr do sol espetacular. Trail de Bonifacio até farol é ~3km (não estroller-friendly). MELHOR: ir de carro até o parking do sémaphore + 1km final a pé. Mesmo o último km tem terreno irregular — carregar filha boa parte.",
-          "imperdivel": "Pôr do sol nas falésias brancas com farol em silhueta",
+          "sobre": "Farol quadrado construído em <strong>1844</strong> (lente Fresnel), na ponta que quase todo guia chama de \"ponto mais ao sul da França metropolitana\" — <em>e não é</em>: o extremo é o <strong>Capu Testagro</strong>, logo a leste, menos acessível e por isso menos visitado. Pertusato é o <strong>segundo</strong>, e o que ele tem de melhor não é o recorde e sim a vista 360°: falésias brancas verticais de calcário, Bocas de Bonifacio, Sardenha no horizonte, ilhas Lavezzi à esquerda. Pôr do sol espetacular. Trail de Bonifacio até farol é ~3km (não estroller-friendly). MELHOR: ir de carro até o parking do sémaphore + 1km final a pé. Mesmo o último km tem terreno irregular — carregar filha boa parte.",
+          "imperdivel": "Pôr do sol nas falésias brancas com o farol em silhueta · e, olhando pra leste, o Capu Testagro — a ponta que realmente fecha a França ao sul",
           "dicas": [
             "Sai 17h-17h30 · golden hour por volta 19h em agosto",
             "Sapato fechado · trail tem pedrinhas soltas",
@@ -1808,10 +1808,10 @@
           "valeAPena": 3,
           "nome": "Grutas e falésias de barco · SPMB Circuito 1 (bilheteria no porto)",
           "cat": "~1h de barco · a única forma de ver Bonifacio por baixo",
-          "sobre": "<strong>É a coisa que não dá pra fazer de outro jeito.</strong> Bonifacio inteira está equilibrada no alto de uma falésia de calcário branco que o mar cavou por baixo — e isso só se vê <em>do mar</em>. O circuito passa ao pé do paredão, mostra o <strong>Escalier du Roi d'Aragon</strong> talhado na vertical (os mesmos 187 degraus da lenda aragonesa, vistos de baixo, onde a escala fica óbvia), o <strong>Grain de Sable</strong> — o bloco de calcário que se desprendeu da falésia e ficou de pé no mar — as calanques de Fazzio e a Pointe Saint-Antoine, <em>o ponto mais ao sul da Córsega</em>.<br><br><strong>Ressalva honesta:</strong> a célebre <em>grotte du Sdragonato</em>, com o buraco no teto em forma da própria Córsega, está <strong>interditada por risco de desabamento</strong>. Os barcos passam pelas grutas mas não entram mais. Se você viu essa foto e é ela que te move, saiba disso antes de comprar o bilhete — o passeio continua valendo pelas falésias, não pela gruta.",
+          "sobre": "<strong>É a coisa que não dá pra fazer de outro jeito.</strong> Bonifacio inteira está equilibrada no alto de uma falésia de calcário branco que o mar cavou por baixo — e isso só se vê <em>do mar</em>. O circuito passa ao pé do paredão, mostra o <strong>Escalier du Roi d'Aragon</strong> talhado na vertical (os mesmos 187 degraus da lenda aragonesa, vistos de baixo, onde a escala fica óbvia), o <strong>Grain de Sable</strong> — o bloco de calcário que se desprendeu da falésia e ficou de pé no mar — as calanques de Fazzio e a Pointe Saint-Antoine, com a praia suspensa no alto de uma falésia de 80m.<br><br><strong>Ressalva honesta:</strong> a célebre <em>grotte du Sdragonato</em>, com o buraco no teto em forma da própria Córsega, está <strong>interditada por risco de desabamento</strong>. Os barcos passam pelas grutas mas não entram mais. Se você viu essa foto e é ela que te move, saiba disso antes de comprar o bilhete — o passeio continua valendo pelas falésias, não pela gruta.",
           "imperdivel": "O casario da cidade alta visto de baixo, com a falésia escavada por baixo dele · de terra é impossível entender por que Bonifacio é famosa; do mar, é imediato",
           "dicas": [
-            "Circuito 1 (grutas, falésias e calanques) · ~1h · €18,50-26 por adulto conforme o circuito — confirme na bilheteria (jul/2026)",
+            "Circuito 1 (grutas, falésias e calanques) · ~1h · <strong>preço [a confirmar]</strong>: as fontes de 2026 vão de €18,50 a €50 conforme o circuito e o operador — pergunte no guichê da SPMB (tel. 04 95 10 97 50) antes de escolher",
             "Saídas a cada 30min, aproximadamente das 9h às 19h · vá no fim da tarde, quando o calcário esquenta de cor",
             "NÃO dá pra reservar online · bilhete só na guichê da SPMB no porto · compre de manhã pro horário da tarde",
             "1h é a duração certa com criança de 3 anos · os circuitos de 2h repetem as Lavezzi, que vocês já fizeram na terça",
@@ -1820,7 +1820,7 @@
             "A SPMB oferece estacionamento gratuito a quem faz o passeio — irrelevante pra vocês, que estão a pé"
           ],
           "duracao": "1h de barco + ~30min de bilheteria e embarque",
-          "custo": "€18,50-26/adulto · tarifa infantil a confirmar no guichê (jul/2026)",
+          "custo": "[a confirmar] no guichê · faixa publicada vai de €18,50 a €50/adulto conforme circuito · tarifa infantil só na bilheteria (ago/2026)",
           "acessibilidade": "Embarque no cais é plano · barco tem banco corrido · carrinho fica no cais · colo com ela sentada",
           "coord": {
             "lat": 41.3875,
@@ -1966,7 +1966,8 @@
           "imperdivel": "Na parada 4️⃣, a vista da Loggia: o postal de Bonifacio, com a falésia branca caindo a pique e a Sardenha no horizonte em dia limpo",
           "dicas": [
             "1️⃣ <strong>Porte de Gênes</strong> — repare no mecanismo do pont-levis: o sistema de contrapesos e roldanas foi instalado em <strong>1598</strong> e ainda funciona. O arco triunfal barroco é do mesmo ano. Detalhe que muda tudo: <strong>até 1854 esta foi a ÚNICA entrada da cidadela</strong> — quem quisesse entrar em Bonifacio passava por aqui ou não passava.",
-            "2️⃣ <strong>Bastion de l'Etendard</strong> (séc. XVI) — a Place d'Armes se abre logo depois do portão. É o bastião que <em>protege</em> a Porte de Gênes: repare que quem atravessa a ponte fica sob fogo do bastião o tempo todo. Não é decoração, é engenharia de matar.",
+            "2️⃣ <strong>Bastion de l'Etendard</strong> (séc. XVI · €3,50 avulso) — a Place d'Armes se abre logo depois do portão. É o bastião que <em>protege</em> a Porte de Gênes: repare que quem atravessa a ponte fica sob fogo do bastião o tempo todo. Não é decoração, é engenharia de matar.",
+            "💶 <strong>Compre o Pass Monuments logo no Bastion</strong>: os dois monumentos pagos da cidadela juntos saem por <strong>€6,50</strong> (criança 6-11 anos €2 · grupo de 10+ €4), contra €3,50 + €2,50 avulsos. Economiza €2 por pessoa e evita fila dupla.",
             "3️⃣ <strong>Église Sainte-Marie-Majeure</strong> — a igreja mais antiga da cidade. Olhe pra cima: os arcos que ligam a igreja às casas vizinhas são <strong>aquedutos</strong>, que recolhiam a água da chuva dos telhados e a levavam pra <strong>cisterna sob o adro</strong>. A cidade alta é rocha seca — em cinco meses de cerco, água não era conforto, era a diferença entre resistir e capitular.",
             "4️⃣ <strong>Loggia · mirador sul</strong> — a parada da foto. Se derem sorte com o horário, o calcário passa de branco a creme e depois a rosa, e leva uns 40min fazendo isso. É por aqui que vale esticar o passo pra chegar antes das 19h30.",
             "5️⃣ <strong>Escalier du Roi d'Aragon</strong> — 187 degraus talhados na vertical da falésia. A lenda diz que os aragoneses os escavaram <em>numa única noite</em> em 1420 pra tomar a cidade pelo mar. É bonito e é falso: a obra levaria meses. Provavelmente era saída de emergência dos genoveses, ou obra de religiosos pra alcançar o poço de São Bartolomeu. A cidade venceu o cerco e depois adotou a obra dos próprios engenheiros como troféu da derrota alheia.",
@@ -1975,7 +1976,7 @@
             "Reservar o jantar antes de sair · a cidadela lota à noite em agosto"
           ],
           "duracao": "2h",
-          "custo": "Escalier €2.50 · resto grátis (jul/2026)",
+          "custo": "Pass Monuments €6,50 adulto / €2 criança (Bastion + Escalier) · avulso €3,50 + €2,50 · resto grátis (ago/2026)",
           "acessibilidade": "MISTA · ramparts ok carrinho · escadas em alguns stops · Escalier inacessível",
           "coord": {
             "lat": 41.3872,

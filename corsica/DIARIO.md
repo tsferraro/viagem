@@ -73,6 +73,38 @@ Nenhuma dessas foi dita — foram inferidas do comportamento ao longo da sessão
 
 ---
 
+## FACTCHECK completo · 2026-08-04
+
+Rodado o protocolo `skills/critico-roteiro/FACTCHECK.md` sobre os 13 dias. 117 afirmações
+extraídas (101 operacionais · 11 históricas · 5 de contato); descontadas as já verificadas com
+proveniência nesta sessão (Filitosa, Lavezzi, ferry, táxi Figari, Polischellu, Spin'a Cavallu,
+Coralli, dia do mercado de Sartène), sobraram os dias 4-8/Ago e os números nunca conferidos.
+
+**Placar: 3 confirmados · 3 corrigidos · 3 marcados `[a confirmar]`.**
+
+| Afirmação | Veredito |
+|---|---|
+| Pertusato "ponto mais ao sul da França metropolitana" | ❌ é o **segundo** · o extremo é o **Capu Testagro**, a leste — reescrito |
+| Pointe Saint-Antoine "ponto mais ao sul da Córsega" | ❌ falso · é uma ponta junto a Pertusato, com praia suspensa a 80m — reescrito |
+| Museu de Sartène €5 | ❌ **€4 / €2,50 meia** · verão todos os dias 10h-18h · bilhete dá entrada em Levie por 2 meses |
+| Cidadela "Escalier €2,50 · resto grátis" | ❌ o **Bastion custa €3,50** · existe **Pass Monuments €6,50** (€2 criança) pelos dois — economia de €2/pessoa, virou dica |
+| Pertusato construído em 1844 | ✅ confirmado (altura da torre diverge entre fontes · número removido) |
+| Lavezzi "reserva natural desde 1982" | ✅ confirmado (36 ha em 1982 · integrada em 1999 às Bouches de Bonifacio) |
+| Tour de Capanella "séc. XVI" | ✅ confirmado e **enriquecido**: **1589**, série genovesa de 1530-1620 contra piratas berberes, alarme em cadeia de torre a torre |
+| Parking Piantarella €5 | ⚠️ `[a confirmar]` · parking novo em obras pra 2026 · hoje tolera-se a beira da estrada, de graça |
+| SPMB Circuito 1 €18,50-26 | ⚠️ `[a confirmar]` · fontes de 2026 vão de €18,50 a €50 · tel. 04 95 10 97 50 |
+| Parking Rondinara €6 | ⚠️ `[a confirmar]` · €6 em 2025 com indício de €8 · há gratuito no alto, ~10min a pé |
+
+**Padrão nos 3 erros de conteúdo**: todos eram *superlativos geográficos e preços* — as duas
+categorias que mais apodrecem e que guias turísticos mais repetem sem checar. Superlativo copiado
+("o mais X de Y") deve ser tratado como afirmação a provar, nunca como cor de prosa.
+
+**Regra aplicada (FACTCHECK §4)**: número não confirmado nunca fica órfão. Os três viraram
+`[a confirmar]` explícito no card, com a faixa e o telefone/alternativa gratuita — transparência
+vale mais que precisão fingida.
+
+---
+
 ## Erros meus · padrão acumulado
 
 **Terceiro erro, de outra natureza (2026-08-03)**: inferi uma preferência ("sem desvio") a partir
