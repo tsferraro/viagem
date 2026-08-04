@@ -226,15 +226,42 @@ function fallbackCenter(){
   return [41.39, 9.16];
 }
 
+// ===== O QUE VAI PRO GOOGLE MAPS =====================================================
+// BUG ago/2026 (pego em campo pelo Tobia, com print): a rota do walking tour de Bonifacio
+// devolvia "Can't seem to find that place", porque o código só apagava os PARÊNTESES e
+// mandava o conteúdo junto — "Porte de Gênes (entrada principal)" virava a busca
+// "Porte de Gênes entrada principal". E o pino do card "Walking tour Cidadela · com os
+// avós" caía no meio do mar: é nome de card, não nome de lugar.
+//
+// Regra: só vai pro Maps o que É o lugar.
+//   1. `mapsQuery` no objeto manda em tudo — é a saída explícita pra quando o nome não serve.
+//   2. `noMaps: true` remove o link (card que não é lugar: check-in, despedida, fim da viagem).
+//   3. Sem os dois, limpa: corta no "·", e no parêntese mantém só o que PARECE ENDEREÇO.
+// Endereço ajuda a busca ("119 MacDougal"); descrição atrapalha ("museu + vista").
+const ADDR_HINT=/\d|\b(via|viale|vico|corso|piazza|piazzetta|largo|lungomare|lungofiume|localit[àa]|rua|avenida|rue|quai|avenue|boulevard|place|str|street|road|km)\b/i;
+
+function placeQuery(nome){
+  if(!nome) return '';
+  let s=String(nome).split('·')[0];                    // "Lugar · comentário" → "Lugar"
+  s=s.replace(/\([^)]*\)/g,m=>ADDR_HINT.test(m)?' '+m.slice(1,-1)+' ':' ');
+  s=s.replace(/[^\p{L}\p{N}\s\-'&.,/]/gu,' ');         // tira emoji, 🔄, +, :, !, ?
+  return s.replace(/\s+/g,' ').trim();
+}
+
+// Query final de um stop/opção: respeita mapsQuery, senão limpa o nome.
+function mapsQueryOf(obj){
+  if(!obj) return '';
+  return (obj.mapsQuery||'').trim() || placeQuery(obj.nome);
+}
+
 function getMapsUrl(stop){
   if(stop.noMaps) return '';
-  // Pra opcoes (3+ alternativas), usar nome da PRIMEIRA opção pra link específico
-  let queryName=stop.nome;
-  if(stop.tipo==='opcoes' && stop.opcoes && stop.opcoes.length>0){
-    queryName=stop.opcoes[0].nome;
-  }
-  // Remove parens MAS mantém conteúdo (endereços como "144 MacDougal" ajudam a busca)
-  const clean=queryName.replace(/[()]/g,'').replace(/[^\p{L}\p{N}\s\-'&.,/:!?]/gu,'').replace(/\s+/g,' ').trim();
+  // Pra opcoes (3+ alternativas), usar a PRIMEIRA opção pra link específico
+  let alvo=stop;
+  if(stop.tipo==='opcoes' && stop.opcoes && stop.opcoes.length>0) alvo=stop.opcoes[0];
+  const clean=mapsQueryOf(alvo) || mapsQueryOf(stop);
+  // Sem nome utilizável mas com coord: manda a coordenada, que nunca erra.
+  if(!clean) return stop.coord?`https://www.google.com/maps/search/?api=1&query=${stop.coord.lat},${stop.coord.lng}`:'';
   if(stop.coord) return `https://www.google.com/maps/search/${encodeURIComponent(clean)}/@${stop.coord.lat},${stop.coord.lng},17z`;
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean+regionSuffix())}`;
 }
@@ -298,11 +325,11 @@ function getRouteUrl(day){
   return dirCoordUrl(stops.map(s=>s.coord),dayTransport(day)) || getMapsUrl(stops[0]);
 }
 
-// Limpa o nome de uma parada de walking tour p/ virar query geocodável:
-// tira parênteses (mantém o endereço dentro), corta descrições após "·", normaliza espaços.
-// Ex: "Trinity Church (89 Broadway · Hamilton's tomb)" → "Trinity Church 89 Broadway"
-function wtStopQuery(nome){
-  return (nome||'').replace(/[()]/g,' ').split('·')[0].replace(/\s+/g,' ').trim();
+// Parada de walking tour: mesma regra dos cards (mapsQuery > nome limpo).
+// Recebe a parada inteira; aceita string por retrocompatibilidade.
+function wtStopQuery(stop){
+  if(typeof stop==='string') return placeQuery(stop);
+  return mapsQueryOf(stop);
 }
 // Rótulo de parada de walking tour · casa com o Google Maps (que rotula waypoints A,B,C…)
 // quando WT_LABELS==='letters'. Default numérico (retrocompatível com viagens antigas).
@@ -314,12 +341,15 @@ function getWalkingTourUrl(tour){
   if(!tour||tour.length<2) return '#';
   // Preferência: rota por NOME das paradas (legível no Google Maps) · exige MAPS_REGION p/ geocodar certo.
   const region=(typeof MAPS_REGION!=='undefined'&&MAPS_REGION)?(', '+MAPS_REGION):'';
-  if(region){
-    const names=tour.map(t=>wtStopQuery(t.nome)).filter(Boolean);
-    if(names.length>=2)
-      return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n+region)).join('/')}/`;
+  // Rota por NOME só quando TODA parada tem `mapsQuery` explícito — ou seja, alguém garantiu
+  // que aquele texto é um lugar que o Maps acha. BUG ago/2026 (print do Tobia): bastou UMA
+  // parada com nome descritivo ("Porte de Gênes entrada principal") pra rota inteira morrer
+  // em "Can't seem to find that place". Nome bonito não vale perder a rota.
+  if(region && tour.every(t=>(t.mapsQuery||'').trim())){
+    const names=tour.map(t=>t.mapsQuery.trim());
+    return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n+region)).join('/')}/`;
   }
-  // Fallback (sem região definida ou nomes ausentes): rota por COORDENADAS.
+  // Default seguro: rota por COORDENADAS — ilegível na barra de endereço, mas nunca falha.
   return dirCoordUrl(tour.map(t=>t.coord),'walking') || '#';
 }
 
@@ -507,8 +537,9 @@ function tripStats(){
 function renderStatusBar(){
   const st=tripStats();
   const expanded=(()=>{ try{return localStorage.getItem('statusExpanded')==='1';}catch(e){return false;} })();
-  // Chip de reservas só quando NÃO estão todas completas (completas viram nota no rodapé)
-  const reservasComplete=st.totalReservas>0 && st.doneReservas===st.totalReservas;
+  // Chip de reservas aparece SÓ quando há pendência de verdade. Some nos dois extremos:
+  // nenhuma reserva no roteiro (mostrava "☐ Reservas 0/0" · bug ago/2026) e todas já feitas.
+  const reservasComplete=st.totalReservas===0 || st.doneReservas===st.totalReservas;
   const reservasChip=reservasComplete?'':`<button class="sb-chip" id="sb-reservas" title="Ver reservas pendentes">☐ Reservas <span class="tnum">${st.doneReservas}/${st.totalReservas}</span> <span class="sb-arr">›</span></button>`;
 
   if(!IS_TRIP){
@@ -825,19 +856,19 @@ function collectPOIs(){
           coord:s.coord,dia:day.date,di,mapsUrl:getMapsUrl(s),cat:s.cat||''});
         (s.walkingTours||[]).forEach(t=>t.stops.forEach(st=>{
           if(st.coord) out.push({nome:st.nome,poiCat:'atracao',va:undefined,risco:undefined,
-            coord:st.coord,dia:day.date,di,mapsUrl:getMapsUrl({nome:st.nome,coord:st.coord}),cat:'Parada · '+t.nome});
+            coord:st.coord,dia:day.date,di,mapsUrl:getMapsUrl({nome:st.nome,coord:st.coord,mapsQuery:st.mapsQuery,noMaps:st.noMaps}),cat:'Parada · '+t.nome});
         }));
       } else if(s.tipo==='opcoes'){
         (s.opcoes||[]).forEach(o=>{ if(o.coord) out.push({nome:o.nome,poiCat:o.poiCat||'restaurante',
           va:o.valeAPena,risco:undefined,coord:o.coord,dia:day.date,di,
-          mapsUrl:getMapsUrl({nome:o.nome,coord:o.coord}),cat:o.desc||''}); });
+          mapsUrl:getMapsUrl({nome:o.nome,coord:o.coord,mapsQuery:o.mapsQuery,noMaps:o.noMaps}),cat:o.desc||''}); });
       }
     });
   });
   // POIs extras (recomendações soltas · di=-1 → aparecem só com filtro de dia "todos")
   if(typeof EXTRAS!=='undefined') EXTRAS.forEach(e=>{ if(e.coord) out.push({
     nome:e.nome,poiCat:e.poiCat||'atracao',va:e.valeAPena,risco:e.risco,coord:e.coord,
-    dia:'💡 Dica do chat',di:-1,mapsUrl:getMapsUrl({nome:e.nome,coord:e.coord}),cat:e.cat||''}); });
+    dia:'💡 Dica do chat',di:-1,mapsUrl:getMapsUrl({nome:e.nome,coord:e.coord,mapsQuery:e.mapsQuery,noMaps:e.noMaps}),cat:e.cat||''}); });
   return out;
 }
 

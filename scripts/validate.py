@@ -397,6 +397,49 @@ def check_legend_no_dup(content):
     else:
         ok("Legenda sem duplicação · pills + notes complementares")
 
+def check_maps_query(days_text):
+    """BLOQUEIA texto que não é lugar sendo mandado pro Google Maps.
+
+    Bug ago/2026 (dois prints do Tobia, em campo): o pino do card "Walking tour Cidadela ·
+    com os avós" abria o Maps no meio do mar, e a rota do walking tour devolvia "Can't seem
+    to find that place" porque uma parada virava a busca "Porte de Gênes entrada principal".
+    O template agora limpa o nome (corta no "·", descarta parêntese descritivo), mas nome de
+    card que descreve uma ATIVIDADE nunca vira lugar por limpeza — precisa de `mapsQuery`
+    explícito ou `noMaps`.
+    """
+    if not days_text:
+        return
+    try:
+        days = json.loads(days_text)
+    except Exception:
+        return
+    # mesma limpeza do template (placeQuery)
+    addr = re.compile(r"\d|\b(via|viale|vico|corso|piazza|piazzetta|largo|lungomare|lungofiume|"
+                      r"localit[àa]|rua|avenida|rue|quai|avenue|boulevard|place|str|street|road|km)\b", re.I)
+    def place_query(nome):
+        s = str(nome or '').split('·')[0]
+        s = re.sub(r'\([^)]*\)', lambda m: ' ' + m.group(0)[1:-1] + ' ' if addr.search(m.group(0)) else ' ', s)
+        s = re.sub(r"[^\w\s\-'&.,/]", ' ', s, flags=re.UNICODE)
+        return re.sub(r'\s+', ' ', s).strip()
+    # nomes que descrevem atividade/logística, não lugar
+    nao_lugar = re.compile(r'^(walking tour|check[- ]?(in|out)|caf[ée] da manh|despedida|fim da viagem|'
+                           r'tarde livre|retorno|volta a|chegada|encontro|layby|boat tour|sesta)', re.I)
+    ruins = []
+    for day in days:
+        for s in day.get('stops', []):
+            if s.get('tipo') != 'card' or s.get('noMaps') or (s.get('mapsQuery') or '').strip():
+                continue
+            q = place_query(s.get('nome'))
+            if not q or nao_lugar.match(q):
+                ruins.append((s.get('nome', '?')[:40], q))
+    if ruins:
+        amostra = ' · '.join(f'"{n}" → busca {q!r}' for n, q in ruins[:3])
+        err(f"{len(ruins)} card(s) mandariam texto sem sentido pro Google Maps: {amostra} · "
+            f"corrija com \"mapsQuery\": \"<nome do lugar>\" ou \"noMaps\": true")
+    else:
+        ok("Nenhum card manda texto sem sentido pro Maps (mapsQuery/noMaps onde precisa)")
+
+
 def check_no_hardcoded_region(content):
     """BLOQUEIA literal de cidade/região cravado na construção de URL do Google Maps.
 
@@ -530,6 +573,7 @@ def main():
     check_walking_tours(days_text)
     check_temaCurto(days_text)
     check_no_manual_stars(days_text)
+    check_maps_query(days_text)
     check_no_raw_markdown(days_text)
 
     # Features

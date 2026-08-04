@@ -55,7 +55,8 @@
             "lng": 9.5026
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Olbia"
         },
         {
           "hora": "18:30",
@@ -157,7 +158,8 @@
             "lng": 9.5026
           },
           "valeAPena": 1,
-          "poiCat": "cafe"
+          "poiCat": "cafe",
+          "noMaps": true
         },
         {
           "hora": "09:00",
@@ -208,7 +210,8 @@
             "lng": 9.1544
           },
           "valeAPena": 2,
-          "poiCat": "restaurante"
+          "poiCat": "restaurante",
+          "mapsQuery": "Port de Bonifacio"
         },
         {
           "hora": "16:30",
@@ -284,7 +287,8 @@
             }
           ],
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Citadelle de Bonifacio"
         },
         {
           "hora": "20:30",
@@ -361,7 +365,8 @@
             "lng": 9.1597
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "noMaps": true
         },
         {
           "hora": "09:00",
@@ -449,7 +454,8 @@
             "lng": 8.53144
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Cabras"
         },
         {
           "hora": "20:00",
@@ -610,7 +616,8 @@
             "lng": 8.44101
           },
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Area Archeologica di Tharros"
         },
         {
           "hora": "17:00",
@@ -949,7 +956,8 @@
             "lng": 8.53144
           },
           "valeAPena": 1,
-          "poiCat": "cafe"
+          "poiCat": "cafe",
+          "noMaps": true
         },
         {
           "hora": "10:30",
@@ -975,7 +983,8 @@
             "lng": 8.52528
           },
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Museo Civico Giovanni Marongiu, Cabras"
         },
         {
           "hora": "13:00",
@@ -1038,7 +1047,8 @@
             "lng": 8.53144
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Spiaggia di Putzu Idu"
         },
         {
           "hora": "20:30",
@@ -1114,7 +1124,8 @@
             "lng": 8.53144
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "noMaps": true
         },
         {
           "hora": "11:00",
@@ -1190,7 +1201,8 @@
             "lng": 8.4489
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Spiaggia di Maladroxia"
         },
         {
           "hora": "20:00",
@@ -1335,7 +1347,8 @@
             }
           ],
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Tophet di Sant'Antioco"
         },
         {
           "hora": "13:30",
@@ -1398,7 +1411,8 @@
             "lng": 8.4489
           },
           "valeAPena": 1,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Spiaggia di Maladroxia"
         },
         {
           "hora": "20:30",
@@ -1678,7 +1692,9 @@
             "lng": 8.4126
           },
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Porto Flavia, Masua",
+          "reserva": "pendente"
         },
         {
           "hora": "12:30",
@@ -1805,7 +1821,8 @@
             "lng": 8.4489
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "noMaps": true
         },
         {
           "hora": "08:30",
@@ -1894,7 +1911,8 @@
           },
           "coord_unverified": true,
           "valeAPena": 2,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "noMaps": true
         },
         {
           "hora": "16:30",
@@ -1919,7 +1937,8 @@
             "lng": 9.6272
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Cala Gonone"
         },
         {
           "hora": "20:30",
@@ -2011,7 +2030,8 @@
             "lng": 9.6763
           },
           "valeAPena": 3,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Porto di Cala Gonone"
         },
         {
           "hora": "17:00",
@@ -2037,7 +2057,8 @@
             "lng": 9.6272
           },
           "valeAPena": 1,
-          "poiCat": "cafe"
+          "poiCat": "cafe",
+          "mapsQuery": "Porto di Cala Gonone"
         },
         {
           "hora": "20:00",
@@ -2113,7 +2134,8 @@
             "lng": 9.6272
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "noMaps": true
         },
         {
           "hora": "09:30",
@@ -2188,7 +2210,8 @@
             "lng": 9.1907
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Santa Teresa Gallura"
         },
         {
           "hora": "17:00",
@@ -2255,7 +2278,8 @@
             }
           ],
           "valeAPena": 3,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Valle della Luna, Capo Testa"
         },
         {
           "hora": "20:30",
@@ -2411,7 +2435,8 @@
             }
           ],
           "valeAPena": 2,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "La Maddalena"
         },
         {
           "hora": "13:00",
@@ -2476,7 +2501,9 @@
             "lng": 9.48417
           },
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Compendio Garibaldino, Caprera",
+          "reserva": "pendente"
         },
         {
           "hora": "18:30",
@@ -2595,7 +2622,8 @@
             "lng": 9.4675
           },
           "valeAPena": 2,
-          "poiCat": "mercado"
+          "poiCat": "mercado",
+          "mapsQuery": "San Pantaleo, Olbia"
         },
         {
           "hora": "13:00",
@@ -2685,7 +2713,8 @@
             "lng": 9.5375
           },
           "valeAPena": 0,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Porto Cervo"
         },
         {
           "hora": "18:30",
@@ -2774,7 +2803,8 @@
             "lng": 9.1907
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "noMaps": true
         },
         {
           "hora": "09:30",
@@ -2861,7 +2891,8 @@
             "lng": 9.5176
           },
           "valeAPena": 1,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "noMaps": true
         }
       ],
       "nota": "Manhã sem pressa até Olbia, devolução do carro e voo. Dezesseis dias, nove deles com o Tobia e a neta. O último almoço no Corso Umberto fecha o círculo onde ele começou."

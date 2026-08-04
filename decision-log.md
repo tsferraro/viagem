@@ -291,3 +291,40 @@ qualquer cidade: um roteiro de NYC não vira falso-positivo.
 **MAPS_REGION ausente é aviso, não erro**: builds anteriores a ago/2026 (marais, nyc-lab-*)
 não têm o global. Bloquear travaria uma correção de dica num roteiro antigo por um motivo que
 não é o da correção.
+
+---
+
+## 2026-08-04 · O que vai pro Google Maps deixa de ser o nome do card
+
+**Contexto**: Tobia mandou 4 prints do app em campo. Dois mostravam falha dura: o pino do card
+`"Walking tour Cidadela · com os avós"` abria o Google Maps **no meio do mar**, e a rota do
+walking tour de Bonifacio devolvia **"Can't seem to find that place"**. A causa aparecia no
+próprio print: o campo de busca dizia `Porte de Gênes entrada principal`.
+
+O código só apagava os **parênteses** e mandava o conteúdo junto. Isso fazia sentido quando o
+parêntese era endereço (`(119 MacDougal)` — a convenção documentada), mas as paradas de walking
+tour usam parêntese para **descrição** (`(museu + vista)`, `(cemitério ritual)`, `(info point)`).
+Nunca ninguém tinha aberto o link em campo.
+
+**Decisão**: três camadas — `mapsQuery` (explícito, manda em tudo) → `noMaps` (não é lugar) →
+limpeza automática (corta no `·`, descarta parêntese descritivo, mantém o que parece endereço).
+
+**A decisão não-óbvia**: a **rota de walking tour passa a usar coordenadas por padrão**, e só usa
+nomes quando *todas* as paradas têm `mapsQuery`. Antes era o contrário — tentava nomes e caía pra
+coordenada só se faltasse nome. Uma única parada ruim derrubava a rota inteira. Legibilidade da
+URL é bonito; rota que abre é obrigatório.
+
+| Alternativa rejeitada | Por quê |
+|---|---|
+| Melhorar só a limpeza automática | Nenhuma regex transforma "Walking tour Cidadela" num lugar |
+| Preencher `mapsQuery` em toda parada de toda WT | Trabalho grande e frágil; a rota por coordenada já resolve hoje, sem risco |
+| Deixar o nome sujo e confiar no Google | O print prova que não funciona |
+
+**Guardrail**: `check_maps_query()` no `validate.py` bloqueia card cujo nome viraria busca sem
+sentido (lista fechada de prefixos de atividade: walking tour, check-in/out, despedida, chegada…).
+
+**Junto**: chip `☐ Reservas` mostrava `0/0` quando o roteiro não tinha nenhuma reserva —
+`reservasComplete` exigia `totalReservas>0`. Agora some nos dois extremos (nenhuma e todas feitas).
+E os filtros da aba "Tudo no Mapa" trocaram preto/branco por **azul** no selecionado: no print do
+Tobia era impossível dizer o que estava ativo, e no tema escuro o "selecionado" ficava branco
+igual ao fundo. `📍 Onde estou` saiu do azul pra não empatar com estado de seleção.

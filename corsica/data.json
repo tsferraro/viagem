@@ -116,7 +116,8 @@
             "lng": 8.7946
           },
           "poiCat": "atracao",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "mapsQuery": "Porto Pollo, Serra-di-Ferro"
         },
         {
           "hora": "19:30",
@@ -1136,7 +1137,8 @@
             "lng": 8.7946
           },
           "poiCat": "atracao",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "noMaps": true
         },
         {
           "hora": "08:00",
@@ -1316,7 +1318,8 @@
             "lng": 9.1597
           },
           "poiCat": "atracao",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "mapsQuery": "Bonifacio"
         },
         {
           "hora": "15:50",
@@ -1796,7 +1799,8 @@
           "coord": {
             "lat": 41.3872,
             "lng": 9.1597
-          }
+          },
+          "noMaps": true
         },
         {
           "hora": "17:30",
@@ -2031,7 +2035,8 @@
             }
           ],
           "poiCat": "atracao",
-          "valeAPena": 3
+          "valeAPena": 3,
+          "mapsQuery": "Citadelle de Bonifacio"
         },
         {
           "hora": "19:00",
@@ -2134,7 +2139,8 @@
             "lng": 9.1597
           },
           "poiCat": "atracao",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "noMaps": true
         },
         {
           "hora": "09:00",
@@ -2246,7 +2252,8 @@
             "lng": 8.5333
           },
           "poiCat": "atracao",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "mapsQuery": "Cabras"
         }
       ],
       "nota": "O dia mais frágil do roteiro (🔴): balsa + traslado + retirada de carro + 3h de estrada, tudo encadeado. Tudo que puder ser confirmado na véspera, confirma na véspera."

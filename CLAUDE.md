@@ -309,6 +309,27 @@ Os 4 objetos abaixo são serializados como JSON pretty (indent=2) dentro do `<sc
 ]
 ```
 
+### `mapsQuery` e `noMaps` · o que vai pro Google Maps (2026-08-04)
+
+Bug pego em campo com print: o pino do card `"Walking tour Cidadela · com os avós"` abria o Maps
+**no meio do mar**, e a rota do walking tour de Bonifacio devolvia **"Can't seem to find that
+place"** — porque `"Porte de Gênes (entrada principal)"` virava a busca `Porte de Gênes entrada
+principal`. Nome de card descreve uma *atividade*; o Maps precisa de um *lugar*.
+
+Três camadas, nesta ordem:
+
+| Campo | Quando usar |
+|---|---|
+| `"mapsQuery": "Citadelle de Bonifacio"` | O nome do card/parada não é um lugar buscável. **Manda esse texto e mais nada.** |
+| `"noMaps": true` | Não é lugar nenhum: check-in/out, café da manhã, despedida, fim da viagem. Remove o link. |
+| (nada) | O template limpa sozinho: corta no `·` e **descarta o parêntese quando é descrição**, mantendo quando é endereço (`(Via Marconi 47)` fica · `(museu + vista)` sai). |
+
+**Rota de walking tour**: só usa nomes quando **TODAS** as paradas têm `mapsQuery`. Um único nome
+ruim mata a rota inteira, então o default é coordenada — ilegível na barra de endereço, mas nunca
+falha. Quer a rota bonita com nomes? Preencha `mapsQuery` em todas as paradas do tour.
+
+`validate.py` **bloqueia** card cujo nome viraria busca sem sentido (`check_maps_query`).
+
 ### LINKS_MAP
 
 ```json
