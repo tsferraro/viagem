@@ -2811,7 +2811,7 @@ const DAYS = [
         "periodo": "manha",
         "tipo": "transit",
         "nome": "Ferry Bonifacio → Santa Teresa di Gallura",
-        "cat": "~50min travessia · Moby (operador único) · 1ª saída 08h30 · 8 travessias/dia no verão",
+        "cat": "~50min travessia · DOIS operadores: Moby e Ichnusa Lines · compare os dois",
         "coord": {
           "lat": 41.2389,
           "lng": 9.1907
@@ -3071,7 +3071,20 @@ const TRANSIT_MAP = {
     ]
   },
   "Ferry Bonifacio → Santa Teresa di Gallura": {
-    "opcoes": []
+    "opcoes": [
+      {
+        "modo": "ferry",
+        "texto": "<strong>Ichnusa Lines</strong> · saídas de Bonifacio <strong>09h00 · 12h30 · 17h00 · 20h30</strong> (em feriado/domingo: 10h20 · 13h50 · 17h20 · 20h50) · navio de 320 passageiros · embarque na <strong>agência dentro da Estação Marítima</strong> · <a href=\"https://ichnusalines.com\" target=\"_blank\" rel=\"noopener\">ichnusalines.com</a> · tel +39 0565 960130 (9h-20h)"
+      },
+      {
+        "modo": "ferry",
+        "texto": "<strong>Moby</strong> · 1ª saída ~08h30, última ~20h20 · ~8 travessias/dia no verão · <a href=\"https://www.moby.it\" target=\"_blank\" rel=\"noopener\">moby.it</a> · bilheteria do porto +33 4 95 73 00 29 · tarifa é <strong>dinâmica</strong> (sobe conforme o navio enche)"
+      },
+      {
+        "modo": "rota",
+        "texto": "<strong>Compare os dois antes de comprar</strong> · a Ichnusa vendeu mais barato que a Moby em ago/2026 (€44 na Moby vs. menos na Ichnusa, mesmo trecho). A <strong>Blu Navy suspendeu</strong> esta rota — revendedor que ainda a lista está desatualizado. Criança pequena costuma ser gratuita: <strong>confirme a idade no seletor</strong>, não pague por ela sem checar"
+      }
+    ]
   },
   "Santa Teresa → Olbia (bus/táxi)": {
     "opcoes": [
