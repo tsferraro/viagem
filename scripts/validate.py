@@ -477,6 +477,10 @@ def check_required_features(content):
         'Feito axis (localStorage)':  "'feito-'",
         'Rota por coord (api=1)':     'api=1',
         'Rota com travelmode':        'travelmode=',
+        # Relato de campo · a caixa e a fila offline. O envio pode falhar (sem
+        # sinal, sem URL), mas a GRAVAÇÃO local não pode sumir num rebuild.
+        'Relato · caixa no dia':      'function renderRelato',
+        'Relato · fila localStorage': "RELATOS_KEY='relatos_v1'",
     }
     
     for name, pattern in required.items():

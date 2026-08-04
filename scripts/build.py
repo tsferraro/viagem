@@ -35,6 +35,13 @@ def js_value(obj, minify=False):
     return json.dumps(obj, ensure_ascii=False, indent=2)
 
 
+def _slug_vizinho(data_path: Path) -> str:
+    """Lê o SLUG.txt ao lado do data.json. É o identificador da viagem na planilha
+    de relatos — sem ele os relatos chegam sem saber de qual roteiro vieram."""
+    f = data_path.parent / "SLUG.txt"
+    return f.read_text(encoding="utf-8").strip() if f.exists() else ""
+
+
 def build(data_path: Path, output_path: Path, minify=False):
     # 1. Carregar data
     with data_path.open(encoding="utf-8") as f:
@@ -65,6 +72,11 @@ def build(data_path: Path, output_path: Path, minify=False):
         "{{BAIRROS_CONFIG_JSON}}": js_value(data.get("bairros_config", [{"nome": "📍 Outros", "fallback": True}]), minify=minify),
         "{{HISTORIA_JSON}}": js_value(data.get("historia", []), minify=minify),
         "{{EXTRAS_JSON}}": js_value(data.get("extras", []), minify=minify),
+        # Relato de campo · slug identifica a viagem na planilha; cai no SLUG.txt
+        # ao lado do data.json se o próprio data.json não declarar.
+        "{{ROTEIRO_SLUG}}": data.get("slug") or _slug_vizinho(data_path),
+        # Vazio é estado válido: sem URL o relato fica na fila local e é copiável.
+        "{{FEEDBACK_URL}}": data.get("feedback_url", ""),
     }
 
     # Substituições simples nos textos

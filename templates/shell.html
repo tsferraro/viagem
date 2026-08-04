@@ -149,6 +149,13 @@ const HISTORIA = {{HISTORIA_JSON}};
 // ============== POIs EXTRAS (recomendações soltas · não presas a um dia · só no mapa "Tudo") ==============
 const EXTRAS = {{EXTRAS_JSON}};
 
+// ============== RELATO DE CAMPO (uma caixa por dia · grava em localStorage e envia) ==============
+// ROTEIRO_SLUG identifica a viagem na planilha (coluna Roteiro). Vem do SLUG.txt via build.py.
+const ROTEIRO_SLUG = "{{ROTEIRO_SLUG}}";
+// URL /exec do Apps Script Web App. VAZIO É ESTADO VÁLIDO: o relato fica na fila
+// local e pode ser copiado inteiro pelo botão. Nada quebra sem ela.
+const FEEDBACK_URL = "{{FEEDBACK_URL}}";
+
 // ============== RENDER ==============
 {{RENDER_FUNCTIONS_JS}}
 </script>

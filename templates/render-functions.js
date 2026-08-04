@@ -41,6 +41,95 @@ function getTodayTripIdx(){
 function isFeito(nome){ try{return localStorage.getItem('feito-'+nome)==='done';}catch(e){return false;} }
 function setFeito(nome,val){ try{localStorage.setItem('feito-'+nome,val?'done':'undone');}catch(e){} }
 
+// ══════════════════════════════════════════════════════════════════════════════
+// RELATO DE CAMPO · uma caixa por dia
+// ══════════════════════════════════════════════════════════════════════════════
+// Por que existe: até aqui, correção de campo vinha por WhatsApp → chat → sessão.
+// Foi o gargalo da Córsega (Le Lido e Auberge Coralli levaram dias pra chegar).
+// A caixa encurta isso: quem está NO lugar escreve na hora, no dia certo.
+//
+// Desenho (3 decisões que importam):
+//  1. GRAVA PRIMEIRO, envia depois. O relato entra na fila local ANTES de qualquer
+//     rede. Praia e estrada sem sinal são a regra, não a exceção — nada se perde.
+//  2. SEM confirmação de servidor. O POST vai em no-cors porque o Apps Script não
+//     devolve cabeçalho CORS; a resposta é opaca e ilegível por design. "Enviado"
+//     aqui significa "a requisição saiu", não "o Google gravou".
+//  3. FEEDBACK_URL VAZIA É ESTADO VÁLIDO. Sem endpoint, tudo fica na fila e o botão
+//     de copiar resolve — o app nunca fica dependente de um deploy externo.
+const RELATOS_KEY='relatos_v1';
+
+function relatosLer(){
+  try{ return JSON.parse(localStorage.getItem(RELATOS_KEY)||'[]'); }catch(e){ return []; }
+}
+function relatosGravar(arr){
+  try{ localStorage.setItem(RELATOS_KEY,JSON.stringify(arr)); return true; }catch(e){ return false; }
+}
+function relatosPendentes(){ return relatosLer().filter(r=>!r.enviado).length; }
+
+function relatoAdicionar(dayIdx,texto){
+  const day=DAYS[dayIdx]||{};
+  const arr=relatosLer();
+  arr.push({
+    ts:new Date().toISOString(),          // coluna Data · quando ESCREVEU
+    roteiro:ROTEIRO_SLUG,                 // coluna Roteiro
+    dia:day.date||day.tema||('Dia '+(dayIdx+1)), // coluna Dia · a aba aberta
+    texto:texto,                          // a única coluna que o humano preenche
+    enviado:false
+  });
+  return relatosGravar(arr);
+}
+
+// Tenta esvaziar a fila. Silenciosa por natureza: sem URL, sem rede ou com o
+// Google fora do ar ela simplesmente não marca nada como enviado e tenta de novo.
+function relatosEnviar(){
+  if(!FEEDBACK_URL) return Promise.resolve(false);
+  const arr=relatosLer();
+  const fila=arr.filter(r=>!r.enviado);
+  if(!fila.length) return Promise.resolve(true);
+  return Promise.all(fila.map(r=>{
+    const body=new URLSearchParams({data:r.ts,roteiro:r.roteiro,dia:r.dia,texto:r.texto});
+    return fetch(FEEDBACK_URL,{method:'POST',mode:'no-cors',body:body})
+      .then(()=>{ r.enviado=true; })
+      .catch(()=>{});   // fica na fila · próxima tentativa pega
+  })).then(()=>{
+    relatosGravar(arr);
+    return relatosLer().every(r=>r.enviado);
+  });
+}
+
+// Texto plano de TUDO que ainda não foi enviado · é o caminho que não depende de
+// nada externo: copiar e colar no chat.
+function relatosTexto(){
+  const p=relatosLer().filter(r=>!r.enviado);
+  if(!p.length) return '';
+  return p.map(r=>`[${r.roteiro} · ${r.dia}]\n${r.texto}`).join('\n\n---\n\n');
+}
+
+// Reenvia sozinho quando a conexão volta e ao abrir o app.
+if(typeof window!=='undefined'){
+  window.addEventListener('online',()=>{ relatosEnviar(); });
+}
+
+function renderRelato(dayIdx){
+  const pend=relatosPendentes();
+  const aviso=pend
+    ? `<div class="relato-pend">📥 ${pend} relato${pend>1?'s':''} guardado${pend>1?'s':''} no aparelho${FEEDBACK_URL?' · reenvia sozinho quando houver sinal':''}</div>`
+    : '';
+  return `<div class="relato-box">
+    <details class="relato-det">
+      <summary class="relato-sum">📣 Como foi este dia? <span class="rs-hint">erro no roteiro · dica · o que valeu</span></summary>
+      <div class="relato-body">
+        <textarea class="relato-txt" id="relato-txt" rows="4" placeholder="Escreve solto, tudo junto. Ex: 'o restaurante X não existe mais', 'o parking custou €8', 'a praia Y valeu muito mais que a Z'. Eu separo depois."></textarea>
+        <div class="relato-acts">
+          <button class="relato-send" id="relato-send" type="button">Guardar relato</button>
+          ${pend?`<button class="relato-copy" id="relato-copy" type="button">📋 Copiar tudo</button>`:''}
+        </div>
+        ${aviso}
+      </div>
+    </details>
+  </div>`;
+}
+
 // ===== Storage health · reservas/feitos vivem no localStorage · avisa quando o navegador NÃO vai persistir
 // (modo privado, storage bloqueado, ou navegador embutido em app — que usa storage efêmero e limpa ao fechar).
 // A persistência em si é correta (verificada end-to-end); este aviso cobre o caso "some ao fechar o app".
@@ -529,7 +618,8 @@ function renderDay(day){
     </div>`;
   }
 
-  return heroAndNota + timeline + feitas;
+  // A caixa de relato fecha o dia · último bloco, depois das Feitas.
+  return heroAndNota + timeline + feitas + renderRelato(state.selIdx);
 }
 
 // Linha de tarefa (stop) clicável nos filtros A fazer / Feitas / pending
@@ -1077,6 +1167,46 @@ function bindCardHandlers(){
       if(sb && state.view==='guia'){ sb.outerHTML=renderStatusBar(); bindStatusBar(); }
     });
   });
+  // Relato de campo · guardar (e tentar enviar) + copiar a fila
+  const rSend=document.getElementById('relato-send');
+  if(rSend && !rSend.__bound){
+    rSend.__bound=true;
+    rSend.addEventListener('click',e=>{
+      e.stopPropagation();
+      const ta=document.getElementById('relato-txt');
+      const txt=(ta&&ta.value||'').trim();
+      if(!txt){ ta&&ta.focus(); return; }
+      const ok=relatoAdicionar(state.selIdx,txt);
+      if(!ok){ rSend.textContent='⚠️ storage bloqueado'; return; }
+      if(ta) ta.value='';
+      // Feedback honesto: "guardado" é o que de fato aconteceu. O envio é tentado
+      // logo em seguida e nunca é anunciado como sucesso (resposta é opaca).
+      rSend.textContent='✓ guardado';
+      relatosEnviar();
+      setTimeout(()=>{ renderInnerContent(); },1200);
+    });
+  }
+  const rCopy=document.getElementById('relato-copy');
+  if(rCopy && !rCopy.__bound){
+    rCopy.__bound=true;
+    rCopy.addEventListener('click',e=>{
+      e.stopPropagation();
+      const txt=relatosTexto();
+      if(!txt) return;
+      const flash=()=>{ rCopy.textContent='copiado ✓'; setTimeout(()=>{ rCopy.textContent='📋 Copiar tudo'; },1500); };
+      const fallback=()=>{
+        try{
+          const ta=document.createElement('textarea');
+          ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+          document.body.appendChild(ta); ta.focus(); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta);
+        }catch(err){}
+        flash();
+      };
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(flash,fallback); }
+      else { fallback(); }
+    });
+  }
   // Cabeçalho "Feitas hoje": colapsar
   const fh=document.getElementById('feitas-head');
   if(fh && !fh.__bound){

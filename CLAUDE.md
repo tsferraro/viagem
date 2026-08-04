@@ -460,6 +460,21 @@ O toggle continua no template pronto pra reuso — é só (re)adicionar `essenci
 - **Aviso de storage não-persistente** (`maybeWarnStorage` · 2026-07-12): detecta modo privado / navegador embutido em app (WhatsApp/Instagram) e mostra banner explicando que reservas/feitos não vão salvar. Não aparece em navegador normal.
 - **Rota de walking tour por NOME** (2026-07-12): `getWalkingTourUrl` monta `/dir/Nome1/Nome2/…` (legível no Google Maps) usando o global **`MAPS_REGION`** (ex: `"New York, NY"`, injetado do `data.json`). Se `maps_region` vazio, cai pro fallback por coordenadas.
 - **Auto-abrir dia de hoje** usa comparação em horário LOCAL (`getMonth()/getDate()`), não `toISOString()` UTC (senão rola o dia em fuso ≠ UTC · corrigido 2026-07-12).
+- **📣 Relato de campo** (`renderRelato` · 2026-08-04): caixa de texto **uma por dia**, último bloco depois das "Feitas hoje". Fecha o loop campo→roteiro que antes dependia de WhatsApp→chat→sessão (foi o gargalo da Córsega: Le Lido e Auberge Coralli levaram dias). Ver seção dedicada abaixo.
+
+## Relato de campo · como funciona e como ligar a planilha
+
+**O app preenche 3 das 4 colunas** (`Data` = quando escreveu · `Roteiro` = `ROTEIRO_SLUG` · `Dia` = a aba aberta). O viajante escreve **só o relato, solto e tudo junto** — a separação por tipo é trabalho do Claude depois, não dele.
+
+**Três decisões de desenho que não devem ser revertidas:**
+
+1. **Grava primeiro, envia depois.** O relato entra na fila `localStorage` (`relatos_v1`) ANTES de qualquer rede. Praia e estrada sem sinal são a regra. Reenvia sozinho no evento `online`.
+2. **Sem confirmação de servidor.** O POST vai em `mode:'no-cors'` porque o Apps Script não devolve cabeçalho CORS — a resposta é opaca por design. O botão diz **"guardado"**, nunca "enviado com sucesso": seria mentira.
+3. **`FEEDBACK_URL` vazia é estado válido.** Sem endpoint, tudo fica na fila e o botão **📋 Copiar tudo** resolve (copia os pendentes formatados pra colar no chat). O app **nunca** fica refém de um deploy externo.
+
+**Pra ligar a planilha** (uma vez só · serve todos os roteiros): `scripts/apps-script-relatos.gs` tem o código e o passo-a-passo. Publica como Web App ("Executar como: Eu" · "Quem pode acessar: Qualquer pessoa"), pega a URL `/exec` e põe em `feedback_url` no `data.json` da viagem. O `slug` sai do `SLUG.txt` automaticamente.
+
+**Fronteira dura ao processar os relatos**: preferência da família **NUNCA** entra no card — vai pro `MEMORY.md`. O roteiro é compartilhável; *"a filha cansa às 17h"* é verdade sobre eles, não sobre o lugar. Roteamento: erro factual → `data.json` · dica útil a qualquer viajante → card · preferência → `MEMORY.md` · contexto → `DIARIO.md`.
 
 ## Classificação de POI · 2 eixos independentes (2026-07-12)
 

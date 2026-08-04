@@ -334,6 +334,23 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 @keyframes hintIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
 /* Feitas hoje section */
+/* ═══ Relato de campo · caixa que fecha o dia ═══
+   Discreta de propósito: não compete com o roteiro, mas está sempre no mesmo
+   lugar (último bloco), então vira hábito de fim de dia. */
+.relato-box{margin:22px 16px 8px}
+.relato-det{border:1px dashed rgba(100,116,139,.35);border-radius:14px;background:rgba(148,163,184,.06)}
+.relato-sum{list-style:none;cursor:pointer;padding:13px 15px;font-size:13.5px;font-weight:700;color:#475569;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.relato-sum::-webkit-details-marker{display:none}
+.rs-hint{font-weight:500;font-size:11.5px;color:#94a3b8;letter-spacing:.1px}
+.relato-det[open] .relato-sum{border-bottom:1px dashed rgba(100,116,139,.25)}
+.relato-body{padding:13px 15px 15px}
+.relato-txt{width:100%;box-sizing:border-box;border:1px solid rgba(100,116,139,.3);border-radius:10px;padding:11px 12px;font-size:15px;font-family:inherit;line-height:1.45;color:#1e293b;background:#fff;resize:vertical}
+.relato-txt:focus{outline:none;border-color:#64748b}
+.relato-acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.relato-send,.relato-copy{border:none;border-radius:999px;padding:9px 16px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:inherit}
+.relato-send{background:#334155;color:#fff}
+.relato-copy{background:rgba(100,116,139,.14);color:#475569}
+.relato-pend{margin-top:10px;font-size:11.5px;color:#64748b;line-height:1.5}
 .feitas-section{margin:20px 16px 0}
 .feitas-head{display:flex;align-items:center;gap:9px;width:100%;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:12px 14px;cursor:pointer;font-family:inherit;box-shadow:var(--shadow-sm);transition:background .15s}
 .feitas-head:active{background:var(--line-soft)}
@@ -453,7 +470,7 @@ details[open] .hist-polo::before{content:'▾ '}
 /* ===== PRINT ===== */
 @media print{
   #storage-warn{display:none !important}
-  .topbar,.tabbar,.daystrip-wrap,.overview,.search-wrap,#map,.map-cta,.footer-legend,.status-bar,.feito-chk,.feito-hint{display:none !important}
+  .topbar,.tabbar,.daystrip-wrap,.overview,.search-wrap,#map,.map-cta,.footer-legend,.status-bar,.feito-chk,.feito-hint,.relato-box{display:none !important}
   body{background:#fff}
   #app{padding:0;max-width:100%}
   .day-hero{box-shadow:none;border-radius:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
