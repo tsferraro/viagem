@@ -440,6 +440,42 @@ def check_maps_query(days_text):
         ok("Nenhum card manda texto sem sentido pro Maps (mapsQuery/noMaps onde precisa)")
 
 
+def check_wt_maps_query(days_text):
+    """Avisa quando um walking tour tem `mapsQuery` em ALGUMAS paradas e não em todas.
+
+    A rota por nome exige mapsQuery em TODAS (uma parada ruim mata a rota inteira), então
+    um tour parcialmente preenchido cai pra coordenadas — o Maps mostra "Dropped pin" em vez
+    dos nomes, e ninguém percebe. Corte silencioso é o anti-padrão; ou preenche tudo, ou
+    assume a coordenada de propósito.
+    """
+    if not days_text:
+        return
+    try:
+        days = json.loads(days_text)
+    except Exception:
+        return
+    parciais, por_nome, por_coord = [], 0, 0
+    for day in days:
+        for s in day.get('stops', []):
+            for t in s.get('walkingTours', []):
+                paradas = t.get('stops', [])
+                if not paradas:
+                    continue
+                com = sum(1 for w in paradas if (w.get('mapsQuery') or '').strip())
+                if com == len(paradas):
+                    por_nome += 1
+                elif com == 0:
+                    por_coord += 1
+                else:
+                    parciais.append((t.get('nome', '?')[:34], com, len(paradas)))
+    if parciais:
+        amostra = ' · '.join(f'"{n}" {c}/{tot}' for n, c, tot in parciais[:3])
+        warn(f"{len(parciais)} walking tour(s) com mapsQuery PARCIAL — a rota cai pra coordenada "
+             f"(\"Dropped pin\" no Maps) sem avisar: {amostra}")
+    if por_nome or por_coord:
+        ok(f"Rotas de walking tour: {por_nome} por nome · {por_coord} por coordenada")
+
+
 def check_no_hardcoded_region(content):
     """BLOQUEIA literal de cidade/região cravado na construção de URL do Google Maps.
 
@@ -503,7 +539,9 @@ def check_required_features(content):
         'APP_MODE (trip/city)':       'const APP_MODE',
         'centerActiveTab':            'function centerActiveTab',
         'renderInnerContent':         'function renderInnerContent',
-        'getMapsUrl mantém parens':   "replace(/[()]/g",
+        'getMapsUrl respeita mapsQuery': "mapsQueryOf",
+        'Nome limpo pro Maps (placeQuery)': "function placeQuery",
+        'Rótulo A/B/C de walking tour': "function wtLabel",
         'Popup color forçado white':  'color:#fff !important',
         'getDefaultDayIdx':           'function getDefaultDayIdx',
         'getWalkingTourUrl':          'function getWalkingTourUrl',
@@ -574,6 +612,7 @@ def main():
     check_temaCurto(days_text)
     check_no_manual_stars(days_text)
     check_maps_query(days_text)
+    check_wt_maps_query(days_text)
     check_no_raw_markdown(days_text)
 
     # Features

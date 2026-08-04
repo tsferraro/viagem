@@ -1969,12 +1969,12 @@
           "sobre": "Tour pela <em>haute ville</em> pra apresentar Bonifacio aos avós. A cidade foi fundada por volta de <strong>833</strong> por <strong>Bonifácio II, marquês da Toscana</strong>, que lhe deu o próprio nome. Passou a pisanos e, a partir de <strong>1195</strong>, virou praça-forte de <strong>Gênova</strong> — e é a mão genovesa que se vê em tudo aqui. Em <strong>1420</strong>, Alfonso V de Aragão mandou sitiar a cidade: ela aguentou <strong>mais de cinco meses</strong> e o rei foi embora humilhado. É a citadela <strong>mais bem preservada da Córsega</strong>, e o percurso abaixo cobre as cinco paradas na ordem em que aparecem no mapa.",
           "imperdivel": "Na parada 4️⃣, a vista da Loggia: o postal de Bonifacio, com a falésia branca caindo a pique e a Sardenha no horizonte em dia limpo",
           "dicas": [
-            "1️⃣ <strong>Porte de Gênes</strong> — repare no mecanismo do pont-levis: o sistema de contrapesos e roldanas foi instalado em <strong>1598</strong> e ainda funciona. O arco triunfal barroco é do mesmo ano. Detalhe que muda tudo: <strong>até 1854 esta foi a ÚNICA entrada da cidadela</strong> — quem quisesse entrar em Bonifacio passava por aqui ou não passava.",
-            "2️⃣ <strong>Bastion de l'Etendard</strong> (séc. XVI · €3,50 avulso) — a Place d'Armes se abre logo depois do portão. É o bastião que <em>protege</em> a Porte de Gênes: repare que quem atravessa a ponte fica sob fogo do bastião o tempo todo. Não é decoração, é engenharia de matar.",
+            "○ <strong>Porte de Gênes</strong> — repare no mecanismo do pont-levis: o sistema de contrapesos e roldanas foi instalado em <strong>1598</strong> e ainda funciona. O arco triunfal barroco é do mesmo ano. Detalhe que muda tudo: <strong>até 1854 esta foi a ÚNICA entrada da cidadela</strong> — quem quisesse entrar em Bonifacio passava por aqui ou não passava.",
+            "Ⓐ <strong>Bastion de l'Etendard</strong> (séc. XVI · €3,50 avulso) — a Place d'Armes se abre logo depois do portão. É o bastião que <em>protege</em> a Porte de Gênes: repare que quem atravessa a ponte fica sob fogo do bastião o tempo todo. Não é decoração, é engenharia de matar.",
             "💶 <strong>Compre o Pass Monuments logo no Bastion</strong>: os dois monumentos pagos da cidadela juntos saem por <strong>€6,50</strong> (criança 6-11 anos €2 · grupo de 10+ €4), contra €3,50 + €2,50 avulsos. Economiza €2 por pessoa e evita fila dupla.",
-            "3️⃣ <strong>Église Sainte-Marie-Majeure</strong> — a igreja mais antiga da cidade. Olhe pra cima: os arcos que ligam a igreja às casas vizinhas são <strong>aquedutos</strong>, que recolhiam a água da chuva dos telhados e a levavam pra <strong>cisterna sob o adro</strong>. A cidade alta é rocha seca — em cinco meses de cerco, água não era conforto, era a diferença entre resistir e capitular.",
-            "4️⃣ <strong>Loggia · mirador sul</strong> — a parada da foto. Se derem sorte com o horário, o calcário passa de branco a creme e depois a rosa, e leva uns 40min fazendo isso. É por aqui que vale esticar o passo pra chegar antes das 19h30.",
-            "5️⃣ <strong>Escalier du Roi d'Aragon</strong> — 187 degraus talhados na vertical da falésia. A lenda diz que os aragoneses os escavaram <em>numa única noite</em> em 1420 pra tomar a cidade pelo mar. É bonito e é falso: a obra levaria meses. Provavelmente era saída de emergência dos genoveses, ou obra de religiosos pra alcançar o poço de São Bartolomeu. A cidade venceu o cerco e depois adotou a obra dos próprios engenheiros como troféu da derrota alheia.",
+            "Ⓑ <strong>Église Sainte-Marie-Majeure</strong> — a igreja mais antiga da cidade. Olhe pra cima: os arcos que ligam a igreja às casas vizinhas são <strong>aquedutos</strong>, que recolhiam a água da chuva dos telhados e a levavam pra <strong>cisterna sob o adro</strong>. A cidade alta é rocha seca — em cinco meses de cerco, água não era conforto, era a diferença entre resistir e capitular.",
+            "Ⓒ <strong>Loggia · mirador sul</strong> — a parada da foto. Se derem sorte com o horário, o calcário passa de branco a creme e depois a rosa, e leva uns 40min fazendo isso. É por aqui que vale esticar o passo pra chegar antes das 19h30.",
+            "Ⓓ <strong>Escalier du Roi d'Aragon</strong> — 187 degraus talhados na vertical da falésia. A lenda diz que os aragoneses os escavaram <em>numa única noite</em> em 1420 pra tomar a cidade pelo mar. É bonito e é falso: a obra levaria meses. Provavelmente era saída de emergência dos genoveses, ou obra de religiosos pra alcançar o poço de São Bartolomeu. A cidade venceu o cerco e depois adotou a obra dos próprios engenheiros como troféu da derrota alheia.",
             "⚠️ Descida do Escalier: íngreme, escorregadia e sem sombra. Combinem que quem quiser desce e volta enquanto o resto espera no topo — a vista de cima já entrega o essencial.",
             "Sair 16h30 · sol mais brando e luz dourada na pedra · sorveteria 'Da Mémé' na Place du Marché resolve a pausa da filha (~€3-4 a bola)",
             "Reservar o jantar antes de sair · a cidadela lota à noite em agosto"
@@ -1997,7 +1997,8 @@
                   "coord": {
                     "lat": 41.3874,
                     "lng": 9.1583
-                  }
+                  },
+                  "mapsQuery": "Porte de Gênes, Bonifacio, Corse, France"
                 },
                 {
                   "n": 2,
@@ -2005,7 +2006,8 @@
                   "coord": {
                     "lat": 41.3876,
                     "lng": 9.1589
-                  }
+                  },
+                  "mapsQuery": "Bastion de l'Étendard, Bonifacio, Corse, France"
                 },
                 {
                   "n": 3,
@@ -2013,7 +2015,8 @@
                   "coord": {
                     "lat": 41.387,
                     "lng": 9.1597
-                  }
+                  },
+                  "mapsQuery": "Église Sainte-Marie-Majeure, Bonifacio, Corse, France"
                 },
                 {
                   "n": 4,
@@ -2021,7 +2024,8 @@
                   "coord": {
                     "lat": 41.3855,
                     "lng": 9.1578
-                  }
+                  },
+                  "mapsQuery": "Falaises de Bonifacio, Corse, France"
                 },
                 {
                   "n": 5,
@@ -2029,7 +2033,8 @@
                   "coord": {
                     "lat": 41.384,
                     "lng": 9.1558
-                  }
+                  },
+                  "mapsQuery": "Escalier du Roi d'Aragon, Bonifacio, Corse, France"
                 }
               ]
             }
@@ -2793,5 +2798,6 @@
       "titulo": "🌊 Lavezzi & as Bocas de Bonifácio — o cemitério dentro do paraíso",
       "prosa_html": "<p>As <strong>Ilhas Lavezzi</strong> são hoje um dos lugares mais bonitos do Mediterrâneo: granito rosa esculpido pelo vento em formas impossíveis, água transparente, enseadas de areia branca. É também <strong>um cemitério</strong>, e vale saber disso antes de desembarcar — porque vocês vão passar ao lado das sepulturas achando que são ruínas.</p> <p>O <strong>Estreito de Bonifácio</strong>, os doze quilômetros de mar entre a Córsega e a Sardenha, é uma das passagens mais traiçoeiras do Mediterrâneo: raso, semeado de recifes e ilhotas de granito, e sujeito a rajadas violentas que se formam sem aviso. Marinheiro do Mediterrâneo respeita este trecho há três mil anos.</p> <p>Em <strong>15 de fevereiro de 1855</strong>, a fragata francesa <strong><em>La Sémillante</em></strong> saiu de Toulon levando tropas para a <strong>Guerra da Crimeia</strong>. Pegou uma tempestade violenta na altura da Sardenha e o comandante decidiu cortar pelo Estreito de Bonifácio — a rota mais curta, e a mais perigosa. Uma rajada arremessou o navio a cerca de <strong>12 nós</strong> contra um baixio rochoso junto às Lavezzi. O casco se destruiu no impacto. O navio afundou na noite de <strong>15 para 16 de fevereiro</strong>.</p> <p><strong>Não houve um único sobrevivente entre os 773 homens a bordo.</strong> (Algumas fontes contabilizam 693 — o número exato nunca foi fechado, o que por si só diz muito sobre a magnitude da coisa.)</p> <p>A partir de <strong>18 de fevereiro</strong>, os corpos começaram a dar à costa, muitos irreconhecíveis. Não havia como transportá-los para o continente. Um destacamento de <strong>cinquenta soldados</strong> passou dias recolhendo e enterrando os mortos <em>ali mesmo</em>. Abriram-se <strong>dois cemitérios na ilha, um a leste e outro a oeste</strong> — e é por isso que existem sepulturas nos dois lados de uma ilha desabitada.</p> <p>O episódio teria sumido da memória se não fosse por um escritor. <strong>Alphonse Daudet</strong> publicou em <strong>1869</strong>, nas <em>Lettres de mon moulin</em>, o conto <strong><em>\"L'Agonie de la Sémillante\"</em></strong> — uma narrativa sóbria, sem heroísmo, sobre um naufrágio que ninguém viu. É praticamente o único monumento literário a esses homens.</p> <p>Hoje o arquipélago é <strong>reserva natural</strong> — a Réserve naturelle des Bouches de Bonifacio — e a navegação de grandes embarcações pelo estreito é proibida, precisamente pelo histórico de acidentes. Curiosidade geológica: as Lavezzi estão do <em>lado sardo</em> da fronteira geológica, apesar de serem francesas. O granito que vocês vão pisar é o mesmo da Sardenha, não o da Córsega.</p> <p>Uma nota prática que decorre de tudo isso: a ilha é <strong>rocha nua</strong>. Não há sombra, não há comércio, não há água. O granito guarda calor e queima o pé descalço à tarde. Guarda-sol não crava em pedra. Levem água, tenda leve e sapato de água — e reservem dez minutos para caminhar até um dos cemitérios. É o contraste que dá sentido ao lugar: o azul mais bonito da viagem, com 773 nomes embaixo.</p>"
     }
-  ]
+  ],
+  "wt_labels": "letters"
 }

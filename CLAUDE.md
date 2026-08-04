@@ -325,8 +325,24 @@ Três camadas, nesta ordem:
 | (nada) | O template limpa sozinho: corta no `·` e **descarta o parêntese quando é descrição**, mantendo quando é endereço (`(Via Marconi 47)` fica · `(museu + vista)` sai). |
 
 **Rota de walking tour**: só usa nomes quando **TODAS** as paradas têm `mapsQuery`. Um único nome
-ruim mata a rota inteira, então o default é coordenada — ilegível na barra de endereço, mas nunca
-falha. Quer a rota bonita com nomes? Preencha `mapsQuery` em todas as paradas do tour.
+ruim mata a rota inteira, então sem isso o fallback é coordenada — que funciona, mas o Maps mostra
+`Dropped pin` em vez do nome do lugar. **Preencha `mapsQuery` em todas as paradas de todo tour.**
+`validate.py` avisa quando um tour está parcialmente preenchido (cairia pra coordenada em silêncio).
+
+`mapsQuery` **não** recebe `MAPS_REGION` anexado — quem escreve é responsável por deixá-lo
+inequívoco. O roteiro dos pais mostra por quê: tem um dia em **Bonifacio**, que é Córsega/França,
+num roteiro cujo `maps_region` é `"Sardegna, Italia"`.
+
+### `wt_labels` · as paradas viram ○ A B C (2026-08-04)
+
+`"wt_labels": "letters"` no `data.json` faz as paradas de walking tour usarem **o mesmo rótulo que
+o Google Maps desenha** numa rota: a primeira é a **origem** (marcador redondo, sem letra) e as
+seguintes são **A, B, C…**. Cinco paradas viram `○ A B C D`, não `A B C D E` — errar isso desloca
+tudo em uma casa e é pior que não ter letra, porque parece certo.
+
+Vale para os pinos do mapa, a legenda e o popup. As **dicas parada-a-parada** devem usar os mesmos
+símbolos (`○ Ⓐ Ⓑ Ⓒ Ⓓ`) pra que o card e o Maps se leiam lado a lado sem tradução mental.
+Sem o campo, o default é `"numbers"` (1, 2, 3…) — viagens antigas seguem como estavam.
 
 `validate.py` **bloqueia** card cujo nome viraria busca sem sentido (`check_maps_query`).
 

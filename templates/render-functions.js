@@ -259,11 +259,13 @@ function getMapsUrl(stop){
   // Pra opcoes (3+ alternativas), usar a PRIMEIRA opção pra link específico
   let alvo=stop;
   if(stop.tipo==='opcoes' && stop.opcoes && stop.opcoes.length>0) alvo=stop.opcoes[0];
-  const clean=mapsQueryOf(alvo) || mapsQueryOf(stop);
+  const explicito=(alvo.mapsQuery||stop.mapsQuery||'').trim();
+  const clean=explicito||placeQuery(alvo.nome)||placeQuery(stop.nome);
   // Sem nome utilizável mas com coord: manda a coordenada, que nunca erra.
   if(!clean) return stop.coord?`https://www.google.com/maps/search/?api=1&query=${stop.coord.lat},${stop.coord.lng}`:'';
   if(stop.coord) return `https://www.google.com/maps/search/${encodeURIComponent(clean)}/@${stop.coord.lat},${stop.coord.lng},17z`;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean+regionSuffix())}`;
+  // MAPS_REGION só entra no nome limpo automático · mapsQuery já vem inequívoco de fábrica
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(explicito?clean:clean+regionSuffix())}`;
 }
 
 // Monta URL de rota do Google Maps na forma path-segment (/dir/Nome1/Nome2/.../).
@@ -331,11 +333,15 @@ function wtStopQuery(stop){
   if(typeof stop==='string') return placeQuery(stop);
   return mapsQueryOf(stop);
 }
-// Rótulo de parada de walking tour · casa com o Google Maps (que rotula waypoints A,B,C…)
-// quando WT_LABELS==='letters'. Default numérico (retrocompatível com viagens antigas).
+// Rótulo de parada de walking tour · casa com o que o Google Maps DESENHA numa rota /dir/:
+// a primeira parada é a ORIGEM (marcador redondo, sem letra) e as seguintes são A, B, C…
+// Ou seja, 5 paradas viram ○ A B C D — não A B C D E. Errar isso desloca tudo em uma casa
+// e é pior que não ter letra nenhuma, porque parece certo.
+// WT_LABELS==='numbers' (default) mantém 1,2,3… pra viagens antigas.
 function wtLabel(n){
-  return (typeof WT_LABELS!=='undefined' && WT_LABELS==='letters' && n>=1 && n<=26)
-    ? String.fromCharCode(64+n) : n;
+  if(typeof WT_LABELS==='undefined' || WT_LABELS!=='letters') return n;
+  if(n===1) return '○';
+  return (n>=2 && n<=27) ? String.fromCharCode(63+n) : n;
 }
 function getWalkingTourUrl(tour){
   if(!tour||tour.length<2) return '#';
@@ -345,9 +351,13 @@ function getWalkingTourUrl(tour){
   // que aquele texto é um lugar que o Maps acha. BUG ago/2026 (print do Tobia): bastou UMA
   // parada com nome descritivo ("Porte de Gênes entrada principal") pra rota inteira morrer
   // em "Can't seem to find that place". Nome bonito não vale perder a rota.
-  if(region && tour.every(t=>(t.mapsQuery||'').trim())){
+  //
+  // `mapsQuery` NÃO leva MAPS_REGION anexado: quem escreve é responsável por torná-lo
+  // inequívoco (cidade e, se preciso, país). O roteiro dos pais é a prova de por quê — tem um
+  // dia em Bonifacio, que é Córsega/França, com MAPS_REGION="Sardegna, Italia".
+  if(tour.every(t=>(t.mapsQuery||'').trim())){
     const names=tour.map(t=>t.mapsQuery.trim());
-    return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n+region)).join('/')}/`;
+    return `https://www.google.com/maps/dir/${names.map(n=>encodeURIComponent(n)).join('/')}/`;
   }
   // Default seguro: rota por COORDENADAS — ilegível na barra de endereço, mas nunca falha.
   return dirCoordUrl(tour.map(t=>t.coord),'walking') || '#';
@@ -994,7 +1004,6 @@ function renderMap(){
   // Cards do dia com walking tours (array de partes)
   const cardsWithTours=day.stops.filter(s=>s.walkingTours&&s.walkingTours.length>0);
   // Helper: limpa nome pra busca no Google Maps (mantém endereço entre parens)
-  const cleanForSearch=nm=>nm.replace(/[()]/g,'').replace(/\s+/g,' ').trim();
   setTimeout(()=>{
     if(mapInstance){ mapInstance.remove(); mapInstance=null; }
     const div=document.getElementById('map');
@@ -1044,7 +1053,7 @@ function renderMap(){
             html:`<div style="${markerStyle}">${wtLabel(t.n)}</div>`,
             iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]
           });
-          const searchName=cleanForSearch(t.nome);
+          const searchName=mapsQueryOf(t);
           const url=`https://www.google.com/maps/search/${encodeURIComponent(searchName)}/@${t.coord.lat},${t.coord.lng},17z`;
           const popupHtml=`<div class="pp-time" style="color:${day.cor}">${tour.nome.split('·')[0].trim()} · parada ${wtLabel(t.n)}</div>
             <div class="pp-name">${t.nome}</div>

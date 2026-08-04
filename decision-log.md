@@ -328,3 +328,48 @@ sentido (lista fechada de prefixos de atividade: walking tour, check-in/out, des
 E os filtros da aba "Tudo no Mapa" trocaram preto/branco por **azul** no selecionado: no print do
 Tobia era impossível dizer o que estava ativo, e no tema escuro o "selecionado" ficava branco
 igual ao fundo. `📍 Onde estou` saiu do azul pra não empatar com estado de seleção.
+
+---
+
+## 2026-08-04 (2) · Rota por nome + paradas rotuladas como o Google Maps
+
+Sequência do fix anterior, a partir de mais um print em campo: a rota do walking tour **abria**
+(11 min, traçado certo pela cidadela), mas os cinco pontos eram **"Dropped pin"**. Tobia: *"é mto
+melhor navegar pelo nome certo do lugar do que pelas coordenadas"*. Certo — coordenada era o piso
+seguro, não o alvo.
+
+**Decisão**: preencher `mapsQuery` nas **28 paradas** de walking tour dos dois roteiros, com nomes
+canônicos verificados por busca um a um. As 6 rotas passam a usar nomes.
+
+Achados da verificação (nenhum foi chutado):
+
+| Parada | Nome que o Maps acha |
+|---|---|
+| "Loggia · mirador sul" | a loggia é da própria Sainte-Marie-Majeure; o mirador é **Falaises de Bonifacio** |
+| "Necrópole púnica subterrânea" | **Villaggio Ipogeo** (Touring Club: "Necropoli Punica-Villaggio Ipogeo") |
+| "Tonnara ruins · Cala Sapone" | **Cala Sapone** (a tonnara está abandonada desde 1825, sem POI próprio) |
+| "Spiaggia di Tegge" | **Punta Tegge** |
+| "Sa Costa" | **Quartiere Sa Costa** |
+| "Lungofiume Temo" | **Ponte Vecchio, Bosa** (é onde o passeio começa) |
+
+**Bug que a verificação evitou**: o walking tour de Bonifacio está no roteiro **da Sardenha**, cujo
+`maps_region` é `"Sardegna, Italia"`. Anexar a região mandaria procurar `Porte de Gênes, Bonifacio,
+Sardegna, Italia` — ilha errada, país errado. Decisão: **`mapsQuery` nunca recebe `MAPS_REGION`**;
+quem escreve deixa inequívoco (`"Porte de Gênes, Bonifacio, Corse, France"`).
+
+## Rótulo das paradas: ○ A B C, não A B C D
+
+Pedido antigo do Tobia (vinha do NYC): os pontos do card deviam usar as letras do Google Maps.
+A função `wtLabel` já existia — **desligada e com o mapeamento errado**: fazia `1→A`.
+
+O Maps rotula a **origem** com um círculo sem letra, e só as paradas seguintes com A, B, C. Cinco
+paradas são `○ A B C D`. O código antigo produziria `A B C D E`, deslocando tudo em uma casa —
+pior que não ter letra nenhuma, porque parece certo e só falha na hora de conferir no chão.
+
+Ligado via `"wt_labels": "letters"` (default segue `"numbers"`). Vale pinos, legenda, popup e as
+dicas parada-a-parada, que foram reetiquetadas (27 dicas nos dois roteiros).
+
+**Resíduo achado no caminho**: o popup do pino de walking tour ainda usava `cleanForSearch` — a
+limpeza velha, que mantinha `(museu + vista)` na busca. Migrado pra `mapsQueryOf` e a função morta
+removida. A feature-chave `'getMapsUrl mantém parens'` do `validate.py` guardava justamente o
+comportamento bugado; trocada por três checks da política nova.
