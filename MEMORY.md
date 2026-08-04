@@ -155,6 +155,29 @@ e sítio arqueológico reorganizam URL o tempo todo**. Indexado ≠ vivo.
 2. Deep-link só com verificação HTTP real — ou seja, **do desktop**.
 3. Ao entregar, dizer explicitamente quais links não puderam ser verificados, pra que o `--check-links` do desktop seja rodado sabendo o que procurar.
 
+### 🔁 O padrão que se repetiu 4× numa só sessão (2026-08-03/04)
+
+Todos o mesmo mecanismo: **produzir um detalhe plausível no lugar de um verificado**, com a
+mesma confiança nos dois casos.
+
+| # | Erro | Sobre o quê |
+|---|---|---|
+| 1 | 15 restaurantes fantasma | o destino |
+| 2 | URL "apareceu na busca" tratada como viva (3× 404) | a fonte |
+| 3 | "engenheiros suíços" na estrada de Dorgali — sem fonte nenhuma | a história |
+| 4 | **"o app é estático, então não dá pra ter backend"** | **a própria arquitetura** |
+
+O 4º é o mais perigoso e o único que nenhum linter, factcheck ou `--check-links` pegaria: era uma
+afirmação sobre *capacidade técnica*, não sobre a Sardenha. Uma página estática **não pode
+hospedar** um backend — mas faz `POST` pra um Apps Script Web App sem dificuldade nenhuma. Dessa
+premissa falsa saiu um desenho (`wa.me`/`mailto`) que teria devolvido o relato de campo ao
+WhatsApp → chat → sessão, exatamente o gargalo que a função existe pra eliminar. Só não foi
+construído porque o Tobia mandou ler o `HANDOFF-relato-de-campo.md`.
+
+**Regra**: afirmação sobre o que a ferramenta/arquitetura *não pode fazer* merece a mesma
+verificação que preço de museu. "Não dá" quase sempre quer dizer "eu não sei como" — e as duas
+coisas soam idênticas quando eu escrevo.
+
 ### 🐛 Bug do `audit.py --check-links` (sinalizado, não consertado)
 Trata todo status ≠2xx como "link quebrado", com a mesma severidade:
 - **405 Method Not Allowed** = o servidor recusa `HEAD`, o recurso **existe** (foi o caso de `parcogeominerario.sardegna.it`). Falso positivo.
