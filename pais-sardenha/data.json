@@ -183,7 +183,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Ferry Santa Teresa → Bonifacio",
-          "cat": "~50min · Moby / Blu Navy · ~€31-40 por passageiro, por trecho (ago/2026)",
+          "cat": "~50min · Moby · ~€31-40 por passageiro, por trecho (ago/2026)",
           "coord": {
             "lat": 41.3875,
             "lng": 9.1544
@@ -204,7 +204,7 @@
             "Ferry chega às 11h50 · até as 13h dá pra deixar mala e respirar antes do almoço",
             "À tarde, o walking tour da cidadela com ele · saída prevista 16h30, quando o sol para de bater na pedra branca",
             "Pousada em Bonifacio é 1 noite só · confirme antes que o quarto guarda a bagagem depois do check-out de amanhã",
-            "Ferry de volta de amanhã: comprem os bilhetes hoje, na bilheteria do porto, e <strong>confirmem o horário da primeira travessia</strong> — as tabelas de Moby e Blu Navy não coincidem"
+            "Ferry de volta de amanhã: comprem os bilhetes hoje, na bilheteria do porto, e <strong>confirmem o horário da primeira travessia</strong> — a Moby é o único operador da rota desde 2026 (a Blu Navy suspendeu), então as tabelas de revendedores que ainda listam as duas estão desatualizadas"
           ],
           "duracao": "Resto da tarde",
           "custo": "Almoço €35-50 por pessoa (ago/2026)",
@@ -386,7 +386,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Ferry Bonifacio → Santa Teresa di Gallura",
-          "cat": "~50min · Moby / Blu Navy · ~€31-40 por passageiro, por trecho (ago/2026)",
+          "cat": "~50min · Moby · ~€31-40 por passageiro, por trecho (ago/2026)",
           "coord": {
             "lat": 41.23899,
             "lng": 9.18808
@@ -3189,11 +3189,11 @@
       "opcoes": [
         {
           "modo": "ferry",
-          "texto": "Moby / Blu Navy · ~50min · ~€31-40 por passageiro, por trecho (ago/2026) · o preço varia com horário e antecedência"
+          "texto": "Moby · ~50min · ~€31-40 por passageiro, por trecho (ago/2026) · o preço varia com horário e antecedência"
         },
         {
           "modo": "rota",
-          "texto": "Moby: 4 partidas/dia entre 07h e 18h30 (mai-set) · Blu Navy: 09h · 12h · 17h · 20h (mar a meados de out) · <strong>confirmem o horário exato na compra</strong>"
+          "texto": "Moby: 4 partidas/dia entre 07h e 18h30 (mai-set) · Moby opera de ~08h30 a ~20h20, cerca de 8 saídas/dia no verão · <strong>confirmem o horário exato na compra</strong>"
         },
         {
           "modo": "a-pe",
@@ -3205,7 +3205,7 @@
       "opcoes": [
         {
           "modo": "ferry",
-          "texto": "Moby / Blu Navy · ~50min · mesma faixa da ida (~€31-40 por passageiro, ago/2026)"
+          "texto": "Moby · ~50min · mesma faixa da ida (~€31-40 por passageiro, ago/2026)"
         },
         {
           "modo": "rota",
