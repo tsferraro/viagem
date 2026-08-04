@@ -460,7 +460,7 @@
             "Càbras é menor que Oristano · poucos restaurantes · reservar",
             "Museu Mont'e Prama (gigantes de pedra) vale visita · vai amanhã ou dia após (5 min do hotel)",
             "Mercado de peixe pela manhã na cooperativa",
-            "<strong>Bottarga</strong>: Càbras é a capital dela. Comprar na cooperativa de pescadores ou na loja da fábrica sai bem mais barato que em loja de souvenir · uma <em>baffa</em> inteira a vácuo ~€70, ralada em vidro a partir de ~€12 (ago/2026) · viaja a vácuo sem gelo"
+            "<strong>Bottarga</strong>: Càbras é a capital dela · uma <em>baffa</em> inteira a vácuo ~€70, ralada em vidro a partir de ~€12 (ago/2026) · comprem <strong>a vácuo, com rótulo do fabricante</strong> — é o que a alfândega brasileira exige pra deixar entrar (Portaria MAPA 872/2025); peça solta sem embalagem de origem é confiscada"
           ],
           "duracao": "Resto do dia",
           "custo": "Grátis",
@@ -1573,7 +1573,7 @@
             "Ⓑ <strong>Tonnara</strong> — só com visita guiada e agendamento prévio · foi uma das últimas armações de atum tradicionais do Mediterrâneo",
             "Ⓒ <strong>La Bobba ou Cala Lunga</strong> — 6km ao sul pela estrada costeira (~15min de carro) · procure a pedra com 'Bobba' escrito e vire à esquerda no caminho de terra",
             "Ferry de volta pra Calasetta sai ao longo de todo o dia, a cada ~1h · última travessia por volta das 22h em agosto [a confirmar no porto na ida]",
-            "<strong>Levar da ilha</strong>: atum em conserva, <em>ventresca</em> e bottarga de atum (diferente da de tainha de Càbras) · as lojas do centro vendem a vácuo, próprio pra bagagem"
+            "<strong>Levar da ilha</strong>: atum em conserva, <em>ventresca</em> e bottarga de atum · as lojas do centro vendem em lata e a vácuo, com rótulo — formato que entra no Brasil sem problema, desde que declarado"
           ],
           "duracao": "Dia inteiro · 6-7h na ilha",
           "custo": "€17,40 ferry ida com carro (ago/2026) · refeições à parte",
@@ -2743,18 +2743,20 @@
           "noMaps": true,
           "valeAPena": 1,
           "poiCat": "loja",
-          "sobre": "A Sardenha não é ilha de <em>compras</em> — é ilha de <em>produto</em>. Não existe rua de grifes, e o que vale a pena levar cabe em quatro categorias: <strong>comida</strong> (bottarga, pecorino, pane carasau), <strong>bebida</strong> (Cannonau, Vermentino, a rara Malvasia di Bosa, mirto), <strong>artesanato</strong> (as facas <em>resolzas</em>, filigrana, cestaria de asfódelo, cerâmica, cortiça) e <strong>coral</strong>. Boa parte disso vocês já passaram: a bottarga é de Càbras (dias 8-11), o atum é de Carloforte (14/Ago) e a Malvasia é de Bosa (10/Ago). O que ainda está aberto hoje é a feira de artesãos de San Pantaleo, de manhã — e o supermercado, que resolve comida e vinho por um terço do preço da loja de souvenir.",
+          "sobre": "A Sardenha não é ilha de <em>compras</em> — é ilha de <em>produto</em>. Não existe rua de grifes, e o que vale a pena levar cabe em quatro categorias: <strong>comida</strong> (bottarga, pecorino, pane carasau), <strong>bebida</strong> (Cannonau, Vermentino, a rara Malvasia di Bosa, mirto), <strong>artesanato</strong> (as facas <em>resolzas</em>, filigrana, cestaria de asfódelo, cerâmica, cortiça) e <strong>coral</strong>. Boa parte disso vocês já passaram: a bottarga é de Càbras (dias 8-11), o atum é de Carloforte (14/Ago) e a Malvasia é de Bosa (10/Ago). O que ainda está aberto hoje é a feira de artesãos de San Pantaleo, de manhã — e o supermercado, que resolve comida e vinho por um terço do preço da loja de souvenir. <strong>Como vocês voltam pro Brasil</strong>, há uma regra que muda o que vale comprar: produto de origem animal só entra <em>industrializado, lacrado e com rótulo</em> — o que torna a peça a vácuo da fábrica melhor compra que a peça artesanal solta da banca.",
           "imperdivel": "Numa banca de facas, peça pra ver a lâmina aberta: a <em>resolza</em> de Pattada abre e trava <strong>sem mola nenhuma</strong>, só por atrito, e o cabo é de chifre de carneiro — por isso não existem duas iguais. É o que separa a artesanal da lembrancinha de aço estampado",
           "dicas": [
-            "<strong>Bottarga de tainha de Càbras</strong> — a mais cara da Itália, até €250/kg; uma <em>baffa</em> (peça inteira a vácuo) sai por volta de €70 (ago/2026). Comprada na cooperativa de pescadores de Càbras custa bem menos que em loja de aeroporto",
-            "<strong>Vinho</strong>: Cannonau e Vermentino se acham em qualquer supermercado por €6-12; a <strong>Malvasia di Bosa DOC</strong> é rara e praticamente só se compra em Bosa",
-            "<strong>Feira de San Pantaleo</strong>: só de manhã, termina 13h · o artesanato bom está nas bancas de faca, filigrana e cesto, não nas de camiseta",
-            "<strong>Líquido vai na despachada</strong> — mirto e vinho passam de 100ml e a segurança confisca na de mão, sem discussão",
-            "⚠️ <strong>Queijo, bottarga e embutido dependem do DESTINO do voo</strong>: dentro da União Europeia é livre; entrando em país de fora (Brasil, por exemplo) há restrição sanitária a produto de origem animal, com regra que muda por país e por ano. <strong>[a confirmar com a companhia aérea antes de despachar]</strong> — não vale arriscar a bottarga de €70",
-            "🚫 <strong>Areia, seixo e concha: NÃO</strong> · lei regional 16/2017, multa de €500 a €3.000, e em agosto os scanners do aeroporto de Olbia procuram exatamente isso"
+            "<strong>Bottarga de tainha de Càbras</strong> — a mais cara da Itália, até €250/kg; uma <em>baffa</em> (peça inteira a vácuo) sai por volta de €70 (ago/2026). Compre na loja da fábrica ou da cooperativa: além de custar menos que em aeroporto, sai <strong>a vácuo e com rótulo do fabricante</strong> — e é isso que a alfândega brasileira exige (ver abaixo)",
+            "<strong>Vinho</strong>: Cannonau e Vermentino em qualquer supermercado por €6-12; a <strong>Malvasia di Bosa DOC</strong> é rara e praticamente só se compra em Bosa",
+            "<strong>Feira de San Pantaleo</strong>: só de manhã, termina 13h · o artesanato bom está nas bancas de faca, filigrana e cesto",
+            "🇧🇷 <strong>Voltando ao Brasil · a regra que decide o que comprar</strong>: pela <strong>Portaria MAPA 872/2025</strong>, produto de origem animal só entra se for <strong>industrializado, lacrado e com rótulo</strong> do fabricante. Queijo, salame e bottarga a vácuo com rótulo: <strong>passam</strong>. Queijo de feira, peça cortada na hora, embutido artesanal ou qualquer coisa sem embalagem de origem: <strong>proibido</strong> e confiscado no raio-X. Não compre a peça bonita sem rótulo pra levar",
+            "🇧🇷 <strong>Declare</strong> na <strong>e-DBV</strong> antes do voo e siga pelo canal \"Bens a Declarar\" (Vigiagro). Declarado e industrializado passa; não declarado vira multa. A lista oficial de limites por produto está no site do Vigiagro — confira na véspera, ela é atualizada",
+            "🇧🇷 <strong>Cota</strong>: US$ 1.000 por pessoa, individual e <strong>intransferível</strong> (não soma entre os dois). Acima disso, 50% de imposto sobre o excedente. Bebida alcoólica: até <strong>12 litros</strong> por pessoa — 16 garrafas, folga de sobra",
+            "<strong>Líquido vai na despachada</strong> — mirto e vinho passam de 100ml e a segurança confisca na bagagem de mão",
+            "🚫 <strong>Areia, seixo e concha: NÃO</strong> · lei regional sarda 16/2017, multa de €500 a €3.000, e em agosto os scanners do aeroporto de Olbia procuram exatamente isso"
           ],
           "duracao": "30min-1h de compras",
-          "custo": "€40-150 dependendo do que levarem (ago/2026)",
+          "custo": "€40-150 dependendo do que levarem (ago/2026) · cota de isenção: US$ 1.000/pessoa",
           "acessibilidade": "A feira de San Pantaleo é plana na praça · supermercados com estacionamento no caminho de volta"
         },
         {
