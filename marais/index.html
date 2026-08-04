@@ -2371,7 +2371,7 @@ function placeQuery(nome){
   if(!nome) return '';
   let s=String(nome).split('·')[0];                    // "Lugar · comentário" → "Lugar"
   s=s.replace(/\([^)]*\)/g,m=>ADDR_HINT.test(m)?' '+m.slice(1,-1)+' ':' ');
-  s=s.replace(/[^\p{L}\p{N}\s\-'&.,/]/gu,' ');         // tira emoji, 🔄, +, :, !, ?
+  s=s.replace(/[^\p{L}\p{N}\s\-'&.,]/gu,' ');           // tira emoji, 🔄, +, :, !, ? e a "/"
   return s.replace(/\s+/g,' ').trim();
 }
 
@@ -2403,12 +2403,14 @@ function getMapsUrl(stop){
 // Coord é exata (nomes vagos/eventos como "Fogos Macy's" caem no lugar errado).
 // Waypoints intermediários capados em 9 (limite free da api=1): amostra o miolo,
 // sempre mantendo origem (1º) e destino (último).
+// Teto de waypoints intermediários que a URL do Google Maps aceita com segurança.
+// Vale pras duas formas de rota (por coordenada e por nome), por isso mora aqui fora.
+const MAXW=9;
 function dirCoordUrl(coords,mode='walking'){
   const pts=coords.filter(c=>c&&typeof c.lat==='number'&&typeof c.lng==='number');
   if(pts.length<2) return null;
   const origin=pts[0], dest=pts[pts.length-1];
   let mids=pts.slice(1,-1);
-  const MAXW=9;
   if(mids.length>MAXW){
     const pick=[];
     for(let k=0;k<MAXW;k++){
@@ -2447,10 +2449,26 @@ function dayTransport(day){
 function getRouteUrl(day){
   // Cards 🔄 ALT são alternativas que SUBSTITUEM um stop principal · nunca entram na rota
   // do dia (senão o desvio vira waypoint e a rota vira lixo · bug Sprockhovel 2026-05-23).
-  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord && !(s.nome||'').startsWith('🔄'));
+  // `noMaps` idem: check-in de hotel e "fim da viagem" não são parada de rota.
+  const stops=day.stops.filter(s=>s.tipo!=='transit' && s.coord
+    && !(s.nome||'').startsWith('🔄') && !s.noMaps);
   if(!stops.length) return '#';
   if(stops.length===1) return getMapsUrl(stops[0]);
-  // Rota por coordenadas (exata) · opcoes usa a própria coord do stop
+  // Rota por NOME quando todo stop tem query utilizável — o Maps mostra o nome do lugar em
+  // vez de "Dropped pin". Um stop de `opcoes` entra pela primeira alternativa, que é a que
+  // o card já destaca. Acima de MAXW+1 pontos, a URL por nome fica frágil: cai pra coord.
+  const alvo=s=>(s.tipo==='opcoes'&&s.opcoes&&s.opcoes.length)?s.opcoes[0]:s;
+  const nomes=stops.map(s=>{
+    const a=alvo(s), exp=(a.mapsQuery||s.mapsQuery||'').trim();
+    // mapsQuery já vem inequívoco; nome limpo precisa da região pra geocodar certo
+    return exp || (placeQuery(a.nome)?placeQuery(a.nome)+regionSuffix():'');
+  });
+  // Colapsa repetição consecutiva: dois stops no mesmo lugar (ex.: sair e voltar à marina)
+  // viravam "Porto → Porto", que o Maps desenha como rota de zero metro.
+  const unicos=nomes.filter((n,i)=>i===0||n!==nomes[i-1]);
+  if(nomes.every(Boolean) && unicos.length>=2 && unicos.length<=MAXW+1)
+    return `https://www.google.com/maps/dir/${unicos.map(encodeURIComponent).join('/')}/`;
+  // Fallback: coordenadas — nunca falham, mas o Maps rotula "Dropped pin".
   return dirCoordUrl(stops.map(s=>s.coord),dayTransport(day)) || getMapsUrl(stops[0]);
 }
 

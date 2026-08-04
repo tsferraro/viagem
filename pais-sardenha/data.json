@@ -101,7 +101,8 @@
               "preco": "€30-70",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "Viale Aldo Moro · 10min de carro do centro"
+              "dist": "Viale Aldo Moro · 10min de carro do centro",
+              "mapsQuery": "Ristorante By Night, Viale Aldo Moro 201, Olbia"
             },
             {
               "nome": "Il Vecchio Porto (centro de Olbia · junto ao porto velho)",
@@ -109,7 +110,8 @@
               "preco": "€25-40",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro · a pé do Corso Umberto"
+              "dist": "centro · a pé do Corso Umberto",
+              "mapsQuery": "Il Vecchio Porto, Olbia, Sardegna"
             },
             {
               "nome": "Bistrot Bontade (Via Genova 65, Olbia)",
@@ -117,7 +119,8 @@
               "preco": "€25-40",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro · a pé do Corso Umberto"
+              "dist": "centro · a pé do Corso Umberto",
+              "mapsQuery": "Bistrot Bontade, Via Genova 65, Olbia"
             }
           ]
         }
@@ -313,7 +316,8 @@
               "preco": "€50-70",
               "dist": "Porto",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Les Quatre Vents, Quai Banda del Ferro, Bonifacio, Corse, France"
             },
             {
               "nome": "L'Archivolto (cidadela)",
@@ -321,7 +325,8 @@
               "preco": "€40-55",
               "dist": "Cidadela",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "L'Archivolto, Bonifacio, Corse, France"
             },
             {
               "nome": "Da Passano (porto)",
@@ -329,7 +334,8 @@
               "preco": "€35-50",
               "dist": "Porto",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Da Passano, Bonifacio, Corse, France"
             }
           ]
         }
@@ -403,7 +409,8 @@
               "preco": "€10-15",
               "valeAPena": 1,
               "poiCat": "cafe",
-              "dist": "porto · a pé do terminal"
+              "dist": "porto · a pé do terminal",
+              "mapsQuery": "Porto di Santa Teresa Gallura, Sardegna"
             },
             {
               "nome": "Il Grottino (Via del Mare 14, Santa Teresa di Gallura)",
@@ -411,7 +418,8 @@
               "preco": "€15-25",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "300m do porto · a pé"
+              "dist": "300m do porto · a pé",
+              "mapsQuery": "Il Grottino, Via del Mare 14, Santa Teresa Gallura"
             },
             {
               "nome": "Picnic comprado",
@@ -419,7 +427,8 @@
               "preco": "€10",
               "valeAPena": 1,
               "poiCat": "padaria",
-              "dist": "padaria do centro · a pé"
+              "dist": "padaria do centro · a pé",
+              "noMaps": true
             }
           ]
         },
@@ -475,12 +484,13 @@
           },
           "opcoes": [
             {
-              "nome": "Il Caminetto (Via Cristoforo Colombo 8)",
+              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
               "desc": "Michelin Guide · spaghetti bottarga, vongole · institução · reservar",
               "preco": "€35-50",
               "dist": "Centro",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
             },
             {
               "nome": "Sa Funta (Via Garibaldi 25)",
@@ -488,7 +498,8 @@
               "preco": "€30-45",
               "dist": "Centro",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
             },
             {
               "nome": "Trattoria Sa Bell'e Crabasa",
@@ -496,7 +507,8 @@
               "preco": "€20-30",
               "dist": "Centro",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Sa Bell'e Crabasa, Cabras"
             }
           ]
         }
@@ -576,7 +588,8 @@
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "ao lado da entrada de Tharros"
+              "dist": "ao lado da entrada de Tharros",
+              "mapsQuery": "San Giovanni di Sinis, Cabras, Sardegna"
             },
             {
               "nome": "Da Cesare · Maluentu (Via Lungomare 36, Putzu Idu)",
@@ -584,7 +597,8 @@
               "preco": "€40-60",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "12km ao norte · ~20min de carro"
+              "dist": "12km ao norte · ~20min de carro",
+              "mapsQuery": "Maluentu, Putzu Idu, Sardegna"
             },
             {
               "nome": "Picnic na praia",
@@ -592,7 +606,8 @@
               "preco": "€15",
               "valeAPena": 1,
               "poiCat": "padaria",
-              "dist": "onde vocês estiverem"
+              "dist": "onde vocês estiverem",
+              "noMaps": true
             }
           ]
         },
@@ -667,7 +682,8 @@
               "preco": "€40-60",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "Putzu Idu · 12km de Càbras · ~15min"
+              "dist": "Putzu Idu · 12km de Càbras · ~15min",
+              "mapsQuery": "Maluentu, Putzu Idu, Sardegna"
             },
             {
               "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
@@ -675,7 +691,8 @@
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "centro de Càbras · a pé da base"
+              "dist": "centro de Càbras · a pé da base",
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
             },
             {
               "nome": "Jantar leve em casa",
@@ -683,7 +700,8 @@
               "preco": "€20",
               "valeAPena": 1,
               "poiCat": "mercado",
-              "dist": "na base"
+              "dist": "na base",
+              "noMaps": true
             }
           ]
         }
@@ -807,7 +825,8 @@
               "preco": "€30-45",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "centro histórico de Bosa · a pé"
+              "dist": "centro histórico de Bosa · a pé",
+              "mapsQuery": "Locanda di Corte, Via del Pozzo 7, Bosa"
             },
             {
               "nome": "Borgo Sant'Ignazio (bairro Sant'Ignazio, Bosa · a caminho do castelo)",
@@ -815,7 +834,8 @@
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "bairro Sant'Ignazio · subida a pé"
+              "dist": "bairro Sant'Ignazio · subida a pé",
+              "mapsQuery": "Borgo Sant'Ignazio, Bosa, Sardegna"
             },
             {
               "nome": "Padaria do Lungofiume + picnic à beira do Temo",
@@ -823,7 +843,8 @@
               "preco": "€12",
               "valeAPena": 1,
               "poiCat": "padaria",
-              "dist": "Lungofiume · a pé"
+              "dist": "Lungofiume · a pé",
+              "noMaps": true
             }
           ]
         },
@@ -882,7 +903,8 @@
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "centro de Càbras · a pé da base"
+              "dist": "centro de Càbras · a pé da base",
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
             },
             {
               "nome": "Casa",
@@ -890,7 +912,8 @@
               "preco": "€15",
               "valeAPena": 1,
               "poiCat": "mercado",
-              "dist": "na base"
+              "dist": "na base",
+              "noMaps": true
             },
             {
               "nome": "Sa Funta (Via Giuseppe Garibaldi 25, Càbras)",
@@ -898,7 +921,8 @@
               "preco": "€30-45",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro de Càbras · a pé da base"
+              "dist": "centro de Càbras · a pé da base",
+              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
             }
           ]
         }
@@ -1013,7 +1037,8 @@
               "preco": "€30-45",
               "dist": "Centro",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
             },
             {
               "nome": "Il Caminetto",
@@ -1021,7 +1046,8 @@
               "preco": "€35-50",
               "dist": "Centro",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
             },
             {
               "nome": "Mercado de Càbras + picnic",
@@ -1077,7 +1103,8 @@
               "preco": "€35-50",
               "dist": "Centro",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
             },
             {
               "nome": "Sa Funta",
@@ -1085,7 +1112,8 @@
               "preco": "€30-45",
               "dist": "Centro",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
             },
             {
               "nome": "Casa",
@@ -1093,7 +1121,8 @@
               "preco": "€20",
               "dist": "—",
               "valeAPena": 1,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "noMaps": true
             }
           ]
         }
@@ -1166,7 +1195,8 @@
               "preco": "€20-30",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "30min de desvio pela SS126"
+              "dist": "30min de desvio pela SS126",
+              "mapsQuery": "Iglesias, Sardegna"
             },
             {
               "nome": "Continua até Maladroxia (rápido)",
@@ -1182,7 +1212,8 @@
               "preco": "€25-35",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "na própria base"
+              "dist": "na própria base",
+              "mapsQuery": "Lu' Hotel Maladroxia, Via Golfo di Palmas 16, Sant'Antioco"
             }
           ]
         },
@@ -1231,7 +1262,8 @@
               "preco": "€25-35",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "na própria base"
+              "dist": "na própria base",
+              "mapsQuery": "Lu' Hotel Maladroxia, Via Golfo di Palmas 16, Sant'Antioco"
             },
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
@@ -1239,7 +1271,8 @@
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "15min de carro"
+              "dist": "15min de carro",
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
             },
             {
               "nome": "Ristorante Da Silvana (Località Is Loddus, Sant'Antioco)",
@@ -1247,7 +1280,8 @@
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "12min de carro · Località Is Loddus"
+              "dist": "12min de carro · Località Is Loddus",
+              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco"
             }
           ]
         }
@@ -1382,7 +1416,8 @@
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "no corso, meio do walking tour"
+              "dist": "no corso, meio do walking tour",
+              "mapsQuery": "I Vinattieri, Corso Vittorio Emanuele, Sant'Antioco"
             },
             {
               "nome": "Is Solus Bistrot (Corso Vittorio Emanuele 11, Sant'Antioco)",
@@ -1390,7 +1425,8 @@
               "preco": "€12-20",
               "valeAPena": 2,
               "poiCat": "cafe",
-              "dist": "no corso, meio do walking tour"
+              "dist": "no corso, meio do walking tour",
+              "mapsQuery": "Is Solus Bistrot, Corso Vittorio Emanuele 11, Sant'Antioco"
             },
             {
               "nome": "Picnic mira-mar",
@@ -1398,7 +1434,8 @@
               "preco": "€15",
               "valeAPena": 1,
               "poiCat": "padaria",
-              "dist": "onde vocês estiverem"
+              "dist": "onde vocês estiverem",
+              "noMaps": true
             }
           ]
         },
@@ -1446,7 +1483,8 @@
               "preco": "€25-35",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "na própria base"
+              "dist": "na própria base",
+              "mapsQuery": "Lu' Hotel Maladroxia, Via Golfo di Palmas 16, Sant'Antioco"
             },
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
@@ -1454,7 +1492,8 @@
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "15min de carro"
+              "dist": "15min de carro",
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
             },
             {
               "nome": "Casa",
@@ -1462,7 +1501,8 @@
               "preco": "€20",
               "valeAPena": 1,
               "poiCat": "mercado",
-              "dist": "na base"
+              "dist": "na base",
+              "noMaps": true
             }
           ]
         }
@@ -1554,7 +1594,8 @@
               "preco": "€60-90",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "centro de Carloforte · a pé do porto"
+              "dist": "centro de Carloforte · a pé do porto",
+              "mapsQuery": "Al Tonno di Corsa, Via Guglielmo Marconi 47, Carloforte"
             },
             {
               "nome": "Osteria della Tonnara (Corso Battellieri 36, Carloforte)",
@@ -1562,7 +1603,8 @@
               "preco": "€30-45",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "beira-mar · a pé do porto"
+              "dist": "beira-mar · a pé do porto",
+              "mapsQuery": "Osteria della Tonnara, Corso Battellieri 36, Carloforte"
             },
             {
               "nome": "Ristorante Da Nicolo (Corso Cavour 32, Carloforte)",
@@ -1570,7 +1612,8 @@
               "preco": "€50-70",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "Corso Cavour · a pé do porto"
+              "dist": "Corso Cavour · a pé do porto",
+              "mapsQuery": "Ristorante Da Nicolo, Corso Cavour 32, Carloforte"
             }
           ]
         },
@@ -1629,7 +1672,8 @@
               "preco": "€25-35",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "na própria base"
+              "dist": "na própria base",
+              "mapsQuery": "Lu' Hotel Maladroxia, Via Golfo di Palmas 16, Sant'Antioco"
             },
             {
               "nome": "Casa",
@@ -1637,7 +1681,8 @@
               "preco": "€15",
               "valeAPena": 1,
               "poiCat": "mercado",
-              "dist": "na base"
+              "dist": "na base",
+              "noMaps": true
             },
             {
               "nome": "Max Pizzeria (Corso Vittorio Emanuele 85, Sant'Antioco)",
@@ -1645,7 +1690,8 @@
               "preco": "€20-25",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "15min de carro · Sant'Antioco"
+              "dist": "15min de carro · Sant'Antioco",
+              "mapsQuery": "Max Pizzeria, Corso Vittorio Emanuele 85, Sant'Antioco"
             }
           ]
         }
@@ -1778,7 +1824,8 @@
               "preco": "€40-55",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "15min de carro"
+              "dist": "15min de carro",
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
             },
             {
               "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
@@ -1786,7 +1833,8 @@
               "preco": "€30-40",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "na própria base"
+              "dist": "na própria base",
+              "mapsQuery": "Lu' Hotel Maladroxia, Via Golfo di Palmas 16, Sant'Antioco"
             },
             {
               "nome": "Ristorante Da Silvana (Località Is Loddus, Sant'Antioco)",
@@ -1794,7 +1842,8 @@
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "12min de carro · Località Is Loddus"
+              "dist": "12min de carro · Località Is Loddus",
+              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco"
             }
           ]
         }
@@ -1868,7 +1917,8 @@
               "preco": "€25-40",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "centro de Nuoro · 230km desde a base"
+              "dist": "centro de Nuoro · 230km desde a base",
+              "mapsQuery": "Il Rifugio, Via Antonio Mereu 28, Nuoro"
             },
             {
               "nome": "Dorgali · almoço no caminho",
@@ -1876,7 +1926,8 @@
               "preco": "€25-35",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "275km · 20min antes do destino"
+              "dist": "275km · 20min antes do destino",
+              "mapsQuery": "Dorgali, Sardegna"
             },
             {
               "nome": "Sandes na estrada",
@@ -1884,7 +1935,8 @@
               "preco": "€10",
               "valeAPena": 1,
               "poiCat": "cafe",
-              "dist": "na SS131"
+              "dist": "na SS131",
+              "noMaps": true
             }
           ]
         },
@@ -1972,7 +2024,8 @@
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "marina · a pé da hospedagem"
+              "dist": "marina · a pé da hospedagem",
+              "mapsQuery": "Ristorante Il Pescatore, Via Acqua Dolce 7, Cala Gonone"
             },
             {
               "nome": "HBM Bue Marino · Ristorante (marina de Cala Gonone)",
@@ -1980,7 +2033,8 @@
               "preco": "€30-45",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "marina · a pé"
+              "dist": "marina · a pé",
+              "mapsQuery": "Hotel Bue Marino, Cala Gonone"
             },
             {
               "nome": "Ristorante Pizzeria La Poltrona (Via Vasco de Gama 22, Cala Gonone)",
@@ -1988,7 +2042,8 @@
               "preco": "€20-30",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "300m da marina · a pé"
+              "dist": "300m da marina · a pé",
+              "mapsQuery": "La Poltrona, Via Vasco de Gama 22, Cala Gonone"
             }
           ]
         }
@@ -2092,7 +2147,8 @@
               "preco": "€30-45",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "marina · a pé"
+              "dist": "marina · a pé",
+              "mapsQuery": "Hotel Bue Marino, Cala Gonone"
             },
             {
               "nome": "Ristorante Pizzeria San Francisco (Via Magellano 8, Cala Gonone)",
@@ -2100,7 +2156,8 @@
               "preco": "€25-40",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "a pé da marina"
+              "dist": "a pé da marina",
+              "mapsQuery": "Ristorante Pizzeria San Francisco, Via Magellano 8, Cala Gonone"
             },
             {
               "nome": "Pizzeria Zio Pedrillo (Via Lungomare Palmasera, Cala Gonone)",
@@ -2108,7 +2165,8 @@
               "preco": "€20",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "beira-mar · a pé"
+              "dist": "beira-mar · a pé",
+              "mapsQuery": "Zio Pedrillo, Lungomare Palmasera, Cala Gonone"
             }
           ]
         }
@@ -2181,7 +2239,8 @@
               "preco": "€20-30",
               "dist": "30min",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Corso Umberto I, Olbia, Sardegna"
             },
             {
               "nome": "Trattoria Santa Teresa",
@@ -2189,7 +2248,8 @@
               "preco": "€25-35",
               "dist": "Centro",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "mapsQuery": "Il Grottino, Via del Mare 14, Santa Teresa Gallura"
             },
             {
               "nome": "Picnic na estrada",
@@ -2197,7 +2257,8 @@
               "preco": "€10",
               "dist": "—",
               "valeAPena": 1,
-              "poiCat": "padaria"
+              "poiCat": "padaria",
+              "noMaps": true
             }
           ]
         },
@@ -2317,7 +2378,8 @@
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "centro de Santa Teresa · a pé"
+              "dist": "centro de Santa Teresa · a pé",
+              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura"
             },
             {
               "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
@@ -2325,7 +2387,8 @@
               "preco": "€30-45",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro · a pé"
+              "dist": "centro · a pé",
+              "mapsQuery": "Ristorante da Thomas, Santa Teresa Gallura"
             },
             {
               "nome": "Ristorante Pizzeria La Lampara (Via Sandro Pertini 6, Santa Teresa di Gallura)",
@@ -2333,7 +2396,8 @@
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro · a pé"
+              "dist": "centro · a pé",
+              "mapsQuery": "La Lampara, Via Sandro Pertini 6, Santa Teresa Gallura"
             }
           ]
         }
@@ -2479,7 +2543,8 @@
               "preco": "€30-40",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "junto ao porto de La Maddalena · a pé"
+              "dist": "junto ao porto de La Maddalena · a pé",
+              "mapsQuery": "Ristorante Caprera, Via Tommaso Zonza 3, La Maddalena"
             },
             {
               "nome": "Noir Lounge · Restaurant & Cocktail Bar (Piazza XXIII Febbraio 10, La Maddalena)",
@@ -2487,7 +2552,8 @@
               "preco": "€30-45",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro · a pé do porto"
+              "dist": "centro · a pé do porto",
+              "mapsQuery": "Noir Lounge, Piazza XXIII Febbraio 10, La Maddalena"
             },
             {
               "nome": "Picnic em Cala Caprarese (Caprera)",
@@ -2495,7 +2561,9 @@
               "preco": "€15",
               "valeAPena": 1,
               "poiCat": "padaria",
-              "dist": "Caprera · 10min de carro"
+              "dist": "Caprera · 10min de carro",
+              "mapsQuery": "Cala Caprarese, Caprera, Sardegna",
+              "noMaps": true
             }
           ]
         },
@@ -2570,7 +2638,8 @@
               "preco": "€30-45",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro de Santa Teresa · a pé"
+              "dist": "centro de Santa Teresa · a pé",
+              "mapsQuery": "Ristorante da Thomas, Santa Teresa Gallura"
             },
             {
               "nome": "Il Grottino (Via del Mare 14, Santa Teresa di Gallura)",
@@ -2578,7 +2647,8 @@
               "preco": "€20-30",
               "valeAPena": 1,
               "poiCat": "restaurante",
-              "dist": "centro · a pé"
+              "dist": "centro · a pé",
+              "mapsQuery": "Il Grottino, Via del Mare 14, Santa Teresa Gallura"
             },
             {
               "nome": "Casa",
@@ -2586,7 +2656,8 @@
               "preco": "€20",
               "valeAPena": 1,
               "poiCat": "mercado",
-              "dist": "na base"
+              "dist": "na base",
+              "noMaps": true
             }
           ]
         }
@@ -2666,7 +2737,8 @@
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "na praça da igreja · a pé"
+              "dist": "na praça da igreja · a pé",
+              "mapsQuery": "Giagoni in Piazza, Piazza della Chiesa 6, San Pantaleo"
             },
             {
               "nome": "Bares da praça de San Pantaleo",
@@ -2674,7 +2746,8 @@
               "preco": "€15-25",
               "valeAPena": 1,
               "poiCat": "cafe",
-              "dist": "ao redor da praça · a pé"
+              "dist": "ao redor da praça · a pé",
+              "mapsQuery": "Piazza della Chiesa, San Pantaleo, Olbia"
             },
             {
               "nome": "Picnic do mercado",
@@ -2682,7 +2755,9 @@
               "preco": "€25",
               "valeAPena": 2,
               "poiCat": "mercado",
-              "dist": "na própria feira"
+              "dist": "na própria feira",
+              "mapsQuery": "San Pantaleo, Olbia, Sardegna",
+              "noMaps": true
             }
           ]
         },
@@ -2769,7 +2844,8 @@
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "centro de Santa Teresa · a pé"
+              "dist": "centro de Santa Teresa · a pé",
+              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura"
             },
             {
               "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
@@ -2777,7 +2853,8 @@
               "preco": "€30-45",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro · a pé"
+              "dist": "centro · a pé",
+              "mapsQuery": "Ristorante da Thomas, Santa Teresa Gallura"
             },
             {
               "nome": "Ristorante Pizzeria La Lampara (Via Sandro Pertini 6, Santa Teresa di Gallura)",
@@ -2785,7 +2862,8 @@
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro · a pé"
+              "dist": "centro · a pé",
+              "mapsQuery": "Porto di Santa Teresa Gallura, Sardegna"
             }
           ]
         }
@@ -2859,7 +2937,8 @@
               "preco": "€25-40",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "dist": "centro de Olbia · a caminho do aeroporto"
+              "dist": "centro de Olbia · a caminho do aeroporto",
+              "mapsQuery": "Bistrot Bontade, Via Genova 65, Olbia"
             },
             {
               "nome": "Ristorante By Night (Viale Aldo Moro 201/A, Olbia)",
@@ -2867,7 +2946,8 @@
               "preco": "€30-70",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "dist": "Viale Aldo Moro · a caminho do aeroporto"
+              "dist": "Viale Aldo Moro · a caminho do aeroporto",
+              "mapsQuery": "Ristorante By Night, Viale Aldo Moro 201, Olbia"
             },
             {
               "nome": "Aeroporto · sanduba",
@@ -2875,7 +2955,8 @@
               "preco": "€10-15",
               "valeAPena": 1,
               "poiCat": "cafe",
-              "dist": "no aeroporto"
+              "dist": "no aeroporto",
+              "mapsQuery": "Aeroporto di Olbia Costa Smeralda"
             }
           ]
         },
