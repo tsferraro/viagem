@@ -229,7 +229,8 @@
               "preco": "€15 total",
               "dist": "Mercado",
               "poiCat": "mercado",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "noMaps": true
             }
           ]
         },
@@ -421,7 +422,8 @@
               "preco": "€15 família",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             }
           ]
         }
@@ -497,7 +499,8 @@
               "preco": "€25",
               "dist": "Padaria",
               "poiCat": "mercado",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "noMaps": true
             }
           ]
         },
@@ -545,7 +548,8 @@
               "preco": "€25 família",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             },
             {
               "nome": "A Pignata",
@@ -703,7 +707,8 @@
               "preco": "€15 família",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             }
           ]
         }
@@ -898,7 +903,8 @@
               "preco": "€15 família",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             },
             {
               "nome": "L'Escale (paillote · Porto Pollo)",
@@ -997,7 +1003,8 @@
               "preco": "€20-30",
               "dist": "30min carro",
               "poiCat": "restaurante",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "mapsQuery": "L'Escale, Porto Pollo, Corse, France"
             },
             {
               "nome": "Bar du Stade Olmeto",
@@ -1094,7 +1101,8 @@
               "preco": "€25 família",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             }
           ]
         }
@@ -1277,7 +1285,8 @@
               "preco": "€25",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "noMaps": true
             }
           ]
         },
@@ -1537,7 +1546,8 @@
               "preco": "€20",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             }
           ]
         }
@@ -1599,7 +1609,8 @@
               "preco": "€20 família",
               "dist": "Praia",
               "poiCat": "mercado",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "noMaps": true
             },
             {
               "nome": "Beach restaurant Piantarella",
@@ -1692,7 +1703,8 @@
               "preco": "€20",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             }
           ]
         }
@@ -1865,7 +1877,8 @@
               "preco": "€20",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "noMaps": true
             }
           ]
         }
@@ -2193,7 +2206,8 @@
               "preco": "€10",
               "dist": "—",
               "poiCat": "mercado",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "noMaps": true
             }
           ]
         },

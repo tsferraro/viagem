@@ -70,7 +70,8 @@
                   "coord": {
                     "lat": 48.8556,
                     "lng": 2.3654
-                  }
+                  },
+                  "mapsQuery": "Place des Vosges, Paris"
                 },
                 {
                   "n": 2,
@@ -78,7 +79,8 @@
                   "coord": {
                     "lat": 48.8548,
                     "lng": 2.3661
-                  }
+                  },
+                  "mapsQuery": "Maison de Victor Hugo, 6 Place des Vosges, Paris"
                 },
                 {
                   "n": 3,
@@ -86,7 +88,8 @@
                   "coord": {
                     "lat": 48.8547,
                     "lng": 2.3639
-                  }
+                  },
+                  "mapsQuery": "Hôtel de Sully, 62 rue Saint-Antoine, Paris"
                 },
                 {
                   "n": 4,
@@ -94,7 +97,8 @@
                   "coord": {
                     "lat": 48.857,
                     "lng": 2.3628
-                  }
+                  },
+                  "mapsQuery": "Musée Carnavalet, 23 rue de Sévigné, Paris"
                 },
                 {
                   "n": 5,
@@ -102,7 +106,8 @@
                   "coord": {
                     "lat": 48.8574,
                     "lng": 2.3591
-                  }
+                  },
+                  "mapsQuery": "L'As du Fallafel, 34 rue des Rosiers, Paris"
                 },
                 {
                   "n": 6,
@@ -110,12 +115,16 @@
                   "coord": {
                     "lat": 48.8595,
                     "lng": 2.3515
-                  }
+                  },
+                  "mapsQuery": "Fontaine Stravinsky, Place Igor Stravinsky, Paris"
                 }
               ]
             }
           ],
-          "audio": true
+          "audio": true,
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Place des Vosges, Pl. des Vosges, 4e, Paris"
         },
         {
           "hora": "13:00",
@@ -133,19 +142,28 @@
               "nome": "L'As du Fallafel (34 rue des Rosiers)",
               "desc": "O falafel mais famoso de Paris · pega pra viagem e come na praça (a fila do balcão anda rápido)",
               "preco": "€8-10",
-              "dist": "fim da Parte 1"
+              "dist": "fim da Parte 1",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "mapsQuery": "L'As du Fallafel, 34 rue des Rosiers, Paris"
             },
             {
               "nome": "Miznon (22 rue des Écouffes)",
               "desc": "Pitas recheadas do chef Eyal Shani · casual, barulhento, adora criança · a couve-flor inteira assada é o hit",
               "preco": "€12-16",
-              "dist": "1min a pé"
+              "dist": "1min a pé",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "mapsQuery": "Miznon, 22 rue des Écouffes, Paris"
             },
             {
               "nome": "Chez Marianne (2 rue des Hospitalières-St-Gervais)",
               "desc": "Mezze sentado (homus, falafel, berinjela) · prato de degustação dividido funciona bem em família",
               "preco": "€15-20",
-              "dist": "2min a pé"
+              "dist": "2min a pé",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Chez Marianne, 2 rue des Hospitalières-St-Gervais, Paris"
             }
           ]
         },
@@ -195,7 +213,8 @@
                   "coord": {
                     "lat": 48.8598,
                     "lng": 2.3626
-                  }
+                  },
+                  "mapsQuery": "Musée Picasso, 5 rue de Thorigny, Paris"
                 },
                 {
                   "n": 2,
@@ -203,7 +222,8 @@
                   "coord": {
                     "lat": 48.863,
                     "lng": 2.3621
-                  }
+                  },
+                  "mapsQuery": "Marché des Enfants Rouges, 39 rue de Bretagne, Paris"
                 },
                 {
                   "n": 3,
@@ -212,7 +232,8 @@
                     "lat": 48.8637,
                     "lng": 2.3606
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Square du Temple - Elie Wiesel, rue de Bretagne, Paris"
                 },
                 {
                   "n": 4,
@@ -220,11 +241,15 @@
                   "coord": {
                     "lat": 48.8646,
                     "lng": 2.3623
-                  }
+                  },
+                  "mapsQuery": "Carreau du Temple, 4 rue Eugène Spuller, Paris"
                 }
               ]
             }
-          ]
+          ],
+          "valeAPena": 3,
+          "poiCat": "mercado",
+          "mapsQuery": "Marché des Enfants Rouges, 39 rue de Bretagne, 3e, Paris"
         },
         {
           "hora": "16:15",
@@ -248,7 +273,10 @@
           "coord": {
             "lat": 48.8637,
             "lng": 2.3606
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "mapsQuery": "Square du Temple - Elie Wiesel, rue de Bretagne, 3e, Paris"
         }
       ],
       "hideStopMarkers": true
@@ -260,7 +288,7 @@
       "bairro": "🎨 Le Marais (4e → Haut Marais 3e)",
       "grupo": false,
       "hideStopMarkers": true,
-      "nota": "Este é o Marais que se conta caminhando devagar, de pátio em pátio: ~3,5km em 2 partes (faça a Parte 1 de manhã, almoce no caminho e ataque a Parte 2 à tarde). A Parte 1 puxa o sul medieval — a viela da rue des Barres, o palacete da Reine Margot, antiquários e um trecho da muralha de 1190. A Parte 2 sobe pro Haut Marais das galerias, brechós e dos grandes hôtels particuliers, terminando na casa mais antiga de Paris. Pensado pra adultos e pra compartilhar com quem vem te visitar; é plano (carrinho aguenta), mas tem mais história que parquinho. ⭐ Faça num <strong>domingo</strong>: as lojas do Marais abrem (raro em Paris). 🔬 Use o seletor <strong>Básico / Profundo</strong> aqui em cima: Básico mostra só as 6 paradas imperdíveis; Profundo abre as 10.",
+      "nota": "Este é o Marais que se conta caminhando devagar, de pátio em pátio: ~3,5km em 2 partes (faça a Parte 1 de manhã, almoce no caminho e ataque a Parte 2 à tarde). A Parte 1 puxa o sul medieval — a viela da rue des Barres, o palacete da Reine Margot, antiquários e um trecho da muralha de 1190. A Parte 2 sobe pro Haut Marais das galerias, brechós e dos grandes hôtels particuliers, terminando na casa mais antiga de Paris. Pensado pra adultos e pra compartilhar com quem vem te visitar; é plano (carrinho aguenta), mas tem mais história que parquinho. <strong>Dica de dia</strong>: faça num <strong>domingo</strong>: as lojas do Marais abrem (raro em Paris). 🔬 Use o seletor <strong>Básico / Profundo</strong> aqui em cima: Básico mostra só as 6 paradas imperdíveis; Profundo abre as 10.",
       "cor": "#b45309",
       "gradA": "#78350f",
       "gradB": "#d97706",
@@ -278,7 +306,7 @@
           "dicas": [
             "A igreja ainda é ativa (comunidade monástica de Jerusalém) · entre em silêncio e procure a placa às vítimas de 1918",
             "Está a 2min do Hôtel de Ville [1/11] — ponto de partida natural",
-            "⭐ Faça o tour num <strong>domingo</strong>: lojas abertas no Marais (raro em Paris)",
+            "Faça o tour num <strong>domingo</strong>: lojas abertas no Marais (raro em Paris)",
             "Daqui segue a pé pela rue François-Miron (casas medievais nº 11-13) rumo ao Hôtel de Sens"
           ],
           "duracao": "15-20min",
@@ -299,7 +327,8 @@
                   "coord": {
                     "lat": 48.8562,
                     "lng": 2.3522
-                  }
+                  },
+                  "mapsQuery": "Église Saint-Gervais & Rue des Barres, 13 rue des Barres, Paris"
                 },
                 {
                   "n": 2,
@@ -307,7 +336,8 @@
                   "coord": {
                     "lat": 48.8534,
                     "lng": 2.3592
-                  }
+                  },
+                  "mapsQuery": "Hôtel de Sens, 1 rue du Figuier, 4e, Paris"
                 },
                 {
                   "n": 3,
@@ -315,7 +345,8 @@
                   "coord": {
                     "lat": 48.8526,
                     "lng": 2.3633
-                  }
+                  },
+                  "mapsQuery": "Village Saint-Paul, rue Saint-Paul, 4e, Paris"
                 },
                 {
                   "n": 4,
@@ -324,7 +355,8 @@
                     "lat": 48.8552,
                     "lng": 2.3636
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Place du Marché Sainte-Catherine, Paris"
                 },
                 {
                   "n": 5,
@@ -332,7 +364,8 @@
                   "coord": {
                     "lat": 48.8551,
                     "lng": 2.3589
-                  }
+                  },
+                  "mapsQuery": "Maison Européenne de la Photographie, 5 rue de Fourcy, Paris"
                 }
               ]
             },
@@ -347,7 +380,8 @@
                     "lat": 48.8573,
                     "lng": 2.3551
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Mariage Frères, 30 rue du Bourg-Tibourg, Paris"
                 },
                 {
                   "n": 2,
@@ -356,7 +390,8 @@
                     "lat": 48.8577,
                     "lng": 2.354
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Free'P'Star, 61 rue de la Verrerie, Paris"
                 },
                 {
                   "n": 3,
@@ -365,7 +400,8 @@
                     "lat": 48.8601,
                     "lng": 2.3603
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Hôtel de Rohan, 87 rue Vieille-du-Temple, Paris"
                 },
                 {
                   "n": 4,
@@ -374,7 +410,8 @@
                     "lat": 48.8593,
                     "lng": 2.3593
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Archives Nationales, 60 rue des Francs-Bourgeois, Paris"
                 },
                 {
                   "n": 5,
@@ -382,11 +419,15 @@
                   "coord": {
                     "lat": 48.8636,
                     "lng": 2.3532
-                  }
+                  },
+                  "mapsQuery": "Maison de Nicolas Flamel, 51 rue de Montmorency, Paris"
                 }
               ]
             }
-          ]
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Gervais & Rue des Barres, 13 rue des Barres, 4e, Paris"
         },
         {
           "hora": "10:30",
@@ -409,7 +450,10 @@
           "coord": {
             "lat": 48.8534,
             "lng": 2.3592
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Bibliothèque Forney, 1 rue du Figuier, 4e, Paris"
         },
         {
           "hora": "11:00",
@@ -432,7 +476,10 @@
           "coord": {
             "lat": 48.8526,
             "lng": 2.3633
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Village Saint-Paul, rue Saint-Paul  rue des Jardins-Saint-Paul, 4e, Paris"
         },
         {
           "hora": "11:45",
@@ -455,7 +502,10 @@
           "coord": {
             "lat": 48.8552,
             "lng": 2.3636
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Place du Marché Sainte-Catherine, Paris"
         },
         {
           "hora": "12:15",
@@ -478,7 +528,10 @@
           "coord": {
             "lat": 48.8551,
             "lng": 2.3589
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Maison Européenne de la Photographie, 5 rue de Fourcy, Paris"
         },
         {
           "hora": "14:00",
@@ -501,7 +554,10 @@
           "coord": {
             "lat": 48.8573,
             "lng": 2.3551
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Mariage Frères, 30 rue du Bourg-Tibourg, 4e, Paris"
         },
         {
           "hora": "14:45",
@@ -524,7 +580,10 @@
           "coord": {
             "lat": 48.8577,
             "lng": 2.354
-          }
+          },
+          "valeAPena": 1,
+          "poiCat": "loja",
+          "mapsQuery": "Free'P'Star, 61 rue de la Verrerie, 4e, Paris"
         },
         {
           "hora": "15:30",
@@ -547,7 +606,10 @@
           "coord": {
             "lat": 48.8601,
             "lng": 2.3603
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Hôtel de Rohan, 87 rue Vieille-du-Temple, Paris"
         },
         {
           "hora": "16:00",
@@ -570,7 +632,10 @@
           "coord": {
             "lat": 48.8593,
             "lng": 2.3593
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Archives Nationales, 60 rue des Francs-Bourgeois, 3e, Paris"
         },
         {
           "hora": "16:45",
@@ -593,7 +658,10 @@
           "coord": {
             "lat": 48.8636,
             "lng": 2.3532
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Maison de Nicolas Flamel, 51 rue de Montmorency, 3e, Paris"
         }
       ]
     },
@@ -643,7 +711,8 @@
                     "lat": 48.8567,
                     "lng": 2.3602
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "L'Éclair de Génie, 14 rue Pavée, 4e, Paris"
                 },
                 {
                   "n": 2,
@@ -651,7 +720,8 @@
                   "coord": {
                     "lat": 48.8581,
                     "lng": 2.3563
-                  }
+                  },
+                  "mapsQuery": "Une Glace à Paris, 15 rue Sainte-Croix-de-la-Bretonnerie, 4e, Paris"
                 },
                 {
                   "n": 3,
@@ -660,7 +730,8 @@
                     "lat": 48.8597,
                     "lng": 2.3609
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Breizh Café, 109 rue Vieille-du-Temple, 3e, Paris"
                 },
                 {
                   "n": 4,
@@ -669,7 +740,8 @@
                     "lat": 48.8606,
                     "lng": 2.3636
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Popelini, 29 rue Debelleyme, 3e, Paris"
                 },
                 {
                   "n": 5,
@@ -678,7 +750,8 @@
                     "lat": 48.8628,
                     "lng": 2.3633
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Bontemps Pâtisserie, 57 rue de Bretagne, 3e, Paris"
                 },
                 {
                   "n": 6,
@@ -687,11 +760,15 @@
                     "lat": 48.8623,
                     "lng": 2.3657
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Jacques Genin, 133 rue de Turenne, 3e, Paris"
                 }
               ]
             }
-          ]
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "L'Éclair de Génie, 14 rue Pavée, 4e, Paris"
         },
         {
           "hora": "11:15",
@@ -714,7 +791,10 @@
           "coord": {
             "lat": 48.8581,
             "lng": 2.3563
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "cafe",
+          "mapsQuery": "Une Glace à Paris, 15 rue Sainte-Croix-de-la-Bretonnerie, 4e, Paris"
         },
         {
           "hora": "12:30",
@@ -737,7 +817,10 @@
           "coord": {
             "lat": 48.8597,
             "lng": 2.3609
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "restaurante",
+          "mapsQuery": "Breizh Café, 109 rue Vieille-du-Temple, 3e, Paris"
         },
         {
           "hora": "14:30",
@@ -760,7 +843,10 @@
           "coord": {
             "lat": 48.8606,
             "lng": 2.3636
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Popelini, 29 rue Debelleyme, 3e, Paris"
         },
         {
           "hora": "15:15",
@@ -783,7 +869,10 @@
           "coord": {
             "lat": 48.8628,
             "lng": 2.3633
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Bontemps Pâtisserie, 57 rue de Bretagne, 3e, Paris"
         },
         {
           "hora": "16:00",
@@ -806,7 +895,10 @@
           "coord": {
             "lat": 48.8623,
             "lng": 2.3657
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "loja",
+          "mapsQuery": "Jacques Genin, 133 rue de Turenne, 3e, Paris"
         }
       ]
     },
@@ -855,7 +947,8 @@
                   "coord": {
                     "lat": 48.8548,
                     "lng": 2.3661
-                  }
+                  },
+                  "mapsQuery": "Maison de Victor Hugo, 6 Place des Vosges, 4e, Paris"
                 },
                 {
                   "n": 2,
@@ -863,7 +956,8 @@
                   "coord": {
                     "lat": 48.857,
                     "lng": 2.3628
-                  }
+                  },
+                  "mapsQuery": "Musée Carnavalet, 23 rue de Sévigné, 3e, Paris"
                 },
                 {
                   "n": 3,
@@ -872,7 +966,8 @@
                     "lat": 48.858,
                     "lng": 2.3621
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Musée Cognacq-Jay, 8 rue Elzévir, 3e, Paris"
                 },
                 {
                   "n": 4,
@@ -880,7 +975,8 @@
                   "coord": {
                     "lat": 48.8598,
                     "lng": 2.3626
-                  }
+                  },
+                  "mapsQuery": "Musée Picasso, 5 rue de Thorigny, 3e, Paris"
                 },
                 {
                   "n": 5,
@@ -889,11 +985,15 @@
                     "lat": 48.8604,
                     "lng": 2.3584
                   },
-                  "coord_unverified": true
+                  "coord_unverified": true,
+                  "mapsQuery": "Musée de la Chasse et de la Nature, 62 rue des Archives, 3e, Paris"
                 }
               ]
             }
-          ]
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Maison de Victor Hugo, 6 Place des Vosges, 4e, Paris"
         },
         {
           "hora": "11:00",
@@ -916,7 +1016,10 @@
           "coord": {
             "lat": 48.857,
             "lng": 2.3628
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée Carnavalet, 23 rue de Sévigné, 3e, Paris"
         },
         {
           "hora": "12:15",
@@ -939,7 +1042,10 @@
           "coord": {
             "lat": 48.858,
             "lng": 2.3621
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée Cognacq-Jay, 8 rue Elzévir, 3e, Paris"
         },
         {
           "hora": "14:30",
@@ -962,7 +1068,10 @@
           "coord": {
             "lat": 48.8598,
             "lng": 2.3626
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée Picasso, 5 rue de Thorigny, 3e, Paris"
         },
         {
           "hora": "16:00",
@@ -985,7 +1094,10 @@
           "coord": {
             "lat": 48.8604,
             "lng": 2.3584
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée de la Chasse et de la Nature, 62 rue des Archives, 3e, Paris"
         }
       ]
     },
@@ -1034,7 +1146,8 @@
                   "coord": {
                     "lat": 48.8581,
                     "lng": 2.3552
-                  }
+                  },
+                  "mapsQuery": "Fleux, 39 rue Sainte-Croix de la Bretonnerie, 4e, Paris"
                 },
                 {
                   "n": 2,
@@ -1042,7 +1155,8 @@
                   "coord": {
                     "lat": 48.8585,
                     "lng": 2.3576
-                  }
+                  },
+                  "mapsQuery": "Sézane, 33 rue des Blancs-Manteaux, 4e, Paris"
                 },
                 {
                   "n": 3,
@@ -1050,7 +1164,8 @@
                   "coord": {
                     "lat": 48.8584,
                     "lng": 2.3609
-                  }
+                  },
+                  "mapsQuery": "CSAO, 9 rue Elzévir, 3e, Paris"
                 },
                 {
                   "n": 4,
@@ -1058,7 +1173,8 @@
                   "coord": {
                     "lat": 48.8581,
                     "lng": 2.3614
-                  }
+                  },
+                  "mapsQuery": "Muji, 47 rue des Francs-Bourgeois, 4e, Paris"
                 },
                 {
                   "n": 5,
@@ -1066,7 +1182,8 @@
                   "coord": {
                     "lat": 48.8617,
                     "lng": 2.3628
-                  }
+                  },
+                  "mapsQuery": "French Trotters, 128 rue Vieille-du-Temple, 3e, Paris"
                 },
                 {
                   "n": 6,
@@ -1074,7 +1191,8 @@
                   "coord": {
                     "lat": 48.8633,
                     "lng": 2.3644
-                  }
+                  },
+                  "mapsQuery": "Empreintes, 5 rue de Picardie, 3e, Paris"
                 },
                 {
                   "n": 7,
@@ -1082,7 +1200,8 @@
                   "coord": {
                     "lat": 48.862,
                     "lng": 2.367
-                  }
+                  },
+                  "mapsQuery": "Bonton, 5 boulevard des Filles du Calvaire, 3e, Paris"
                 },
                 {
                   "n": 8,
@@ -1090,11 +1209,15 @@
                   "coord": {
                     "lat": 48.8607,
                     "lng": 2.3669
-                  }
+                  },
+                  "mapsQuery": "Merci, 111 boulevard Beaumarchais, 3e, Paris"
                 }
               ]
             }
-          ]
+          ],
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Fleux, 39 rue Sainte-Croix de la Bretonnerie, 4e, Paris"
         },
         {
           "hora": "10:40",
@@ -1117,7 +1240,10 @@
           "coord": {
             "lat": 48.8585,
             "lng": 2.3576
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Sézane, 33 rue des Blancs-Manteaux, 4e, Paris"
         },
         {
           "hora": "11:15",
@@ -1140,7 +1266,10 @@
           "coord": {
             "lat": 48.8584,
             "lng": 2.3609
-          }
+          },
+          "valeAPena": 1,
+          "poiCat": "loja",
+          "mapsQuery": "CSAO, 9 rue Elzévir, 3e, Paris"
         },
         {
           "hora": "11:45",
@@ -1163,7 +1292,10 @@
           "coord": {
             "lat": 48.8581,
             "lng": 2.3614
-          }
+          },
+          "valeAPena": 0,
+          "poiCat": "loja",
+          "mapsQuery": "Muji, 47 rue des Francs-Bourgeois, 4e, Paris"
         },
         {
           "hora": "12:15",
@@ -1186,7 +1318,10 @@
           "coord": {
             "lat": 48.8617,
             "lng": 2.3628
-          }
+          },
+          "valeAPena": 1,
+          "poiCat": "loja",
+          "mapsQuery": "French Trotters, 128 rue Vieille-du-Temple, 3e, Paris"
         },
         {
           "hora": "14:15",
@@ -1209,7 +1344,10 @@
           "coord": {
             "lat": 48.8633,
             "lng": 2.3644
-          }
+          },
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Empreintes, 5 rue de Picardie, 3e, Paris"
         },
         {
           "hora": "15:00",
@@ -1232,7 +1370,10 @@
           "coord": {
             "lat": 48.862,
             "lng": 2.367
-          }
+          },
+          "valeAPena": 1,
+          "poiCat": "loja",
+          "mapsQuery": "Bonton, 5 boulevard des Filles du Calvaire, 3e, Paris"
         },
         {
           "hora": "15:45",
@@ -1255,7 +1396,10 @@
           "coord": {
             "lat": 48.8607,
             "lng": 2.3669
-          }
+          },
+          "valeAPena": 3,
+          "poiCat": "loja",
+          "mapsQuery": "Merci, 111 boulevard Beaumarchais, 3e, Paris"
         }
       ]
     }

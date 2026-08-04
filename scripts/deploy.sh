@@ -71,6 +71,18 @@ else
   echo "⚠️  critico-roteiro não encontrado · pulando gate de conteúdo"
 fi
 
+# Gate de MAPAS (maps-audit.py): monta as URLs do Google Maps como o app monta e bloqueia
+# busca genérica / waypoint fantasma / ponto repetido. Existe porque validate e audit leem o
+# DADO, e os bugs de ago/2026 (pino no mar, "Can't find that place") só existiam na URL final.
+MAPS_PY="$SCRIPT_DIR/maps-audit.py"
+if [ -f "$MAPS_PY" ]; then
+  echo "→ Gate de mapas (maps-audit)..."
+  python3 "$MAPS_PY" "$TARGET_HTML" --quiet \
+    || { echo "❌ Gate de mapas BLOQUEOU · corrija com mapsQuery/noMaps · ABORTADO"; exit 1; }
+else
+  echo "⚠️  maps-audit.py não encontrado · pulando gate de mapas"
+fi
+
 # Regenerar landing AUTOMATICAMENTE (lê todas subpastas atuais + monta cards)
 # Decisão 2026-05-23: integrado ao deploy pra nunca esquecer · sessão Sardenha esqueceu rodar wrap-up
 echo "→ Regenerando landing (index.html root)..."
