@@ -65,7 +65,8 @@
               "coord": {
                 "lat": 41.6681,
                 "lng": 8.9227
-              }
+              },
+              "mapsQuery": "Carrefour Market, Viggianello, Corse"
             },
             {
               "nome": "Spar (Route Nationale, Figari)",
@@ -137,7 +138,8 @@
               "preco": "€35-50/pessoa",
               "dist": "À chegada",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "A Pignata, Porto Pollo, Corse"
             },
             {
               "nome": "L'Espace Porto Pollo",
@@ -193,7 +195,8 @@
             "lng": 8.7939
           },
           "poiCat": "parque",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Plage de Porto Pollo, Corse"
         },
         {
           "hora": "13:00",
@@ -213,7 +216,8 @@
               "preco": "€18-28",
               "dist": "Porto Pollo",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "mapsQuery": "L'Espace, Porto Pollo, Corse"
             },
             {
               "nome": "L'Escale (porto)",
@@ -269,7 +273,8 @@
             "lng": 8.9031
           },
           "poiCat": "atracao",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "mapsQuery": "Port de Propriano, Corse"
         },
         {
           "hora": "19:30",
@@ -289,7 +294,8 @@
               "preco": "€35-50",
               "dist": "Quai",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "Le Rescator, Propriano, Corse"
             },
             {
               "nome": "U Spuntinu",
@@ -348,7 +354,8 @@
             "lng": 8.7939
           },
           "poiCat": "parque",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Plage de Porto Pollo, Corse"
         },
         {
           "hora": "13:00",
@@ -368,7 +375,8 @@
               "preco": "€20-30",
               "dist": "Praia",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "L'Escale, Porto Pollo, Corse"
             },
             {
               "nome": "L'Espace Porto Pollo",
@@ -406,7 +414,8 @@
               "preco": "€35-50",
               "dist": "Porto",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "A Pignata, Porto Pollo, Corse"
             },
             {
               "nome": "L'Escale (paillote · Porto Pollo)",
@@ -463,7 +472,8 @@
             "lng": 8.7939
           },
           "poiCat": "parque",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Plage de Porto Pollo, Corse"
         },
         {
           "hora": "13:00",
@@ -483,7 +493,8 @@
               "preco": "€20-30",
               "dist": "Praia",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "L'Escale, Porto Pollo, Corse"
             },
             {
               "nome": "A Pignata (terraço)",
@@ -528,7 +539,8 @@
           },
           "coord_unverified": true,
           "poiCat": "atracao",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Tour de Capanella, Serra-di-Ferro, Corse"
         },
         {
           "hora": "20:00",
@@ -607,7 +619,8 @@
           "coord": {
             "lat": 41.7095,
             "lng": 8.795
-          }
+          },
+          "mapsQuery": "Plage de Porto Pollo, Corse"
         },
         {
           "hora": "13:00",
@@ -627,7 +640,8 @@
               "preco": "€20-30",
               "dist": "Praia",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "L'Escale, Porto Pollo, Corse"
             },
             {
               "nome": "A Pignata (terraço)",
@@ -671,7 +685,8 @@
           "coord": {
             "lat": 41.7071,
             "lng": 8.7946
-          }
+          },
+          "mapsQuery": "Porto Pollo, Serra-di-Ferro, Corse"
         },
         {
           "hora": "20:00",
@@ -691,7 +706,8 @@
               "preco": "€35-50",
               "dist": "Porto",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "A Pignata, Porto Pollo, Corse"
             },
             {
               "nome": "L'Escale (porto)",
@@ -763,7 +779,8 @@
             "lng": 8.9741
           },
           "poiCat": "atracao",
-          "valeAPena": 3
+          "valeAPena": 3,
+          "mapsQuery": "Place Porta, Sartène, Corse"
         },
         {
           "hora": "12:15",
@@ -783,7 +800,8 @@
               "preco": "€20 família",
               "dist": "Come na ponte",
               "poiCat": "mercado",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "noMaps": true
             },
             {
               "nome": "Restaurante da Place de la Libération",
@@ -844,7 +862,8 @@
             "lat": 41.66,
             "lng": 8.96
           },
-          "coord_unverified": true
+          "coord_unverified": true,
+          "mapsQuery": "Ponte Spin'a Cavallu, Sartène, Corse"
         },
         {
           "hora": "16:30",
@@ -975,7 +994,8 @@
             "lng": 8.8702
           },
           "poiCat": "atracao",
-          "valeAPena": 3
+          "valeAPena": 3,
+          "mapsQuery": "Filitosa, Sollacaro, Corse"
         },
         {
           "hora": "12:30",
@@ -995,7 +1015,8 @@
               "preco": "€10-15",
               "dist": "Entrada",
               "poiCat": "cafe",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "mapsQuery": "Filitosa, Sollacaro, Corse"
             },
             {
               "nome": "Volta a Porto Pollo (L'Escale)",
@@ -1053,7 +1074,8 @@
             "lng": 8.7822
           },
           "poiCat": "parque",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Plage de Cupabia, Corse"
         },
         {
           "hora": "18:00",
@@ -1085,7 +1107,8 @@
               "preco": "€35-50",
               "dist": "Porto",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "A Pignata, Porto Pollo, Corse"
             },
             {
               "nome": "Le Rescator Propriano",
@@ -1185,7 +1208,8 @@
             "lng": 8.936
           },
           "poiCat": "atracao",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Belvédère de Roccapina, Corse"
         },
         {
           "hora": "09:35",
@@ -1249,7 +1273,8 @@
             "lng": 9.2665
           },
           "poiCat": "parque",
-          "valeAPena": 3
+          "valeAPena": 3,
+          "mapsQuery": "Plage de Rondinara, Corse"
         },
         {
           "hora": "13:00",
@@ -1269,7 +1294,8 @@
               "preco": "€35-50",
               "dist": "Praia",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "Chez Ange, Rondinara, Corse"
             },
             {
               "nome": "La Voile (Rondinara)",
@@ -1368,7 +1394,8 @@
           "coord": {
             "lat": 41.5044,
             "lng": 9.0978
-          }
+          },
+          "mapsQuery": "Aéroport de Figari Sud-Corse"
         },
         {
           "hora": "16:50",
@@ -1400,7 +1427,8 @@
               "preco": "€25-40",
               "dist": "Cidadela",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "mapsQuery": "U Castille, Bonifacio, Corse"
             },
             {
               "nome": "L'Archivolto (cidadela)",
@@ -1472,7 +1500,8 @@
             "lng": 9.2533
           },
           "poiCat": "parque",
-          "valeAPena": 3
+          "valeAPena": 3,
+          "mapsQuery": "Îles Lavezzi, Corse"
         },
         {
           "hora": "16:00",
@@ -1510,7 +1539,8 @@
             "lng": 9.1544
           },
           "poiCat": "cafe",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "mapsQuery": "Port de Bonifacio, Corse"
         },
         {
           "hora": "20:00",
@@ -1530,7 +1560,8 @@
               "preco": "€30-45",
               "dist": "Porto",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "Da Passano, Bonifacio, Corse"
             },
             {
               "nome": "U Castillé (cidadela)",
@@ -1589,7 +1620,8 @@
             "lng": 9.2208
           },
           "poiCat": "parque",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Plage de Piantarella, Bonifacio, Corse"
         },
         {
           "hora": "13:00",
@@ -1667,7 +1699,8 @@
             "lng": 9.1844
           },
           "poiCat": "atracao",
-          "valeAPena": 3
+          "valeAPena": 3,
+          "mapsQuery": "Phare de Pertusato, Bonifacio, Corse"
         },
         {
           "hora": "20:30",
@@ -1687,7 +1720,8 @@
               "preco": "€30-45",
               "dist": "Cidadela",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "L'Archivolto, Bonifacio, Corse"
             },
             {
               "nome": "Les Quatre Vents (porto)",
@@ -1747,7 +1781,8 @@
             "lat": 41.3875,
             "lng": 9.1544
           },
-          "coord_unverified": true
+          "coord_unverified": true,
+          "mapsQuery": "Plage de la Catena, Bonifacio, Corse"
         },
         {
           "hora": "13:00",
@@ -1767,7 +1802,8 @@
               "preco": "€30-45",
               "dist": "Porto",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "Da Passano, Bonifacio, Corse"
             },
             {
               "nome": "Piquenique no quai",
@@ -1841,7 +1877,8 @@
           "coord": {
             "lat": 41.3875,
             "lng": 9.1544
-          }
+          },
+          "mapsQuery": "Port de Bonifacio, Corse"
         },
         {
           "hora": "20:30",
@@ -1861,7 +1898,8 @@
               "preco": "€25-40",
               "dist": "Cidadela",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "mapsQuery": "U Castille, Bonifacio, Corse"
             },
             {
               "nome": "Da Passano (porto)",
@@ -1919,7 +1957,8 @@
             "lng": 9.1544
           },
           "poiCat": "atracao",
-          "valeAPena": 1
+          "valeAPena": 1,
+          "noMaps": true
         },
         {
           "hora": "13:30",
@@ -1951,7 +1990,8 @@
               "preco": "€35-50",
               "dist": "Quai",
               "poiCat": "restaurante",
-              "valeAPena": 3
+              "valeAPena": 3,
+              "mapsQuery": "Da Passano, Bonifacio, Corse"
             },
             {
               "nome": "Les Quatre Vents (porto)",
@@ -2079,7 +2119,8 @@
             "lng": 9.1544
           },
           "poiCat": "bar",
-          "valeAPena": 2
+          "valeAPena": 2,
+          "mapsQuery": "Port de Bonifacio, Corse"
         },
         {
           "hora": "20:30",
@@ -2099,7 +2140,8 @@
               "preco": "€50-70",
               "dist": "Porto",
               "poiCat": "restaurante",
-              "valeAPena": 2
+              "valeAPena": 2,
+              "mapsQuery": "Les Quatre Vents, Quai Banda del Ferro, Bonifacio, Corse"
             },
             {
               "nome": "L'Archivolto (cidadela)",
@@ -2190,7 +2232,8 @@
               "preco": "€10-15",
               "dist": "Porto",
               "poiCat": "cafe",
-              "valeAPena": 1
+              "valeAPena": 1,
+              "mapsQuery": "Porto di Santa Teresa Gallura, Sardegna, Italia"
             },
             {
               "nome": "Piazza Vittorio Emanuele",

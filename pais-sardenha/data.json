@@ -81,7 +81,8 @@
             "lng": 9.5026
           },
           "valeAPena": 2,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Corso Umberto I, Olbia, Sardegna"
         },
         {
           "hora": "20:30",
@@ -568,7 +569,8 @@
             "lng": 8.3997
           },
           "valeAPena": 3,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Spiaggia di Is Arutas, Cabras, Sardegna"
         },
         {
           "hora": "12:30",
@@ -662,7 +664,8 @@
             "lng": 8.4058
           },
           "valeAPena": 2,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Spiaggia di Putzu Idu, San Vero Milis, Sardegna"
         },
         {
           "hora": "20:30",
@@ -805,7 +808,8 @@
             }
           ],
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Bosa, Oristano, Sardegna"
         },
         {
           "hora": "13:00",
@@ -871,7 +875,8 @@
             "lng": 8.47455
           },
           "valeAPena": 1,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Bosa Marina, Bosa, Sardegna"
         },
         {
           "hora": "18:30",
@@ -964,7 +969,8 @@
             "lng": 8.4833
           },
           "valeAPena": 2,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Stagno di Cabras, Sardegna"
         },
         {
           "hora": "09:00",
@@ -1574,7 +1580,8 @@
             "lng": 8.3073
           },
           "valeAPena": 3,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Carloforte, Isola di San Pietro, Sardegna"
         },
         {
           "hora": "13:00",
@@ -1640,7 +1647,8 @@
             "lng": 8.29472
           },
           "valeAPena": 2,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Spiaggia La Bobba, Carloforte, Sardegna"
         },
         {
           "hora": "18:30",
@@ -1792,7 +1800,8 @@
             "lng": 8.3797
           },
           "valeAPena": 2,
-          "poiCat": "parque"
+          "poiCat": "parque",
+          "mapsQuery": "Cala Domestica, Buggerru, Sardegna"
         },
         {
           "hora": "17:30",
@@ -2785,7 +2794,8 @@
             "lng": 9.35583
           },
           "valeAPena": 2,
-          "poiCat": "atracao"
+          "poiCat": "atracao",
+          "mapsQuery": "Tomba dei Giganti di Coddu Vecchiu, Arzachena, Sardegna"
         },
         {
           "hora": "16:30",

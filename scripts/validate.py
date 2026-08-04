@@ -441,12 +441,18 @@ def check_maps_query(days_text):
 
 
 def check_wt_maps_query(days_text):
-    """Avisa quando um walking tour tem `mapsQuery` em ALGUMAS paradas e não em todas.
+    """BLOQUEIA parada de walking tour ou ponto de rota do dia sem `mapsQuery`.
 
-    A rota por nome exige mapsQuery em TODAS (uma parada ruim mata a rota inteira), então
-    um tour parcialmente preenchido cai pra coordenadas — o Maps mostra "Dropped pin" em vez
-    dos nomes, e ninguém percebe. Corte silencioso é o anti-padrão; ou preenche tudo, ou
-    assume a coordenada de propósito.
+    Pedido do Tobia (ago/2026), depois de dois prints em campo: *"force pra sempre verificar
+    uma a uma nos walking tours ou roadtrips"*. A razão é que o fallback é silencioso — sem
+    `mapsQuery` em TODAS as paradas, a rota cai pra coordenada e o Google Maps mostra
+    "Dropped pin" em vez do nome do lugar. Funciona, e é inútil pra quem está dirigindo.
+
+    Exigir o campo obriga alguém a decidir, ponto a ponto, qual é o nome do lugar — que é
+    metade da verificação. A outra metade (o Maps acha esse nome?) é o `FACTCHECK.md` §4a.
+
+    Não se aplica a stop `transit`, a card `noMaps` (não é lugar) nem a card 🔄 ALT (fora da
+    rota por convenção). Dia com menos de 2 pontos roteáveis não é rota.
     """
     if not days_text:
         return
@@ -454,26 +460,44 @@ def check_wt_maps_query(days_text):
         days = json.loads(days_text)
     except Exception:
         return
-    parciais, por_nome, por_coord = [], 0, 0
+
+    def alvo(s):
+        opts = s.get('opcoes') or []
+        return opts[0] if (s.get('tipo') == 'opcoes' and opts) else s
+
+    sem_wt, sem_rota, tours = [], [], 0
     for day in days:
         for s in day.get('stops', []):
             for t in s.get('walkingTours', []):
-                paradas = t.get('stops', [])
-                if not paradas:
-                    continue
-                com = sum(1 for w in paradas if (w.get('mapsQuery') or '').strip())
-                if com == len(paradas):
-                    por_nome += 1
-                elif com == 0:
-                    por_coord += 1
-                else:
-                    parciais.append((t.get('nome', '?')[:34], com, len(paradas)))
-    if parciais:
-        amostra = ' · '.join(f'"{n}" {c}/{tot}' for n, c, tot in parciais[:3])
-        warn(f"{len(parciais)} walking tour(s) com mapsQuery PARCIAL — a rota cai pra coordenada "
-             f"(\"Dropped pin\" no Maps) sem avisar: {amostra}")
-    if por_nome or por_coord:
-        ok(f"Rotas de walking tour: {por_nome} por nome · {por_coord} por coordenada")
+                tours += 1
+                for w in t.get('stops', []):
+                    if not (w.get('mapsQuery') or '').strip():
+                        sem_wt.append(f"{t.get('nome','?')[:22]} · {w.get('nome','?')[:26]}")
+        roteaveis = [s for s in day.get('stops', [])
+                     if s.get('tipo') != 'transit' and s.get('coord') and not s.get('noMaps')
+                     and not (s.get('nome') or '').startswith('🔄')]
+        if len(roteaveis) < 2:
+            continue
+        for s in roteaveis:
+            a = alvo(s)
+            if a.get('noMaps'):
+                continue
+            if not ((a.get('mapsQuery') or '') or (s.get('mapsQuery') or '')).strip():
+                sem_rota.append(f"[{day.get('date','?')}] {s.get('nome','?')[:34]}")
+
+    if sem_wt:
+        err(f"{len(sem_wt)} parada(s) de walking tour sem mapsQuery — a rota cai pra coordenada "
+            f'("Dropped pin" no Maps): {" · ".join(sem_wt[:3])}'
+            + (f" · +{len(sem_wt)-3}" if len(sem_wt) > 3 else ""))
+    elif tours:
+        ok(f"Walking tours: todas as paradas com mapsQuery ({tours} tour(s))")
+
+    if sem_rota:
+        err(f"{len(sem_rota)} ponto(s) de rota do dia sem mapsQuery — a rota do dia vira "
+            f'"Dropped pin": {" · ".join(sem_rota[:3])}'
+            + (f" · +{len(sem_rota)-3}" if len(sem_rota) > 3 else ""))
+    else:
+        ok("Rotas do dia: todos os pontos com mapsQuery")
 
 
 def check_no_hardcoded_region(content):

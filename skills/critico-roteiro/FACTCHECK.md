@@ -65,6 +65,23 @@ Ela bloqueia busca genérica, waypoint fantasma e ponto repetido. O que ela **n�
   **não tem POI** (abandonada desde 1825) e o nome buscável é a praia.
 - **`mapsQuery` não recebe `MAPS_REGION`** — confira você que ficou inequívoco. O roteiro dos
   pais tem um dia em Bonifacio (Córsega/França) com `maps_region: "Sardegna, Italia"`.
+- **`mapsQuery` é OBRIGATÓRIO em toda parada de walking tour e em todo ponto de rota do dia**
+  — o `validate.py` bloqueia (`check_wt_maps_query`). Sem ele a rota cai pra coordenada e o
+  Maps mostra "Dropped pin"; funciona, e é inútil pra quem está dirigindo. Exigir o campo
+  obriga a decidir o nome **ponto a ponto**, que é metade da verificação.
+- **A outra metade é conferir cada um, um a um** — o campo estar preenchido não prova que o
+  Google acha. Rode `maps-audit.py --urls`, percorra a lista e **marque cada query**:
+
+  | Veredito | O que fazer |
+  |---|---|
+  | acha o lugar certo | segue |
+  | acha outro lugar | corrigir a `mapsQuery` e re-conferir |
+  | não acha nada | trocar pelo POI mais próximo que exista, ou `noMaps` |
+
+  Derivar `mapsQuery` do nome em massa **não conta como conferência**: numa derivação
+  automática de 39 paradas do Marais, duas saíram erradas (`Free'P'Star · friperies` virou
+  `friperies`, e `5/7 rue de Fourcy` levou uma barra que quebra a URL `/dir/`). Automação
+  propõe; a conferência item a item é que aprova.
 - Abrir 2-3 URLs de rota no celular fecha a conta. Nada substitui isso.
 
 ### 4b · Os links do `links_map` respondem?
