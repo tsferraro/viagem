@@ -60,14 +60,27 @@ Separar por tipo é trabalho do Claude depois, não dele. Isso foi decisão expl
 
 ---
 
-## Pendência única (é do Tobia, não sua)
+## ✅ Endpoint ATIVO desde 2026-08-04 · verificado ponta a ponta
 
-A URL `/exec` do Apps Script. Passo-a-passo em `scripts/apps-script-relatos.gs`. Quando ela
-chegar: põe em `feedback_url` no `data.json` da viagem e rebuilda. **Só isso.** Nada de código
-muda.
+O Apps Script está publicado e a `feedback_url` já está em `corsica/data.json` e
+`pais-sardenha/data.json`. O Tobia confirmou os dois testes: `/exec` responde
+`{"status":"vivo"}` e um relato escrito no app apareceu na aba **Relatos** da planilha.
 
-Enquanto não chega, a função **já é útil**: relatos ficam guardados no aparelho e saem pelo
-"Copiar tudo".
+**Viagem nova**: copie o valor de `feedback_url` de um `data.json` existente. É a mesma URL pra
+todos os roteiros — a planilha separa pela coluna `Roteiro`. Não publique um Apps Script novo.
+
+## ⚠️ Esta sessão NÃO consegue ler a planilha
+
+`docs.google.com` e `script.google.com` estão **bloqueados** no sandbox (`CONNECT tunnel failed,
+403`). O conector de Drive também exige aprovação e não resolveu. Ou seja: os relatos chegam na
+planilha, mas **a sessão que vai processá-los não os enxerga sozinha**.
+
+Caminhos que funcionam hoje, em ordem de conveniência:
+1. Tobia cola o conteúdo no chat (do botão **📋 Copiar tudo**, ou direto da planilha).
+2. Uma sessão desktop com conector de Drive autorizado lê e traz.
+
+Não peça credencial de service account pra contornar isso — chave privada em chat é exposição
+permanente, e nenhuma tool aqui autentica assim.
 
 ---
 
