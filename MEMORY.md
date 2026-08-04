@@ -72,6 +72,79 @@ pra montagem de qualquer roteiro futuro.
 
 ---
 
+## ⚠️ Restaurante fantasma · a classe de erro que nenhum linter pega (2026-08-03 · pais-sardenha)
+
+Descoberta ao varrer os 55 estabelecimentos do roteiro dos pais **depois** de ele já ter tirado
+**37/40 "Excelente"** no `audit.py` e passado no `validate.py`. Resultado da varredura:
+**15 dos 55 não existem, ou não estão onde o roteiro diz, ou fecharam.**
+
+### O que a nota não mede
+`validate.py` checa schema, enum, coord em range. `audit.py` checa profundidade de campo, preço
+datado, link vivo, coord de 4 casas. **Nenhum dos dois pergunta se o lugar existe.** Um roteiro
+pode ser impecável nos dois e mandar a família a um endereço vazio às 20h30. Prova empírica de que
+a régua mede *formato*, não *verdade* — que é exatamente o motivo de a `critico-roteiro` ter um
+`FACTCHECK.md` separado. **Este roteiro nunca passou por ele** (foi montado antes de o protocolo
+existir); nenhuma viagem anterior a jul/2026 passou.
+
+### O sinal que separa o real do inventado: o nome genérico
+Padrão limpo, sem exceção nesta varredura de 55:
+
+| Confirmam-se | Não se confirmam |
+|---|---|
+| `Al Tonno di Corsa` · `Sa Bell'e Crabasa` · `Giagoni in Piazza` · `Ittiturismo I Due Fratelli` · `Locanda di Corte` · `Da Cesare` · `Les Quatre Vents` · `Il Rifugio` | `Da Rino` · `Trattoria Da Romolo` · `Ai Pescatori` · `Ristorante La Torre` · `Trattoria del Borgo` · `Da Lucio` · `Trattoria Aurora` · `Café Nina` · `Trattoria Marrosu` · `Pizzeria Pulcinella` |
+
+Nome distintivo (dialeto local, sobrenome real, referência cultural) → existe.
+Nome genérico plausível (`Trattoria del <substantivo>`, `Da <primeiro nome italiano>`) → é o
+preenchimento mais provável, não uma lembrança. **Suspeite do nome que você conseguiria inventar.**
+
+### A causa raiz é a cota de 3 opções
+27 refeições × 3 opções = **81 slots**. Vilas de 3 mil habitantes não têm 3 restaurantes que valham
+a pena. A cota, aplicada cegamente, força o preenchimento da terceira vaga — e é lá que o fantasma
+nasce. **Regra**: slot sem candidato real vira opção honesta e genérica de propósito
+(_"bares da praça de San Pantaleo · escolha no local"_, _"quiosques sazonais, sem nome fixo · vá pela fila"_),
+**nunca** um nome. Duas opções reais > três com uma inventada.
+
+### Terceira variante do erro: existiu e fechou
+`Ristorante Gallura` (Olbia) é real, histórico, elogiado por Veronelli como "o melhor do mundo" —
+e **fechou por despejo em janeiro de 2014**, depois de 70 anos. Estava no roteiro duas vezes, com o
+endereço que não é mais dele. Buscar o nome confirma que existe; só buscar `<nome> + chiuso/riapertura`
+revela que não opera. **Junta-se ao Le Lido (lugar errado) e à Auberge Coralli (local errado) da
+Córsega: mesma família, três variantes — não existe · não é ali · não está mais aberto.**
+
+### Endereço vale mais que coordenada
+Nesta sessão: **0 de 4** tentativas de obter lat/lng por busca, **4 de 4** de obter endereço.
+E os dois consumidores da informação preferem endereço: `getMapsUrl()` resolve pelo **nome**
+(por isso a convenção do parêntese) e o **My Maps geocodifica o endereço do CSV sozinho**.
+Ordem de prioridade ao documentar um estabelecimento: **nome + endereço entre parênteses > telefone > coordenada**.
+
+### Horário por DIA DA SEMANA vale pra restaurante também
+A lição do Marché aux Fleurs (acima) estava aplicada só a atração. Nesta varredura:
+`Sa Bell'e Crabasa` fecha **segundas** e estava como jantar de uma segunda-feira; `Il Rifugio`
+fecha **quartas**; Museu de Càbras e Compendio Garibaldino fecham **segundas**. Toda âncora — atração
+*ou* restaurante — precisa do dia da semana conferido contra a data real do roteiro.
+
+### Protocolo que passa a valer
+1. Todo estabelecimento nomeado exige uma busca própria: `"<nome>" <cidade> indirizzo` — o retorno tem que trazer **endereço, telefone ou guia**. Sem isso, não entra com nome.
+2. Para instituições antigas ou "históricas", **segunda busca**: `<nome> chiuso OR riapertura OR trasferito`.
+3. Conferir **dia da semana de fechamento** contra a data real do stop.
+4. Rodar `FACTCHECK.md` em toda viagem herdada de antes de jul/2026 — não só nas novas.
+
+---
+
+## Sandbox cloud · rede externa (2026-08-03 · atualiza a nota de geocoding acima)
+
+Testado nesta sessão, **tudo** devolve `000`/`403` (falha de CONNECT no proxy):
+Nominatim · Photon/Komoot · geocode.maps.co · Geoapify · open-meteo geocoding · Overpass ·
+openstreetmap.org · **it.wikipedia.org** · e a maioria dos sites oficiais via WebFetch
+(monteprama.it, coopculture.it, museocabras.it, gesecoarzachena.it, calagononecrociere.it).
+
+Consequências práticas:
+- **`--check-links` é inútil em sessão cloud** — devolve "link quebrado" pra 100% das URLs, inclusive as vivas. Nunca remova link do `LINKS_MAP` com base nele aqui.
+- **WebSearch é o único canal.** URL que aparece como resultado de busca está viva e indexada — é a melhor confirmação disponível neste ambiente.
+- Coordenada só sai de busca quando a fonte publica DMS (`41°13'01"N`). **Truque útil**: converter DMS pra decimal gera naturalmente 5+ casas, o que contorna o bug do `coord_4dec` (que usa `str()` e lê `41.8440` como 3 casas, porque JSON não guarda zero à direita).
+
+---
+
 ## Evolução da skill
 
 ### Padrão-ouro de profundidade · 2026-07-12 (Itália: Roma+Toscana+Florença)

@@ -78,3 +78,44 @@ guia. O card anterior tratava como trilha livre de 30-45min. Plano B sem reserva
 - Praia rasa **vale mais** (Maladroxia, Putzu Idu, La Bobba).
 - O tour de barco de dia inteiro no Golfo di Orosei (8h) é ⭐⭐⭐ pro casal e provavelmente
   inviável com criança de 3 anos — reavaliar do zero, não herdar.
+
+---
+
+## ⚠️ Restaurantes: 15 dos 55 eram fantasma (varredura 2026-08-03)
+
+**Todos os dias compartilhados foram afetados.** O roteiro da família NÃO deve herdar as opções
+de refeição do roteiro anterior — herde as desta versão corrigida, ou refaça com busca própria.
+
+Removidos por não existirem / estarem fechados:
+
+| Onde | Fantasma | Substituído por (confirmado, com endereço) |
+|---|---|---|
+| Olbia | `Ristorante Gallura` — **fechado por despejo desde jan/2014** | By Night (Viale Aldo Moro 201/A) |
+| Olbia | `Da Rino`, `Trattoria Da Romolo` | Il Vecchio Porto · Bistrot Bontade (Via Genova 65) |
+| Bosa | `Ai Pescatori` | Locanda di Corte (Via del Pozzo 7) · Borgo Sant'Ignazio |
+| Sinis | `Ristorante Mediterraneo` | Quiosques de San Giovanni (sazonais, sem nome fixo) · Da Cesare/Maluentu (Via Lungomare 36, Putzu Idu) |
+| Santa Teresa | `Ristorante La Torre`, `Trattoria del Borgo`, `L'Osteria` | Millo (via Garibaldi 4, Michelin) · da Thomas (via Val d'Aosta) · La Lampara (Via Sandro Pertini 6) · Il Grottino (Via del Mare 14) |
+| Sant'Antioco | `Locanda del Borgo` | I Vinattieri (Corso V. Emanuele) · Is Solus Bistrot (Corso V. Emanuele 11) · Max Pizzeria (Corso V. Emanuele 85) |
+| Nuoro | `Trattoria Marrosu` | Il Rifugio (Via A. Mereu 28) — **fecha quartas** |
+| Cala Gonone | `Pizzeria Pulcinella`, `Trattoria del Marinaio` | San Francisco (Via Magellano 8) · La Poltrona (Via Vasco de Gama 22) · Zio Pedrillo (Lungomare Palmasera) |
+| La Maddalena | `Da Lucio`, `Trattoria Aurora` | Ristorante Caprera (via T. Zonza 3) · Noir Lounge (Piazza XXIII Febbraio 10) |
+| San Pantaleo | `Café Nina` | Bares da praça (genérico assumido) |
+
+Endereços corrigidos em estabelecimentos que existem:
+
+- **Il Caminetto (Càbras)**: era "Via Cristoforo Colombo 8" → **Via Cesare Battisti 8**. O endereço
+  errado era, na verdade, o do *I Due Fratelli* em Sant'Antioco (Lungomare Cristoforo Colombo 72) —
+  um endereço migrou de um estabelecimento pro outro.
+- **Hotel Ristorante Lounge Maladroxia** → **Lu' Hotel Maladroxia, Via Golfo di Palmas 16**.
+
+Fechamento semanal a respeitar (conferir contra as datas do roteiro novo):
+
+| Estabelecimento / sítio | Fecha |
+|---|---|
+| Sa Bell'e Crabasa (Càbras) | segundas |
+| Il Rifugio (Nuoro) | quartas |
+| Bistrot Bontade (Olbia) | segundas |
+| Museo Civico de Càbras | segundas |
+| Compendio Garibaldino (Caprera) | segundas |
+
+No roteiro dos pais isso já causou um erro: **Sa Bell'e Crabasa estava como jantar de segunda 10/Ago**.

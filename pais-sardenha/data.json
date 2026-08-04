@@ -88,35 +88,35 @@
           "periodo": "noite",
           "tipo": "opcoes",
           "nome": "Jantar Olbia · 1ª noite Sardenha",
-          "cat": "3 opções no centro",
+          "cat": "3 opções no centro · todas conferidas em ago/2026",
           "coord": {
             "lat": 40.9238,
             "lng": 9.5026
           },
           "opcoes": [
             {
-              "nome": "Ristorante Gallura (Corso Umberto)",
-              "desc": "Cozinha tradicional sarda · fregola con vongole, polpo grelhado · ambiente clássico",
-              "preco": "€35-50",
-              "dist": "Centro",
+              "nome": "Ristorante By Night (Viale Aldo Moro 201/A, Olbia)",
+              "desc": "Aberto em 1985 como spaghetteria, hoje é peixe fresco: paccheri com camarão-vermelho sobre creme de abobrinha, atum em crosta de pão, seadas de sobremesa",
+              "preco": "€30-70",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "Viale Aldo Moro · 10min de carro do centro"
             },
             {
-              "nome": "Da Rino (perto do porto)",
-              "desc": "Peixe fresco · bottarga, ravioli sardi · familiar · clássico",
-              "preco": "€30-45",
-              "dist": "Porto",
+              "nome": "Il Vecchio Porto (centro de Olbia · junto ao porto velho)",
+              "desc": "Ristorante-pizzeria de cozinha sarda · a opção mais informal das três, boa pra uma primeira noite sem cerimônia",
+              "preco": "€25-40",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé do Corso Umberto"
             },
             {
-              "nome": "Trattoria Da Romolo",
-              "desc": "Mais casual · carne de cordeiro grelhada, queijos sardos · preço bom",
-              "preco": "€25-35",
-              "dist": "Centro",
+              "nome": "Bistrot Bontade (Via Genova 65, Olbia)",
+              "desc": "Bistrô moderno no centro · pratos pra dividir, aperitivo bem-feito · fecha às segundas",
+              "preco": "€25-40",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé do Corso Umberto"
             }
           ]
         }
@@ -388,28 +388,28 @@
           },
           "opcoes": [
             {
-              "nome": "Caffè do porto",
-              "desc": "Panini + café · 30min · economiza tempo",
+              "nome": "Café do porto de Santa Teresa (junto ao terminal)",
+              "desc": "Panini e café em 30min · o objetivo aqui é não perder tempo, o dia tem 3h30 de estrada pela frente",
               "preco": "€10-15",
-              "dist": "Porto",
               "valeAPena": 1,
-              "poiCat": "cafe"
+              "poiCat": "cafe",
+              "dist": "porto · a pé do terminal"
             },
             {
-              "nome": "Trattoria Piazza Vittorio Emanuele",
-              "desc": "Prato do dia €15 · sem perda de tempo · simples",
-              "preco": "€15-20",
-              "dist": "10min a pé",
-              "valeAPena": 1,
-              "poiCat": "restaurante"
+              "nome": "Il Grottino (Via del Mare 14, Santa Teresa di Gallura)",
+              "desc": "Ristorante-pizzeria a 300m do porto · prato do dia sai rápido",
+              "preco": "€15-25",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "dist": "300m do porto · a pé"
             },
             {
               "nome": "Picnic comprado",
-              "desc": "Padaria local · come no caminho · economia de 1h",
+              "desc": "Padaria de Santa Teresa · come-se na estrada e economiza uma hora",
               "preco": "€10",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "padaria"
+              "poiCat": "padaria",
+              "dist": "padaria do centro · a pé"
             }
           ]
         },
@@ -553,35 +553,35 @@
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço San Giovanni di Sinis (junto à entrada de Tharros)",
-          "cat": "Vila pesqueira próxima",
+          "cat": "Vila pesqueira ao lado de Tharros",
           "coord": {
             "lat": 39.87486,
             "lng": 8.44101
           },
           "opcoes": [
             {
-              "nome": "Beach restaurant San Giovanni",
-              "desc": "Pé na areia · peixe grelhado, fregola alle vongole · simples",
+              "nome": "Quiosques de San Giovanni di Sinis (junto à entrada de Tharros)",
+              "desc": "Pé na areia · peixe grelhado e fregola alle vongole · são barracas sazonais, sem nome fixo de um ano pro outro — escolha pela fila",
               "preco": "€25-35",
-              "dist": "Praia",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "ao lado da entrada de Tharros"
             },
             {
-              "nome": "Ristorante Mediterraneo",
-              "desc": "Praia · mais elaborado · reserve antecipado",
-              "preco": "€35-45",
-              "dist": "San Giovanni",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "nome": "Da Cesare · Maluentu (Via Lungomare 36, Putzu Idu)",
+              "desc": "Hotel dos anos 1960 de frente pra praia, hoje com a cozinha do chef Leonardo Marongiu · 12km ao norte, ~20min · vale se quiserem trocar o almoço simples por um bom almoço",
+              "preco": "€40-60",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "12km ao norte · ~20min de carro"
             },
             {
               "nome": "Picnic na praia",
-              "desc": "Comprou na padaria de Càbras antes · come com vista",
+              "desc": "Comprado na padaria de Càbras antes de sair · come-se com o quartzo debaixo dos pés",
               "preco": "€15",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "padaria"
+              "poiCat": "padaria",
+              "dist": "onde vocês estiverem"
             }
           ]
         },
@@ -650,28 +650,28 @@
           },
           "opcoes": [
             {
-              "nome": "Da Cesare (Putzu Idu beach)",
-              "desc": "Pé na areia · peixe direto · jantar com luz pôr do sol",
-              "preco": "€30-45",
-              "dist": "Praia",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
-            },
-            {
-              "nome": "Volta Càbras · Il Caminetto",
-              "desc": "Bottarga · institução · reserva",
-              "preco": "€35-50",
-              "dist": "Càbras",
+              "nome": "Da Cesare · Maluentu (Via Lungomare 36, Putzu Idu)",
+              "desc": "Pé na areia, com o sol caindo no mar · tel. 0785 389021",
+              "preco": "€40-60",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "Putzu Idu · 12km de Càbras · ~15min"
             },
             {
-              "nome": "Jantar leve em casa/airbnb",
-              "desc": "Compra Carrefour · descanso · neta dorme cedo",
+              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
+              "desc": "Volta a Càbras · bottarga, instituição da vila · reservar",
+              "preco": "€35-50",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "centro de Càbras · a pé da base"
+            },
+            {
+              "nome": "Jantar leve em casa",
+              "desc": "Compra no supermercado de Càbras · descanso depois de um dia de sol",
               "preco": "€20",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "dist": "na base"
             }
           ]
         }
@@ -786,28 +786,28 @@
           },
           "opcoes": [
             {
-              "nome": "Ai Pescatori (Lungofiume)",
-              "desc": "Beira do rio · spaghetti bottarga, peixe local · clássico",
-              "preco": "€30-40",
-              "dist": "Rio",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
-            },
-            {
-              "nome": "Borgo Sant'Ignazio",
-              "desc": "Cidade velha · mais romântico · cordeiro sardo, pasta caseira",
-              "preco": "€35-45",
-              "dist": "Sa Costa",
+              "nome": "Locanda di Corte (Via del Pozzo 7, Bosa)",
+              "desc": "No centro histórico, num pátio interno · fregola alle vongole e tagliolini ao nero di seppia · é um dos poucos lugares onde se bebe a rara <em>Malvasia di Bosa DOC</em>",
+              "preco": "€30-45",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro histórico de Bosa · a pé"
             },
             {
-              "nome": "Pizzeria Locanda di Corte",
-              "desc": "Casual · pizza forno lenha · ok com a neta",
-              "preco": "€20-25",
-              "dist": "Centro",
+              "nome": "Borgo Sant'Ignazio (bairro Sant'Ignazio, Bosa · a caminho do castelo)",
+              "desc": "Duas casas de pedra unidas contra a encosta, quatro salas e um belvedere na entrada · mar e terra, cozinha tradicional",
+              "preco": "€25-35",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "dist": "bairro Sant'Ignazio · subida a pé"
+            },
+            {
+              "nome": "Padaria do Lungofiume + picnic à beira do Temo",
+              "desc": "Se o dia render mais caminhada que fome · come-se na margem, olhando as antigas tanarias",
+              "preco": "€12",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "padaria",
+              "dist": "Lungofiume · a pé"
             }
           ]
         },
@@ -854,35 +854,35 @@
           "periodo": "noite",
           "tipo": "opcoes",
           "nome": "Jantar leve Càbras",
-          "cat": "Dia foi cheio",
+          "cat": "Dia foi cheio · atenção: Sa Bell'e Crabasa fecha às segundas",
           "coord": {
             "lat": 39.93003,
             "lng": 8.53144
           },
           "opcoes": [
             {
-              "nome": "Trattoria Sa Bell'e Crabasa",
-              "desc": "Simples · prato do dia · descanso",
-              "preco": "€20-30",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
+              "desc": "A instituição da bottarga em Càbras · num dia cheio, é o jantar que não exige decisão",
+              "preco": "€35-50",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "centro de Càbras · a pé da base"
             },
             {
               "nome": "Casa",
-              "desc": "Salada + queijo sardo + vinho Vermentino · descontração",
+              "desc": "Salada, queijo sardo e um Vermentino · descompressão depois de Bosa",
               "preco": "€15",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "dist": "na base"
             },
             {
-              "nome": "Sa Funta (se ainda aguentam)",
-              "desc": "Repete · pratos diferentes · vale",
+              "nome": "Sa Funta (Via Giuseppe Garibaldi 25, Càbras)",
+              "desc": "Enguia defumada e choco na Vernaccia · cozinha de lagoa, para paladar curioso · as avaliações recentes são fracas, vá pelo que é diferente, não pelo consenso",
               "preco": "€30-45",
-              "dist": "Centro",
-              "valeAPena": 3,
-              "poiCat": "restaurante"
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "dist": "centro de Càbras · a pé da base"
             }
           ]
         }
@@ -1141,28 +1141,28 @@
           },
           "opcoes": [
             {
-              "nome": "Trattoria Iglesias centro",
-              "desc": "Cidade mineira · 30min desvio · culinária do interior · prato do dia €15-20",
+              "nome": "Iglesias · almoço no centro histórico",
+              "desc": "Cidade mineira · 30min de desvio · várias trattorias na Piazza Sella e arredores · escolha no local",
               "preco": "€20-30",
-              "dist": "Iglesias",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "30min de desvio pela SS126"
             },
             {
               "nome": "Continua até Maladroxia (rápido)",
               "desc": "Almoço tardio na praia · ganha tempo · mais cedo na hospedagem",
               "preco": "—",
-              "dist": "—",
+              "dist": "sem desvio · segue direto",
               "valeAPena": 1,
               "poiCat": "restaurante"
             },
             {
-              "nome": "Hotel Ristorante Lounge Maladroxia",
-              "desc": "Praia · terraço com vista mar · cozinha simples",
+              "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
+              "desc": "Chegar e almoçar na base, sem desvio · terraço com vista de mar",
               "preco": "€25-35",
-              "dist": "Praia",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "na própria base"
             }
           ]
         },
@@ -1205,28 +1205,28 @@
           },
           "opcoes": [
             {
-              "nome": "Hotel Ristorante Lounge Bar Maladroxia",
-              "desc": "Praia · terraço panorâmico · cozinha sarda casual",
+              "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
+              "desc": "A 180m da praia · duas varandas com vista de mar, cozinha sarda tradicional",
               "preco": "€25-35",
-              "dist": "Praia",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "na própria base"
             },
             {
-              "nome": "Ittiturismo I Due Fratelli",
-              "desc": "Cooperativa pescadores Sant'Antioco · 15min carro · peixe top fresco · noite especial",
+              "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
+              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 · 15min de carro",
               "preco": "€35-50",
-              "dist": "15min",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "15min de carro"
             },
             {
-              "nome": "Ristorante Da Silvana (lagoa)",
-              "desc": "Sant'Antioco · rústico · preços bons · local favorito",
+              "nome": "Ristorante Da Silvana (Località Is Loddus, Sant'Antioco)",
+              "desc": "Rústico, à beira da lagoa, com mesas fora e toldo · peixe de qualidade a preço honesto",
               "preco": "€25-35",
-              "dist": "20min",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "12min de carro · Località Is Loddus"
             }
           ]
         }
@@ -1350,28 +1350,28 @@
           },
           "opcoes": [
             {
-              "nome": "Trattoria de Sant'Antioco",
-              "desc": "Centro · pratos sardos clássicos · preço bom",
-              "preco": "€20-30",
-              "dist": "Centro",
+              "nome": "I Vinattieri (Corso Vittorio Emanuele, Sant'Antioco)",
+              "desc": "Enoteca no corso principal · pratos locais com Vermentino, Cannonau e Carignano del Sulcis a copo",
+              "preco": "€25-35",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "no corso, meio do walking tour"
             },
             {
-              "nome": "Locanda del Borgo",
-              "desc": "Romântico · cozinha de mar e terra · reserva",
-              "preco": "€35-45",
-              "dist": "Centro",
+              "nome": "Is Solus Bistrot (Corso Vittorio Emanuele 11, Sant'Antioco)",
+              "desc": "Bistrô de sanduíches bem-feitos · rápido, no meio do walking tour",
+              "preco": "€12-20",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "cafe",
+              "dist": "no corso, meio do walking tour"
             },
             {
               "nome": "Picnic mira-mar",
-              "desc": "Comprou padaria local · come perto da Basílica",
+              "desc": "Comprado na padaria local · come-se perto da basílica, na parte alta",
               "preco": "€15",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "padaria"
+              "poiCat": "padaria",
+              "dist": "onde vocês estiverem"
             }
           ]
         },
@@ -1413,28 +1413,28 @@
           },
           "opcoes": [
             {
-              "nome": "Hotel Ristorante Lounge",
-              "desc": "Praia · vista mar · variedade de pratos",
+              "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
+              "desc": "A 180m da praia · duas varandas com vista de mar, cozinha sarda tradicional · a pé da hospedagem",
               "preco": "€25-35",
-              "dist": "Praia",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "na própria base"
             },
             {
-              "nome": "Ittiturismo I Due Fratelli",
-              "desc": "Peixe top · sai Maladroxia 15min · vale o jantar especial",
+              "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
+              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107",
               "preco": "€35-50",
-              "dist": "15min",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "15min de carro"
             },
             {
               "nome": "Casa",
-              "desc": "Compra Sant'Antioco · simples · relax",
+              "desc": "Compra em Sant'Antioco · jantar simples depois do dia de museu",
               "preco": "€20",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "dist": "na base"
             }
           ]
         }
@@ -1521,28 +1521,28 @@
           },
           "opcoes": [
             {
-              "nome": "Al Tonno di Corsa (Via Marconi 47)",
-              "desc": "Michelin · institução desde 1980 · ventresca seared, tagliatelle ragù atum · reserva absoluta",
+              "nome": "Al Tonno di Corsa (Via Guglielmo Marconi 47, Carloforte)",
+              "desc": "Guia Michelin · ventresca selada e tagliatelle ao ragù de atum · tel. 0781 855106 · reservar com antecedência",
               "preco": "€60-90",
-              "dist": "Centro",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro de Carloforte · a pé do porto"
             },
             {
-              "nome": "Osteria della Tonnara (porto)",
-              "desc": "Casual · atum em mil formas · waterfront com vista",
+              "nome": "Osteria della Tonnara (Corso Battellieri 36, Carloforte)",
+              "desc": "Na beira-mar, de frente pro porto e pras salinas · <em>cassulli</em> com tomate, pesto e atum · tel. 0781 855734",
               "preco": "€30-45",
-              "dist": "Porto",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "beira-mar · a pé do porto"
             },
             {
-              "nome": "Da Nicolo",
-              "desc": "Trattoria simples · atum a preço bom · local-favorito",
-              "preco": "€25-35",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "nome": "Ristorante Da Nicolo (Corso Cavour 32, Carloforte)",
+              "desc": "Da família Pomata, há décadas · Guia Michelin · o mais elegante dos três · tel. 0781 854048",
+              "preco": "€50-70",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "Corso Cavour · a pé do porto"
             }
           ]
         },
@@ -1596,28 +1596,28 @@
           },
           "opcoes": [
             {
-              "nome": "Hotel Ristorante Lounge",
-              "desc": "Praia · jantar leve · vinho · descanso",
+              "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
+              "desc": "Jantar leve e vinho · o almoço em Carloforte foi pesado",
               "preco": "€25-35",
-              "dist": "Praia",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "na própria base"
             },
             {
               "nome": "Casa",
-              "desc": "Salada + queijo + vinho · neta dorme cedo",
+              "desc": "Salada, queijo e Vermentino",
               "preco": "€15",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "dist": "na base"
             },
             {
-              "nome": "Pizza Sant'Antioco",
-              "desc": "Pizzaria simples · 15min · ok família · take away possível",
+              "nome": "Max Pizzeria (Corso Vittorio Emanuele 85, Sant'Antioco)",
+              "desc": "Pizza simples a 15min de carro · dá pra levar embora",
               "preco": "€20-25",
-              "dist": "15min",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "15min de carro · Sant'Antioco"
             }
           ]
         }
@@ -1743,28 +1743,28 @@
           },
           "opcoes": [
             {
-              "nome": "Ittiturismo I Due Fratelli (Sant'Antioco)",
-              "desc": "Cooperativa pescadores · peixe top · vinho · noite especial · 15min",
+              "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
+              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 · última noite todos juntos",
               "preco": "€40-55",
-              "dist": "15min",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "15min de carro"
             },
             {
-              "nome": "Hotel Ristorante Lounge",
-              "desc": "Praia · romântico · jantar tranquilo",
+              "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
+              "desc": "Pé na praia, sem sair da base · jantar tranquilo",
               "preco": "€30-40",
-              "dist": "Praia",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "na própria base"
             },
             {
-              "nome": "Locanda del Borgo (Sant'Antioco)",
-              "desc": "Charme · cozinha de terra e mar",
-              "preco": "€35-45",
-              "dist": "15min",
+              "nome": "Ristorante Da Silvana (Località Is Loddus, Sant'Antioco)",
+              "desc": "Rústico, à beira da lagoa, com mesas fora e toldo · peixe de qualidade a preço honesto · alternativa se I Due Fratelli estiver cheio",
+              "preco": "€25-35",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "12min de carro · Località Is Loddus"
             }
           ]
         }
@@ -1832,28 +1832,28 @@
           },
           "opcoes": [
             {
-              "nome": "Trattoria Marrosu (Nuoro centro)",
-              "desc": "Cordeiro da Barbagia · pasta caseira · clássico",
-              "preco": "€25-35",
-              "dist": "Centro Nuoro",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "nome": "Il Rifugio (Via Antonio Mereu 28, Nuoro)",
+              "desc": "Trattoria barbaricina citada no Touring Club · pratos sardos que já não se acham em outro lugar · <strong>fecha às quartas</strong> (hoje é domingo) · tel. 0784 232355",
+              "preco": "€25-40",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "centro de Nuoro · 230km desde a base"
             },
             {
-              "nome": "Ristorante Il Rifugio",
-              "desc": "Tradicional · cinghiale (javali), pecorino · ambiente rústico",
-              "preco": "€30-40",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "nome": "Dorgali · almoço no caminho",
+              "desc": "20min antes de Cala Gonone · vila de artesãos, várias trattorias no centro · escolha no local",
+              "preco": "€25-35",
+              "valeAPena": 1,
+              "poiCat": "restaurante",
+              "dist": "275km · 20min antes do destino"
             },
             {
               "nome": "Sandes na estrada",
-              "desc": "Pra ganhar tempo · Autogrill SS131 · evita parada longa",
+              "desc": "Autogrill na SS131 · pra ganhar uma hora num dia de 4h de volante",
               "preco": "€10",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "cafe"
+              "poiCat": "cafe",
+              "dist": "na SS131"
             }
           ]
         },
@@ -1934,28 +1934,28 @@
           },
           "opcoes": [
             {
-              "nome": "Il Pescatore (marina)",
-              "desc": "Frutos do mar · vista barcos · cozinha de costa",
+              "nome": "Ristorante Il Pescatore (via Acqua Dolce 7, Cala Gonone)",
+              "desc": "Guia Michelin e Lonely Planet · peixe do dia num terraço de frente pro mar",
               "preco": "€35-50",
-              "dist": "Marina",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "marina · a pé da hospedagem"
             },
             {
-              "nome": "Bue Marino (centro)",
-              "desc": "Trattoria sarda · culurgiones (raviolis sardos), cordeiro · ambiente acolhedor",
-              "preco": "€30-40",
-              "dist": "Centro",
+              "nome": "HBM Bue Marino · Ristorante (marina de Cala Gonone)",
+              "desc": "Restaurante no rooftop do hotel, com o dono Alberto Ligios cuidando da carta de vinhos locais · culurgiones e cordeiro",
+              "preco": "€30-45",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "marina · a pé"
             },
             {
-              "nome": "Pizzeria Pulcinella",
-              "desc": "Casual · pizza forno lenha · simples · descanso",
-              "preco": "€20-25",
-              "dist": "Centro",
+              "nome": "Ristorante Pizzeria La Poltrona (Via Vasco de Gama 22, Cala Gonone)",
+              "desc": "Casual, pizza em forno a lenha · a opção de chegar e não pensar",
+              "preco": "€20-30",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "300m da marina · a pé"
             }
           ]
         }
@@ -2051,28 +2051,28 @@
           },
           "opcoes": [
             {
-              "nome": "Bue Marino",
-              "desc": "Trattoria sarda · culurgiones, ravioli · ambiente acolhedor",
-              "preco": "€30-40",
-              "dist": "Centro",
+              "nome": "HBM Bue Marino · Ristorante (marina de Cala Gonone)",
+              "desc": "Rooftop · culurgiones e vinho da região depois de oito horas de sol",
+              "preco": "€30-45",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "marina · a pé"
             },
             {
-              "nome": "Trattoria del Marinaio (marina)",
-              "desc": "Pé na água · peixe simples e fresco",
-              "preco": "€30-40",
-              "dist": "Marina",
+              "nome": "Ristorante Pizzeria San Francisco (Via Magellano 8, Cala Gonone)",
+              "desc": "Cozinha de mar e pizza · simples e a pé da marina",
+              "preco": "€25-40",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "a pé da marina"
             },
             {
-              "nome": "Pizza + cerveja",
-              "desc": "Casual · descanso · dorme cedo · amanhã dirige",
+              "nome": "Pizzeria Zio Pedrillo (Via Lungomare Palmasera, Cala Gonone)",
+              "desc": "Pizza e cerveja na beira-mar · dorme cedo, amanhã são 2h45 de estrada",
               "preco": "€20",
-              "dist": "Centro",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "beira-mar · a pé"
             }
           ]
         }
@@ -2262,35 +2262,35 @@
           "periodo": "noite",
           "tipo": "opcoes",
           "nome": "Jantar Santa Teresa",
-          "cat": "Centro · vários restaurantes",
+          "cat": "Centro · três opções conferidas",
           "coord": {
             "lat": 41.2389,
             "lng": 9.1907
           },
           "opcoes": [
             {
-              "nome": "Ristorante La Torre",
-              "desc": "Centro · clássico gallurese · pasta caseira, cordeiro · reservado · bom vinho",
-              "preco": "€35-45",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "nome": "Millo Ristorante (via Garibaldi 4, Santa Teresa di Gallura)",
+              "desc": "Citado no Guia Michelin · cozinha da Gallura levada a sério · reservar",
+              "preco": "€45-65",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "centro de Santa Teresa · a pé"
             },
             {
-              "nome": "Trattoria del Borgo",
-              "desc": "Cozinha tradicional · culurgiones, fregola · ambiente acolhedor",
-              "preco": "€30-40",
-              "dist": "Centro",
+              "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
+              "desc": "Clássico da vila · peixe e massa caseira, ambiente tranquilo",
+              "preco": "€30-45",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé"
             },
             {
-              "nome": "L'Osteria",
-              "desc": "Mais informal · peixe e frutos do mar · waterfront",
+              "nome": "Ristorante Pizzeria La Lampara (Via Sandro Pertini 6, Santa Teresa di Gallura)",
+              "desc": "Mais informal · pizza em forno a lenha e pratos de mar",
               "preco": "€25-35",
-              "dist": "Porto",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé"
             }
           ]
         }
@@ -2425,28 +2425,28 @@
           },
           "opcoes": [
             {
-              "nome": "Da Lucio (centro)",
-              "desc": "Trattoria local · pasta com frutos do mar · waterfront",
+              "nome": "Ristorante Caprera (via Tommaso Zonza 3, La Maddalena)",
+              "desc": "Junto ao porto e à igreja de Santa Maria Maddalena · massa com frutos do mar",
               "preco": "€30-40",
-              "dist": "Centro",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "junto ao porto de La Maddalena · a pé"
             },
             {
-              "nome": "Trattoria Aurora",
-              "desc": "Família · culurgiones, peixe · bom valor",
-              "preco": "€25-35",
-              "dist": "Centro",
+              "nome": "Noir Lounge · Restaurant & Cocktail Bar (Piazza XXIII Febbraio 10, La Maddalena)",
+              "desc": "Terraço sobre o porticciolo de Cala Gavetta · carta ampla, peixe e carne",
+              "preco": "€30-45",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé do porto"
             },
             {
-              "nome": "Picnic em Cala Coticcio",
-              "desc": "Compra padaria · come na praia · economia + cenário",
+              "nome": "Picnic em Cala Caprarese (Caprera)",
+              "desc": "Comprado na padaria de La Maddalena · Caprarese é livre e sem trilha, diferente de Cala Coticcio",
               "preco": "€15",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "padaria"
+              "poiCat": "padaria",
+              "dist": "Caprera · 10min de carro"
             }
           ]
         },
@@ -2513,28 +2513,28 @@
           },
           "opcoes": [
             {
-              "nome": "Trattoria del Borgo",
-              "desc": "Cozinha tradicional · jantar tranquilo",
-              "preco": "€30-40",
-              "dist": "Centro",
+              "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
+              "desc": "Jantar tranquilo depois de um dia de ferry e ilha",
+              "preco": "€30-45",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro de Santa Teresa · a pé"
             },
             {
-              "nome": "Pizzeria do centro",
-              "desc": "Casual · pizza no forno lenha · descanso",
-              "preco": "€20-25",
-              "dist": "Centro",
+              "nome": "Il Grottino (Via del Mare 14, Santa Teresa di Gallura)",
+              "desc": "Pizza no forno a lenha · casual, sem reserva",
+              "preco": "€20-30",
               "valeAPena": 1,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé"
             },
             {
               "nome": "Casa",
-              "desc": "Charcutaria + queijo + Vermentino · neta dorme",
+              "desc": "Charcutaria, queijo e Vermentino · noite curta",
               "preco": "€20",
-              "dist": "—",
               "valeAPena": 1,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "dist": "na base"
             }
           ]
         }
@@ -2577,8 +2577,8 @@
           "risco": "green",
           "nome": "San Pantaleo · feira de quinta",
           "cat": "Vila granítica + mercado artesão · 'mercado mais chique do mundo'",
-          "sobre": "Vila de granito encravada na cordilheira interior, ~10min da Costa Smeralda mas universo paralelo: artistas europeus moveram seus ateliês pra cá nos anos 1970, criando uma colônia criativa. Aos quintas-feiras (manhã, 8h30-13h), feira semanal mais elogiada da Sardenha — joias artesanais, esculturas, cerâmica, facas tradicionais, comida (queijos, salsichas, torrone). Comparada com 'mercados-de-grife' mas é GENUÍNO. Granito vermelho da igreja paroquial domina a piazza. Cafés em torno da praça com mesas de oleiandro.",
-          "imperdivel": "Café Nina · pequenos snacks + dolce vita italiana · sentar e ver o mundo passar",
+          "sobre": "Vila de granito encravada na cordilheira interior, ~10min da Costa Smeralda mas universo paralelo: artistas europeus moveram seus ateliês pra cá nos anos 1970, criando uma colônia criativa. Aos quintas-feiras (manhã, 8h30-13h), feira semanal mais elogiada da Sardenha — joias artesanais, esculturas, cerâmica, facas tradicionais, comida (queijos, salsichas, torrone). Comparada com 'mercados-de-grife' mas é GENUÍNO. Granito vermelho da igreja paroquial domina a piazza. Vários cafés em volta da praça, todos com mesa na rua sob os oleandros — nenhum precisa de reserva e todos servem a mesma coisa: sombra, café e o desfile de gente da feira.",
+          "imperdivel": "As bancas de <em>resolzas</em> — as facas de cabo de chifre que os pastores sardos fazem à mão · repare que a lâmina abre sem mola nenhuma, só por atrito, e que cada cabo é de um chifre diferente, então não existem duas iguais",
           "dicas": [
             "Feira termina 13h · vai cedo (10h)",
             "Compra: queijo pecorino, mel, frutas, peças artesão",
@@ -2608,28 +2608,28 @@
           },
           "opcoes": [
             {
-              "nome": "Ristorante Giagoni (igreja)",
-              "desc": "Tradicional · clientela seleta · pasta caseira, cordeiro · caro mas excelente",
+              "nome": "Ristorante Giagoni in Piazza (Piazza della Chiesa 6, San Pantaleo)",
+              "desc": "Casa de pedra galurense de frente pra praça da igreja · cozinha sarda com produto local · tel. 0789 65224",
               "preco": "€45-65",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "na praça da igreja · a pé"
             },
             {
-              "nome": "Café Nina",
-              "desc": "Casual · sandes, salads · perfeito após mercado",
+              "nome": "Bares da praça de San Pantaleo",
+              "desc": "Vários ao redor da igreja, todos com mesa na rua · café, sanduíche e sombra depois do mercado · escolha no local",
               "preco": "€15-25",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "cafe"
+              "valeAPena": 1,
+              "poiCat": "cafe",
+              "dist": "ao redor da praça · a pé"
             },
             {
               "nome": "Picnic do mercado",
-              "desc": "Queijo + pão + tomate + vinho · come na praça",
-              "preco": "€25 casal",
-              "dist": "—",
+              "desc": "Queijo, pão, tomate e vinho comprados na própria feira · come-se na praça",
+              "preco": "€25",
               "valeAPena": 2,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "dist": "na própria feira"
             }
           ]
         },
@@ -2710,28 +2710,28 @@
           },
           "opcoes": [
             {
-              "nome": "Ristorante La Torre",
-              "desc": "Centro · clássico gallurese · noite especial · vinho top",
-              "preco": "€40-55",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "restaurante"
+              "nome": "Millo Ristorante (via Garibaldi 4, Santa Teresa di Gallura)",
+              "desc": "Última noite na Sardenha · o melhor endereço da vila, citado no Michelin · reservar com antecedência",
+              "preco": "€45-65",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "centro de Santa Teresa · a pé"
             },
             {
-              "nome": "Trattoria del Borgo",
-              "desc": "Acolhedor · pasta caseira · ambiente bom pra retrospectiva",
-              "preco": "€30-40",
-              "dist": "Centro",
+              "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
+              "desc": "Acolhedor e sem cerimônia · bom pra conversar sobre a viagem",
+              "preco": "€30-45",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé"
             },
             {
-              "nome": "Restaurante porto Santa Teresa",
-              "desc": "Waterfront · peixe + Vermentino · romântico",
-              "preco": "€35-50",
-              "dist": "Porto",
+              "nome": "Ristorante Pizzeria La Lampara (Via Sandro Pertini 6, Santa Teresa di Gallura)",
+              "desc": "Informal · se a vontade for jantar leve e dormir cedo antes do voo",
+              "preco": "€25-35",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro · a pé"
             }
           ]
         }
@@ -2799,28 +2799,28 @@
           },
           "opcoes": [
             {
-              "nome": "Trattoria Da Romolo (centro)",
-              "desc": "Última refeição decente · pasta sarda · ambiente local",
-              "preco": "€25-35",
-              "dist": "Centro",
+              "nome": "Bistrot Bontade (Via Genova 65, Olbia)",
+              "desc": "Última refeição decente antes do voo · leve, rápido e no centro · fecha às segundas (hoje é sexta)",
+              "preco": "€25-40",
               "valeAPena": 2,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "centro de Olbia · a caminho do aeroporto"
             },
             {
-              "nome": "Ristorante Gallura (Corso Umberto)",
-              "desc": "Volta ao 1º almoço · circular fechando · clássico",
-              "preco": "€30-45",
-              "dist": "Centro",
+              "nome": "Ristorante By Night (Viale Aldo Moro 201/A, Olbia)",
+              "desc": "Fecha o círculo: é onde vocês jantaram na primeira noite · peixe fresco",
+              "preco": "€30-70",
               "valeAPena": 3,
-              "poiCat": "restaurante"
+              "poiCat": "restaurante",
+              "dist": "Viale Aldo Moro · a caminho do aeroporto"
             },
             {
               "nome": "Aeroporto · sanduba",
-              "desc": "Voo cedo · sem opções gourmet · prático",
+              "desc": "Se o horário apertar · sem opção gourmet, mas resolve",
               "preco": "€10-15",
-              "dist": "OLB",
               "valeAPena": 1,
-              "poiCat": "cafe"
+              "poiCat": "cafe",
+              "dist": "no aeroporto"
             }
           ]
         },
