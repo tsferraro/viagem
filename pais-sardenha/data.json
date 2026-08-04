@@ -1996,6 +1996,7 @@
           "imperdivel": "Em Cala Mariolu, o fundo é feito de seixos brancos do tamanho de moeda — é isso que faz a água parecer iluminada por baixo. Os locais chamam a praia de <em>Ispuligidenie</em>, 'pulgas de neve', pelo mesmo motivo",
           "dicas": [
             "Reserva o shuttle (drop-off + pickup) · NÃO o tour com guia · flexibilidade",
+            "Entrada da <strong>Grotta del Bue Marino</strong> é à parte do passeio: €12 · €6 reduzido (jun-set, ago/2026) · visita guiada de ~1h a pé, 900m de passarela · <strong>limite de 120 pessoas por horário</strong>, bilhete na bilheteria do porto ou em enjoydorgali.it",
             "Tour completo: €60-90/pessoa · meio-dia: €40-60",
             "Levar lanche · maioria dos tours não inclui",
             "Sapato de água · pedras escorregadias em alguns desembarques",
@@ -2874,8 +2875,8 @@
       },
       {
         "type": "official",
-        "label": "Fondazione Mont'e Prama · bilhetes",
-        "url": "https://www.museocabras.it/en/visit-the-museum/entrance-fees/"
+        "label": "Museo Civico di Càbras · site oficial",
+        "url": "https://www.museocabras.it/"
       }
     ],
     "Sant'Antioco · cidade fenícia 8 sec a.C.": [
@@ -2895,11 +2896,6 @@
         "type": "official",
         "label": "Porto Flavia · reserva",
         "url": "https://www.portoflaviatours.it"
-      },
-      {
-        "type": "official",
-        "label": "Parco Geominerario · Porto Flavia",
-        "url": "https://parcogeominerario.sardegna.it/porto-flavia"
       }
     ],
     "Boat Tour Golfo di Orosei · dia inteiro": [
@@ -2917,8 +2913,8 @@
     "Grotta Bue Marino (referência)": [
       {
         "type": "official",
-        "label": "Grotta Bue Marino · oficial",
-        "url": "https://www.grottabuemarino.com/en-informazioni"
+        "label": "Grotta del Bue Marino · site oficial",
+        "url": "https://www.grottabuemarino.com/"
       }
     ],
     "Bosa · cidade medieval colorida do rio Temo": [
@@ -2938,13 +2934,6 @@
         "type": "official",
         "label": "Carloforte Turismo",
         "url": "https://www.carloforteturismo.it/en/practical-information/"
-      }
-    ],
-    "Ferry Calasetta → Carloforte": [
-      {
-        "type": "official",
-        "label": "Delcomar · ferry",
-        "url": "https://delcomar.it/en/"
       }
     ],
     "Ferry Palau → La Maddalena": [
@@ -2969,8 +2958,8 @@
       },
       {
         "type": "official",
-        "label": "Museo Civico · tarifas",
-        "url": "https://www.museocabras.it/en/visit-the-museum/entrance-fees/"
+        "label": "Museo Civico di Càbras · site oficial",
+        "url": "https://www.museocabras.it/"
       }
     ],
     "Ilha Caprera · Cala Coticcio + Garibaldi": [

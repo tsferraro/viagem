@@ -140,7 +140,29 @@ openstreetmap.org · **it.wikipedia.org** · e a maioria dos sites oficiais via 
 
 Consequências práticas:
 - **`--check-links` é inútil em sessão cloud** — devolve "link quebrado" pra 100% das URLs, inclusive as vivas. Nunca remova link do `LINKS_MAP` com base nele aqui.
-- **WebSearch é o único canal.** URL que aparece como resultado de busca está viva e indexada — é a melhor confirmação disponível neste ambiente.
+- **WebSearch é o único canal** — mas ⚠️ ver abaixo: resultado de busca **não** prova que a URL responde.
+
+### ❌ Erro cometido e pago em campo (2026-08-03, mesma sessão)
+Escrevi aqui que "URL que aparece como resultado de busca está viva e indexada — é a melhor
+confirmação disponível". **Está errado.** O Tobia rodou `--check-links` do desktop e três das URLs
+que eu tinha adicionado com essa justificativa eram **404**
+(`museocabras.it/en/visit-the-museum/entrance-fees/`, `grottabuemarino.com/en-informazioni`).
+O índice de busca guarda título e snippet de páginas que já mudaram de lugar — e **museu, prefeitura
+e sítio arqueológico reorganizam URL o tempo todo**. Indexado ≠ vivo.
+
+**Regra que passa a valer em sessão cloud** (sem como fazer HEAD/GET):
+1. Só entra no `links_map` **raiz de domínio** (`https://www.museocabras.it/`). Raiz não apodrece; deep-link apodrece.
+2. Deep-link só com verificação HTTP real — ou seja, **do desktop**.
+3. Ao entregar, dizer explicitamente quais links não puderam ser verificados, pra que o `--check-links` do desktop seja rodado sabendo o que procurar.
+
+### 🐛 Bug do `audit.py --check-links` (sinalizado, não consertado)
+Trata todo status ≠2xx como "link quebrado", com a mesma severidade:
+- **405 Method Not Allowed** = o servidor recusa `HEAD`, o recurso **existe** (foi o caso de `parcogeominerario.sardegna.it`). Falso positivo.
+- **403** = quase sempre bot-blocking (Cloudflare). Indistinguível de link morto sem tentar `GET` com User-Agent de browser.
+- **timeout** de 5s derruba site lento vivo (`italia.it`).
+
+Só **404/410** é prova de morte. Sugestão pra quem for mexer no `audit.py`: cair pra `GET` quando o
+`HEAD` devolver 403/405, e separar "morto" (404/410) de "não verificável" (403/405/timeout).
 - Coordenada só sai de busca quando a fonte publica DMS (`41°13'01"N`). **Truque útil**: converter DMS pra decimal gera naturalmente 5+ casas, o que contorna o bug do `coord_4dec` (que usa `str()` e lê `41.8440` como 3 casas, porque JSON não guarda zero à direita).
 
 ---
