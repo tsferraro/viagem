@@ -324,3 +324,20 @@ Ver `scripts/validate.py`. Resumo:
 - ✓ Datas em sequência (sem gaps)
 - ✓ `temaCurto` ≤ 15 chars
 - ✓ Pelo menos 1 stop tipo `card` por dia
+
+## `mapsQuery` · `noMaps` · `wt_labels` (2026-08-04)
+
+Campos que controlam o que vai pro Google Maps. Ver `CLAUDE.md` §"o que vai pro Google Maps".
+
+| Campo | Onde | Tipo | Efeito |
+|---|---|---|---|
+| `mapsQuery` | card · item de `opcoes` · parada de walking tour | String | **Manda esse texto e mais nada** pro Maps. Não recebe `MAPS_REGION` — escreva inequívoco (cidade e, se preciso, país). |
+| `noMaps` | card · item de `opcoes` | Bool | Remove o link e **exclui o stop da rota do dia**. Pra check-in/out, despedida, "casa", picnic. |
+| `wt_labels` | raiz do `data.json` | `"letters"` \| `"numbers"` | `letters` rotula as paradas como o Maps desenha: **○ A B C D** (a 1ª é origem, sem letra). Default `numbers`. |
+
+Sem `mapsQuery`, o template limpa o nome: corta no `·` e **descarta o parêntese quando é
+descrição**, mantendo quando parece endereço. `(Via Marconi 47)` fica · `(museu + vista)` sai.
+
+**Rota do dia e de walking tour usam nomes só quando TODOS os pontos têm query utilizável** —
+senão caem pra coordenada, que funciona mas o Maps rotula "Dropped pin". `maps-audit.py` mostra
+qual dos dois cada rota está usando.

@@ -168,6 +168,23 @@ Retorna nota (2 metades) + achados P0-P3 + checklist manual + veredito. Exit: 0=
 
 Régua de fontes (tiers T1-T5 + o que prova um 🟢 imperdível): `references/source-credibility.md`.
 
+### `maps-audit.py` — confere TODA URL de Google Maps que o app gera
+
+```bash
+python3 scripts/maps-audit.py <viagem>/index.html          # relatório
+python3 scripts/maps-audit.py <viagem>/index.html --urls   # imprime as URLs pra abrir
+```
+
+Monta as URLs **executando as funções do template**, e não lendo o `data.json` — porque os bugs
+de ago/2026 (pino no meio do mar, `Can't seem to find that place`, waypoint fantasma criado por
+uma barra em `201/A`, rota `Porto → Porto` de zero metro) **só existiam na URL final**. O
+`validate.py` e o `audit.py` liam o dado e passavam.
+
+Bloqueia: busca genérica (`"Jantar em casa"`), waypoint fantasma, ponto repetido, erro de
+execução. **É gate no `deploy.sh`** — roda sozinho, não dá pra esquecer.
+
+Não confirma que o lugar existe: isso é o `FACTCHECK.md` §4.
+
 ### `deploy.sh` — archive + push
 
 ```bash
@@ -185,6 +202,7 @@ Workflow:
 3. Substitui target HTML
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
 4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32)
+4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido)
 5. Backup local em `~/.skill-backups/`
 6. Re-gera `archive/index.html` (índice navegável)
 7. `git add` · `commit` · `push origin main`
@@ -217,7 +235,8 @@ Quando Tobia pede mudança em viagem existente:
 8. **Roda `build.py data.json index.html`**
 9. **Roda `validate.py index.html`** (BLOQUEIA se falhar)
 9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥32 e P0=0 (máx 3 iterações · mecânico primeiro → confirma ⚖️ no checklist → re-build → re-audit) · aspiração ≥36
-9c. **FACTCHECK lean + JUDGE 1×(+1)** (é entrega → pilha completa da tabela de gatilhos · `skills/critico-roteiro/FACTCHECK.md` e `JUDGE.md`) · só após audit limpo
+9b2. **Roda `scripts/maps-audit.py <viagem>/index.html --urls`** · zero busca genérica e zero waypoint fantasma ANTES de conferir lugar a lugar
+9c. **FACTCHECK lean (incl. §4: lugar no Maps + links + situação do atrativo) + JUDGE 1×(+1)** (é entrega → pilha completa da tabela de gatilhos · `skills/critico-roteiro/FACTCHECK.md` e `JUDGE.md`) · só após audit limpo
 10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar na entrega: nota (2 metades) + placar factcheck + veredito judge
 
 ## Schema dos dados (JSON pretty embedded no HTML)
