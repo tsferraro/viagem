@@ -2023,14 +2023,15 @@
           "nome": "Walking tour Cidadela · com os avós",
           "cat": "Tour histórico completo · 5 stops",
           "sobre": "Tour pela <em>haute ville</em> pra apresentar Bonifacio aos avós. A cidade foi fundada por volta de <strong>833</strong> por <strong>Bonifácio II, marquês da Toscana</strong>, que lhe deu o próprio nome. Passou a pisanos e, a partir de <strong>1195</strong>, virou praça-forte de <strong>Gênova</strong> — e é a mão genovesa que se vê em tudo aqui. Em <strong>1420</strong>, Alfonso V de Aragão mandou sitiar a cidade: ela aguentou <strong>mais de cinco meses</strong> e o rei foi embora humilhado. É a citadela <strong>mais bem preservada da Córsega</strong>, e o percurso abaixo cobre as cinco paradas na ordem em que aparecem no mapa.",
-          "imperdivel": "Na parada 4️⃣, a vista da Loggia: o postal de Bonifacio, com a falésia branca caindo a pique e a Sardenha no horizonte em dia limpo",
+          "imperdivel": "Na parada Ⓓ, a esplanade da Madonetta no fim da cidade alta: o pôr do sol de frente, as falésias brancas à esquerda e a Sardenha no horizonte em dia limpo",
           "dicas": [
             "○ <strong>Porte de Gênes</strong> — repare no mecanismo do pont-levis: o sistema de contrapesos e roldanas foi instalado em <strong>1598</strong> e ainda funciona. O arco triunfal barroco é do mesmo ano. Detalhe que muda tudo: <strong>até 1854 esta foi a ÚNICA entrada da cidadela</strong> — quem quisesse entrar em Bonifacio passava por aqui ou não passava.",
             "Ⓐ <strong>Bastion de l'Etendard</strong> (séc. XVI · €3,50 avulso) — a Place d'Armes se abre logo depois do portão. É o bastião que <em>protege</em> a Porte de Gênes: repare que quem atravessa a ponte fica sob fogo do bastião o tempo todo. Não é decoração, é engenharia de matar.",
             "💶 <strong>Compre o Pass Monuments logo no Bastion</strong>: os dois monumentos pagos da cidadela juntos saem por <strong>€6,50</strong> (criança 6-11 anos €2 · grupo de 10+ €4), contra €3,50 + €2,50 avulsos. Economiza €2 por pessoa e evita fila dupla.",
             "Ⓑ <strong>Église Sainte-Marie-Majeure</strong> — a igreja mais antiga da cidade. Olhe pra cima: os arcos que ligam a igreja às casas vizinhas são <strong>aquedutos</strong>, que recolhiam a água da chuva dos telhados e a levavam pra <strong>cisterna sob o adro</strong>. A cidade alta é rocha seca — em cinco meses de cerco, água não era conforto, era a diferença entre resistir e capitular.",
-            "Ⓒ <strong>Loggia · mirador sul</strong> — a parada da foto. Se derem sorte com o horário, o calcário passa de branco a creme e depois a rosa, e leva uns 40min fazendo isso. É por aqui que vale esticar o passo pra chegar antes das 19h30.",
-            "Ⓓ <strong>Escalier du Roi d'Aragon</strong> — 187 degraus talhados na vertical da falésia. A lenda diz que os aragoneses os escavaram <em>numa única noite</em> em 1420 pra tomar a cidade pelo mar. É bonito e é falso: a obra levaria meses. Provavelmente era saída de emergência dos genoveses, ou obra de religiosos pra alcançar o poço de São Bartolomeu. A cidade venceu o cerco e depois adotou a obra dos próprios engenheiros como troféu da derrota alheia.",
+            "Ⓒ <strong>Escalier du Roi d'Aragon</strong> — 187 degraus talhados na vertical da falésia. A lenda diz que os aragoneses os escavaram <em>numa única noite</em> em 1420 pra tomar a cidade pelo mar. É bonito e é falso: a obra levaria meses. Provavelmente era saída de emergência dos genoveses, ou obra de religiosos pra alcançar o poço de São Bartolomeu. A cidade venceu o cerco e depois adotou a obra dos próprios engenheiros como troféu da derrota alheia.",
+            "Ⓓ <strong>Cimetière Marin · esplanade da Madonetta</strong> — o mirante fica no <strong>extremo oeste</strong> da cidade alta, passando pelo cemitério marinho. Fica de frente pro pôr do sol, com as falésias brancas à esquerda e o farol da Madonetta abaixo. <strong>A luz boa é entre 30 e 10 minutos ANTES do horário oficial do pôr do sol</strong>, não na hora exata. Se estiver ventando, a <strong>Batterie Saint-François</strong> ali ao lado é abrigada e tem a mesma vista.",
+            "⚠️ A coordenada do Ⓓ ainda <strong>não foi conferida no chão</strong> — o Maps abre pelo nome (Cimetière Marin de Bonifacio). Se o pino cair errado, mande a coord de lá.",
             "⚠️ Descida do Escalier: íngreme, escorregadia e sem sombra. Combinem que quem quiser desce e volta enquanto o resto espera no topo — a vista de cima já entrega o essencial.",
             "Sair 16h30 · sol mais brando e luz dourada na pedra · sorveteria 'Da Mémé' na Place du Marché resolve a pausa da filha (~€3-4 a bola)",
             "Reservar o jantar antes de sair · a cidadela lota à noite em agosto"
@@ -2045,7 +2046,7 @@
           "walkingTours": [
             {
               "nome": "Cidadela · 🏰 Caminho Histórico",
-              "descricao": "Porte de Gênes → Bastion de l'Etendard → Église Sainte-Marie-Majeure → Loggia (mirador falésias) → Escalier du Roi d'Aragon · ~1h30-2h · 5 stops",
+              "descricao": "Porte de Gênes → Bastion de l'Étendard → Sainte-Marie-Majeure → Escalier du Roi d'Aragon → Cimetière Marin (pôr do sol) · ~1h30-2h · 5 stops",
               "stops": [
                 {
                   "n": 1,
@@ -2054,7 +2055,7 @@
                     "lat": 41.3874,
                     "lng": 9.1583
                   },
-                  "mapsQuery": "Porte de Gênes, Bonifacio, Corse, France"
+                  "mapsQuery": "Porte de Gênes, Bonifacio"
                 },
                 {
                   "n": 2,
@@ -2063,7 +2064,7 @@
                     "lat": 41.3876,
                     "lng": 9.1589
                   },
-                  "mapsQuery": "Bastion de l'Étendard, Bonifacio, Corse, France"
+                  "mapsQuery": "Bastion de l'Étendard, Bonifacio"
                 },
                 {
                   "n": 3,
@@ -2072,25 +2073,26 @@
                     "lat": 41.387,
                     "lng": 9.1597
                   },
-                  "mapsQuery": "Église Sainte-Marie-Majeure, Bonifacio, Corse, France"
+                  "mapsQuery": "Église Sainte-Marie-Majeure, Bonifacio"
                 },
                 {
                   "n": 4,
-                  "nome": "Loggia · mirador sul (falésias)",
-                  "coord": {
-                    "lat": 41.3855,
-                    "lng": 9.1578
-                  },
-                  "mapsQuery": "Falaises de Bonifacio, Corse, France"
-                },
-                {
-                  "n": 5,
                   "nome": "Escalier du Roi d'Aragon (topo)",
                   "coord": {
                     "lat": 41.384,
                     "lng": 9.1558
                   },
-                  "mapsQuery": "Escalier du Roi d'Aragon, Bonifacio, Corse, France"
+                  "mapsQuery": "Escalier du Roi d'Aragon, Bonifacio"
+                },
+                {
+                  "n": 5,
+                  "nome": "Cimetière Marin · esplanade da Madonetta (pôr do sol)",
+                  "coord": {
+                    "lat": 41.3855,
+                    "lng": 9.1578
+                  },
+                  "mapsQuery": "Cimetière Marin de Bonifacio",
+                  "coord_unverified": true
                 }
               ]
             }
