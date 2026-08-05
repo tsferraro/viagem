@@ -808,6 +808,66 @@ def d7_walking_tours(data: Dict, F: List[Finding]) -> int:
     return min(4, score)
 
 
+# Padrões que marcam AFIRMAÇÃO A PROVAR — não cor de prosa. Os quatro erros de campo de
+# ago/2026 caem todos aqui: "ponto mais ao sul da França" (era o segundo) · "operador único"
+# (havia dois) · "séc. XVI" (era XIII) · "mirante" (não existia).
+SUPERLATIVO_RE = re.compile(
+    r'\b(?:'
+    r'[oa]s?\s+(?:mais|maior(?:es)?|menor(?:es)?|melhor(?:es)?|pior(?:es)?|primeir[oa]s?|últim[oa]s?)\b'
+    r'|únic[oa]s?\b|somente\s+(?:um|uma)\b|apenas\s+(?:um|uma)\b'
+    r'|mais\s+(?:antig[oa]|alt[oa]|bem\s+preservad[oa]|important?e)\b'
+    r'|the\s+only\b|world[\'’]?s\s+\w+est\b'
+    r')', re.I)
+
+# Data histórica ou século: qualquer ano de 3-4 dígitos, "séc." ou "século".
+DATA_HIST_RE = re.compile(r'\b(?:s[ée]c(?:ulo)?\.?\s*[IVXLCM]+|[1-9]\d{2,3}\s*(?:a\.?C\.?|d\.?C\.?)?)\b')
+
+
+def _strip_html(t: str) -> str:
+    return re.sub(r'<[^>]+>', ' ', t or '')
+
+
+def _claims_sem_fonte(texto: str) -> List[str]:
+    """Devolve os trechos que são afirmação a provar. Vazio = nada a cobrar."""
+    t = _strip_html(texto)
+    achados = []
+    for m in SUPERLATIVO_RE.finditer(t):
+        achados.append(t[max(0, m.start()-30):m.end()+40].strip())
+    for m in DATA_HIST_RE.finditer(t):
+        achados.append(t[max(0, m.start()-30):m.end()+40].strip())
+    return achados
+
+
+# ---------------------------------------------------------------------------
+# DÍVIDA DE PROVENIÊNCIA · baseline (padrão lint clássico)
+# ---------------------------------------------------------------------------
+# A REGRA ZERO entrou em ago/2026 com dois roteiros JÁ EM USO em campo. Aplicá-la
+# retroativamente bloquearia o deploy dos dois — e com isso a correção urgente que
+# chega do próprio campo, que é justamente o mecanismo que descobre os furos.
+#
+# Solução: item sem proveniência que JÁ EXISTIA quando a regra entrou vira DÍVIDA
+# REGISTRADA (P2, visível, contada). Qualquer item NOVO ou ALTERADO é P0/P1 cheio.
+#
+# A dívida só encolhe: `--baseline` recusa crescer o arquivo (ver main()). Item que
+# some do roteiro some da dívida — o audit avisa quando há entrada morta.
+#
+# Arquivo: <viagem>/.proveniencia-debt.json  ·  {"itens": ["card:Nome", "historia:Título", ...]}
+
+def _debt_path(src: Optional[str]) -> Optional[Path]:
+    if not src:
+        return None
+    return Path(src).parent / '.proveniencia-debt.json'
+
+
+def load_debt(src: Optional[str]) -> set:
+    p = _debt_path(src)
+    if not p or not p.exists():
+        return set()
+    try:
+        return set(json.loads(p.read_text(encoding='utf-8')).get('itens', []))
+    except Exception:
+        return set()
+
 # ---------------------------------------------------------------------------
 # PROVENIÊNCIA · nasceu do "Loggia · mirador sul" (ago/2026)
 # ---------------------------------------------------------------------------
@@ -826,7 +886,20 @@ def d7_walking_tours(data: Dict, F: List[Finding]) -> int:
 #
 # `fontes` = [{"o": "Office de Tourisme de Bonifacio", "u": "https://..."}]
 
-def check_proveniencia(data: Dict, F: List[Finding]) -> None:
+def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None) -> List[str]:
+    debt = debt or set()
+    novos_sem_fonte: List[str] = []      # o que NÃO está na dívida → severidade cheia
+
+    def sev(chave: str, cheia: int) -> int:
+        """P0/P1 pra item novo · P2 'dívida registrada' pro que já existia."""
+        if chave in debt:
+            return 2
+        novos_sem_fonte.append(chave)
+        return cheia
+
+    def marca(chave: str) -> str:
+        return ' [dívida registrada]' if chave in debt else ''
+
     cards = get_cards(data)
     links_map = data.get('links_map', {}) or {}
 
@@ -846,14 +919,16 @@ def check_proveniencia(data: Dict, F: List[Finding]) -> None:
             sem_fonte_2.append(c.get('nome', '(sem nome)'))
 
     for nome in sem_fonte_3:
-        F.append(Finding(0, 5,
+        k = f'card:{nome}'
+        F.append(Finding(sev(k, 0), 5,
             'card ⭐⭐⭐ SEM PROVENIÊNCIA (nem `fontes` nem entrada em links_map) — '
-            'recomendação de topo tem que dizer de onde veio',
+            'recomendação de topo tem que dizer de onde veio' + marca(k),
             stop=nome, station='🔎',
             hint='"fontes": [{"o": "<órgão oficial/guia T1>", "u": "https://..."}]'))
     for nome in sem_fonte_2[:5]:
-        F.append(Finding(1, 5,
-            'card ⭐⭐ sem proveniência registrada (`fontes` ou links_map)',
+        k = f'card:{nome}'
+        F.append(Finding(sev(k, 1), 5,
+            'card ⭐⭐ sem proveniência registrada (`fontes` ou links_map)' + marca(k),
             stop=nome, station='🔎',
             hint='"fontes": [{"o": "<fonte>", "u": "https://..."}]'))
     if len(sem_fonte_2) > 5:
@@ -865,11 +940,83 @@ def check_proveniencia(data: Dict, F: List[Finding]) -> None:
     for card_nome, wt in get_wt_parts(data):
         for st in wt.get('stops', []):
             if not st.get('mapsQuery'):
+                # parada de WT NUNCA entra em dívida: é rota física, o dano é imediato
                 F.append(Finding(0, 7,
                     f'parada de WT "{st.get("nome","?")}" SEM mapsQuery — '
                     'a parada vira rota a pé; sem query não dá pra provar que o lugar existe',
                     stop=card_nome, station='🔎',
                     hint='"mapsQuery": "<nome buscável e inequívoco do lugar>"'))
+
+    # ── HISTÓRIA & CURIOSIDADES ──────────────────────────────────────────────
+    # A superfície mais narrativa do app: milhares de chars de afirmação histórica,
+    # sem preço nem horário pra parecerem suspeitos. É onde invenção passa mais fácil,
+    # porque nada ali tem cara de dado. Por isso proveniência aqui é P0.
+    for h in (data.get('historia') or []):
+        titulo = h.get('titulo', '(polo sem título)')
+        if not h.get('fontes'):
+            k = f'historia:{titulo}'
+            F.append(Finding(sev(k, 0), 1,
+                f'polo de História "{titulo}" SEM `fontes` — '
+                f'{len(_strip_html(h.get("prosa_html","")))} chars de afirmação histórica sem proveniência',
+                stop=titulo, station='🔎',
+                hint='"fontes": [{"o": "<órgão/museu/guia T1>", "u": "https://..."}]'))
+
+    # ── ITENS DE `opcoes` (restaurantes, bares, cafés) ───────────────────────
+    # Caso Le Lido (ago/2026): estabelecimento descrito na cidade errada, com confiança.
+    # Recomendação de negócio tem o mesmo peso de um card.
+    op3, op2 = [], []
+    for day in data.get('days', []):
+        for st in day.get('stops', []):
+            for o in st.get('opcoes', []) or []:
+                tem = bool(o.get('fontes')) or bool(links_map.get(o.get('nome', '')))
+                if tem:
+                    continue
+                alvo = op3 if o.get('valeAPena') == 3 else (op2 if o.get('valeAPena') == 2 else None)
+                if alvo is not None:
+                    alvo.append((o.get('nome', '?'), st.get('nome', '')))
+                    if o.get('valeAPena') in (2, 3):
+                        sev(f'opcao:{o.get("nome","?")}', 0)  # registra pro baseline
+    for nome, ctx in op3[:6]:
+        k = f'opcao:{nome}'
+        F.append(Finding(sev(k, 0), 5,
+            f'opção ⭐⭐⭐ "{nome}" SEM proveniência — recomendação de estabelecimento '
+            'precisa de fonte que confirme nome E localização (caso Le Lido)',
+            stop=ctx, station='🔎', hint='"fontes": [{"o": "<guia/site oficial>", "u": "https://..."}]'))
+    # Sumário: só conta o que NÃO está em dívida — senão o rollup ressuscita como P0
+    # tudo que o baseline acabou de congelar.
+    resto3 = [n for n, _ in op3[6:] if f'opcao:{n}' not in debt]
+    if resto3:
+        F.append(Finding(0, 5, f'+{len(resto3)} outras opções ⭐⭐⭐ sem proveniência'))
+    resto2 = [n for n, _ in op2 if f'opcao:{n}' not in debt]
+    if resto2:
+        F.append(Finding(1, 5, f'{len(resto2)} opções ⭐⭐ sem proveniência registrada'))
+    em_divida = len(op3) + len(op2) - len(resto3) - len(resto2)
+    if em_divida:
+        F.append(Finding(2, 5, f'{em_divida} opções sem proveniência [dívida registrada]'))
+
+    # ── EXTRAS ──────────────────────────────────────────────────────────────
+    for e in (data.get('extras') or []):
+        if e.get('valeAPena', 0) >= 2 and not (e.get('fontes') or links_map.get(e.get('nome', ''))):
+            F.append(Finding(1, 5, f'extra "{e.get("nome","?")}" sem proveniência', station='🔎'))
+
+    # ── AFIRMAÇÃO A PROVAR sem fonte (superlativo · data histórica) ──────────
+    # Generaliza os 4 erros de campo de ago/2026. Superlativo e data são as duas
+    # categorias que mais apodrecem e que guia turístico mais repete sem checar.
+    for c in cards:
+        if c.get('tipo') != 'card' or tem_fonte(c):
+            continue
+        texto = ' '.join([c.get('sobre', ''), c.get('imperdivel', '')] + list(c.get('dicas', [])))
+        cl = _claims_sem_fonte(texto)
+        if cl:
+            k = f'claims:{c.get("nome","")}'
+            F.append(Finding(sev(k, 1), 5,
+                f'{len(cl)} afirmação(ões) a PROVAR sem fonte (superlativo/data) — '
+                f'ex: "{cl[0][:70]}…"' + marca(k),
+                stop=c.get('nome', ''), station='🔎',
+                hint='ou registra `fontes`, ou reescreve sem a afirmação — nunca deixa como cor de prosa'))
+
+    # Devolvido pro --baseline: tudo que HOJE está sem proveniência.
+    return sorted(set(novos_sem_fonte) | set(debt))
 
 
 def d8_honestidade(data: Dict, F: List[Finding]) -> int:
@@ -1728,6 +1875,8 @@ def main() -> None:
     no_checklist  = '--no-checklist'  in flags
     deploy_gate   = '--deploy-gate'   in flags
     suggest       = '--suggest'       in flags
+    write_baseline = '--baseline'     in flags
+    path_arg      = args[0] if args else None
     if deploy_gate:
         no_checklist = True   # gate de deploy é compacto (sem checklist manual)
 
@@ -1811,7 +1960,32 @@ def main() -> None:
     # BUG ago/2026: main() duplicava a lista de auditores de audit_roteiro(), então
     # check novo registrado lá NÃO rodava pelo CLI. Duas fontes de verdade. Enquanto
     # as listas não são unificadas, todo check transversal tem que entrar NOS DOIS.
-    check_proveniencia(data, findings)
+    debt = load_debt(path_arg)
+    pendentes = check_proveniencia(data, findings, debt)
+
+    if write_baseline:
+        p = _debt_path(path_arg)
+        # A dívida SÓ ENCOLHE. Item novo sem fonte nunca entra por aqui — seria
+        # transformar o baseline em desculpa, que é o modo clássico de morrer do lint.
+        novos = [k for k in pendentes if k not in debt]
+        if debt and novos:
+            print(f"{C.ERR}✗ --baseline recusado{C.END}: {len(novos)} item(ns) NOVO(s) sem "
+                  f"proveniência não entram na dívida — pesquise a fonte:")
+            for k in novos[:10]:
+                print(f"    · {k}")
+            sys.exit(2)
+        p.write_text(json.dumps({
+            "_": "Dívida de proveniência congelada quando a REGRA ZERO entrou (2026-08-04). "
+                 "SÓ ENCOLHE: item novo sem fonte é P0/P1 e não entra aqui. "
+                 "Ver CLAUDE.md · REGRA ZERO e FACTCHECK.md §0.",
+            "itens": pendentes,
+        }, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f"{C.OK}✓{C.END} dívida registrada em {p} · {len(pendentes)} item(ns)")
+        sys.exit(0)
+
+    if debt:
+        print(f"{C.DIM}  dívida de proveniência herdada: {len(debt)} item(ns) "
+              f"(P2 · só encolhe · ver .proveniencia-debt.json){C.END}")
 
     assign_stations(findings)   # despacha cada achado pra sua estação de conserto
 

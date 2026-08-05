@@ -67,6 +67,9 @@ a não existir, e era tratado como "nada a verificar".
 | **Todo ponto de road trip** (`transport: "driving"`) | 100%. Mesmo motivo, com carro. |
 | **Todo card cujo nome designa um lugar físico** | 100% na entrega inicial. Depois, só o que mudou. |
 | **Todo lugar SEM `mapsQuery` e SEM `fontes`** | **prioridade máxima** — a ausência é o sinal, não a dispensa |
+| **Todo polo de `historia[]`** | 100%. Prosa histórica não tem preço nem horário pra parecer suspeita — é onde invenção passa mais fácil. Cada polo sai com `fontes`. |
+| **Todo item de `opcoes`** (restaurante, bar, café) | nome **E localização** confirmados. Caso Le Lido: descrito na cidade errada, com confiança de quem verificou. |
+| **Todo superlativo** ("o mais", "o único", "o primeiro") | é afirmação a PROVAR. Agregador que lista N operadores não prova que são todos — foi assim que a Ichnusa Lines sumiu do roteiro. |
 
 Para cada um, três perguntas — nesta ordem, e a segunda é a que pega invenção:
 

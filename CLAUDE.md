@@ -435,6 +435,33 @@ foi por ela que a mãe dele comprou).
 | Não achou fonte | escreve `[a confirmar]` no card, ou **não cria a parada** · nunca ameniza o texto pra soar menos específico |
 | Coordenada não conferida | `coord_unverified: true` + o card avisa que o pino é aproximado |
 
+### Vale pra TODA superfície de conteúdo (decisão Tobia · 2026-08-04)
+
+Não é regra de card. É regra de **tudo que afirma algo**:
+
+| Superfície | Severidade sem proveniência |
+|---|---|
+| `historia[]` · aba História & Curiosidades | **P0** — é a superfície mais narrativa do app (milhares de chars de afirmação histórica, sem preço nem horário pra parecerem suspeitos; invenção passa mais fácil justamente porque nada ali tem cara de dado) |
+| `card` ⭐⭐⭐ · ⭐⭐ | **P0** · P1 |
+| item de `opcoes` ⭐⭐⭐ · ⭐⭐ (restaurante, bar, café) | **P0** · P1 — caso Le Lido: estabelecimento descrito na cidade errada |
+| parada de walking tour sem `mapsQuery` | **P0** · **nunca entra em dívida** — é rota física |
+| `extras` ⭐⭐+ | P1 |
+| **superlativo ou data histórica** em `sobre`/`imperdivel`/`dicas` sem `fontes` | P1 — generaliza os 4 erros de campo: "ponto mais ao sul" (era o segundo) · "operador único" (havia dois) · "séc. XVI" (era XIII) · "mirante" (não existia) |
+
+### Dívida de proveniência · `<viagem>/.proveniencia-debt.json`
+
+A regra entrou com dois roteiros **já em uso em campo**. Aplicá-la retroativamente bloquearia o
+deploy dos dois — e com ele a correção urgente que chega do próprio campo, que é o mecanismo que
+descobre os furos. Então:
+
+- Item sem fonte que **já existia** quando a regra entrou → **dívida registrada** (P2, visível, contada)
+- Item **novo ou alterado** → P0/P1 cheio, sem exceção
+- `--baseline` **recusa crescer** a dívida (exit 2 listando os novos) — é o que impede o baseline
+  de virar desculpa, que é o modo clássico de um lint morrer
+- Parada de walking tour **nunca** entra em dívida
+
+Congelado em 2026-08-04: `corsica` 50 itens · `pais-sardenha` 67. **Só encolhe.**
+
 ### Proveniência é campo, não promessa
 
 Card âncora carrega `fontes: [{"o": "<órgão/guia>", "u": "https://..."}]`. **O `audit.py` cobra**:
