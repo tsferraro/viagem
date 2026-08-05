@@ -808,6 +808,70 @@ def d7_walking_tours(data: Dict, F: List[Finding]) -> int:
     return min(4, score)
 
 
+# ---------------------------------------------------------------------------
+# PROVENIÊNCIA · nasceu do "Loggia · mirador sul" (ago/2026)
+# ---------------------------------------------------------------------------
+# Um card descrevia um mirante que NÃO EXISTE, com prosa detalhada sobre o calcário
+# mudando de cor. Nome real de Bonifacio ("loggia" é o pórtico da Sainte-Marie-Majeure),
+# função inventada. Passou por validate, audit E factcheck — e estava numa PARADA DE
+# WALKING TOUR, ou seja, virou rota que dois avós iam seguir no Maps.
+#
+# A lição não é "pesquise mais": é que texto vindo de fonte e texto vindo de memória
+# saíam com a mesma cara. Sem marca de proveniência, ninguém — nem o autor na revisão
+# seguinte — distingue os dois. Por isso isto é MECÂNICO, não conselho:
+#
+#   · parada de walking tour sem `mapsQuery`   → P0 (validate já bloqueia; aqui reforça)
+#   · card ⭐⭐⭐ sem `fontes` nem `links_map`   → P0: é o que a família vai priorizar
+#   · card ⭐⭐ sem proveniência                → P1
+#
+# `fontes` = [{"o": "Office de Tourisme de Bonifacio", "u": "https://..."}]
+
+def check_proveniencia(data: Dict, F: List[Finding]) -> None:
+    cards = get_cards(data)
+    links_map = data.get('links_map', {}) or {}
+
+    def tem_fonte(c) -> bool:
+        if c.get('fontes'):
+            return True
+        return bool(links_map.get(c.get('nome', '')))
+
+    sem_fonte_3, sem_fonte_2 = [], []
+    for c in cards:
+        if c.get('tipo') != 'card':
+            continue
+        va = c.get('valeAPena')
+        if va == 3 and not tem_fonte(c):
+            sem_fonte_3.append(c.get('nome', '(sem nome)'))
+        elif va == 2 and not tem_fonte(c):
+            sem_fonte_2.append(c.get('nome', '(sem nome)'))
+
+    for nome in sem_fonte_3:
+        F.append(Finding(0, 5,
+            'card ⭐⭐⭐ SEM PROVENIÊNCIA (nem `fontes` nem entrada em links_map) — '
+            'recomendação de topo tem que dizer de onde veio',
+            stop=nome, station='🔎',
+            hint='"fontes": [{"o": "<órgão oficial/guia T1>", "u": "https://..."}]'))
+    for nome in sem_fonte_2[:5]:
+        F.append(Finding(1, 5,
+            'card ⭐⭐ sem proveniência registrada (`fontes` ou links_map)',
+            stop=nome, station='🔎',
+            hint='"fontes": [{"o": "<fonte>", "u": "https://..."}]'))
+    if len(sem_fonte_2) > 5:
+        F.append(Finding(1, 5,
+            f'+{len(sem_fonte_2)-5} outros cards ⭐⭐ sem proveniência'))
+
+    # Paradas de walking tour: viram ROTA que alguém segue a pé. Sem query de Maps,
+    # a parada pode nem existir e ninguém descobre até estar na rua.
+    for card_nome, wt in get_wt_parts(data):
+        for st in wt.get('stops', []):
+            if not st.get('mapsQuery'):
+                F.append(Finding(0, 7,
+                    f'parada de WT "{st.get("nome","?")}" SEM mapsQuery — '
+                    'a parada vira rota a pé; sem query não dá pra provar que o lugar existe',
+                    stop=card_nome, station='🔎',
+                    hint='"mapsQuery": "<nome buscável e inequívoco do lugar>"'))
+
+
 def d8_honestidade(data: Dict, F: List[Finding]) -> int:
     """D8 · Honestidade & Curadoria (risco distribuição, pula sem culpa, anti-hype)"""
     cards = get_cards(data)
@@ -1010,6 +1074,9 @@ def audit_roteiro(data: Dict, check_links: bool = False) -> Tuple[Dict[int, int]
         (10, lambda: d10_arco(data, findings)),
     ]
     dim_scores = {i: fn() for i, fn in auditors}
+    # Transversal: não pontua dimensão, só levanta achado. Proveniência é pré-requisito
+    # de tudo — sem ela, nota alta só mede se o texto SOA bem (ver comentário do check).
+    check_proveniencia(data, findings)
     assign_stations(findings)
     return dim_scores, findings
 
@@ -1739,6 +1806,12 @@ def main() -> None:
             color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
             icon  = '✓' if s >= 3 else ('⚠' if s >= 2 else '✗')
             print(f"  {color}{icon}{C.END} {dim_label(dim_idx)}: {s}/4")
+
+    # Checks transversais (não pontuam dimensão · só levantam achado).
+    # BUG ago/2026: main() duplicava a lista de auditores de audit_roteiro(), então
+    # check novo registrado lá NÃO rodava pelo CLI. Duas fontes de verdade. Enquanto
+    # as listas não são unificadas, todo check transversal tem que entrar NOS DOIS.
+    check_proveniencia(data, findings)
 
     assign_stations(findings)   # despacha cada achado pra sua estação de conserto
 

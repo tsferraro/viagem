@@ -403,6 +403,49 @@ Sem o campo, o default é `"numbers"` (1, 2, 3…) — viagens antigas seguem co
 ]
 ```
 
+## ⛔ REGRA ZERO · nada de memória (decisão Tobia · 2026-08-04)
+
+> **Só escreva e recomende atração a partir de fonte reconhecida e confiável. NUNCA da sua
+> "memória".**
+
+Não é sobre pesquisar mais. É sobre **texto de fonte e texto de memória saírem com a mesma cara**
+— e nesse ponto ninguém consegue separar os dois, nem quem escreveu, na revisão seguinte.
+
+**O caso que originou a regra**: o card `"Loggia · mirador sul (falésias)"` no tour da cidadela de
+Bonifacio descrevia o calcário mudando de branco a rosa por 40 minutos num mirante **que não
+existe**. "Loggia" é real em Bonifacio — é o pórtico da Sainte-Marie-Majeure, parada 3 do mesmo
+tour. **Nome real, função inventada.** Era parada de walking tour: virou rota no Maps pra dois
+avós. Passou por `validate.py`, `audit.py` e um fact-check completo do mesmo dia.
+
+No mesmo dia, em campo, o Tobia pegou mais três da mesma família: Cala Lazarina descrita ao
+**norte** da Lavezzi (fica no sudoeste) · a coordenada dada como Lazarina era da **Cala di
+Achiarinu** · a Ichnusa Lines afirmada como inexistente na rota Bonifacio–Santa Teresa (opera, e
+foi por ela que a mãe dele comprou).
+
+**Padrão dos quatro**: prosa confiante sobre geografia física e realidade comercial nunca vistas.
+
+### O que isso obriga na prática
+
+| Situação | Obrigação |
+|---|---|
+| Vai escrever `sobre`/`imperdivel`/`dicas` de um lugar | fonte desta sessão, ou não escreve |
+| Vai afirmar **posição** ("ao norte", "10min do desembarque", "no caminho de X") | fonte que a estabeleça · posição errada manda alguém andar no sol pro lado errado |
+| Vai afirmar **função** ("mirante", "restaurante", "praia de areia") | fonte que diga isso · nome real com função inventada é o modo de falha mais perigoso |
+| Vai afirmar **exclusividade** ("o único operador", "o ponto mais ao sul") | afirmação a PROVAR, nunca cor de prosa · agregador que lista N operadores não prova que são todos |
+| Não achou fonte | escreve `[a confirmar]` no card, ou **não cria a parada** · nunca ameniza o texto pra soar menos específico |
+| Coordenada não conferida | `coord_unverified: true` + o card avisa que o pino é aproximado |
+
+### Proveniência é campo, não promessa
+
+Card âncora carrega `fontes: [{"o": "<órgão/guia>", "u": "https://..."}]`. **O `audit.py` cobra**:
+card ⭐⭐⭐ sem proveniência (nem `fontes` nem `links_map`) é **P0** · ⭐⭐ é P1 · parada de walking
+tour sem `mapsQuery` é **P0** (a ausência do campo é o sinal de que o lugar pode não existir, não
+uma dispensa de checagem).
+
+Protocolo completo de verificação de lugar: `skills/critico-roteiro/FACTCHECK.md` **§0
+EXISTÊNCIA** — roda antes de tudo, cobre 100% das paradas de walking tour e pontos de road trip,
+e **nunca** por amostragem.
+
 ## 10 princípios não-negociáveis
 
 1. **Acessibilidade família** · filha 3a no carrinho · carrinho/cobblestone/sombra/escadas considerados
@@ -476,7 +519,9 @@ Cards `card` devem ter PROFUNDIDADE. O valor real é pesquisa profunda + curador
 | `custo` | Valor real ou "grátis" · não "moderado" |
 | `acessibilidade` | Detalhe concreto sobre carrinho/escadas · não "ok" |
 
-Web_search obrigatório antes de escrever card. Se info não está disponível, marcar `coord_unverified` e pedir validação do Tobia em vez de inventar.
+Web_search obrigatório antes de escrever card — ver **REGRA ZERO** acima. Se a info não está
+disponível, marcar `coord_unverified` / `[a confirmar]` e pedir validação do Tobia em vez de inventar.
+Se nem a EXISTÊNCIA do lugar se confirma, **não crie a parada**.
 
 Anti-padrão: card mínimo só com nome+coord+hora (vale só pra `transit`, não pra `card`).
 

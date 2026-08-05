@@ -373,3 +373,46 @@ dicas parada-a-parada, que foram reetiquetadas (27 dicas nos dois roteiros).
 limpeza velha, que mantinha `(museu + vista)` na busca. Migrado pra `mapsQueryOf` e a função morta
 removida. A feature-chave `'getMapsUrl mantém parens'` do `validate.py` guardava justamente o
 comportamento bugado; trocada por três checks da política nova.
+
+## 2026-08-04 · REGRA ZERO: nada de memória · proveniência vira gate mecânico
+
+**Decisão do Tobia, em campo**: *"Só escreva e recomenda atrações a partir de fontes reconhecidas
+e confiáveis, nunca da sua 'memória'. O FACTCHECK tem que verificar tudo, não dá pra fazer um
+walking tour falso e nem pra passar no factcheck."*
+
+**O que motivou**: o card `"Loggia · mirador sul (falésias)"` do tour da cidadela de Bonifacio
+descrevia um mirante **inexistente**, com prosa sobre o calcário mudando de cor por 40 minutos.
+"Loggia" é real — é o pórtico da Sainte-Marie-Majeure, parada 3 do mesmo tour. Nome real, função
+inventada. Era **parada de walking tour**: virou rota no Maps pros avós. Passou por `validate.py`,
+`audit.py` e um FACTCHECK completo rodado no mesmo dia.
+
+Mais três do mesmo tipo no mesmo dia, todos pegos em campo: Cala Lazarina dada como "norte" da
+Lavezzi (é sudoeste) · coordenada dada como Lazarina era da Cala di Achiarinu · Ichnusa Lines
+declarada inexistente na rota Bonifacio–Santa Teresa (opera, e a mãe do Tobia comprou por ela).
+
+**Diagnóstico da causa**: não foi falta de pesquisa. Foi **texto de fonte e texto de memória
+saírem com a mesma cara**. Sem marca de proveniência, nem o autor distingue os dois na revisão
+seguinte. A prova: a lição sobre superlativos foi escrita no `corsica/DIARIO.md` de manhã e o
+mesmo erro se repetiu seis horas depois. **Regra em prosa não segura — tem que ser mecânica.**
+
+**Por que o FACTCHECK não pegou**: a §4a mandava conferir "toda `mapsQuery` **nova**". A parada
+inventada **não tinha `mapsQuery` nenhuma**, e a ausência do campo a tornava invisível ao check.
+Um lugar que ninguém consegue nomear pro Maps é o candidato nº 1 a não existir, e era tratado
+como "nada a verificar".
+
+**O que mudou (3 camadas)**:
+1. `CLAUDE.md` · **REGRA ZERO** — tabela do que exige fonte (posição, função, exclusividade) e o
+   que fazer quando não se acha (`[a confirmar]`, `coord_unverified`, ou não criar a parada).
+2. `skills/critico-roteiro/FACTCHECK.md` · **§0 EXISTÊNCIA** — roda antes de tudo, cobre 100% das
+   paradas de WT e pontos de road trip, **nunca amostra**. Três perguntas por lugar: existe? é o
+   que o card diz que é? está onde o card diz? Veredito `NÃO ENCONTRADO` → **remover a parada**.
+3. `skills/critico-roteiro/audit.py` · `check_proveniencia()` — card ⭐⭐⭐ sem `fontes` nem
+   `links_map` é **P0** · ⭐⭐ é P1 · parada de WT sem `mapsQuery` é **P0**. Testado: injetar uma
+   parada inventada faz o `--deploy-gate` sair com exit 1.
+
+**Bug de tooling descoberto no caminho**: `main()` do `audit.py` duplicava a lista de auditores de
+`audit_roteiro()` — check novo registrado numa não rodava na outra. Duas fontes de verdade.
+Contornado registrando nos dois, com comentário; unificar as listas fica pendente.
+
+**Efeito imediato**: `pais-sardenha` passou a ter **2 P0** (cards ⭐⭐⭐ sem proveniência) e não
+passa mais no gate até receber fontes. É o comportamento desejado.

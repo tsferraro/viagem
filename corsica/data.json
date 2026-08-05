@@ -768,7 +768,7 @@
             "Sábado é o dia principal do mercado o ano inteiro · em julho e agosto tem feira quase todo dia, mas sábado é o forte",
             "Estacionamento azul ao redor da praça · €2/h · grátis das 12h às 14h (jul/2026)",
             "NÃO leva o carrinho na cidade velha (bairro de Santa Anna) · são escadas, becos e arcos · 30min no colo resolve",
-            "Museu de Pré-História corsa · <strong>€4 inteira / €2,50 meia</strong> · no verão abre <strong>todos os dias, 10h-18h</strong> · ótimo complemento pro Filitosa de domingo — e o bilhete ainda dá entrada no museu de Levie por até 2 meses (ago/2026)",
+            "Museu Departamental de Pré-História Corsa e Arqueologia · <strong>€4 inteira / €2,50 meia</strong> · de <strong>1/jun a 31/out abre todos os dias, 10h-18h</strong> · fica <strong>acima da Place Porta</strong>, no prédio novo ao lado da antiga prisão, com <strong>vista do golfo de Valinco</strong> · 1.400m² e mais de <strong>250.000 objetos</strong>, incluindo estátuas-menires · ótimo complemento pro Filitosa de domingo, e o bilhete dá entrada no museu de Levie por até 2 meses (ago/2026)",
             "Mel AOC de Sartène e charcutaria viajam bem na mala · é aqui que se compra"
           ],
           "duracao": "2h-3h com mercado",
@@ -780,7 +780,17 @@
           },
           "poiCat": "atracao",
           "valeAPena": 3,
-          "mapsQuery": "Place Porta, Sartène, Corse"
+          "mapsQuery": "Place Porta, Sartène, Corse",
+          "fontes": [
+            {
+              "o": "Office de Tourisme Sartenais Valinco Taravo",
+              "u": "https://lacorsedesorigines.com"
+            },
+            {
+              "o": "Visit Corsica · site oficial de turismo (Musée de Préhistoire)",
+              "u": "https://www.visit-corsica.com/fr/Mon-sejour/Patrimoine-culturel/Tout-le-patrimoine-culturel/MUSEE-DE-PREHISTOIRE-ET-D-ARCHEOLOGIE"
+            }
+          ]
         },
         {
           "hora": "12:15",
@@ -1689,7 +1699,8 @@
           "imperdivel": "Pôr do sol nas falésias brancas com o farol em silhueta · e, olhando pra leste, o Capu Testagro — a ponta que realmente fecha a França ao sul",
           "dicas": [
             "Sai 17h-17h30 · golden hour por volta 19h em agosto",
-            "Sapato fechado · trail tem pedrinhas soltas",
+            "Trilha completa: <strong>~6km ida e volta, ~2h</strong>, dificuldade fácil a moderada com trechos rochosos, a ~100m de altura ao longo das falésias. De carro até o parking do <strong>semáforo</strong>, sobra <strong>~1km a pé</strong> até o farol (fonte: Office de Tourisme de Bonifacio)",
+            "Sapato fechado · a trilha tem pedra solta e trechos expostos",
             "Farol em si é fechado pra público · a vista é o ponto",
             "Volta antes de escurecer · trail tem trechos expostos",
             "Sem comércio · leva água"
@@ -1703,7 +1714,17 @@
           },
           "poiCat": "atracao",
           "valeAPena": 3,
-          "mapsQuery": "Phare de Pertusato, Bonifacio, Corse"
+          "mapsQuery": "Phare de Pertusato, Bonifacio, Corse",
+          "fontes": [
+            {
+              "o": "Office de Tourisme de Bonifacio · Sentier de Pertusatu",
+              "u": "https://bonifacio.fr/a-voir-a-faire/balades-et-decouvertes/sentier-pertusatu/"
+            },
+            {
+              "o": "Visit Corsica · site oficial (Sentier Capu Pertusatu)",
+              "u": "https://www.visit-corsica.com/fr/Mon-sejour/Itineraires/Tous-les-itineraires/SENTIER-CAPU-PERTUSATU"
+            }
+          ]
         },
         {
           "hora": "20:30",
