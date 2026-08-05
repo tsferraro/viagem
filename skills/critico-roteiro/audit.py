@@ -888,14 +888,15 @@ def load_debt(src: Optional[str]) -> set:
 
 def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None) -> List[str]:
     debt = debt or set()
-    novos_sem_fonte: List[str] = []      # o que NÃO está na dívida → severidade cheia
+    # TODO item sem proveniência HOJE — em dívida ou não. É isto que o --baseline grava,
+    # pra que a dívida ENCOLHA quando um item ganha fonte. (Bug ago/2026: gravava a união
+    # com a dívida antiga, então ela nunca diminuía.)
+    sem_fonte_hoje: List[str] = []
 
     def sev(chave: str, cheia: int) -> int:
         """P0/P1 pra item novo · P2 'dívida registrada' pro que já existia."""
-        if chave in debt:
-            return 2
-        novos_sem_fonte.append(chave)
-        return cheia
+        sem_fonte_hoje.append(chave)
+        return 2 if chave in debt else cheia
 
     def marca(chave: str) -> str:
         return ' [dívida registrada]' if chave in debt else ''
@@ -908,9 +909,21 @@ def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None)
             return True
         return bool(links_map.get(c.get('nome', '')))
 
+    def isento(c) -> bool:
+        """Card de pura logística não afirma nada sobre o mundo — não há fonte a citar.
+        Critério: `noMaps: true` (semântica já existente = "não é lugar nenhum": check-in,
+        café da manhã, despedida, fim da viagem) E zero afirmação a provar no texto.
+        Se tiver superlativo ou data, deixa de ser logística e volta a precisar de fonte."""
+        if not c.get('noMaps'):
+            return False
+        texto = ' '.join([c.get('sobre', ''), c.get('imperdivel', '')] + list(c.get('dicas', [])))
+        return not _claims_sem_fonte(texto)
+
     sem_fonte_3, sem_fonte_2 = [], []
     for c in cards:
         if c.get('tipo') != 'card':
+            continue
+        if isento(c):
             continue
         va = c.get('valeAPena')
         if va == 3 and not tem_fonte(c):
@@ -969,7 +982,10 @@ def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None)
         for st in day.get('stops', []):
             for o in st.get('opcoes', []) or []:
                 tem = bool(o.get('fontes')) or bool(links_map.get(o.get('nome', '')))
-                if tem:
+                # "Jantar em casa", "picnic do mercado": não é estabelecimento, não há
+                # fonte a citar. Mesmo critério dos cards de logística: noMaps + zero claim.
+                if tem or (o.get('noMaps') and not _claims_sem_fonte(
+                        f"{o.get('nome','')} {o.get('desc','')}")):
                     continue
                 alvo = op3 if o.get('valeAPena') == 3 else (op2 if o.get('valeAPena') == 2 else None)
                 if alvo is not None:
@@ -1003,7 +1019,7 @@ def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None)
     # Generaliza os 4 erros de campo de ago/2026. Superlativo e data são as duas
     # categorias que mais apodrecem e que guia turístico mais repete sem checar.
     for c in cards:
-        if c.get('tipo') != 'card' or tem_fonte(c):
+        if c.get('tipo') != 'card' or tem_fonte(c) or isento(c):
             continue
         texto = ' '.join([c.get('sobre', ''), c.get('imperdivel', '')] + list(c.get('dicas', [])))
         cl = _claims_sem_fonte(texto)
@@ -1015,8 +1031,8 @@ def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None)
                 stop=c.get('nome', ''), station='🔎',
                 hint='ou registra `fontes`, ou reescreve sem a afirmação — nunca deixa como cor de prosa'))
 
-    # Devolvido pro --baseline: tudo que HOJE está sem proveniência.
-    return sorted(set(novos_sem_fonte) | set(debt))
+    # Devolvido pro --baseline: SÓ o que ainda está sem proveniência (a dívida encolhe).
+    return sorted(set(sem_fonte_hoje))
 
 
 def d8_honestidade(data: Dict, F: List[Finding]) -> int:
