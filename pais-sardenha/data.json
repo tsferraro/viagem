@@ -1389,12 +1389,22 @@
             },
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
-              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 · 15min de carro",
+              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 ou 0781 801093 · 15min de carro · €25-33/pessoa (ago/2026)",
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "15min de carro",
-              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/i-due-fratelli/"
+                },
+                {
+                  "o": "Site do próprio ittiturismo (família Serra)",
+                  "u": "https://iduefratelliexperience.com/ittiturismo/"
+                }
+              ]
             },
             {
               "nome": "Ristorante Da Silvana (Località Is Loddus, Sant'Antioco)",
@@ -1403,7 +1413,13 @@
               "valeAPena": 2,
               "poiCat": "restaurante",
               "dist": "12min de carro · Località Is Loddus",
-              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco"
+              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Guia de restaurantes de Sant'Antioco",
+                  "u": "https://www.voloscontato.it/ristoranti/santantioco-dove-mangiare-bene-spendendo-poco.php"
+                }
+              ]
             }
           ]
         }
@@ -1533,13 +1549,19 @@
           },
           "opcoes": [
             {
-              "nome": "I Vinattieri (Corso Vittorio Emanuele, Sant'Antioco)",
-              "desc": "Enoteca no corso principal · pratos locais com Vermentino, Cannonau e Carignano del Sulcis a copo",
+              "nome": "I Vinattieri (Corso Vittorio Emanuele 70, Sant'Antioco)",
+              "desc": "<strong>Enoteca / wine bar</strong>, não restaurante de prato feito — pratos locais pra acompanhar Vermentino, Cannonau e Carignano del Sulcis a copo. 4,2/5, 28º de 88 em Sant'Antioco",
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
               "dist": "no corso, meio do walking tour",
-              "mapsQuery": "I Vinattieri, Corso Vittorio Emanuele, Sant'Antioco"
+              "mapsQuery": "I Vinattieri, Corso Vittorio Emanuele, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · rede de qualidade (portal oficial)",
+                  "u": "https://visitsantantioco.info/rete_di_qualita/i-vinattieri/"
+                }
+              ]
             },
             {
               "nome": "Is Solus Bistrot (Corso Vittorio Emanuele 11, Sant'Antioco)",
@@ -1548,7 +1570,13 @@
               "valeAPena": 2,
               "poiCat": "cafe",
               "dist": "no corso, meio do walking tour",
-              "mapsQuery": "Is Solus Bistrot, Corso Vittorio Emanuele 11, Sant'Antioco"
+              "mapsQuery": "Is Solus Bistrot, Corso Vittorio Emanuele 11, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/is-solus-cafe/"
+                }
+              ]
             },
             {
               "nome": "Picnic mira-mar",
@@ -1610,12 +1638,22 @@
             },
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
-              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107",
+              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 ou 0781 801093 · €25-33/pessoa (ago/2026)",
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "15min de carro",
-              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/i-due-fratelli/"
+                },
+                {
+                  "o": "Site do próprio ittiturismo (família Serra)",
+                  "u": "https://iduefratelliexperience.com/ittiturismo/"
+                }
+              ]
             },
             {
               "nome": "Casa",
@@ -1714,12 +1752,26 @@
           "opcoes": [
             {
               "nome": "Al Tonno di Corsa (Via Guglielmo Marconi 47, Carloforte)",
-              "desc": "Guia Michelin · ventresca selada e tagliatelle ao ragù de atum · tel. 0781 855106 · reservar com antecedência",
+              "desc": "Guia Michelin · ventresca selada e tagliatelle ao ragù de atum · tel. 0781 855106 · reservar com antecedência · <strong>Guia Michelin</strong> · instituição da cozinha carlofortina desde <strong>1980</strong> · ~€47/pessoa (ago/2026)",
               "preco": "€60-90",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Carloforte · a pé do porto",
-              "mapsQuery": "Al Tonno di Corsa, Via Guglielmo Marconi 47, Carloforte"
+              "mapsQuery": "Al Tonno di Corsa, Via Guglielmo Marconi 47, Carloforte",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Al Tonno di Corsa, Carloforte",
+                  "u": "https://guide.michelin.com/us/en/sardegna/carloforte/restaurant/al-tonno-di-corsa"
+                },
+                {
+                  "o": "Accademia Italiana della Cucina",
+                  "u": "https://www.accademiaitalianadellacucina.it/it/ristoranti/ristorante/4313-tonno-di-corsa"
+                },
+                {
+                  "o": "Carloforte Turismo · site oficial",
+                  "u": "https://www.carloforteturismo.it/en/services/al-tonno-di-corsa-2/"
+                }
+              ]
             },
             {
               "nome": "Osteria della Tonnara (Corso Battellieri 36, Carloforte)",
@@ -1728,7 +1780,17 @@
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "beira-mar · a pé do porto",
-              "mapsQuery": "Osteria della Tonnara, Corso Battellieri 36, Carloforte"
+              "mapsQuery": "Osteria della Tonnara, Corso Battellieri 36, Carloforte",
+              "fontes": [
+                {
+                  "o": "Carloforte Turismo · site oficial",
+                  "u": "https://www.carloforteturismo.it/"
+                },
+                {
+                  "o": "Página oficial do restaurante",
+                  "u": "https://www.griglieriadellatonnara.it/"
+                }
+              ]
             },
             {
               "nome": "Ristorante Da Nicolo (Corso Cavour 32, Carloforte)",
@@ -1737,7 +1799,17 @@
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "Corso Cavour · a pé do porto",
-              "mapsQuery": "Ristorante Da Nicolo, Corso Cavour 32, Carloforte"
+              "mapsQuery": "Ristorante Da Nicolo, Corso Cavour 32, Carloforte",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Da Nicolò, Carloforte",
+                  "u": "https://guide.michelin.com/us/en/sardegna/carloforte/restaurant/da-nicolo"
+                },
+                {
+                  "o": "Carloforte Turismo · site oficial",
+                  "u": "https://www.carloforteturismo.it/en/services/da-nicolo/"
+                }
+              ]
             }
           ]
         },
@@ -1954,7 +2026,7 @@
           "periodo": "noite",
           "tipo": "opcoes",
           "nome": "Jantar especial · última noite todos juntos",
-          "cat": "Amanhã vocês partem sozinhos",
+          "cat": "⚠️ FERRAGOSTO · reservar com dias de antecedência",
           "coord": {
             "lat": 38.9989,
             "lng": 8.4489
@@ -1962,12 +2034,22 @@
           "opcoes": [
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
-              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 · última noite todos juntos",
+              "desc": "⚠️ <strong>15/Ago é FERRAGOSTO</strong> — o feriado mais movimentado da Itália. <strong>Reservem com dias de antecedência</strong>, não na véspera. Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 ou 0781 801093 · última noite todos juntos · €25-33/pessoa (ago/2026)",
               "preco": "€40-55",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "15min de carro",
-              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/i-due-fratelli/"
+                },
+                {
+                  "o": "Site do próprio ittiturismo (família Serra)",
+                  "u": "https://iduefratelliexperience.com/ittiturismo/"
+                }
+              ]
             },
             {
               "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
@@ -1985,7 +2067,13 @@
               "valeAPena": 2,
               "poiCat": "restaurante",
               "dist": "12min de carro · Località Is Loddus",
-              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco"
+              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Guia de restaurantes de Sant'Antioco",
+                  "u": "https://www.voloscontato.it/ristoranti/santantioco-dove-mangiare-bene-spendendo-poco.php"
+                }
+              ]
             }
           ]
         }
@@ -2047,7 +2135,7 @@
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço Nuoro · cultura interior",
-          "cat": "Capital do interior · culinária da Barbagia",
+          "cat": "⚠️ domingo · confirmar por telefone antes de subir",
           "coord": {
             "lat": 40.3216,
             "lng": 9.3303
@@ -2055,12 +2143,36 @@
           "opcoes": [
             {
               "nome": "Il Rifugio (Via Antonio Mereu 28, Nuoro)",
-              "desc": "Trattoria barbaricina citada no Touring Club · pratos sardos que já não se acham em outro lugar · <strong>fecha às quartas</strong> (hoje é domingo) · tel. 0784 232355",
+              "desc": "Trattoria histórica no coração de Nuoro, desde <strong>1988</strong>, cozinha da <strong>Barbagia</strong>: presunto de javali e de ovelha, grelhados mistos, culurgiones. Filosofia slow food.<br>⚠️ <strong>LIGUEM ANTES — 0784 232355</strong>: as fontes divergem sobre domingo. O Touring Club lista seg·ter·qui·sex·sáb (12h45-15h e 19h45-23h30, sem domingo); o GialloZafferano diz que fecha só às quartas. Vocês chegam num <strong>domingo</strong> — não subam a Nuoro sem confirmar.",
               "preco": "€25-40",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Nuoro · 230km desde a base",
-              "mapsQuery": "Il Rifugio, Via Antonio Mereu 28, Nuoro"
+              "mapsQuery": "Il Rifugio, Via Antonio Mereu 28, Nuoro",
+              "fontes": [
+                {
+                  "o": "Touring Club Italiano",
+                  "u": "https://www.touringclub.it/destinazioni/nuoro/mangiare/111377-il-rifugio"
+                },
+                {
+                  "o": "GialloZafferano · guia de restaurantes",
+                  "u": "https://ristoranti.giallozafferano.it/ristoranti/sardegna/ristoranti-nuoro/il-rifugio-1970.html"
+                }
+              ]
+            },
+            {
+              "nome": "Ristorante Il Portico (Nuoro)",
+              "desc": "<strong>Plano B em Nuoro</strong> se o Rifugio não abrir no domingo · cozinha sarda no centro · tem site próprio pra conferir horário na hora",
+              "preco": "€30-40",
+              "dist": "Nuoro centro",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "fontes": [
+                {
+                  "o": "Site oficial do Ristorante Il Portico, Nuoro",
+                  "u": "https://www.ilporticonuoro.it/"
+                }
+              ]
             },
             {
               "nome": "Dorgali · almoço no caminho",
@@ -2168,12 +2280,18 @@
           "opcoes": [
             {
               "nome": "Ristorante Il Pescatore (via Acqua Dolce 7, Cala Gonone)",
-              "desc": "Guia Michelin e Lonely Planet · peixe do dia num terraço de frente pro mar",
+              "desc": "Guia Michelin e Lonely Planet · peixe do dia num terraço de frente pro mar · <strong>Guia Michelin</strong> · família de pescadores local · tel 0784 93174 (ago/2026)",
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "marina · a pé da hospedagem",
-              "mapsQuery": "Ristorante Il Pescatore, Via Acqua Dolce 7, Cala Gonone"
+              "mapsQuery": "Ristorante Il Pescatore, Via Acqua Dolce 7, Cala Gonone",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Il Pescatore, Cala Gonone",
+                  "u": "https://guide.michelin.com/us/en/sardegna/cala-gonone/restaurant/il-pescatore"
+                }
+              ]
             },
             {
               "nome": "HBM Bue Marino · Ristorante (marina de Cala Gonone)",
@@ -2535,12 +2653,22 @@
           "opcoes": [
             {
               "nome": "Millo Ristorante (via Garibaldi 4, Santa Teresa di Gallura)",
-              "desc": "Citado no Guia Michelin · cozinha da Gallura levada a sério · reservar",
+              "desc": "Citado no Guia Michelin · cozinha da Gallura levada a sério · reservar · <strong>Guia Michelin</strong> · ~€40/pessoa (ago/2026)",
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Santa Teresa · a pé",
-              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura"
+              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Millo Ristorante, Santa Teresa Gallura",
+                  "u": "https://guide.michelin.com/en/sardegna/santa-teresa-gallura/restaurant/millo-ristorante"
+                },
+                {
+                  "o": "Site oficial do Millo Ristorante",
+                  "u": "https://www.milloristorante.it/"
+                }
+              ]
             },
             {
               "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
@@ -3046,12 +3174,22 @@
           "opcoes": [
             {
               "nome": "Millo Ristorante (via Garibaldi 4, Santa Teresa di Gallura)",
-              "desc": "Última noite na Sardenha · o melhor endereço da vila, citado no Michelin · reservar com antecedência",
+              "desc": "Última noite na Sardenha · o melhor endereço da vila, citado no Michelin · reservar com antecedência · <strong>Guia Michelin</strong> · ~€40/pessoa (ago/2026)",
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Santa Teresa · a pé",
-              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura"
+              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Millo Ristorante, Santa Teresa Gallura",
+                  "u": "https://guide.michelin.com/en/sardegna/santa-teresa-gallura/restaurant/millo-ristorante"
+                },
+                {
+                  "o": "Site oficial do Millo Ristorante",
+                  "u": "https://www.milloristorante.it/"
+                }
+              ]
             },
             {
               "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
