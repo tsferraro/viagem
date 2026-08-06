@@ -518,8 +518,8 @@
           "dicas": [
             "Estacionamento: as ruas do centro de Oristano são majoritariamente pagas (linha azul) em dias úteis · confira se a hospedagem tem vaga antes de chegar rodando",
             "<strong>Càbras a 9km / ~12min</strong> pela SP56 · Is Arutas e Tharros a ~20km, 25-30min",
-            "Supermercado e farmácia no centro, a pé — vantagem real sobre ficar numa vila de praia",
-            "Jantar: Càbras tem os endereços de bottarga (12min de carro); o centro de Oristano resolve a pé nas noites de cansaço"
+            "<strong>A estratégia das 4 noites</strong>: Oristano a pé nas noites de cansaço (sáb da chegada e dom da volta de Bosa) · <strong>Càbras na terça</strong>, que é dia leve e é quando os dois clássicos abrem · segunda os dois fecham",
+            "Supermercado e farmácia no centro, a pé — vantagem real sobre ficar numa vila de praia"
           ],
           "duracao": "Resto do dia",
           "custo": "Grátis",
@@ -538,18 +538,48 @@
           "emoji": "🍽️",
           "periodo": "noite",
           "tipo": "opcoes",
-          "nome": "Jantar Càbras · 1ª noite",
-          "cat": "Foco bottarga + peixe",
+          "nome": "Jantar 1ª noite · centro de Oristano",
+          "cat": "Depois de 3h30 de estrada · tudo a pé da base",
           "coord": {
             "lat": 39.93003,
             "lng": 8.53144
           },
           "opcoes": [
             {
-              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
-              "desc": "Michelin Guide · spaghetti bottarga, vongole · institução · reservar · <strong>FECHA ÀS SEGUNDAS</strong> · €36-45/pessoa · tel 0783 391139 (ago/2026)",
+              "nome": "Ristorante Blao (Via Mazzini 114, Oristano)",
+              "desc": "No centro, a pé da base · elegante com toque rústico · tel. 0783 030602",
               "preco": "€35-50",
-              "dist": "Centro",
+              "dist": "a pé da base",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Ristorante Blao, Via Mazzini 114, Oristano",
+              "fontes": [
+                {
+                  "o": "GastroRanking · cozinha sarda em Oristano",
+                  "u": "https://gastroranking.it/ristoranti/cucina-sarda/sardegna/oristano/"
+                }
+              ]
+            },
+            {
+              "nome": "Sas Benas (centro histórico de Oristano)",
+              "desc": "Na Casa Maicu, do século XVIII · carnes do Montiferru e cozinha sarda criativa",
+              "preco": "€35-50",
+              "dist": "a pé da base",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Sas Benas, Oristano",
+              "fontes": [
+                {
+                  "o": "GastroRanking · cozinha sarda em Oristano",
+                  "u": "https://gastroranking.it/ristoranti/cucina-sarda/sardegna/oristano/"
+                }
+              ]
+            },
+            {
+              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
+              "desc": "Se sobrar gás pra 12min de carro: a instituição da bottarga · Guia Michelin · reservar",
+              "preco": "€35-50",
+              "dist": "12min de carro · Càbras",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras",
@@ -563,30 +593,6 @@
                   "u": "https://www.ristoranteilcaminettocabras.com/"
                 }
               ]
-            },
-            {
-              "nome": "Sa Funta (Via Garibaldi 25)",
-              "desc": "⚠️ <strong>[a confirmar se ainda opera]</strong> — um agregador marca fechamento definitivo e os outros não confirmam. E, quando aberto, é <strong>o pior avaliado de Càbras</strong> (2/5, 52º de 52 no TripAdvisor). Receitas antigas do Sinis — burrida, enguia com alcachofra — mas a cozinha não sustenta. <strong>Liguem antes (0783 290685) ou pulem sem culpa.</strong>",
-              "preco": "€30-45",
-              "dist": "Centro",
-              "valeAPena": 1,
-              "poiCat": "restaurante",
-              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras",
-              "fontes": [
-                {
-                  "o": "Sardinia Point · guia regional",
-                  "u": "https://sardiniapoint.it/guida-turistica/sardegna-ristoranti-sa-funta-cabras/"
-                }
-              ]
-            },
-            {
-              "nome": "Trattoria Sa Bell'e Crabasa",
-              "desc": "Mais simples · peixe fresco · jantar tranquilo com a neta",
-              "preco": "€20-30",
-              "dist": "Centro",
-              "valeAPena": 2,
-              "poiCat": "restaurante",
-              "mapsQuery": "Sa Bell'e Crabasa, Cabras"
             }
           ]
         }
@@ -784,49 +790,51 @@
           "emoji": "🍽️",
           "periodo": "noite",
           "tipo": "opcoes",
-          "nome": "Jantar leve · Càbras ou Oristano",
-          "cat": "Dia foi cheio · domingo, tudo aberto",
+          "nome": "Jantar leve · Oristano a pé",
+          "cat": "Volta de Bosa ~19h30 · domingo, tudo aberto",
           "coord": {
             "lat": 39.93003,
             "lng": 8.53144
           },
           "opcoes": [
             {
-              "nome": "Trattoria Sa Bell'e Crabasa (Càbras)",
-              "desc": "Simples, prato do dia · a 12min da base · <strong>domingo abre</strong> (fecha às segundas)",
-              "preco": "€30-40",
-              "dist": "Càbras centro",
-              "poiCat": "restaurante",
+              "nome": "Da Salvatore (Via Pietro Riccio 16, Oristano)",
+              "desc": "Tradicional, com boa mão pra peixe · mais simples que os dois de cima · tel. 0783 357134",
+              "preco": "€25-40",
+              "dist": "a pé da base",
               "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Da Salvatore, Via Pietro Riccio 16, Oristano",
               "fontes": [
                 {
-                  "o": "L'Unione Sarda · casas de bottarga de Càbras",
-                  "u": "https://www.unionesarda.it/news-sardegna/oristano-provincia/cabras-arriva-il-festival-della-bottarga-thfz2mtu"
+                  "o": "GastroRanking · cozinha sarda em Oristano",
+                  "u": "https://gastroranking.it/ristoranti/cucina-sarda/sardegna/oristano/"
                 }
               ]
             },
             {
-              "nome": "Casa",
-              "desc": "Compra no mercado de Càbras à tarde e janta em casa · <strong>o plano B mais seguro numa segunda</strong>",
-              "preco": "€15-20",
-              "dist": "—",
-              "poiCat": "mercado",
+              "nome": "Ristorante Blao (Via Mazzini 114, Oristano)",
+              "desc": "No centro, a pé da base · elegante com toque rústico · tel. 0783 030602",
+              "preco": "€35-50",
+              "dist": "a pé da base",
               "valeAPena": 2,
-              "noMaps": true
-            },
-            {
-              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
-              "desc": "⛔ <strong>FECHA ÀS SEGUNDAS</strong> — só serve pros outros dias da base. €36-45/pessoa · tel 0783 391139 (ago/2026)",
-              "preco": "€36-45",
-              "dist": "Càbras centro",
               "poiCat": "restaurante",
-              "valeAPena": 0,
+              "mapsQuery": "Ristorante Blao, Via Mazzini 114, Oristano",
               "fontes": [
                 {
-                  "o": "Site oficial do Ristorante Il Caminetto",
-                  "u": "https://www.ristoranteilcaminettocabras.com/"
+                  "o": "GastroRanking · cozinha sarda em Oristano",
+                  "u": "https://gastroranking.it/ristoranti/cucina-sarda/sardegna/oristano/"
                 }
               ]
+            },
+            {
+              "nome": "Trattoria Sa Bell'e Crabasa (Piazza Principe di Piemonte 2, Càbras)",
+              "desc": "Simples, prato do dia · 12min de carro · <strong>domingo abre</strong> (fecha às segundas)",
+              "preco": "€20-30",
+              "dist": "12min de carro · Càbras",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Sa Bell'e Crabasa, Cabras"
             }
           ],
           "mapsQuery": "Cabras, Oristano, Sardegna"
@@ -1019,7 +1027,13 @@
               "dist": "a pé da base",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "mapsQuery": "Ristorante Blao, Via Mazzini 114, Oristano"
+              "mapsQuery": "Ristorante Blao, Via Mazzini 114, Oristano",
+              "fontes": [
+                {
+                  "o": "GastroRanking · cozinha sarda em Oristano",
+                  "u": "https://gastroranking.it/ristoranti/cucina-sarda/sardegna/oristano/"
+                }
+              ]
             },
             {
               "nome": "Sas Benas (centro histórico de Oristano)",
@@ -1028,7 +1042,13 @@
               "dist": "a pé da base",
               "valeAPena": 2,
               "poiCat": "restaurante",
-              "mapsQuery": "Sas Benas, Oristano"
+              "mapsQuery": "Sas Benas, Oristano",
+              "fontes": [
+                {
+                  "o": "GastroRanking · cozinha sarda em Oristano",
+                  "u": "https://gastroranking.it/ristoranti/cucina-sarda/sardegna/oristano/"
+                }
+              ]
             }
           ]
         }
@@ -1227,18 +1247,18 @@
           "emoji": "🍷",
           "periodo": "noite",
           "tipo": "opcoes",
-          "nome": "Jantar despedida Càbras",
-          "cat": "Última noite",
+          "nome": "Jantar de bottarga em Càbras · a noite gastronômica",
+          "cat": "Dia leve e terça-feira: os dois clássicos abrem · reservar",
           "coord": {
             "lat": 39.93003,
             "lng": 8.53144
           },
           "opcoes": [
             {
-              "nome": "Il Caminetto (reserva)",
-              "desc": "Última chance · bottarga top + vinho Vernaccia di Oristano · noite especial · <strong>FECHA ÀS SEGUNDAS</strong> · €36-45/pessoa · tel 0783 391139 (ago/2026)",
+              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
+              "desc": "A instituição da bottarga de Càbras · Guia Michelin · <strong>reservar</strong> · é o jantar que justifica os 12min de carro",
               "preco": "€35-50",
-              "dist": "Centro",
+              "dist": "12min de carro · Càbras",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras",
@@ -1254,11 +1274,11 @@
               ]
             },
             {
-              "nome": "Sa Funta",
-              "desc": "⚠️ <strong>[a confirmar se ainda opera]</strong> — um agregador marca fechamento definitivo e os outros não confirmam. E, quando aberto, é <strong>o pior avaliado de Càbras</strong> (2/5, 52º de 52 no TripAdvisor). Receitas antigas do Sinis — burrida, enguia com alcachofra — mas a cozinha não sustenta. <strong>Liguem antes (0783 290685) ou pulem sem culpa.</strong>",
+              "nome": "Sa Funta (Via Giuseppe Garibaldi 25, Càbras)",
+              "desc": "Enguia defumada e choco na Vernaccia · cozinha de lagoa, pra paladar curioso · avaliações recentes fracas: vá pelo que é diferente, não pelo consenso",
               "preco": "€30-45",
-              "dist": "Centro",
-              "valeAPena": 1,
+              "dist": "12min de carro · Càbras",
+              "valeAPena": 2,
               "poiCat": "restaurante",
               "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras",
               "fontes": [
@@ -1269,13 +1289,19 @@
               ]
             },
             {
-              "nome": "Casa",
-              "desc": "Jantar simples · descanso · amanhã é dia de drive",
-              "preco": "€20",
-              "dist": "—",
-              "valeAPena": 1,
-              "poiCat": "mercado",
-              "noMaps": true
+              "nome": "Sas Benas (centro histórico de Oristano)",
+              "desc": "Na Casa Maicu, do século XVIII · carnes do Montiferru e cozinha sarda criativa",
+              "preco": "€35-50",
+              "dist": "a pé da base",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Sas Benas, Oristano",
+              "fontes": [
+                {
+                  "o": "GastroRanking · cozinha sarda em Oristano",
+                  "u": "https://gastroranking.it/ristoranti/cucina-sarda/sardegna/oristano/"
+                }
+              ]
             }
           ]
         }

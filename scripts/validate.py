@@ -583,6 +583,7 @@ def check_required_features(content):
         'getMapsUrl respeita mapsQuery': "mapsQueryOf",
         'Nome limpo pro Maps (placeQuery)': "function placeQuery",
         'Rótulo A/B/C de walking tour': "function wtLabel",
+        '★ do Resumo usa valeAPena': "b.valeAPena||0)>(a.valeAPena||0",
         'Popup color forçado white':  'color:#fff !important',
         'getDefaultDayIdx':           'function getDefaultDayIdx',
         'getWalkingTourUrl':          'function getWalkingTourUrl',
