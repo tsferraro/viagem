@@ -753,7 +753,12 @@ function renderOverview(){
   return head+pendingHtml+seg+`<div class="ov-grid">
     ${DAYS.map((d,i)=>{
       const cards=d.stops.filter(s=>s.tipo==='card');
-      const main=cards.length?cards[0].nome:'—';
+      // O ★ promete a ATRAÇÃO do dia. Pegar cards[0] entregava o primeiro stop, que em 7 dos
+      // 16 dias do roteiro dos pais era logística ("Check-out + saída cedo", "Café da manhã").
+      // Agora usa o eixo de recompensa: maior valeAPena, empate resolvido pelo mais cedo.
+      const main=cards.length
+        ? cards.reduce((a,b)=>((b.valeAPena||0)>(a.valeAPena||0)?b:a)).nome
+        : '—';
       const wtCards=cards.filter(c=>c.walkingTours&&c.walkingTours.length>0);
       const parts=(d.date||'').split(' ');
       const dm=(parts[1]||'').split('/')[0];
