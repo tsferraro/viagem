@@ -868,7 +868,13 @@
           ],
           "valeAPena": 3,
           "poiCat": "atracao",
-          "mapsQuery": "Bosa, Oristano, Sardegna"
+          "mapsQuery": "Bosa, Oristano, Sardegna",
+          "fontes": [
+            {
+              "o": "Cultural Heritage Online · rio Temo",
+              "u": "https://culturalheritageonline.com/places/temo-river-l2022/"
+            }
+          ]
         },
         {
           "hora": "13:00",
@@ -1463,7 +1469,7 @@
           "risco": "yellow",
           "nome": "Sant'Antioco · cidade fenícia 8 sec a.C.",
           "cat": "Walking tour · 5 stops · Tophet + Museu + Basílica",
-          "sobre": "Sant'Antioco é a 4ª maior ilha do Mediterrâneo, ligada à Sardenha por um istmo. O <strong>Pontimannu</strong>, a ponte romana que fazia essa ligação e é única no gênero — ligava terra firme a uma ilha, não margens de um rio —, foi <em>aposentada em 1954</em>, quando abriram a estrada de variante por onde vocês vão passar. Hoje ela está ali ao lado, como monumento. Cidade fenícia chamada Sulci foi fundada no séc. VIII a.C. — uma das mais antigas civilizações de toda a Itália. Conjunto arqueológico no coração da cidade combina Tophet (necrópole infantil fenícia), Museu Barreca (artefatos fenício-púnicos), Basílica com catacumbas únicas (séc V cristãs sobre tumbas púnicas) e ruinas da tonnara (fábrica de atum séc XIX). Walking tour denso e único — Sardenha pré-nurágica e fenícia num só lugar.",
+          "sobre": "Sant'Antioco é a 4ª maior ilha do Mediterrâneo, ligada à Sardenha por um istmo. O <strong>Pontimannu</strong>, a ponte romana do <strong>séc. I d.C.</strong> que fazia essa ligação, chamada localmente <em>Pontimannu</em> — única no gênero porque não vencia rio nem desnível: ligava a terra firme sarda à ilha atravessando <strong>uma série de ilhotas que formavam o istmo</strong> —, foi <em>aposentada em 1954</em>, quando abriram a estrada de variante por onde vocês vão passar. Hoje ela está ali ao lado, como monumento. Cidade fenícia chamada Sulci foi fundada no séc. VIII a.C. — uma das mais antigas civilizações de toda a Itália. Conjunto arqueológico no coração da cidade combina Tophet (necrópole infantil fenícia), Museu Barreca (artefatos fenício-púnicos), Basílica com catacumbas únicas (séc V cristãs sobre tumbas púnicas) e ruinas da tonnara (fábrica de atum séc XIX). Walking tour denso e único — Sardenha pré-nurágica e fenícia num só lugar.",
           "imperdivel": "Catacumbas cristãs construídas DENTRO de tumbas púnicas · Basilica Sant'Antioco Martire",
           "dicas": [
             "○ <strong>Tophet</strong> — o campo de urnas fica na borda norte da cidade, encostado na rocha que os sardos chamam de <em>Sa Guardia de is Pingiadas</em>, 'a guarda das panelas' · são mais de 3.000 urnas de recém-nascidos e natimortos, consagrados a Tanit",
@@ -1478,7 +1484,7 @@
           "acessibilidade": "Tophet e MAB são planos e acessíveis · as catacumbas da basílica têm escada estreita e teto baixo, e a necrópole tem piso de rocha irregular",
           "coord": {
             "lat": 39.0706,
-            "lng": 8.45
+            "lng": 8.456
           },
           "walkingTours": [
             {
@@ -1535,7 +1541,17 @@
           ],
           "valeAPena": 3,
           "poiCat": "atracao",
-          "mapsQuery": "Tophet di Sant'Antioco"
+          "mapsQuery": "Tophet di Sant'Antioco",
+          "fontes": [
+            {
+              "o": "Comune di Sant'Antioco · Ponte Romano",
+              "u": "https://comune.santantioco.ca.it/turismo/archeologia-e-storia/ponte-romano/"
+            },
+            {
+              "o": "Visit Sant'Antioco · portal oficial",
+              "u": "https://visitsantantioco.info/en/vivi-santantioco/luoghi-dinteresse/ponte-romano/"
+            }
+          ]
         },
         {
           "hora": "13:30",
