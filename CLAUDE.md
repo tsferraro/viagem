@@ -462,6 +462,40 @@ descobre os furos. Então:
 
 Congelado em 2026-08-04: `corsica` 50 itens · `pais-sardenha` 67. **Só encolhe.**
 
+### ⚠️ Anexar fonte NÃO é verificar · `prova` claim-a-claim (2026-08-04, 2ª rodada)
+
+O Tobia pegou o furo seguinte no mesmo dia: *"parece que a época de flamingos é outono"*. Estava
+certo — e o card tinha **dois** erros: vendia agosto como temporada (o pico é outono/inverno) e
+dizia *"maior população europeia de flamingos rosa"* sobre o Stagno di Càbras (a colônia é
+**Molentargius, em Cagliari**, a 500km — e nem ela é a maior da Europa: é uma das três do
+Mediterrâneo ocidental).
+
+**Esse card tinha `fontes` preenchido e passava no gate.** Porque `fontes` no nível do card só
+prova que alguém colou uma URL — não que a URL sustenta a frase. É Goodhart puro: o campo subiu a
+nota enquanto o conteúdo seguia falso.
+
+**Correção**: cada afirmação verificável entra **nomeada** na fonte que a prova.
+
+```json
+"fontes": [
+  {"o": "SardegnaTurismo", "u": "https://...",
+   "prova": ["22 km²", "outono à primavera"]}
+]
+```
+
+O `audit.py` (`check_claims_cobertos`) extrai da prosa quatro classes de afirmação —
+**superlativo · data histórica · número com unidade · época/sazonalidade** — e cobra que cada uma
+apareça em algum `prova`. Card ⭐⭐⭐ com afirmação descoberta é **P0**; ⭐⭐ é P1.
+
+Ver as afirmações de um card antes de escrever as provas:
+```bash
+python3 skills/critico-roteiro/audit.py <viagem>/data.json | grep "SEM fonte nomeada"
+```
+
+**O que isto garante e o que não garante**: regex não prova verdade. O que fica impossível é uma
+afirmação ficar **sem ninguém ter dito onde a checou** — que foi exatamente o buraco por onde os
+flamingos passaram.
+
 ### Proveniência é campo, não promessa
 
 Card âncora carrega `fontes: [{"o": "<órgão/guia>", "u": "https://..."}]`. **O `audit.py` cobra**:

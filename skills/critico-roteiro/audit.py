@@ -42,6 +42,7 @@ import sys
 import json
 import urllib.request
 import urllib.error
+import unicodedata
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import List, Dict, Tuple, Optional
@@ -813,14 +814,25 @@ def d7_walking_tours(data: Dict, F: List[Finding]) -> int:
 # (havia dois) · "séc. XVI" (era XIII) · "mirante" (não existia).
 SUPERLATIVO_RE = re.compile(
     r'\b(?:'
-    r'[oa]s?\s+(?:mais|maior(?:es)?|menor(?:es)?|melhor(?:es)?|pior(?:es)?|primeir[oa]s?|últim[oa]s?)\b'
-    r'|únic[oa]s?\b|somente\s+(?:um|uma)\b|apenas\s+(?:um|uma)\b'
-    r'|mais\s+(?:antig[oa]|alt[oa]|bem\s+preservad[oa]|important?e)\b'
-    r'|the\s+only\b|world[\'’]?s\s+\w+est\b'
-    r')', re.I)
+    # com ou SEM artigo — "Maior lagoa salobra da Sardenha" e "maior população
+    # europeia" abriam frase sem artigo e escapavam da versão anterior. Foi
+    # exatamente assim que "maior população europeia de flamingos" (falso: é
+    # Molentargius, a 500km) sobreviveu ao gate.
+    r'maior(?:es)?|menor(?:es)?|melhor(?:es)?|pior(?:es)?|[uú]nic[oa]s?'
+    r'|primeir[oa]s?|[uú]ltim[oa]s?'
+    r'|mais\s+(?:antig|alt|nov|larg|long|profund|important|preserv|visit|bonit|barat|car)\w*'
+    r'|somente\s+(?:um|uma)|apenas\s+(?:um|uma)|the\s+only'
+    r')\b', re.I)
 
-# Data histórica ou século: qualquer ano de 3-4 dígitos, "séc." ou "século".
-DATA_HIST_RE = re.compile(r'\b(?:s[ée]c(?:ulo)?\.?\s*[IVXLCM]+|[1-9]\d{2,3}\s*(?:a\.?C\.?|d\.?C\.?)?)\b')
+# Data histórica ou século. Deliberadamente ESTREITO pra não afogar o gate em ruído:
+#  · século em romano ("séc. XIII")
+#  · ano com era explícita ("VIII a.C.", "1º d.C.")
+#  · ano de 3-4 dígitos ATÉ 2019 — de 2020 em diante é carimbo de referência
+#    "(ago/2026)", não afirmação histórica.
+DATA_HIST_RE = re.compile(
+    r'\b(?:s[ée]c(?:ulo)?\.?\s*[IVXLCM]+'
+    r'|\d{1,4}\s*(?:a\.?\s?C\.?|d\.?\s?C\.?)'
+    r'|1[0-9]{3}|20[01][0-9])\b')
 
 
 def _strip_html(t: str) -> str:
@@ -885,6 +897,98 @@ def load_debt(src: Optional[str]) -> set:
 #   · card ⭐⭐ sem proveniência                → P1
 #
 # `fontes` = [{"o": "Office de Tourisme de Bonifacio", "u": "https://..."}]
+
+# ---------------------------------------------------------------------------
+# CLAIMS COBERTOS · a fonte tem que sustentar A FRASE, não só existir
+# ---------------------------------------------------------------------------
+# Erro de 2026-08-04 (pego pelo Tobia): o card do Stagno di Càbras recebeu uma URL
+# do SardegnaTurismo e continuou dizendo "maior população europeia de flamingos"
+# (é Molentargius, a 500km) e vendendo agosto como temporada (o pico é outono).
+# Anexar `fontes` passou no gate; a afirmação seguiu falsa.
+#
+# Diagnóstico: `fontes` no nível do CARD é grosso demais. Premia o campo presente,
+# não a verdade. Goodhart — e a nota subiu enquanto o conteúdo continuava errado.
+#
+# Correção: cada afirmação verificável tem que ser NOMEADA na fonte que a prova:
+#   "fontes": [{"o": "SardegnaTurismo", "u": "https://...",
+#               "prova": ["22 km²", "outono à primavera"]}]
+# O audit extrai as afirmações da prosa e cobra que cada uma apareça em algum
+# `prova`. Não é possível provar verdade por regex — o que isto garante é que
+# nenhuma afirmação fica SEM ALGUÉM TER DITO onde a checou.
+
+SAZONAL_RE = re.compile(
+    r'\b(?:jan(?:eiro)?|fev(?:ereiro)?|mar[çc]o|abr(?:il)?|maio|junho|julho|agosto|set(?:embro)?'
+    r'|out(?:ubro)?|nov(?:embro)?|dez(?:embro)?|ver[ãa]o|inverno|outono|primavera'
+    r'|o\s+ano\s+todo|temporada|alta\s+esta[çc][ãa]o|baixa\s+esta[çc][ãa]o)\b', re.I)
+
+# Número COM unidade — preço, medida, contagem, horário. É a classe que mais apodrece.
+NUMERO_RE = re.compile(
+    r'\b\d[\d.,]*\s*(?:km²|km2|km|m²|m2|ha|metros?|m\b|€|euros?|h\b|h\d{2}|min|'
+    r'casais|degraus|habitantes|s[ée]culos?|anos?)', re.I)
+
+def _norm(t: str) -> str:
+    t = unicodedata.normalize('NFD', (t or '').lower())
+    t = ''.join(ch for ch in t if unicodedata.category(ch) != 'Mn')
+    return re.sub(r'\s+', ' ', t)
+
+def _claims_estruturados(texto: str) -> List[Tuple[str, str]]:
+    """[(tipo, trecho_chave)] · o trecho é o que precisa aparecer em algum `prova`."""
+    t = _strip_html(texto)
+    out, vistos = [], set()
+    for tipo, rx in (('superlativo', SUPERLATIVO_RE), ('data', DATA_HIST_RE),
+                     ('número', NUMERO_RE), ('época', SAZONAL_RE)):
+        for mm in rx.finditer(t):
+            chave = mm.group(0).strip()
+            k = (tipo, _norm(chave))
+            if k in vistos:
+                continue
+            vistos.add(k)
+            out.append((tipo, chave))
+    return out
+
+def _provas(obj) -> List[str]:
+    ps = []
+    for f in (obj.get('fontes') or []):
+        pv = f.get('prova')
+        if isinstance(pv, str):
+            ps.append(pv)
+        elif isinstance(pv, list):
+            ps.extend(str(x) for x in pv)
+    return [_norm(p) for p in ps]
+
+def check_claims_cobertos(data: Dict, F: List[Finding], debt: Optional[set] = None) -> List[str]:
+    """Cobra claim-a-claim nos cards que o viajante age em cima (⭐⭐ e ⭐⭐⭐)."""
+    debt = debt or set()
+    pendentes: List[str] = []
+    for c in get_cards(data):
+        if c.get('tipo') != 'card':
+            continue
+        va = c.get('valeAPena')
+        if va not in (2, 3):
+            continue
+        texto = ' '.join([c.get('cat', ''), c.get('sobre', ''), c.get('imperdivel', '')]
+                         + list(c.get('dicas', [])))
+        claims = _claims_estruturados(texto)
+        if not claims:
+            continue
+        provas = _provas(c)
+        desc = [f'{tipo}: "{ch}"' for tipo, ch in claims
+                if not any(_norm(ch) in p for p in provas)]
+        if not desc:
+            continue
+        nome = c.get('nome', '(sem nome)')
+        chave = f'claimcov:{nome}'
+        pendentes.append(chave)
+        na_divida = chave in debt
+        sev = 2 if na_divida else (0 if va == 3 else 1)
+        F.append(Finding(sev, 5,
+            f'{len(desc)} afirmação(ões) do card SEM fonte nomeada que as sustente — '
+            f'ex: {" · ".join(desc[:3])}' + (' [dívida registrada]' if na_divida else ''),
+            stop=nome, station='🔎',
+            hint='cada afirmação entra em `prova`: '
+                 '"fontes":[{"o":"<fonte>","u":"...","prova":["22 km²","outono à primavera"]}]'))
+    return pendentes
+
 
 def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None) -> List[str]:
     debt = debt or set()
@@ -1240,6 +1344,7 @@ def audit_roteiro(data: Dict, check_links: bool = False) -> Tuple[Dict[int, int]
     # Transversal: não pontua dimensão, só levanta achado. Proveniência é pré-requisito
     # de tudo — sem ela, nota alta só mede se o texto SOA bem (ver comentário do check).
     check_proveniencia(data, findings)
+    check_claims_cobertos(data, findings)
     assign_stations(findings)
     return dim_scores, findings
 
@@ -1978,6 +2083,7 @@ def main() -> None:
     # as listas não são unificadas, todo check transversal tem que entrar NOS DOIS.
     debt = load_debt(path_arg)
     pendentes = check_proveniencia(data, findings, debt)
+    pendentes += check_claims_cobertos(data, findings, debt)
 
     if write_baseline:
         p = _debt_path(path_arg)
