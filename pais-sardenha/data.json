@@ -82,7 +82,13 @@
           },
           "valeAPena": 2,
           "poiCat": "atracao",
-          "mapsQuery": "Corso Umberto I, Olbia, Sardegna"
+          "mapsQuery": "Corso Umberto I, Olbia, Sardegna",
+          "fontes": [
+            {
+              "o": "Comune di Olbia · turismo",
+              "u": "https://www.comune.olbia.ot.it/"
+            }
+          ]
         },
         {
           "hora": "20:30",
@@ -183,7 +189,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Ferry Santa Teresa → Bonifacio",
-          "cat": "~50min · Moby · ~€31-40 por passageiro, por trecho (ago/2026)",
+          "cat": "~50min · Moby ou Ichnusa Lines · ~€31-44 por passageiro, por trecho (ago/2026) · compare os dois",
           "coord": {
             "lat": 41.3875,
             "lng": 9.1544
@@ -204,7 +210,7 @@
             "Ferry chega às 11h50 · até as 13h dá pra deixar mala e respirar antes do almoço",
             "À tarde, o walking tour da cidadela com ele · saída prevista 16h30, quando o sol para de bater na pedra branca",
             "Pousada em Bonifacio é 1 noite só · confirme antes que o quarto guarda a bagagem depois do check-out de amanhã",
-            "Ferry de volta de amanhã: comprem os bilhetes hoje, na bilheteria do porto, e <strong>confirmem o horário da primeira travessia</strong> — a Moby é o único operador da rota desde 2026 (a Blu Navy suspendeu), então as tabelas de revendedores que ainda listam as duas estão desatualizadas"
+            "Ferry de volta de amanhã: comprem os bilhetes hoje, na bilheteria do porto, e <strong>confirmem o horário da primeira travessia</strong> — operam a Moby e a Ichnusa Lines (a Blu Navy suspendeu) · os agregadores costumam listar só uma das duas, então vale abrir os dois sites"
           ],
           "duracao": "Resto da tarde",
           "custo": "Almoço €35-50 por pessoa (ago/2026)",
@@ -215,7 +221,8 @@
           },
           "valeAPena": 2,
           "poiCat": "restaurante",
-          "mapsQuery": "Port de Bonifacio"
+          "mapsQuery": "Port de Bonifacio",
+          "noMaps": true
         },
         {
           "hora": "16:30",
@@ -225,18 +232,21 @@
           "risco": "yellow",
           "nome": "Walking tour Cidadela de Bonifacio · com Tobia",
           "cat": "5 stops · cidade-estado genovesa do séc. XII",
-          "sobre": "Tobia preparou um tour pela haute ville pra apresentar Bonifacio. Fundada pelo conde Bonifácio II de Toscana em 833. Dominada por Pisa, depois Gênova (8 séculos). Casas altas e estreitas (genovesas), pedra de calcário branco, dialeto local Bonifacien (ligure). AVISO: o Escalier du Roi d'Aragon (45° de inclinação, 187 degraus) é desafiador. Pode ficar no mirador do topo — a vista já é o premiado.",
+          "sobre": "Tobia preparou um tour pela <em>haute ville</em>. A cidade foi refundada entre <strong>828 e 833</strong> por <strong>Bonifácio II, marquês da Toscana</strong>. Em <strong>1195</strong> Gênova a retomou e fez algo radical: <strong>expulsou todos os habitantes menos trinta famílias</strong> e repovoou com <strong>400 famílias da Ligúria</strong>. Por isso aqui se fala um <strong>dialeto ligúrio</strong> (o <em>bonifacien</em>), enquanto o resto da Córsega fala uma língua toscana — vocês estão numa cidade corsa que linguisticamente é Gênova. Em <strong>agosto de 1420</strong> Alfonso V de Aragão pôs cerco à cidade; ela resistiu até <strong>janeiro de 1421</strong>.<br><br><strong>Aviso</strong>: o Escalier du Roi d'Aragon são 187 degraus a 45°. <strong>Dá pra ficar no topo</strong> — a vista de lá já entrega o essencial.",
           "imperdivel": "Vista das falésias da Loggia · postal mais icônico de Bonifacio",
           "dicas": [
-            "○ <strong>Porte de Gênes</strong> — a ponte levadiça original de 1598 ainda está lá, com o mecanismo de contrapeso à vista",
-            "Ⓐ <strong>Bastion de l'Étendard</strong> — €3,50 (ago/2026) · foi daqui que se defendeu o cerco de <strong>21 de outubro de 1420 a 5 de janeiro de 1421</strong>: Afonso V de Aragão chegou com 31 naus e 23 trirremes, ficou cinco meses e foi embora sem tomar a cidade",
-            "Ⓑ <strong>Sainte-Marie-Majeure</strong> — repare na cisterna sob o adro e nos arcobotantes que ligam a igreja às casas: não são enfeite, serviam pra escoar água de chuva pra cisterna comum · numa cidade sitiável, água era defesa",
-            "Ⓒ <strong>Loggia · mirador sul</strong> — o postal das falésias · é aqui que a foto acontece, não no Escalier",
-            "Ⓓ <strong>Escalier du Roi d'Aragon</strong> — €2,50 (ago/2026) · 187 degraus a 45° de inclinação, descida e subida · <strong>dá pra ficar no topo</strong>, a vista de lá já é o prêmio · avisem o Tobia se não quiserem descer",
-            "Sorveteria na Place du Marché · sabores corsos de castanha e mel · volta antes de escurecer"
+            "○ <strong>Porte de Gênes</strong> — foi a <strong>ÚNICA entrada da cidadela até 1854</strong>, quando abriram a Porte de France. A ponte levadiça visível hoje é de <strong>1830</strong> e substituiu a de 1598.",
+            "Ⓐ <strong>Bastion de l'Étendard</strong> — erguido pelos genoveses no <strong>séc. XIII</strong>, destruído no XVI e reconstruído. <strong>25m acima do porto: o bastião mais alto da França</strong>. Existe pra proteger a Porte de Gênes — quem cruza a ponte fica sob fogo dele. Dentro: memorial subterrâneo (Carlos V, naufrágio do <em>Sémillante</em>) e o <strong>Jardin des Vestiges</strong>.",
+            "💶 <strong>Pass Monuments no Bastion</strong>: os dois monumentos pagos por <strong>€6,50</strong> adulto, contra €3,50 + €2,50 avulsos. Sênior/grupo 10+ €4. Bastion abre seg-sex 9h-19h · fim de semana 10h-18h (ago/2026).",
+            "Ⓑ <strong>Sainte-Marie-Majeure</strong> — a igreja mais antiga da cidade, do <strong>fim do séc. XII</strong>, atestada em <strong>1222</strong>. A <strong>loggia</strong> (o pórtico coberto na frente) é onde o <strong>Conselho dos Anciãos</strong> deliberava diante do povo. Debaixo dela, uma <strong>cisterna de 650 m³</strong> alimentada pela chuva através dos arcos que ligam a igreja às casas vizinhas — calha e escora ao mesmo tempo.",
+            "Ⓒ <strong>Escalier du Roi d'Aragon</strong> — <strong>187 degraus</strong>, <strong>53m</strong> de desnível. A lenda diz que os aragoneses os cavaram numa noite durante o cerco. É falso: foram os <strong>monges franciscanos</strong>, ao longo de muito tempo, pra alcançar a fonte de água numa gruta ao pé da falésia (poço de São Bartolomeu). <strong>Dá pra ficar no topo.</strong>",
+            "Ⓓ <strong>Cimetière Marin Saint-François</strong> — de <strong>1823</strong>, ao lado do antigo convento franciscano, ampliado após a <strong>cólera de 1854</strong>. Fica na <strong>ponta oeste</strong> da cidade alta, de frente pro pôr do sol. As capelinhas funerárias dão a ele cara de cidade em miniatura. É <strong>plano</strong> — a parada mais confortável do tour.",
+            "🌅 A luz boa é entre <strong>30 e 10 minutos ANTES</strong> do horário oficial do pôr do sol. Ventando, a <strong>Batterie Saint-François</strong> ao lado é abrigada e tem a mesma vista.",
+            "Sorveteria na Place du Marché · sabores corsos de castanha e mel · voltem antes de escurecer",
+            "📍 O pino da parada Ⓓ é aproximado (coordenada não conferida no chão) — o Maps abre pelo nome."
           ],
           "duracao": "2h",
-          "custo": "Escalier du Roi d'Aragon €2,50 (ago/2026)",
+          "custo": "Pass Monuments €6,50 adulto (Bastion + Escalier) · avulso €3,50 + €2,50 · resto grátis (ago/2026)",
           "acessibilidade": "MISTA · ramparts ok · Escalier inacessível com problema de joelho",
           "coord": {
             "lat": 41.3872,
@@ -245,7 +255,7 @@
           "walkingTours": [
             {
               "nome": "Cidadela · 🏰 Caminho Histórico",
-              "descricao": "Porte de Gênes → Bastion → Sainte-Marie → Loggia (mirador) → Escalier (topo) · ~2h · 5 stops",
+              "descricao": "Porte de Gênes → Bastion de l'Étendard → Sainte-Marie-Majeure → Escalier du Roi d'Aragon → Cimetière Marin (pôr do sol) · 5 stops",
               "stops": [
                 {
                   "n": 1,
@@ -276,28 +286,43 @@
                 },
                 {
                   "n": 4,
-                  "nome": "Loggia · mirador sul (falésias)",
-                  "coord": {
-                    "lat": 41.3855,
-                    "lng": 9.1578
-                  },
-                  "mapsQuery": "Falaises de Bonifacio, Corse, France"
-                },
-                {
-                  "n": 5,
                   "nome": "Escalier du Roi d'Aragon (topo)",
                   "coord": {
                     "lat": 41.384,
                     "lng": 9.1558
                   },
                   "mapsQuery": "Escalier du Roi d'Aragon, Bonifacio, Corse, France"
+                },
+                {
+                  "n": 5,
+                  "nome": "Cimetière Marin Saint-François (pôr do sol)",
+                  "coord": {
+                    "lat": 41.3855,
+                    "lng": 9.1578
+                  },
+                  "mapsQuery": "Cimetière Marin de Bonifacio",
+                  "coord_unverified": true
                 }
               ]
             }
           ],
           "valeAPena": 3,
           "poiCat": "atracao",
-          "mapsQuery": "Citadelle de Bonifacio"
+          "mapsQuery": "Citadelle de Bonifacio",
+          "fontes": [
+            {
+              "o": "Office de Tourisme de Bonifacio",
+              "u": "https://bonifacio.fr"
+            },
+            {
+              "o": "POP · Ministère de la Culture (cimetière marin Saint-François)",
+              "u": "https://pop.culture.gouv.fr"
+            },
+            {
+              "o": "Monumentum · Église Sainte-Marie (PA00099082)",
+              "u": "https://monumentum.fr/monument-historique/pa00099082/bonifacio-eglise-sainte-marie"
+            }
+          ]
         },
         {
           "hora": "20:30",
@@ -386,7 +411,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Ferry Bonifacio → Santa Teresa di Gallura",
-          "cat": "~50min · Moby · ~€31-40 por passageiro, por trecho (ago/2026)",
+          "cat": "~50min · Moby ou Ichnusa Lines · ~€31-44 por passageiro, por trecho (ago/2026) · compare os dois",
           "coord": {
             "lat": 41.23899,
             "lng": 9.18808
@@ -470,7 +495,8 @@
           },
           "valeAPena": 1,
           "poiCat": "atracao",
-          "mapsQuery": "Via XX Settembre 31, Oristano"
+          "mapsQuery": "Via XX Settembre 31, Oristano",
+          "noMaps": true
         },
         {
           "hora": "20:00",
@@ -486,21 +512,37 @@
           "opcoes": [
             {
               "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
-              "desc": "Michelin Guide · spaghetti bottarga, vongole · institução · reservar",
+              "desc": "Michelin Guide · spaghetti bottarga, vongole · institução · reservar · <strong>FECHA ÀS SEGUNDAS</strong> · €36-45/pessoa · tel 0783 391139 (ago/2026)",
               "preco": "€35-50",
               "dist": "Centro",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras",
+              "fontes": [
+                {
+                  "o": "Accademia Italiana della Cucina · ficha do Caminetto",
+                  "u": "https://accademiaitalianadellacucina.it/en/ristoranti/ristorante/1134-caminetto"
+                },
+                {
+                  "o": "Site oficial do Ristorante Il Caminetto (Cabras)",
+                  "u": "https://www.ristoranteilcaminettocabras.com/"
+                }
+              ]
             },
             {
               "nome": "Sa Funta (Via Garibaldi 25)",
-              "desc": "Cozinha tradicional sarda · enguia defumada, choco em Vernaccia · adventurous",
+              "desc": "⚠️ <strong>[a confirmar se ainda opera]</strong> — um agregador marca fechamento definitivo e os outros não confirmam. E, quando aberto, é <strong>o pior avaliado de Càbras</strong> (2/5, 52º de 52 no TripAdvisor). Receitas antigas do Sinis — burrida, enguia com alcachofra — mas a cozinha não sustenta. <strong>Liguem antes (0783 290685) ou pulem sem culpa.</strong>",
               "preco": "€30-45",
               "dist": "Centro",
-              "valeAPena": 3,
+              "valeAPena": 1,
               "poiCat": "restaurante",
-              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
+              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras",
+              "fontes": [
+                {
+                  "o": "Sardinia Point · guia regional",
+                  "u": "https://sardiniapoint.it/guida-turistica/sardegna-ristoranti-sa-funta-cabras/"
+                }
+              ]
             },
             {
               "nome": "Trattoria Sa Bell'e Crabasa",
@@ -665,7 +707,13 @@
           },
           "valeAPena": 2,
           "poiCat": "parque",
-          "mapsQuery": "Spiaggia di Putzu Idu, San Vero Milis, Sardegna"
+          "mapsQuery": "Spiaggia di Putzu Idu, San Vero Milis, Sardegna",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Regione Sardegna",
+              "u": "https://www.sardegnaturismo.it/it/esplora/spiaggia-di-putzu-idu"
+            }
+          ]
         },
         {
           "hora": "20:30",
@@ -690,12 +738,22 @@
             },
             {
               "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
-              "desc": "Volta a Càbras · bottarga, instituição da vila · reservar",
+              "desc": "Volta a Càbras · bottarga, instituição da vila · reservar · <strong>FECHA ÀS SEGUNDAS</strong> · €36-45/pessoa · tel 0783 391139 (ago/2026)",
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Càbras · a pé da base",
-              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras",
+              "fontes": [
+                {
+                  "o": "Accademia Italiana della Cucina · ficha do Caminetto",
+                  "u": "https://accademiaitalianadellacucina.it/en/ristoranti/ristorante/1134-caminetto"
+                },
+                {
+                  "o": "Site oficial do Ristorante Il Caminetto (Cabras)",
+                  "u": "https://www.ristoranteilcaminettocabras.com/"
+                }
+              ]
             },
             {
               "nome": "Jantar leve em casa",
@@ -896,44 +954,55 @@
           "emoji": "🍽️",
           "periodo": "noite",
           "tipo": "opcoes",
-          "nome": "Jantar leve Càbras",
-          "cat": "Dia foi cheio · atenção: Sa Bell'e Crabasa fecha às segundas",
+          "nome": "Jantar leve Càbras · ⚠️ segunda-feira",
+          "cat": "ATENÇÃO: o Caminetto fecha às segundas",
           "coord": {
             "lat": 39.93003,
             "lng": 8.53144
           },
           "opcoes": [
             {
-              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
-              "desc": "A instituição da bottarga em Càbras · num dia cheio, é o jantar que não exige decisão",
-              "preco": "€35-50",
-              "valeAPena": 3,
+              "nome": "Trattoria Sa Bell'e Crabasa (Càbras)",
+              "desc": "Cozinha do Sinis com bottarga · <strong>é a alternativa de segunda</strong>, quando o Caminetto fecha · <strong>ligue antes pra confirmar que abre</strong>",
+              "preco": "€30-40",
+              "dist": "Càbras centro",
               "poiCat": "restaurante",
-              "dist": "centro de Càbras · a pé da base",
-              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
+              "valeAPena": 2,
+              "fontes": [
+                {
+                  "o": "L'Unione Sarda · casas de bottarga de Càbras",
+                  "u": "https://www.unionesarda.it/news-sardegna/oristano-provincia/cabras-arriva-il-festival-della-bottarga-thfz2mtu"
+                }
+              ]
             },
             {
               "nome": "Casa",
-              "desc": "Salada, queijo sardo e um Vermentino · descompressão depois de Bosa",
-              "preco": "€15",
-              "valeAPena": 1,
+              "desc": "Compra no mercado de Càbras à tarde e janta em casa · <strong>o plano B mais seguro numa segunda</strong>",
+              "preco": "€15-20",
+              "dist": "—",
               "poiCat": "mercado",
-              "dist": "na base",
+              "valeAPena": 2,
               "noMaps": true
             },
             {
-              "nome": "Sa Funta (Via Giuseppe Garibaldi 25, Càbras)",
-              "desc": "Enguia defumada e choco na Vernaccia · cozinha de lagoa, para paladar curioso · as avaliações recentes são fracas, vá pelo que é diferente, não pelo consenso",
-              "preco": "€30-45",
-              "valeAPena": 2,
+              "nome": "Il Caminetto (Via Cesare Battisti 8, Càbras)",
+              "desc": "⛔ <strong>FECHA ÀS SEGUNDAS</strong> — só serve pros outros dias da base. €36-45/pessoa · tel 0783 391139 (ago/2026)",
+              "preco": "€36-45",
+              "dist": "Càbras centro",
               "poiCat": "restaurante",
-              "dist": "centro de Càbras · a pé da base",
-              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
+              "valeAPena": 0,
+              "fontes": [
+                {
+                  "o": "Site oficial do Ristorante Il Caminetto",
+                  "u": "https://www.ristoranteilcaminettocabras.com/"
+                }
+              ]
             }
-          ]
+          ],
+          "mapsQuery": "Cabras, Oristano, Sardegna"
         }
       ],
-      "nota": "Bosa é o desvio que vale a viagem, e a SS292 costeira até lá já é metade do motivo. Cidade colorida, castelo no alto, curtumes abandonados na beira do rio. Dia de andar devagar e voltar pelo mesmo caminho ao pôr do sol."
+      "nota": "Bosa é o desvio que vale a viagem, e a SS292 costeira até lá já é metade do motivo. Cidade colorida, castelo no alto, curtumes abandonados na beira do rio. Dia de andar devagar e voltar pelo mesmo caminho ao pôr do sol. <strong>Atenção ao jantar</strong>: é segunda-feira e o Il Caminetto, o melhor de Càbras, fecha nesse dia — confirmem a alternativa por telefone à tarde, ainda em Bosa."
     },
     {
       "date": "Ter 11/Ago",
@@ -971,7 +1040,13 @@
           },
           "valeAPena": 1,
           "poiCat": "parque",
-          "mapsQuery": "Stagno di Cabras, Sardegna"
+          "mapsQuery": "Stagno di Cabras, Sardegna",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Stagno di Cabras (zona húmida Ramsar)",
+              "u": "https://www.sardegnaturismo.it/it/esplora/stagno-di-cabras"
+            }
+          ]
         },
         {
           "hora": "09:00",
@@ -1041,21 +1116,37 @@
           "opcoes": [
             {
               "nome": "Sa Funta",
-              "desc": "Adventurous · enguia, choco · pratos diferentes",
+              "desc": "⚠️ <strong>[a confirmar se ainda opera]</strong> — um agregador marca fechamento definitivo e os outros não confirmam. E, quando aberto, é <strong>o pior avaliado de Càbras</strong> (2/5, 52º de 52 no TripAdvisor). Receitas antigas do Sinis — burrida, enguia com alcachofra — mas a cozinha não sustenta. <strong>Liguem antes (0783 290685) ou pulem sem culpa.</strong>",
               "preco": "€30-45",
               "dist": "Centro",
-              "valeAPena": 3,
+              "valeAPena": 1,
               "poiCat": "restaurante",
-              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
+              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras",
+              "fontes": [
+                {
+                  "o": "Sardinia Point · guia regional",
+                  "u": "https://sardiniapoint.it/guida-turistica/sardegna-ristoranti-sa-funta-cabras/"
+                }
+              ]
             },
             {
               "nome": "Il Caminetto",
-              "desc": "Repete bottarga · vale a 2ª vez",
+              "desc": "Repete bottarga · vale a 2ª vez · <strong>FECHA ÀS SEGUNDAS</strong> · €36-45/pessoa · tel 0783 391139 (ago/2026)",
               "preco": "€35-50",
               "dist": "Centro",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras",
+              "fontes": [
+                {
+                  "o": "Accademia Italiana della Cucina · ficha do Caminetto",
+                  "u": "https://accademiaitalianadellacucina.it/en/ristoranti/ristorante/1134-caminetto"
+                },
+                {
+                  "o": "Site oficial do Ristorante Il Caminetto (Cabras)",
+                  "u": "https://www.ristoranteilcaminettocabras.com/"
+                }
+              ]
             },
             {
               "nome": "Mercado de Càbras + picnic",
@@ -1063,7 +1154,8 @@
               "preco": "€20 família",
               "dist": "—",
               "valeAPena": 2,
-              "poiCat": "mercado"
+              "poiCat": "mercado",
+              "noMaps": true
             }
           ]
         },
@@ -1091,7 +1183,13 @@
           },
           "valeAPena": 1,
           "poiCat": "atracao",
-          "mapsQuery": "Spiaggia di Putzu Idu"
+          "mapsQuery": "Spiaggia di Putzu Idu",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Regione Sardegna",
+              "u": "https://www.sardegnaturismo.it/it/esplora/spiaggia-di-putzu-idu"
+            }
+          ]
         },
         {
           "hora": "20:30",
@@ -1107,21 +1205,37 @@
           "opcoes": [
             {
               "nome": "Il Caminetto (reserva)",
-              "desc": "Última chance · bottarga top + vinho Vernaccia di Oristano · noite especial",
+              "desc": "Última chance · bottarga top + vinho Vernaccia di Oristano · noite especial · <strong>FECHA ÀS SEGUNDAS</strong> · €36-45/pessoa · tel 0783 391139 (ago/2026)",
               "preco": "€35-50",
               "dist": "Centro",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras"
+              "mapsQuery": "Il Caminetto, Via Cesare Battisti 8, Cabras",
+              "fontes": [
+                {
+                  "o": "Accademia Italiana della Cucina · ficha do Caminetto",
+                  "u": "https://accademiaitalianadellacucina.it/en/ristoranti/ristorante/1134-caminetto"
+                },
+                {
+                  "o": "Site oficial do Ristorante Il Caminetto (Cabras)",
+                  "u": "https://www.ristoranteilcaminettocabras.com/"
+                }
+              ]
             },
             {
               "nome": "Sa Funta",
-              "desc": "Pratos diferentes do almoço · enguia defumada",
+              "desc": "⚠️ <strong>[a confirmar se ainda opera]</strong> — um agregador marca fechamento definitivo e os outros não confirmam. E, quando aberto, é <strong>o pior avaliado de Càbras</strong> (2/5, 52º de 52 no TripAdvisor). Receitas antigas do Sinis — burrida, enguia com alcachofra — mas a cozinha não sustenta. <strong>Liguem antes (0783 290685) ou pulem sem culpa.</strong>",
               "preco": "€30-45",
               "dist": "Centro",
-              "valeAPena": 3,
+              "valeAPena": 1,
               "poiCat": "restaurante",
-              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras"
+              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras",
+              "fontes": [
+                {
+                  "o": "Sardinia Point · guia regional",
+                  "u": "https://sardiniapoint.it/guida-turistica/sardegna-ristoranti-sa-funta-cabras/"
+                }
+              ]
             },
             {
               "nome": "Casa",
@@ -1276,12 +1390,22 @@
             },
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
-              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 · 15min de carro",
+              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 ou 0781 801093 · 15min de carro · €25-33/pessoa (ago/2026)",
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "15min de carro",
-              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/i-due-fratelli/"
+                },
+                {
+                  "o": "Site do próprio ittiturismo (família Serra)",
+                  "u": "https://iduefratelliexperience.com/ittiturismo/"
+                }
+              ]
             },
             {
               "nome": "Ristorante Da Silvana (Località Is Loddus, Sant'Antioco)",
@@ -1290,7 +1414,13 @@
               "valeAPena": 2,
               "poiCat": "restaurante",
               "dist": "12min de carro · Località Is Loddus",
-              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco"
+              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Guia de restaurantes de Sant'Antioco",
+                  "u": "https://www.voloscontato.it/ristoranti/santantioco-dove-mangiare-bene-spendendo-poco.php"
+                }
+              ]
             }
           ]
         }
@@ -1420,13 +1550,19 @@
           },
           "opcoes": [
             {
-              "nome": "I Vinattieri (Corso Vittorio Emanuele, Sant'Antioco)",
-              "desc": "Enoteca no corso principal · pratos locais com Vermentino, Cannonau e Carignano del Sulcis a copo",
+              "nome": "I Vinattieri (Corso Vittorio Emanuele 70, Sant'Antioco)",
+              "desc": "<strong>Enoteca / wine bar</strong>, não restaurante de prato feito — pratos locais pra acompanhar Vermentino, Cannonau e Carignano del Sulcis a copo. 4,2/5, 28º de 88 em Sant'Antioco",
               "preco": "€25-35",
               "valeAPena": 2,
               "poiCat": "restaurante",
               "dist": "no corso, meio do walking tour",
-              "mapsQuery": "I Vinattieri, Corso Vittorio Emanuele, Sant'Antioco"
+              "mapsQuery": "I Vinattieri, Corso Vittorio Emanuele, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · rede de qualidade (portal oficial)",
+                  "u": "https://visitsantantioco.info/rete_di_qualita/i-vinattieri/"
+                }
+              ]
             },
             {
               "nome": "Is Solus Bistrot (Corso Vittorio Emanuele 11, Sant'Antioco)",
@@ -1435,7 +1571,13 @@
               "valeAPena": 2,
               "poiCat": "cafe",
               "dist": "no corso, meio do walking tour",
-              "mapsQuery": "Is Solus Bistrot, Corso Vittorio Emanuele 11, Sant'Antioco"
+              "mapsQuery": "Is Solus Bistrot, Corso Vittorio Emanuele 11, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/is-solus-cafe/"
+                }
+              ]
             },
             {
               "nome": "Picnic mira-mar",
@@ -1497,12 +1639,22 @@
             },
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
-              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107",
+              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 ou 0781 801093 · €25-33/pessoa (ago/2026)",
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "15min de carro",
-              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/i-due-fratelli/"
+                },
+                {
+                  "o": "Site do próprio ittiturismo (família Serra)",
+                  "u": "https://iduefratelliexperience.com/ittiturismo/"
+                }
+              ]
             },
             {
               "nome": "Casa",
@@ -1601,12 +1753,26 @@
           "opcoes": [
             {
               "nome": "Al Tonno di Corsa (Via Guglielmo Marconi 47, Carloforte)",
-              "desc": "Guia Michelin · ventresca selada e tagliatelle ao ragù de atum · tel. 0781 855106 · reservar com antecedência",
+              "desc": "Guia Michelin · ventresca selada e tagliatelle ao ragù de atum · tel. 0781 855106 · reservar com antecedência · <strong>Guia Michelin</strong> · instituição da cozinha carlofortina desde <strong>1980</strong> · ~€47/pessoa (ago/2026)",
               "preco": "€60-90",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Carloforte · a pé do porto",
-              "mapsQuery": "Al Tonno di Corsa, Via Guglielmo Marconi 47, Carloforte"
+              "mapsQuery": "Al Tonno di Corsa, Via Guglielmo Marconi 47, Carloforte",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Al Tonno di Corsa, Carloforte",
+                  "u": "https://guide.michelin.com/us/en/sardegna/carloforte/restaurant/al-tonno-di-corsa"
+                },
+                {
+                  "o": "Accademia Italiana della Cucina",
+                  "u": "https://www.accademiaitalianadellacucina.it/it/ristoranti/ristorante/4313-tonno-di-corsa"
+                },
+                {
+                  "o": "Carloforte Turismo · site oficial",
+                  "u": "https://www.carloforteturismo.it/en/services/al-tonno-di-corsa-2/"
+                }
+              ]
             },
             {
               "nome": "Osteria della Tonnara (Corso Battellieri 36, Carloforte)",
@@ -1615,7 +1781,17 @@
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "beira-mar · a pé do porto",
-              "mapsQuery": "Osteria della Tonnara, Corso Battellieri 36, Carloforte"
+              "mapsQuery": "Osteria della Tonnara, Corso Battellieri 36, Carloforte",
+              "fontes": [
+                {
+                  "o": "Carloforte Turismo · site oficial",
+                  "u": "https://www.carloforteturismo.it/"
+                },
+                {
+                  "o": "Página oficial do restaurante",
+                  "u": "https://www.griglieriadellatonnara.it/"
+                }
+              ]
             },
             {
               "nome": "Ristorante Da Nicolo (Corso Cavour 32, Carloforte)",
@@ -1624,7 +1800,17 @@
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "Corso Cavour · a pé do porto",
-              "mapsQuery": "Ristorante Da Nicolo, Corso Cavour 32, Carloforte"
+              "mapsQuery": "Ristorante Da Nicolo, Corso Cavour 32, Carloforte",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Da Nicolò, Carloforte",
+                  "u": "https://guide.michelin.com/us/en/sardegna/carloforte/restaurant/da-nicolo"
+                },
+                {
+                  "o": "Carloforte Turismo · site oficial",
+                  "u": "https://www.carloforteturismo.it/en/services/da-nicolo/"
+                }
+              ]
             }
           ]
         },
@@ -1652,7 +1838,13 @@
           },
           "valeAPena": 2,
           "poiCat": "parque",
-          "mapsQuery": "Spiaggia La Bobba, Carloforte, Sardegna"
+          "mapsQuery": "Spiaggia La Bobba, Carloforte, Sardegna",
+          "fontes": [
+            {
+              "o": "Carloforte Turismo · site oficial do município",
+              "u": "https://www.carloforteturismo.it/"
+            }
+          ]
         },
         {
           "hora": "18:30",
@@ -1805,7 +1997,17 @@
           },
           "valeAPena": 2,
           "poiCat": "parque",
-          "mapsQuery": "Cala Domestica, Buggerru, Sardegna"
+          "mapsQuery": "Cala Domestica, Buggerru, Sardegna",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Cala Domestica (Regione Sardegna)",
+              "u": "https://www.sardegnaturismo.it/it/esplora/cala-domestica"
+            },
+            {
+              "o": "Visit Buggerru · site oficial do município",
+              "u": "https://www.visitbuggerru.it/cala-domestica"
+            }
+          ]
         },
         {
           "hora": "17:30",
@@ -1825,7 +2027,7 @@
           "periodo": "noite",
           "tipo": "opcoes",
           "nome": "Jantar especial · última noite todos juntos",
-          "cat": "Amanhã vocês partem sozinhos",
+          "cat": "⚠️ FERRAGOSTO · reservar com dias de antecedência",
           "coord": {
             "lat": 38.9989,
             "lng": 8.4489
@@ -1833,12 +2035,22 @@
           "opcoes": [
             {
               "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
-              "desc": "Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 · última noite todos juntos",
+              "desc": "⚠️ <strong>15/Ago é FERRAGOSTO</strong> — o feriado mais movimentado da Itália. <strong>Reservem com dias de antecedência</strong>, não na véspera. Cooperativa da família Serra, pescadores há gerações · o peixe chega a poucas dezenas de metros do barco · tel. 366 839 7107 ou 0781 801093 · última noite todos juntos · €25-33/pessoa (ago/2026)",
               "preco": "€40-55",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "15min de carro",
-              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco"
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/i-due-fratelli/"
+                },
+                {
+                  "o": "Site do próprio ittiturismo (família Serra)",
+                  "u": "https://iduefratelliexperience.com/ittiturismo/"
+                }
+              ]
             },
             {
               "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
@@ -1856,7 +2068,13 @@
               "valeAPena": 2,
               "poiCat": "restaurante",
               "dist": "12min de carro · Località Is Loddus",
-              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco"
+              "mapsQuery": "Ristorante Da Silvana, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Guia de restaurantes de Sant'Antioco",
+                  "u": "https://www.voloscontato.it/ristoranti/santantioco-dove-mangiare-bene-spendendo-poco.php"
+                }
+              ]
             }
           ]
         }
@@ -1918,7 +2136,7 @@
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço Nuoro · cultura interior",
-          "cat": "Capital do interior · culinária da Barbagia",
+          "cat": "⚠️ domingo · confirmar por telefone antes de subir",
           "coord": {
             "lat": 40.3216,
             "lng": 9.3303
@@ -1926,12 +2144,36 @@
           "opcoes": [
             {
               "nome": "Il Rifugio (Via Antonio Mereu 28, Nuoro)",
-              "desc": "Trattoria barbaricina citada no Touring Club · pratos sardos que já não se acham em outro lugar · <strong>fecha às quartas</strong> (hoje é domingo) · tel. 0784 232355",
+              "desc": "Trattoria histórica no coração de Nuoro, desde <strong>1988</strong>, cozinha da <strong>Barbagia</strong>: presunto de javali e de ovelha, grelhados mistos, culurgiones. Filosofia slow food.<br>⚠️ <strong>LIGUEM ANTES — 0784 232355</strong>: as fontes divergem sobre domingo. O Touring Club lista seg·ter·qui·sex·sáb (12h45-15h e 19h45-23h30, sem domingo); o GialloZafferano diz que fecha só às quartas. Vocês chegam num <strong>domingo</strong> — não subam a Nuoro sem confirmar.",
               "preco": "€25-40",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Nuoro · 230km desde a base",
-              "mapsQuery": "Il Rifugio, Via Antonio Mereu 28, Nuoro"
+              "mapsQuery": "Il Rifugio, Via Antonio Mereu 28, Nuoro",
+              "fontes": [
+                {
+                  "o": "Touring Club Italiano",
+                  "u": "https://www.touringclub.it/destinazioni/nuoro/mangiare/111377-il-rifugio"
+                },
+                {
+                  "o": "GialloZafferano · guia de restaurantes",
+                  "u": "https://ristoranti.giallozafferano.it/ristoranti/sardegna/ristoranti-nuoro/il-rifugio-1970.html"
+                }
+              ]
+            },
+            {
+              "nome": "Ristorante Il Portico (Nuoro)",
+              "desc": "<strong>Plano B em Nuoro</strong> se o Rifugio não abrir no domingo · cozinha sarda no centro · tem site próprio pra conferir horário na hora",
+              "preco": "€30-40",
+              "dist": "Nuoro centro",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "fontes": [
+                {
+                  "o": "Site oficial do Ristorante Il Portico, Nuoro",
+                  "u": "https://www.ilporticonuoro.it/"
+                }
+              ]
             },
             {
               "nome": "Dorgali · almoço no caminho",
@@ -1991,7 +2233,13 @@
           "coord_unverified": true,
           "valeAPena": 2,
           "poiCat": "atracao",
-          "noMaps": true
+          "noMaps": true,
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Dorgali e a estrada para Cala Gonone",
+              "u": "https://www.sardegnaturismo.it/it/esplora/dorgali"
+            }
+          ]
         },
         {
           "hora": "16:30",
@@ -2033,12 +2281,18 @@
           "opcoes": [
             {
               "nome": "Ristorante Il Pescatore (via Acqua Dolce 7, Cala Gonone)",
-              "desc": "Guia Michelin e Lonely Planet · peixe do dia num terraço de frente pro mar",
+              "desc": "Guia Michelin e Lonely Planet · peixe do dia num terraço de frente pro mar · <strong>Guia Michelin</strong> · família de pescadores local · tel 0784 93174 (ago/2026)",
               "preco": "€35-50",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "marina · a pé da hospedagem",
-              "mapsQuery": "Ristorante Il Pescatore, Via Acqua Dolce 7, Cala Gonone"
+              "mapsQuery": "Ristorante Il Pescatore, Via Acqua Dolce 7, Cala Gonone",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Il Pescatore, Cala Gonone",
+                  "u": "https://guide.michelin.com/us/en/sardegna/cala-gonone/restaurant/il-pescatore"
+                }
+              ]
             },
             {
               "nome": "HBM Bue Marino · Ristorante (marina de Cala Gonone)",
@@ -2140,7 +2394,8 @@
           },
           "valeAPena": 1,
           "poiCat": "cafe",
-          "mapsQuery": "Porto di Cala Gonone"
+          "mapsQuery": "Porto di Cala Gonone",
+          "noMaps": true
         },
         {
           "hora": "20:00",
@@ -2299,7 +2554,13 @@
           },
           "valeAPena": 1,
           "poiCat": "atracao",
-          "mapsQuery": "Santa Teresa Gallura"
+          "mapsQuery": "Santa Teresa Gallura",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Capo Testa e Valle della Luna",
+              "u": "https://www.sardegnaturismo.it/it/esplora/capo-testa"
+            }
+          ]
         },
         {
           "hora": "17:00",
@@ -2371,7 +2632,13 @@
           ],
           "valeAPena": 3,
           "poiCat": "parque",
-          "mapsQuery": "Valle della Luna, Capo Testa"
+          "mapsQuery": "Valle della Luna, Capo Testa",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Capo Testa e Valle della Luna",
+              "u": "https://www.sardegnaturismo.it/it/esplora/capo-testa"
+            }
+          ]
         },
         {
           "hora": "20:30",
@@ -2387,12 +2654,22 @@
           "opcoes": [
             {
               "nome": "Millo Ristorante (via Garibaldi 4, Santa Teresa di Gallura)",
-              "desc": "Citado no Guia Michelin · cozinha da Gallura levada a sério · reservar",
+              "desc": "Citado no Guia Michelin · cozinha da Gallura levada a sério · reservar · <strong>Guia Michelin</strong> · ~€40/pessoa (ago/2026)",
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Santa Teresa · a pé",
-              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura"
+              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Millo Ristorante, Santa Teresa Gallura",
+                  "u": "https://guide.michelin.com/en/sardegna/santa-teresa-gallura/restaurant/millo-ristorante"
+                },
+                {
+                  "o": "Site oficial do Millo Ristorante",
+                  "u": "https://www.milloristorante.it/"
+                }
+              ]
             },
             {
               "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
@@ -2536,7 +2813,17 @@
           ],
           "valeAPena": 2,
           "poiCat": "atracao",
-          "mapsQuery": "La Maddalena"
+          "mapsQuery": "La Maddalena",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · La Maddalena (Regione Sardegna)",
+              "u": "https://www.sardegnaturismo.it/it/la-maddalena"
+            },
+            {
+              "o": "SardegnaTurismo · Cala Francese e Punta Tegge",
+              "u": "https://www.sardegnaturismo.it/it/esplora/punta-tegge"
+            }
+          ]
         },
         {
           "hora": "13:00",
@@ -2731,7 +3018,13 @@
           },
           "valeAPena": 2,
           "poiCat": "mercado",
-          "mapsQuery": "San Pantaleo, Olbia"
+          "mapsQuery": "San Pantaleo, Olbia",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · San Pantaleo (Regione Sardegna)",
+              "u": "https://www.sardegnaturismo.it/it/esplora/san-pantaleo"
+            }
+          ]
         },
         {
           "hora": "12:30",
@@ -2882,12 +3175,22 @@
           "opcoes": [
             {
               "nome": "Millo Ristorante (via Garibaldi 4, Santa Teresa di Gallura)",
-              "desc": "Última noite na Sardenha · o melhor endereço da vila, citado no Michelin · reservar com antecedência",
+              "desc": "Última noite na Sardenha · o melhor endereço da vila, citado no Michelin · reservar com antecedência · <strong>Guia Michelin</strong> · ~€40/pessoa (ago/2026)",
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "centro de Santa Teresa · a pé",
-              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura"
+              "mapsQuery": "Millo Ristorante, Via Garibaldi 4, Santa Teresa Gallura",
+              "fontes": [
+                {
+                  "o": "Guia MICHELIN · Millo Ristorante, Santa Teresa Gallura",
+                  "u": "https://guide.michelin.com/en/sardegna/santa-teresa-gallura/restaurant/millo-ristorante"
+                },
+                {
+                  "o": "Site oficial do Millo Ristorante",
+                  "u": "https://www.milloristorante.it/"
+                }
+              ]
             },
             {
               "nome": "Ristorante da Thomas (via Val d'Aosta, Santa Teresa di Gallura)",
@@ -3190,11 +3493,11 @@
       "opcoes": [
         {
           "modo": "ferry",
-          "texto": "Moby · ~50min · ~€31-40 por passageiro, por trecho (ago/2026) · o preço varia com horário e antecedência"
+          "texto": "Moby ou Ichnusa Lines · ~50min · ~€31-44 por passageiro, por trecho (ago/2026) · o preço varia com horário e antecedência"
         },
         {
           "modo": "rota",
-          "texto": "Moby: 4 partidas/dia entre 07h e 18h30 (mai-set) · Moby opera de ~08h30 a ~20h20, cerca de 8 saídas/dia no verão · <strong>confirmem o horário exato na compra</strong>"
+          "texto": "Moby: 4 partidas/dia entre 07h e 18h30 (mai-set) · Ichnusa Lines sai de Bonifacio às 09h00 · 12h30 · 17h00 · 20h30 · a Moby opera de ~08h30 a ~20h20 · <strong>confirmem o horário exato na compra</strong>"
         },
         {
           "modo": "a-pe",
@@ -3206,7 +3509,7 @@
       "opcoes": [
         {
           "modo": "ferry",
-          "texto": "Moby · ~50min · mesma faixa da ida (~€31-40 por passageiro, ago/2026)"
+          "texto": "Moby ou Ichnusa Lines · ~50min · mesma faixa da ida (~€31-44 por passageiro, ago/2026)"
         },
         {
           "modo": "rota",
@@ -3564,23 +3867,73 @@
   "historia": [
     {
       "titulo": "🗿 Os nurágicos e os Gigantes de Mont'e Prama",
-      "prosa_html": "<p>Antes dos fenícios, antes dos romanos, antes de qualquer coisa que se possa chamar de história escrita, a Sardenha teve uma civilização inteira que não deixou uma única palavra. Chamamos essa gente de <strong>nurágica</strong> pelo que ela construiu: os <em>nuraghi</em>, torres tronco-cônicas de pedra seca erguidas entre <strong>1800 e 1100 a.C.</strong> Restam cerca de <strong>7.000</strong> delas espalhadas pela ilha — uma a cada três quilômetros quadrados. Ninguém sabe ao certo se eram fortalezas, templos, celeiros ou casas de chefe. Sabemos que eram muitas e que quem as fez sabia empilhar pedra melhor que qualquer contemporâneo seu no Mediterrâneo ocidental.</p> <p>Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — preparavam a terra pra semear em lotes arrendados ao pé de uma colina chamada Mont'e Prama. O arado bateu numa pedra. A pedra tinha rosto.</p> <p>O que saiu dali nos anos seguintes foram <strong>5.178 fragmentos</strong> de arenito: cabeças, torsos, braços, pernas e escudos. Levou décadas de restauro no centro de Li Punti, em Sassari, pra que aqueles cacos voltassem a ser <strong>26 estátuas</strong> de dois metros a dois metros e meio — guerreiros com escudo sobre a cabeça, arqueiros e pugilistas. O arqueólogo <strong>Giovanni Lilliu</strong>, que dominou a arqueologia sarda do século XX, chamou-as de <em>kolossoi</em>.</p> <p>A parte que desarruma tudo é a data. As estátuas são do <strong>século IX-VIII a.C.</strong> — e há quem defenda o século XI. Isso as coloca <em>antes</em> dos <em>kouroi</em> gregos arcaicos. Fora do Egito, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real àquela altura. Uma civilização sem escrita, numa ilha que os manuais tratam como periferia, estava fazendo a estatuária monumental mais antiga da região — e a fez primeiro.</p> <p>Repare nos <strong>olhos</strong> quando estiver diante deles no museu de Càbras: dois círculos concêntricos gravados na pedra, sem pupila. Não é falta de habilidade — o resto da anatomia é minucioso, com os dedos, as tranças e os detalhes da armadura todos ali. É escolha. Os mesmos olhos aparecem nos bronzetti nurágicos, aquelas estatuetas de bronze de vinte centímetros que estão em todo museu arqueológico da ilha. Era assim que essa gente representava o olhar.</p> <p>As estátuas estavam <strong>quebradas</strong> quando foram encontradas — quebradas de propósito, tudo indica, e enterradas junto a uma necrópole de tumbas individuais. Quem as destruiu, e por quê, é a pergunta aberta da arqueologia sarda. Uma hipótese aponta os cartagineses, que chegaram alguns séculos depois e teriam apagado os símbolos de quem estava ali antes. Outra aponta os próprios sardos, num acerto de contas interno que não deixou registro. A colina de Mont'e Prama continua sendo escavada — em 2022 saíram dois torsos novos, e estima-se que boa parte do sítio ainda está debaixo da terra.</p> <p>Vocês verão a mesma civilização em <strong>Coddu Vecchiu</strong>, perto de Arzachena, no penúltimo dia: uma <em>tomba di giganti</em>, sepultura coletiva com a grande estela central de três metros e a exedra em semicírculo à frente, onde os vivos se reuniam. É de 1800-1400 a.C., mais antiga que as estátuas. Entre uma coisa e outra, mil anos da mesma gente.</p>"
+      "prosa_html": "<p>Antes dos fenícios, antes dos romanos, antes de qualquer coisa que se possa chamar de história escrita, a Sardenha teve uma civilização inteira que não deixou uma única palavra. Chamamos essa gente de <strong>nurágica</strong> pelo que ela construiu: os <em>nuraghi</em>, torres tronco-cônicas de pedra seca erguidas entre <strong>1800 e 1100 a.C.</strong> Restam cerca de <strong>7.000</strong> delas espalhadas pela ilha — uma a cada três quilômetros quadrados. Ninguém sabe ao certo se eram fortalezas, templos, celeiros ou casas de chefe. Sabemos que eram muitas e que quem as fez sabia empilhar pedra melhor que qualquer contemporâneo seu no Mediterrâneo ocidental.</p> <p>Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — preparavam a terra pra semear em lotes arrendados ao pé de uma colina chamada Mont'e Prama. O arado bateu numa pedra. A pedra tinha rosto.</p> <p>O que saiu dali nos anos seguintes foram <strong>5.178 fragmentos</strong> de arenito: cabeças, torsos, braços, pernas e escudos. Levou décadas de restauro no centro de Li Punti, em Sassari, pra que aqueles cacos voltassem a ser <strong>26 estátuas</strong> de dois metros a dois metros e meio — guerreiros com escudo sobre a cabeça, arqueiros e pugilistas. O arqueólogo <strong>Giovanni Lilliu</strong>, que dominou a arqueologia sarda do século XX, chamou-as de <em>kolossoi</em>.</p> <p>A parte que desarruma tudo é a data. As estátuas são do <strong>século IX-VIII a.C.</strong> — e há quem defenda o século XI. Isso as coloca <em>antes</em> dos <em>kouroi</em> gregos arcaicos. Fora do Egito, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real àquela altura. Uma civilização sem escrita, numa ilha que os manuais tratam como periferia, estava fazendo a estatuária monumental mais antiga da região — e a fez primeiro.</p> <p>Repare nos <strong>olhos</strong> quando estiver diante deles no museu de Càbras: dois círculos concêntricos gravados na pedra, sem pupila. Não é falta de habilidade — o resto da anatomia é minucioso, com os dedos, as tranças e os detalhes da armadura todos ali. É escolha. Os mesmos olhos aparecem nos bronzetti nurágicos, aquelas estatuetas de bronze de vinte centímetros que estão em todo museu arqueológico da ilha. Era assim que essa gente representava o olhar.</p> <p>As estátuas estavam <strong>quebradas</strong> quando foram encontradas — quebradas de propósito, tudo indica, e enterradas junto a uma necrópole de tumbas individuais. Quem as destruiu, e por quê, é a pergunta aberta da arqueologia sarda. Uma hipótese aponta os cartagineses, que chegaram alguns séculos depois e teriam apagado os símbolos de quem estava ali antes. Outra aponta os próprios sardos, num acerto de contas interno que não deixou registro. A colina de Mont'e Prama continua sendo escavada — em 2022 saíram dois torsos novos, e estima-se que boa parte do sítio ainda está debaixo da terra.</p> <p>Vocês verão a mesma civilização em <strong>Coddu Vecchiu</strong>, perto de Arzachena, no penúltimo dia: uma <em>tomba di giganti</em>, sepultura coletiva com a grande estela central de três metros e a exedra em semicírculo à frente, onde os vivos se reuniam. É de 1800-1400 a.C., mais antiga que as estátuas. Entre uma coisa e outra, mil anos da mesma gente.</p>",
+      "fontes": [
+        {
+          "o": "Museo Archeologico Nazionale di Cagliari · Ministero della Cultura",
+          "u": "https://museinazionalicagliari.cultura.gov.it/attivita/monte-prama-lesposizione/"
+        },
+        {
+          "o": "SardegnaTurismo · site oficial da Regione Sardegna",
+          "u": "https://www.sardegnaturismo.it/it/monte-prama-patria-di-giganti"
+        }
+      ]
     },
     {
       "titulo": "⚓ Tharros, Sulci e os fenícios — a Senhora dos Dois Mares",
-      "prosa_html": "<p>Por volta do <strong>final do século VIII a.C.</strong>, navios fenícios vindos de Tiro e de Cartago começam a parar no golfo de Oristano. Não vinham conquistar: vinham comerciar, e escolhiam sempre o mesmo tipo de lugar — uma ponta de terra com mar dos dois lados, fácil de defender e fácil de sair de barco em qualquer vento. <strong>Tharros</strong>, na ponta do Capo San Marco, é o exemplo perfeito. Os sardos a chamaram depois de <em>a Senhora dos Dois Mares</em>.</p> <p>A escolha não foi num vazio: já havia um <strong>povoado nurágico</strong> ali, com o nuraghe Su Muru Mannu, cujos restos vocês vão pisar logo na entrada do sítio. Os fenícios se instalaram ao lado, não por cima. No <strong>século VI a.C.</strong>, com Cartago no controle, a cidade ganha muralhas e entra na melhor fase: comércio com a África, com a península ibérica e com Massália, a atual Marselha.</p> <p>Depois vieram os <strong>romanos</strong>, e é a Roma que se vê melhor hoje: o <em>decumanus</em> calçado com pedra de basalto, os três complexos termais, as colunas coríntias de pé com o mar atrás — que são, convém dizer, uma <em>reconstrução</em> do século XX a partir dos tambores encontrados no chão, e não uma ruína intacta. Depois, os bizantinos, que fizeram de Tharros sede episcopal. E depois, o fim.</p> <p>O fim foi lento e teve um responsável concreto. Entre os séculos IX e X, as incursões sarracenas na costa ocidental tornaram insustentável viver numa ponta de terra exposta e indefensável. Em <strong>1070</strong>, o arcebispo <strong>Torcotorio</strong> transferiu a sé episcopal de Tharros para <em>Aristanis</em> — a atual Oristano —, protegida pelos pântanos de Santa Giusta e pelas curvas do rio Tirso. A população acompanhou. Ao longo do século XI, o porto esvaziou. Uma cidade que viveu <strong>mil e oitocentos anos</strong> foi abandonada sem guerra, por cálculo.</p> <p>E aí vem a parte que explica por que Tharros parece incompleta. Existe um dito sardo que resume o que aconteceu depois: <em>quem quiser construir Oristano, vá buscar pedra em Tharros</em>. Por séculos, a cidade abandonada foi pedreira da cidade nova. As casas de Oristano têm dentro delas as paredes de Tharros. É por isso que o que sobrou é sobretudo o que estava debaixo da terra ou era pesado demais pra carregar.</p> <p>O outro monumento fenício desta viagem é <strong>Sulci</strong> — a atual Sant'Antioco —, fundada no mesmo século VIII a.C. e, diferente de Tharros, <strong>nunca abandonada</strong>: são 2.800 anos de ocupação ininterrupta, o que faz dela uma das cidades habitadas mais antigas da Itália. Lá está o <strong>tophet</strong>, o recinto a céu aberto com mais de três mil urnas de recém-nascidos e natimortos, consagrados à deusa <strong>Tanit</strong>. A leitura antiga — sacrifício ritual de crianças — vem de fontes gregas e romanas, isto é, de inimigos de Cartago; a arqueologia contemporânea tende a ler os tophets como cemitérios infantis de mortes naturais, que a mortalidade da época produzia às centenas. É um lugar silencioso e não é sinistro: é um cemitério de bebês, e a única coisa que ele prova com certeza é que aquela gente enterrava os seus com cuidado.</p>"
+      "prosa_html": "<p>Por volta do <strong>final do século VIII a.C.</strong>, navios fenícios vindos de Tiro e de Cartago começam a parar no golfo de Oristano. Não vinham conquistar: vinham comerciar, e escolhiam sempre o mesmo tipo de lugar — uma ponta de terra com mar dos dois lados, fácil de defender e fácil de sair de barco em qualquer vento. <strong>Tharros</strong>, na ponta do Capo San Marco, é o exemplo perfeito. Os sardos a chamaram depois de <em>a Senhora dos Dois Mares</em>.</p> <p>A escolha não foi num vazio: já havia um <strong>povoado nurágico</strong> ali, com o nuraghe Su Muru Mannu, cujos restos vocês vão pisar logo na entrada do sítio. Os fenícios se instalaram ao lado, não por cima. No <strong>século VI a.C.</strong>, com Cartago no controle, a cidade ganha muralhas e entra na melhor fase: comércio com a África, com a península ibérica e com Massália, a atual Marselha.</p> <p>Depois vieram os <strong>romanos</strong>, e é a Roma que se vê melhor hoje: o <em>decumanus</em> calçado com pedra de basalto, os três complexos termais, as colunas coríntias de pé com o mar atrás — que são, convém dizer, uma <em>reconstrução</em> do século XX a partir dos tambores encontrados no chão, e não uma ruína intacta. Depois, os bizantinos, que fizeram de Tharros sede episcopal. E depois, o fim.</p> <p>O fim foi lento e teve um responsável concreto. Entre os séculos IX e X, as incursões sarracenas na costa ocidental tornaram insustentável viver numa ponta de terra exposta e indefensável. Em <strong>1070</strong>, o arcebispo <strong>Torcotorio</strong> transferiu a sé episcopal de Tharros para <em>Aristanis</em> — a atual Oristano —, protegida pelos pântanos de Santa Giusta e pelas curvas do rio Tirso. A população acompanhou. Ao longo do século XI, o porto esvaziou. Uma cidade que viveu <strong>mil e oitocentos anos</strong> foi abandonada sem guerra, por cálculo.</p> <p>E aí vem a parte que explica por que Tharros parece incompleta. Existe um dito sardo que resume o que aconteceu depois: <em>quem quiser construir Oristano, vá buscar pedra em Tharros</em>. Por séculos, a cidade abandonada foi pedreira da cidade nova. As casas de Oristano têm dentro delas as paredes de Tharros. É por isso que o que sobrou é sobretudo o que estava debaixo da terra ou era pesado demais pra carregar.</p> <p>O outro monumento fenício desta viagem é <strong>Sulci</strong> — a atual Sant'Antioco —, fundada no mesmo século VIII a.C. e, diferente de Tharros, <strong>nunca abandonada</strong>: são 2.800 anos de ocupação ininterrupta, o que faz dela uma das cidades habitadas mais antigas da Itália. Lá está o <strong>tophet</strong>, o recinto a céu aberto com mais de três mil urnas de recém-nascidos e natimortos, consagrados à deusa <strong>Tanit</strong>. A leitura antiga — sacrifício ritual de crianças — vem de fontes gregas e romanas, isto é, de inimigos de Cartago; a arqueologia contemporânea tende a ler os tophets como cemitérios infantis de mortes naturais, que a mortalidade da época produzia às centenas. É um lugar silencioso e não é sinistro: é um cemitério de bebês, e a única coisa que ele prova com certeza é que aquela gente enterrava os seus com cuidado.</p>",
+      "fontes": [
+        {
+          "o": "Ministero della Cultura · Area archeologica di Tharros",
+          "u": "https://cultura.gov.it/luogo/area-archeologica-di-tharros"
+        },
+        {
+          "o": "Fondazione Mont'e Prama · site oficial de Tharros",
+          "u": "https://www.tharros.sardegna.it/"
+        }
+      ]
     },
     {
       "titulo": "🐟 Carloforte — a ilha genovesa que atravessou o Mediterrâneo duas vezes",
-      "prosa_html": "<p>Carloforte é o lugar mais improvável desta viagem, e a razão é linguística antes de ser qualquer outra coisa: numa ilha ao sul da Sardenha, as pessoas falam <strong>genovês do século XVIII</strong>. Não é sotaque, não é influência. É outra língua, chamada <strong>tabarchino</strong>, e é a primeira língua da maioria dos moradores até hoje.</p> <p>A história começa por volta de <strong>1540</strong>, quando um grupo de pescadores de coral de <strong>Pegli</strong>, perto de Gênova, se instala na ilhota de <strong>Tabarka</strong>, na costa da Tunísia. A concessão era da família <strong>Lomellini</strong>, genoveses, e o negócio era o coral vermelho — matéria-prima de luxo do Mediterrâneo. Ficaram lá <strong>duzentos anos</strong>. Duas séculos numa rocha de quatrocentos metros de comprimento em frente ao norte da África, casando entre si, mantendo a língua de Pegli e a fé católica no meio de um mundo que não era nenhum dos dois.</p> <p>No século XVIII a situação apodrece por três motivos simultâneos: os bancos de coral se esgotam, a ilha é pequena demais pra uma população que cresceu, e o assédio dos corsários e dos beis de Túnis e Argel vira insuportável. Em <strong>1738</strong>, parte da comunidade pede asilo à Casa de Savoia. <strong>Carlo Emanuele III</strong> lhes concede a ilha de San Pietro, desabitada, ao largo do Sulcis. Em <strong>17 de abril de 1738</strong>, cerca de <strong>quinhentos colonos</strong> desembarcam na ilha de San Pietro. Fundam <em>Carloforte</em> — literalmente <strong>'Carlos, o Forte'</strong>, em homenagem a quem os acolheu. A parte da comunidade que ficou em Tabarka foi, poucos anos depois, escravizada pelo bei de Túnis.</p> <p>Andando pelos <em>caruggi</em> — as ruelas estreitas e altas do centro — vocês estarão andando por uma cópia de Pegli feita de memória. As casas pastel, o traçado, a maneira de encaixar a vila entre o porto e a colina: tudo é ligure, transplantado por gente que não via Gênova havia duzentos anos.</p> <p>O que os sustentou aqui foi o <strong>atum</strong>. A <em>tonnara</em> de Carloforte foi uma das últimas armações tradicionais em funcionamento no Mediterrâneo: um labirinto de redes fixas ancorado no caminho da migração do atum-rabilho, que culminava na <em>mattanza</em>, a matança em câmara final, com os pescadores puxando as redes ao ritmo de cantos que também eram em tabarchino. A pesca industrial e as quotas internacionais acabaram com o sistema; o que sobrou é a memória e a cozinha.</p> <p>E a cozinha é o motivo real de vir aqui. O <strong>atum</strong> aparece em todos os cortes: a <em>ventresca</em> (a barriga, a parte gorda e a melhor), a <em>bottarga</em> de atum — diferente da de tainha que vocês vão comer em Càbras —, o <em>musciame</em>, o lombo curado. E há o <strong>cascà</strong>: um cuscuz de sêmola cozido no vapor sobre caldo de legumes, herança do tempo de Tabarka, que é literalmente um prato norte-africano falando genovês. Não existe em nenhum outro lugar da Sardenha, nem da Itália.</p>"
+      "prosa_html": "<p>Carloforte é o lugar mais improvável desta viagem, e a razão é linguística antes de ser qualquer outra coisa: numa ilha ao sul da Sardenha, as pessoas falam <strong>genovês do século XVIII</strong>. Não é sotaque, não é influência. É outra língua, chamada <strong>tabarchino</strong>, e é a primeira língua da maioria dos moradores até hoje.</p> <p>A história começa por volta de <strong>1540</strong>, quando um grupo de pescadores de coral de <strong>Pegli</strong>, perto de Gênova, se instala na ilhota de <strong>Tabarka</strong>, na costa da Tunísia. A concessão era da família <strong>Lomellini</strong>, genoveses, e o negócio era o coral vermelho — matéria-prima de luxo do Mediterrâneo. Ficaram lá <strong>duzentos anos</strong>. Duas séculos numa rocha de quatrocentos metros de comprimento em frente ao norte da África, casando entre si, mantendo a língua de Pegli e a fé católica no meio de um mundo que não era nenhum dos dois.</p> <p>No século XVIII a situação apodrece por três motivos simultâneos: os bancos de coral se esgotam, a ilha é pequena demais pra uma população que cresceu, e o assédio dos corsários e dos beis de Túnis e Argel vira insuportável. Em <strong>1738</strong>, parte da comunidade pede asilo à Casa de Savoia. <strong>Carlo Emanuele III</strong> lhes concede a ilha de San Pietro, desabitada, ao largo do Sulcis. Em <strong>17 de abril de 1738</strong>, cerca de <strong>quinhentos colonos</strong> desembarcam na ilha de San Pietro. Fundam <em>Carloforte</em> — literalmente <strong>'Carlos, o Forte'</strong>, em homenagem a quem os acolheu. A parte da comunidade que ficou em Tabarka foi, poucos anos depois, escravizada pelo bei de Túnis.</p> <p>Andando pelos <em>caruggi</em> — as ruelas estreitas e altas do centro — vocês estarão andando por uma cópia de Pegli feita de memória. As casas pastel, o traçado, a maneira de encaixar a vila entre o porto e a colina: tudo é ligure, transplantado por gente que não via Gênova havia duzentos anos.</p> <p>O que os sustentou aqui foi o <strong>atum</strong>. A <em>tonnara</em> de Carloforte foi uma das últimas armações tradicionais em funcionamento no Mediterrâneo: um labirinto de redes fixas ancorado no caminho da migração do atum-rabilho, que culminava na <em>mattanza</em>, a matança em câmara final, com os pescadores puxando as redes ao ritmo de cantos que também eram em tabarchino. A pesca industrial e as quotas internacionais acabaram com o sistema; o que sobrou é a memória e a cozinha.</p> <p>E a cozinha é o motivo real de vir aqui. O <strong>atum</strong> aparece em todos os cortes: a <em>ventresca</em> (a barriga, a parte gorda e a melhor), a <em>bottarga</em> de atum — diferente da de tainha que vocês vão comer em Càbras —, o <em>musciame</em>, o lombo curado. E há o <strong>cascà</strong>: um cuscuz de sêmola cozido no vapor sobre caldo de legumes, herança do tempo de Tabarka, que é literalmente um prato norte-africano falando genovês. Não existe em nenhum outro lugar da Sardenha, nem da Itália.</p>",
+      "fontes": [
+        {
+          "o": "Carloforte Turismo · site oficial do município",
+          "u": "https://www.carloforteturismo.it/en/articolo/history-and-culture/"
+        },
+        {
+          "o": "SardegnaTurismo · Regione Sardegna",
+          "u": "https://www.sardegnaturismo.it/"
+        }
+      ]
     },
     {
       "titulo": "⛏️ O Sulcis, Porto Flavia e a filha do engenheiro",
-      "prosa_html": "<p>O sudoeste da Sardenha é <strong>terra de mina</strong> desde antes de Roma. Chumbo, zinco, prata e carvão saíram destas montanhas por dois mil e quinhentos anos, e no fim do século XIX a região virou o motor industrial de uma ilha que, fora dali, era pastoril. Iglesias — o nome vem do catalão, 'igrejas' — cresceu como cidade mineira. Vilas inteiras foram construídas, habitadas por três gerações e depois esvaziadas quando o minério acabou ou deixou de compensar. Hoje o conjunto é <strong>Parco Geominerario</strong> reconhecido pela UNESCO, o que é uma forma elegante de dizer que a paisagem é feita de ruínas industriais espetaculares.</p> <p>O problema técnico que gerou Porto Flavia era prosaico e caríssimo. O minério de <strong>Masua</strong> precisava chegar a Carloforte, do outro lado do canal, pra ser embarcado em navios de longo curso. O transporte era feito por <em>bilancelle</em>, barcos pequenos de vela latina, carregados <strong>a pá e a cesto</strong> por homens que desciam o penhasco. Um navio levava <em>dias</em> pra encher. Cada dia parado era dinheiro.</p> <p>Em <strong>1924</strong>, o engenheiro <strong>Cesare Vecelli</strong>, a serviço da <em>Société de la Vieille Montagne</em> — belga, dona das minas de Masua, Montecani e Acquaresi —, propôs uma solução que ninguém havia tentado: em vez de descer o minério até o mar, <strong>furar a montanha até o mar</strong>. Duas galerias sobrepostas atravessando o penhasco. Na de cima, um trenzinho despeja o minério em nove silos verticais escavados na rocha, com capacidade pra dez mil toneladas. Na de baixo, um braço mecânico retrátil sai da parede do penhasco e despeja a carga direto no porão do navio ancorado embaixo.</p> <p>A capacidade saltou pra <strong>500 toneladas por hora</strong>. O que levava dias passou a levar horas. E a obra foi feita em dois anos, num penhasco, com a tecnologia de 1924.</p> <p>O nome tem uma explicação simples e boa: no mesmo ano em que a obra ficou pronta, nasceu <strong>Flavia</strong>, a filha primogênita de Vecelli. Ele pediu autorização pra batizar a obra com o nome dela. É por isso que a engenharia mais audaciosa da mineração mediterrânea tem nome de menina.</p> <p>Quando estiverem na varanda final, esculpida na parede a cinquenta metros de altura, olhem pra frente: o rochedo solitário que emerge do mar é o <strong>Pan di Zucchero</strong>, 133 metros de calcário, o maior <em>faraglione</em> do Mediterrâneo. Estava ali antes das minas e continuará depois. Foi o que os mineiros viram todos os dias de trabalho da vida deles.</p>"
+      "prosa_html": "<p>O sudoeste da Sardenha é <strong>terra de mina</strong> desde antes de Roma. Chumbo, zinco, prata e carvão saíram destas montanhas por dois mil e quinhentos anos, e no fim do século XIX a região virou o motor industrial de uma ilha que, fora dali, era pastoril. Iglesias — o nome vem do catalão, 'igrejas' — cresceu como cidade mineira. Vilas inteiras foram construídas, habitadas por três gerações e depois esvaziadas quando o minério acabou ou deixou de compensar. Hoje o conjunto é <strong>Parco Geominerario</strong> reconhecido pela UNESCO, o que é uma forma elegante de dizer que a paisagem é feita de ruínas industriais espetaculares.</p> <p>O problema técnico que gerou Porto Flavia era prosaico e caríssimo. O minério de <strong>Masua</strong> precisava chegar a Carloforte, do outro lado do canal, pra ser embarcado em navios de longo curso. O transporte era feito por <em>bilancelle</em>, barcos pequenos de vela latina, carregados <strong>a pá e a cesto</strong> por homens que desciam o penhasco. Um navio levava <em>dias</em> pra encher. Cada dia parado era dinheiro.</p> <p>Em <strong>1924</strong>, o engenheiro <strong>Cesare Vecelli</strong>, a serviço da <em>Société de la Vieille Montagne</em> — belga, dona das minas de Masua, Montecani e Acquaresi —, propôs uma solução que ninguém havia tentado: em vez de descer o minério até o mar, <strong>furar a montanha até o mar</strong>. Duas galerias sobrepostas atravessando o penhasco. Na de cima, um trenzinho despeja o minério em nove silos verticais escavados na rocha, com capacidade pra dez mil toneladas. Na de baixo, um braço mecânico retrátil sai da parede do penhasco e despeja a carga direto no porão do navio ancorado embaixo.</p> <p>A capacidade saltou pra <strong>500 toneladas por hora</strong>. O que levava dias passou a levar horas. E a obra foi feita em dois anos, num penhasco, com a tecnologia de 1924.</p> <p>O nome tem uma explicação simples e boa: no mesmo ano em que a obra ficou pronta, nasceu <strong>Flavia</strong>, a filha primogênita de Vecelli. Ele pediu autorização pra batizar a obra com o nome dela. É por isso que a engenharia mais audaciosa da mineração mediterrânea tem nome de menina.</p> <p>Quando estiverem na varanda final, esculpida na parede a cinquenta metros de altura, olhem pra frente: o rochedo solitário que emerge do mar é o <strong>Pan di Zucchero</strong>, 133 metros de calcário, o maior <em>faraglione</em> do Mediterrâneo. Estava ali antes das minas e continuará depois. Foi o que os mineiros viram todos os dias de trabalho da vida deles.</p>",
+      "fontes": [
+        {
+          "o": "Iglesias Turismo · site oficial",
+          "u": "https://www.iglesiasturismo.it/en/porto-flavia-eng/"
+        },
+        {
+          "o": "SardegnaTurismo · Masua e Porto Flavia",
+          "u": "https://www.sardegnaturismo.it/en/explore/masua-and-porto-flavia"
+        }
+      ]
     },
     {
       "titulo": "🔴 Garibaldi em Caprera — os últimos vinte e seis anos",
-      "prosa_html": "<p>Em <strong>1855</strong>, Giuseppe Garibaldi comprou metade de Caprera. Não era ainda o herói nacional que seria: era um marinheiro nascido em Nice, veterano de guerras na América do Sul, exilado, viúvo de Anita e recém-saído de um período trabalhando como fabricante de velas em Nova York. Comprou a ilha com dinheiro de uma herança do irmão. Em <strong>1856</strong> instalou-se de vez e começou a levantar a <strong>Casa Bianca</strong>, de traço sul-americano — casa térrea, teto plano, pátio interno —, que é a casa que vocês vão visitar.</p> <p>Caprera era, na época, praticamente pedra nua. Garibaldi levou terra, plantou vinha, oliveira e árvores frutíferas, criou cabras e gado, cavou poços e construiu muros de arrimo. A imagem que a Itália guardou dele é a do general de camisa vermelha; a que Caprera guarda é a de um homem de sessenta anos consertando cerca. Ele mesmo cultivava a distinção — chamava-se <em>agricultor</em> nas cartas.</p> <p>Daqui ele saiu pra a <strong>Expedição dos Mil</strong> em 1860, que entregou o sul da Itália a Vítor Emanuel II e praticamente fechou a unificação italiana. E pra cá voltou, recusando títulos, terras e pensão. É a parte da biografia que os italianos mais gostam de contar: o homem que deu um reino a um rei e voltou pra sua ilha plantar batata.</p> <p>Voltou também ferido. Em <strong>1862</strong>, no Aspromonte, tropas do próprio exército italiano atiraram na sua coluna pra impedir a marcha sobre Roma, e uma bala alojou-se no tornozelo direito. A artrite que se seguiu foi progressiva e cruel. Nos últimos anos ele mal andava, e circulava pela casa numa cadeira de rodas de vime que continua no lugar.</p> <p>Garibaldi morreu em <strong>2 de junho de 1882</strong>, aos setenta e quatro anos. Nos dias finais, pediu que a cama fosse puxada pra junto da janela, pra ver o mar. A cama está exatamente ali. O relógio da parede marca <strong>18h20</strong> e o calendário, a data — quem parou o relógio foi o filho, <strong>Menotti</strong>, e a família mandou que nunca mais fosse dado corda. Na tarde daquele 2 de junho, Garibaldi viu <em>duas toutinegras</em> pousadas no peitoril. Pensou nas duas filhas que tinha perdido e pediu que não as espantassem. A cama está protegida por uma redoma de vidro doada ainda em 1882 pela Sociedade dos Veteranos de Livorno. Ele queria ser cremado numa pira de lenha de acácia e mirto no próprio terreno; o Estado italiano decidiu de outra forma, e o corpo está no túmulo de granito bruto do jardim, ao lado dos filhos.</p> <p>O <strong>Compendio Garibaldino</strong> é hoje o museu mais visitado da Sardenha. Vale menos pelas relíquias que pela sensação estranha de andar por uma casa que ninguém redecorou desde 1882 — as botas, o poncho da América do Sul, o telescópio na janela, a mesa de trabalho. E a ilha em volta é hoje reserva natural, com um pinhal que ele mesmo plantou.</p>"
+      "prosa_html": "<p>Em <strong>1855</strong>, Giuseppe Garibaldi comprou metade de Caprera. Não era ainda o herói nacional que seria: era um marinheiro nascido em Nice, veterano de guerras na América do Sul, exilado, viúvo de Anita e recém-saído de um período trabalhando como fabricante de velas em Nova York. Comprou a ilha com dinheiro de uma herança do irmão. Em <strong>1856</strong> instalou-se de vez e começou a levantar a <strong>Casa Bianca</strong>, de traço sul-americano — casa térrea, teto plano, pátio interno —, que é a casa que vocês vão visitar.</p> <p>Caprera era, na época, praticamente pedra nua. Garibaldi levou terra, plantou vinha, oliveira e árvores frutíferas, criou cabras e gado, cavou poços e construiu muros de arrimo. A imagem que a Itália guardou dele é a do general de camisa vermelha; a que Caprera guarda é a de um homem de sessenta anos consertando cerca. Ele mesmo cultivava a distinção — chamava-se <em>agricultor</em> nas cartas.</p> <p>Daqui ele saiu pra a <strong>Expedição dos Mil</strong> em 1860, que entregou o sul da Itália a Vítor Emanuel II e praticamente fechou a unificação italiana. E pra cá voltou, recusando títulos, terras e pensão. É a parte da biografia que os italianos mais gostam de contar: o homem que deu um reino a um rei e voltou pra sua ilha plantar batata.</p> <p>Voltou também ferido. Em <strong>1862</strong>, no Aspromonte, tropas do próprio exército italiano atiraram na sua coluna pra impedir a marcha sobre Roma, e uma bala alojou-se no tornozelo direito. A artrite que se seguiu foi progressiva e cruel. Nos últimos anos ele mal andava, e circulava pela casa numa cadeira de rodas de vime que continua no lugar.</p> <p>Garibaldi morreu em <strong>2 de junho de 1882</strong>, aos setenta e quatro anos. Nos dias finais, pediu que a cama fosse puxada pra junto da janela, pra ver o mar. A cama está exatamente ali. O relógio da parede marca <strong>18h20</strong> e o calendário, a data — quem parou o relógio foi o filho, <strong>Menotti</strong>, e a família mandou que nunca mais fosse dado corda. Na tarde daquele 2 de junho, Garibaldi viu <em>duas toutinegras</em> pousadas no peitoril. Pensou nas duas filhas que tinha perdido e pediu que não as espantassem. A cama está protegida por uma redoma de vidro doada ainda em 1882 pela Sociedade dos Veteranos de Livorno. Ele queria ser cremado numa pira de lenha de acácia e mirto no próprio terreno; o Estado italiano decidiu de outra forma, e o corpo está no túmulo de granito bruto do jardim, ao lado dos filhos.</p> <p>O <strong>Compendio Garibaldino</strong> é hoje o museu mais visitado da Sardenha. Vale menos pelas relíquias que pela sensação estranha de andar por uma casa que ninguém redecorou desde 1882 — as botas, o poncho da América do Sul, o telescópio na janela, a mesa de trabalho. E a ilha em volta é hoje reserva natural, com um pinhal que ele mesmo plantou.</p>",
+      "fontes": [
+        {
+          "o": "Compendio Garibaldino di Caprera · Ministero della Cultura",
+          "u": "https://musei.sardegna.beniculturali.it/"
+        },
+        {
+          "o": "SardegnaTurismo · Regione Sardegna",
+          "u": "https://www.sardegnaturismo.it/"
+        }
+      ]
     }
   ],
   "wt_labels": "letters",

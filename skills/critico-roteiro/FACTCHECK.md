@@ -12,14 +12,16 @@ Régua de fontes: `references/source-credibility.md` (tiers + padrões de prova)
 | **Aprofundamento de roteiro existente** | só as afirmações **novas/alteradas** na sessão |
 | **Pré-viagem (1-2 semanas antes)** | modo re-check: SÓ fatos operacionais (preço/horário/reserva/dias de abertura) de TODOS os cards — pega informação que apodreceu |
 | **Stop/estabelecimento novo ou renomeado** | **§4 no item tocado** — sempre, mesmo em edit pequeno |
-| Edit pequeno (só texto de dica) | **não roda** — validate + audit + gate de mapas bastam |
+| **Parada de WT ou ponto de road trip novo/alterado** | **§0 obrigatória** — mesmo em edit pequeno |
+| Edit pequeno (só texto de dica, sem tocar lugar) | **não roda** — validate + audit + gate de mapas bastam |
 
 ## O que verifica — e o que NÃO (anti-desperdício)
 
 **Verifica:**
 1. **Fatos operacionais** (preço, horário, reserva, dias de fechamento) **sem proveniência T1** registrada
 2. **Qualquer afirmação sem fonte registrada** que seja verificável (coords de POI, fato histórico com data/nome, "fecha às 14h de quinta")
-3. **Amostra de ~20%** das afirmações COM proveniência (auditoria de honestidade — a fonte diz mesmo aquilo?)
+3. **Amostra de ~20%** das afirmações COM proveniência (auditoria de honestidade — a fonte diz mesmo aquilo?).
+   ⛔ **A amostragem NUNCA se aplica ao tipo `existência`** — lugar se confere 100%, ou não se confere.
 4. **Vereditos 🟢-âncora**: a convergência exigida pelo padrão de prova existe? A busca negativa foi rodada?
 
 **NÃO verifica (redundâncias cortadas):**
@@ -29,7 +31,7 @@ Régua de fontes: `references/source-credibility.md` (tiers + padrões de prova)
 
 ## Método
 
-1. **Extrair claims** do `data.json` (ou `.md` do scout): lista de `{afirmação, tipo, fonte_registrada?, card}`. Tipos: `operacional` · `coord` · `histórico` · `veredito`.
+1. **Extrair claims** do `data.json` (ou `.md` do scout): lista de `{afirmação, tipo, fonte_registrada?, card}`. Tipos: **`existência`** (§0 · sempre primeiro, nunca amostrado) · `operacional` · `coord` · `histórico` · `veredito`.
 2. **Aplicar filtros** acima → lista final (tipicamente 10-25 claims, não 50+).
 3. **Fan-out de céticos**: sub-agentes em paralelo (~1 por lote de 5-8 claims), cada um com prompt adversarial: *"Tente REFUTAR cada afirmação via web_search na fonte do tier adequado (source-credibility.md). Prefira T1 pra operacional. Retorne por claim: CONFIRMADO (fonte+data) / DESATUALIZADO (valor novo+fonte) / NÃO ENCONTRADO."*
 4. **Aplicar vereditos**:
@@ -37,7 +39,60 @@ Régua de fontes: `references/source-credibility.md` (tiers + padrões de prova)
    - `DESATUALIZADO` → **P1**: corrigir o valor no card + datar
    - `NÃO ENCONTRADO` → marcar `[a confirmar]` no card (transparência > fingir precisão) — **nunca** manter número órfão
    - Fonte de tier errado pro tipo (preço citando blog quando existe T1) → achado, corrigir proveniência
-5. **Relatório**: `fact-check: N confirmados · N desatualizados (corrigidos) · N [a confirmar]` — entra na entrega junto da nota do audit, com o placar da §4: `lugares conferidos · links vivos · atrativos re-checados`.
+5. **Relatório**: `existência: N/N lugares conferidos · N corrigidos · N removidos` **seguido de** `fact-check: N confirmados · N desatualizados (corrigidos) · N [a confirmar]` — entra na entrega junto da nota do audit, com o placar da §4: `lugares conferidos · links vivos · atrativos re-checados`.
+
+## 0 · EXISTÊNCIA — roda ANTES de tudo, e nunca por amostragem
+
+> **Nenhuma frase sobre um lugar entra num card a partir de memória.** Se não veio de uma fonte
+> desta sessão, não vai. Nem a existência, nem a posição, nem a função, nem o que se vê de lá.
+
+O erro que criou esta seção (ago/2026): o card `"Loggia · mirador sul (falésias)"` descrevia, em
+prosa detalhada, o calcário mudando de branco a rosa por 40 minutos num mirante que **não
+existe**. "Loggia" é real em Bonifacio — é o pórtico da própria Sainte-Marie-Majeure, parada 3 do
+mesmo tour. Nome real, **função inventada**, prosa confiante. E era **parada de walking tour**:
+virou rota que dois avós de 70 anos iam seguir no Google Maps.
+
+Passou por `validate.py`, por `audit.py` e por um fact-check completo rodado no mesmo dia.
+
+**Por que passou, exatamente**: a §4a manda conferir "toda `mapsQuery` **nova**". A parada
+inventada **não tinha `mapsQuery` nenhuma** — e a ausência do campo era justamente o que a
+tornava invisível ao check. Um lugar que ninguém consegue nomear pro Maps é o candidato número um
+a não existir, e era tratado como "nada a verificar".
+
+### O que verificar, sem exceção e sem amostrar
+
+| Alvo | Regra |
+|---|---|
+| **Toda parada de walking tour** | 100%, sempre. Nunca amostra. Vira rota que alguém percorre a pé. |
+| **Todo ponto de road trip** (`transport: "driving"`) | 100%. Mesmo motivo, com carro. |
+| **Todo card cujo nome designa um lugar físico** | 100% na entrega inicial. Depois, só o que mudou. |
+| **Todo lugar SEM `mapsQuery` e SEM `fontes`** | **prioridade máxima** — a ausência é o sinal, não a dispensa |
+| **Todo polo de `historia[]`** | 100%. Prosa histórica não tem preço nem horário pra parecer suspeita — é onde invenção passa mais fácil. Cada polo sai com `fontes`. |
+| **Todo item de `opcoes`** (restaurante, bar, café) | nome **E localização** confirmados. Caso Le Lido: descrito na cidade errada, com confiança de quem verificou. |
+| **Todo superlativo** ("o mais", "o único", "o primeiro") | é afirmação a PROVAR. Agregador que lista N operadores não prova que são todos — foi assim que a Ichnusa Lines sumiu do roteiro. |
+
+Para cada um, três perguntas — nesta ordem, e a segunda é a que pega invenção:
+
+1. **Existe?** Há fonte reconhecida que nomeia este lugar? (tier por `source-credibility.md`)
+2. **É o que o card diz que é?** Um mirante é mirante, uma igreja é igreja, uma praia é praia.
+   *Nome real com função inventada é o modo de falha desta seção* — e é invisível a quem só
+   confere se o nome existe.
+3. **Está onde o card diz?** Norte/sul, "10min do desembarque", "no caminho de X".
+   Erro de posição manda alguém andar no lugar errado, no sol, com criança.
+
+Veredito por parada: `EXISTE+CONFERE` · `EXISTE mas função/posição erradas` (**P0** · corrigir) ·
+`NÃO ENCONTRADO em nenhuma fonte` (**P0** · **remover a parada**, não amenizar o texto).
+
+### A marca de proveniência é obrigatória
+
+Toda afirmação sobre lugar entra no card **com fonte registrada** (`fontes: [{o, u}]`) ou **não
+entra**. Coordenada que não foi conferida vai marcada `coord_unverified: true` e o card avisa que
+o pino é aproximado.
+
+Isto não é burocracia: é o que permite a revisão seguinte distinguir o que veio de fonte do que
+veio de memória. Sem a marca, os dois textos são indistinguíveis — inclusive para quem escreveu.
+O `audit.py` cobra: card ⭐⭐⭐ sem proveniência é **P0**, ⭐⭐ é P1, parada de WT sem `mapsQuery`
+é **P0**.
 
 ## 4 · Conferência de LUGAR, LINK e SITUAÇÃO (obrigatória em toda entrega)
 
