@@ -293,3 +293,29 @@ const state = { view:'guia', selIdx: getDefaultDayIdx(), search:'', expandStop:n
 | `legendRead` | `'1'\|'0'` | Footer legend collapsed? |
 
 Todas envoltas em `try/catch` pra silenciar quota exceeded ou private mode.
+
+## ★ do Resumo · a atração do dia sai do `valeAPena` (2026-08-04)
+
+A linha `★` de cada dia, no Resumo (`renderOverview`, filtro `roteiro`), promete **a atração
+principal do dia**. O código pegava `cards[0]` — o primeiro card do array, que é o mais cedo.
+
+Isso quase nunca é a atração. Em 7 dos 16 dias do roteiro dos pais, o primeiro card era
+logística: `Check-out + saída cedo`, `Café da manhã + check-out`, `Despedida do Tobia`. O Tobia
+percebeu de imediato e perguntou o que a estrela significava — porque, olhando a tela, não
+significava nada.
+
+```js
+// errado: primeiro do array
+const main = cards.length ? cards[0].nome : '—';
+
+// certo: eixo de recompensa, empate resolvido pela ordem (o mais cedo)
+const main = cards.length
+  ? cards.reduce((a,b)=>((b.valeAPena||0)>(a.valeAPena||0)?b:a)).nome
+  : '—';
+```
+
+**A lição geral**: quando um rótulo promete *julgamento* ("a atração", "o destaque"), ele tem
+que ler o campo de julgamento. `valeAPena` existe exatamente pra isso — usar posição no array
+como proxy de importância é o mesmo erro de fingir o eixo com ⭐ digitada à mão na prosa.
+
+`validate.py` guarda a assinatura na lista de features-chave (`★ do Resumo usa valeAPena`).
