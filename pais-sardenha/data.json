@@ -370,7 +370,7 @@
     },
     {
       "date": "Sáb 8/Ago",
-      "tema": "Transição todos juntos · Bonifacio → Càbras",
+      "tema": "Transição todos juntos · Bonifacio → Oristano",
       "temaCurto": "Transição",
       "bairro": "🛫 Transit",
       "grupo": true,
@@ -386,13 +386,13 @@
           "risco": "red",
           "nome": "Check-out + saída cedo",
           "cat": "Dia longo · plano apertado",
-          "sobre": "Dia de logística pesada todos juntos: ferry Bonifacio → Santa Teresa, retomada do carro de vocês, drive até Càbras (~3h30). Tobia separadamente pega novo carro alugado em Olbia (cruza ônibus). Plano consultor: vocês saem como passageiros do ferry pra evitar levar o carro na travessia, pegam carro em Santa Teresa e seguem pra Càbras. Saída do hotel até 8h.",
+          "sobre": "Dia de logística pesada todos juntos: ferry Bonifacio → Santa Teresa, retomada do carro de vocês, drive até <strong>Oristano</strong> (~3h30). Tobia separadamente pega novo carro alugado em Olbia (cruza ônibus). Plano consultor: vocês saem como passageiros do ferry pra evitar levar o carro na travessia, pegam carro em Santa Teresa e seguem pela SS131. Saída do hotel até 8h.",
           "imperdivel": "Café reforçado antes de embarcar · dia é longo",
           "dicas": [
             "Ferry 09h Bonifacio → Santa Teresa · 50min",
-            "Almoço rápido em Santa Teresa após o ferry · 30-45min só",
-            "SS131 até Oristano · ~2h30 estrada boa",
-            "Confirma chegada hotel Càbras · check-in 16h"
+            "<strong>Não almocem em Santa Teresa</strong> · o almoço é parada técnica na SS131 (km 158,8), no meio do caminho · saiam do porto por volta das 10h45",
+            "SS131 até Oristano · ~3h30 no total, estrada boa e sem pedágio",
+            "Confirma chegada na base de Oristano (Via XX Settembre 31) · check-in 16h"
           ],
           "duracao": "—",
           "custo": "Grátis",
@@ -418,60 +418,97 @@
           }
         },
         {
-          "hora": "10:30",
-          "emoji": "🍝",
+          "hora": "10:15",
+          "emoji": "☕",
           "periodo": "manha",
           "tipo": "opcoes",
-          "nome": "Almoço rápido Santa Teresa",
-          "cat": "30-45min · prático",
+          "nome": "Café rápido no porto de Santa Teresa",
+          "cat": "15-20min · só pra esticar as pernas antes da estrada",
           "coord": {
             "lat": 41.2389,
             "lng": 9.1907
           },
           "opcoes": [
             {
-              "nome": "Café do porto de Santa Teresa (junto ao terminal)",
-              "desc": "Panini e café em 30min · o objetivo aqui é não perder tempo, o dia tem 3h30 de estrada pela frente",
-              "preco": "€10-15",
+              "nome": "Bar do terminal de Santa Teresa (junto ao desembarque)",
+              "desc": "Café e cornetto sem sair do porto · o almoço de verdade é no meio do caminho, então aqui é só combustível",
+              "preco": "€3-6",
               "valeAPena": 1,
               "poiCat": "cafe",
-              "dist": "porto · a pé do terminal",
+              "dist": "a pé do desembarque",
               "mapsQuery": "Porto di Santa Teresa Gallura, Sardegna"
             },
             {
-              "nome": "Il Grottino (Via del Mare 14, Santa Teresa di Gallura)",
-              "desc": "Ristorante-pizzeria a 300m do porto · prato do dia sai rápido",
-              "preco": "€15-25",
-              "valeAPena": 2,
-              "poiCat": "restaurante",
-              "dist": "300m do porto · a pé",
-              "mapsQuery": "Il Grottino, Via del Mare 14, Santa Teresa Gallura"
-            },
-            {
-              "nome": "Picnic comprado",
-              "desc": "Padaria de Santa Teresa · come-se na estrada e economiza uma hora",
-              "preco": "€10",
+              "nome": "Padaria do centro de Santa Teresa",
+              "desc": "Se quiserem garantia de comida a bordo (criança, avó com fome fora de hora), levar pão e fruta agora",
+              "preco": "€8-12",
               "valeAPena": 1,
               "poiCat": "padaria",
-              "dist": "padaria do centro · a pé",
+              "dist": "~600m do porto · 8min a pé",
               "noMaps": true
             }
           ]
         },
         {
-          "hora": "12:00",
+          "hora": "10:45",
           "emoji": "🚗",
           "periodo": "tarde",
           "tipo": "transit",
           "nome": "Santa Teresa → Oristano",
-          "cat": "~3h30 · SS131 Carlo Felice · sul",
+          "cat": "~3h30 · SS131 Carlo Felice · parada técnica no km 158,8, sem desvio",
           "coord": {
             "lat": 39.90574,
             "lng": 8.59166
           }
         },
         {
-          "hora": "16:00",
+          "hora": "12:45",
+          "emoji": "🍝",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço na estrada · SS131 km 158,8 (Campeda/Bonorva)",
+          "cat": "Meio do caminho exato · parada técnica, sem desvio",
+          "coord": {
+            "lat": 40.4167,
+            "lng": 8.7667
+          },
+          "coord_unverified": true,
+          "opcoes": [
+            {
+              "nome": "Valle dei Nuraghi da Fabio (SS131 km 158,800, Bonorva)",
+              "desc": "Ristorante + pizzeria + bar <strong>na beira da própria SS131</strong>, na planície da Campeda · estacionamento grande (cabe camper e caminhão) e acesso pelos dois sentidos · o bar ao lado resolve em 20min (panini, pizzette, tramezzini) se ninguém quiser sentar · sábado 06:30-23:00 (ago/2026) · tel 348 6622368",
+              "preco": "€15-30 no restaurante · €6-10 no bar",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "dist": "0 desvio · a saída é a própria estrada",
+              "coord": {
+                "lat": 40.4167,
+                "lng": 8.7667
+              },
+              "mapsQuery": "Valle dei Nuraghi da Fabio, Bonorva"
+            },
+            {
+              "nome": "Autogrill / área de serviço da SS131",
+              "desc": "Plano B honesto: a SS131 tem postos com bar ao longo do trecho Macomer-Oristano · comida sofrível, mas banheiro, café e gasolina no mesmo lugar",
+              "preco": "€8-15",
+              "valeAPena": 0,
+              "poiCat": "cafe",
+              "dist": "no caminho",
+              "noMaps": true
+            },
+            {
+              "nome": "Picnic comprado em Santa Teresa",
+              "desc": "Come-se numa área de descanso e economiza-se 40min · com 3h30 de estrada e avós no carro, parar pra esticar as pernas continua valendo mesmo com o picnic",
+              "preco": "€10",
+              "valeAPena": 1,
+              "poiCat": "padaria",
+              "dist": "onde der",
+              "noMaps": true
+            }
+          ]
+        },
+        {
+          "hora": "15:30",
           "emoji": "🏠",
           "periodo": "tarde",
           "tipo": "card",
@@ -556,7 +593,7 @@
           ]
         }
       ],
-      "nota": "O dia mais duro da viagem, e ele é logístico: ferry cedo, 3h30 de SS131 e chegada em Càbras no fim da tarde. Todos juntos, o que ajuda. Não tem atração — tem quilômetro. Guardem energia."
+      "nota": "O dia mais duro da viagem, e ele é logístico: ferry cedo, ~3h30 de estrada e chegada em Oristano no meio da tarde. Todos juntos, o que ajuda. Não tem atração — tem quilômetro. O almoço é <strong>parada técnica na própria SS131</strong> (km 158,8), sem desvio: come-se, abastece-se, vai-se embora. Guardem energia."
     },
     {
       "date": "Dom 9/Ago",
@@ -3717,7 +3754,7 @@
       "opcoes": [
         {
           "modo": "carro",
-          "texto": "~3h30 · ~250km · SS131 Carlo Felice (a espinha da ilha) · reta e rápida, sem pedágio · a saída pra Oristano é sinalizada"
+          "texto": "~3h30 · ~250km · SS131 Carlo Felice (a espinha da ilha) · reta e rápida, sem pedágio · parada de almoço no km 158,8 (Campeda), na beira da estrada · a saída pra Oristano é sinalizada"
         },
         {
           "modo": "rota",
