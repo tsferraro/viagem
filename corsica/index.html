@@ -2649,6 +2649,7 @@ const DAYS = [
         "sobre": "Tour pela <em>haute ville</em> pra apresentar Bonifacio aos avós. A cidade foi refundada entre <strong>828 e 833</strong> por <strong>Bonifácio II, marquês da Toscana</strong>, que lhe deu o próprio nome. Em <strong>1195</strong> Gênova a retomou em definitivo e fez uma coisa radical: <strong>expulsou todos os habitantes menos trinta famílias</strong> e repovoou a cidade com <strong>400 famílias da Ligúria</strong>. A consequência dura até hoje — em Bonifacio fala-se um <strong>dialeto ligúrio</strong>, enquanto o resto da Córsega fala uma língua toscana. Vocês estão numa ilha corsa, numa cidade que linguisticamente é Gênova.<br><br>Em <strong>agosto de 1420</strong>, Alfonso V de Aragão pôs cerco à cidade. Ela resistiu até <strong>janeiro de 1421</strong> — cinco meses — e o rei foi embora sem tomá-la.",
         "imperdivel": "Na Rue des Deux-Empereurs, duas portas quase de frente uma pra outra: no nº 4 hospedou-se <strong>Carlos V em 1541</strong>; no nº 7, <strong>Napoleão em 1793</strong>, por dois meses. E, por cima do beco, os arcos que levavam água da chuva pras cisternas",
         "dicas": [
+          "○ <strong>Escada da marina (Quai Banda del Ferro)</strong> — a subida do porto à cidadela, <strong>41.3884, 9.1596</strong> (coordenada medida no local). Chega junto à <strong>Porte de France</strong> e ao Escritório de Turismo, que é o acesso ao <strong>Chemin de Ronde</strong>: ~300m de caminho de ronda sobre as muralhas, acesso gratuito, com as machicolações e seteiras à vista. <em>Recomendado pelo Tobia em campo — não estava na versão original do tour.</em>",
           "○ <strong>Porte de Gênes</strong> — foi a <strong>ÚNICA entrada da cidadela até 1854</strong>, quando abriram a Porte de France. Quem quisesse entrar em Bonifacio passava por aqui ou não passava. A ponte levadiça que vocês veem é de <strong>1830</strong> e substituiu uma de <strong>1598</strong>. O escritório de turismo fica logo à direita depois do arco.",
           "Ⓐ <strong>Bastion de l'Étendard</strong> — erguido pelos genoveses no <strong>séc. XIII</strong>, destruído no XVI e reconstruído logo depois. São <strong>25m acima do porto</strong> e é o <strong>bastião mais alto da França</strong>. Repare na função: ele existe pra proteger a Porte de Gênes — quem atravessa a ponte fica sob fogo dele o tempo todo. Dentro há o <strong>memorial nas salas subterrâneas</strong> (o encontro com Carlos V, o naufrágio do <em>Sémillante</em>) e o <strong>Jardin des Vestiges</strong>, com ruínas da muralha do séc. XIII.",
           "💶 <strong>Pass Monuments no próprio Bastion</strong>: os dois monumentos pagos da cidadela (Bastion + Escalier) por <strong>€6,50</strong> adulto, contra €3,50 + €2,50 avulsos. Criança 6-11 anos €2 · grupo de 10+ €4. <strong>Horários do Bastion</strong>: seg-sex 9h-19h (última entrada 18h30) · fim de semana 10h-18h (última 17h30).",
@@ -2673,10 +2674,20 @@ const DAYS = [
         "walkingTours": [
           {
             "nome": "Cidadela · 🏰 Caminho Histórico",
-            "descricao": "Porte de Gênes → Bastion de l'Étendard → Sainte-Marie-Majeure → Rue des Deux-Empereurs → Escalier du Roi d'Aragon → Saint-Dominique → Cimetière Marin (pôr do sol) · ~2h · 7 stops",
+            "descricao": "Escada da marina → Porte de Gênes → Bastion de l'Étendard → Sainte-Marie-Majeure → Escalier du Roi d'Aragon → Cimetière Marin (pôr do sol) · 6 stops",
             "stops": [
               {
                 "n": 1,
+                "nome": "Escada da marina à cidadela (Quai Banda del Ferro)",
+                "coord": {
+                  "lat": 41.3884,
+                  "lng": 9.1596
+                },
+                "mapsQuery": "Porte de France, Bonifacio",
+                "verificado_em_campo": "2026-08-04 · coordenada medida no local pelo Tobia"
+              },
+              {
+                "n": 2,
                 "nome": "Porte de Gênes (entrada principal cidadela)",
                 "coord": {
                   "lat": 41.3874,
@@ -2685,7 +2696,7 @@ const DAYS = [
                 "mapsQuery": "Porte de Gênes, Bonifacio"
               },
               {
-                "n": 2,
+                "n": 3,
                 "nome": "Bastion de l'Étendard (museu + Jardin des Vestiges)",
                 "coord": {
                   "lat": 41.3876,
@@ -2694,7 +2705,7 @@ const DAYS = [
                 "mapsQuery": "Bastion de l'Étendard, Bonifacio"
               },
               {
-                "n": 3,
+                "n": 4,
                 "nome": "Église Sainte-Marie-Majeure (loggia + cisterna)",
                 "coord": {
                   "lat": 41.387,
@@ -2703,7 +2714,7 @@ const DAYS = [
                 "mapsQuery": "Église Sainte-Marie-Majeure, Bonifacio"
               },
               {
-                "n": 4,
+                "n": 5,
                 "nome": "Rue des Deux-Empereurs (Carlos V no 4 · Napoleão no 7)",
                 "coord": {
                   "lat": 41.3868,
@@ -2713,7 +2724,7 @@ const DAYS = [
                 "coord_unverified": true
               },
               {
-                "n": 5,
+                "n": 6,
                 "nome": "Escalier du Roi d'Aragon (topo)",
                 "coord": {
                   "lat": 41.384,
@@ -2722,7 +2733,7 @@ const DAYS = [
                 "mapsQuery": "Escalier du Roi d'Aragon, Bonifacio"
               },
               {
-                "n": 6,
+                "n": 7,
                 "nome": "Église Saint-Dominique (gótica · séc. XIII)",
                 "coord": {
                   "lat": 41.3862,
@@ -2732,7 +2743,7 @@ const DAYS = [
                 "coord_unverified": true
               },
               {
-                "n": 7,
+                "n": 8,
                 "nome": "Cimetière Marin Saint-François (pôr do sol)",
                 "coord": {
                   "lat": 41.3855,

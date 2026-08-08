@@ -204,6 +204,70 @@ Só **404/410** é prova de morte. Sugestão pra quem for mexer no `audit.py`: c
 
 ---
 
+## Verificação de conteúdo · o que efetivamente melhora o roteiro (2026-08-04 · Córsega em campo)
+
+Só o que muda a qualidade do produto. A narrativa dos erros está em
+`AUDITORIA-DOSSIE-2026-08-04.md`; aqui ficam as regras de fabricação.
+
+### As 3 checagens de maior retorno por minuto gasto
+
+1. **Cruzar DIA DA SEMANA de cada ocorrência × horário da fonte.** Foi de onde saíram os três
+   achados mais úteis da revisão: `Il Caminetto` ⭐⭐⭐ num jantar de **segunda** (fecha às segundas)
+   · `Il Rifugio` ⭐⭐⭐ num almoço de **domingo** (fontes divergem sobre domingo) · `L'Archivolto`
+   ⭐⭐⭐ como opção de almoço (**só serve jantar**). Nenhum aparece como erro em ferramenta nenhuma
+   — só o cruzamento manual pega.
+2. **Confirmar a FUNÇÃO, não só o nome.** Enoteca não é trattoria; bistrô de sanduíche não é jantar;
+   "loggia" pode ser pórtico de igreja e não mirante. *Nome real com função inventada* é o modo de
+   falha mais perigoso, e é invisível a quem só confere se o nome existe.
+3. **Superlativo e sazonalidade são as duas classes que mais apodrecem** — e as que guia turístico
+   mais repete sem checar. Tratar como afirmação a PROVAR, nunca como cor de prosa. Exemplos reais
+   que passaram: "ponto mais ao sul da França" (era o segundo) · "maior população europeia de
+   flamingos" (a colônia é a 500km) · "operador único" (havia dois) · flamingo vendido em agosto
+   (pico é outono/inverno).
+
+### Régua de fonte por tipo de pergunta
+
+| Pergunta | Fonte que serve |
+|---|---|
+| Horário, preço, regra de acesso, dia de fechamento | portal/órgão **oficial** · site do próprio estabelecimento |
+| O lugar existe e é o que digo que é | oficial + guia reconhecido (Michelin, Touring Club, Accademia Italiana della Cucina) |
+| **Por onde se anda** (walking tour, road trip) | **quem andou** — relato de campo com My Maps montado vale mais que portal oficial, que não sabe de rua |
+| Exclusividade ("o único", "o maior") | precisa de fonte que **afirme a exclusividade**. Agregador que lista N operadores **não prova** que são todos — foi assim que a Ichnusa Lines sumiu do roteiro |
+
+**Anexar fonte não é verificar.** A fonte tem que sustentar a FRASE. Card com `fontes` preenchido e
+prosa nunca lida contra elas passa em qualquer gate e continua falso.
+
+### Regras de dado que afetam o uso
+
+- **Item de `opcoes` precisa de `coord` própria.** Sem ela o restaurante não vira pino — some do
+  mapa do dia E da aba "Tudo no Mapa", que é justamente a tela para decidir onde comer a partir de
+  onde se está. Estado em 2026-08-04: 72/73 na Córsega e 82/82 na Sardenha sem coord.
+- **`valeAPena` é recompensa do LUGAR**, não valor emocional do momento. "Encontro com a família"
+  não é ⭐⭐⭐ de POI. Card de pura logística leva `noMaps: true` e sai da conta.
+- **Coordenada de site náutico marca fundeadouro, não areia** — e pode estar rotulada com o nome da
+  cala vizinha. Duas fontes concordando na posição não garantem o rótulo.
+
+### O loop de campo é a fonte mais confiável que este repo tem
+
+Na Córsega, **os erros graves foram achados pelo viajante, nenhum pelos gates**. Consequências
+práticas para a fabricação:
+
+- Coordenada medida no local entra marcada (`verificado_em_campo`) e vale mais que qualquer busca.
+  Exemplo: a escada da marina à cidadela de Bonifacio, `41.3884, 9.1596`, e o **Chemin de Ronde**
+  (~300m sobre as muralhas, acesso gratuito pelo Escritório de Turismo) — que o Tobia encontrou
+  sozinho e o tour original não tinha.
+- Quando um relato de campo confirma ou derruba uma recomendação, isso é evidência sobre **a fonte
+  que a originou**, não só sobre o item. É o lastro para a curadoria de fontes.
+- Ao processar relatos, manter a fronteira: erro factual → `data.json` · dica útil a qualquer
+  viajante → card · preferência da família → `MEMORY.md` · contexto → `DIARIO.md`.
+
+### Contar a história inteira
+
+O card do cerco de Bonifacio contava 1420 (a cidade resistiu cinco meses) e omitia 1553 (a cidade
+foi tomada e capitulou). O Tobia leu um painel no local e achou que o roteiro estava errado — o
+roteiro estava **incompleto de um jeito que soa épico**. Curadoria que seleciona só a parte gloriosa
+produz o mesmo efeito de um erro factual: o viajante descobre no local que o texto não bate.
+
 ## Evolução da skill
 
 ### Padrão-ouro de profundidade · 2026-07-12 (Itália: Roma+Toscana+Florença)
