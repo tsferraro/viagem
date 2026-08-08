@@ -163,6 +163,16 @@ fonte pode ser superior a qualquer portal oficial.
 
 Nenhuma parte do repo hoje distingue, prioriza ou cataloga esse tipo de fonte.
 
+**Decisão do Tobia (04/Ago)**: ele não tem hoje uma lista de blogs de confiança — tentou lembrar e
+nenhum se destacou. Então isto **não deve ser entregue como lista pronta**, e sim como **processo
+(ou skill) de curadoria progressiva**, que roda em paralelo à construção dos próximos roteiros e vai
+acumulando fontes validadas por perfil de viagem.
+
+Observação para quem desenhar isso: o repo já tem o mecanismo de feedback que fecha o ciclo — a
+**caixa 📣 de relato de campo** e os `DIARIO.md`. Quando uma recomendação é confirmada ou demolida em
+campo, isso é evidência sobre **a fonte que a originou**, não só sobre o item. Uma curadoria com esse
+laço tem lastro; uma lista mantida por gosto, não.
+
 ---
 
 ## 8. Onde olhar no repo
