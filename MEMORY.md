@@ -14,7 +14,7 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 ### Sprockhövel · 30/Mai-01/Jun/2026 (road-trip curto · ✅ FEITA · arquivada 03/Jun)
 - **Correu muito bem.** Estrutura 3-dias com festa no meio (ida c/ parada → evento → volta) confirmou-se na prática.
 - **Paradas Mons + Valenciennes foram o destaque** · ambas caíram no **momento perfeito pra almoço + descanso** na ida. Validação real do padrão "1 parada cultural curta na ida, cronometrada pra coincidir com fome/cansaço da peque (~a cada 1h30)". A parada não é só logística de pit stop — quando é uma cidade bonita com Grand-Place/praça, vira o melhor momento do trajeto.
-- Lição p/ próximos road-trips com criança: **planejar a parada-almoço como atração, não como pausa técnica** · escolher cidade com centro caminhável a ~1h30-2h da saída.
+- Lição p/ próximos road-trips com criança: a parada-almoço **pode** ser atração (cidade com centro caminhável a ~1h30-2h da saída) em vez de pausa técnica. ⚠️ **Isto é uma opção a oferecer, NÃO um default a aplicar** — ver "Parada-almoço tem 2 modos" nas preferências abaixo.
 
 ### Valência · 3-4/Jun/2026 (relâmpago · pai + filha 3a · feito DURANTE a viagem)
 - Composição nova: **um adulto + criança pequena, com janela de trabalho no meio**. Tobia pediu o roteiro já em Valência, pra "hoje e amanhã". Pipeline rodou inteiro num passe só (sem esqueleto-valida-expande clássico) porque eram 2 dias — OK pra micro-viagens.
@@ -63,8 +63,22 @@ pra montagem de qualquer roteiro futuro.
   **Regra prática**: em dia com compromisso rígido, otimizar pelo eixo e oferecer só o que está
   na linha; em dia sem compromisso, **oferecer o desvio que vale, com o custo em minutos
   explícito**, e deixar ele decidir. Nunca suprimir uma opção boa em nome de eficiência de rota.
+- **Parada-almoço de dia de estrada tem 2 modos, e quem escolhe é ele — na hora.** (a) **Atração**:
+  vila com centro caminhável, o almoço vira o melhor momento do trajeto (padrão Mons/Valenciennes,
+  Sprockhövel 2026). (b) **Pausa técnica**: restaurante na beira da própria estrada, zero desvio,
+  come-se e vai-se embora (padrão SS131 km 158,8, Sardenha 2026). **Ele já demonstrou as duas** e
+  disse explicitamente: *"eu que escolho dependendo do que quiser no momento"*. Erro cometido em
+  ago/2026: recomendei Torralba + Nuraghe Santu Antine tratando o modo (a) como default porque
+  estava escrito no MEMORY — ele queria (b). **Sempre apresentar os dois com o custo em minutos e
+  perguntar**, nunca inferir de lição registrada.
 - **O fio que liga tudo: ele quer o custo explícito pra decidir, não a decisão pronta.** Vale pros
-  cards `🔄`, pros desvios e pras trocas de dia. Suprimir opção "pra facilitar" é o anti-padrão.
+  cards `🔄`, pros desvios, pras trocas de dia e pro modo da parada-almoço. Suprimir opção "pra
+  facilitar" — ou escolher por ele porque um padrão antigo diz qual é a boa — é o anti-padrão.
+
+> ⚠️ **Meta-lição (2026-08-08)**: uma lição registrada aqui descreve **uma preferência que já
+> apareceu**, não **a** preferência. Quando o MEMORY diz "padrão X funcionou", isso habilita X
+> como opção a oferecer — não autoriza aplicá-lo sem perguntar. O MEMORY é catálogo de opções
+> validadas, não regra de decisão.
 
 ### O que precisou ajustar mid-trip
 - **SEMPRE verificar horário/dia de funcionamento ANTES de propor uma atração** — não basta ela existir e ser boa, tem que estar aberta no dia certo. Caso real (Paris · Notre-Dame domingo 7/jun/2026): propus o **Marché aux Fleurs** como âncora da manhã sem checar o dia; Tobia avisou que **fecha quase tudo no domingo** (e o mercado de pássaros foi desativado em 2021/2025). Tive que refazer a manhã (trocado por Square du Vert-Galant + Place Dauphine, sempre abertos). Lição: o passo de web_search deve incluir "**<atração> horário domingo/segunda <ano>**" pra toda âncora, especialmente domingo (dia de mais fechamento) — e desconfiar de mercados/lojas/restaurantes nesse dia. Conecta com a lição dos cafés-família (abrem só de tarde): horário é tão crítico quanto distância/preço.
