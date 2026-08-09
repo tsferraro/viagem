@@ -186,6 +186,91 @@ Regra de sempre: 1 commit por item, push na main, nada fora do escopo, não se a
 
 ---
 
+## LOTE 7 · Fluxo com trilho + furos da 2ª rodada (aprovado pelo Tobia em 2026-08-09)
+
+Contexto: o Lote 6 foi executado e ACEITO pela auditora. Esta rodada fecha os furos que a
+auditora achou respondendo às perguntas de fluxo do Tobia + dá acabamento de UX ao pipeline.
+Ordem interna: 7a primeiro (é o furo de segurança), depois 7g, depois o resto.
+
+**7a · MATAR o edit inline no HTML + sync-check no deploy — o furo sério.**
+O CLAUDE.md (pipeline ajuste, passo 3) manda editar "inline o `const DAYS`" pra mudanças
+pequenas. Isso (i) dessincroniza `data.json`↔`index.html` (drift já documentado no
+HANDOFF-PENDENTE) e (ii) **burla o gate 4d**: o `factcheck-gate` projeta o conteúdo sensível
+do `data.json` — um edit inline muda o que a família LÊ sem mudar a projeção, e o gate passa.
+Fazer: (1) CLAUDE.md: TODA mudança de conteúdo edita o `data.json` e roda `build.py`
+(o build leva segundos; o "atalho" inline morre — registrar a decisão no decision-log com este
+motivo); (2) `deploy.sh` ganha check de SINCRONIA antes dos gates: rebuild do `data.json` da
+viagem em arquivo temporário e diff contra o HTML que vai pro ar — divergência = BLOQUEIA com
+mensagem "index.html não veio do data.json · rode build.py" (se o build não for
+byte-determinístico, comparar uma projeção estável — ex.: os blocos JSON extraídos — e
+documentar o método no próprio script); (3) verificar os 3 roteiros atuais (corsica ·
+pais-sardenha · marais): se algum `index.html` estiver dessincronizado do seu `data.json`,
+REBUILD + validate + commit (conferindo antes, no diff, que o rebuild não perde nada que só
+exista no HTML — se existir conteúdo órfão no HTML, ele volta pro data.json primeiro).
+
+**7b · Fluxo vira TRILHO apresentado, não só documentação.**
+CLAUDE.md ganha uma seção curta "Mapa de fases" (viagem nova: Pesquisa → Construção → Forma →
+Verdade → Deploy → Campo) com 1 linha por fase: objetivo · o que a fase pede ao Tobia · o gate
+que a fecha. E a instrução de conduta: **ao ENTRAR numa fase, a sessão anuncia** "fase X de Y
+· objetivo · decisões que vou te pedir"; **ao SAIR, anuncia** o que fechou, o que ficou
+pendente do Tobia e qual é a próxima fase. Sem burocratizar: é UMA seção enxuta + 2 frases de
+conduta, não um formulário. As perguntas de briefing continuam uma-por-vez; a fase de pesquisa
+inclui explicitamente o passo de curadoria de fontes (15-20min, skill `curadoria-fontes`).
+
+**7c · Scout-gate soft no deploy de viagem nova.**
+`deploy.sh`: quando o subdir da viagem é NOVO (primeiro deploy) e não existe
+`entregas/<slug>*.md`, imprimir aviso duro ("viagem nova sem levantamento scout — Córsega e
+Sardenha nasceram assim e o resultado está na auditoria de 2026-08-08"); `VIAGEM_STRICT=1`
+bloqueia. Não bloquear por default: mini-roteiro/coletânea legítimos existem.
+
+**7d · Fim da colisão de semáforos.**
+O veredito do scout (🟢🟡🔴 = entra/talvez/pula) usa as MESMAS cores do `risco` do roteiro
+(🟢🟡🔴 = atrito), significando outra coisa. Trocar o vocabulário do VEREDITO do scout para
+**🏆 entra · ⚠️ talvez · ⏭️ pula** em `skills/destination-scout/SKILL.md`, no template de
+entrega e nas referências do modo `--scout` (content-rubric). O `audit.py --scout` aceita os
+DOIS vocabulários (entregas antigas não quebram). Roteiros/`risco` não mudam nada.
+
+**7e · Duas linhas de doc que faltam.**
+(1) FACTCHECK-EXEC.md + CLAUDE.md: deixar explícito que o frescor do gate 4d cobre
+⭐⭐⭐/WT/historia — **itens ⭐⭐ são cobertos só pelo re-check pré-viagem (R11)**, escolha
+deliberada de escopo. (2) CLAUDE.md, fim do pipeline: **cadência da auditoria externa = a cada
+viagem nova entregue** (sessão auditora independente, não o construtor), além do re-check
+pré-viagem.
+
+**7f · Rede liberada: o factcheck sobe de nível.**
+O Tobia liberou a política de rede do ambiente (2026-08-09). Fazer: (1) testar na própria
+sessão: `WebFetch` numa página real (ex.: comune.bosa.or.it) e `curl -sI` na URL do Pages —
+registrar o resultado; (2) se funcionou: atualizar a entrada "Sandbox cloud · rede externa" do
+MEMORY.md (o fato mudou; anotar data e o que segue bloqueado, se algo seguir) e atualizar
+FACTCHECK-EXEC.md: com rede, verificação é **nível-página** (abrir a fonte e ler contra a
+afirmação) — snippet de busca vira fallback declarado, não padrão; `--check-links` volta a ser
+viável em cloud (tirar a nota de "inútil em sessão cloud" onde estiver); (3) se NÃO funcionou
+(issues conhecidas de allowlist não aplicada): registrar exatamente o que foi testado e o
+erro, e avisar o Tobia na entrega — não fingir que abriu.
+
+**7g · Fail-closed nos DOIS gates que sobraram.**
+`deploy.sh` linhas ~71 e ~83: `critico-roteiro` e `maps-audit.py` ausentes ainda "pulam" o
+gate. Aplicar o padrão do 6b: ausência = BLOQUEIA · override explícito `VIAGEM_SKIP_GATES=1`
+(um só, ruidoso, cobrindo os dois — manter `VIAGEM_SKIP_FCGATE` como está).
+
+**Aceite do Lote 7** (a auditora vai rodar):
+```bash
+# 7a — num clone: editar index.html inline (1 char em DAYS) → deploy BLOQUEIA por dessincronia;
+#      editar data.json + build → passa · e os 3 roteiros atuais passam no sync-check
+# 7b — grep "Mapa de fases" CLAUDE.md · seção existe, ≤30 linhas, com gates nomeados
+# 7c — clone: subdir novo sem entregas/ → deploy avisa · VIAGEM_STRICT=1 → bloqueia
+# 7d — grep "🟢" skills/destination-scout/SKILL.md → 0 no VEREDITO (risco não muda) ·
+#      audit --scout numa entrega antiga (roma-toscana) continua passando
+# 7e — greps das 2 linhas novas
+# 7f — saída do teste de rede registrada na entrega + MEMORY/EXEC coerentes com o resultado
+# 7g — clone: renomear maps-audit.py → deploy bloqueia · VIAGEM_SKIP_GATES=1 → passa gritando
+python3 skills/critico-roteiro/tests/run_tests.py   # verde, com fixtures novas do 7a se couber
+```
+Regra de sempre: 1 commit por item, push na main ao final, aceites verdes, não se auto-aprovar,
+e NENHUMA mudança de conteúdo de roteiro fora do rebuild do 7a-(3).
+
+---
+
 ## Protocolo de auditoria de volta (o que a AUDITORA vai fazer — transparência total)
 
 1. Rodar todos os comandos de aceite acima, verbatim.
