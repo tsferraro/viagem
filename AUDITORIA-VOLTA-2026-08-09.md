@@ -56,3 +56,49 @@ executavelmente o que os gates NÃO cobrem, e nota rebatizada de FORMA. O ciclo
 construtor→verificador→auditor rodou completo pela primeira vez — e produziu uma correção em
 cada direção (executora corrigiu o auditor; auditor achou 2 furos operacionais da executora).
 É este o regime de operação a manter.
+
+---
+
+# ADENDO · Auditoria de volta dos Lotes 6 e 7 (mesma data, rodadas posteriores)
+
+## Lote 6 — APROVADO
+6a reproduzido ao vivo no clone: viagem nova + factcheck de HOJE → exit 0 com ⚠ de
+primeiro-deploy · factcheck de ontem → exit 1 com mensagem orientando. 6b: bloco fail-closed
+no deploy com override `VIAGEM_SKIP_FCGATE=1`. Suite 29/29 (2 testes novos). A executora
+anotou honestamente que os outros gates seguiam fail-open — virou o 7g.
+
+## Lote 7 — APROVADO · todos os desvios endossados
+Ataques da auditora (clone isolado):
+- **7a-1 · o cenário original**: edit malicioso inline num card ⭐⭐⭐ do index.html →
+  `sync-check` **bloqueia** (exit 1) apontando o campo. **7a-2**: edit inline na HISTORIA →
+  bloqueia. **7a-3**: edit no cabeçalho → passa, e o gap é DECLARADO no script (linhas 32-37 +
+  na própria mensagem de saída) — cobertura honesta, não fingida. Ordem dos gates correta
+  (3b antes de tudo). Rebuild do marais: diff de exatamente 1 linha (ROTEIRO_SLUG), zero
+  conteúdo perdido — conferido no commit.
+- **7d**: `risco` intacto · `count_verdicts` só credita ⚠️ em doc que já usa 🏆/⏭️ (o desvio
+  do "⚠️ cabeça d'água" foi a decisão certa — sem ela, levantamento sem crítica passaria no
+  S2) · entrega antiga (roma-toscana) segue aceita.
+- **7g**: fail-closed nos 2 gates restantes · `VIAGEM_SKIP_GATES` não alcança o fcgate
+  (overrides separados, correto).
+- **7f · a rede NÃO foi liberada — confirmado independentemente pela auditora** (curl na URL
+  do Pages: 403 também nesta sessão). A mudança de política feita pelo Tobia não surtiu efeito
+  no proxy — consistente com issues públicas de allowlist não aplicada no Claude Code web.
+  O registro honesto (MEMORY re-testado e datado + FACTCHECK-EXEC exigindo declaração de
+  nível página/snippet no artefato) é a resposta certa ao fato; nada a corrigir no repo.
+- Suite 36/36 · sync-check verde nos 3 roteiros · commits 1-por-item como mandado.
+
+## Errata aplicada pela auditora (item 5 do relato da executora — confirmado)
+O CLAUDE.md documentava `deploy.sh` com 2 args; o script exige 3 (`"<msg>" "<subdir>"
+"<slug>"`). Corrigido no bloco de exemplos do CLAUDE.md nesta rodada (verificado contra o
+`Uso:` do próprio script). Era bug de doc pré-existente, fora do escopo do Lote 7 — a
+executora fez certo em não tocar e reportar.
+
+## Estado final do programa de auditoria (Lotes 1-7)
+Fechados: nota-como-manchete · verificação sem rastro · gate 4d (com viagem nova) ·
+fail-open em todos os gates · edit inline/burla do 4d · colisão de semáforos · fluxo sem
+trilho · scout pulável em silêncio · schema de fontes sem tier · curadoria sem processo ·
+laço de campo sem destino. Aberto e conhecido: rede do sandbox (403 — acionar suporte/testar
+ambiente novo) · brecha-de-hoje do 4d (granularidade de dia, declarada) · cabeçalho fora do
+sync-check (declarado) · itens ⭐⭐ só no re-check pré-viagem (declarado). Próximos gatilhos de
+auditoria: primeira viagem nova no fluxo completo (roma-toscana set/2026) e os relatos de
+campo dos pais.

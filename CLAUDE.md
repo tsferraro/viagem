@@ -225,12 +225,15 @@ cobre ⭐⭐ é o **re-check pré-viagem (R11 · 7-10 dias antes)**. Protocolo d
 ### `deploy.sh` — archive + push
 
 ```bash
-# Modo principal (root)
-scripts/deploy.sh "feat: roteiro lisboa-ago2026" "lisboa-ago2026"
+# Assinatura real (errata da auditoria 2026-08-09 · o doc antigo mostrava 2 args e o script exige 3):
+#   deploy.sh "<commit-msg>" "<subdir>" "<slug>" [/path/index.html] [/path/repo]
 
-# Modo paralelo (subdir)
-scripts/deploy.sh "feat: roteiro familia em paralelo" "lisboa-ago2026" \
-  ./index-nova.html . familia
+# Viagem em subpasta (o caso normal · TODA viagem vive em subpasta)
+scripts/deploy.sh "feat: roteiro lisboa-ago2026" "lisboa" "lisboa-ago2026"
+
+# Com HTML e repo explícitos (roteiro paralelo ou build fora do default)
+scripts/deploy.sh "feat: roteiro familia em paralelo" "lisboa-familia" "lisboa-ago2026" \
+  ./index-nova.html .
 ```
 
 Workflow:
