@@ -202,8 +202,10 @@ por máquina sem ser gameable por substring: o artefato `<viagem>/FACTCHECK-<AAA
 **existe**, tem **formato válido** (vereditos por item · OK/ERRO/RISCO com URL · ERRO marcado
 `→ corrigido` · data não-futura) e é **mais novo que a última mudança de conteúdo sensível**
 (cards ⭐⭐⭐ · TODA parada de WT · opções ⭐⭐⭐ · historia[]). Edit não-sensível passa sem
-factcheck novo. O que ele NÃO garante: a verdade do factcheck — isso é a sessão auditora e o
-campo. Protocolo de execução: `skills/critico-roteiro/FACTCHECK-EXEC.md`.
+factcheck novo. Viagem nova (data.json sem nenhum commit) + factcheck de HOJE passa com aviso de
+primeiro-deploy — sem esse tratamento o gate bloquearia o primeiro deploy legítimo de toda viagem
+nova. O que ele NÃO garante: a verdade do factcheck — isso é a sessão auditora e o campo.
+Protocolo de execução: `skills/critico-roteiro/FACTCHECK-EXEC.md`.
 
 ### `deploy.sh` — archive + push
 
@@ -223,7 +225,7 @@ Workflow:
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
 4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32)
 4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos)
-4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia — mudou depois do último factcheck · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`)
+4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia — mudou depois do último factcheck · viagem nova + factcheck de hoje passa com aviso · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`). **Falha-FECHADO se o script sumir** (BLOQUEIA · script ausente não é "sem gate") — override explícito e ruidoso: `VIAGEM_SKIP_FCGATE=1` no env pula com aviso gritante.
 5. Backup local em `~/.skill-backups/`
 6. Re-gera `archive/index.html` (índice navegável)
 7. `git add` · `commit` · `push origin main`
