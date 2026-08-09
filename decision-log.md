@@ -416,3 +416,12 @@ Contornado registrando nos dois, com comentário; unificar as listas fica penden
 
 **Efeito imediato**: `pais-sardenha` passou a ter **2 P0** (cards ⭐⭐⭐ sem proveniência) e não
 passa mais no gate até receber fontes. É o comportamento desejado.
+
+## 2026-08-09 · O post-mortem também errou por afirmar sem checar (R12 da auditoria)
+
+A auditoria independente de 2026-08-08 refutou **duas afirmações do próprio dossiê de erros**
+(`AUDITORIA-DOSSIE-2026-08-04.md` §2.2 #4 e §2.4 #10): a coord de La Bobba estava CERTA (nunca
+precisou de conserto), e o "Molentargius a 500km" são ~105km — e esse 500 já tinha sido copiado
+pro CLAUDE.md como doutrina. Anotado no dossiê (sem apagar: é registro histórico), corrigido no
+CLAUDE.md. É o argumento definitivo da REGRA ZERO: **toda frase não-verificada deriva pro erro,
+inclusive as do documento que confessa o modo de falha**.

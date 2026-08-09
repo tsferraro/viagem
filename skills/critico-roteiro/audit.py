@@ -841,7 +841,7 @@ SUPERLATIVO_RE = re.compile(
     # com ou SEM artigo — "Maior lagoa salobra da Sardenha" e "maior população
     # europeia" abriam frase sem artigo e escapavam da versão anterior. Foi
     # exatamente assim que "maior população europeia de flamingos" (falso: é
-    # Molentargius, a 500km) sobreviveu ao gate.
+    # Molentargius, a ~100km) sobreviveu ao gate.
     r'maior(?:es)?|menor(?:es)?|melhor(?:es)?|pior(?:es)?|[uú]nic[oa]s?'
     r'|primeir[oa]s?|[uú]ltim[oa]s?'
     r'|mais\s+(?:antig|alt|nov|larg|long|profund|important|preserv|visit|bonit|barat|car)\w*'
@@ -927,7 +927,7 @@ def load_debt(src: Optional[str]) -> set:
 # ---------------------------------------------------------------------------
 # Erro de 2026-08-04 (pego pelo Tobia): o card do Stagno di Càbras recebeu uma URL
 # do SardegnaTurismo e continuou dizendo "maior população europeia de flamingos"
-# (é Molentargius, a 500km) e vendendo agosto como temporada (o pico é outono).
+# (é Molentargius, a ~100km) e vendendo agosto como temporada (o pico é outono).
 # Anexar `fontes` passou no gate; a afirmação seguiu falsa.
 #
 # Diagnóstico: `fontes` no nível do CARD é grosso demais. Premia o campo presente,
