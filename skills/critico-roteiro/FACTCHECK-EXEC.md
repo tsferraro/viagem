@@ -71,6 +71,13 @@ Bloqueia o deploy se:
    historia[]) difere entre a versão commitada na data do factcheck e a versão que vai pro ar
    — **e** o factcheck não é de hoje. Edit em item não-⭐⭐⭐ (fora de WT/historia) NÃO bloqueia.
 
+**Escopo do frescor é ⭐⭐⭐/WT/historia — ⭐⭐ está deliberadamente FORA** (2026-08-09): a
+projeção sensível não olha item ⭐⭐, então editar um ⭐⭐ não obriga factcheck novo. Não é
+esquecimento: ⭐⭐ é a maior fatia do roteiro e incluí-la faria quase todo edit disparar o gate,
+o que treina a usar o override — gate que sempre bloqueia vira gate sempre pulado. Quem cobre
+⭐⭐ é o **re-check pré-viagem (R11, 7-10 dias antes)**, que revisa o operacional inteiro. Item
+⭐⭐ que envelheceu entre um deploy e a viagem é achado do R11, por desenho.
+
 O que o gate garante e o que não garante (honestidade de desenho): ele cobra **existência,
 formato e frescor do trabalho** — coisas cobráveis por timestamp e estrutura, não gameables por
 substring. Ele **não prova que a verificação foi honesta**: um factcheck forjado com URLs

@@ -217,7 +217,10 @@ por máquina sem ser gameable por substring: o artefato `<viagem>/FACTCHECK-<AAA
 factcheck novo. Viagem nova (data.json sem nenhum commit) + factcheck de HOJE passa com aviso de
 primeiro-deploy — sem esse tratamento o gate bloquearia o primeiro deploy legítimo de toda viagem
 nova. O que ele NÃO garante: a verdade do factcheck — isso é a sessão auditora e o campo.
-Protocolo de execução: `skills/critico-roteiro/FACTCHECK-EXEC.md`.
+**Escopo do frescor: ⭐⭐⭐ · WT · `historia[]`. Item ⭐⭐ está deliberadamente FORA** — incluí-lo
+faria quase todo edit disparar o gate, e gate que sempre bloqueia vira gate sempre pulado. Quem
+cobre ⭐⭐ é o **re-check pré-viagem (R11 · 7-10 dias antes)**. Protocolo de execução:
+`skills/critico-roteiro/FACTCHECK-EXEC.md`.
 
 ### `deploy.sh` — archive + push
 
@@ -328,6 +331,9 @@ Ajuste em viagem existente não entra no trilho: vai direto pro "Pipeline · aju
 9b2. **Roda `scripts/maps-audit.py <viagem>/index.html --urls`** · zero busca genérica e zero waypoint fantasma ANTES de conferir lugar a lugar
 9c. **FACTCHECK com RASTRO + JUDGE 1×(+1)** · **quem escreveu NÃO roda o próprio factcheck no mesmo contexto** — despacha sub-agentes céticos (contexto limpo, sem o texto de justificativa do construtor) ou pede sessão nova. O resultado PERSISTE em `<viagem>/FACTCHECK-<AAAA-MM-DD>.md` (item → veredito OK/ERRO/RISCO/INCONCLUSIVO → fonte com URL → data), versionado; erros viram correção ANTES do deploy. Protocolo: `skills/critico-roteiro/FACTCHECK-EXEC.md` (estratos + formato) · o que verificar: `FACTCHECK.md` · `JUDGE.md` como antes · só após audit limpo. O `deploy.sh` BLOQUEIA sem esse artefato fresco (gate 4d)
 10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar na entrega: **placar do factcheck (X confirmados / Y corrigidos / Z inconclusivos) + veredito judge** como manchete · a nota /40 é **FORMA** (não mede verdade — um roteiro 100% falso tirou 35/40 na auditoria de 2026-08-08) e vai no rodapé, nunca na manchete
+11. **Agenda as duas verificações que vêm DEPOIS do deploy** (nenhuma é opcional):
+    - **Auditoria externa · a cada viagem nova entregue** — sessão AUDITORA independente, nunca a que construiu, rodando o protocolo adversarial (amostra factual nova + ataque aos gates). Cadência fixada em 2026-08-09: a auditoria de 2026-08-08 achou 17 erros que factchecks do próprio construtor não acharam, e a de volta (2026-08-09) ainda achou 2 furos operacionais. Uma entrega sem auditoria externa é uma entrega auto-aprovada.
+    - **Re-check pré-viagem · 7-10 dias antes (R11)** — só o operacional (preço/horário/regra de acesso/fechamento), que apodrece em meses. É também o que cobre os itens ⭐⭐, deliberadamente fora do frescor do gate 4d.
 
 ## Schema dos dados (JSON pretty embedded no HTML)
 
