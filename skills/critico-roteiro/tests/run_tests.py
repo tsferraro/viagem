@@ -16,11 +16,14 @@ Exit: 0 = tudo passou · 1 = alguma regressão.
 import sys
 import json
 import subprocess
+import tempfile
+from datetime import date, timedelta
 from pathlib import Path
 
-HERE     = Path(__file__).resolve().parent
-AUDIT    = HERE.parent / 'audit.py'
-FIXTURES = HERE / 'fixtures'
+HERE      = Path(__file__).resolve().parent
+AUDIT     = HERE.parent / 'audit.py'
+FIXTURES  = HERE / 'fixtures'
+FCGATE    = HERE.parent.parent.parent / 'scripts' / 'factcheck-gate.py'
 
 GREEN = '\033[92m'; RED = '\033[91m'; DIM = '\033[2m'; BOLD = '\033[1m'; END = '\033[0m'
 
@@ -48,6 +51,30 @@ def check(label, cond, detail=''):
 def has_finding(d, sev, needle):
     return any(f['sev'] == sev and needle.lower() in f['msg'].lower()
                for f in d['findings'])
+
+
+def _fc_gate_viagem_nova(fc_date_str):
+    """Monta um repo git temporário com data.json NUNCA commitado + FACTCHECK-<fc_date_str>.md
+    válido, e roda factcheck-gate.py contra ele. Devolve (exit_code, stdout+stderr)."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        subprocess.run(['git', 'init', '-q'], cwd=tmp, check=True)
+        subprocess.run(['git', 'config', 'user.email', 'test@test.com'], cwd=tmp, check=True)
+        subprocess.run(['git', 'config', 'user.name', 'Test'], cwd=tmp, check=True)
+        (tmp / 'README.md').write_text('init')
+        subprocess.run(['git', 'add', 'README.md'], cwd=tmp, check=True)
+        subprocess.run(['git', 'commit', '-q', '-m', 'init'], cwd=tmp, check=True)
+        vdir = tmp / 'viagem-x'
+        vdir.mkdir()
+        (vdir / 'data.json').write_text('{"days": []}')  # NUNCA commitado (o ponto do teste)
+        (vdir / f'FACTCHECK-{fc_date_str}.md').write_text(
+            f"# FACTCHECK · viagem-x · {fc_date_str}\n\n"
+            f"| Item | Afirmação | Veredito | Fonte(s) | Data |\n"
+            f"|---|---|---|---|---|\n"
+            f"| card:Teste | Existe | OK | https://example.com | {fc_date_str} |\n")
+        proc = subprocess.run([sys.executable, str(FCGATE), str(vdir), '--quiet'],
+                              capture_output=True, text=True)
+        return proc.returncode, proc.stdout + proc.stderr
 
 
 def main():
@@ -158,6 +185,18 @@ def main():
           f"exit={proc.returncode}")
     check('coord_repetida · achado menciona coord idêntica',
           'coord idêntica' in proc.stdout)
+
+    # --- factcheck-gate.py · viagem nova (refinamento 6a · auditoria de volta) ---
+    # data.json sem NENHUM commit é indistinguível pro git de "factcheck velho demais".
+    # Sem tratamento especial isso bloqueava até o primeiro deploy legítimo de toda
+    # viagem nova. Factcheck de HOJE deve passar (com aviso); de ontem, continua bloqueando.
+    print(f'{DIM}factcheck-gate.py · viagem nova sem commit do data.json{END}')
+    hoje = date.today().isoformat()
+    ontem = (date.today() - timedelta(days=1)).isoformat()
+    code, out = _fc_gate_viagem_nova(hoje)
+    check('viagem nova · factcheck de HOJE → gate PASSA (exit 0)', code == 0, f"exit={code}")
+    code, out = _fc_gate_viagem_nova(ontem)
+    check('viagem nova · factcheck de ONTEM → gate BLOQUEIA (exit 1)', code == 1, f"exit={code}")
 
     # --- Rede (opcional · só com --check-links) ------------------------------
     if check_links:

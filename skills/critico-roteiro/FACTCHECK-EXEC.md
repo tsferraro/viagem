@@ -78,6 +78,13 @@ plausíveis passa. Quem pega isso é a sessão AUDITORA (amostra adversarial) e 
 granularidade é de DIA: edit sensível + factcheck do mesmo dia passam juntos — aceito, porque a
 alternativa (timestamp por segundo) exigiria commit antes do gate e quebraria o fluxo do deploy.
 
+**Viagem nova (refinamento 6a · auditoria de volta 2026-08-09)**: `data.json` sem NENHUM commit
+é indistinguível pro git de "factcheck anterior ao primeiro commit" — sem tratamento especial
+isso bloqueava o primeiro deploy legítimo de toda viagem nova. Regra: `git rev-list` sem nenhum
+commit pro data.json + factcheck de HOJE → passa com aviso de primeiro-deploy. Mesmo cenário com
+factcheck de outro dia → continua bloqueando, com mensagem orientando a rodar o factcheck hoje ou
+commitar o data.json antes do deploy.
+
 ## Custo e quando roda
 
 Os gatilhos são os do `FACTCHECK.md` (não rodar em edit pequeno — o gate deixa passar edit
