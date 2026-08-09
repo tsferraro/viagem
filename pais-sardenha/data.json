@@ -941,7 +941,7 @@
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço San Giovanni di Sinis (junto à entrada de Tharros)",
-          "cat": "Vila pesqueira ao lado de Tharros",
+          "cat": "Vila pesqueira ao lado de Tharros · ⚠️ o Maluentu NÃO serve almoço em dia de semana (só aos domingos) — ele fica pro jantar",
           "coord": {
             "lat": 39.87486,
             "lng": 8.44101
@@ -955,15 +955,6 @@
               "poiCat": "restaurante",
               "dist": "ao lado da entrada de Tharros",
               "mapsQuery": "San Giovanni di Sinis, Cabras, Sardegna"
-            },
-            {
-              "nome": "Da Cesare · Maluentu (Via Lungomare 36, Putzu Idu)",
-              "desc": "Hotel dos anos 1960 de frente pra praia, hoje com a cozinha do chef Leonardo Marongiu · 12km ao norte, ~20min · vale se quiserem trocar o almoço simples por um bom almoço",
-              "preco": "€40-60",
-              "valeAPena": 3,
-              "poiCat": "restaurante",
-              "dist": "12km ao norte · ~20min de carro",
-              "mapsQuery": "Maluentu, Putzu Idu, Sardegna"
             },
             {
               "nome": "Picnic na praia",
@@ -1050,12 +1041,22 @@
           "opcoes": [
             {
               "nome": "Da Cesare · Maluentu (Via Lungomare 36, Putzu Idu)",
-              "desc": "Se ainda estiverem na praia ao pôr do sol · cozinha do chef Leonardo Marongiu · tel. 0785 389021",
+              "desc": "Se ainda estiverem na praia ao pôr do sol · cozinha do chef Leonardo Marongiu · o restaurante serve JANTAR de segunda a sábado (almoço só aos domingos — confirmado no site do hotel) · tel. +39 347 494 5397",
               "preco": "€40-60",
               "dist": "na própria praia",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "mapsQuery": "Maluentu, Putzu Idu, Sardegna"
+              "mapsQuery": "Maluentu, Putzu Idu, Sardegna",
+              "fontes": [
+                {
+                  "o": "Site oficial do hotel Da Cesare · Maluentu",
+                  "u": "https://www.maluentu.net/en/the-restaurant/",
+                  "prova": [
+                    "segunda a sábado",
+                    "domingos"
+                  ]
+                }
+              ]
             },
             {
               "nome": "Ristorante Blao (Via Mazzini 114, Oristano)",
@@ -1174,13 +1175,13 @@
           "sobre": "Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — bateram o arado numa pedra num campo ao pé da colina de Mont'e Prama. A pedra tinha <em>rosto</em>. Nas escavações que se seguiram saíram <strong>5.178 fragmentos</strong> de arenito, que levaram décadas de restauro em Li Punti (Sassari) até virarem as <strong>26 estátuas</strong> que vocês vão ver: guerreiros, arqueiros e pugilistas de dois metros e meio, com os olhos feitos de <em>dois círculos concêntricos</em> gravados na pedra. A datação — <strong>séc. IX-VIII a.C.</strong> — é a parte que desestabiliza: são anteriores aos <em>kouroi</em> gregos arcaicos. Antes disso, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real fora do Egito. A civilização que as fez é a mesma que ergueu os nuraghi e é a mesma que vocês encontraram ontem em Tharros, quando os fenícios chegaram.",
           "imperdivel": "Os olhos: dois círculos concêntricos gravados, sem pupila. Não é estilização — é a assinatura do escultor nurágico, repetida em todas as 26 peças",
           "dicas": [
-            "Terça a domingo, 10h-18h · <strong>fecha às segundas</strong> (hoje é terça, está aberto)",
+            "Terça a domingo, <strong>9h-20h no verão</strong> (última entrada 19h) · <strong>fecha às segundas</strong> (hoje é terça, está aberto)",
             "Se compraram o integrado de €18 em Tharros ontem, hoje não paga nada — leve o bilhete",
             "A Sala del Paesaggio tem janela pra lagoa de Càbras com a colina de Mont'e Prama no horizonte: dá pra ver de onde eles saíram",
             "1h30 basta · o museu é pequeno e concentrado, não é um dia inteiro"
           ],
           "duracao": "1h30",
-          "custo": "Coberto pelo integrado de €18 comprado em Tharros · avulso a partir de €8 (ago/2026)",
+          "custo": "Coberto pelo integrado de €18 comprado em Tharros · avulso €5 (ago/2026)",
           "acessibilidade": "Total · museu acessível",
           "coord": {
             "lat": 39.9247,
@@ -1188,7 +1189,29 @@
           },
           "valeAPena": 3,
           "poiCat": "atracao",
-          "mapsQuery": "Museo Civico Giovanni Marongiu, Cabras"
+          "mapsQuery": "Museo Civico Giovanni Marongiu, Cabras",
+          "fontes": [
+            {
+              "o": "Fondazione Mont'e Prama · monteprama.it",
+              "u": "https://monteprama.it/il-sinis/museo-civico-giovanni-marongiu-cabras/",
+              "prova": [
+                "9h",
+                "20h",
+                "19h",
+                "€5",
+                "segundas",
+                "Terça a domingo"
+              ]
+            },
+            {
+              "o": "Museo Civico Cabras · bilheteria",
+              "u": "https://www.museocabras.it/en/visit-the-museum/entrance-fees/",
+              "prova": [
+                "€5",
+                "€18"
+              ]
+            }
+          ]
         },
         {
           "hora": "13:00",
@@ -1307,21 +1330,6 @@
                 {
                   "o": "Site oficial do Ristorante Il Caminetto (Cabras)",
                   "u": "https://www.ristoranteilcaminettocabras.com/"
-                }
-              ]
-            },
-            {
-              "nome": "Sa Funta (Via Giuseppe Garibaldi 25, Càbras)",
-              "desc": "Enguia defumada e choco na Vernaccia · cozinha de lagoa, pra paladar curioso · avaliações recentes fracas: vá pelo que é diferente, não pelo consenso",
-              "preco": "€30-45",
-              "dist": "12min de carro · Càbras",
-              "valeAPena": 2,
-              "poiCat": "restaurante",
-              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras",
-              "fontes": [
-                {
-                  "o": "Sardinia Point · guia regional",
-                  "u": "https://sardiniapoint.it/guida-turistica/sardegna-ristoranti-sa-funta-cabras/"
                 }
               ]
             },
@@ -1564,7 +1572,7 @@
             "Ⓐ <strong>Museu MAB 'Ferruccio Barreca'</strong> — colado ao Tophet · €7 no cumulativo com o Tophet, €10 no bilhete único de todos os sítios (ago/2026) · aberto 9h-19h de março a outubro",
             "Ⓑ <strong>Basílica de Sant'Antioco Martire</strong> — 700m ao sul · as catacumbas cristãs do séc. V foram escavadas <em>dentro</em> de câmaras funerárias púnicas já existentes · os cristãos reaproveitaram o cemitério de quem os antecedeu",
             "Ⓒ <strong>Necrópole púnica</strong> — a poucos metros da basílica · até os anos 1970 famílias pobres da cidade <em>moravam</em> nestas tumbas escavadas na rocha; chamavam-se <em>is gruttas</em>",
-            "Ⓓ <strong>Tonnara de Cala Sapone</strong> — 6km ao sul (~12min de carro) · ruínas da armação de atum do séc. XIX, opcional se o dia render",
+            "Ⓓ <strong>Tonnara de Cala Sapone</strong> — ~11km ao sul (~15min de carro) · ruínas da armação de atum fundada na era de <strong>Filipe II (séc. XVI)</strong> e desmantelada em <strong>1825</strong>, opcional se o dia render",
             "Faça a parte de museu antes das 13h: a cidade é branca e reflete sol de um jeito que cansa rápido à tarde"
           ],
           "duracao": "3h-4h walking tour",
@@ -1583,8 +1591,8 @@
                   "n": 1,
                   "nome": "Tophet di Sant'Antioco (cemitério ritual)",
                   "coord": {
-                    "lat": 39.0706,
-                    "lng": 8.45
+                    "lat": 39.0756,
+                    "lng": 8.4508
                   },
                   "mapsQuery": "Tophet di Sant'Antioco, Sardegna"
                 },
@@ -1592,8 +1600,8 @@
                   "n": 2,
                   "nome": "Museo Barreca MAB (artefatos)",
                   "coord": {
-                    "lat": 39.0706,
-                    "lng": 8.45
+                    "lat": 39.0792,
+                    "lng": 8.4567
                   },
                   "mapsQuery": "Museo Archeologico Ferruccio Barreca, Sant'Antioco"
                 },
@@ -1619,8 +1627,8 @@
                   "n": 5,
                   "nome": "Tonnara ruins · Cala Sapone",
                   "coord": {
-                    "lat": 39.059,
-                    "lng": 8.448
+                    "lat": 39.0089,
+                    "lng": 8.3852
                   },
                   "mapsQuery": "Cala Sapone, Sant'Antioco"
                 }
@@ -1638,6 +1646,30 @@
             {
               "o": "Visit Sant'Antioco · portal oficial",
               "u": "https://visitsantantioco.info/en/vivi-santantioco/luoghi-dinteresse/ponte-romano/"
+            },
+            {
+              "o": "Idese · Ministero della Cultura · Tofet di Sulky",
+              "u": "https://idese.cultura.gov.it/place/tofet-di-sulky/",
+              "prova": [
+                "3.000",
+                "Tanit"
+              ]
+            },
+            {
+              "o": "LUDiCa/UniCa · Tonnara a Cala Sapone",
+              "u": "https://storia.dh.unica.it/storiedigitali/s/campiestivi_santantioco_2023/page/tonnara-a-cala-sapone",
+              "prova": [
+                "séc. XVI",
+                "1825",
+                "Filipe II"
+              ]
+            },
+            {
+              "o": "SardegnaNatura · spiaggia Cala Sapone (posição)",
+              "u": "https://www.sardegnanatura.com/esplora-la-sardegna/spiagge-sardegna/1233-spiaggia-cala-saboni-cala-sapone-sant-antioco.html",
+              "prova": [
+                "11km"
+              ]
             }
           ]
         },
@@ -2042,18 +2074,18 @@
           "risco": "yellow",
           "nome": "Porto Flavia · mina dentro do penhasco",
           "cat": "Engenharia 1924 · entra na rocha pelo mar",
-          "sobre": "Uma das obras de engenharia industrial mais geniais do Mediterrâneo. Em 1924 construíram DOIS túneis HORIZONTAIS atravessando o penhasco direto pra carregar minério em navios ancorados abaixo, no nível do mar — economizava transportar minério até Carloforte. Visita guiada percorre o túnel principal (sem escadas, sem ladeiras), termina numa varanda esculpida na rocha com vista panorâmica para Pan di Zucchero (rochedo gigante no mar). Reserva OBRIGATÓRIA · max 25 pessoas por tour · duração ~2h.",
+          "sobre": "Uma das obras de engenharia industrial mais geniais do Mediterrâneo. Em 1924 construíram DOIS túneis HORIZONTAIS atravessando o penhasco direto pra carregar minério em navios ancorados abaixo, no nível do mar — economizava transportar minério até Carloforte. Visita guiada percorre o túnel principal (sem escadas, sem ladeiras), termina numa varanda esculpida na rocha com vista panorâmica para Pan di Zucchero (rochedo gigante no mar). Reserva OBRIGATÓRIA · max 25 pessoas por tour · duração ~1h.",
           "imperdivel": "Varanda final no penhasco · vista do Pan di Zucchero e do Mediterrâneo · 50m de queda d'água",
           "dicas": [
-            "<strong>Reserva obrigatória e SÓ ONLINE</strong> — não se compra na bilheteria nem por telefone ou e-mail, e a venda fecha à <strong>meia-noite do dia anterior</strong> · ou seja: comprem até a noite de 14/Ago",
-            "Chegar na bilheteria <strong>15 minutos antes</strong> com o comprovante · atraso perde a visita e não devolve o dinheiro",
+            "<strong>Reserva antecipada</strong> — 3 canais: online (venda fecha à <strong>meia-noite do dia anterior</strong> — comprem até a noite de 14/Ago), bilheteria do Ufficio del Turismo em Iglesias (Piazza Municipio), ou a bilheteria do próprio sítio · em Ferragosto, comprar online ANTES continua sendo o que salva o dia",
+            "Chegar na bilheteria <strong>20 minutos antes</strong> com o comprovante · atraso perde a visita e não devolve o dinheiro",
             "€10 · €6,50 acima de 65 anos (ago/2026) · a visita dura ~1h",
             "A galeria principal são ~600m planos em piso de terra batida · a <strong>galeria inferior tem 108 degraus</strong> — dá pra ficar na de cima e ver a varanda do mesmo jeito",
             "13-15°C lá dentro o ano todo · leve um casaco fino mesmo em agosto · sapato fechado",
             "Hoje é <strong>15 de agosto, Ferragosto</strong> — o feriado mais movimentado da Itália · a reserva de manhã é o que salva o dia"
           ],
-          "duracao": "2h tour",
-          "custo": "€10 · €6,50 acima de 65 anos (ago/2026) · compra online obrigatória até a véspera",
+          "duracao": "50min-1h",
+          "custo": "€10 · €6,50 acima de 65 anos (ago/2026) · reserva antecipada (online até a véspera ou bilheteria)",
           "acessibilidade": "Túnel horizontal sem degraus · estacionamento perto",
           "coord": {
             "lat": 39.3371,
@@ -2062,7 +2094,28 @@
           "valeAPena": 3,
           "poiCat": "atracao",
           "mapsQuery": "Porto Flavia, Masua",
-          "reserva": "pendente"
+          "reserva": "pendente",
+          "fontes": [
+            {
+              "o": "Comune di Iglesias · Porto Flavia",
+              "u": "https://www.comune.iglesias.ca.it/it/community/notizie/notizia/Porto-Flavia-00001/",
+              "prova": [
+                "20 minutos",
+                "€10",
+                "€6,50",
+                "Iglesias"
+              ]
+            },
+            {
+              "o": "SardegnaInBlog · Porto Flavia orari e visite",
+              "u": "https://www.sardegnainblog.it/11811/porto-flavia-orari/",
+              "prova": [
+                "50min",
+                "1h",
+                "meia-noite"
+              ]
+            }
+          ]
         },
         {
           "hora": "12:30",
@@ -2235,12 +2288,12 @@
           }
         },
         {
-          "hora": "12:00",
+          "hora": "12:45",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço Nuoro · cultura interior",
-          "cat": "⚠️ domingo · confirmar por telefone antes de subir",
+          "cat": "Almoço abre 12h45 · confirmar por telefone antes de subir",
           "coord": {
             "lat": 40.3216,
             "lng": 9.3303
@@ -2248,7 +2301,7 @@
           "opcoes": [
             {
               "nome": "Il Rifugio (Via Antonio Mereu 28, Nuoro)",
-              "desc": "Trattoria histórica no coração de Nuoro, desde <strong>1988</strong>, cozinha da <strong>Barbagia</strong>: presunto de javali e de ovelha, grelhados mistos, culurgiones. Filosofia slow food.<br>⚠️ <strong>LIGUEM ANTES — 0784 232355</strong>: as fontes divergem sobre domingo. O Touring Club lista seg·ter·qui·sex·sáb (12h45-15h e 19h45-23h30, sem domingo); o GialloZafferano diz que fecha só às quartas. Vocês chegam num <strong>domingo</strong> — não subam a Nuoro sem confirmar.",
+              "desc": "Trattoria histórica no coração de Nuoro, desde <strong>1988</strong>, cozinha da <strong>Barbagia</strong>: presunto de javali e de ovelha, grelhados mistos, culurgiones. Filosofia slow food.<br>⚠️ Domingo ABRE, mas o almoço só começa <strong>12h45</strong> (vai até 15h) · o dia de fechamento é <strong>quarta</strong> — duas fontes de horário concordam; a versão antiga 'fechado aos domingos' não se confirmou. Na dúvida, <strong>liguem 0784 232355</strong> antes de subir a Nuoro.",
               "preco": "€25-40",
               "valeAPena": 3,
               "poiCat": "restaurante",
@@ -2256,12 +2309,21 @@
               "mapsQuery": "Il Rifugio, Via Antonio Mereu 28, Nuoro",
               "fontes": [
                 {
-                  "o": "Touring Club Italiano",
-                  "u": "https://www.touringclub.it/destinazioni/nuoro/mangiare/111377-il-rifugio"
+                  "o": "OrariDiApertura24 · Il Rifugio Nuoro",
+                  "u": "https://www.oraridiapertura24.it/filiale/Nuoro-Il%2520Rifugio-878846V.html",
+                  "prova": [
+                    "12h45",
+                    "15h",
+                    "quarta"
+                  ]
                 },
                 {
-                  "o": "GialloZafferano · guia de restaurantes",
-                  "u": "https://ristoranti.giallozafferano.it/ristoranti/sardegna/ristoranti-nuoro/il-rifugio-1970.html"
+                  "o": "Restaurant Guru · Il Rifugio (4.4/5)",
+                  "u": "https://restaurantguru.com/Il-Rifugio-Nuoro",
+                  "prova": [
+                    "quarta",
+                    "1988"
+                  ]
                 }
               ]
             },
@@ -2437,7 +2499,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Embarque Marina Cala Gonone",
-          "cat": "Tour escolhido na véspera",
+          "cat": "Tour reservado com antecedência (não deixem pra véspera)",
           "coord": {
             "lat": 40.2804,
             "lng": 9.6272
@@ -2454,16 +2516,16 @@
           "sobre": "Dia inteiro de barco percorrendo o golfo mais espetacular da Sardenha. O Gulf of Orosei tem ~40km de falésias calcárias verticais (até 600m de altura) caindo no Mediterrâneo, com calas escondidas só acessíveis por mar. Roteiro clássico do full-day tour: Cala Luna (praia em meia-lua, oleandros), Cala Mariolu (areia/pedrinhas brancas e rosadas, água irreal), Cala dei Sisine (entre falésias), e VISTA externa de Cala Goloritzé (proibido desembarcar — só por trilha). Algumas paradas pra nadar e snorkel. Almoço picnic a bordo ou comprado antes. Leva: protetor solar (alto FPS), chapéu, snorkel próprio se tem, água em quantidade, casaco leve (vento). Chega ~17h.",
           "imperdivel": "Em Cala Mariolu, o fundo é feito de seixos brancos do tamanho de moeda — é isso que faz a água parecer iluminada por baixo. Os locais chamam a praia de <em>Ispuligidenie</em>, 'pulgas de neve', pelo mesmo motivo",
           "dicas": [
-            "Reserva o shuttle (drop-off + pickup) · NÃO o tour com guia · flexibilidade",
+            "<strong>RESERVEM COM ANTECEDÊNCIA</strong> (em agosto os barcos esgotam com dias) · shuttle drop-off dá flexibilidade, MAS confirmem por escrito com o operador que a <strong>cota de desembarque está incluída</strong>: desde 2025 as calas de Baunei têm teto diário com reserva e QR code (Cala Mariolu ~700 pessoas/dia, app Heart of Sardinia) — quem desce sem cota pode ser barrado",
             "Entrada da <strong>Grotta del Bue Marino</strong> é à parte do passeio: €12 · €6 reduzido (jun-set, ago/2026) · visita guiada de ~1h a pé, 900m de passarela · <strong>limite de 120 pessoas por horário</strong>, bilhete na bilheteria do porto ou em enjoydorgali.it",
             "Tour completo: €60-90/pessoa · meio-dia: €40-60",
             "Levar lanche · maioria dos tours não inclui",
             "Sapato de água · pedras escorregadias em alguns desembarques",
             "Snorkel: água transparente · peixes mediterrâneos · vale a pena",
-            "Taxa ambiental do município de Baunei: €6 por pessoa acima de 3 anos, cobrada à parte do passeio (ago/2026)"
+            "Contributo ambiental de Baunei (2026): <strong>€2 por pessoa</strong> pra uma cala ou <strong>€3 no pass</strong> da costa, pago <strong>EM DINHEIRO no check-in</strong> do tour — levem trocado"
           ],
           "duracao": "7-8h",
-          "custo": "€60-90/pessoa dia inteiro + €6 de taxa ambiental do município de Baunei (ago/2026)",
+          "custo": "€60-90/pessoa dia inteiro + contributo de Baunei €2-3 por pessoa em dinheiro (2026)",
           "acessibilidade": "Embarque ok · algumas praias têm seixos · canguru não relevante",
           "coord": {
             "lat": 40.1233,
@@ -2471,7 +2533,27 @@
           },
           "valeAPena": 3,
           "poiCat": "parque",
-          "mapsQuery": "Porto di Cala Gonone"
+          "mapsQuery": "Porto di Cala Gonone",
+          "fontes": [
+            {
+              "o": "La Nuova Sardegna · prenotazione e QR nas calas de Baunei",
+              "u": "https://www.lanuovasardegna.it/regione/2025/06/02/news/cala-mariolu-cala-goloritze-e-cala-luna-si-entra-con-prenotazione-e-un-qr-code-1.100716048",
+              "prova": [
+                "700",
+                "QR",
+                "2025"
+              ]
+            },
+            {
+              "o": "idealista · spiagge a numero chiuso 2026",
+              "u": "https://www.idealista.it/news/vacanze/mete-turistiche/2026/07/21/413560-tutte-le-spiagge-a-numero-chiuso-in-sardegna-2026-come-prenotare-e-quanto-costa",
+              "prova": [
+                "€2",
+                "€3",
+                "2026"
+              ]
+            }
+          ]
         },
         {
           "hora": "17:00",
@@ -2677,14 +2759,14 @@
           "sobre": "Capo Testa é uma península de granito moldada por vento e mar — formações arredondadas que parecem esculturas surrealistas. A 'Valle della Luna' é uma valeira entre essas formações onde, nos anos 1970, formou-se um acampamento hippie permanente (alguns ainda vivem lá). Walking tour de ~2h: parking → Valle della Luna → Cala Grande (banho rápido se quiser) → Farol → volta. Trilhas em granito desigual: sapato fechado obrigatório, NÃO sandália. Tarde dourada é o melhor horário: rochas viram rosa-laranja, dia turistas saem.",
           "imperdivel": "Perto do farol, procure os blocos de granito com sulcos retos e cunhas ainda encaixadas: são cortes romanos abandonados no meio do trabalho, há dois mil anos",
           "dicas": [
-            "○ <strong>Estacionamento de Capo Testa</strong> — gratuito, no fim da estrada · em agosto lota até as 11h, mas às 17h já esvaziou",
+            "○ <strong>Estacionamento de Capo Testa</strong> — na temporada é <strong>sosta a pagamento</strong> (gestão Silene, ordinanza do Comune), no fim da estrada · em agosto lota até as 11h, mas às 17h já esvaziou · alternativa boa: a <strong>navetta elétrica</strong> centro↔farol (€2,50 ida · €4 ida-e-volta, até 1/out) deixa vocês na porta e poupa a caminhada de asfalto",
             "Ⓐ <strong>Valle della Luna</strong> — o vale entre os blocos de granito onde nos anos 1970 se instalou uma comunidade hippie · alguns moradores continuam lá, vivendo nas cavidades da rocha, e é normal cruzar com eles",
             "Ⓑ <strong>Cala Grande</strong> — banho rápido, sem nenhuma infraestrutura · o granito daqui foi cortado pelos romanos entre o séc. I a.C. e o IV d.C. e <em>provavelmente</em> é o das colunas do Panteão, em Roma · em 1162 um pedreiro pisano chamado Cioneto voltou às mesmas pedreiras pra tirar as colunas do Duomo de Pisa",
             "Ⓒ <strong>Faro di Capo Testa</strong> — em dia claro veem-se as falésias de Bonifacio do outro lado do estreito, a 11km · é a Córsega de onde vocês vieram, vista da Sardenha",
             "Loop completo ~6km · 2-3h · sapato fechado, o granito é liso e escorrega"
           ],
           "duracao": "2h-3h",
-          "custo": "Grátis",
+          "custo": "Entrada grátis · estacionamento pago na temporada · navetta €2,50/€4 A/R",
           "acessibilidade": "Trilha em granito · sem rampas formais · só pra fit",
           "coord": {
             "lat": 41.2365,
@@ -2708,8 +2790,8 @@
                   "n": 2,
                   "nome": "Valle della Luna (formações graníticas)",
                   "coord": {
-                    "lat": 41.2443,
-                    "lng": 9.1488
+                    "lat": 41.2346,
+                    "lng": 9.1425
                   },
                   "mapsQuery": "Valle della Luna, Capo Testa"
                 },
@@ -2717,8 +2799,8 @@
                   "n": 3,
                   "nome": "Cala Grande (praia escondida)",
                   "coord": {
-                    "lat": 41.241,
-                    "lng": 9.148
+                    "lat": 41.2346,
+                    "lng": 9.1425
                   },
                   "mapsQuery": "Cala Grande, Capo Testa"
                 },
@@ -2739,8 +2821,20 @@
           "mapsQuery": "Valle della Luna, Capo Testa",
           "fontes": [
             {
-              "o": "SardegnaTurismo · Capo Testa e Valle della Luna",
-              "u": "https://www.sardegnaturismo.it/it/esplora/capo-testa"
+              "o": "Comune di Santa Teresa Gallura · ordinanza sosta (Silene)",
+              "u": "https://silene-api.municipiumapp.it/s3/8138/allegati/ord_00021_10-05-2023.pdf",
+              "prova": [
+                "pagamento"
+              ]
+            },
+            {
+              "o": "SardegnaInBlog · navetta elettrica Capo Testa",
+              "u": "https://www.sardegnainblog.it/60560/navetta-elettrica-santa-teresa-gallura-capo-testa/",
+              "prova": [
+                "€2,50",
+                "€4",
+                "1/out"
+              ]
             }
           ]
         },
@@ -2852,11 +2946,11 @@
             "Ferry Palau↔La Maddalena a cada 30min · 15min de travessia · ~€18-19 por trecho com carro (ago/2026) · sem reserva",
             "Com veículo, apresentar-se no porto 30min antes do embarque",
             "<strong>Cala Coticcio: reserva de guia obrigatória</strong> (€3 Parque + ~€25/pessoa) · sem ela, Cala Caprarese resolve",
-            "Compendio Garibaldino fecha segundas · hoje é quarta · <strong>€8 e só com reserva</strong>, por faixa de horário (ago/2026)",
+            "Compendio Garibaldino fecha segundas · hoje é quarta · <strong>€7 e só com reserva pela plataforma Musei Italiani</strong>, por faixa de horário (ago/2026)",
             "Fila do ferry de volta aperta entre 18h e 19h em agosto · saiam às 17h30 ou esperem 19h30"
           ],
           "duracao": "Dia inteiro · 8h+",
-          "custo": "~€37 ferry ida-e-volta com carro (ago/2026) · €8 Compendio Garibaldino, com reserva",
+          "custo": "~€37 ferry ida-e-volta com carro (ago/2026) · €7 Compendio Garibaldino, com reserva online",
           "acessibilidade": "La Maddalena town plana · Cala Coticcio = trail moderado",
           "coord": {
             "lat": 41.2169,
@@ -2898,8 +2992,8 @@
                   "n": 4,
                   "nome": "Cala Francese (rochas rosa)",
                   "coord": {
-                    "lat": 41.221,
-                    "lng": 9.405
+                    "lat": 41.2201,
+                    "lng": 9.3782
                   },
                   "mapsQuery": "Cala Francese, La Maddalena"
                 },
@@ -2907,8 +3001,8 @@
                   "n": 5,
                   "nome": "Spiaggia di Tegge",
                   "coord": {
-                    "lat": 41.222,
-                    "lng": 9.408
+                    "lat": 41.2076,
+                    "lng": 9.3827
                   },
                   "mapsQuery": "Spiaggia di Punta Tegge, La Maddalena"
                 }
@@ -2926,6 +3020,18 @@
             {
               "o": "SardegnaTurismo · Cala Francese e Punta Tegge",
               "u": "https://www.sardegnaturismo.it/it/esplora/punta-tegge"
+            },
+            {
+              "o": "Compendio Garibaldino · site oficial",
+              "u": "http://www.compendiogaribaldino.it/index.php?module=contents&idrec=22",
+              "prova": [
+                "€7"
+              ]
+            },
+            {
+              "o": "Paradisola · Cala Francese La Maddalena (posição)",
+              "u": "https://www.paradisola.it/spiagge-sardegna/nord/283-cala-francese-la-maddalena",
+              "prova": []
             }
           ]
         },
@@ -2982,14 +3088,14 @@
           "sobre": "Caprera liga-se a La Maddalena pela <strong>Ponte della Moneta</strong> (600m, 5min de carro). Foi aqui que <strong>Giuseppe Garibaldi</strong> passou os últimos 26 anos da vida, comprou meia ilha com o dinheiro de uma herança e morreu em <strong>2 de junho de 1882</strong>, na cama de frente pra janela, olhando o mar. A casa está exatamente como ele a deixou — o <strong>Compendio Garibaldino</strong> é o museu mais visitado da Sardenha. <strong>ATENÇÃO à praia</strong>: a <em>Cala Coticcio</em>, a famosa 'Taiti da Sardenha', está contingentada desde 2020 — <strong>só se entra com guia ambiental autorizado pelo Parque Nacional e com reserva</strong>, em 4 grupos de 15 pessoas por dia, no máximo 60 pessoas. Chegar de carro e subir a trilha por conta própria não é uma opção: a trilha é fiscalizada. Se não reservarem com antecedência, o plano de praia do dia é <em>Cala Caprarese</em> ou <em>Cala Garibaldi</em>, ambas livres, sem trilha e a poucos minutos de carro da casa.",
           "imperdivel": "O quarto de Garibaldi: a cama foi puxada pra janela nos últimos dias pra ele ver o mar, e o relógio da parede está parado às 18h20 — a hora em que ele morreu",
           "dicas": [
-            "<strong>Compendio Garibaldino só entra com reserva</strong> — ingressos contingentados, grupos de no máximo 20 pessoas a cada 15min, entre 8h30 e 18h30 (última entrada) · a visita dura no máximo 40min · chegar 10min antes ou perde a vaga · tel. 0789-727162",
-            "<strong>€8</strong> o Compendio · €6 o Memoriale (ago/2026) · <strong>fecha às segundas</strong> (hoje é quarta)",
+            "<strong>Compendio Garibaldino só entra com reserva</strong> — a compra com dia e hora é pela <strong>plataforma online Musei Italiani</strong> (e-mail não funciona; o telefone 0789-727162 é só informação) · grupos de no máximo 20 pessoas a cada 15min, entre 8h30 e 18h30 (última entrada) · a visita dura no máximo 40min · chegar 10min antes ou perde a vaga",
+            "<strong>€7</strong> o Compendio (SEM desconto 65+) · €6 o Memoriale · cumulativo €12 pros dois, vendido só na bilheteria local (ago/2026) · <strong>fecha às segundas</strong> (hoje é quarta)",
             "<strong>Cala Coticcio só com guia ambiental autorizada pelo Parque</strong> · €3 de taxa do Parque (grátis até 12 anos) + o valor da guia, que se combina direto com ela e varia por duração e tamanho do grupo · a lista de guias credenciadas está no site do Parco Nazionale · em agosto se reserva com <em>semanas</em> de antecedência",
             "Sem reserva de guia: Cala Caprarese fica a 1,5 km da casa-museu, é livre e não tem trilha",
             "Não há comércio na ilha fora da área do museu · leve água e protetor"
           ],
           "duracao": "2h-3h",
-          "custo": "€8 Compendio Garibaldino · €6 Memoriale (ago/2026) · <strong>só com reserva</strong> · Cala Coticcio: €3 de taxa do Parque + guia obrigatório (valor a combinar com a guia)",
+          "custo": "€7 Compendio Garibaldino (sem desconto 65+) · €6 Memoriale · cumulativo €12 só na bilheteria (ago/2026) · <strong>só com reserva</strong> · Cala Coticcio: €3 de taxa do Parque + guia obrigatório (valor a combinar com a guia)",
           "acessibilidade": "Compendio é térreo e acessível · Cala Caprarese tem acesso curto do estacionamento · a trilha de Cala Coticcio tem 30-45min de granito solto e desnível, não é pra joelho ruim",
           "coord": {
             "lat": 41.21694,
@@ -2998,7 +3104,40 @@
           "valeAPena": 3,
           "poiCat": "atracao",
           "mapsQuery": "Compendio Garibaldino, Caprera",
-          "reserva": "pendente"
+          "reserva": "pendente",
+          "fontes": [
+            {
+              "o": "Compendio Garibaldino · site oficial",
+              "u": "http://www.compendiogaribaldino.it/index.php?module=contents&idrec=22",
+              "prova": [
+                "€7",
+                "€6",
+                "€12",
+                "20",
+                "15min",
+                "40min",
+                "8h30",
+                "18h30",
+                "65+"
+              ]
+            },
+            {
+              "o": "Ministero della Cultura · Musei Garibaldini",
+              "u": "https://museigaribaldini.cultura.gov.it/",
+              "prova": [
+                "Musei Italiani",
+                "segundas"
+              ]
+            },
+            {
+              "o": "Parco Nazionale La Maddalena · Cala Coticcio",
+              "u": "https://lamaddalenapark.iswebcloud.it/pagina186885_info-cala-coticciobrigantina.html/",
+              "prova": [
+                "€3",
+                "guia"
+              ]
+            }
+          ]
         },
         {
           "hora": "18:30",
@@ -3171,12 +3310,22 @@
           "opcoes": [
             {
               "nome": "Ristorante Giagoni in Piazza (Piazza della Chiesa 6, San Pantaleo)",
-              "desc": "Casa de pedra galurense de frente pra praça da igreja · cozinha sarda com produto local · tel. 0789 65224",
+              "desc": "Casa de pedra galurense de frente pra praça da igreja · cozinha sarda com produto local · ⚠️ às <strong>quintas</strong> (dia da feira — e o dia de vocês) o serviço anunciado é de <strong>brunch</strong>, não o menu completo · confirmem o que está valendo: tel. 0789 65224",
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "na praça da igreja · a pé",
-              "mapsQuery": "Giagoni in Piazza, Piazza della Chiesa 6, San Pantaleo"
+              "mapsQuery": "Giagoni in Piazza, Piazza della Chiesa 6, San Pantaleo",
+              "fontes": [
+                {
+                  "o": "Site oficial Ristorante Giagoni",
+                  "u": "https://www.ristorantegiagoni.it/",
+                  "prova": [
+                    "quintas",
+                    "brunch"
+                  ]
+                }
+              ]
             },
             {
               "nome": "Bares da praça de San Pantaleo",
@@ -3369,12 +3518,12 @@
           }
         },
         {
-          "hora": "11:00",
+          "hora": "12:30",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço Olbia · despedida",
-          "cat": "Centro ou aeroporto",
+          "cat": "Centro (cozinhas abrem 12h30) ou aeroporto · depende da hora do voo [a confirmar]",
           "coord": {
             "lat": 40.9238,
             "lng": 9.5026
@@ -3391,21 +3540,47 @@
             },
             {
               "nome": "Ristorante By Night (Viale Aldo Moro 201/A, Olbia)",
-              "desc": "Fecha o círculo: é onde vocês jantaram na primeira noite · peixe fresco",
+              "desc": "Fecha o círculo: é onde vocês jantaram na primeira noite · peixe fresco · a cozinha do almoço abre às <strong>12h30</strong> (12h45 em alguns dias) — não adianta chegar antes · tel. 0789 58955",
               "preco": "€30-70",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "Viale Aldo Moro · a caminho do aeroporto",
-              "mapsQuery": "Ristorante By Night, Viale Aldo Moro 201, Olbia"
+              "mapsQuery": "Ristorante By Night, Viale Aldo Moro 201, Olbia",
+              "fontes": [
+                {
+                  "o": "Ristorante By Night · site/menu",
+                  "u": "https://www.ristorantebynightolbia.it/menu/",
+                  "prova": [
+                    "12h30"
+                  ]
+                },
+                {
+                  "o": "Sluurpy · By Night Olbia (horários)",
+                  "u": "https://www.sluurpy.it/olbia/ristorante/93215/ristorante-spaghetteria-by-night",
+                  "prova": [
+                    "12h30",
+                    "12h45"
+                  ]
+                }
+              ]
             },
             {
               "nome": "Aeroporto · sanduba",
-              "desc": "Se o horário apertar · sem opção gourmet, mas resolve",
+              "desc": "Se o voo sair antes de ~16h30, é AQUI que se come: OLB em agosto pede 2h-2h30 de antecedência (pico 16h-19h) e o almoço no centro não fecha a conta · sem opção gourmet, mas resolve",
               "preco": "€10-15",
               "valeAPena": 1,
               "poiCat": "cafe",
               "dist": "no aeroporto",
-              "mapsQuery": "Aeroporto di Olbia Costa Smeralda"
+              "mapsQuery": "Aeroporto di Olbia Costa Smeralda",
+              "fontes": [
+                {
+                  "o": "Geasar · avisos aeroporto Olbia (verão)",
+                  "u": "https://www.geasar.it/en/press/news/avviso-ai-passeggeri-aeroporto-di-olbia-estate-2025",
+                  "prova": [
+                    "2h"
+                  ]
+                }
+              ]
             }
           ]
         },
