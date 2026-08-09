@@ -237,7 +237,7 @@ Quando Tobia pede mudança em viagem existente:
 9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥32 e P0=0 (máx 3 iterações · mecânico primeiro → confirma ⚖️ no checklist → re-build → re-audit) · aspiração ≥36
 9b2. **Roda `scripts/maps-audit.py <viagem>/index.html --urls`** · zero busca genérica e zero waypoint fantasma ANTES de conferir lugar a lugar
 9c. **FACTCHECK lean (incl. §4: lugar no Maps + links + situação do atrativo) + JUDGE 1×(+1)** (é entrega → pilha completa da tabela de gatilhos · `skills/critico-roteiro/FACTCHECK.md` e `JUDGE.md`) · só após audit limpo
-10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar na entrega: nota (2 metades) + placar factcheck + veredito judge
+10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar na entrega: **placar do factcheck (X confirmados / Y corrigidos / Z inconclusivos) + veredito judge** como manchete · a nota /40 é **FORMA** (não mede verdade — um roteiro 100% falso tirou 35/40 na auditoria de 2026-08-08) e vai no rodapé, nunca na manchete
 
 ## Schema dos dados (JSON pretty embedded no HTML)
 
