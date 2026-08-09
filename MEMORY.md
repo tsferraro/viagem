@@ -200,7 +200,7 @@ Trata todo status ≠2xx como "link quebrado", com a mesma severidade:
 
 Só **404/410** é prova de morte. Sugestão pra quem for mexer no `audit.py`: cair pra `GET` quando o
 `HEAD` devolver 403/405, e separar "morto" (404/410) de "não verificável" (403/405/timeout).
-- Coordenada só sai de busca quando a fonte publica DMS (`41°13'01"N`). **Truque útil**: converter DMS pra decimal gera naturalmente 5+ casas, o que contorna o bug do `coord_4dec` (que usa `str()` e lê `41.8440` como 3 casas, porque JSON não guarda zero à direita).
+- Coordenada só sai de busca quando a fonte publica DMS (`41°13'01"N`). Converter DMS pra decimal gera naturalmente 5+ casas — bom pra precisão. (O bug do `coord_4dec` que esta nota contornava — `str()` lia `41.8440` como 3 casas — foi **consertado no Lote 1 da auditoria, 2026-08-09**: o parser agora guarda o texto bruto do JSON.)
 
 ---
 
@@ -459,3 +459,27 @@ está em aberto é só o transporte da planilha até mim.
 
 - [ ] Propagar o aviso de storage não-persistente (maybeWarnStorage · template) pros outros roteiros: rebuildar corsica, marais, valencia, pais-sardenha via build.py (só NYC foi reconstruído em 2026-07-08).
 - [ ] Propagar a **aba "Tudo no Mapa" + classificação `poiCat`/`valeAPena`** pros outros roteiros (o template já herda a aba; falta classificar os POIs e dar coord às opções de cada viagem).
+
+### Execução da auditoria em 5 lotes · 2026-08-09 (sessão executora + auditoria de volta)
+
+Três lições que generalizam além desta rodada:
+
+1. **Instrução recebida também é afirmação a verificar.** O handoff mandava remover "quem
+   parou o relógio foi Menotti" como sem-fonte. O sub-agente cético (contexto limpo) achou a
+   fonte — o site oficial do Compendio Garibaldino — e a auditora confirmou que o erro era do
+   verificador DELA. A REGRA ZERO vale pra ordem escrita em documento interno tanto quanto pra
+   prosa de card: **conferir antes de aplicar, mesmo vindo de auditoria**. O laço adversarial
+   só funciona se roda nos dois sentidos.
+
+2. **Coord idêntica em stops distintos tem DUAS causas, e a segunda é a traiçoeira.** Ou um
+   dos stops está no lugar errado (Tophet/MAB), ou os dois nomes são **o mesmo lugar** — Valle
+   della Luna e Cala Grande eram isso (o vale desemboca na enseada; SardegnaTurismo intitula a
+   página "Cala Grande - Valle della Luna"). O check mecânico do `maps-audit.py` pega o
+   sintoma; diagnosticar QUAL das duas causas é trabalho de pesquisa, não de regex.
+
+3. **Custo real da verificação com rastro, medido**: 3 sub-agentes céticos, ~68 buscas pra
+   ~20 afirmações (~10-15min de parede, rodando em paralelo ao resto). Retorno: além de
+   confirmar/refutar, os céticos devolveram **refinamentos que a instrução não pedia** (a
+   composição exata dos +2 Gigantes: um pugilista de Cavalupo e um arqueiro — não "2 novas";
+   a formulação "quase cinco meses" no cerco de 1420). Verificação barata o bastante pra ser
+   default em edição de conteúdo sensível — o gate 4d agora cobra o artefato de qualquer jeito.
