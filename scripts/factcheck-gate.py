@@ -28,6 +28,15 @@ O QUE BLOQUEIA
    opções ⭐⭐⭐ · historia[]) difere entre a versão commitada até a data do factcheck e a
    que vai pro ar — e o factcheck não é de hoje. Edit não-sensível passa sem factcheck novo.
 
+VIAGEM NOVA (refinamento 6a · auditoria de volta 2026-08-09)
+--------------------------------------------------------
+Numa viagem nova o data.json ainda não tem NENHUM commit — "não achei revisão antes do
+factcheck" e "o data.json nunca foi commitado" são indistinguíveis pro git. Sem tratamento
+especial isso bloqueava até o primeiro deploy legítimo. Regra: se `git rev-list` não devolve
+NENHUM commit pro data.json e o factcheck é de HOJE, passa (⚠ primeiro deploy · confira que o
+factcheck cobre tudo). Se o factcheck NÃO é de hoje, continua bloqueando — a mensagem orienta:
+rode o factcheck hoje, ou commite o data.json antes do deploy.
+
 Granularidade declarada: DIA. Edit sensível + factcheck do MESMO dia passam juntos (o deploy
 roda antes do commit, então não há timestamp de git pra mudança não-commitada). A sessão
 auditora testa forja com data antiga/futura; forja com data de hoje só o campo pega.
@@ -162,8 +171,14 @@ def main() -> int:
     base_rev = _git(repo, 'rev-list', '-1', f'--before={fc_date.isoformat()}T23:59:59',
                     'HEAD', '--', str(rel))
     if not base_rev:
-        print(f"{C_ERR}✗ BLOQUEADO: {fc.name} é anterior ao primeiro commit do data.json — "
-              f"o factcheck não pode ter verificado este conteúdo{C_END}")
+        if fc_date == date.today():
+            say(f"  {C_WARN}⚠{C_END} {rel} sem nenhum commit até {fc_date.isoformat()} — "
+                f"viagem nova · primeiro deploy · factcheck é de HOJE, passa (confira que ele "
+                f"cobre tudo que vai pro ar)")
+            return 0
+        print(f"{C_ERR}✗ BLOQUEADO: {fc.name} é anterior ao primeiro commit do data.json e não "
+              f"é de hoje — viagem nova sem commit do data.json: rode o factcheck HOJE ou "
+              f"commite o data.json antes do deploy{C_END}")
         return 1
     base_txt = _git(repo, 'show', f'{base_rev}:{rel}')
     try:

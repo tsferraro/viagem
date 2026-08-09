@@ -88,13 +88,22 @@ fi
 # por item com fonte, ou se conteúdo sensível (⭐⭐⭐/WT/historia) mudou depois do último
 # factcheck. Cobra timestamp+estrutura (não gameable por substring); a VERDADE do factcheck
 # é trabalho da sessão auditora. Ver skills/critico-roteiro/FACTCHECK-EXEC.md.
+#
+# Falha-FECHADO se o script sumir (refinamento 6b · auditoria de volta 2026-08-09): um gate
+# que "pula" quando o script some não é gate, é sugestão — o mesmo "⚠ pulando" que os outros
+# gates ainda usam foi a causa-raiz da crise (verificação sem testemunha). Override explícito
+# e ruidoso pra quando o script precisa mesmo sumir por um instante: VIAGEM_SKIP_FCGATE=1.
 FCGATE_PY="$SCRIPT_DIR/factcheck-gate.py"
 if [ -f "$FCGATE_PY" ]; then
   echo "→ Gate de factcheck (frescor+formato)..."
   python3 "$FCGATE_PY" "$TARGET_DIR" --quiet \
     || { echo "❌ Gate de factcheck BLOQUEOU · rode o FACTCHECK-EXEC e versione o artefato · ABORTADO"; exit 1; }
+elif [ "$VIAGEM_SKIP_FCGATE" = "1" ]; then
+  echo "⚠️⚠️⚠️  factcheck-gate.py NÃO ENCONTRADO · VIAGEM_SKIP_FCGATE=1 · PULANDO gate de factcheck (deploy SEM verificação de frescor) ⚠️⚠️⚠️"
 else
-  echo "⚠️  factcheck-gate.py não encontrado · pulando gate de factcheck"
+  echo "❌ factcheck-gate.py não encontrado · gate de factcheck falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_FCGATE=1 scripts/deploy.sh ..."
+  exit 1
 fi
 
 # Regenerar landing AUTOMATICAMENTE (lê todas subpastas atuais + monta cards)
