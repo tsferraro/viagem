@@ -145,9 +145,32 @@ fecha **quartas**; Museu de Càbras e Compendio Garibaldino fecham **segundas**.
 
 ---
 
-## Sandbox cloud · rede externa (2026-08-03 · atualiza a nota de geocoding acima)
+## Sandbox cloud · rede externa (2026-08-03 · **re-testado 2026-08-09: SEGUE BLOQUEADA**)
 
-Testado nesta sessão, **tudo** devolve `000`/`403` (falha de CONNECT no proxy):
+> **Re-teste de 2026-08-09** (Lote 7f · o Tobia tinha liberado a política de rede do ambiente e
+> a expectativa era que o factcheck subisse pra nível-página). **Não subiu — nada mudou.**
+> O que foi rodado, verbatim, e o que voltou:
+>
+> | Teste | Resultado |
+> |---|---|
+> | `WebFetch https://www.comune.bosa.or.it/` | `EGRESS_BLOCKED · blocked by the network egress proxy` |
+> | `curl -sI https://www.comune.bosa.or.it/` | `HTTP/1.1 403 Forbidden` |
+> | `curl -sI https://www.sardegnaturismo.it/` | `HTTP/1.1 403 Forbidden` |
+> | `curl -sI https://tsferraro.github.io/viagem/` | `HTTP/1.1 403 Forbidden` ← **nem o próprio Pages** |
+> | `WebSearch` (Bosa · horário de ufficio turistico) | **funciona** · devolveu 10 resultados com títulos e snippets |
+>
+> Diagnóstico do proxy (`$HTTPS_PROXY/__agentproxy/status`): `connect_rejected · gateway
+> answered 403 to CONNECT (policy denial or upstream failure)` pros três hosts. Ou seja, é
+> negação de política no gateway, não erro de TLS nem de DNS — não há nada a consertar do lado
+> de cá. **Tudo abaixo continua valendo integralmente**, inclusive `--check-links` inútil em
+> cloud e a regra de só entrar raiz-de-domínio no `links_map`.
+>
+> Duas consequências que valem repetir: o **factcheck em sessão cloud segue nível-SNIPPET**
+> (não nível-página) — e isso tem que ser declarado no artefato `FACTCHECK-<data>.md`, não
+> presumido; e o passo do `wrap-up.sh` que faz `curl HEAD` nas URLs ao vivo **não roda aqui** —
+> a confirmação de HTTP 200 é do desktop do Tobia.
+
+Testado em 2026-08-03, **tudo** devolve `000`/`403` (falha de CONNECT no proxy):
 Nominatim · Photon/Komoot · geocode.maps.co · Geoapify · open-meteo geocoding · Overpass ·
 openstreetmap.org · **it.wikipedia.org** · e a maioria dos sites oficiais via WebFetch
 (monteprama.it, coopculture.it, museocabras.it, gesecoarzachena.it, calagononecrociere.it).

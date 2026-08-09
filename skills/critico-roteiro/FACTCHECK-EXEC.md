@@ -53,6 +53,14 @@ Formato EXIGIDO pelo gate (`scripts/factcheck-gate.py` — roda no `deploy.sh`):
 ```
 
 Regras do formato:
+- **Declarar o NÍVEL da verificação no cabeçalho do artefato** (regra da skill · o gate não
+  cobra, pra não invalidar os factchecks já versionados): `nível-página` (a fonte foi
+  aberta e lida contra a afirmação) ou `nível-snippet` (só o resultado de busca). Não é
+  detalhe: snippet guarda título e trecho de páginas que já mudaram — em 2026-08-03 três URLs
+  "confirmadas por busca" eram 404. Em **sessão cloud a rede externa está bloqueada** (re-testado
+  em 2026-08-09: `WebFetch` e `curl` devolvem 403 de CONNECT pra qualquer host, inclusive o
+  próprio Pages; só `WebSearch` funciona), então o nível ali é **snippet** e tem que estar
+  escrito — factcheck que não declara o nível deixa quem lê supor o mais forte.
 - **Veredito ∈ {OK, ERRO, RISCO, INCONCLUSIVO}** — um item por linha de tabela.
 - **OK/ERRO/RISCO exigem URL** na coluna Fonte(s). INCONCLUSIVO pode não ter (é o veredito
   honesto de "nenhuma fonte publica"), mas aí registra o telefone/próximo passo.
