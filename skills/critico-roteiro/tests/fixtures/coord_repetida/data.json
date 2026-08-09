@@ -1,0 +1,56 @@
+{
+  "_": "Fixture do maps-audit.py · check de coord idêntica em stops distintos (caso Tophet/MAB, auditoria 2026-08-08). As duas paradas do walking tour têm a MESMA coordenada — maps-audit deve sair com exit 1. index.html gerado por build.py e versionado junto.",
+  "title": "Fixture · Coord Repetida",
+  "auth_emoji": "🧪",
+  "auth_title": "Fixture",
+  "auth_subtitle": "teste",
+  "header_title": "Fixture Coord Repetida",
+  "header_sub": "teste do maps-audit",
+  "password": "teste",
+  "legend_group_text": "teste",
+  "legend_notes_html": "",
+  "maps_region": "Lisboa, Portugal",
+  "days": [
+    {
+      "date": "Sex 5/Set",
+      "tema": "Dia único",
+      "temaCurto": "Dia",
+      "bairro": "Alfama",
+      "grupo": false,
+      "cor": "#dc2626",
+      "gradA": "#7f1d1d",
+      "gradB": "#991b1b",
+      "stops": [
+        {
+          "hora": "09:00", "emoji": "⛪", "periodo": "manha", "tipo": "card", "risco": "green",
+          "nome": "Sé de Lisboa (Largo da Sé)",
+          "cat": "Catedral 1147",
+          "sobre": "Catedral românica fundada em 1147.",
+          "imperdivel": "A subida ao terraço pelas escadas laterais",
+          "dicas": ["Chega 9h pra evitar fila"],
+          "duracao": "45min-1h", "custo": "€5",
+          "acessibilidade": "Adro acessível",
+          "coord": {"lat": 38.7099, "lng": -9.1334},
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Sé de Lisboa",
+          "walkingTours": [
+            {
+              "nome": "Alfama · teste",
+              "descricao": "Sé → Miradouro · ~20min",
+              "stops": [
+                {"n": 1, "nome": "Sé de Lisboa (Largo da Sé)", "mapsQuery": "Sé de Lisboa", "coord": {"lat": 38.7099, "lng": -9.1334}},
+                {"n": 2, "nome": "Miradouro de Santa Luzia (Largo Santa Luzia)", "mapsQuery": "Miradouro de Santa Luzia", "coord": {"lat": 38.7099, "lng": -9.1334}}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "links_map": {},
+  "transit_map": {},
+  "bairros_config": [
+    {"nome": "📍 Outros", "fallback": true}
+  ]
+}

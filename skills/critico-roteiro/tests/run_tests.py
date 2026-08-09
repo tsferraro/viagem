@@ -55,11 +55,15 @@ def main():
     print(f'\n{BOLD}=== Regressão do critico-roteiro/audit.py ==={END}\n')
 
     # --- ROTEIRO · clean (golden) --------------------------------------------
+    # Pin recalibrado 38→39 em 2026-08-09 (Lote 1 da auditoria): o conserto do
+    # coord_4dec (lia -9.2160 como 3 casas via str(float)) removeu um P2 FALSO
+    # da Torre de Belém — a nota subiu porque o instrumento parou de errar,
+    # não porque o check afrouxou.
     print(f'{DIM}clean_roteiro.json (golden · roteiro bem curado){END}')
     d = _json('clean_roteiro.json')
-    check('clean · nota == 38/40 (pin de regressão)', d['score'] == 38,
+    check('clean · nota == 39/40 (pin de regressão)', d['score'] == 39,
           f"obtido {d['score']}")
-    check('clean · mecânico == 18/20', d['mechanical'] == 18, f"obtido {d['mechanical']}")
+    check('clean · mecânico == 19/20', d['mechanical'] == 19, f"obtido {d['mechanical']}")
     check('clean · julgamento == 20/20', d['judgment'] == 20, f"obtido {d['judgment']}")
     check('clean · P0 == 0', d['p0'] == 0)
     check('clean · aprovado (≥32)', d['approved'] is True)
@@ -116,6 +120,38 @@ def main():
     dj = json.loads(dd_out)
     check('diff --json · regressed=True quando mecânico cai', dj['regressed'] is True,
           f"mech {dj['before']['mechanical']}→{dj['after']['mechanical']}")
+
+    # --- FIXTURE DE CONTEÚDO FALSO · bosa_falsa (auditoria 2026-08-08) -------
+    # Este arquivo é 100% INVENTADO de propósito (mirante inexistente, torre e
+    # escadaria fictícias com mapsQuery plausível, restaurante inventado ⭐⭐⭐,
+    # fontes SEO-farm) — e os gates o APROVAM. O teste TRAVA esse fato:
+    #   (a) impede comentário/documentação futura de alegar cobertura que não existe;
+    #   (b) no dia em que alguém implementar um check que pegue conteúdo falso,
+    #       este teste quebra DE PROPÓSITO — atualize-o com festa, é o dia em que
+    #       o gate passou a medir alguma coisa além de forma.
+    print(f'{DIM}bosa_falsa.json (roteiro 100% falso · especificação executável do que '
+          f'os gates NÃO cobrem){END}')
+    d = _json('bosa_falsa.json')
+    check('bosa-falsa · APROVADA pelos gates (nota ≥32 — regex não mede verdade)',
+          d['score'] >= 32, f"obtido {d['score']}")
+    check('bosa-falsa · P0 == 0 (nenhum check pega invenção fluente)',
+          d['p0'] == 0, f"p0={d['p0']}")
+    check('bosa-falsa · approved=True (por isso a nota é FORMA e o FACTCHECK é '
+          'obrigatório)', d['approved'] is True)
+
+    # --- maps-audit · coord idêntica em stops distintos ----------------------
+    # Caso Tophet/MAB: rota por nome nunca olha coords, mas são elas que desenham
+    # os pinos in-app. O fixture coord_repetida/ tem 2 paradas de WT com a mesma
+    # coord — maps-audit deve BLOQUEAR (exit 1).
+    print(f'{DIM}coord_repetida/ (maps-audit · coord idêntica = bloqueia){END}')
+    maps_audit = HERE.parent.parent.parent / 'scripts' / 'maps-audit.py'
+    proc = subprocess.run([sys.executable, str(maps_audit),
+                           str(FIXTURES / 'coord_repetida' / 'index.html')],
+                          capture_output=True, text=True)
+    check('coord_repetida · maps-audit BLOQUEIA (exit 1)', proc.returncode == 1,
+          f"exit={proc.returncode}")
+    check('coord_repetida · achado menciona coord idêntica',
+          'coord idêntica' in proc.stdout)
 
     # --- Rede (opcional · só com --check-links) ------------------------------
     if check_links:
