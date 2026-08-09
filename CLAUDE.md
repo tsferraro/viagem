@@ -465,6 +465,14 @@ Não é regra de card. É regra de **tudo que afirma algo**:
 | `extras` ⭐⭐+ | P1 |
 | **superlativo ou data histórica** em `sobre`/`imperdivel`/`dicas` sem `fontes` | P1 — generaliza os 4 erros de campo: "ponto mais ao sul" (era o segundo) · "operador único" (havia dois) · "séc. XVI" (era XIII) · "mirante" (não existia) |
 
+### Cota editorial de refeição · 2 verificadas > 3 plausíveis (R8 · decisão Tobia 2026-08-09)
+
+**2 opções VERIFICADAS por refeição são suficientes; a 3ª é opcional e só entra verificada.**
+Item só entra se couber no orçamento de checagem da sessão. A "cota de 3" do schema/D9 foi
+apontada como causa dos 15 restaurantes-fantasma (MEMORY) e a auditoria mediu a taxa de base:
+~20-50% de erro em tudo que se escreve além do que se verifica. Densidade tinha gate; verdade
+não — esta cota inverte a pressão. Não mexer em roteiros existentes por causa disto.
+
 ### Dívida de proveniência · `<viagem>/.proveniencia-debt.json`
 
 A regra entrou com dois roteiros **já em uso em campo**. Aplicá-la retroativamente bloquearia o
@@ -495,10 +503,12 @@ nota enquanto o conteúdo seguia falso.
 
 ```json
 "fontes": [
-  {"o": "SardegnaTurismo", "u": "https://...",
+  {"o": "SardegnaTurismo", "u": "https://...", "tier": "oficial", "data": "2026-08",
    "prova": ["22 km²", "outono à primavera"]}
 ]
 ```
+
+(Schema unificado 2026-08-09: `{o, u, tier, data, prova[]}` · tier ∈ `oficial/editorial/campo/diretorio/crowd` · o `audit.py` avisa P3 se faltar tier/data em item novo · régua: `references/source-credibility.md`.)
 
 O `audit.py` (`check_claims_cobertos`) extrai da prosa quatro classes de afirmação —
 **superlativo · data histórica · número com unidade · época/sazonalidade** — e cobra que cada uma
@@ -572,6 +582,7 @@ Partition: >8 stops → 2 partes ~6 cada · numeração reseta por parte.
 
 - **SEMPRE web_search** antes de usar uma coord
 - **NUNCA inventar** baseado em "perto de X"
+- **Item periférico (praia, mirante, parada fora do centro): coord ou é COPIADA de fonte com o 5º decimal, ou entra `coord_unverified: true`. PROIBIDO derivar.** (R7 · auditoria 2026-08-08: as 5 coords derivadas da amostra estavam TODAS erradas, 0,5-7,8km; as copiadas, 100% certas)
 - **4 casas decimais** (~10m precisão)
 - **Mantém endereço entre parens no nome**: `"Caffe Reggio (119 MacDougal)"` — ajuda Google Maps acertar
 - Range: lat ∈ [-90,90] · lng ∈ [-180,180]

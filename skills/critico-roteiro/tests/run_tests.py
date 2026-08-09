@@ -121,6 +121,12 @@ def main():
     check('diff --json · regressed=True quando mecânico cai', dj['regressed'] is True,
           f"mech {dj['before']['mechanical']}→{dj['after']['mechanical']}")
 
+    # --- Schema unificado de fontes · {o,u,tier,data,prova[]} (Lote 3) -------
+    print(f'{DIM}fonte_sem_tier.json (fonte sem tier/data = P3 aviso, nunca bloqueia){END}')
+    d = _json('fonte_sem_tier.json')
+    check('fonte sem tier · gera P3 de schema', has_finding(d, 'P3', 'tier'))
+    check('fonte sem tier · NÃO bloqueia (p0 == 0)', d['p0'] == 0, f"p0={d['p0']}")
+
     # --- FIXTURE DE CONTEÚDO FALSO · bosa_falsa (auditoria 2026-08-08) -------
     # Este arquivo é 100% INVENTADO de propósito (mirante inexistente, torre e
     # escadaria fictícias com mapsQuery plausível, restaurante inventado ⭐⭐⭐,
