@@ -172,6 +172,18 @@ Retorna nota (2 metades) + achados P0-P3 + checklist manual + veredito. Exit: 0=
 
 Régua de fontes (tiers T1-T5 + o que prova um 🟢 imperdível): `references/source-credibility.md`.
 
+### `sync-check.py` — o HTML que vai pro ar veio MESMO do data.json? (gate 3b)
+
+```bash
+python3 scripts/sync-check.py <viagem>            # relatório
+python3 scripts/sync-check.py <viagem> --quiet    # modo deploy
+```
+
+Nasceu do Lote 7a: o edit inline no `const DAYS` dessincronizava o `data.json` **e burlava o
+gate 4d** (o factcheck-gate projeta o data.json; o que só existe no HTML é invisível pra ele).
+Compara a **projeção de dados** dos dois arquivos — consts JSON + escalares — e não os bytes,
+pra que ajuste em `templates/` não vire falso bloqueio. Sem `data.json` na viagem, BLOQUEIA.
+
 ### `maps-audit.py` — confere TODA URL de Google Maps que o app gera
 
 ```bash
@@ -222,6 +234,7 @@ Workflow:
 1. Detecta slug atual em `SLUG.txt`
 2. Se mudou (modo principal): archive `index.html` + subpastas paralelas em `archive/<slug-anterior>/`
 3. Substitui target HTML
+3b. `sync-check.py --quiet` (BLOQUEIA se o `index.html` não veio do `data.json` · mata o edit inline e a burla do gate 4d que ele permitia · roda ANTES dos outros gates pra garantir que eles auditam o arquivo certo · falha-FECHADO se o script sumir · override `VIAGEM_SKIP_GATES=1`)
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
 4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32)
 4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos)
@@ -236,14 +249,36 @@ Workflow:
 
 Quando Tobia pede mudança em viagem existente:
 
-1. Lê `index.html` da viagem ativa
+1. Lê `<viagem>/data.json` (a fonte de verdade · o `index.html` é saída, nunca entrada)
 2. Identifica o que mudar (stop X, walking tour Y, dica Z, dia novo)
-3. **Para mudanças pequenas**: edita inline o `const DAYS = [...]` (formato JSON pretty)
-4. **Para mudanças grandes** (novo dia, novo walking tour, troca atração principal): re-gera via `build.py` a partir de data.json
+3. **TODA mudança de conteúdo — do typo ao dia novo — edita o `data.json`** e re-gera com `python3 scripts/build.py <viagem>/data.json <viagem>/index.html`
+4. ⛔ **NUNCA editar o `const DAYS` (ou qualquer const de dado) inline no `index.html`** · ver o bloco abaixo
 5. Roda `scripts/validate.py index.html` (obrigatório)
 5b. Roda `skills/critico-roteiro/audit.py <viagem>/data.json` (recomendado) · corrige P1s até nota ≥32 e P0=0 (mecânico primeiro · confirma dims ⚖️ no checklist)
 6. `git add · commit · push origin main` (sem branch)
 7. Confirma pro Tobia com link da URL + nota de conteúdo
+
+### ⛔ Edit inline no HTML está MORTO (decisão Tobia · 2026-08-09 · Lote 7a)
+
+O atalho "pra mudança pequena, edita o `const DAYS` direto no HTML" existiu até hoje e custava
+segundos a menos que o `build.py`. Ele saiu por dois motivos, o segundo é grave:
+
+1. **Drift** · `data.json` deixa de ser a fonte de verdade e o próximo rebuild — que sempre
+   chega — apaga em silêncio o que só existia no HTML (drift já registrado no HANDOFF-PENDENTE).
+2. **Burla o gate 4d** · o `factcheck-gate.py` projeta o conteúdo sensível (⭐⭐⭐ · paradas de
+   WT · `historia[]`) **a partir do `data.json`**. Um edit inline muda o que a família LÊ sem
+   mudar a projeção: o gate de frescor não vê nada e o deploy passa sem factcheck novo.
+
+Cadeado: `scripts/sync-check.py` roda como gate no `deploy.sh` (passo 3b) e **BLOQUEIA** se o
+HTML não bate com o `data.json`. Ele compara a *projeção de dados* dos dois (as consts `DAYS ·
+LINKS_MAP · TRANSIT_MAP · BAIRROS_CONFIG · HISTORIA · EXTRAS` + escalares como `AUTH_PASSWORD ·
+MAPS_REGION · ROTEIRO_SLUG`), não os bytes — assim mexer em `templates/` não gera falso bloqueio.
+Fora do escopo dele (dito pra ninguém alegar cobertura que não existe): campos de cabeçalho/auth,
+que viram markup, e a verdade do conteúdo (isso é FACTCHECK).
+
+```bash
+python3 scripts/sync-check.py <viagem>          # confere · exit 1 se dessincronizado
+```
 
 ## Pipeline · viagem nova (mode create)
 

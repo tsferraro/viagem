@@ -24,6 +24,7 @@ HERE      = Path(__file__).resolve().parent
 AUDIT     = HERE.parent / 'audit.py'
 FIXTURES  = HERE / 'fixtures'
 FCGATE    = HERE.parent.parent.parent / 'scripts' / 'factcheck-gate.py'
+SYNCCHK   = HERE.parent.parent.parent / 'scripts' / 'sync-check.py'
 
 GREEN = '\033[92m'; RED = '\033[91m'; DIM = '\033[2m'; BOLD = '\033[1m'; END = '\033[0m'
 
@@ -73,6 +74,39 @@ def _fc_gate_viagem_nova(fc_date_str):
             f"|---|---|---|---|---|\n"
             f"| card:Teste | Existe | OK | https://example.com | {fc_date_str} |\n")
         proc = subprocess.run([sys.executable, str(FCGATE), str(vdir), '--quiet'],
+                              capture_output=True, text=True)
+        return proc.returncode, proc.stdout + proc.stderr
+
+
+def _sync_check(mutar_html):
+    """Builda um data.json mínimo, aplica `mutar_html` no HTML gerado e roda sync-check.py.
+    Devolve (exit_code, stdout+stderr). Com mutar_html=None, testa o caso em sincronia."""
+    data = {
+        "title": "Teste", "password": "x", "maps_region": "Roma, Italia",
+        "days": [{
+            "date": "Sex 5/Set", "tema": "Teste", "temaCurto": "Teste", "bairro": "Centro",
+            "cor": "#dc2626", "gradA": "#7f1d1d", "gradB": "#991b1b",
+            "stops": [{
+                "hora": "09:00", "emoji": "⛪", "periodo": "manha", "tipo": "card",
+                "risco": "green", "valeAPena": 3, "poiCat": "atracao",
+                "nome": "Pantheon (Piazza della Rotonda)", "cat": "Templo 126 d.C.",
+                "sobre": "Cúpula de concreto não-armado maior do mundo.",
+                "coord": {"lat": 41.8986, "lng": 12.4769},
+            }],
+        }],
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        vdir = Path(tmp) / 'viagem-x'
+        vdir.mkdir()
+        (vdir / 'data.json').write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
+        (vdir / 'SLUG.txt').write_text('viagem-x\n', encoding='utf-8')
+        build = HERE.parent.parent.parent / 'scripts' / 'build.py'
+        subprocess.run([sys.executable, str(build), str(vdir / 'data.json'),
+                        str(vdir / 'index.html')], capture_output=True, check=True)
+        if mutar_html:
+            html = (vdir / 'index.html').read_text(encoding='utf-8')
+            (vdir / 'index.html').write_text(mutar_html(html), encoding='utf-8')
+        proc = subprocess.run([sys.executable, str(SYNCCHK), str(vdir), '--quiet'],
                               capture_output=True, text=True)
         return proc.returncode, proc.stdout + proc.stderr
 
@@ -197,6 +231,21 @@ def main():
     check('viagem nova · factcheck de HOJE → gate PASSA (exit 0)', code == 0, f"exit={code}")
     code, out = _fc_gate_viagem_nova(ontem)
     check('viagem nova · factcheck de ONTEM → gate BLOQUEIA (exit 1)', code == 1, f"exit={code}")
+
+    # --- sync-check.py · edit inline no HTML (Lote 7a) -----------------------
+    # O edit inline não só dessincronizava o data.json: BURLAVA o gate 4d, que projeta
+    # o conteúdo sensível a partir do data.json. Os 3 casos que importam:
+    print(f'{DIM}sync-check.py · index.html tem que vir do data.json{END}')
+    code, out = _sync_check(None)
+    check('sync · HTML recém-buildado → PASSA (exit 0)', code == 0, f"exit={code}")
+
+    code, out = _sync_check(lambda h: h.replace('Cúpula de concreto', 'Cupola de concreto'))
+    check('sync · 1 char editado inline no DAYS → BLOQUEIA (exit 1)', code == 1, f"exit={code}")
+    check('sync · aponta o campo divergente (DAYS…sobre)', 'sobre' in out, out[:120])
+
+    code, out = _sync_check(lambda h: h.replace('const MAPS_REGION = "Roma, Italia"',
+                                                'const MAPS_REGION = "Bosa, Italia"'))
+    check('sync · escalar editado inline (MAPS_REGION) → BLOQUEIA', code == 1, f"exit={code}")
 
     # --- Rede (opcional · só com --check-links) ------------------------------
     if check_links:

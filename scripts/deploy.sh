@@ -54,6 +54,32 @@ echo "→ Subpasta: $SUBDIR · slug: $NEW_SLUG"
 cp "$SRC_HTML" "$TARGET_HTML"
 echo "$NEW_SLUG" > "$TARGET_SLUG"
 
+# Gate de SINCRONIA (Lote 7a · 2026-08-09): o index.html que vai pro ar veio MESMO do
+# data.json? O edit inline no `const DAYS` (que o CLAUDE.md recomendava até hoje) fazia duas
+# coisas ruins: dessincronizava o data.json (o próximo rebuild apaga em silêncio) e BURLAVA o
+# gate 4d — o factcheck-gate projeta o conteúdo sensível a partir do data.json, então um edit
+# só-no-HTML muda o que a família lê sem mexer na projeção. Roda ANTES dos outros gates
+# porque é o que garante que os outros estão auditando o arquivo certo.
+# Falha-FECHADO se o script sumir · override: VIAGEM_SKIP_GATES=1.
+SYNC_PY="$SCRIPT_DIR/sync-check.py"
+if [ -f "$SYNC_PY" ]; then
+  echo "→ Gate de sincronia (data.json ↔ index.html)..."
+  if ! python3 "$SYNC_PY" "$TARGET_DIR/data.json" "$TARGET_HTML" --quiet; then
+    if [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+      echo "⚠️⚠️⚠️  VIAGEM_SKIP_GATES=1 · seguindo com HTML DESSINCRONIZADO do data.json ⚠️⚠️⚠️"
+    else
+      echo "❌ Gate de sincronia BLOQUEOU · rode build.py · ABORTADO"
+      exit 1
+    fi
+  fi
+elif [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+  echo "⚠️⚠️⚠️  sync-check.py NÃO ENCONTRADO · VIAGEM_SKIP_GATES=1 · PULANDO gate de sincronia ⚠️⚠️⚠️"
+else
+  echo "❌ sync-check.py não encontrado · gate de sincronia falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_GATES=1 scripts/deploy.sh ..."
+  exit 1
+fi
+
 # Validar (estrutural · bloqueia sempre que falhar)
 echo "→ Validando (estrutura)..."
 python3 "$VALIDATE_PY" "$TARGET_HTML" || { echo "❌ validate.py falhou · ABORTADO"; exit 1; }

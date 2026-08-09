@@ -425,3 +425,31 @@ precisou de conserto), e o "Molentargius a 500km" são ~105km — e esse 500 já
 pro CLAUDE.md como doutrina. Anotado no dossiê (sem apagar: é registro histórico), corrigido no
 CLAUDE.md. É o argumento definitivo da REGRA ZERO: **toda frase não-verificada deriva pro erro,
 inclusive as do documento que confessa o modo de falha**.
+
+## 2026-08-09 · Edit inline no HTML morre · `data.json` é a única entrada (Lote 7a)
+
+**O que muda**: o `CLAUDE.md` (pipeline de ajuste, passo 3) mandava, "pra mudança pequena",
+editar inline o `const DAYS` dentro do `index.html`. Passa a valer o contrário: **TODA mudança
+de conteúdo — do typo ao dia novo — edita o `data.json` e roda `build.py`**. O `index.html` é
+saída, nunca entrada. `scripts/sync-check.py` vira gate 3b do `deploy.sh` e bloqueia o que não
+bater.
+
+**Motivo 1 (conhecido)**: drift. O `data.json` deixava de ser a fonte de verdade e o próximo
+rebuild apagava em silêncio o que só existia no HTML — drift já registrado no HANDOFF-PENDENTE,
+e o `marais/index.html` estava dessincronizado (ROTEIRO_SLUG velho) quando o gate entrou.
+
+**Motivo 2 (o grave · achado da 2ª rodada da auditoria)**: o edit inline **burlava o gate 4d**.
+O `factcheck-gate.py` projeta o conteúdo sensível (⭐⭐⭐ · paradas de WT · `historia[]`) a partir
+do **`data.json`**. Editar só o HTML muda o que a família lê sem mexer na projeção: o gate de
+frescor não enxerga mudança nenhuma e o deploy passa sem factcheck novo. O atalho que economizava
+segundos de `build.py` era uma porta dos fundos no gate mais caro de construir.
+
+**Alternativa rejeitada**: manter o atalho e ensinar o gate 4d a projetar também o HTML. Custa
+um segundo parser do artefato de saída pra preservar um atalho que economiza segundos — e
+deixaria o drift de pé.
+
+**Método do gate (documentado no próprio script)**: compara a **projeção de dados** dos dois
+arquivos (consts `DAYS · LINKS_MAP · TRANSIT_MAP · BAIRROS_CONFIG · HISTORIA · EXTRAS` +
+escalares como `AUTH_PASSWORD · MAPS_REGION · ROTEIRO_SLUG`), não os bytes — assim mexer em
+`templates/` não vira falso bloqueio. Fica **fora** do escopo: cabeçalho/auth (viram markup) e
+a verdade do conteúdo (é FACTCHECK).
