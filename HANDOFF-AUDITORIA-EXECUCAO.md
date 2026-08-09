@@ -151,6 +151,41 @@ zero `validada` · landing NÃO lista "fontes" como viagem · DIARIO.md dos pais
 
 ---
 
+## LOTE 6 · Refinamentos da auditoria de volta (2026-08-09 · `AUDITORIA-VOLTA-2026-08-09.md`)
+
+Os Lotes 1-5 foram APROVADOS. A auditoria de volta achou 2 ressalvas operacionais — ambas
+fail-closed, nenhuma urgente, mas a nº 1 VAI travar o primeiro deploy da próxima viagem nova.
+
+**6a · Gate 4d bloqueia viagem NOVA legítima.** Em `scripts/factcheck-gate.py`, o frescor
+compara a projeção atual com a do último commit do `data.json` — que numa viagem nova nunca
+existiu → "anterior ao primeiro commit" → exit 1 mesmo com factcheck honesto de hoje.
+Conserto: quando `git rev-list` não devolve NENHUM commit pro `data.json` E `fc_date ==
+date.today()`, tratar como o caso mesma-data (passa com ⚠ "viagem nova · primeiro deploy ·
+confira que o factcheck cobre tudo"); se o factcheck NÃO é de hoje, continuar bloqueando, mas
+com mensagem que diz o caminho ("viagem nova sem commit do data.json: rode o factcheck HOJE ou
+commite o data.json antes do deploy"). Documentar o comportamento no bloco "O QUE BLOQUEIA" do
+docstring e em `skills/critico-roteiro/FACTCHECK-EXEC.md`.
+Reprodução (do ataque da auditora, num clone): viagem nova não-commitada + factcheck válido de
+hoje → HOJE exit 1 (bug) · após `git add+commit` do data.json → exit 0.
+
+**6b · `deploy.sh` falha-ABERTO se `factcheck-gate.py` sumir.** Hoje: "⚠ pulando gate".
+Pra gate de verdade, ausência do script BLOQUEIA (exit 1), com override explícito e ruidoso:
+`VIAGEM_SKIP_FCGATE=1` no env pula com aviso gritante. Aplicar o mesmo padrão aos outros
+scripts de gate chamados pelo deploy (se algum tiver o mesmo `if [ -f ]`... senão, só o 4d).
+
+**Aceite do Lote 6** (a auditora vai rodar):
+```bash
+# 6a — num clone: mkdir viagem-x + data.json válido NÃO commitado + FACTCHECK-<hoje>.md válido
+python3 scripts/factcheck-gate.py viagem-x            # exit 0 com ⚠ de primeiro-deploy
+# mesmo cenário com FACTCHECK de ontem                # exit 1 com mensagem orientando
+python3 skills/critico-roteiro/tests/run_tests.py     # suite verde (adicionar fixture do caso)
+# 6b — renomear factcheck-gate.py temporariamente e rodar deploy.sh em dry-run/clone: bloqueia
+# com VIAGEM_SKIP_FCGATE=1: passa com aviso
+```
+Regra de sempre: 1 commit por item, push na main, nada fora do escopo, não se auto-aprovar.
+
+---
+
 ## Protocolo de auditoria de volta (o que a AUDITORA vai fazer — transparência total)
 
 1. Rodar todos os comandos de aceite acima, verbatim.
