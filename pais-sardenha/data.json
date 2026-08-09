@@ -56,7 +56,7 @@
           },
           "valeAPena": 1,
           "poiCat": "atracao",
-          "mapsQuery": "Olbia"
+          "noMaps": true
         },
         {
           "hora": "18:30",
@@ -77,8 +77,8 @@
           "custo": "€15-25 de aperitivo pro casal (ago/2026)",
           "acessibilidade": "Corso Umberto é calçadão plano e fechado ao trânsito à noite · bancos a cada quarteirão",
           "coord": {
-            "lat": 40.9238,
-            "lng": 9.5026
+            "lat": 40.9236,
+            "lng": 9.5015
           },
           "valeAPena": 2,
           "poiCat": "atracao",
@@ -1172,7 +1172,7 @@
           "risco": "yellow",
           "nome": "Museu Civico Cabras · Gigantes de Mont'e Prama",
           "cat": "Estatuária de tamanho real mais antiga do Mediterrâneo · séc. IX-VIII a.C.",
-          "sobre": "Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — bateram o arado numa pedra num campo ao pé da colina de Mont'e Prama. A pedra tinha <em>rosto</em>. Nas escavações que se seguiram saíram <strong>5.178 fragmentos</strong> de arenito, que levaram décadas de restauro em Li Punti (Sassari) até virarem as <strong>26 estátuas</strong> que vocês vão ver: guerreiros, arqueiros e pugilistas de dois metros e meio, com os olhos feitos de <em>dois círculos concêntricos</em> gravados na pedra. A datação — <strong>séc. IX-VIII a.C.</strong> — é a parte que desestabiliza: são anteriores aos <em>kouroi</em> gregos arcaicos. Antes disso, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real fora do Egito. A civilização que as fez é a mesma que ergueu os nuraghi e é a mesma que vocês encontraram ontem em Tharros, quando os fenícios chegaram.",
+          "sobre": "Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — bateram o arado numa pedra num campo ao pé da colina de Mont'e Prama. A pedra tinha <em>rosto</em>. Nas escavações que se seguiram saíram <strong>5.178 fragmentos</strong> de arenito, que levaram décadas de restauro em Li Punti (Sassari) até virarem as <strong>25 estátuas</strong> que vocês vão ver — mais duas (um pugilista de Cavalupo e um arqueiro) somadas em jun/2026; as contagens publicadas variam com os novos achados: guerreiros, arqueiros e pugilistas de dois metros e meio, com os olhos feitos de <em>dois círculos concêntricos</em> gravados na pedra. A datação — <strong>séc. IX-VIII a.C.</strong> — é a parte que desestabiliza: são anteriores aos <em>kouroi</em> gregos arcaicos. Antes disso, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real fora do Egito. A civilização que as fez é a mesma que ergueu os nuraghi e é a mesma que vocês encontraram ontem em Tharros, quando os fenícios chegaram.",
           "imperdivel": "Os olhos: dois círculos concêntricos gravados, sem pupila. Não é estilização — é a assinatura do escultor nurágico, repetida em todas as 26 peças",
           "dicas": [
             "Terça a domingo, <strong>9h-20h no verão</strong> (última entrada 19h) · <strong>fecha às segundas</strong> (hoje é terça, está aberto)",
@@ -1209,6 +1209,17 @@
               "prova": [
                 "€5",
                 "€18"
+              ]
+            },
+            {
+              "o": "ANSA Sardegna 24/06/2026",
+              "u": "https://www.ansa.it/sardegna/notizie/2026/06/24/il-museo-di-cabras-si-arricchisce-di-altri-due-giganti-di-monte-prama_d1953d26-6e40-40c3-b200-e8fc2368725d.html",
+              "tier": "editorial",
+              "data": "2026-08-09",
+              "prova": [
+                "25 estátuas",
+                "jun/2026",
+                "pugilista de Cavalupo e um arqueiro"
               ]
             }
           ]
@@ -1568,7 +1579,7 @@
           "sobre": "Sant'Antioco é a 4ª maior ilha do Mediterrâneo, ligada à Sardenha por um istmo. O <strong>Pontimannu</strong>, a ponte romana do <strong>séc. I d.C.</strong> que fazia essa ligação, chamada localmente <em>Pontimannu</em> — única no gênero porque não vencia rio nem desnível: ligava a terra firme sarda à ilha atravessando <strong>uma série de ilhotas que formavam o istmo</strong> —, foi <em>aposentada em 1954</em>, quando abriram a estrada de variante por onde vocês vão passar. Hoje ela está ali ao lado, como monumento. Cidade fenícia chamada Sulci foi fundada no séc. VIII a.C. — uma das mais antigas civilizações de toda a Itália. Conjunto arqueológico no coração da cidade combina Tophet (necrópole infantil fenícia), Museu Barreca (artefatos fenício-púnicos), Basílica com catacumbas únicas (séc V cristãs sobre tumbas púnicas) e ruinas da tonnara (fábrica de atum séc XIX). Walking tour denso e único — Sardenha pré-nurágica e fenícia num só lugar.",
           "imperdivel": "Catacumbas cristãs construídas DENTRO de tumbas púnicas · Basilica Sant'Antioco Martire",
           "dicas": [
-            "○ <strong>Tophet</strong> — o campo de urnas fica na borda norte da cidade, encostado na rocha que os sardos chamam de <em>Sa Guardia de is Pingiadas</em>, 'a guarda das panelas' · são mais de 3.000 urnas de recém-nascidos e natimortos, consagrados a Tanit",
+            "○ <strong>Tophet</strong> — o campo de urnas fica na borda norte da cidade, encostado na rocha que os sardos chamam de <em>Sa Guardia de is Pingiadas</em>, 'a guarda das panelas' · são mais de 3.000 urnas de recém-nascidos e natimortos, consagrados a Tanit e Baal Hammon",
             "Ⓐ <strong>Museu MAB 'Ferruccio Barreca'</strong> — colado ao Tophet · €7 no cumulativo com o Tophet, €10 no bilhete único de todos os sítios (ago/2026) · aberto 9h-19h de março a outubro",
             "Ⓑ <strong>Basílica de Sant'Antioco Martire</strong> — 700m ao sul · as catacumbas cristãs do séc. V foram escavadas <em>dentro</em> de câmaras funerárias púnicas já existentes · os cristãos reaproveitaram o cemitério de quem os antecedeu",
             "Ⓒ <strong>Necrópole púnica</strong> — a poucos metros da basílica · até os anos 1970 famílias pobres da cidade <em>moravam</em> nestas tumbas escavadas na rocha; chamavam-se <em>is gruttas</em>",
@@ -1669,6 +1680,15 @@
               "u": "https://www.sardegnanatura.com/esplora-la-sardegna/spiagge-sardegna/1233-spiaggia-cala-saboni-cala-sapone-sant-antioco.html",
               "prova": [
                 "11km"
+              ]
+            },
+            {
+              "o": "Parco Storico Archeologico Sant'Antioco · Tofet",
+              "u": "https://parcostoricoarcheologicosantantioco.it/tofet/",
+              "tier": "oficial",
+              "data": "2026-08-09",
+              "prova": [
+                "Tanit e Baal Hammon"
               ]
             }
           ]
@@ -2799,8 +2819,8 @@
                   "n": 3,
                   "nome": "Cala Grande (praia escondida)",
                   "coord": {
-                    "lat": 41.2346,
-                    "lng": 9.1425
+                    "lat": 41.23841,
+                    "lng": 9.14131
                   },
                   "mapsQuery": "Cala Grande, Capo Testa"
                 },
@@ -2974,8 +2994,8 @@
                   "n": 2,
                   "nome": "Piazza Garibaldi (centro)",
                   "coord": {
-                    "lat": 41.2169,
-                    "lng": 9.4026
+                    "lat": 41.21286,
+                    "lng": 9.40661
                   },
                   "mapsQuery": "Piazza Garibaldi, La Maddalena"
                 },
@@ -4146,7 +4166,7 @@
   "historia": [
     {
       "titulo": "🗿 Os nurágicos e os Gigantes de Mont'e Prama",
-      "prosa_html": "<p>Antes dos fenícios, antes dos romanos, antes de qualquer coisa que se possa chamar de história escrita, a Sardenha teve uma civilização inteira que não deixou uma única palavra. Chamamos essa gente de <strong>nurágica</strong> pelo que ela construiu: os <em>nuraghi</em>, torres tronco-cônicas de pedra seca erguidas entre <strong>1800 e 1100 a.C.</strong> Restam cerca de <strong>7.000</strong> delas espalhadas pela ilha — uma a cada três quilômetros quadrados. Ninguém sabe ao certo se eram fortalezas, templos, celeiros ou casas de chefe. Sabemos que eram muitas e que quem as fez sabia empilhar pedra melhor que qualquer contemporâneo seu no Mediterrâneo ocidental.</p> <p>Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — preparavam a terra pra semear em lotes arrendados ao pé de uma colina chamada Mont'e Prama. O arado bateu numa pedra. A pedra tinha rosto.</p> <p>O que saiu dali nos anos seguintes foram <strong>5.178 fragmentos</strong> de arenito: cabeças, torsos, braços, pernas e escudos. Levou décadas de restauro no centro de Li Punti, em Sassari, pra que aqueles cacos voltassem a ser <strong>26 estátuas</strong> de dois metros a dois metros e meio — guerreiros com escudo sobre a cabeça, arqueiros e pugilistas. O arqueólogo <strong>Giovanni Lilliu</strong>, que dominou a arqueologia sarda do século XX, chamou-as de <em>kolossoi</em>.</p> <p>A parte que desarruma tudo é a data. As estátuas são do <strong>século IX-VIII a.C.</strong> — e há quem defenda o século XI. Isso as coloca <em>antes</em> dos <em>kouroi</em> gregos arcaicos. Fora do Egito, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real àquela altura. Uma civilização sem escrita, numa ilha que os manuais tratam como periferia, estava fazendo a estatuária monumental mais antiga da região — e a fez primeiro.</p> <p>Repare nos <strong>olhos</strong> quando estiver diante deles no museu de Càbras: dois círculos concêntricos gravados na pedra, sem pupila. Não é falta de habilidade — o resto da anatomia é minucioso, com os dedos, as tranças e os detalhes da armadura todos ali. É escolha. Os mesmos olhos aparecem nos bronzetti nurágicos, aquelas estatuetas de bronze de vinte centímetros que estão em todo museu arqueológico da ilha. Era assim que essa gente representava o olhar.</p> <p>As estátuas estavam <strong>quebradas</strong> quando foram encontradas — quebradas de propósito, tudo indica, e enterradas junto a uma necrópole de tumbas individuais. Quem as destruiu, e por quê, é a pergunta aberta da arqueologia sarda. Uma hipótese aponta os cartagineses, que chegaram alguns séculos depois e teriam apagado os símbolos de quem estava ali antes. Outra aponta os próprios sardos, num acerto de contas interno que não deixou registro. A colina de Mont'e Prama continua sendo escavada — em 2022 saíram dois torsos novos, e estima-se que boa parte do sítio ainda está debaixo da terra.</p> <p>Vocês verão a mesma civilização em <strong>Coddu Vecchiu</strong>, perto de Arzachena, no penúltimo dia: uma <em>tomba di giganti</em>, sepultura coletiva com a grande estela central de três metros e a exedra em semicírculo à frente, onde os vivos se reuniam. É de 1800-1400 a.C., mais antiga que as estátuas. Entre uma coisa e outra, mil anos da mesma gente.</p>",
+      "prosa_html": "<p>Antes dos fenícios, antes dos romanos, antes de qualquer coisa que se possa chamar de história escrita, a Sardenha teve uma civilização inteira que não deixou uma única palavra. Chamamos essa gente de <strong>nurágica</strong> pelo que ela construiu: os <em>nuraghi</em>, torres tronco-cônicas de pedra seca erguidas entre <strong>1800 e 1100 a.C.</strong> Restam cerca de <strong>7.000</strong> delas espalhadas pela ilha — uma a cada três quilômetros quadrados. Ninguém sabe ao certo se eram fortalezas, templos, celeiros ou casas de chefe. Sabemos que eram muitas e que quem as fez sabia empilhar pedra melhor que qualquer contemporâneo seu no Mediterrâneo ocidental.</p> <p>Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — preparavam a terra pra semear em lotes arrendados ao pé de uma colina chamada Mont'e Prama. O arado bateu numa pedra. A pedra tinha rosto.</p> <p>O que saiu dali nos anos seguintes foram <strong>5.178 fragmentos</strong> de arenito: cabeças, torsos, braços, pernas e escudos. Levou décadas de restauro no centro de Li Punti, em Sassari, pra que aqueles cacos voltassem a ser <strong>25 estátuas</strong> de dois metros a dois metros e meio — guerreiros com escudo sobre a cabeça, arqueiros e pugilistas. Em junho de 2026 o museu ganhou mais duas, um pugilista de Cavalupo e um arqueiro — e as contagens publicadas variam conforme novos achados continuam saindo do restauro. O arqueólogo <strong>Giovanni Lilliu</strong>, que dominou a arqueologia sarda do século XX, chamou-as de <em>kolossoi</em>.</p> <p>A parte que desarruma tudo é a data. As estátuas são do <strong>século IX-VIII a.C.</strong> — e há quem defenda o século XI. Isso as coloca <em>antes</em> dos <em>kouroi</em> gregos arcaicos. Fora do Egito, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real àquela altura. Uma civilização sem escrita, numa ilha que os manuais tratam como periferia, estava fazendo a estatuária monumental mais antiga da região — e a fez primeiro.</p> <p>Repare nos <strong>olhos</strong> quando estiver diante deles no museu de Càbras: dois círculos concêntricos gravados na pedra, sem pupila. Não é falta de habilidade — o resto da anatomia é minucioso, com os dedos, as tranças e os detalhes da armadura todos ali. É escolha. Os mesmos olhos aparecem nos bronzetti nurágicos, aquelas estatuetas de bronze de vinte centímetros que estão em todo museu arqueológico da ilha. Era assim que essa gente representava o olhar.</p> <p>As estátuas estavam <strong>quebradas</strong> quando foram encontradas — quebradas de propósito, tudo indica, e enterradas junto a uma necrópole de tumbas individuais. Quem as destruiu, e por quê, é a pergunta aberta da arqueologia sarda. Uma hipótese aponta os cartagineses, que chegaram alguns séculos depois e teriam apagado os símbolos de quem estava ali antes. Outra aponta os próprios sardos, num acerto de contas interno que não deixou registro. A colina de Mont'e Prama continua sendo escavada — em 2022 saíram dois torsos novos, e estima-se que boa parte do sítio ainda está debaixo da terra.</p> <p>Vocês verão a mesma civilização em <strong>Coddu Vecchiu</strong>, perto de Arzachena, no penúltimo dia: uma <em>tomba di giganti</em>, sepultura coletiva com a grande estela central de três metros e a exedra em semicírculo à frente, onde os vivos se reuniam. É de 1800-1400 a.C., mais antiga que as estátuas. Entre uma coisa e outra, mil anos da mesma gente.</p>",
       "fontes": [
         {
           "o": "Museo Archeologico Nazionale di Cagliari · Ministero della Cultura",
@@ -4155,12 +4175,31 @@
         {
           "o": "SardegnaTurismo · site oficial da Regione Sardegna",
           "u": "https://www.sardegnaturismo.it/it/monte-prama-patria-di-giganti"
+        },
+        {
+          "o": "ANSA Sardegna 02/04/2026",
+          "u": "https://www.ansa.it/sardegna/notizie/2026/04/02/i-giganti-di-monte-prama-per-la-prima-volta-esposti-tutti-insieme-a-cabras_aae4825c-c386-4751-a62d-91265dbaf040.html",
+          "tier": "editorial",
+          "data": "2026-08-09",
+          "prova": [
+            "25 estátuas"
+          ]
+        },
+        {
+          "o": "ANSA Sardegna 24/06/2026",
+          "u": "https://www.ansa.it/sardegna/notizie/2026/06/24/il-museo-di-cabras-si-arricchisce-di-altri-due-giganti-di-monte-prama_d1953d26-6e40-40c3-b200-e8fc2368725d.html",
+          "tier": "editorial",
+          "data": "2026-08-09",
+          "prova": [
+            "junho de 2026",
+            "pugilista de Cavalupo e um arqueiro"
+          ]
         }
       ]
     },
     {
       "titulo": "⚓ Tharros, Sulci e os fenícios — a Senhora dos Dois Mares",
-      "prosa_html": "<p>Por volta do <strong>final do século VIII a.C.</strong>, navios fenícios vindos de Tiro e de Cartago começam a parar no golfo de Oristano. Não vinham conquistar: vinham comerciar, e escolhiam sempre o mesmo tipo de lugar — uma ponta de terra com mar dos dois lados, fácil de defender e fácil de sair de barco em qualquer vento. <strong>Tharros</strong>, na ponta do Capo San Marco, é o exemplo perfeito. Os sardos a chamaram depois de <em>a Senhora dos Dois Mares</em>.</p> <p>A escolha não foi num vazio: já havia um <strong>povoado nurágico</strong> ali, com o nuraghe Su Muru Mannu, cujos restos vocês vão pisar logo na entrada do sítio. Os fenícios se instalaram ao lado, não por cima. No <strong>século VI a.C.</strong>, com Cartago no controle, a cidade ganha muralhas e entra na melhor fase: comércio com a África, com a península ibérica e com Massália, a atual Marselha.</p> <p>Depois vieram os <strong>romanos</strong>, e é a Roma que se vê melhor hoje: o <em>decumanus</em> calçado com pedra de basalto, os três complexos termais, as colunas coríntias de pé com o mar atrás — que são, convém dizer, uma <em>reconstrução</em> do século XX a partir dos tambores encontrados no chão, e não uma ruína intacta. Depois, os bizantinos, que fizeram de Tharros sede episcopal. E depois, o fim.</p> <p>O fim foi lento e teve um responsável concreto. Entre os séculos IX e X, as incursões sarracenas na costa ocidental tornaram insustentável viver numa ponta de terra exposta e indefensável. Em <strong>1070</strong>, o arcebispo <strong>Torcotorio</strong> transferiu a sé episcopal de Tharros para <em>Aristanis</em> — a atual Oristano —, protegida pelos pântanos de Santa Giusta e pelas curvas do rio Tirso. A população acompanhou. Ao longo do século XI, o porto esvaziou. Uma cidade que viveu <strong>mil e oitocentos anos</strong> foi abandonada sem guerra, por cálculo.</p> <p>E aí vem a parte que explica por que Tharros parece incompleta. Existe um dito sardo que resume o que aconteceu depois: <em>quem quiser construir Oristano, vá buscar pedra em Tharros</em>. Por séculos, a cidade abandonada foi pedreira da cidade nova. As casas de Oristano têm dentro delas as paredes de Tharros. É por isso que o que sobrou é sobretudo o que estava debaixo da terra ou era pesado demais pra carregar.</p> <p>O outro monumento fenício desta viagem é <strong>Sulci</strong> — a atual Sant'Antioco —, fundada no mesmo século VIII a.C. e, diferente de Tharros, <strong>nunca abandonada</strong>: são 2.800 anos de ocupação ininterrupta, o que faz dela uma das cidades habitadas mais antigas da Itália. Lá está o <strong>tophet</strong>, o recinto a céu aberto com mais de três mil urnas de recém-nascidos e natimortos, consagrados à deusa <strong>Tanit</strong>. A leitura antiga — sacrifício ritual de crianças — vem de fontes gregas e romanas, isto é, de inimigos de Cartago; a arqueologia contemporânea tende a ler os tophets como cemitérios infantis de mortes naturais, que a mortalidade da época produzia às centenas. É um lugar silencioso e não é sinistro: é um cemitério de bebês, e a única coisa que ele prova com certeza é que aquela gente enterrava os seus com cuidado.</p>",
+      "prosa_html": "<p>Por volta do <strong>final do século VIII a.C.</strong>, navios fenícios vindos de Tiro e de Cartago começam a parar no golfo de Oristano. Não vinham conquistar: vinham comerciar, e escolhiam sempre o mesmo tipo de lugar — uma ponta de terra com mar dos dois lados, fácil de defender e fácil de sair de barco em qualquer vento. <strong>Tharros</strong>, na ponta do Capo San Marco, é o exemplo perfeito. Os sardos a chamaram depois de <em>a Senhora dos Dois Mares</em>.</p> <p>A escolha não foi num vazio: já havia um <strong>povoado nurágico</strong> ali, com o nuraghe Su Muru Mannu, cujos restos vocês vão pisar logo na entrada do sítio. Os fenícios se instalaram ao lado, não por cima. No <strong>século VI a.C.</strong>, com Cartago no controle, a cidade ganha muralhas e entra na melhor fase: comércio com a África, com a península ibérica e com Massália, a atual Marselha.</p> <p>Depois vieram os <strong>romanos</strong>, e é a Roma que se vê melhor hoje: o <em>decumanus</em> calçado com pedra de basalto, os três complexos termais, as colunas coríntias de pé com o mar atrás — que são, convém dizer, uma <em>reconstrução</em> do século XX a partir dos tambores encontrados no chão, e não uma ruína intacta. Depois, os bizantinos, que fizeram de Tharros sede episcopal. E depois, o fim.</p> <p>O fim foi lento e teve um responsável concreto. Entre os séculos IX e X, as incursões sarracenas na costa ocidental tornaram insustentável viver numa ponta de terra exposta e indefensável. Em <strong>1070</strong>, o arcebispo <strong>Torcotorio</strong> transferiu a sé episcopal de Tharros para <em>Aristanis</em> — a atual Oristano —, protegida pelos pântanos de Santa Giusta e pelas curvas do rio Tirso. A população acompanhou. Ao longo do século XI, o porto esvaziou. Uma cidade que viveu <strong>mil e oitocentos anos</strong> foi abandonada sem guerra, por cálculo.</p> <p>E aí vem a parte que explica por que Tharros parece incompleta. Existe um dito sardo que resume o que aconteceu depois: <em>quem quiser construir Oristano, vá buscar pedra em Tharros</em>. Por séculos, a cidade abandonada foi pedreira da cidade nova. As casas de Oristano têm dentro delas as paredes de Tharros. É por isso que o que sobrou é sobretudo o que estava debaixo da terra ou era pesado demais pra carregar.</p> <p>O outro monumento fenício desta viagem é <strong>Sulci</strong> — a atual Sant'Antioco —, fundada no mesmo século VIII a.C. e habitada até hoje — mas <strong>não sem interrupção</strong>: as incursões sarracenas e a malária deixaram a ilha praticamente despovoada por longos períodos, até o repovoamento definitivo no século XVIII com famílias vindas de Iglesias. São 2.800 anos de história urbana, o que faz dela uma das cidades mais antigas da Itália. Lá está o <strong>tophet</strong>, o recinto a céu aberto com mais de três mil urnas de recém-nascidos e natimortos, consagrados a <strong>Tanit e Baal Hammon</strong>. A leitura antiga — sacrifício ritual de crianças — vem de fontes gregas e romanas, isto é, de inimigos de Cartago; a arqueologia contemporânea tende a ler os tophets como cemitérios infantis de mortes naturais, que a mortalidade da época produzia às centenas. É um lugar silencioso e não é sinistro: é um cemitério de bebês, e a única coisa que ele prova com certeza é que aquela gente enterrava os seus com cuidado.</p>",
       "fontes": [
         {
           "o": "Ministero della Cultura · Area archeologica di Tharros",
@@ -4169,12 +4208,31 @@
         {
           "o": "Fondazione Mont'e Prama · site oficial de Tharros",
           "u": "https://www.tharros.sardegna.it/"
+        },
+        {
+          "o": "Pro Loco Calasetta · storia dell'isola",
+          "u": "https://prolococalasetta.it/lisola-di-santantioco/",
+          "tier": "campo",
+          "data": "2026-08-09",
+          "prova": [
+            "despovoada por longos períodos",
+            "século XVIII"
+          ]
+        },
+        {
+          "o": "Parco Storico Archeologico Sant'Antioco · Tofet",
+          "u": "https://parcostoricoarcheologicosantantioco.it/tofet/",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "Tanit e Baal Hammon"
+          ]
         }
       ]
     },
     {
       "titulo": "🐟 Carloforte — a ilha genovesa que atravessou o Mediterrâneo duas vezes",
-      "prosa_html": "<p>Carloforte é o lugar mais improvável desta viagem, e a razão é linguística antes de ser qualquer outra coisa: numa ilha ao sul da Sardenha, as pessoas falam <strong>genovês do século XVIII</strong>. Não é sotaque, não é influência. É outra língua, chamada <strong>tabarchino</strong>, e é a primeira língua da maioria dos moradores até hoje.</p> <p>A história começa por volta de <strong>1540</strong>, quando um grupo de pescadores de coral de <strong>Pegli</strong>, perto de Gênova, se instala na ilhota de <strong>Tabarka</strong>, na costa da Tunísia. A concessão era da família <strong>Lomellini</strong>, genoveses, e o negócio era o coral vermelho — matéria-prima de luxo do Mediterrâneo. Ficaram lá <strong>duzentos anos</strong>. Duas séculos numa rocha de quatrocentos metros de comprimento em frente ao norte da África, casando entre si, mantendo a língua de Pegli e a fé católica no meio de um mundo que não era nenhum dos dois.</p> <p>No século XVIII a situação apodrece por três motivos simultâneos: os bancos de coral se esgotam, a ilha é pequena demais pra uma população que cresceu, e o assédio dos corsários e dos beis de Túnis e Argel vira insuportável. Em <strong>1738</strong>, parte da comunidade pede asilo à Casa de Savoia. <strong>Carlo Emanuele III</strong> lhes concede a ilha de San Pietro, desabitada, ao largo do Sulcis. Em <strong>17 de abril de 1738</strong>, cerca de <strong>quinhentos colonos</strong> desembarcam na ilha de San Pietro. Fundam <em>Carloforte</em> — literalmente <strong>'Carlos, o Forte'</strong>, em homenagem a quem os acolheu. A parte da comunidade que ficou em Tabarka foi, poucos anos depois, escravizada pelo bei de Túnis.</p> <p>Andando pelos <em>caruggi</em> — as ruelas estreitas e altas do centro — vocês estarão andando por uma cópia de Pegli feita de memória. As casas pastel, o traçado, a maneira de encaixar a vila entre o porto e a colina: tudo é ligure, transplantado por gente que não via Gênova havia duzentos anos.</p> <p>O que os sustentou aqui foi o <strong>atum</strong>. A <em>tonnara</em> de Carloforte foi uma das últimas armações tradicionais em funcionamento no Mediterrâneo: um labirinto de redes fixas ancorado no caminho da migração do atum-rabilho, que culminava na <em>mattanza</em>, a matança em câmara final, com os pescadores puxando as redes ao ritmo de cantos que também eram em tabarchino. A pesca industrial e as quotas internacionais acabaram com o sistema; o que sobrou é a memória e a cozinha.</p> <p>E a cozinha é o motivo real de vir aqui. O <strong>atum</strong> aparece em todos os cortes: a <em>ventresca</em> (a barriga, a parte gorda e a melhor), a <em>bottarga</em> de atum — diferente da de tainha que vocês vão comer em Càbras —, o <em>musciame</em>, o lombo curado. E há o <strong>cascà</strong>: um cuscuz de sêmola cozido no vapor sobre caldo de legumes, herança do tempo de Tabarka, que é literalmente um prato norte-africano falando genovês. Não existe em nenhum outro lugar da Sardenha, nem da Itália.</p>",
+      "prosa_html": "<p>Carloforte é o lugar mais improvável desta viagem, e a razão é linguística antes de ser qualquer outra coisa: numa ilha ao sul da Sardenha, as pessoas falam <strong>genovês do século XVIII</strong>. Não é sotaque, não é influência. É outra língua, chamada <strong>tabarchino</strong>, e é a primeira língua da maioria dos moradores até hoje.</p> <p>A história começa por volta de <strong>1540</strong>, quando um grupo de pescadores de coral de <strong>Pegli</strong>, perto de Gênova, se instala na ilhota de <strong>Tabarka</strong>, na costa da Tunísia. A concessão era da família <strong>Lomellini</strong>, genoveses, e o negócio era o coral vermelho — matéria-prima de luxo do Mediterrâneo. Ficaram lá <strong>duzentos anos</strong>. Duas séculos numa rocha de quatrocentos metros de comprimento em frente ao norte da África, casando entre si, mantendo a língua de Pegli e a fé católica no meio de um mundo que não era nenhum dos dois.</p> <p>No século XVIII a situação apodrece por três motivos simultâneos: os bancos de coral se esgotam, a ilha é pequena demais pra uma população que cresceu, e o assédio dos corsários e dos beis de Túnis e Argel vira insuportável. Em <strong>1738</strong>, parte da comunidade pede asilo à Casa de Savoia. <strong>Carlo Emanuele III</strong> lhes concede a ilha de San Pietro, desabitada, ao largo do Sulcis. Em <strong>17 de abril de 1738</strong>, cerca de <strong>quinhentos colonos</strong> desembarcam na ilha de San Pietro. Fundam <em>Carloforte</em> — o <strong>'Forte de Carlo'</strong>, em homenagem ao rei que os acolheu. A parte da comunidade que ficou em Tabarka foi, poucos anos depois, escravizada pelo bei de Túnis.</p> <p>Andando pelos <em>caruggi</em> — as ruelas estreitas e altas do centro — vocês estarão andando por uma cópia de Pegli feita de memória. As casas pastel, o traçado, a maneira de encaixar a vila entre o porto e a colina: tudo é ligure, transplantado por gente que não via Gênova havia duzentos anos.</p> <p>O que os sustentou aqui foi o <strong>atum</strong>. A <em>tonnara</em> de Carloforte foi uma das últimas armações tradicionais em funcionamento no Mediterrâneo: um labirinto de redes fixas ancorado no caminho da migração do atum-rabilho, que culminava na <em>mattanza</em>, a matança em câmara final, com os pescadores puxando as redes ao ritmo de cantos que também eram em tabarchino. A pesca industrial e as quotas internacionais acabaram com o sistema; o que sobrou é a memória e a cozinha.</p> <p>E a cozinha é o motivo real de vir aqui. O <strong>atum</strong> aparece em todos os cortes: a <em>ventresca</em> (a barriga, a parte gorda e a melhor), a <em>bottarga</em> de atum — diferente da de tainha que vocês vão comer em Càbras —, o <em>musciame</em>, o lombo curado. E há o <strong>cascà</strong>: um cuscuz de sêmola cozido no vapor sobre caldo de legumes, herança do tempo de Tabarka, que é literalmente um prato norte-africano falando genovês. Não existe em nenhum outro lugar da Sardenha, nem da Itália.</p>",
       "fontes": [
         {
           "o": "Carloforte Turismo · site oficial do município",
@@ -4183,12 +4241,21 @@
         {
           "o": "SardegnaTurismo · Regione Sardegna",
           "u": "https://www.sardegnaturismo.it/"
+        },
+        {
+          "o": "Treccani · Carloforte",
+          "u": "https://www.treccani.it/enciclopedia/carloforte_(Enciclopedia-Italiana)/",
+          "tier": "editorial",
+          "data": "2026-08-09",
+          "prova": [
+            "Forte de Carlo"
+          ]
         }
       ]
     },
     {
       "titulo": "⛏️ O Sulcis, Porto Flavia e a filha do engenheiro",
-      "prosa_html": "<p>O sudoeste da Sardenha é <strong>terra de mina</strong> desde antes de Roma. Chumbo, zinco, prata e carvão saíram destas montanhas por dois mil e quinhentos anos, e no fim do século XIX a região virou o motor industrial de uma ilha que, fora dali, era pastoril. Iglesias — o nome vem do catalão, 'igrejas' — cresceu como cidade mineira. Vilas inteiras foram construídas, habitadas por três gerações e depois esvaziadas quando o minério acabou ou deixou de compensar. Hoje o conjunto é <strong>Parco Geominerario</strong> reconhecido pela UNESCO, o que é uma forma elegante de dizer que a paisagem é feita de ruínas industriais espetaculares.</p> <p>O problema técnico que gerou Porto Flavia era prosaico e caríssimo. O minério de <strong>Masua</strong> precisava chegar a Carloforte, do outro lado do canal, pra ser embarcado em navios de longo curso. O transporte era feito por <em>bilancelle</em>, barcos pequenos de vela latina, carregados <strong>a pá e a cesto</strong> por homens que desciam o penhasco. Um navio levava <em>dias</em> pra encher. Cada dia parado era dinheiro.</p> <p>Em <strong>1924</strong>, o engenheiro <strong>Cesare Vecelli</strong>, a serviço da <em>Société de la Vieille Montagne</em> — belga, dona das minas de Masua, Montecani e Acquaresi —, propôs uma solução que ninguém havia tentado: em vez de descer o minério até o mar, <strong>furar a montanha até o mar</strong>. Duas galerias sobrepostas atravessando o penhasco. Na de cima, um trenzinho despeja o minério em nove silos verticais escavados na rocha, com capacidade pra dez mil toneladas. Na de baixo, um braço mecânico retrátil sai da parede do penhasco e despeja a carga direto no porão do navio ancorado embaixo.</p> <p>A capacidade saltou pra <strong>500 toneladas por hora</strong>. O que levava dias passou a levar horas. E a obra foi feita em dois anos, num penhasco, com a tecnologia de 1924.</p> <p>O nome tem uma explicação simples e boa: no mesmo ano em que a obra ficou pronta, nasceu <strong>Flavia</strong>, a filha primogênita de Vecelli. Ele pediu autorização pra batizar a obra com o nome dela. É por isso que a engenharia mais audaciosa da mineração mediterrânea tem nome de menina.</p> <p>Quando estiverem na varanda final, esculpida na parede a cinquenta metros de altura, olhem pra frente: o rochedo solitário que emerge do mar é o <strong>Pan di Zucchero</strong>, 133 metros de calcário, o maior <em>faraglione</em> do Mediterrâneo. Estava ali antes das minas e continuará depois. Foi o que os mineiros viram todos os dias de trabalho da vida deles.</p>",
+      "prosa_html": "<p>O sudoeste da Sardenha é <strong>terra de mina</strong> desde antes de Roma. Chumbo, zinco, prata e carvão saíram destas montanhas por dois mil e quinhentos anos, e no fim do século XIX a região virou o motor industrial de uma ilha que, fora dali, era pastoril. Iglesias — o nome vem do catalão, 'igrejas' — cresceu como cidade mineira. Vilas inteiras foram construídas, habitadas por três gerações e depois esvaziadas quando o minério acabou ou deixou de compensar. Hoje o conjunto é <strong>Parco Geominerario</strong> reconhecido pela UNESCO, o que é uma forma elegante de dizer que a paisagem é feita de ruínas industriais espetaculares.</p> <p>O problema técnico que gerou Porto Flavia era prosaico e caríssimo. O minério de <strong>Masua</strong> precisava chegar a Carloforte, do outro lado do canal, pra ser embarcado em navios de longo curso. O transporte era feito por <em>bilancelle</em>, barcos pequenos de vela latina, carregados <strong>a pá e a cesto</strong> por homens que desciam o penhasco. Um navio levava <em>dias</em> pra encher. Cada dia parado era dinheiro.</p> <p>Em <strong>1924</strong>, o engenheiro <strong>Cesare Vecelli</strong>, a serviço da <em>Société de la Vieille Montagne</em> — belga, dona das minas de Masua, Montecani e Acquaresi —, propôs uma solução que ninguém havia tentado: em vez de descer o minério até o mar, <strong>furar a montanha até o mar</strong>. Duas galerias sobrepostas atravessando o penhasco. Na de cima, um trenzinho despeja o minério em nove silos verticais escavados na rocha, com capacidade pra dez mil toneladas. Na de baixo, um braço mecânico retrátil sai da parede do penhasco e despeja a carga direto no porão do navio ancorado embaixo.</p> <p>A capacidade saltou pra <strong>cerca de 400 toneladas por hora</strong> — o número da fonte oficial do parque; há publicações falando em 500. O que levava dias passou a levar horas. E a obra foi feita em dois anos, num penhasco, com a tecnologia de 1924.</p> <p>O nome tem uma explicação simples e boa: no mesmo ano em que a obra ficou pronta, nasceu <strong>Flavia</strong>, a filha primogênita de Vecelli. Ele pediu autorização pra batizar a obra com o nome dela. É por isso que a engenharia mais audaciosa da mineração mediterrânea tem nome de menina.</p> <p>Quando estiverem na varanda final, esculpida na parede a cinquenta metros de altura, olhem pra frente: o rochedo solitário que emerge do mar é o <strong>Pan di Zucchero</strong>, 133 metros de calcário, o maior <em>faraglione</em> do Mediterrâneo. Estava ali antes das minas e continuará depois. Foi o que os mineiros viram todos os dias de trabalho da vida deles.</p>",
       "fontes": [
         {
           "o": "Iglesias Turismo · site oficial",
@@ -4197,12 +4264,21 @@
         {
           "o": "SardegnaTurismo · Masua e Porto Flavia",
           "u": "https://www.sardegnaturismo.it/en/explore/masua-and-porto-flavia"
+        },
+        {
+          "o": "Parco Geominerario (oficial) · Porto Flavia",
+          "u": "https://parcogeominerario.sardegna.it/en/porto-flavia-2",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "cerca de 400 toneladas por hora"
+          ]
         }
       ]
     },
     {
       "titulo": "🔴 Garibaldi em Caprera — os últimos vinte e seis anos",
-      "prosa_html": "<p>Em <strong>1855</strong>, Giuseppe Garibaldi comprou metade de Caprera. Não era ainda o herói nacional que seria: era um marinheiro nascido em Nice, veterano de guerras na América do Sul, exilado, viúvo de Anita e recém-saído de um período trabalhando como fabricante de velas em Nova York. Comprou a ilha com dinheiro de uma herança do irmão. Em <strong>1856</strong> instalou-se de vez e começou a levantar a <strong>Casa Bianca</strong>, de traço sul-americano — casa térrea, teto plano, pátio interno —, que é a casa que vocês vão visitar.</p> <p>Caprera era, na época, praticamente pedra nua. Garibaldi levou terra, plantou vinha, oliveira e árvores frutíferas, criou cabras e gado, cavou poços e construiu muros de arrimo. A imagem que a Itália guardou dele é a do general de camisa vermelha; a que Caprera guarda é a de um homem de sessenta anos consertando cerca. Ele mesmo cultivava a distinção — chamava-se <em>agricultor</em> nas cartas.</p> <p>Daqui ele saiu pra a <strong>Expedição dos Mil</strong> em 1860, que entregou o sul da Itália a Vítor Emanuel II e praticamente fechou a unificação italiana. E pra cá voltou, recusando títulos, terras e pensão. É a parte da biografia que os italianos mais gostam de contar: o homem que deu um reino a um rei e voltou pra sua ilha plantar batata.</p> <p>Voltou também ferido. Em <strong>1862</strong>, no Aspromonte, tropas do próprio exército italiano atiraram na sua coluna pra impedir a marcha sobre Roma, e uma bala alojou-se no tornozelo direito. A artrite que se seguiu foi progressiva e cruel. Nos últimos anos ele mal andava, e circulava pela casa numa cadeira de rodas de vime que continua no lugar.</p> <p>Garibaldi morreu em <strong>2 de junho de 1882</strong>, aos setenta e quatro anos. Nos dias finais, pediu que a cama fosse puxada pra junto da janela, pra ver o mar. A cama está exatamente ali. O relógio da parede marca <strong>18h20</strong> e o calendário, a data — quem parou o relógio foi o filho, <strong>Menotti</strong>, e a família mandou que nunca mais fosse dado corda. Na tarde daquele 2 de junho, Garibaldi viu <em>duas toutinegras</em> pousadas no peitoril. Pensou nas duas filhas que tinha perdido e pediu que não as espantassem. A cama está protegida por uma redoma de vidro doada ainda em 1882 pela Sociedade dos Veteranos de Livorno. Ele queria ser cremado numa pira de lenha de acácia e mirto no próprio terreno; o Estado italiano decidiu de outra forma, e o corpo está no túmulo de granito bruto do jardim, ao lado dos filhos.</p> <p>O <strong>Compendio Garibaldino</strong> é hoje o museu mais visitado da Sardenha. Vale menos pelas relíquias que pela sensação estranha de andar por uma casa que ninguém redecorou desde 1882 — as botas, o poncho da América do Sul, o telescópio na janela, a mesa de trabalho. E a ilha em volta é hoje reserva natural, com um pinhal que ele mesmo plantou.</p>",
+      "prosa_html": "<p>Em <strong>1855</strong>, Giuseppe Garibaldi comprou metade de Caprera. Não era ainda o herói nacional que seria: era um marinheiro nascido em Nice, veterano de guerras na América do Sul, exilado, viúvo de Anita e recém-saído de um período trabalhando como fabricante de velas em Nova York. Comprou a ilha com dinheiro de uma herança do irmão. Em <strong>1856</strong> instalou-se de vez e começou a levantar a <strong>Casa Bianca</strong>, de traço sul-americano — casa térrea, teto plano, pátio interno —, que é a casa que vocês vão visitar.</p> <p>Caprera era, na época, praticamente pedra nua. Garibaldi levou terra, plantou vinha, oliveira e árvores frutíferas, criou cabras e gado, cavou poços e construiu muros de arrimo. A imagem que a Itália guardou dele é a do general de camisa vermelha; a que Caprera guarda é a de um homem de sessenta anos consertando cerca. Ele mesmo cultivava a distinção — chamava-se <em>agricultor</em> nas cartas.</p> <p>Daqui ele saiu pra a <strong>Expedição dos Mil</strong> em 1860, que entregou o sul da Itália a Vítor Emanuel II e praticamente fechou a unificação italiana. E pra cá voltou, recusando títulos, terras e pensão. É a parte da biografia que os italianos mais gostam de contar: o homem que deu um reino a um rei e voltou pra sua ilha plantar batata.</p> <p>Voltou também ferido. Em <strong>1862</strong>, no Aspromonte, tropas do próprio exército italiano atiraram na sua coluna pra impedir a marcha sobre Roma, e uma bala alojou-se no tornozelo direito. A artrite que se seguiu foi progressiva e cruel. Nos últimos anos ele mal andava, e circulava pela casa numa cadeira de rodas de vime que continua no lugar.</p> <p>Garibaldi morreu em <strong>2 de junho de 1882</strong>, aos setenta e quatro anos. Nos dias finais, pediu que a cama fosse puxada pra junto da janela, pra ver o mar. A cama está exatamente ali. O relógio da parede marca <strong>18h20</strong> e o calendário, a data — segundo o próprio museu, quem parou o relógio foi o filho, <strong>Menotti</strong>, e a família mandou que nunca mais fosse dado corda. Na tarde daquele 2 de junho, Garibaldi viu <em>duas toutinegras</em> pousadas no peitoril. Pensou nas duas filhas que tinha perdido e pediu que não as espantassem. A cama está protegida por uma redoma de vidro doada ainda em 1882 pela Sociedade dos Veteranos de Livorno. Ele queria ser cremado numa pira de lenha de acácia e mirto no próprio terreno; o Estado italiano decidiu de outra forma, e o corpo está no túmulo de granito bruto do jardim, ao lado dos filhos.</p> <p>O <strong>Compendio Garibaldino</strong> é hoje um dos museus mais visitados da Sardenha — a direção dos museus estatais o anuncia como 'o mais visitado', mas sem estatística recente publicada. Vale menos pelas relíquias que pela sensação estranha de andar por uma casa que ninguém redecorou desde 1882 — as botas, o poncho da América do Sul, o telescópio na janela, a mesa de trabalho. E a ilha em volta é hoje reserva natural, com um pinhal que ele mesmo plantou.</p>",
       "fontes": [
         {
           "o": "Compendio Garibaldino di Caprera · Ministero della Cultura",
@@ -4211,6 +4287,25 @@
         {
           "o": "SardegnaTurismo · Regione Sardegna",
           "u": "https://www.sardegnaturismo.it/"
+        },
+        {
+          "o": "Compendio Garibaldino (site oficial) · stanza della morte",
+          "u": "http://www.compendiogaribaldino.it/index.php?idrec=44&module=contents",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "Menotti",
+            "18h20"
+          ]
+        },
+        {
+          "o": "Direzione Musei Nazionali Sardegna · Compendio",
+          "u": "https://musei.sardegna.beniculturali.it/musei/compendio-garibaldino-di-caprera-2/",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "um dos museus mais visitados"
+          ]
         }
       ]
     }

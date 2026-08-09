@@ -1,0 +1,21 @@
+# FACTCHECK · pais-sardenha · 2026-08-09
+
+**Escopo**: itens alterados no Lote 4 da auditoria (historia[0-4] · card do Museu de Cabras ·
+card/tophet de Sant'Antioco · 3 coords duplicadas dos WTs/dia). Não é re-check da viagem
+inteira — o re-check operacional pré-viagem é outro instrumento (FACTCHECK.md, modo re-check).
+**Executor**: 2 sub-agentes céticos · contexto limpo (sem o texto do construtor) · sessão
+executora do HANDOFF-AUDITORIA-EXECUCAO, 2026-08-09. Limitação declarada: WebFetch bloqueado no
+sandbox — evidência em nível de resultado de busca com URL específica, ≥2 fontes pra ERRO.
+
+| Item | Afirmação verificada | Veredito | Fonte(s) | Data |
+|---|---|---|---|---|
+| historia:Carloforte | Carloforte = "Forte de Carlo" (forte de Carlo Emanuele III); "Carlos, o Forte" só em conteúdo turístico de baixo tier | ERRO → corrigido (texto agora diz "Forte de Carlo") | https://www.treccani.it/enciclopedia/carloforte_(Enciclopedia-Italiana)/ · https://www.italythisway.com/places/articles/carloforte-history.php | 2026-08-09 |
+| historia:Garibaldi | "O museu mais visitado da Sardenha": a Direzione Musei o anuncia assim, mas sem estatística recente; ranking MiC só cobre museus estatais | RISCO → texto rebaixado pra "um dos mais visitados" com a ressalva explícita | https://musei.sardegna.beniculturali.it/musei/compendio-garibaldino-di-caprera-2/ · https://www.olbia.it/il-compendio-garibaldino-e-il-museo-piu-visitato-in-sardegna/ | 2026-08-09 |
+| historia:Garibaldi | "Quem parou o relógio foi Menotti" TEM fonte (site oficial do Compendio + it.wikipedia; risco de circularidade, mas nenhuma fonte contradiz) — a instrução do handoff ("remover, sem fonte") foi REFUTADA pelo cético; mantido com atribuição "segundo o próprio museu" | OK | http://www.compendiogaribaldino.it/index.php?idrec=44&module=contents · https://it.wikipedia.org/wiki/Compendio_garibaldino | 2026-08-09 |
+| historia:Tharros-Sulci | Sulci NÃO teve 2.800 anos ininterruptos: despovoamento (sarracenos + malária) no período aragonês-espanhol, repovoamento no séc. XVIII | ERRO → corrigido (texto relativizado) | https://prolococalasetta.it/lisola-di-santantioco/ · https://storia.dh.unica.it/risorse/s/colonizzazioninterne/item/5590 | 2026-08-09 |
+| historia:Nurágicos + card:Museu Cabras | Contagem 2026: 25 estátuas reunidas (abr/2026) + 2 (um pugilista de Cavalupo e um arqueiro, jun/2026); "26" não é contagem publicada; 28/32/38 misturam modelos de nuraghe | ERRO → corrigido (25 + 2 nos dois lugares) | https://www.ansa.it/sardegna/notizie/2026/04/02/i-giganti-di-monte-prama-per-la-prima-volta-esposti-tutti-insieme-a-cabras_aae4825c-c386-4751-a62d-91265dbaf040.html · https://www.ansa.it/sardegna/notizie/2026/06/24/il-museo-di-cabras-si-arricchisce-di-altri-due-giganti-di-monte-prama_d1953d26-6e40-40c3-b200-e8fc2368725d.html | 2026-08-09 |
+| historia:Sulcis-Porto Flavia | Capacidade ~400 t/h é o número da fonte oficial do parque (500 circula em imprensa/blog) | ERRO → corrigido (~400 com a divergência anotada) | https://parcogeominerario.sardegna.it/en/porto-flavia-2 | 2026-08-09 |
+| historia:Tharros-Sulci + card:Sant'Antioco | Tophet consagrado a Tanit E Baal Hammon (só "Tanit" é incompleto) | ERRO → corrigido (os dois nomes nos dois lugares) | https://parcostoricoarcheologicosantantioco.it/tofet/ · https://idese.cultura.gov.it/place/tofet-di-sulky/ | 2026-08-09 |
+| wt:Capo Testa:Cala Grande | Valle della Luna e Cala Grande são o MESMO lugar (o vale desemboca na enseada); pins agora distintos: vale (41.2346, 9.1425) e praia (41.23841, 9.14131, copiada) — a dupla idêntica era o sintoma | ERRO → corrigido (coord da praia copiada de fonte) | https://www.maredisardegna.net/spiagge.php?id=191 · https://www.sardegnaturismo.it/en/explore/cala-grande-valle-della-luna | 2026-08-09 |
+| wt:La Maddalena:Piazza Garibaldi | Coord real da praça: 41.21286, 9.40661 (antes idêntica ao porto) | ERRO → corrigido | https://www.italia-italy.org/en/sardegna-turismo-E425-la_maddalena | 2026-08-09 |
+| card:Passeggiata Corso Umberto | Coord do corso: 40.9236, 9.5015 (antes idêntica ao check-in do hotel; check-in virou noMaps por ser logística) | ERRO → corrigido | https://www.italiamappe.it/stradario/olbia/corso-umberto-i/ | 2026-08-09 |

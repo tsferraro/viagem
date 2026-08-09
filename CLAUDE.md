@@ -492,7 +492,7 @@ Congelado em 2026-08-04: `corsica` 50 itens · `pais-sardenha` 67. **Só encolhe
 O Tobia pegou o furo seguinte no mesmo dia: *"parece que a época de flamingos é outono"*. Estava
 certo — e o card tinha **dois** erros: vendia agosto como temporada (o pico é outono/inverno) e
 dizia *"maior população europeia de flamingos rosa"* sobre o Stagno di Càbras (a colônia é
-**Molentargius, em Cagliari**, a 500km — e nem ela é a maior da Europa: é uma das três do
+**Molentargius, em Cagliari**, a ~100km — e nem ela é a maior da Europa: é uma das três do
 Mediterrâneo ocidental).
 
 **Esse card tinha `fontes` preenchido e passava no gate.** Porque `fontes` no nível do card só
