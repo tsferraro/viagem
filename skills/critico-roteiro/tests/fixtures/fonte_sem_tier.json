@@ -1,0 +1,30 @@
+{
+  "_": "Fixture do schema unificado de fontes (Lote 3 · 2026-08-09): card com `fontes` SEM tier/data deve gerar P3 (aviso, nunca bloqueia). O mesmo card com tier+data válidos não gera.",
+  "days": [
+    {
+      "date": "Sex 5/Set",
+      "tema": "Dia único",
+      "temaCurto": "Dia",
+      "stops": [
+        {
+          "hora": "09:00", "emoji": "⛪", "periodo": "manha", "tipo": "card", "risco": "green",
+          "nome": "Sé de Lisboa (Largo da Sé)",
+          "cat": "Catedral 1147",
+          "sobre": "Catedral românica fundada em 1147, logo após a reconquista cristã. As torres gêmeas foram pensadas como fortaleza — repare nas ameias no topo.",
+          "imperdivel": "A subida ao terraço pelas escadas laterais — vista do casario que o distraído perde",
+          "dicas": ["Chega 9h pra evitar a fila do claustro", "Claustro €5 (jun/2026), a nave é grátis"],
+          "duracao": "45min-1h", "custo": "€5 (jun/2026)",
+          "acessibilidade": "Adro acessível de carrinho · interior tem degraus",
+          "coord": {"lat": 38.7099, "lng": -9.1334},
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "fontes": [
+            {"o": "Patriarcado de Lisboa", "u": "https://www.patriarcado-lisboa.pt/", "prova": ["1147"]}
+          ]
+        }
+      ]
+    }
+  ],
+  "links_map": {},
+  "transit_map": {}
+}

@@ -1014,6 +1014,50 @@ def check_claims_cobertos(data: Dict, F: List[Finding], debt: Optional[set] = No
     return pendentes
 
 
+# ---------------------------------------------------------------------------
+# SCHEMA DE `fontes` · unificado em 2026-08-09 (Lote 3 da auditoria · R9 lite)
+# ---------------------------------------------------------------------------
+# Havia 3 formatos divergentes documentados (source-credibility.md · data-schema.md ·
+# o formato real {o,u,prova}). Unificado: {o, u, tier, data, prova[]} com
+# tier ∈ {oficial, editorial, campo, diretorio, crowd}. tier+data existem porque a
+# auditoria mostrou que fonte SEO-farm satisfazia tem_fonte() — sem tier, o gate não
+# tem como nem AVISAR que a fonte é lixo. AVISA (P3), nunca bloqueia: dados antigos
+# seguem válidos; a régua vale pra item novo/alterado.
+
+FONTE_TIERS = {'oficial', 'editorial', 'campo', 'diretorio', 'crowd'}
+
+def check_fontes_schema(data: Dict, F: List[Finding]) -> None:
+    sem: List[str] = []
+
+    def olha(nome, obj):
+        for f in (obj.get('fontes') or []):
+            if not isinstance(f, dict):
+                continue
+            if f.get('tier') not in FONTE_TIERS or not f.get('data'):
+                sem.append(nome or '(sem nome)')
+                return
+
+    for c in get_cards(data):
+        olha(c.get('nome', ''), c)
+    for day in data.get('days', []) or []:
+        for st in day.get('stops', []) or []:
+            for o in st.get('opcoes', []) or []:
+                olha(o.get('nome', ''), o)
+    for h in data.get('historia', []) or []:
+        olha(h.get('titulo', ''), h)
+    for e in data.get('extras', []) or []:
+        olha(e.get('nome', ''), e)
+
+    if sem:
+        F.append(Finding(3, 5,
+            f'{len(sem)} item(ns) com `fontes` sem tier/data no schema unificado '
+            f'{{o, u, tier, data, prova[]}} · tier ∈ oficial/editorial/campo/diretorio/crowd '
+            f'— ex: {" · ".join(sem[:3])}',
+            station='🔧',
+            hint='"fontes": [{"o": "<órgão>", "u": "https://...", "tier": "oficial", '
+                 '"data": "2026-08"}] — régua: references/source-credibility.md'))
+
+
 def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None) -> List[str]:
     debt = debt or set()
     # TODO item sem proveniência HOJE — em dívida ou não. É isto que o --baseline grava,
@@ -1374,6 +1418,7 @@ def audit_roteiro(data: Dict, check_links: bool = False,
     # de tudo — sem ela, nota alta só mede se o texto SOA bem (ver comentário do check).
     pendentes = check_proveniencia(data, findings, debt)
     pendentes += check_claims_cobertos(data, findings, debt)
+    check_fontes_schema(data, findings)
     assign_stations(findings)
     return dim_scores, findings, pendentes
 

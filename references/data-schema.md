@@ -62,11 +62,16 @@ Cada stop pertence a um de 3 tipos: `card`, `opcoes`, `transit`.
   coord:          Object,     // {lat: Number, lng: Number} · 4 casas decimais
   reserva:        String,     // (opcional) "reservado" | "pendente"
   walkingTours:   Array,      // (opcional) ver seção 4 abaixo
-  fontes:         Array,      // (opcional · 2026-07-12) proveniência: [{url: String, tier: String}]
-                              // tier: "official" | "editorial" | "local" | "crowd"
-                              // Obrigatório só em cards-ÂNCORA e afirmações de preço/horário.
-                              // Régua: references/source-credibility.md · usado pelo FACTCHECK
-                              // (afirmação com T1 recente registrada não é re-verificada)
+  fontes:         Array,      // (schema unificado 2026-08-09 · Lote 3 da auditoria)
+                              // [{o: String,      // quem é a fonte (órgão/guia/blog)
+                              //   u: String,      // URL
+                              //   tier: String,   // "oficial"|"editorial"|"campo"|"diretorio"|"crowd"
+                              //   data: String,   // quando consultada ("2026-08" ou "2026-08-09")
+                              //   prova: Array}]  // afirmações que ESTA fonte sustenta (strings)
+                              // Obrigatório em cards-ÂNCORA e afirmações de preço/horário;
+                              // `prova` cobrado em ⭐⭐/⭐⭐⭐ (check_claims_cobertos).
+                              // audit.py AVISA (P3) fonte sem tier/data em item novo.
+                              // Régua + mapeamento de tiers: references/source-credibility.md
   poiCat:         String,     // (opcional · 2026-07-12 · mapa unificado) categoria do POI:
                               // "atracao" | "restaurante" | "cafe" | "padaria" | "loja" |
                               // "bar" | "parque" | "mercado" | "food-hall"
