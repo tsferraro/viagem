@@ -54,6 +54,28 @@ echo "→ Subpasta: $SUBDIR · slug: $NEW_SLUG"
 cp "$SRC_HTML" "$TARGET_HTML"
 echo "$NEW_SLUG" > "$TARGET_SLUG"
 
+# Gate de SCOUT (soft · Lote 7c · 2026-08-09): viagem NOVA que nasce sem levantamento macro.
+# Córsega e Sardenha nasceram assim — pesquisa dia-a-dia, sem mapa do destino antes — e o
+# resultado está na auditoria de 2026-08-08. Não bloqueia por default porque mini-roteiro e
+# coletânea de cidade (marais) são casos legítimos sem scout. VIAGEM_STRICT=1 bloqueia.
+# "Viagem nova" = subdir sem NENHUM commit no histórico (o cp acima ainda não foi commitado).
+if [ -z "$(git log --oneline -1 -- "$SUBDIR" 2>/dev/null)" ]; then
+  if ! ls entregas/"$NEW_SLUG"*.md >/dev/null 2>&1; then
+    echo ""
+    echo "⚠️  VIAGEM NOVA SEM LEVANTAMENTO SCOUT"
+    echo "    Não existe entregas/${NEW_SLUG}*.md · esta viagem está indo pro ar sem o degrau 0"
+    echo "    (skills/destination-scout: mapa do destino, vereditos e proveniência ANTES do"
+    echo "    dia-a-dia). Córsega e Sardenha nasceram assim — o resultado está na auditoria de"
+    echo "    2026-08-08. Legítimo pra mini-roteiro/coletânea; suspeito pra viagem de verdade."
+    echo "    Pra transformar este aviso em bloqueio: VIAGEM_STRICT=1"
+    echo ""
+    if [ "$VIAGEM_STRICT" = "1" ]; then
+      echo "❌ VIAGEM_STRICT=1 · viagem nova sem scout · ABORTADO"
+      exit 1
+    fi
+  fi
+fi
+
 # Gate de SINCRONIA (Lote 7a · 2026-08-09): o index.html que vai pro ar veio MESMO do
 # data.json? O edit inline no `const DAYS` (que o CLAUDE.md recomendava até hoje) fazia duas
 # coisas ruins: dessincronizava o data.json (o próximo rebuild apaga em silêncio) e BURLAVA o

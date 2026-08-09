@@ -234,6 +234,7 @@ Workflow:
 1. Detecta slug atual em `SLUG.txt`
 2. Se mudou (modo principal): archive `index.html` + subpastas paralelas em `archive/<slug-anterior>/`
 3. Substitui target HTML
+3a. **scout-gate soft** (viagem nova · Lote 7c): subdir sem nenhum commit no histórico E sem `entregas/<slug>*.md` → **aviso duro** de que a viagem nasceu sem o degrau 0 (Córsega e Sardenha nasceram assim). Não bloqueia por default — mini-roteiro e coletânea de cidade são casos legítimos. `VIAGEM_STRICT=1` bloqueia.
 3b. `sync-check.py --quiet` (BLOQUEIA se o `index.html` não veio do `data.json` · mata o edit inline e a burla do gate 4d que ele permitia · roda ANTES dos outros gates pra garantir que eles auditam o arquivo certo · falha-FECHADO se o script sumir · override `VIAGEM_SKIP_GATES=1`)
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
 4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32 · falha-FECHADO se o script sumir)
