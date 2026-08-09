@@ -4,6 +4,11 @@ Camada 3 da avaliação de conteúdo. O `audit.py` (regex) mede **forma**; este 
 
 Régua de fontes: `references/source-credibility.md` (tiers + padrões de prova).
 
+> ⚠️ **Execução é com RASTRO e sem auto-verificação** (R6 · 2026-08-09): quem escreveu não
+> roda o próprio factcheck no mesmo contexto — despacha sub-agentes céticos e o resultado
+> persiste em `<viagem>/FACTCHECK-<AAAA-MM-DD>.md`, cobrado pelo `scripts/factcheck-gate.py`
+> no deploy. Modo de execução completo: **`FACTCHECK-EXEC.md`** (neste diretório).
+
 ## Quando roda (gatilhos — NÃO rodar em edit pequeno)
 
 | Situação | Escopo |

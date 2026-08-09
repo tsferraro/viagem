@@ -185,6 +185,22 @@ execução. **É gate no `deploy.sh`** — roda sozinho, não dá pra esquecer.
 
 Não confirma que o lugar existe: isso é o `FACTCHECK.md` §4.
 
+### `factcheck-gate.py` — frescor + formato do factcheck (gate 4d do deploy)
+
+```bash
+python3 scripts/factcheck-gate.py <viagem>            # relatório
+python3 scripts/factcheck-gate.py <viagem> --quiet    # modo deploy
+```
+
+Nasceu do achado F6 da auditoria 2026-08-08: o FACTCHECK era protocolo de honra — "rodei um
+factcheck completo" era inverificável, inclusive por quem rodou. O gate cobra o que É cobrável
+por máquina sem ser gameable por substring: o artefato `<viagem>/FACTCHECK-<AAAA-MM-DD>.md`
+**existe**, tem **formato válido** (vereditos por item · OK/ERRO/RISCO com URL · ERRO marcado
+`→ corrigido` · data não-futura) e é **mais novo que a última mudança de conteúdo sensível**
+(cards ⭐⭐⭐ · TODA parada de WT · opções ⭐⭐⭐ · historia[]). Edit não-sensível passa sem
+factcheck novo. O que ele NÃO garante: a verdade do factcheck — isso é a sessão auditora e o
+campo. Protocolo de execução: `skills/critico-roteiro/FACTCHECK-EXEC.md`.
+
 ### `deploy.sh` — archive + push
 
 ```bash
@@ -202,7 +218,8 @@ Workflow:
 3. Substitui target HTML
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
 4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32)
-4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido)
+4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos)
+4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia — mudou depois do último factcheck · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`)
 5. Backup local em `~/.skill-backups/`
 6. Re-gera `archive/index.html` (índice navegável)
 7. `git add` · `commit` · `push origin main`
@@ -236,7 +253,7 @@ Quando Tobia pede mudança em viagem existente:
 9. **Roda `validate.py index.html`** (BLOQUEIA se falhar)
 9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥32 e P0=0 (máx 3 iterações · mecânico primeiro → confirma ⚖️ no checklist → re-build → re-audit) · aspiração ≥36
 9b2. **Roda `scripts/maps-audit.py <viagem>/index.html --urls`** · zero busca genérica e zero waypoint fantasma ANTES de conferir lugar a lugar
-9c. **FACTCHECK lean (incl. §4: lugar no Maps + links + situação do atrativo) + JUDGE 1×(+1)** (é entrega → pilha completa da tabela de gatilhos · `skills/critico-roteiro/FACTCHECK.md` e `JUDGE.md`) · só após audit limpo
+9c. **FACTCHECK com RASTRO + JUDGE 1×(+1)** · **quem escreveu NÃO roda o próprio factcheck no mesmo contexto** — despacha sub-agentes céticos (contexto limpo, sem o texto de justificativa do construtor) ou pede sessão nova. O resultado PERSISTE em `<viagem>/FACTCHECK-<AAAA-MM-DD>.md` (item → veredito OK/ERRO/RISCO/INCONCLUSIVO → fonte com URL → data), versionado; erros viram correção ANTES do deploy. Protocolo: `skills/critico-roteiro/FACTCHECK-EXEC.md` (estratos + formato) · o que verificar: `FACTCHECK.md` · `JUDGE.md` como antes · só após audit limpo. O `deploy.sh` BLOQUEIA sem esse artefato fresco (gate 4d)
 10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar na entrega: **placar do factcheck (X confirmados / Y corrigidos / Z inconclusivos) + veredito judge** como manchete · a nota /40 é **FORMA** (não mede verdade — um roteiro 100% falso tirou 35/40 na auditoria de 2026-08-08) e vai no rodapé, nunca na manchete
 
 ## Schema dos dados (JSON pretty embedded no HTML)

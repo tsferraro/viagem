@@ -83,6 +83,20 @@ else
   echo "⚠️  maps-audit.py não encontrado · pulando gate de mapas"
 fi
 
+# Gate de FACTCHECK (frescor+formato · R6 auditoria 2026-08-08): verificação sem artefato
+# não conta. Bloqueia se não existe <viagem>/FACTCHECK-*.md, se o formato não tem vereditos
+# por item com fonte, ou se conteúdo sensível (⭐⭐⭐/WT/historia) mudou depois do último
+# factcheck. Cobra timestamp+estrutura (não gameable por substring); a VERDADE do factcheck
+# é trabalho da sessão auditora. Ver skills/critico-roteiro/FACTCHECK-EXEC.md.
+FCGATE_PY="$SCRIPT_DIR/factcheck-gate.py"
+if [ -f "$FCGATE_PY" ]; then
+  echo "→ Gate de factcheck (frescor+formato)..."
+  python3 "$FCGATE_PY" "$TARGET_DIR" --quiet \
+    || { echo "❌ Gate de factcheck BLOQUEOU · rode o FACTCHECK-EXEC e versione o artefato · ABORTADO"; exit 1; }
+else
+  echo "⚠️  factcheck-gate.py não encontrado · pulando gate de factcheck"
+fi
+
 # Regenerar landing AUTOMATICAMENTE (lê todas subpastas atuais + monta cards)
 # Decisão 2026-05-23: integrado ao deploy pra nunca esquecer · sessão Sardenha esqueceu rodar wrap-up
 echo "→ Regenerando landing (index.html root)..."
