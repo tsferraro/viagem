@@ -1,6 +1,6 @@
 ---
 name: destination-scout
-description: 'Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🟢🟡🔴, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE começa fixando o BRIEFING INICIAL antes de pesquisar — dois inputs: (1) PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil; (2) BASE/hospedagem — toda distância sai dali. Se algum não foi informado, pergunta antes de qualquer web_search. Entrega SEMPRE no chat primeiro; só DEPOIS pergunta se quer exportar Word/PDF (dá espaço a ajustes antes de converter). SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) e PDF só sob demanda (scripts/md_to_docx.py + scripts/docx_to_pdf.py). NÃO sequencia múltiplos dias nem monta o app HTML (exceção: modo mini-plano opcional — um bloco/meia-diária com horários e âncora fixa, ex: "domingo de manhã + Notre-Dame 14h30") — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).'
+description: 'Levantamento macro inicial de um destino turístico — o passo ANTES do roteiro detalhado. Entrega DOIS blocos nesta ordem fixa (1) MAPEAMENTO curado de atrações + restaurantes com veredito crítico 🏆 entra · ⚠️ talvez · ⏭️ pula, logística (distância da base, ingresso R$, reserva, horário) e clusterização geográfica; (2) HISTÓRIA & CURIOSIDADES em prosa corrida com gancho narrativo nas atrações. Use quando (1) usuário pede pesquisa/levantamento/panorama sobre um destino sem querer o roteiro dia-a-dia ainda - "pesquisa o que fazer em X", "traz recomendações de atrações e restaurantes em Y", "me dá um panorama de Z", "história e curiosidades de W"; (2) início do pipeline de viagem nova, como degrau 0 antes do esqueleto. SEMPRE começa fixando o BRIEFING INICIAL antes de pesquisar — dois inputs: (1) PERFIL DO VIAJANTE (família com criança · grupo de amigas · casal · sêniores · mochileiro) — o mesmo destino rende mapeamento diferente por perfil; (2) BASE/hospedagem — toda distância sai dali. Se algum não foi informado, pergunta antes de qualquer web_search. Entrega SEMPRE no chat primeiro; só DEPOIS pergunta se quer exportar Word/PDF (dá espaço a ajustes antes de converter). SEMPRE web_search antes de afirmar preço/distância/fato — NUNCA inventar · preços datados ("~R$50, jan/2026") · fontes citadas no fim. Honestidade crítica > diplomacia — marca turistada/superestimado/"pula sem culpa". Saída: chat sempre · Word (.docx) e PDF só sob demanda (scripts/md_to_docx.py + scripts/docx_to_pdf.py). NÃO sequencia múltiplos dias nem monta o app HTML (exceção: modo mini-plano opcional — um bloco/meia-diária com horários e âncora fixa, ex: "domingo de manhã + Notre-Dame 14h30") — é inventário curado que ALIMENTA o roteiro depois. Standalone funciona (pesquisa pra terceiros, sem virar app).'
 ---
 
 # Destination Scout
@@ -76,7 +76,7 @@ Regras anti-invenção (do CLAUDE.md):
 Credibilidade + proveniência (2026-07-12 · `references/source-credibility.md`):
 - **Escolher fonte pelo tier certo por tipo de afirmação**: preço/horário = T1 oficial · logística vivida (carrinho/fila/sombra) = T3/T4 recentes · veredito = convergência T2/T3. Não citar SEO-farm (T5).
 - **Registrar proveniência NA HORA da pesquisa** (url + tier) — custa ~zero agora e barateia o fact-check depois. Afirmação com T1 recente registrada não é re-verificada.
-- **Busca negativa obrigatória pros 🟢-âncora** (`<POI> superestimado / not worth it`) — dedupe: só pros que a busca de armadilhas (item 8) não cobriu. Crítica credível achada entra no texto mesmo mantendo o 🟢.
+- **Busca negativa obrigatória pros 🏆-âncora** (`<POI> superestimado / not worth it`) — dedupe: só pros que a busca de armadilhas (item 8) não cobriu. Crítica credível achada entra no texto mesmo mantendo o 🏆.
 
 ---
 
@@ -90,12 +90,14 @@ Big picture antes do detalhe (princípio #4 do repo). O que o destino É, pra es
 ### 3.2 · Tabela "esforço × recompensa"
 | Atração | Base p/ acesso | Recompensa ★ | Esforço | Veredito |
 
-Veredito = 🟢 (faça) · 🟡 (depende/avalie) · 🔴 (pula sem culpa). Calibrado pelo perfil. Rubrica em `references/mapping-rubric.md`.
+Veredito = 🏆 (entra) · ⚠️ (talvez/avalie) · ⏭️ (pula sem culpa). Calibrado pelo perfil. Rubrica em `references/mapping-rubric.md`.
+
+⛔ **NÃO usar 🟢🟡🔴 no veredito** (mudou em 2026-08-09 · Lote 7d): essas três cores são o campo `risco` do roteiro, que mede **atrito** (fila, multidão, físico) — coisa diferente de recomendação. Um lugar pode ser 🏆 *entra* E `risco=red`; com o vocabulário antigo isso virava "🟢 e 🔴 ao mesmo tempo", que não se lê. Entregas antigas seguem com 🟢🟡🔴 e o `audit.py --scout` aceita os dois — não precisa reescrever o que já foi entregue.
 
 **Sincronização com o app (2026-07-12 · mapa unificado do roteiro-design):** a tabela agora registra os **2 eixos decompostos** que o app consome direto, além do veredito-síntese:
 - **Recompensa ★** (0-3) → vira `valeAPena` no data.json — valor puro pro perfil, independente do esforço
 - **Esforço** (baixo/médio/alto + o porquê: carrinho/escada/fila) → informa `risco` (semáforo)
-- **Veredito** 🟢🟡🔴 = a síntese dos dois pro perfil (recompensa alta + esforço incompatível = 🔴 mesmo com 3★)
+- **Veredito** 🏆⚠️⏭️ = a síntese dos dois pro perfil (recompensa alta + esforço incompatível = ⏭️ mesmo com 3★)
 Registrar ★ já na primeira pesquisa + anotar `poiCat` (atracao/restaurante/cafe/padaria/loja/bar/parque/mercado/food-hall) por item = a fase de roteiro monta o mapa unificado **sem reavaliar nada**. Enums em `references/data-schema.md`.
 
 ### 3.3 · Atrações detalhadas
@@ -149,7 +151,7 @@ Retorna nota **/20** + achados P0-P3. **Loop-até-excelente**:
 2. **nota < 16 ou P1 aberto** → corrige no `.md` → re-roda (máx ~3 rodadas).
 3. **nota ≥16 e P0=0** → aprovado · segue pro PASSO 5.
 
-O que o gate pega (sem você caçar): preço sem data, veredito 🟢🟡🔴 ausente, "perto" vago em vez de km, sem armadilha sinalizada, restaurante sem sabor-assinatura, ordem mapeamento→história trocada, e — no macro — **seção Fontes ausente**. Régua completa: `references/content-rubric.md` §modo-scout. É o mesmo padrão de qualidade do roteiro, aplicado ao levantamento.
+O que o gate pega (sem você caçar): preço sem data, veredito 🏆⚠️⏭️ ausente, "perto" vago em vez de km, sem armadilha sinalizada, restaurante sem sabor-assinatura, ordem mapeamento→história trocada, e — no macro — **seção Fontes ausente**. Régua completa: `references/content-rubric.md` §modo-scout. É o mesmo padrão de qualidade do roteiro, aplicado ao levantamento.
 
 ---
 
@@ -171,7 +173,7 @@ python3 skills/destination-scout/scripts/docx_to_pdf.py /tmp/<slug>.docx entrega
 ```
 
 - `md_to_docx.py` converte markdown (headings, tabelas, bullets, prosa, **negrito**/*itálico*) em `.docx`. Instala `python-docx` se faltar.
-- `docx_to_pdf.py` renderiza o `.docx` em PDF com fonte DejaVu embarcada (acentos PT-BR), subtítulo cinza, tabelas com cabeçalho colorido. Os semáforos 🟢🟡🔴 viram **bolinhas coloridas** (●) e emojis decorativos que a fonte não cobre são removidos. Instala `reportlab`/`python-docx` se faltarem.
+- `docx_to_pdf.py` renderiza o `.docx` em PDF com fonte DejaVu embarcada (acentos PT-BR), subtítulo cinza, tabelas com cabeçalho colorido. Os vereditos (🏆⚠️⏭️ e os 🟢🟡🔴 de entregas antigas) viram **bolinhas coloridas** (●) e emojis decorativos que a fonte não cobre são removidos. Instala `reportlab`/`python-docx` se faltarem.
 - Entregar o arquivo via SendUserFile. Se possível, **renderize e confira** o PDF antes de entregar (ex: `pip install pymupdf` + `fitz`) — não chute o layout.
 - Depois de gerar: `git add entregas/<slug>.md entregas/<slug>.pdf` + commit + push (mesma main de sempre). Manter o `.md` fonte permite re-editar/regerar sem refazer do zero.
 
@@ -218,7 +220,7 @@ PT-BR, casual, direto, consultor crítico. Tabelas pra comparação. NUNCA conco
 - [ ] ≥6 web_search feitas
 - [ ] Todo preço datado · nenhuma URL inventada
 - [ ] Bloco mapeamento ANTES do histórico
-- [ ] Veredito 🟢🟡🔴 em cada atração
+- [ ] Veredito 🏆⚠️⏭️ em cada atração
 - [ ] Ao menos 1 armadilha de turista sinalizada (se existir)
 - [ ] Resumo no topo (NÃO "TL;DR")
 - [ ] Fontes citadas

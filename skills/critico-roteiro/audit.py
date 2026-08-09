@@ -1757,7 +1757,27 @@ SCOUT_DIM_NAMES = {
 }
 
 PRICE_AMOUNT_RE = re.compile(r'(?:R\$|US\$|€|\$)\s?\d[\d.,]*', re.I)
-VERDICT_RE      = re.compile(r'🟢|🟡|🔴')
+# Veredito do scout · DOIS vocabulários aceitos (Lote 7d · 2026-08-09).
+#   novo   🏆 entra · ⚠️ talvez · ⏭️ pula
+#   antigo 🟢 faça  · 🟡 depende · 🔴 pula  (entregas até 2026-08-09 · não serão reescritas)
+# A troca aconteceu porque 🟢🟡🔴 é também o `risco` do roteiro, que mede ATRITO — as mesmas
+# três cores diziam duas coisas diferentes e um lugar podia ser "🟢 e 🔴 ao mesmo tempo".
+VERDICT_NOVO_RE = re.compile(r'🏆|⏭️?')
+VERDICT_TALVEZ_RE = re.compile(r'⚠️?')
+VERDICT_ANTIGO_RE = re.compile(r'🟢|🟡|🔴')
+
+
+def count_verdicts(text: str) -> int:
+    """Conta vereditos aceitando os dois vocabulários.
+
+    O ⚠️ só conta como veredito "talvez" num doc que JÁ usa o vocabulário novo (tem 🏆/⏭️).
+    Sem essa condição, os ⚠️ de alerta de segurança ("⚠️ cabeça d'água"), que o scout sempre
+    usou, seriam contados como veredito e inflariam o check em entregas antigas — o gate
+    passaria a aprovar levantamento sem crítica nenhuma."""
+    novo = len(VERDICT_NOVO_RE.findall(text))
+    antigo = len(VERDICT_ANTIGO_RE.findall(text))
+    talvez = len(VERDICT_TALVEZ_RE.findall(text)) if novo else 0
+    return novo + antigo + talvez
 FONTES_RE       = re.compile(r'^#{1,4}\s*(fontes|refer[êe]ncias|sources)\b', re.I | re.M)
 ARMADILHA_RE    = re.compile(r'armadilha|cilada|turistada|superestimad|pula sem culpa|fila inútil|não vale a pena', re.I)
 KM_MIN_RE       = re.compile(r'\d+\s?(km|min|minutos|h\b|horas)', re.I)
@@ -1769,7 +1789,7 @@ CONFIRMAR_RE    = re.compile(r'\[a confirmar\]|\[confirmar\]', re.I)
 def detect_mini_plano(text: str) -> bool:
     """Mini-plano = 1 bloco/meia-diária com âncora fixa, sem tabela de veredito."""
     has_table  = bool(re.search(r'esfor[çc]o.*recompensa', text, re.I))
-    n_verdicts = len(VERDICT_RE.findall(text))
+    n_verdicts = count_verdicts(text)
     has_anchor = bool(ANCHOR_RE.search(text))
     return n_verdicts < 2 and not has_table and has_anchor
 
@@ -1800,8 +1820,8 @@ def s1_precos(text: str, F: List[Finding]) -> int:
 
 
 def s2_veredito(text: str, F: List[Finding], is_mini: bool) -> int:
-    """S2 · Veredito 🟢🟡🔴 + honestidade (armadilhas, anti-hype)."""
-    n_verdicts    = len(VERDICT_RE.findall(text))
+    """S2 · Veredito 🏆⚠️⏭️ (ou 🟢🟡🔴 antigo) + honestidade (armadilhas, anti-hype)."""
+    n_verdicts    = count_verdicts(text)
     has_armadilha = bool(ARMADILHA_RE.search(text))
     hype          = len(HYPE_RE.findall(text))
 
@@ -1821,9 +1841,9 @@ def s2_veredito(text: str, F: List[Finding], is_mini: bool) -> int:
         score += 2
     elif n_verdicts >= 1:
         score += 1
-        F.append(Finding(2, 2, f'poucos vereditos 🟢🟡🔴 ({n_verdicts}) — cada atração precisa do seu, calibrado ao perfil'))
+        F.append(Finding(2, 2, f'poucos vereditos 🏆⚠️⏭️ ({n_verdicts}) — cada atração precisa do seu, calibrado ao perfil'))
     else:
-        F.append(Finding(1, 2, 'nenhum veredito 🟢🟡🔴 — levantamento sem crítica vira folder de agência'))
+        F.append(Finding(1, 2, 'nenhum veredito 🏆⚠️⏭️ (nem 🟢🟡🔴 antigo) — levantamento sem crítica vira folder de agência'))
     if has_armadilha:
         score += 1
     else:
@@ -1949,7 +1969,7 @@ SCOUT_CHECKLIST = """
 │  CHECKLIST MANUAL · levantamento scout (julgamento humano)               │
 ├──────────────────────────────────────────────────────────────────────────┤
 │  Perfil & Calibração                                                     │
-│  [ ] veredito 🟢🟡🔴 calibrado ao PERFIL informado (não genérico)?      │
+│  [ ] veredito 🏆⚠️⏭️ calibrado ao PERFIL informado (não genérico)?     │
 │  [ ] distâncias medidas a partir da BASE certa?                          │
 │                                                                          │
 │  Prosa (bloco História & Curiosidades)                                   │

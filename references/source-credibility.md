@@ -1,6 +1,6 @@
 # Credibilidade de fontes · tiers + padrões de prova
 
-Régua pra responder duas perguntas: **(1) essa fonte é boa pra ESTE tipo de afirmação?** e **(2) que evidência sustenta um veredito (🟢 imperdível / 🔴 pula)?**
+Régua pra responder duas perguntas: **(1) essa fonte é boa pra ESTE tipo de afirmação?** e **(2) que evidência sustenta um veredito (🏆 imperdível / ⏭️ pula)?**
 
 Princípio central: **credibilidade não é absoluta, é relativa ao tipo de afirmação.** A fonte perfeita pra "quanto custa o ingresso" (site oficial) é péssima pra "vale a pena" (nunca vai dizer "pula"). Fonte boa é fonte **cuja posição lhe dá acesso àquela verdade específica**.
 
@@ -40,7 +40,7 @@ Regra dos ~18 meses (Lonely Planet, já em `content-rubric.md`): fonte T2 de 201
 | **Preço / horário / reserva** | 1× **T1** (oficial), datado "(mês/ano)". Sem T1 encontrável → `[a confirmar]` — nunca promover T3/T5 a fonte de preço |
 | **Logística vivida** (carrinho, fila real, sombra, banheiro) | 1-2× **T3/T4 recentes** (é onde essa verdade mora) |
 | **Fato histórico / lenda** | **T2** ou fonte de referência; lenda sempre apresentada *como* lenda ("dizem que...") |
-| **Veredito 🟢 imperdível** | as 3 condições abaixo |
+| **Veredito 🏆 imperdível** | as 3 condições abaixo |
 | **Veredito 🔴 pula sem culpa** | crítica recorrente em T2/T3 independentes **OU** incompatibilidade objetiva com o perfil (463 degraus sem elevador não precisa de segunda fonte) |
 
 ### As 5 classes que mataram em campo (ago/2026 · R7 da auditoria) — padrão de prova próprio
@@ -61,13 +61,13 @@ fonte com o 5º decimal**, ou entra `coord_unverified: true`. **PROIBIDO derivar
 na amostra da auditoria, as 5 coords derivadas estavam TODAS erradas (0,5-7,8km) e as copiadas
 estavam 100% certas ao 5º decimal. Não existe meio-termo.
 
-### As 3 condições do 🟢 imperdível
+### As 3 condições do 🏆 imperdível
 
 "Imperdível" **não é fato verificável — é veredito.** Nenhuma fonte conhece a família. O que se verifica é a evidência convergente:
 
 1. **Convergência editorial**: ≥2-3 fontes **T2/T3 independentes** colocando o POI no topo por razões *substantivas* (o que ele tem de único), não "must-see" de manchete.
-2. **Busca negativa rodada e sobrevivida**: pesquisar ativamente `<POI> superestimado / overrated / not worth it`. Se crítica credível existe, ela **entra no card** ("lindo porém lotado") mesmo mantendo o 🟢. *Dedupe: se a varredura de armadilhas do PASSO 2 já cobriu o POI, não repetir — obrigatória só pros 🟢-âncora que ela não cobriu (~3-5 por polo).*
-3. **Fit ao perfil justificado por NÓS**: a fonte diz que o POI é excepcional; **quem diz que é imperdível *pra esta família* é a rubrica do elo mais restritivo** (`audience-profiles.md` + `mapping-rubric.md`). Coliseu: T2-unânime + 300m da base + elevador → 🟢. Museus Vaticanos: T2-unânimes + incompatíveis com carrinho+avó → 🔴. **Mesma evidência, vereditos opostos — o perfil é a última instância e não se terceiriza.**
+2. **Busca negativa rodada e sobrevivida**: pesquisar ativamente `<POI> superestimado / overrated / not worth it`. Se crítica credível existe, ela **entra no card** ("lindo porém lotado") mesmo mantendo o 🏆. *Dedupe: se a varredura de armadilhas do PASSO 2 já cobriu o POI, não repetir — obrigatória só pros 🏆-âncora que ela não cobriu (~3-5 por polo).*
+3. **Fit ao perfil justificado por NÓS**: a fonte diz que o POI é excepcional; **quem diz que é imperdível *pra esta família* é a rubrica do elo mais restritivo** (`audience-profiles.md` + `mapping-rubric.md`). Coliseu: T2-unânime + 300m da base + elevador → 🏆. Museus Vaticanos: T2-unânimes + incompatíveis com carrinho+avó → ⏭️. **Mesma evidência, vereditos opostos — o perfil é a última instância e não se terceiriza.**
 
 Sinais de T4 gameado (detector Rick Steves, já em `content-rubric.md` D8): só turistas/poucos locais, reviews todas na mesma semana ou no mesmo idioma, hype "must-see" sem substância, retail-heavy.
 

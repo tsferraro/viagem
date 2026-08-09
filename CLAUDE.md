@@ -72,7 +72,7 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
 | Vai avaliar ou elevar design/UI de um roteiro | `references/design-rubric.md` + `skills/impeccable/` |
 | Vai auditar/elevar CONTEÚDO (escrita, links, coords, logística, levantamento) | `references/content-rubric.md` + skill `skills/critico-roteiro/` (roda `audit.py`) |
-| Vai avaliar credibilidade de fonte · provar um 🟢 imperdível · rodar fact-check/judge | `references/source-credibility.md` + `skills/critico-roteiro/FACTCHECK.md` / `JUDGE.md` |
+| Vai avaliar credibilidade de fonte · provar um 🏆 imperdível · rodar fact-check/judge | `references/source-credibility.md` + `skills/critico-roteiro/FACTCHECK.md` / `JUDGE.md` |
 | Vai CONSERTAR achados do `--suggest` (pesquisar 🔎 · reescrever ✍️) | `skills/critico-roteiro/RESEARCH.md` / `REWRITE.md` (loop fechado c/ `--diff`) |
 | Vai criar viagem nova · quer pesquisa macro do destino | `skills/destination-scout/SKILL.md` (degrau 0 antes do roteiro) |
 | Vai entender por que código JS é assim | `references/ui-patterns.md` |
@@ -170,7 +170,7 @@ Retorna nota (2 metades) + achados P0-P3 + checklist manual + veredito. Exit: 0=
 | Aprofundamento de roteiro | audit → FACTCHECK só do alterado → JUDGE nos cards tocados |
 | Pré-viagem (**7-10 dias antes** · gatilho AGENDADO, não opcional — R11) | FACTCHECK modo re-check (só operacional: preço/horário/regra de acesso/fechamento — apodrecem em meses; caso Orosei: o regime mudou inteiro em 12 meses). Com rastro: o resultado vira `FACTCHECK-<data>.md` da viagem. **Próxima aplicação real: roma-toscana set/2026** — o scout tem 12 correções conhecidas e nunca aplicadas (`entregas/roma-toscana-*.FACTCHECK.md`) |
 
-Régua de fontes (tiers T1-T5 + o que prova um 🟢 imperdível): `references/source-credibility.md`.
+Régua de fontes (tiers T1-T5 + o que prova um 🏆 imperdível): `references/source-credibility.md`.
 
 ### `sync-check.py` — o HTML que vai pro ar veio MESMO do data.json? (gate 3b)
 
@@ -317,7 +317,7 @@ Ajuste em viagem existente não entra no trilho: vai direto pro "Pipeline · aju
 1. **Briefing parse**: destino, datas, base, composição, voos, reservas, mobilidade
 2. **UMA pergunta por vez** pra preencher lacunas críticas (NÃO checklist)
 2b. **Pergunta de profundidade** (sempre, pra walking tours/roteiros/road trips/levantamentos): _versão **básica** (essencial enxuto), **profunda** (história, curiosidades, o que observar parada-a-parada — padrão Marais), ou **as 2 com toggle** (botão Básico↔Profundo no mesmo dia, via stops marcados `essencial: true`)?_ Default = profunda.
-3. **Levantamento macro** (degrau 0) via `skills/destination-scout/SKILL.md`: fan-out de pesquisa (≥10-12 buscas/polo no macro) → mapeamento de atrações+restaurantes (veredito 🟢🟡🔴 + Recompensa ★ + proveniência) + histórico/curiosidades · valida com Tobia antes de sequenciar dias. **Se já existe `entregas/<slug>.md` APROVADO: consome, NÃO re-pesquisa** (vereditos→cards · ★→valeAPena · clusters→esqueleto · prosa→HISTORIA[] · Fontes→proveniência)
+3. **Levantamento macro** (degrau 0) via `skills/destination-scout/SKILL.md`: fan-out de pesquisa (≥10-12 buscas/polo no macro) → mapeamento de atrações+restaurantes (veredito 🏆 entra · ⚠️ talvez · ⏭️ pula + Recompensa ★ + proveniência) + histórico/curiosidades · valida com Tobia antes de sequenciar dias. **Se já existe `entregas/<slug>.md` APROVADO: consome, NÃO re-pesquisa** (vereditos→cards · ★→valeAPena · clusters→esqueleto · prosa→HISTORIA[] · Fontes→proveniência)
 4. **Esqueleto** em tabela (1 linha/dia: data/bairro/tema/atração) · valida com Tobia antes de detalhar
 5. **Expansão dia-a-dia** · se viagem >14 dias, **OBRIGATÓRIO** dividir em blocos de 5-7 dias com validação entre cada
 6. **Walking tours** com rubrica de valor (alto/médio/baixo) + justificativa

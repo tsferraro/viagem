@@ -157,6 +157,22 @@ def main():
     d = _json('scout_mini_plano.md', '--scout')
     check('scout mini · Fontes NÃO é P1 (mini = opcional)', not has_finding(d, 'P1', 'Fontes'))
 
+    # --- SCOUT · vocabulário do veredito (Lote 7d) ---------------------------
+    # 🏆 entra · ⚠️ talvez · ⏭️ pula substituiu 🟢🟡🔴 (que colidia com o `risco` do
+    # roteiro). Entrega antiga NÃO pode quebrar, e ⚠️ solto — que o scout sempre usou pra
+    # alerta de segurança — NÃO pode virar crédito de veredito num doc sem crítica nenhuma.
+    print(f'{DIM}veredito 🏆⚠️⏭️ vs 🟢🟡🔴 (os dois aceitos){END}')
+    d_velho = _json('scout_macro_sem_fontes.md', '--scout')
+    d_novo  = _json('scout_veredito_novo.md', '--scout')
+    check('scout · vocabulário novo pontua igual ao antigo',
+          d_novo['score'] == d_velho['score'], f"novo {d_novo['score']} vs antigo {d_velho['score']}")
+    check('scout · vocabulário novo NÃO gera achado de veredito ausente',
+          not has_finding(d_novo, 'P1', 'nenhum veredito')
+          and not has_finding(d_novo, 'P2', 'poucos vereditos'))
+    d_alerta = _json('scout_so_alertas.md', '--scout')
+    check('scout · ⚠️ de alerta sem 🏆/⏭️ NÃO conta como veredito',
+          has_finding(d_alerta, 'P1', 'nenhum veredito'))
+
     # --- Fase A · roteamento (station/hint/half no JSON) ---------------------
     print(f'{DIM}--suggest · cada achado roteado numa estação{END}')
     d = _json('unverified_coord.json')
