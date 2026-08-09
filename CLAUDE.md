@@ -236,14 +236,23 @@ Workflow:
 3. Substitui target HTML
 3b. `sync-check.py --quiet` (BLOQUEIA se o `index.html` não veio do `data.json` · mata o edit inline e a burla do gate 4d que ele permitia · roda ANTES dos outros gates pra garantir que eles auditam o arquivo certo · falha-FECHADO se o script sumir · override `VIAGEM_SKIP_GATES=1`)
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
-4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32)
-4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos)
+4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32 · falha-FECHADO se o script sumir)
+4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos · falha-FECHADO se o script sumir)
 4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia — mudou depois do último factcheck · viagem nova + factcheck de hoje passa com aviso · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`). **Falha-FECHADO se o script sumir** (BLOQUEIA · script ausente não é "sem gate") — override explícito e ruidoso: `VIAGEM_SKIP_FCGATE=1` no env pula com aviso gritante.
 5. Backup local em `~/.skill-backups/`
 6. Re-gera `archive/index.html` (índice navegável)
 7. `git add` · `commit` · `push origin main`
 
 **SEMPRE merge na main após cada entrega · NÃO deixar em branch isolada.**
+
+**Todos os gates falham-FECHADO** (Lote 7g · 2026-08-09): script de gate ausente **BLOQUEIA** o
+deploy. Um gate que "pula quando o script some" não é gate, é sugestão — e verificação sem
+testemunha foi a causa-raiz da crise de ago/2026. Dois overrides, ambos gritantes no log:
+
+| Env | Pula |
+|---|---|
+| `VIAGEM_SKIP_GATES=1` | sync-check · critico-roteiro · maps-audit (ausência do script, ou dessincronia conhecida) |
+| `VIAGEM_SKIP_FCGATE=1` | factcheck-gate (mantido separado: é o gate mais caro de burlar por acidente) |
 
 ## Pipeline · ajuste (mode update)
 

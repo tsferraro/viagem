@@ -88,25 +88,37 @@ python3 "$VALIDATE_PY" "$TARGET_HTML" || { echo "❌ validate.py falhou · ABORT
 # Bloqueia SÓ em P0 (erro objetivo: card vazio, link oficial morto). Nota < 32 vira
 # aviso — a régua de 32 é enforçada no LOOP da sessão, não no push (heurística mole
 # não deve brickar o acesso da família). VIAGEM_STRICT=1 endurece (bloqueia < 32).
+#
+# Falha-FECHADO se o script sumir (Lote 7g · mesmo padrão do 6b): gate que "pula" quando o
+# script some não é gate, é sugestão. Override: VIAGEM_SKIP_GATES=1.
 AUDIT_PY="$REPO_DIR/skills/critico-roteiro/audit.py"
 if [ -f "$AUDIT_PY" ]; then
   echo "→ Gate de conteúdo (critico-roteiro)..."
   python3 "$AUDIT_PY" "$TARGET_HTML" --deploy-gate \
     || { echo "❌ Gate de conteúdo BLOQUEOU (P0 · erro objetivo) · ABORTADO"; exit 1; }
+elif [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+  echo "⚠️⚠️⚠️  critico-roteiro/audit.py NÃO ENCONTRADO · VIAGEM_SKIP_GATES=1 · PULANDO gate de conteúdo (deploy SEM checagem de P0) ⚠️⚠️⚠️"
 else
-  echo "⚠️  critico-roteiro não encontrado · pulando gate de conteúdo"
+  echo "❌ critico-roteiro/audit.py não encontrado · gate de conteúdo falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_GATES=1 scripts/deploy.sh ..."
+  exit 1
 fi
 
 # Gate de MAPAS (maps-audit.py): monta as URLs do Google Maps como o app monta e bloqueia
 # busca genérica / waypoint fantasma / ponto repetido. Existe porque validate e audit leem o
 # DADO, e os bugs de ago/2026 (pino no mar, "Can't find that place") só existiam na URL final.
+# Falha-FECHADO se o script sumir (Lote 7g) · override VIAGEM_SKIP_GATES=1.
 MAPS_PY="$SCRIPT_DIR/maps-audit.py"
 if [ -f "$MAPS_PY" ]; then
   echo "→ Gate de mapas (maps-audit)..."
   python3 "$MAPS_PY" "$TARGET_HTML" --quiet \
     || { echo "❌ Gate de mapas BLOQUEOU · corrija com mapsQuery/noMaps · ABORTADO"; exit 1; }
+elif [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+  echo "⚠️⚠️⚠️  maps-audit.py NÃO ENCONTRADO · VIAGEM_SKIP_GATES=1 · PULANDO gate de mapas (deploy SEM checagem das URLs do Maps) ⚠️⚠️⚠️"
 else
-  echo "⚠️  maps-audit.py não encontrado · pulando gate de mapas"
+  echo "❌ maps-audit.py não encontrado · gate de mapas falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_GATES=1 scripts/deploy.sh ..."
+  exit 1
 fi
 
 # Gate de FACTCHECK (frescor+formato · R6 auditoria 2026-08-08): verificação sem artefato
