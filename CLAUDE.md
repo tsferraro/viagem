@@ -289,6 +289,28 @@ que viram markup, e a verdade do conteúdo (isso é FACTCHECK).
 python3 scripts/sync-check.py <viagem>          # confere · exit 1 se dessincronizado
 ```
 
+## Mapa de fases · viagem nova (o trilho · 2026-08-09)
+
+O pipeline abaixo tem 6 fases. Elas existem pra que o Tobia saiba **onde estamos, o que vem
+depois e o que vai ser perguntado a ele** — sem precisar decorar o pipeline.
+
+| Fase | Objetivo | O que peço ao Tobia | Gate que fecha |
+|---|---|---|---|
+| **1 · Pesquisa** | levantamento macro do destino (`destination-scout`) + **curadoria de fontes** (15-20min · skill `curadoria-fontes`, antes de sair pesquisando: quem é confiável neste destino) | briefing (uma pergunta por vez) · profundidade (básica/profunda/toggle) · OK no levantamento | `audit.py --scout` ≥16/20 e P0=0 |
+| **2 · Construção** | esqueleto (1 linha/dia) → expansão dia-a-dia → walking tours → `data.json` | OK no esqueleto · OK a cada bloco de 5-7 dias | `build.py` roda e `validate.py` passa |
+| **3 · Forma** | o roteiro está bem escrito, ligado e navegável | nada (é trabalho interno) | `audit.py` ≥32/40 e P0=0 · `maps-audit.py` limpo |
+| **4 · Verdade** | o roteiro é **verdadeiro** · sub-agentes céticos, contexto limpo | nada — e é de propósito: quem escreveu não valida a si mesmo | `FACTCHECK-<data>.md` versionado · erros corrigidos ANTES do deploy |
+| **5 · Deploy** | no ar pra família | senha, se ainda não definida | `deploy.sh` (sync-check · validate · conteúdo · mapas · factcheck) |
+| **6 · Campo** | o que a viagem ensina volta pro repo | relatos de campo (in-app ou WhatsApp) | `wrap-up.sh` + balanço de fontes em `fontes/registro.json` |
+
+**Conduta ao ENTRAR numa fase**: anunciar em 1 linha — *"fase 3 de 6 · Forma · vou rodar o audit
+e consertar o que ele achar · não preciso de nada seu até o fim dela"*.
+**Conduta ao SAIR**: anunciar o que fechou, o que ficou pendente **do Tobia**, e qual é a próxima
+fase. Nada além disso — o trilho é pra orientar, não pra virar formulário.
+
+Ajuste em viagem existente não entra no trilho: vai direto pro "Pipeline · ajuste" acima
+(fases 2→5 comprimidas), a menos que a mudança seja grande a ponto de pedir pesquisa nova.
+
 ## Pipeline · viagem nova (mode create)
 
 1. **Briefing parse**: destino, datas, base, composição, voos, reservas, mobilidade
