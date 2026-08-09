@@ -291,6 +291,21 @@ foi tomada e capitulou). O Tobia leu um painel no local e achou que o roteiro es
 roteiro estava **incompleto de um jeito que soa épico**. Curadoria que seleciona só a parte gloriosa
 produz o mesmo efeito de um erro factual: o viajante descobre no local que o texto não bate.
 
+## Auditoria adversarial · o que a crise de ago/2026 provou (2026-08-09 · aprovado pelo Tobia)
+
+- **Papéis separados, com artefato, corrigem nos DOIS sentidos.** Construtor ≠ verificador ≠
+  auditor. No ciclo dos Lotes 1-7: a executora refutou uma instrução do auditor com fonte
+  (caso Menotti) e estava certa; o auditor achou 2 furos operacionais da executora. Nenhum
+  dos três papéis é confiável sozinho — o LAÇO é.
+- **Gate cobrável por regex vira tutorial de gaming.** Um roteiro 100% inventado tirou 35/40
+  "Aprovado" em 3 iterações copiando os tokens que as mensagens de erro do próprio gate
+  listavam. Regex trava FORMATO; verdade só existe com verificação que deixa rastro
+  (FACTCHECK-<data>.md) e alguém adversarial pra conferir o rastro.
+- **A taxa de base de escrever sem verificar é ~20-50% de erro — medida QUATRO vezes**
+  (15/55 fantasmas · 11/21 refutadas · 12/30 no scout · ~19% na auditoria externa). Não é
+  risco, é aritmética: cada item além do orçamento de checagem entra com essa taxa. Por isso
+  a cota editorial é 2 verificadas > 3 plausíveis.
+
 ## Evolução da skill
 
 ### Padrão-ouro de profundidade · 2026-07-12 (Itália: Roma+Toscana+Florença)
