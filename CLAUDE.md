@@ -12,7 +12,7 @@ Você é **especialista em roteiros turísticos** pra família do Tobia. Roteiro
 
 **NÃO existe mais "viagem ativa no root"**. Root tem só landing (`index.html` regenerada pelo `wrap-up.sh`).
 
-Cada viagem · um subdir dedicado: `nyc/`, `corsica/`, `sardenha/`, etc. Subdirs reservados (proibidos como nome de viagem): `archive`, `scripts`, `templates`, `references`, `skills`, `entregas`.
+Cada viagem · um subdir dedicado: `nyc/`, `corsica/`, `sardenha/`, etc. Subdirs reservados (proibidos como nome de viagem): `archive`, `scripts`, `templates`, `references`, `skills`, `entregas`, `fontes`.
 
 `entregas/` guarda os **documentos gerados pela `destination-scout`** (`.md` fonte + `.pdf` final), versionados — ver `skills/destination-scout/SKILL.md` PASSO 5.
 
@@ -46,11 +46,14 @@ viagem/
 │   ├── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
 │   ├── design-rubric.md            ← rubrica de avaliação de UI + skill impeccable
 │   └── content-rubric.md           ← rubrica de CONTEÚDO (roteiro /40 + scout /20) · runnable em skills/critico-roteiro/
+├── fontes/
+│   └── registro.json               ← curadoria de fontes · registro por evento (skill curadoria-fontes)
 ├── skills/
 │   ├── destination-scout/          ← levantamento macro (atrações+restaurantes+histórico) · degrau 0
 │   ├── walking-tour-designer/
 │   ├── road-trip-designer/
 │   ├── critico-roteiro/            ← PORTÃO de qualidade de CONTEÚDO · audit.py (roteiro /40 + scout /20)
+│   ├── curadoria-fontes/           ← fontes com lastro de campo · estados movidos SÓ por evento
 │   └── impeccable/                 ← skill de design/UI · avaliar·gerar·polir (Apache 2.0)
 └── archive/
     └── <slug>/                     ← viagens passadas movidas pra cá manualmente
@@ -88,6 +91,7 @@ Se mexer manualmente em subpastas (criar/renomear/remover viagens) SEM usar `dep
 Antes de declarar sessão terminada:
 
 1. **Pergunte ao Tobia** se quer adicionar lição em `MEMORY.md` (o que funcionou · ajustes necessários · padrão pro destino/composição). Se sim, edite a seção apropriada.
+1b. **Balanço de fontes** (curadoria · 2026-08-09): quais fontes embarcaram/validaram/demoliram nesta viagem? Gravar os eventos em `fontes/registro.json` e mover estados se o critério bateu (`skills/curadoria-fontes/SKILL.md` §5).
 2. **Execute** `scripts/wrap-up.sh` · ele faz:
    - `git status` · mostra tudo modificado
    - `validate.py` em cada HTML modificado
@@ -164,7 +168,7 @@ Retorna nota (2 metades) + achados P0-P3 + checklist manual + veredito. Exit: 0=
 | Edit pequeno (stop, dica) | validate + audit (como sempre) |
 | Viagem nova / entrega scout | pesquisa c/ proveniência → audit → FACTCHECK lean → JUDGE 1×(+1) → deploy |
 | Aprofundamento de roteiro | audit → FACTCHECK só do alterado → JUDGE nos cards tocados |
-| Pré-viagem (1-2 sem antes) | FACTCHECK modo re-check (só fatos operacionais — preço/horário apodrecem) |
+| Pré-viagem (**7-10 dias antes** · gatilho AGENDADO, não opcional — R11) | FACTCHECK modo re-check (só operacional: preço/horário/regra de acesso/fechamento — apodrecem em meses; caso Orosei: o regime mudou inteiro em 12 meses). Com rastro: o resultado vira `FACTCHECK-<data>.md` da viagem. **Próxima aplicação real: roma-toscana set/2026** — o scout tem 12 correções conhecidas e nunca aplicadas (`entregas/roma-toscana-*.FACTCHECK.md`) |
 
 Régua de fontes (tiers T1-T5 + o que prova um 🟢 imperdível): `references/source-credibility.md`.
 
@@ -672,7 +676,7 @@ O toggle continua no template pronto pra reuso — é só (re)adicionar `essenci
 
 **Pra ligar a planilha** (uma vez só · serve todos os roteiros): `scripts/apps-script-relatos.gs` tem o código e o passo-a-passo. Publica como Web App ("Executar como: Eu" · "Quem pode acessar: Qualquer pessoa"), pega a URL `/exec` e põe em `feedback_url` no `data.json` da viagem. O `slug` sai do `SLUG.txt` automaticamente.
 
-**Fronteira dura ao processar os relatos**: preferência da família **NUNCA** entra no card — vai pro `MEMORY.md`. O roteiro é compartilhável; *"a filha cansa às 17h"* é verdade sobre eles, não sobre o lugar. Roteamento: erro factual → `data.json` · dica útil a qualquer viajante → card · preferência → `MEMORY.md` · contexto → `DIARIO.md`.
+**Fronteira dura ao processar os relatos**: preferência da família **NUNCA** entra no card — vai pro `MEMORY.md`. O roteiro é compartilhável; *"a filha cansa às 17h"* é verdade sobre eles, não sobre o lugar. Roteamento: erro factual → `data.json` · dica útil a qualquer viajante → card · preferência → `MEMORY.md` · contexto → `DIARIO.md` · **e anote o evento no registro da fonte que originou o item confirmado/demolido** (`fontes/registro.json` · skill `skills/curadoria-fontes/` — é o laço que dá lastro à curadoria).
 
 ## Classificação de POI · 2 eixos independentes (2026-07-12)
 

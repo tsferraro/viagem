@@ -1,0 +1,109 @@
+{
+  "_": "Registro de curadoria de fontes (skill skills/curadoria-fontes/SKILL.md). Estados movidos SÓ por evento. Nenhuma fonte entra validada. Criado no Lote 5 da auditoria 2026-08-08 com as 8 candidatas da seção 6.6 do relatório — sinais vistos só em snippet de busca; o julgamento 'esteve lá' (§3 da skill) ainda não rodou em nenhuma.",
+  "fontes": [
+    {
+      "id": "twofortheworld",
+      "dominio": "twofortheworld.com",
+      "tipo": "blog-campo",
+      "perfis": ["road-trip"],
+      "destinos": ["sardenha"],
+      "sinais_presenca": ["mapa interativo Google da própria viagem de 2 semanas, 4 bases"],
+      "falta_pra_em_teste": "abrir a página: fotos próprias? eco?",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    },
+    {
+      "id": "jillonjourney",
+      "dominio": "jillonjourney.com",
+      "tipo": "blog-campo",
+      "perfis": ["road-trip"],
+      "destinos": ["sardenha"],
+      "sinais_presenca": ["3 semanas com mapa interativo, relato próprio"],
+      "falta_pra_em_teste": "data da visita",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    },
+    {
+      "id": "voyagefox",
+      "dominio": "voyagefox.net",
+      "tipo": "blog-campo",
+      "perfis": ["road-trip"],
+      "destinos": ["sardenha"],
+      "sinais_presenca": ["7 dias com mapa + hidden gems"],
+      "falta_pra_em_teste": "risco de listicle — checar imprevistos narrados",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    },
+    {
+      "id": "charlotteplansatrip",
+      "dominio": "charlotteplansatrip.com",
+      "tipo": "blog-campo",
+      "perfis": ["road-trip", "casal"],
+      "destinos": ["corsica"],
+      "sinais_presenca": ["3 itinerários, relato de lua-de-mel próprio"],
+      "falta_pra_em_teste": "My Maps próprio?",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    },
+    {
+      "id": "amoureux-du-monde",
+      "dominio": "amoureux-du-monde.com",
+      "tipo": "blog-campo",
+      "perfis": ["casal", "road-trip"],
+      "destinos": ["corsica", "sardenha"],
+      "sinais_presenca": ["relato próprio de Sartène/Bonifacio, bilíngue"],
+      "falta_pra_em_teste": "datas",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    },
+    {
+      "id": "francevoyager",
+      "dominio": "francevoyager.com",
+      "tipo": "blog-campo",
+      "perfis": ["road-trip"],
+      "destinos": ["corsica"],
+      "sinais_presenca": ["fotos próprias no sentier de Bonifacio"],
+      "falta_pra_em_teste": "rota mapeada?",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    },
+    {
+      "id": "ontheluce",
+      "dominio": "ontheluce.com",
+      "tipo": "blog-campo",
+      "perfis": ["walking-tour"],
+      "destinos": ["paris"],
+      "sinais_presenca": ["rota de 3,8km no Marais com mapa e direções próprias"],
+      "falta_pra_em_teste": "teste imediato possível: comparar com o tour do repo (marais/)",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    },
+    {
+      "id": "tinyfootstepstravel",
+      "dominio": "tinyfootstepstravel.com",
+      "tipo": "blog-campo",
+      "perfis": ["familia-crianca"],
+      "destinos": ["sardenha"],
+      "sinais_presenca": ["guia with-kids atualizado"],
+      "falta_pra_em_teste": "esteve com criança própria?",
+      "estado": "candidata",
+      "eventos": [
+        {"data": "2026-08-08", "tipo": "entrada", "origem": "auditoria", "nota": "AUDITORIA-RELATORIO-2026-08-08.md §6.6 · sinal só de snippet"}
+      ]
+    }
+  ]
+}

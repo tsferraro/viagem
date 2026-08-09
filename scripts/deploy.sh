@@ -29,7 +29,7 @@ if [ -z "$COMMIT_MSG" ] || [ -z "$SUBDIR" ] || [ -z "$NEW_SLUG" ]; then
   exit 2
 fi
 
-if [ "$SUBDIR" = "archive" ] || [ "$SUBDIR" = "scripts" ] || [ "$SUBDIR" = "templates" ] || [ "$SUBDIR" = "references" ] || [ "$SUBDIR" = "skills" ]; then
+if [ "$SUBDIR" = "archive" ] || [ "$SUBDIR" = "scripts" ] || [ "$SUBDIR" = "templates" ] || [ "$SUBDIR" = "references" ] || [ "$SUBDIR" = "skills" ] || [ "$SUBDIR" = "entregas" ] || [ "$SUBDIR" = "fontes" ]; then
   echo "❌ SUBDIR '$SUBDIR' é reservado · use nome de viagem (nyc, corsica, etc)"
   exit 2
 fi
