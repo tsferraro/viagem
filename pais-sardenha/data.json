@@ -1347,13 +1347,13 @@
     },
     {
       "date": "Qua 12/Ago",
-      "tema": "Càbras → Maladroxia · transição sul",
-      "temaCurto": "Maladroxia",
+      "tema": "Cagliari · Castello a pé · depois Maladroxia",
+      "temaCurto": "Cagliari",
       "bairro": "🛫 Transit",
       "grupo": true,
-      "cor": "#ea580c",
-      "gradA": "#7c2d12",
-      "gradB": "#9a3412",
+      "cor": "#7c3aed",
+      "gradA": "#4c1d95",
+      "gradB": "#5b21b6",
       "stops": [
         {
           "hora": "09:30",
@@ -1362,13 +1362,13 @@
           "tipo": "card",
           "risco": "green",
           "nome": "Check-out Oristano",
-          "cat": "Saída tranquila",
-          "sobre": "Saída leve depois de 4 noites em Càbras. Drive até Maladroxia (Sant'Antioco island) ~2h pela SS131 + SS195. Almoço no caminho ou em Maladroxia depois do check-in. Tobia segue também — todos vão pra mesma base de praia.",
+          "cat": "Saída 10:00 · o dia tem hora marcada no fim",
+          "sobre": "Dia com <strong>duas âncoras rígidas</strong>: sair de Oristano às 10:00 e chegar em Maladroxia às 17:30 pro check-in. Entre as duas cabem ~4h de Cagliari, e não sobra folga — cada 15min de atraso aqui sai do Castello, não da estrada.",
           "imperdivel": "Banho rápido na lagoa rasa de Maladroxia ao chegar",
           "dicas": [
-            "SS131 → SS130 → SS195 Sant'Antioco · estrada boa, ~2h",
-            "Almoço Iglesias no caminho · cidade mineira interessante (não obrigatório)",
-            "Maladroxia tem só hospedagens · poucos restaurantes · check-in 16h"
+            "Saída às <strong>10:00</strong> · encher o tanque antes de pegar a SS131",
+            "Levar água, chapéu e protetor · o passeio de hoje é todo ao ar livre",
+            "Sapato de sola firme — o calçamento do Castello é irregular e a descida do Bastião é longa"
           ],
           "duracao": "1h checkout",
           "custo": "Grátis",
@@ -1383,59 +1383,330 @@
           "mapsQuery": "Via XX Settembre 31, Oristano"
         },
         {
-          "hora": "11:00",
+          "hora": "10:00",
           "emoji": "🚗",
-          "periodo": "tarde",
+          "periodo": "manha",
           "tipo": "transit",
-          "nome": "Oristano → Maladroxia (Sant'Antioco)",
-          "cat": "~2h · SS131 + SS195 · entra em Sant'Antioco pela ponte",
+          "nome": "Oristano → Cagliari",
+          "cat": "~1h10 · 95km · SS131 direto",
           "coord": {
-            "lat": 38.9989,
-            "lng": 8.4489
+            "lat": 39.22778,
+            "lng": 9.11111
           }
         },
         {
-          "hora": "13:30",
-          "emoji": "🍝",
-          "periodo": "tarde",
-          "tipo": "opcoes",
-          "nome": "Almoço · Iglesias ou chegada Maladroxia",
-          "cat": "Cidade mineira ou direto base",
+          "hora": "11:20",
+          "emoji": "🅿️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Estacionar · Parcheggio Regina Elena (Viale Regina Elena)",
+          "cat": "628 vagas · coberto · no pé do Bastião",
+          "valeAPena": 1,
+          "poiCat": "atracao",
           "coord": {
-            "lat": 39.0664,
-            "lng": 8.4522
+            "lat": 39.21603,
+            "lng": 9.11638
           },
-          "opcoes": [
+          "coord_unverified": true,
+          "mapsQuery": "Parcheggio Regina Elena APCOA, Viale Regina Elena, Cagliari",
+          "sobre": "O estacionamento certo pra este dia não é o mais perto do começo do passeio — é o mais perto do <em>fim</em>. O <strong>Regina Elena</strong> é um multipiano coberto de <strong>628 vagas</strong> no viale Regina Elena, na zona <em>debaixo</em> do Bastião de Saint Remy. Vocês sobem ao Castello de ônibus, atravessam o platô a pé, descem a escadaria do Bastião — e caem em cima do carro. Nenhuma subida nas pernas, nenhum retorno pelo mesmo caminho, e o carro esperando na sombra no fim de uma tarde de agosto.",
+          "imperdivel": "Guardar o ticket na carteira, não no carro: é multipiano com cancela, o pagamento é na máquina antes de voltar pro veículo",
+          "dicas": [
+            "Tarifa: <strong>~€1,20-1,60/h com teto diário de €5-8</strong> (ago/2026) · <strong>[a confirmar no local]</strong> — dois agregadores dão números diferentes e não achei a tabela oficial da APCOA",
+            "<strong>Subida:</strong> ônibus <strong>CTM linha 7</strong>, que faz o anel piazza Yenne → Castello → Villanova → via Roma → piazza Yenne a cada 30min · saltar em <strong>piazza Indipendenza</strong> (é o ponto que o próprio museu indica)",
+            "⚠️ <strong>Confiram no app CTM ou no Maps qual ponto da linha 7 serve o estacionamento</strong> — a linha passa por Villanova, mas não achei o mapa de pontos com esse detalhe",
+            "⛔ <strong>Não contem com o elevador do Bastião</strong>: por ordem de serviço ARST 1/2026 ele fica <strong>fechado das 11:00 às 15:15 todos os dias</strong> — e em dia de alerta de calor, até as 18:00",
+            "O pino deste card cai no <strong>Bastião, logo acima</strong> — a entrada do estacionamento fica embaixo, no viale Regina Elena · o botão Abrir no Maps leva à garagem"
+          ],
+          "duracao": "10min pra estacionar",
+          "custo": "€5-8 o dia (ago/2026) · [a confirmar]",
+          "acessibilidade": "Multipiano com elevador interno · saída direto pro viale Regina Elena, no plano",
+          "fontes": [
             {
-              "nome": "Iglesias · almoço no centro histórico",
-              "desc": "Cidade mineira · 30min de desvio · várias trattorias na Piazza Sella e arredores · escolha no local",
-              "preco": "€20-30",
-              "valeAPena": 2,
-              "poiCat": "restaurante",
-              "dist": "30min de desvio pela SS126",
-              "mapsQuery": "Iglesias, Sardegna"
+              "o": "APCOA Parking · Regina Elena",
+              "u": "https://www.apcoa.it/en/parking-in/cagliari/regina-elena/",
+              "prova": [
+                "628 vagas"
+              ]
             },
             {
-              "nome": "Continua até Maladroxia (rápido)",
-              "desc": "Almoço tardio na praia · ganha tempo · mais cedo na hospedagem",
-              "preco": "—",
-              "dist": "sem desvio · segue direto",
-              "valeAPena": 1,
-              "poiCat": "restaurante"
-            },
-            {
-              "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16, Sant'Antioco)",
-              "desc": "Chegar e almoçar na base, sem desvio · terraço com vista de mar",
-              "preco": "€25-35",
-              "valeAPena": 1,
-              "poiCat": "restaurante",
-              "dist": "na própria base",
-              "mapsQuery": "Lu' Hotel Maladroxia, Via Golfo di Palmas 16, Sant'Antioco"
+              "o": "Comune di Cagliari · portale ufficiale",
+              "u": "https://www.comune.cagliari.it/portale/page/it/ascensori_cittadini_chiusure_parziali_per_il_caldo_dall1_luglio?contentId=NVT260179",
+              "prova": [
+                "fechado das 11:00 às 15:15"
+              ]
             }
           ]
         },
         {
-          "hora": "16:00",
+          "hora": "11:45",
+          "emoji": "🏰",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Castello · o bairro murado no alto (walking tour)",
+          "cat": "4 paradas · ~900m · ~90min · platô plano",
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.22111,
+            "lng": 9.11583
+          },
+          "mapsQuery": "Piazza Indipendenza, Cagliari",
+          "sobre": "<strong>Castello não é um castelo</strong> — é um bairro inteiro, murado, no alto de um morro de cerca de <strong>100 metros</strong>. Os pisanos fortificaram a colina em meados do <strong>século XIII</strong> e chamaram aquilo de <em>Castel di Castro</em>: ali moravam os nobres e ficavam os poderes político, militar e religioso. Os outros três bairros históricos de Cagliari — <strong>Marina</strong> (o porto), <strong>Stampace</strong> e <strong>Villanova</strong> — cresceram <em>aos pés dele</em>, e eram onde vivia o povo. A sacada pra andar por lá: <strong>as torres não são pontos do passeio, são as portas</strong>. A dell'Elefante é a entrada que vem de Stampace, a Torre dell'Aquila (hoje embutida no Palazzo Boyl, sob o Arco delle Grazie) é a que vem da Marina, e o Bastião de Saint Remy é a que vem de Villanova. Então o passeio não é ir-e-voltar entre monumentos: é <em>entrar por uma porta, atravessar o platô e sair por outra</em>.",
+          "imperdivel": "Na <strong>Torre dell'Elefante</strong>, procure na saliência ao lado da grade levadiça a pequena escultura de <strong>elefante</strong> — é um dos símbolos de Pisa, e é dela que a torre tira o nome. Foi ali, na mesma grade, que os governantes espanhóis penduravam em <em>gaiolas</em> as cabeças dos condenados executados",
+          "dicas": [
+            "○ <strong>Piazza Indipendenza · Torre di San Pancrazio</strong> — construída em <strong>1305</strong> pelo arquiteto sardo <strong>Giovanni Capula</strong>, a 90m acima do mar. Ela e a dell'Elefante são <em>gêmeas e complementares</em>: esta vigia o interior da ilha, a outra vigia o porto. Sob domínio aragonês virou cadeia",
+            "Ⓐ <strong>Piazza Palazzo · Cattedrale di Santa Maria</strong> — erguida pelos pisanos no início do <strong>século XIII</strong>, catedral desde <strong>1258</strong>. <strong>Entrada grátis.</strong> Repare que o <em>campanário é a única peça que sobrou do edifício românico</em> — o resto ganhou roupagem barroca depois. Na mesma praça estão o <strong>Palazzo Regio</strong> (residência dos vice-reis aragoneses, espanhóis e saboianos) e o <strong>Palazzo di Città</strong>, que foi a prefeitura da Idade Média até o início do século XX",
+            "Ⓐ Descendo pela cripta: o <strong>Santuário dos Mártires</strong> é inteiramente escavado na rocha, mandado abrir pelo arcebispo Francisco de Esquivel entre <strong>1605 e 1624</strong> pra guardar as relíquias dos mártires cagliaritanos · inaugurado em <strong>27 de novembro de 1618</strong>",
+            "Ⓑ <strong>Torre dell'Elefante</strong> — <strong>1307</strong>, o mesmo Capula, dois anos depois da gêmea. Cerca de <strong>31 metros</strong> (42 no ponto mais alto), quatro andares com galerias de madeira. Virou prisão em meados do século XIX e foi restaurada em <strong>1906</strong> de volta ao estado pisano. <strong>Subir custa €3 (€2 acima de 65 anos), são 119 degraus e não tem acessibilidade</strong> — a vista abre pro porto e pra cidade baixa, mas é decisão individual: quem não subir espera na sombra da base",
+            "Ⓒ <strong>Bastião de Saint Remy</strong> — não é medieval como as torres: a <strong>Terrazza Umberto I</strong> e a <em>Passeggiata Coperta</em> foram projetadas em <strong>1896</strong> por Giuseppe Costa e Fulgenzio Setti, a partir de uma ideia do arquiteto Gaetano Cima, e inauguradas em <strong>1902</strong> — colunas de calcário branco e amarelo com capitéis coríntios, sobre os baluartes medievais aplainados do Sperone e da Zecca. Leva o nome do <em>primeiro vice-rei piemontês</em>, o barão de Saint Remy. A escadaria dupla e o arco triunfal foram <strong>arrasados pelos bombardeios de 1943</strong> e reconstruídos depois",
+            "Ⓒ <strong>Os terraços são de graça</strong> · só a galeria coberta cobra (€3 · €2 reduzido) e fecha <strong>13h-15h</strong> · daqui sai a descida que termina no carro, na piazza Costituzione",
+            "⚠️ <strong>13h-15h o Castello fecha</strong> — Torre dell'Elefante e a galeria do Bastião só reabrem às 15h. Cheguem na piazza Indipendenza <strong>até 11h45</strong> ou o passeio perde as torres",
+            "Os pinos da Catedral e do estacionamento são aproximados · os da San Pancrazio, Elefante e Bastião vêm de coordenada conferida"
+          ],
+          "duracao": "~90min sem subir a torre · +30min com",
+          "custo": "Grátis (catedral e terraços) · €3 por torre, €2 acima de 65 (ago/2026)",
+          "acessibilidade": "O platô é plano e o percurso todo se faz por cima · a <strong>descida</strong> do Bastião é escadaria longa mas é só descer · a Torre dell'Elefante tem 119 degraus e não é acessível · calçamento irregular o tempo todo",
+          "fontes": [
+            {
+              "o": "Cagliari Turismo · Comune di Cagliari · quartiere Castello",
+              "u": "https://cagliariturismo.comune.cagliari.it/en/vivicagliari/castello-district",
+              "prova": [
+                "100 metros",
+                "século XIII",
+                "século XX",
+                "primeiro"
+              ]
+            },
+            {
+              "o": "Comune di Cagliari · Torre dell'Elefante",
+              "u": "https://www.comune.cagliari.it/portale/page/it/torre_dellelefante",
+              "prova": [
+                "1307",
+                "119 degraus",
+                "€3",
+                "€2 acima de 65",
+                "65 anos",
+                "10h-13h",
+                "15h-19h",
+                "13h",
+                "15h"
+              ]
+            },
+            {
+              "o": "SardegnaCultura · Regione Sardegna · Bastione di Saint-Remy",
+              "u": "https://www.sardegnacultura.it/en/articles/cagliari-bastione-saint-remy",
+              "prova": [
+                "1896",
+                "1902",
+                "1943"
+              ]
+            },
+            {
+              "o": "SardegnaTurismo · Cattedrale di Santa Maria di Castello",
+              "u": "https://www.sardegnaturismo.it/en/explore/cathedral-santa-maria-di-castello",
+              "prova": [
+                "1258",
+                "1605",
+                "1624",
+                "1618",
+                "novembro",
+                "século XIII",
+                "única"
+              ]
+            },
+            {
+              "o": "Wikipedia · Torre di San Pancrazio / Torre dell'Elefante (datas, alturas e coordenadas)",
+              "u": "https://en.wikipedia.org/wiki/Torre_di_San_Pancrazio",
+              "prova": [
+                "1305",
+                "90m",
+                "31 metros",
+                "mais alto",
+                "1906",
+                "século XIX",
+                "900m",
+                "130m"
+              ]
+            },
+            {
+              "o": "Horários deste dia · aritmética sobre os horários oficiais acima",
+              "u": "https://www.comune.cagliari.it/portale/page/it/torre_dellelefante",
+              "prova": [
+                "90min",
+                "11h45"
+              ]
+            }
+          ],
+          "walkingTours": [
+            {
+              "nome": "Castello · 🏰 A Cidade de Cima",
+              "descricao": "Piazza Indipendenza → Piazza Palazzo → Torre dell'Elefante → Bastião de Saint Remy · ~900m · norte→sul pelo platô, tudo no plano, descida só no fim · ~90min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Piazza Indipendenza · Torre di San Pancrazio",
+                  "coord": {
+                    "lat": 39.22111,
+                    "lng": 9.11583
+                  },
+                  "mapsQuery": "Torre di San Pancrazio, Cagliari"
+                },
+                {
+                  "n": 2,
+                  "nome": "Piazza Palazzo · Cattedrale di Santa Maria",
+                  "coord": {
+                    "lat": 39.2192,
+                    "lng": 9.1166
+                  },
+                  "mapsQuery": "Cattedrale di Santa Maria, Piazza Palazzo, Cagliari"
+                },
+                {
+                  "n": 3,
+                  "nome": "Torre dell'Elefante",
+                  "coord": {
+                    "lat": 39.21796,
+                    "lng": 9.11492
+                  },
+                  "mapsQuery": "Torre dell'Elefante, Cagliari"
+                },
+                {
+                  "n": 4,
+                  "nome": "Bastione di Saint Remy · Terrazza Umberto I",
+                  "coord": {
+                    "lat": 39.21603,
+                    "lng": 9.11638
+                  },
+                  "mapsQuery": "Bastione di Saint Remy, Piazza Costituzione, Cagliari"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:15",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Castello ou Marina",
+          "cat": "Cai no buraco em que tudo fecha · é a hora certa de sentar",
+          "coord": {
+            "lat": 39.21603,
+            "lng": 9.11638
+          },
+          "opcoes": [
+            {
+              "nome": "Terraço no Castello, sem sair do platô",
+              "desc": "As 13h-15h em que os monumentos fecham são exatamente as de almoçar. O Castello tem restaurantes com terraço sobre a muralha, olhando o Golfo degli Angeli. <strong>[a confirmar no local]</strong> — não consegui verificar endereço nem dia de fechamento de nenhum deles, e neste roteiro 15 restaurantes de 55 se revelaram fantasmas na conferência. Escolham na hora, olhando a porta aberta",
+              "preco": "€25-40",
+              "valeAPena": 1,
+              "poiCat": "restaurante",
+              "dist": "no próprio percurso",
+              "noMaps": true
+            },
+            {
+              "nome": "Quartiere Marina · as ruelas de restaurante ao pé do Castello",
+              "desc": "Bairro histórico do porto, colado embaixo do Castello, com a maior concentração de restaurantes da cidade velha. Mais barato e mais sombreado que o platô — as ruelas são estreitas e o sol não entra",
+              "preco": "€18-30",
+              "valeAPena": 1,
+              "poiCat": "restaurante",
+              "dist": "descendo do Castello",
+              "mapsQuery": "Quartiere Marina, Cagliari"
+            },
+            {
+              "nome": "Comer leve e guardar fome pro jantar em Maladroxia",
+              "desc": "Opção honesta: com 1h30 de estrada às 15h45 e check-in às 17h30, um almoço pesado no calor cobra caro no carro. Panino e água, e o jantar de verdade na ilha",
+              "preco": "€8-12",
+              "valeAPena": 1,
+              "poiCat": "cafe",
+              "dist": "onde der",
+              "noMaps": true
+            }
+          ],
+          "noMaps": true
+        },
+        {
+          "hora": "14:15",
+          "emoji": "🏺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Museu Arqueológico Nacional · opcional, e é o refúgio do calor",
+          "cat": "Cittadella dei Musei · aberto direto, sem pausa · com ar",
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.22189,
+            "lng": 9.11689
+          },
+          "mapsQuery": "Museo Archeologico Nazionale, Piazza Arsenale 1, Cagliari",
+          "sobre": "Fica na <strong>Cittadella dei Musei</strong> (piazza Arsenale 1), entre a Porta Cristina e a piazza Indipendenza — ou seja, <em>a 130m da parada de abertura do walking tour</em>. Foi erguida sobre o antigo arsenal real e virou Cittadella dei Musei em <strong>1979</strong>. <strong>É opcional de propósito</strong>: entra no dia se o calor vencer ou se sobrar gás, e está aberto justamente no buraco das 13h-15h em que as torres fecham. <strong>Um aviso que muda a decisão</strong>: os <strong>Gigantes de Mont'e Prama não estão mais aqui</strong>. Em <strong>fevereiro de 2026</strong> as estátuas foram embaladas e voltaram definitivamente pra Càbras, depois de cinquenta anos em Cagliari — vocês viram a coleção inteira no dia 11. Praticamente todo guia ainda vende este museu como \"o museu dos Gigantes\"; não é mais. O que fica é a coleção nurágica de bronzetti e o acervo fenício-púnico, que seguem excelentes.",
+          "imperdivel": "Os <em>bronzetti</em> nurágicos — figuras de bronze de poucos centímetros, com arqueiros, chefes e lutadores, feitas pela mesma civilização que ergueu os nuraghes que vocês vão ver a viagem toda",
+          "dicas": [
+            "<strong>Aberto 8:30-19:30 todos os dias, sem pausa de almoço</strong> · bilheteria fecha 18:45 (ago/2026)",
+            "<strong>€10</strong> o bilhete combinado com a Pinacoteca (ago/2026)",
+            "<strong>Tem ar-condicionado</strong> — é o motivo pragmático de ele estar no roteiro nesta hora",
+            "Se entrarem, encaixem <strong>antes</strong> de descer o Bastião: a Cittadella fica na ponta norte do platô, e voltar lá depois é refazer o caminho todo no calor",
+            "1h resolve a parte nurágica · o acervo completo pede 2h, que vocês não têm hoje"
+          ],
+          "duracao": "1h (nurágico) · 2h (completo)",
+          "custo": "€10 combinado com a Pinacoteca (ago/2026)",
+          "acessibilidade": "Museu moderno, com elevador · o percurso interno é plano",
+          "fontes": [
+            {
+              "o": "Musei Nazionali di Cagliari · Ministero della Cultura",
+              "u": "https://museinazionalicagliari.cultura.gov.it/visita/orari-e-biglietteria/orari-e-biglietteria/",
+              "prova": [
+                "8:30-19:30",
+                "18:45",
+                "€10"
+              ]
+            },
+            {
+              "o": "CagliariToday · os Gigantes deixam a Cittadella",
+              "u": "https://www.cagliaritoday.it/cronaca/giganti-di-monte-prama-lasciano-cagliari.html",
+              "prova": [
+                "fevereiro de 2026",
+                "cinquenta anos"
+              ]
+            },
+            {
+              "o": "Cagliari Turismo · Cittadella dei Musei",
+              "u": "https://cagliariturismo.comune.cagliari.it/en/vivicagliari/citadel-museums",
+              "prova": [
+                "1979",
+                "piazza Arsenale 1"
+              ]
+            },
+            {
+              "o": "Comune di Cagliari · horários dos monumentos do Castello",
+              "u": "https://www.comune.cagliari.it/portale/page/it/torre_dellelefante",
+              "prova": [
+                "13h",
+                "15h",
+                "130m",
+                "1h",
+                "2h"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:45",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Cagliari → Maladroxia (Sant'Antioco)",
+          "cat": "~1h30 · saída às 15:45 pra chegar 17:30",
+          "coord": {
+            "lat": 39.21603,
+            "lng": 9.11638
+          }
+        },
+        {
+          "hora": "17:30",
           "emoji": "🏠",
           "periodo": "tarde",
           "tipo": "card",
@@ -1519,7 +1790,7 @@
           ]
         }
       ],
-      "nota": "Dia de mudar de base: Sinis fica pra trás, o Sulcis começa. São 2h de estrada e nada mais marcado — se quiserem esticar em Iglesias no caminho, o dia aguenta. Maladroxia é praia rasa e calma, feita pra chegar e não fazer nada."
+      "nota": "Dia de transição com uma cidade no meio: 1h10 até <strong>Cagliari</strong>, ~4h de chão lá, e mais 1h30 até a base nova em Maladroxia. <strong>A janela cai no pior horário de agosto</strong> — das 13h às 15h o Castello inteiro fecha, e a prefeitura desliga os elevadores públicos nas horas quentes. Por isso o dia é desenhado ao contrário do óbvio: <strong>sobe-se ao platô assim que chega</strong>, anda-se no plano lá em cima, e a única escada é a <em>descida</em> do Bastião — que termina em cima do carro. Quem não aguentar o calor tem o museu com ar-condicionado como plano B, e ele é o único aberto no buraco das 13-15h."
     },
     {
       "date": "Qui 13/Ago",
@@ -3862,6 +4133,30 @@
         {
           "modo": "carro",
           "texto": "~2h · ~150km · SS131 até Villamassargia, depois SS126 · entra na ilha pelo istmo de Sant'Antioco"
+        },
+        {
+          "modo": "rota",
+          "texto": "Sant'Antioco é ilha ligada por istmo rodoviário — não tem ferry, entra-se de carro direto"
+        }
+      ]
+    },
+    "Oristano → Cagliari": {
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "~1h10 · ~95km · SS131 Carlo Felice direto pro sul · sem pedágio"
+        },
+        {
+          "modo": "rota",
+          "texto": "Estacionar no multipiano Regina Elena (viale Regina Elena, sob o Bastião) e subir ao Castello de ônibus — a linha 7 da CTM faz o anel por Castello a cada 30min"
+        }
+      ]
+    },
+    "Cagliari → Maladroxia (Sant'Antioco)": {
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "~1h30 · ~95km · saída de Cagliari pela SS130/SS126 rumo a Iglesias e Sant'Antioco"
         },
         {
           "modo": "rota",
