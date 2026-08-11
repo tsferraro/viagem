@@ -30,7 +30,7 @@ A `destination-scout` (skill em `skills/destination-scout/`) é o **degrau 0** �
 | Conceito na scout | Dimensão nesta rubrica | Reuso |
 |---|---|---|
 | `audience-profiles.md` · perfis × eixos | D6 Adaptação ao Público | Calibrar pelo elo mais restritivo; sempre perguntar idade |
-| `mapping-rubric.md` · veredito 🟢🟡🔴 | D8 Honestidade (honestidade **na prosa**) | Recomendação (faça/depende/pula). ⚠️ **NÃO é o campo `risco`** — ver nota abaixo |
+| `mapping-rubric.md` · veredito 🏆⚠️⏭️ | D8 Honestidade (honestidade **na prosa**) | Recomendação (entra/talvez/pula). ⚠️ **NÃO é o campo `risco`** — ver nota abaixo |
 | `mapping-rubric.md` · logística obrigatória | D3 Logística & Precisão | Distância km, ingresso datado, reserva, horário, ⚠️ segurança |
 | `prose-guide.md` · gancho, factual, sem floreio | D1 Storytelling & Escrita | Padrão-ouro Marais + guia que encanta pra gorjeta |
 | Anti-invenção (preços datados, sem URL inventada) | D3, D5, D7 | Base dos checks automatizáveis do audit |
@@ -40,10 +40,10 @@ A `destination-scout` (skill em `skills/destination-scout/`) é o **degrau 0** �
 
 > ⚠️ **Honestidade sobre "uma fonte de verdade"**: os *conceitos* (semântica do veredito, anti-invenção) têm dono único (`mapping-rubric.md`). Mas os *thresholds operacionais* (preço datado = `(mês/ano)`, ≤6 cards/dia, 4-8 stops/WT, ≥150 chars) estão **operacionalizados como regex no `audit.py`** — que é uma redefinição lossy da regra em prosa. Ou seja: mudar a regra na prosa NÃO propaga sozinho pro regex; é sincronização manual. Estrutural puro (temaCurto, enums, coord-range) tem dono único de verdade: o `validate.py` (o `audit.py` **não** re-checa isso, pra não duplicar).
 
-> ⚠️ **`risco` (roteiro) ≠ veredito 🟢🟡🔴 (scout)** — escalas diferentes, não confundir:
+> ⚠️ **`risco` (roteiro) ≠ veredito 🏆⚠️⏭️ (scout)** — escalas diferentes, não confundir:
 > - **`risco`** do roteiro = **multidão/esforço** operacional (green=tranquilo · yellow=atenção · red=Times Square lotada). É um aviso de campo, não uma recomendação.
-> - **veredito** da scout = **recomendação** (🟢 faça · 🟡 depende · 🔴 pula sem culpa).
-> - Uma atração linda porém lotada é `risco=red` **mas** 🟢 *faça*. No roteiro o veredito 🔴 já foi "consumido" (o que não valia foi cortado na curadoria); o que sobra expressa honestidade **na prosa** (`sobre`/`dicas` com "pula sem culpa"), não num campo. Por isso **D8 audita honestidade no texto**, e usa a distribuição de `risco` só como proxy de "nem tudo é rosa" — não como se `risco` fosse o veredito.
+> - **veredito** da scout = **recomendação** (🏆 entra · ⚠️ talvez · ⏭️ pula sem culpa). Até 2026-08-09 usava 🟢🟡🔴 — trocado justamente porque as cores colidiam com `risco` (Lote 7d); o `audit.py --scout` aceita os dois vocabulários e entregas antigas não serão reescritas.
+> - Uma atração linda porém lotada é `risco=red` **mas** 🏆 *entra*. No roteiro o veredito ⏭️ já foi "consumido" (o que não valia foi cortado na curadoria); o que sobra expressa honestidade **na prosa** (`sobre`/`dicas` com "pula sem culpa"), não num campo. Por isso **D8 audita honestidade no texto**, e usa a distribuição de `risco` só como proxy de "nem tudo é rosa" — não como se `risco` fosse o veredito.
 
 ---
 
@@ -187,7 +187,7 @@ A mesma skill (`--scout`) audita os levantamentos da `destination-scout` — out
 | # | Dimensão | 4 (excelente) | 0 (ruim) |
 |---|---|---|---|
 | S1 | **Anti-invenção & Preços** | Todo preço datado "(mês/ano)" | Maioria dos preços sem data |
-| S2 | **Veredito & Honestidade** | 🟢🟡🔴 por atração + armadilha sinalizada + zero hype | Nenhum veredito (vira folder de agência) |
+| S2 | **Veredito & Honestidade** | 🏆⚠️⏭️ por atração (ou 🟢🟡🔴 em entrega anterior a 2026-08-09) + armadilha sinalizada + zero hype | Nenhum veredito (vira folder de agência) |
 | S3 | **Logística & Precisão** | Distância em km/min (não "perto") + ingresso/reserva/horário | Tudo vago |
 | S4 | **Fontes & Verificação** | Seção Fontes presente | Sem Fontes **no macro** (opcional em pra-terceiros/mini) |
 | S5 | **Estrutura & Cobertura** | Resumo no topo · mapeamento antes de história · sabores-assinatura · clusters | Ordem trocada, sem sabores, sem clusters |

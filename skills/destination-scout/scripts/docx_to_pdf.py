@@ -54,7 +54,16 @@ pdfmetrics.registerFontFamily("DejaVu", normal="DejaVu", bold="DejaVu-Bold",
 
 import re as _re
 def emoji_fix(t):
+    # Vereditos viram bolinha colorida: a DejaVu não cobre emoji, e sem isto o veredito
+    # SUMIA do PDF (o strip abaixo come 🏆 e ⚠️). Vocabulário novo (🏆⚠️⏭️ · Lote 7d) e o
+    # antigo (🟢🟡🔴, entregas até 2026-08-09) convivem — as duas famílias mapeadas.
+    # As formas com variation selector (️) vêm ANTES da linha que remove o seletor.
     reps = {
+        "🏆": '<font color="#1a7f37">●</font>',
+        "⚠️": '<font color="#d4a017">●</font>',
+        "⚠": '<font color="#d4a017">●</font>',
+        "⏭️": '<font color="#6b7280">●</font>',
+        "⏭": '<font color="#6b7280">●</font>',
         "🟢": '<font color="#1a7f37">●</font>',
         "🟡": '<font color="#d4a017">●</font>',
         "🔴": '<font color="#d11d1d">●</font>',

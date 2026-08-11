@@ -42,7 +42,7 @@ Chapada dos Veadeiros, 2026: a pesquisa começou como "família com filha de 3 a
 
 | Eixo | Como o perfil muda |
 |---|---|
-| **Veredito** 🟢🟡🔴 | Mesma trilha: 🔴 família / 🟡 amigas / 🟢 mochileiro |
+| **Veredito** 🏆⚠️⏭️ | Mesma trilha: ⏭️ família / ⚠️ amigas / 🏆 mochileiro |
 | **Tom** | Cuidadoso (família) ↔ animado (amigas) ↔ romântico (casal) |
 | **Logística destacada** | Carrinho · fôlego · acessibilidade · balada · banheiro |
 | **Orçamento** | Econômico (mochileiro) ↔ experiência (casal/amigas) |

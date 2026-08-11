@@ -56,7 +56,7 @@
           },
           "valeAPena": 1,
           "poiCat": "atracao",
-          "mapsQuery": "Olbia"
+          "noMaps": true
         },
         {
           "hora": "18:30",
@@ -77,8 +77,8 @@
           "custo": "€15-25 de aperitivo pro casal (ago/2026)",
           "acessibilidade": "Corso Umberto é calçadão plano e fechado ao trânsito à noite · bancos a cada quarteirão",
           "coord": {
-            "lat": 40.9238,
-            "lng": 9.5026
+            "lat": 40.9236,
+            "lng": 9.5015
           },
           "valeAPena": 2,
           "poiCat": "atracao",
@@ -941,7 +941,7 @@
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço San Giovanni di Sinis (junto à entrada de Tharros)",
-          "cat": "Vila pesqueira ao lado de Tharros",
+          "cat": "Vila pesqueira ao lado de Tharros · ⚠️ o Maluentu NÃO serve almoço em dia de semana (só aos domingos) — ele fica pro jantar",
           "coord": {
             "lat": 39.87486,
             "lng": 8.44101
@@ -955,15 +955,6 @@
               "poiCat": "restaurante",
               "dist": "ao lado da entrada de Tharros",
               "mapsQuery": "San Giovanni di Sinis, Cabras, Sardegna"
-            },
-            {
-              "nome": "Da Cesare · Maluentu (Via Lungomare 36, Putzu Idu)",
-              "desc": "Hotel dos anos 1960 de frente pra praia, hoje com a cozinha do chef Leonardo Marongiu · 12km ao norte, ~20min · vale se quiserem trocar o almoço simples por um bom almoço",
-              "preco": "€40-60",
-              "valeAPena": 3,
-              "poiCat": "restaurante",
-              "dist": "12km ao norte · ~20min de carro",
-              "mapsQuery": "Maluentu, Putzu Idu, Sardegna"
             },
             {
               "nome": "Picnic na praia",
@@ -1050,12 +1041,22 @@
           "opcoes": [
             {
               "nome": "Da Cesare · Maluentu (Via Lungomare 36, Putzu Idu)",
-              "desc": "Se ainda estiverem na praia ao pôr do sol · cozinha do chef Leonardo Marongiu · tel. 0785 389021",
+              "desc": "Se ainda estiverem na praia ao pôr do sol · cozinha do chef Leonardo Marongiu · o restaurante serve JANTAR de segunda a sábado (almoço só aos domingos — confirmado no site do hotel) · tel. +39 347 494 5397",
               "preco": "€40-60",
               "dist": "na própria praia",
               "valeAPena": 3,
               "poiCat": "restaurante",
-              "mapsQuery": "Maluentu, Putzu Idu, Sardegna"
+              "mapsQuery": "Maluentu, Putzu Idu, Sardegna",
+              "fontes": [
+                {
+                  "o": "Site oficial do hotel Da Cesare · Maluentu",
+                  "u": "https://www.maluentu.net/en/the-restaurant/",
+                  "prova": [
+                    "segunda a sábado",
+                    "domingos"
+                  ]
+                }
+              ]
             },
             {
               "nome": "Ristorante Blao (Via Mazzini 114, Oristano)",
@@ -1171,16 +1172,16 @@
           "risco": "yellow",
           "nome": "Museu Civico Cabras · Gigantes de Mont'e Prama",
           "cat": "Estatuária de tamanho real mais antiga do Mediterrâneo · séc. IX-VIII a.C.",
-          "sobre": "Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — bateram o arado numa pedra num campo ao pé da colina de Mont'e Prama. A pedra tinha <em>rosto</em>. Nas escavações que se seguiram saíram <strong>5.178 fragmentos</strong> de arenito, que levaram décadas de restauro em Li Punti (Sassari) até virarem as <strong>26 estátuas</strong> que vocês vão ver: guerreiros, arqueiros e pugilistas de dois metros e meio, com os olhos feitos de <em>dois círculos concêntricos</em> gravados na pedra. A datação — <strong>séc. IX-VIII a.C.</strong> — é a parte que desestabiliza: são anteriores aos <em>kouroi</em> gregos arcaicos. Antes disso, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real fora do Egito. A civilização que as fez é a mesma que ergueu os nuraghi e é a mesma que vocês encontraram ontem em Tharros, quando os fenícios chegaram.",
+          "sobre": "Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — bateram o arado numa pedra num campo ao pé da colina de Mont'e Prama. A pedra tinha <em>rosto</em>. Nas escavações que se seguiram saíram <strong>5.178 fragmentos</strong> de arenito, que levaram décadas de restauro em Li Punti (Sassari) até virarem as <strong>25 estátuas</strong> que vocês vão ver — mais duas (um pugilista de Cavalupo e um arqueiro) somadas em jun/2026; as contagens publicadas variam com os novos achados: guerreiros, arqueiros e pugilistas de dois metros e meio, com os olhos feitos de <em>dois círculos concêntricos</em> gravados na pedra. A datação — <strong>séc. IX-VIII a.C.</strong> — é a parte que desestabiliza: são anteriores aos <em>kouroi</em> gregos arcaicos. Antes disso, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real fora do Egito. A civilização que as fez é a mesma que ergueu os nuraghi e é a mesma que vocês encontraram ontem em Tharros, quando os fenícios chegaram.",
           "imperdivel": "Os olhos: dois círculos concêntricos gravados, sem pupila. Não é estilização — é a assinatura do escultor nurágico, repetida em todas as 26 peças",
           "dicas": [
-            "Terça a domingo, 10h-18h · <strong>fecha às segundas</strong> (hoje é terça, está aberto)",
+            "Terça a domingo, <strong>9h-20h no verão</strong> (última entrada 19h) · <strong>fecha às segundas</strong> (hoje é terça, está aberto)",
             "Se compraram o integrado de €18 em Tharros ontem, hoje não paga nada — leve o bilhete",
             "A Sala del Paesaggio tem janela pra lagoa de Càbras com a colina de Mont'e Prama no horizonte: dá pra ver de onde eles saíram",
             "1h30 basta · o museu é pequeno e concentrado, não é um dia inteiro"
           ],
           "duracao": "1h30",
-          "custo": "Coberto pelo integrado de €18 comprado em Tharros · avulso a partir de €8 (ago/2026)",
+          "custo": "Coberto pelo integrado de €18 comprado em Tharros · avulso €5 (ago/2026)",
           "acessibilidade": "Total · museu acessível",
           "coord": {
             "lat": 39.9247,
@@ -1188,7 +1189,40 @@
           },
           "valeAPena": 3,
           "poiCat": "atracao",
-          "mapsQuery": "Museo Civico Giovanni Marongiu, Cabras"
+          "mapsQuery": "Museo Civico Giovanni Marongiu, Cabras",
+          "fontes": [
+            {
+              "o": "Fondazione Mont'e Prama · monteprama.it",
+              "u": "https://monteprama.it/il-sinis/museo-civico-giovanni-marongiu-cabras/",
+              "prova": [
+                "9h",
+                "20h",
+                "19h",
+                "€5",
+                "segundas",
+                "Terça a domingo"
+              ]
+            },
+            {
+              "o": "Museo Civico Cabras · bilheteria",
+              "u": "https://www.museocabras.it/en/visit-the-museum/entrance-fees/",
+              "prova": [
+                "€5",
+                "€18"
+              ]
+            },
+            {
+              "o": "ANSA Sardegna 24/06/2026",
+              "u": "https://www.ansa.it/sardegna/notizie/2026/06/24/il-museo-di-cabras-si-arricchisce-di-altri-due-giganti-di-monte-prama_d1953d26-6e40-40c3-b200-e8fc2368725d.html",
+              "tier": "editorial",
+              "data": "2026-08-09",
+              "prova": [
+                "25 estátuas",
+                "jun/2026",
+                "pugilista de Cavalupo e um arqueiro"
+              ]
+            }
+          ]
         },
         {
           "hora": "13:00",
@@ -1307,21 +1341,6 @@
                 {
                   "o": "Site oficial do Ristorante Il Caminetto (Cabras)",
                   "u": "https://www.ristoranteilcaminettocabras.com/"
-                }
-              ]
-            },
-            {
-              "nome": "Sa Funta (Via Giuseppe Garibaldi 25, Càbras)",
-              "desc": "Enguia defumada e choco na Vernaccia · cozinha de lagoa, pra paladar curioso · avaliações recentes fracas: vá pelo que é diferente, não pelo consenso",
-              "preco": "€30-45",
-              "dist": "12min de carro · Càbras",
-              "valeAPena": 2,
-              "poiCat": "restaurante",
-              "mapsQuery": "Sa Funta, Via Giuseppe Garibaldi 25, Cabras",
-              "fontes": [
-                {
-                  "o": "Sardinia Point · guia regional",
-                  "u": "https://sardiniapoint.it/guida-turistica/sardegna-ristoranti-sa-funta-cabras/"
                 }
               ]
             },
@@ -1831,11 +1850,11 @@
           "sobre": "Sant'Antioco é a 4ª maior ilha do Mediterrâneo, ligada à Sardenha por um istmo. O <strong>Pontimannu</strong>, a ponte romana do <strong>séc. I d.C.</strong> que fazia essa ligação, chamada localmente <em>Pontimannu</em> — única no gênero porque não vencia rio nem desnível: ligava a terra firme sarda à ilha atravessando <strong>uma série de ilhotas que formavam o istmo</strong> —, foi <em>aposentada em 1954</em>, quando abriram a estrada de variante por onde vocês vão passar. Hoje ela está ali ao lado, como monumento. Cidade fenícia chamada Sulci foi fundada no séc. VIII a.C. — uma das mais antigas civilizações de toda a Itália. Conjunto arqueológico no coração da cidade combina Tophet (necrópole infantil fenícia), Museu Barreca (artefatos fenício-púnicos), Basílica com catacumbas únicas (séc V cristãs sobre tumbas púnicas) e ruinas da tonnara (fábrica de atum séc XIX). Walking tour denso e único — Sardenha pré-nurágica e fenícia num só lugar.",
           "imperdivel": "Catacumbas cristãs construídas DENTRO de tumbas púnicas · Basilica Sant'Antioco Martire",
           "dicas": [
-            "○ <strong>Tophet</strong> — o campo de urnas fica na borda norte da cidade, encostado na rocha que os sardos chamam de <em>Sa Guardia de is Pingiadas</em>, 'a guarda das panelas' · são mais de 3.000 urnas de recém-nascidos e natimortos, consagrados a Tanit",
+            "○ <strong>Tophet</strong> — o campo de urnas fica na borda norte da cidade, encostado na rocha que os sardos chamam de <em>Sa Guardia de is Pingiadas</em>, 'a guarda das panelas' · são mais de 3.000 urnas de recém-nascidos e natimortos, consagrados a Tanit e Baal Hammon",
             "Ⓐ <strong>Museu MAB 'Ferruccio Barreca'</strong> — colado ao Tophet · €7 no cumulativo com o Tophet, €10 no bilhete único de todos os sítios (ago/2026) · aberto 9h-19h de março a outubro",
             "Ⓑ <strong>Basílica de Sant'Antioco Martire</strong> — 700m ao sul · as catacumbas cristãs do séc. V foram escavadas <em>dentro</em> de câmaras funerárias púnicas já existentes · os cristãos reaproveitaram o cemitério de quem os antecedeu",
             "Ⓒ <strong>Necrópole púnica</strong> — a poucos metros da basílica · até os anos 1970 famílias pobres da cidade <em>moravam</em> nestas tumbas escavadas na rocha; chamavam-se <em>is gruttas</em>",
-            "Ⓓ <strong>Tonnara de Cala Sapone</strong> — 6km ao sul (~12min de carro) · ruínas da armação de atum do séc. XIX, opcional se o dia render",
+            "Ⓓ <strong>Tonnara de Cala Sapone</strong> — ~11km ao sul (~15min de carro) · ruínas da armação de atum fundada na era de <strong>Filipe II (séc. XVI)</strong> e desmantelada em <strong>1825</strong>, opcional se o dia render",
             "Faça a parte de museu antes das 13h: a cidade é branca e reflete sol de um jeito que cansa rápido à tarde"
           ],
           "duracao": "3h-4h walking tour",
@@ -1854,8 +1873,8 @@
                   "n": 1,
                   "nome": "Tophet di Sant'Antioco (cemitério ritual)",
                   "coord": {
-                    "lat": 39.0706,
-                    "lng": 8.45
+                    "lat": 39.0756,
+                    "lng": 8.4508
                   },
                   "mapsQuery": "Tophet di Sant'Antioco, Sardegna"
                 },
@@ -1863,8 +1882,8 @@
                   "n": 2,
                   "nome": "Museo Barreca MAB (artefatos)",
                   "coord": {
-                    "lat": 39.0706,
-                    "lng": 8.45
+                    "lat": 39.0792,
+                    "lng": 8.4567
                   },
                   "mapsQuery": "Museo Archeologico Ferruccio Barreca, Sant'Antioco"
                 },
@@ -1890,8 +1909,8 @@
                   "n": 5,
                   "nome": "Tonnara ruins · Cala Sapone",
                   "coord": {
-                    "lat": 39.059,
-                    "lng": 8.448
+                    "lat": 39.0089,
+                    "lng": 8.3852
                   },
                   "mapsQuery": "Cala Sapone, Sant'Antioco"
                 }
@@ -1909,6 +1928,39 @@
             {
               "o": "Visit Sant'Antioco · portal oficial",
               "u": "https://visitsantantioco.info/en/vivi-santantioco/luoghi-dinteresse/ponte-romano/"
+            },
+            {
+              "o": "Idese · Ministero della Cultura · Tofet di Sulky",
+              "u": "https://idese.cultura.gov.it/place/tofet-di-sulky/",
+              "prova": [
+                "3.000",
+                "Tanit"
+              ]
+            },
+            {
+              "o": "LUDiCa/UniCa · Tonnara a Cala Sapone",
+              "u": "https://storia.dh.unica.it/storiedigitali/s/campiestivi_santantioco_2023/page/tonnara-a-cala-sapone",
+              "prova": [
+                "séc. XVI",
+                "1825",
+                "Filipe II"
+              ]
+            },
+            {
+              "o": "SardegnaNatura · spiaggia Cala Sapone (posição)",
+              "u": "https://www.sardegnanatura.com/esplora-la-sardegna/spiagge-sardegna/1233-spiaggia-cala-saboni-cala-sapone-sant-antioco.html",
+              "prova": [
+                "11km"
+              ]
+            },
+            {
+              "o": "Parco Storico Archeologico Sant'Antioco · Tofet",
+              "u": "https://parcostoricoarcheologicosantantioco.it/tofet/",
+              "tier": "oficial",
+              "data": "2026-08-09",
+              "prova": [
+                "Tanit e Baal Hammon"
+              ]
             }
           ]
         },
@@ -2313,18 +2365,18 @@
           "risco": "yellow",
           "nome": "Porto Flavia · mina dentro do penhasco",
           "cat": "Engenharia 1924 · entra na rocha pelo mar",
-          "sobre": "Uma das obras de engenharia industrial mais geniais do Mediterrâneo. Em 1924 construíram DOIS túneis HORIZONTAIS atravessando o penhasco direto pra carregar minério em navios ancorados abaixo, no nível do mar — economizava transportar minério até Carloforte. Visita guiada percorre o túnel principal (sem escadas, sem ladeiras), termina numa varanda esculpida na rocha com vista panorâmica para Pan di Zucchero (rochedo gigante no mar). Reserva OBRIGATÓRIA · max 25 pessoas por tour · duração ~2h.",
+          "sobre": "Uma das obras de engenharia industrial mais geniais do Mediterrâneo. Em 1924 construíram DOIS túneis HORIZONTAIS atravessando o penhasco direto pra carregar minério em navios ancorados abaixo, no nível do mar — economizava transportar minério até Carloforte. Visita guiada percorre o túnel principal (sem escadas, sem ladeiras), termina numa varanda esculpida na rocha com vista panorâmica para Pan di Zucchero (rochedo gigante no mar). Reserva OBRIGATÓRIA · max 25 pessoas por tour · duração ~1h.",
           "imperdivel": "Varanda final no penhasco · vista do Pan di Zucchero e do Mediterrâneo · 50m de queda d'água",
           "dicas": [
-            "<strong>Reserva obrigatória e SÓ ONLINE</strong> — não se compra na bilheteria nem por telefone ou e-mail, e a venda fecha à <strong>meia-noite do dia anterior</strong> · ou seja: comprem até a noite de 14/Ago",
-            "Chegar na bilheteria <strong>15 minutos antes</strong> com o comprovante · atraso perde a visita e não devolve o dinheiro",
+            "<strong>Reserva antecipada</strong> — 3 canais: online (venda fecha à <strong>meia-noite do dia anterior</strong> — comprem até a noite de 14/Ago), bilheteria do Ufficio del Turismo em Iglesias (Piazza Municipio), ou a bilheteria do próprio sítio · em Ferragosto, comprar online ANTES continua sendo o que salva o dia",
+            "Chegar na bilheteria <strong>20 minutos antes</strong> com o comprovante · atraso perde a visita e não devolve o dinheiro",
             "€10 · €6,50 acima de 65 anos (ago/2026) · a visita dura ~1h",
             "A galeria principal são ~600m planos em piso de terra batida · a <strong>galeria inferior tem 108 degraus</strong> — dá pra ficar na de cima e ver a varanda do mesmo jeito",
             "13-15°C lá dentro o ano todo · leve um casaco fino mesmo em agosto · sapato fechado",
             "Hoje é <strong>15 de agosto, Ferragosto</strong> — o feriado mais movimentado da Itália · a reserva de manhã é o que salva o dia"
           ],
-          "duracao": "2h tour",
-          "custo": "€10 · €6,50 acima de 65 anos (ago/2026) · compra online obrigatória até a véspera",
+          "duracao": "50min-1h",
+          "custo": "€10 · €6,50 acima de 65 anos (ago/2026) · reserva antecipada (online até a véspera ou bilheteria)",
           "acessibilidade": "Túnel horizontal sem degraus · estacionamento perto",
           "coord": {
             "lat": 39.3371,
@@ -2333,7 +2385,28 @@
           "valeAPena": 3,
           "poiCat": "atracao",
           "mapsQuery": "Porto Flavia, Masua",
-          "reserva": "pendente"
+          "reserva": "pendente",
+          "fontes": [
+            {
+              "o": "Comune di Iglesias · Porto Flavia",
+              "u": "https://www.comune.iglesias.ca.it/it/community/notizie/notizia/Porto-Flavia-00001/",
+              "prova": [
+                "20 minutos",
+                "€10",
+                "€6,50",
+                "Iglesias"
+              ]
+            },
+            {
+              "o": "SardegnaInBlog · Porto Flavia orari e visite",
+              "u": "https://www.sardegnainblog.it/11811/porto-flavia-orari/",
+              "prova": [
+                "50min",
+                "1h",
+                "meia-noite"
+              ]
+            }
+          ]
         },
         {
           "hora": "12:30",
@@ -2506,12 +2579,12 @@
           }
         },
         {
-          "hora": "12:00",
+          "hora": "12:45",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço Nuoro · cultura interior",
-          "cat": "⚠️ domingo · confirmar por telefone antes de subir",
+          "cat": "Almoço abre 12h45 · confirmar por telefone antes de subir",
           "coord": {
             "lat": 40.3216,
             "lng": 9.3303
@@ -2519,7 +2592,7 @@
           "opcoes": [
             {
               "nome": "Il Rifugio (Via Antonio Mereu 28, Nuoro)",
-              "desc": "Trattoria histórica no coração de Nuoro, desde <strong>1988</strong>, cozinha da <strong>Barbagia</strong>: presunto de javali e de ovelha, grelhados mistos, culurgiones. Filosofia slow food.<br>⚠️ <strong>LIGUEM ANTES — 0784 232355</strong>: as fontes divergem sobre domingo. O Touring Club lista seg·ter·qui·sex·sáb (12h45-15h e 19h45-23h30, sem domingo); o GialloZafferano diz que fecha só às quartas. Vocês chegam num <strong>domingo</strong> — não subam a Nuoro sem confirmar.",
+              "desc": "Trattoria histórica no coração de Nuoro, desde <strong>1988</strong>, cozinha da <strong>Barbagia</strong>: presunto de javali e de ovelha, grelhados mistos, culurgiones. Filosofia slow food.<br>⚠️ Domingo ABRE, mas o almoço só começa <strong>12h45</strong> (vai até 15h) · o dia de fechamento é <strong>quarta</strong> — duas fontes de horário concordam; a versão antiga 'fechado aos domingos' não se confirmou. Na dúvida, <strong>liguem 0784 232355</strong> antes de subir a Nuoro.",
               "preco": "€25-40",
               "valeAPena": 3,
               "poiCat": "restaurante",
@@ -2527,12 +2600,21 @@
               "mapsQuery": "Il Rifugio, Via Antonio Mereu 28, Nuoro",
               "fontes": [
                 {
-                  "o": "Touring Club Italiano",
-                  "u": "https://www.touringclub.it/destinazioni/nuoro/mangiare/111377-il-rifugio"
+                  "o": "OrariDiApertura24 · Il Rifugio Nuoro",
+                  "u": "https://www.oraridiapertura24.it/filiale/Nuoro-Il%2520Rifugio-878846V.html",
+                  "prova": [
+                    "12h45",
+                    "15h",
+                    "quarta"
+                  ]
                 },
                 {
-                  "o": "GialloZafferano · guia de restaurantes",
-                  "u": "https://ristoranti.giallozafferano.it/ristoranti/sardegna/ristoranti-nuoro/il-rifugio-1970.html"
+                  "o": "Restaurant Guru · Il Rifugio (4.4/5)",
+                  "u": "https://restaurantguru.com/Il-Rifugio-Nuoro",
+                  "prova": [
+                    "quarta",
+                    "1988"
+                  ]
                 }
               ]
             },
@@ -2708,7 +2790,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Embarque Marina Cala Gonone",
-          "cat": "Tour escolhido na véspera",
+          "cat": "Tour reservado com antecedência (não deixem pra véspera)",
           "coord": {
             "lat": 40.2804,
             "lng": 9.6272
@@ -2725,16 +2807,16 @@
           "sobre": "Dia inteiro de barco percorrendo o golfo mais espetacular da Sardenha. O Gulf of Orosei tem ~40km de falésias calcárias verticais (até 600m de altura) caindo no Mediterrâneo, com calas escondidas só acessíveis por mar. Roteiro clássico do full-day tour: Cala Luna (praia em meia-lua, oleandros), Cala Mariolu (areia/pedrinhas brancas e rosadas, água irreal), Cala dei Sisine (entre falésias), e VISTA externa de Cala Goloritzé (proibido desembarcar — só por trilha). Algumas paradas pra nadar e snorkel. Almoço picnic a bordo ou comprado antes. Leva: protetor solar (alto FPS), chapéu, snorkel próprio se tem, água em quantidade, casaco leve (vento). Chega ~17h.",
           "imperdivel": "Em Cala Mariolu, o fundo é feito de seixos brancos do tamanho de moeda — é isso que faz a água parecer iluminada por baixo. Os locais chamam a praia de <em>Ispuligidenie</em>, 'pulgas de neve', pelo mesmo motivo",
           "dicas": [
-            "Reserva o shuttle (drop-off + pickup) · NÃO o tour com guia · flexibilidade",
+            "<strong>RESERVEM COM ANTECEDÊNCIA</strong> (em agosto os barcos esgotam com dias) · shuttle drop-off dá flexibilidade, MAS confirmem por escrito com o operador que a <strong>cota de desembarque está incluída</strong>: desde 2025 as calas de Baunei têm teto diário com reserva e QR code (Cala Mariolu ~700 pessoas/dia, app Heart of Sardinia) — quem desce sem cota pode ser barrado",
             "Entrada da <strong>Grotta del Bue Marino</strong> é à parte do passeio: €12 · €6 reduzido (jun-set, ago/2026) · visita guiada de ~1h a pé, 900m de passarela · <strong>limite de 120 pessoas por horário</strong>, bilhete na bilheteria do porto ou em enjoydorgali.it",
             "Tour completo: €60-90/pessoa · meio-dia: €40-60",
             "Levar lanche · maioria dos tours não inclui",
             "Sapato de água · pedras escorregadias em alguns desembarques",
             "Snorkel: água transparente · peixes mediterrâneos · vale a pena",
-            "Taxa ambiental do município de Baunei: €6 por pessoa acima de 3 anos, cobrada à parte do passeio (ago/2026)"
+            "Contributo ambiental de Baunei (2026): <strong>€2 por pessoa</strong> pra uma cala ou <strong>€3 no pass</strong> da costa, pago <strong>EM DINHEIRO no check-in</strong> do tour — levem trocado"
           ],
           "duracao": "7-8h",
-          "custo": "€60-90/pessoa dia inteiro + €6 de taxa ambiental do município de Baunei (ago/2026)",
+          "custo": "€60-90/pessoa dia inteiro + contributo de Baunei €2-3 por pessoa em dinheiro (2026)",
           "acessibilidade": "Embarque ok · algumas praias têm seixos · canguru não relevante",
           "coord": {
             "lat": 40.1233,
@@ -2742,7 +2824,27 @@
           },
           "valeAPena": 3,
           "poiCat": "parque",
-          "mapsQuery": "Porto di Cala Gonone"
+          "mapsQuery": "Porto di Cala Gonone",
+          "fontes": [
+            {
+              "o": "La Nuova Sardegna · prenotazione e QR nas calas de Baunei",
+              "u": "https://www.lanuovasardegna.it/regione/2025/06/02/news/cala-mariolu-cala-goloritze-e-cala-luna-si-entra-con-prenotazione-e-un-qr-code-1.100716048",
+              "prova": [
+                "700",
+                "QR",
+                "2025"
+              ]
+            },
+            {
+              "o": "idealista · spiagge a numero chiuso 2026",
+              "u": "https://www.idealista.it/news/vacanze/mete-turistiche/2026/07/21/413560-tutte-le-spiagge-a-numero-chiuso-in-sardegna-2026-come-prenotare-e-quanto-costa",
+              "prova": [
+                "€2",
+                "€3",
+                "2026"
+              ]
+            }
+          ]
         },
         {
           "hora": "17:00",
@@ -2948,14 +3050,14 @@
           "sobre": "Capo Testa é uma península de granito moldada por vento e mar — formações arredondadas que parecem esculturas surrealistas. A 'Valle della Luna' é uma valeira entre essas formações onde, nos anos 1970, formou-se um acampamento hippie permanente (alguns ainda vivem lá). Walking tour de ~2h: parking → Valle della Luna → Cala Grande (banho rápido se quiser) → Farol → volta. Trilhas em granito desigual: sapato fechado obrigatório, NÃO sandália. Tarde dourada é o melhor horário: rochas viram rosa-laranja, dia turistas saem.",
           "imperdivel": "Perto do farol, procure os blocos de granito com sulcos retos e cunhas ainda encaixadas: são cortes romanos abandonados no meio do trabalho, há dois mil anos",
           "dicas": [
-            "○ <strong>Estacionamento de Capo Testa</strong> — gratuito, no fim da estrada · em agosto lota até as 11h, mas às 17h já esvaziou",
+            "○ <strong>Estacionamento de Capo Testa</strong> — na temporada é <strong>sosta a pagamento</strong> (gestão Silene, ordinanza do Comune), no fim da estrada · em agosto lota até as 11h, mas às 17h já esvaziou · alternativa boa: a <strong>navetta elétrica</strong> centro↔farol (€2,50 ida · €4 ida-e-volta, até 1/out) deixa vocês na porta e poupa a caminhada de asfalto",
             "Ⓐ <strong>Valle della Luna</strong> — o vale entre os blocos de granito onde nos anos 1970 se instalou uma comunidade hippie · alguns moradores continuam lá, vivendo nas cavidades da rocha, e é normal cruzar com eles",
             "Ⓑ <strong>Cala Grande</strong> — banho rápido, sem nenhuma infraestrutura · o granito daqui foi cortado pelos romanos entre o séc. I a.C. e o IV d.C. e <em>provavelmente</em> é o das colunas do Panteão, em Roma · em 1162 um pedreiro pisano chamado Cioneto voltou às mesmas pedreiras pra tirar as colunas do Duomo de Pisa",
             "Ⓒ <strong>Faro di Capo Testa</strong> — em dia claro veem-se as falésias de Bonifacio do outro lado do estreito, a 11km · é a Córsega de onde vocês vieram, vista da Sardenha",
             "Loop completo ~6km · 2-3h · sapato fechado, o granito é liso e escorrega"
           ],
           "duracao": "2h-3h",
-          "custo": "Grátis",
+          "custo": "Entrada grátis · estacionamento pago na temporada · navetta €2,50/€4 A/R",
           "acessibilidade": "Trilha em granito · sem rampas formais · só pra fit",
           "coord": {
             "lat": 41.2365,
@@ -2979,8 +3081,8 @@
                   "n": 2,
                   "nome": "Valle della Luna (formações graníticas)",
                   "coord": {
-                    "lat": 41.2443,
-                    "lng": 9.1488
+                    "lat": 41.2346,
+                    "lng": 9.1425
                   },
                   "mapsQuery": "Valle della Luna, Capo Testa"
                 },
@@ -2988,8 +3090,8 @@
                   "n": 3,
                   "nome": "Cala Grande (praia escondida)",
                   "coord": {
-                    "lat": 41.241,
-                    "lng": 9.148
+                    "lat": 41.23841,
+                    "lng": 9.14131
                   },
                   "mapsQuery": "Cala Grande, Capo Testa"
                 },
@@ -3010,8 +3112,20 @@
           "mapsQuery": "Valle della Luna, Capo Testa",
           "fontes": [
             {
-              "o": "SardegnaTurismo · Capo Testa e Valle della Luna",
-              "u": "https://www.sardegnaturismo.it/it/esplora/capo-testa"
+              "o": "Comune di Santa Teresa Gallura · ordinanza sosta (Silene)",
+              "u": "https://silene-api.municipiumapp.it/s3/8138/allegati/ord_00021_10-05-2023.pdf",
+              "prova": [
+                "pagamento"
+              ]
+            },
+            {
+              "o": "SardegnaInBlog · navetta elettrica Capo Testa",
+              "u": "https://www.sardegnainblog.it/60560/navetta-elettrica-santa-teresa-gallura-capo-testa/",
+              "prova": [
+                "€2,50",
+                "€4",
+                "1/out"
+              ]
             }
           ]
         },
@@ -3123,11 +3237,11 @@
             "Ferry Palau↔La Maddalena a cada 30min · 15min de travessia · ~€18-19 por trecho com carro (ago/2026) · sem reserva",
             "Com veículo, apresentar-se no porto 30min antes do embarque",
             "<strong>Cala Coticcio: reserva de guia obrigatória</strong> (€3 Parque + ~€25/pessoa) · sem ela, Cala Caprarese resolve",
-            "Compendio Garibaldino fecha segundas · hoje é quarta · <strong>€8 e só com reserva</strong>, por faixa de horário (ago/2026)",
+            "Compendio Garibaldino fecha segundas · hoje é quarta · <strong>€7 e só com reserva pela plataforma Musei Italiani</strong>, por faixa de horário (ago/2026)",
             "Fila do ferry de volta aperta entre 18h e 19h em agosto · saiam às 17h30 ou esperem 19h30"
           ],
           "duracao": "Dia inteiro · 8h+",
-          "custo": "~€37 ferry ida-e-volta com carro (ago/2026) · €8 Compendio Garibaldino, com reserva",
+          "custo": "~€37 ferry ida-e-volta com carro (ago/2026) · €7 Compendio Garibaldino, com reserva online",
           "acessibilidade": "La Maddalena town plana · Cala Coticcio = trail moderado",
           "coord": {
             "lat": 41.2169,
@@ -3151,8 +3265,8 @@
                   "n": 2,
                   "nome": "Piazza Garibaldi (centro)",
                   "coord": {
-                    "lat": 41.2169,
-                    "lng": 9.4026
+                    "lat": 41.21286,
+                    "lng": 9.40661
                   },
                   "mapsQuery": "Piazza Garibaldi, La Maddalena"
                 },
@@ -3169,8 +3283,8 @@
                   "n": 4,
                   "nome": "Cala Francese (rochas rosa)",
                   "coord": {
-                    "lat": 41.221,
-                    "lng": 9.405
+                    "lat": 41.2201,
+                    "lng": 9.3782
                   },
                   "mapsQuery": "Cala Francese, La Maddalena"
                 },
@@ -3178,8 +3292,8 @@
                   "n": 5,
                   "nome": "Spiaggia di Tegge",
                   "coord": {
-                    "lat": 41.222,
-                    "lng": 9.408
+                    "lat": 41.2076,
+                    "lng": 9.3827
                   },
                   "mapsQuery": "Spiaggia di Punta Tegge, La Maddalena"
                 }
@@ -3197,6 +3311,18 @@
             {
               "o": "SardegnaTurismo · Cala Francese e Punta Tegge",
               "u": "https://www.sardegnaturismo.it/it/esplora/punta-tegge"
+            },
+            {
+              "o": "Compendio Garibaldino · site oficial",
+              "u": "http://www.compendiogaribaldino.it/index.php?module=contents&idrec=22",
+              "prova": [
+                "€7"
+              ]
+            },
+            {
+              "o": "Paradisola · Cala Francese La Maddalena (posição)",
+              "u": "https://www.paradisola.it/spiagge-sardegna/nord/283-cala-francese-la-maddalena",
+              "prova": []
             }
           ]
         },
@@ -3253,14 +3379,14 @@
           "sobre": "Caprera liga-se a La Maddalena pela <strong>Ponte della Moneta</strong> (600m, 5min de carro). Foi aqui que <strong>Giuseppe Garibaldi</strong> passou os últimos 26 anos da vida, comprou meia ilha com o dinheiro de uma herança e morreu em <strong>2 de junho de 1882</strong>, na cama de frente pra janela, olhando o mar. A casa está exatamente como ele a deixou — o <strong>Compendio Garibaldino</strong> é o museu mais visitado da Sardenha. <strong>ATENÇÃO à praia</strong>: a <em>Cala Coticcio</em>, a famosa 'Taiti da Sardenha', está contingentada desde 2020 — <strong>só se entra com guia ambiental autorizado pelo Parque Nacional e com reserva</strong>, em 4 grupos de 15 pessoas por dia, no máximo 60 pessoas. Chegar de carro e subir a trilha por conta própria não é uma opção: a trilha é fiscalizada. Se não reservarem com antecedência, o plano de praia do dia é <em>Cala Caprarese</em> ou <em>Cala Garibaldi</em>, ambas livres, sem trilha e a poucos minutos de carro da casa.",
           "imperdivel": "O quarto de Garibaldi: a cama foi puxada pra janela nos últimos dias pra ele ver o mar, e o relógio da parede está parado às 18h20 — a hora em que ele morreu",
           "dicas": [
-            "<strong>Compendio Garibaldino só entra com reserva</strong> — ingressos contingentados, grupos de no máximo 20 pessoas a cada 15min, entre 8h30 e 18h30 (última entrada) · a visita dura no máximo 40min · chegar 10min antes ou perde a vaga · tel. 0789-727162",
-            "<strong>€8</strong> o Compendio · €6 o Memoriale (ago/2026) · <strong>fecha às segundas</strong> (hoje é quarta)",
+            "<strong>Compendio Garibaldino só entra com reserva</strong> — a compra com dia e hora é pela <strong>plataforma online Musei Italiani</strong> (e-mail não funciona; o telefone 0789-727162 é só informação) · grupos de no máximo 20 pessoas a cada 15min, entre 8h30 e 18h30 (última entrada) · a visita dura no máximo 40min · chegar 10min antes ou perde a vaga",
+            "<strong>€7</strong> o Compendio (SEM desconto 65+) · €6 o Memoriale · cumulativo €12 pros dois, vendido só na bilheteria local (ago/2026) · <strong>fecha às segundas</strong> (hoje é quarta)",
             "<strong>Cala Coticcio só com guia ambiental autorizada pelo Parque</strong> · €3 de taxa do Parque (grátis até 12 anos) + o valor da guia, que se combina direto com ela e varia por duração e tamanho do grupo · a lista de guias credenciadas está no site do Parco Nazionale · em agosto se reserva com <em>semanas</em> de antecedência",
             "Sem reserva de guia: Cala Caprarese fica a 1,5 km da casa-museu, é livre e não tem trilha",
             "Não há comércio na ilha fora da área do museu · leve água e protetor"
           ],
           "duracao": "2h-3h",
-          "custo": "€8 Compendio Garibaldino · €6 Memoriale (ago/2026) · <strong>só com reserva</strong> · Cala Coticcio: €3 de taxa do Parque + guia obrigatório (valor a combinar com a guia)",
+          "custo": "€7 Compendio Garibaldino (sem desconto 65+) · €6 Memoriale · cumulativo €12 só na bilheteria (ago/2026) · <strong>só com reserva</strong> · Cala Coticcio: €3 de taxa do Parque + guia obrigatório (valor a combinar com a guia)",
           "acessibilidade": "Compendio é térreo e acessível · Cala Caprarese tem acesso curto do estacionamento · a trilha de Cala Coticcio tem 30-45min de granito solto e desnível, não é pra joelho ruim",
           "coord": {
             "lat": 41.21694,
@@ -3269,7 +3395,40 @@
           "valeAPena": 3,
           "poiCat": "atracao",
           "mapsQuery": "Compendio Garibaldino, Caprera",
-          "reserva": "pendente"
+          "reserva": "pendente",
+          "fontes": [
+            {
+              "o": "Compendio Garibaldino · site oficial",
+              "u": "http://www.compendiogaribaldino.it/index.php?module=contents&idrec=22",
+              "prova": [
+                "€7",
+                "€6",
+                "€12",
+                "20",
+                "15min",
+                "40min",
+                "8h30",
+                "18h30",
+                "65+"
+              ]
+            },
+            {
+              "o": "Ministero della Cultura · Musei Garibaldini",
+              "u": "https://museigaribaldini.cultura.gov.it/",
+              "prova": [
+                "Musei Italiani",
+                "segundas"
+              ]
+            },
+            {
+              "o": "Parco Nazionale La Maddalena · Cala Coticcio",
+              "u": "https://lamaddalenapark.iswebcloud.it/pagina186885_info-cala-coticciobrigantina.html/",
+              "prova": [
+                "€3",
+                "guia"
+              ]
+            }
+          ]
         },
         {
           "hora": "18:30",
@@ -3442,12 +3601,22 @@
           "opcoes": [
             {
               "nome": "Ristorante Giagoni in Piazza (Piazza della Chiesa 6, San Pantaleo)",
-              "desc": "Casa de pedra galurense de frente pra praça da igreja · cozinha sarda com produto local · tel. 0789 65224",
+              "desc": "Casa de pedra galurense de frente pra praça da igreja · cozinha sarda com produto local · ⚠️ às <strong>quintas</strong> (dia da feira — e o dia de vocês) o serviço anunciado é de <strong>brunch</strong>, não o menu completo · confirmem o que está valendo: tel. 0789 65224",
               "preco": "€45-65",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "na praça da igreja · a pé",
-              "mapsQuery": "Giagoni in Piazza, Piazza della Chiesa 6, San Pantaleo"
+              "mapsQuery": "Giagoni in Piazza, Piazza della Chiesa 6, San Pantaleo",
+              "fontes": [
+                {
+                  "o": "Site oficial Ristorante Giagoni",
+                  "u": "https://www.ristorantegiagoni.it/",
+                  "prova": [
+                    "quintas",
+                    "brunch"
+                  ]
+                }
+              ]
             },
             {
               "nome": "Bares da praça de San Pantaleo",
@@ -3640,12 +3809,12 @@
           }
         },
         {
-          "hora": "11:00",
+          "hora": "12:30",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço Olbia · despedida",
-          "cat": "Centro ou aeroporto",
+          "cat": "Centro (cozinhas abrem 12h30) ou aeroporto · depende da hora do voo [a confirmar]",
           "coord": {
             "lat": 40.9238,
             "lng": 9.5026
@@ -3662,21 +3831,47 @@
             },
             {
               "nome": "Ristorante By Night (Viale Aldo Moro 201/A, Olbia)",
-              "desc": "Fecha o círculo: é onde vocês jantaram na primeira noite · peixe fresco",
+              "desc": "Fecha o círculo: é onde vocês jantaram na primeira noite · peixe fresco · a cozinha do almoço abre às <strong>12h30</strong> (12h45 em alguns dias) — não adianta chegar antes · tel. 0789 58955",
               "preco": "€30-70",
               "valeAPena": 3,
               "poiCat": "restaurante",
               "dist": "Viale Aldo Moro · a caminho do aeroporto",
-              "mapsQuery": "Ristorante By Night, Viale Aldo Moro 201, Olbia"
+              "mapsQuery": "Ristorante By Night, Viale Aldo Moro 201, Olbia",
+              "fontes": [
+                {
+                  "o": "Ristorante By Night · site/menu",
+                  "u": "https://www.ristorantebynightolbia.it/menu/",
+                  "prova": [
+                    "12h30"
+                  ]
+                },
+                {
+                  "o": "Sluurpy · By Night Olbia (horários)",
+                  "u": "https://www.sluurpy.it/olbia/ristorante/93215/ristorante-spaghetteria-by-night",
+                  "prova": [
+                    "12h30",
+                    "12h45"
+                  ]
+                }
+              ]
             },
             {
               "nome": "Aeroporto · sanduba",
-              "desc": "Se o horário apertar · sem opção gourmet, mas resolve",
+              "desc": "Se o voo sair antes de ~16h30, é AQUI que se come: OLB em agosto pede 2h-2h30 de antecedência (pico 16h-19h) e o almoço no centro não fecha a conta · sem opção gourmet, mas resolve",
               "preco": "€10-15",
               "valeAPena": 1,
               "poiCat": "cafe",
               "dist": "no aeroporto",
-              "mapsQuery": "Aeroporto di Olbia Costa Smeralda"
+              "mapsQuery": "Aeroporto di Olbia Costa Smeralda",
+              "fontes": [
+                {
+                  "o": "Geasar · avisos aeroporto Olbia (verão)",
+                  "u": "https://www.geasar.it/en/press/news/avviso-ai-passeggeri-aeroporto-di-olbia-estate-2025",
+                  "prova": [
+                    "2h"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -4266,7 +4461,7 @@
   "historia": [
     {
       "titulo": "🗿 Os nurágicos e os Gigantes de Mont'e Prama",
-      "prosa_html": "<p>Antes dos fenícios, antes dos romanos, antes de qualquer coisa que se possa chamar de história escrita, a Sardenha teve uma civilização inteira que não deixou uma única palavra. Chamamos essa gente de <strong>nurágica</strong> pelo que ela construiu: os <em>nuraghi</em>, torres tronco-cônicas de pedra seca erguidas entre <strong>1800 e 1100 a.C.</strong> Restam cerca de <strong>7.000</strong> delas espalhadas pela ilha — uma a cada três quilômetros quadrados. Ninguém sabe ao certo se eram fortalezas, templos, celeiros ou casas de chefe. Sabemos que eram muitas e que quem as fez sabia empilhar pedra melhor que qualquer contemporâneo seu no Mediterrâneo ocidental.</p> <p>Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — preparavam a terra pra semear em lotes arrendados ao pé de uma colina chamada Mont'e Prama. O arado bateu numa pedra. A pedra tinha rosto.</p> <p>O que saiu dali nos anos seguintes foram <strong>5.178 fragmentos</strong> de arenito: cabeças, torsos, braços, pernas e escudos. Levou décadas de restauro no centro de Li Punti, em Sassari, pra que aqueles cacos voltassem a ser <strong>26 estátuas</strong> de dois metros a dois metros e meio — guerreiros com escudo sobre a cabeça, arqueiros e pugilistas. O arqueólogo <strong>Giovanni Lilliu</strong>, que dominou a arqueologia sarda do século XX, chamou-as de <em>kolossoi</em>.</p> <p>A parte que desarruma tudo é a data. As estátuas são do <strong>século IX-VIII a.C.</strong> — e há quem defenda o século XI. Isso as coloca <em>antes</em> dos <em>kouroi</em> gregos arcaicos. Fora do Egito, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real àquela altura. Uma civilização sem escrita, numa ilha que os manuais tratam como periferia, estava fazendo a estatuária monumental mais antiga da região — e a fez primeiro.</p> <p>Repare nos <strong>olhos</strong> quando estiver diante deles no museu de Càbras: dois círculos concêntricos gravados na pedra, sem pupila. Não é falta de habilidade — o resto da anatomia é minucioso, com os dedos, as tranças e os detalhes da armadura todos ali. É escolha. Os mesmos olhos aparecem nos bronzetti nurágicos, aquelas estatuetas de bronze de vinte centímetros que estão em todo museu arqueológico da ilha. Era assim que essa gente representava o olhar.</p> <p>As estátuas estavam <strong>quebradas</strong> quando foram encontradas — quebradas de propósito, tudo indica, e enterradas junto a uma necrópole de tumbas individuais. Quem as destruiu, e por quê, é a pergunta aberta da arqueologia sarda. Uma hipótese aponta os cartagineses, que chegaram alguns séculos depois e teriam apagado os símbolos de quem estava ali antes. Outra aponta os próprios sardos, num acerto de contas interno que não deixou registro. A colina de Mont'e Prama continua sendo escavada — em 2022 saíram dois torsos novos, e estima-se que boa parte do sítio ainda está debaixo da terra.</p> <p>Vocês verão a mesma civilização em <strong>Coddu Vecchiu</strong>, perto de Arzachena, no penúltimo dia: uma <em>tomba di giganti</em>, sepultura coletiva com a grande estela central de três metros e a exedra em semicírculo à frente, onde os vivos se reuniam. É de 1800-1400 a.C., mais antiga que as estátuas. Entre uma coisa e outra, mil anos da mesma gente.</p>",
+      "prosa_html": "<p>Antes dos fenícios, antes dos romanos, antes de qualquer coisa que se possa chamar de história escrita, a Sardenha teve uma civilização inteira que não deixou uma única palavra. Chamamos essa gente de <strong>nurágica</strong> pelo que ela construiu: os <em>nuraghi</em>, torres tronco-cônicas de pedra seca erguidas entre <strong>1800 e 1100 a.C.</strong> Restam cerca de <strong>7.000</strong> delas espalhadas pela ilha — uma a cada três quilômetros quadrados. Ninguém sabe ao certo se eram fortalezas, templos, celeiros ou casas de chefe. Sabemos que eram muitas e que quem as fez sabia empilhar pedra melhor que qualquer contemporâneo seu no Mediterrâneo ocidental.</p> <p>Em <strong>março de 1974</strong>, dois lavradores de Càbras — <strong>Sisinnio Poddi</strong> e <strong>Battista Meli</strong> — preparavam a terra pra semear em lotes arrendados ao pé de uma colina chamada Mont'e Prama. O arado bateu numa pedra. A pedra tinha rosto.</p> <p>O que saiu dali nos anos seguintes foram <strong>5.178 fragmentos</strong> de arenito: cabeças, torsos, braços, pernas e escudos. Levou décadas de restauro no centro de Li Punti, em Sassari, pra que aqueles cacos voltassem a ser <strong>25 estátuas</strong> de dois metros a dois metros e meio — guerreiros com escudo sobre a cabeça, arqueiros e pugilistas. Em junho de 2026 o museu ganhou mais duas, um pugilista de Cavalupo e um arqueiro — e as contagens publicadas variam conforme novos achados continuam saindo do restauro. O arqueólogo <strong>Giovanni Lilliu</strong>, que dominou a arqueologia sarda do século XX, chamou-as de <em>kolossoi</em>.</p> <p>A parte que desarruma tudo é a data. As estátuas são do <strong>século IX-VIII a.C.</strong> — e há quem defenda o século XI. Isso as coloca <em>antes</em> dos <em>kouroi</em> gregos arcaicos. Fora do Egito, ninguém no Mediterrâneo esculpia figuras humanas em tamanho real àquela altura. Uma civilização sem escrita, numa ilha que os manuais tratam como periferia, estava fazendo a estatuária monumental mais antiga da região — e a fez primeiro.</p> <p>Repare nos <strong>olhos</strong> quando estiver diante deles no museu de Càbras: dois círculos concêntricos gravados na pedra, sem pupila. Não é falta de habilidade — o resto da anatomia é minucioso, com os dedos, as tranças e os detalhes da armadura todos ali. É escolha. Os mesmos olhos aparecem nos bronzetti nurágicos, aquelas estatuetas de bronze de vinte centímetros que estão em todo museu arqueológico da ilha. Era assim que essa gente representava o olhar.</p> <p>As estátuas estavam <strong>quebradas</strong> quando foram encontradas — quebradas de propósito, tudo indica, e enterradas junto a uma necrópole de tumbas individuais. Quem as destruiu, e por quê, é a pergunta aberta da arqueologia sarda. Uma hipótese aponta os cartagineses, que chegaram alguns séculos depois e teriam apagado os símbolos de quem estava ali antes. Outra aponta os próprios sardos, num acerto de contas interno que não deixou registro. A colina de Mont'e Prama continua sendo escavada — em 2022 saíram dois torsos novos, e estima-se que boa parte do sítio ainda está debaixo da terra.</p> <p>Vocês verão a mesma civilização em <strong>Coddu Vecchiu</strong>, perto de Arzachena, no penúltimo dia: uma <em>tomba di giganti</em>, sepultura coletiva com a grande estela central de três metros e a exedra em semicírculo à frente, onde os vivos se reuniam. É de 1800-1400 a.C., mais antiga que as estátuas. Entre uma coisa e outra, mil anos da mesma gente.</p>",
       "fontes": [
         {
           "o": "Museo Archeologico Nazionale di Cagliari · Ministero della Cultura",
@@ -4275,12 +4470,31 @@
         {
           "o": "SardegnaTurismo · site oficial da Regione Sardegna",
           "u": "https://www.sardegnaturismo.it/it/monte-prama-patria-di-giganti"
+        },
+        {
+          "o": "ANSA Sardegna 02/04/2026",
+          "u": "https://www.ansa.it/sardegna/notizie/2026/04/02/i-giganti-di-monte-prama-per-la-prima-volta-esposti-tutti-insieme-a-cabras_aae4825c-c386-4751-a62d-91265dbaf040.html",
+          "tier": "editorial",
+          "data": "2026-08-09",
+          "prova": [
+            "25 estátuas"
+          ]
+        },
+        {
+          "o": "ANSA Sardegna 24/06/2026",
+          "u": "https://www.ansa.it/sardegna/notizie/2026/06/24/il-museo-di-cabras-si-arricchisce-di-altri-due-giganti-di-monte-prama_d1953d26-6e40-40c3-b200-e8fc2368725d.html",
+          "tier": "editorial",
+          "data": "2026-08-09",
+          "prova": [
+            "junho de 2026",
+            "pugilista de Cavalupo e um arqueiro"
+          ]
         }
       ]
     },
     {
       "titulo": "⚓ Tharros, Sulci e os fenícios — a Senhora dos Dois Mares",
-      "prosa_html": "<p>Por volta do <strong>final do século VIII a.C.</strong>, navios fenícios vindos de Tiro e de Cartago começam a parar no golfo de Oristano. Não vinham conquistar: vinham comerciar, e escolhiam sempre o mesmo tipo de lugar — uma ponta de terra com mar dos dois lados, fácil de defender e fácil de sair de barco em qualquer vento. <strong>Tharros</strong>, na ponta do Capo San Marco, é o exemplo perfeito. Os sardos a chamaram depois de <em>a Senhora dos Dois Mares</em>.</p> <p>A escolha não foi num vazio: já havia um <strong>povoado nurágico</strong> ali, com o nuraghe Su Muru Mannu, cujos restos vocês vão pisar logo na entrada do sítio. Os fenícios se instalaram ao lado, não por cima. No <strong>século VI a.C.</strong>, com Cartago no controle, a cidade ganha muralhas e entra na melhor fase: comércio com a África, com a península ibérica e com Massália, a atual Marselha.</p> <p>Depois vieram os <strong>romanos</strong>, e é a Roma que se vê melhor hoje: o <em>decumanus</em> calçado com pedra de basalto, os três complexos termais, as colunas coríntias de pé com o mar atrás — que são, convém dizer, uma <em>reconstrução</em> do século XX a partir dos tambores encontrados no chão, e não uma ruína intacta. Depois, os bizantinos, que fizeram de Tharros sede episcopal. E depois, o fim.</p> <p>O fim foi lento e teve um responsável concreto. Entre os séculos IX e X, as incursões sarracenas na costa ocidental tornaram insustentável viver numa ponta de terra exposta e indefensável. Em <strong>1070</strong>, o arcebispo <strong>Torcotorio</strong> transferiu a sé episcopal de Tharros para <em>Aristanis</em> — a atual Oristano —, protegida pelos pântanos de Santa Giusta e pelas curvas do rio Tirso. A população acompanhou. Ao longo do século XI, o porto esvaziou. Uma cidade que viveu <strong>mil e oitocentos anos</strong> foi abandonada sem guerra, por cálculo.</p> <p>E aí vem a parte que explica por que Tharros parece incompleta. Existe um dito sardo que resume o que aconteceu depois: <em>quem quiser construir Oristano, vá buscar pedra em Tharros</em>. Por séculos, a cidade abandonada foi pedreira da cidade nova. As casas de Oristano têm dentro delas as paredes de Tharros. É por isso que o que sobrou é sobretudo o que estava debaixo da terra ou era pesado demais pra carregar.</p> <p>O outro monumento fenício desta viagem é <strong>Sulci</strong> — a atual Sant'Antioco —, fundada no mesmo século VIII a.C. e, diferente de Tharros, <strong>nunca abandonada</strong>: são 2.800 anos de ocupação ininterrupta, o que faz dela uma das cidades habitadas mais antigas da Itália. Lá está o <strong>tophet</strong>, o recinto a céu aberto com mais de três mil urnas de recém-nascidos e natimortos, consagrados à deusa <strong>Tanit</strong>. A leitura antiga — sacrifício ritual de crianças — vem de fontes gregas e romanas, isto é, de inimigos de Cartago; a arqueologia contemporânea tende a ler os tophets como cemitérios infantis de mortes naturais, que a mortalidade da época produzia às centenas. É um lugar silencioso e não é sinistro: é um cemitério de bebês, e a única coisa que ele prova com certeza é que aquela gente enterrava os seus com cuidado.</p>",
+      "prosa_html": "<p>Por volta do <strong>final do século VIII a.C.</strong>, navios fenícios vindos de Tiro e de Cartago começam a parar no golfo de Oristano. Não vinham conquistar: vinham comerciar, e escolhiam sempre o mesmo tipo de lugar — uma ponta de terra com mar dos dois lados, fácil de defender e fácil de sair de barco em qualquer vento. <strong>Tharros</strong>, na ponta do Capo San Marco, é o exemplo perfeito. Os sardos a chamaram depois de <em>a Senhora dos Dois Mares</em>.</p> <p>A escolha não foi num vazio: já havia um <strong>povoado nurágico</strong> ali, com o nuraghe Su Muru Mannu, cujos restos vocês vão pisar logo na entrada do sítio. Os fenícios se instalaram ao lado, não por cima. No <strong>século VI a.C.</strong>, com Cartago no controle, a cidade ganha muralhas e entra na melhor fase: comércio com a África, com a península ibérica e com Massália, a atual Marselha.</p> <p>Depois vieram os <strong>romanos</strong>, e é a Roma que se vê melhor hoje: o <em>decumanus</em> calçado com pedra de basalto, os três complexos termais, as colunas coríntias de pé com o mar atrás — que são, convém dizer, uma <em>reconstrução</em> do século XX a partir dos tambores encontrados no chão, e não uma ruína intacta. Depois, os bizantinos, que fizeram de Tharros sede episcopal. E depois, o fim.</p> <p>O fim foi lento e teve um responsável concreto. Entre os séculos IX e X, as incursões sarracenas na costa ocidental tornaram insustentável viver numa ponta de terra exposta e indefensável. Em <strong>1070</strong>, o arcebispo <strong>Torcotorio</strong> transferiu a sé episcopal de Tharros para <em>Aristanis</em> — a atual Oristano —, protegida pelos pântanos de Santa Giusta e pelas curvas do rio Tirso. A população acompanhou. Ao longo do século XI, o porto esvaziou. Uma cidade que viveu <strong>mil e oitocentos anos</strong> foi abandonada sem guerra, por cálculo.</p> <p>E aí vem a parte que explica por que Tharros parece incompleta. Existe um dito sardo que resume o que aconteceu depois: <em>quem quiser construir Oristano, vá buscar pedra em Tharros</em>. Por séculos, a cidade abandonada foi pedreira da cidade nova. As casas de Oristano têm dentro delas as paredes de Tharros. É por isso que o que sobrou é sobretudo o que estava debaixo da terra ou era pesado demais pra carregar.</p> <p>O outro monumento fenício desta viagem é <strong>Sulci</strong> — a atual Sant'Antioco —, fundada no mesmo século VIII a.C. e habitada até hoje — mas <strong>não sem interrupção</strong>: as incursões sarracenas e a malária deixaram a ilha praticamente despovoada por longos períodos, até o repovoamento definitivo no século XVIII com famílias vindas de Iglesias. São 2.800 anos de história urbana, o que faz dela uma das cidades mais antigas da Itália. Lá está o <strong>tophet</strong>, o recinto a céu aberto com mais de três mil urnas de recém-nascidos e natimortos, consagrados a <strong>Tanit e Baal Hammon</strong>. A leitura antiga — sacrifício ritual de crianças — vem de fontes gregas e romanas, isto é, de inimigos de Cartago; a arqueologia contemporânea tende a ler os tophets como cemitérios infantis de mortes naturais, que a mortalidade da época produzia às centenas. É um lugar silencioso e não é sinistro: é um cemitério de bebês, e a única coisa que ele prova com certeza é que aquela gente enterrava os seus com cuidado.</p>",
       "fontes": [
         {
           "o": "Ministero della Cultura · Area archeologica di Tharros",
@@ -4289,12 +4503,31 @@
         {
           "o": "Fondazione Mont'e Prama · site oficial de Tharros",
           "u": "https://www.tharros.sardegna.it/"
+        },
+        {
+          "o": "Pro Loco Calasetta · storia dell'isola",
+          "u": "https://prolococalasetta.it/lisola-di-santantioco/",
+          "tier": "campo",
+          "data": "2026-08-09",
+          "prova": [
+            "despovoada por longos períodos",
+            "século XVIII"
+          ]
+        },
+        {
+          "o": "Parco Storico Archeologico Sant'Antioco · Tofet",
+          "u": "https://parcostoricoarcheologicosantantioco.it/tofet/",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "Tanit e Baal Hammon"
+          ]
         }
       ]
     },
     {
       "titulo": "🐟 Carloforte — a ilha genovesa que atravessou o Mediterrâneo duas vezes",
-      "prosa_html": "<p>Carloforte é o lugar mais improvável desta viagem, e a razão é linguística antes de ser qualquer outra coisa: numa ilha ao sul da Sardenha, as pessoas falam <strong>genovês do século XVIII</strong>. Não é sotaque, não é influência. É outra língua, chamada <strong>tabarchino</strong>, e é a primeira língua da maioria dos moradores até hoje.</p> <p>A história começa por volta de <strong>1540</strong>, quando um grupo de pescadores de coral de <strong>Pegli</strong>, perto de Gênova, se instala na ilhota de <strong>Tabarka</strong>, na costa da Tunísia. A concessão era da família <strong>Lomellini</strong>, genoveses, e o negócio era o coral vermelho — matéria-prima de luxo do Mediterrâneo. Ficaram lá <strong>duzentos anos</strong>. Duas séculos numa rocha de quatrocentos metros de comprimento em frente ao norte da África, casando entre si, mantendo a língua de Pegli e a fé católica no meio de um mundo que não era nenhum dos dois.</p> <p>No século XVIII a situação apodrece por três motivos simultâneos: os bancos de coral se esgotam, a ilha é pequena demais pra uma população que cresceu, e o assédio dos corsários e dos beis de Túnis e Argel vira insuportável. Em <strong>1738</strong>, parte da comunidade pede asilo à Casa de Savoia. <strong>Carlo Emanuele III</strong> lhes concede a ilha de San Pietro, desabitada, ao largo do Sulcis. Em <strong>17 de abril de 1738</strong>, cerca de <strong>quinhentos colonos</strong> desembarcam na ilha de San Pietro. Fundam <em>Carloforte</em> — literalmente <strong>'Carlos, o Forte'</strong>, em homenagem a quem os acolheu. A parte da comunidade que ficou em Tabarka foi, poucos anos depois, escravizada pelo bei de Túnis.</p> <p>Andando pelos <em>caruggi</em> — as ruelas estreitas e altas do centro — vocês estarão andando por uma cópia de Pegli feita de memória. As casas pastel, o traçado, a maneira de encaixar a vila entre o porto e a colina: tudo é ligure, transplantado por gente que não via Gênova havia duzentos anos.</p> <p>O que os sustentou aqui foi o <strong>atum</strong>. A <em>tonnara</em> de Carloforte foi uma das últimas armações tradicionais em funcionamento no Mediterrâneo: um labirinto de redes fixas ancorado no caminho da migração do atum-rabilho, que culminava na <em>mattanza</em>, a matança em câmara final, com os pescadores puxando as redes ao ritmo de cantos que também eram em tabarchino. A pesca industrial e as quotas internacionais acabaram com o sistema; o que sobrou é a memória e a cozinha.</p> <p>E a cozinha é o motivo real de vir aqui. O <strong>atum</strong> aparece em todos os cortes: a <em>ventresca</em> (a barriga, a parte gorda e a melhor), a <em>bottarga</em> de atum — diferente da de tainha que vocês vão comer em Càbras —, o <em>musciame</em>, o lombo curado. E há o <strong>cascà</strong>: um cuscuz de sêmola cozido no vapor sobre caldo de legumes, herança do tempo de Tabarka, que é literalmente um prato norte-africano falando genovês. Não existe em nenhum outro lugar da Sardenha, nem da Itália.</p>",
+      "prosa_html": "<p>Carloforte é o lugar mais improvável desta viagem, e a razão é linguística antes de ser qualquer outra coisa: numa ilha ao sul da Sardenha, as pessoas falam <strong>genovês do século XVIII</strong>. Não é sotaque, não é influência. É outra língua, chamada <strong>tabarchino</strong>, e é a primeira língua da maioria dos moradores até hoje.</p> <p>A história começa por volta de <strong>1540</strong>, quando um grupo de pescadores de coral de <strong>Pegli</strong>, perto de Gênova, se instala na ilhota de <strong>Tabarka</strong>, na costa da Tunísia. A concessão era da família <strong>Lomellini</strong>, genoveses, e o negócio era o coral vermelho — matéria-prima de luxo do Mediterrâneo. Ficaram lá <strong>duzentos anos</strong>. Duas séculos numa rocha de quatrocentos metros de comprimento em frente ao norte da África, casando entre si, mantendo a língua de Pegli e a fé católica no meio de um mundo que não era nenhum dos dois.</p> <p>No século XVIII a situação apodrece por três motivos simultâneos: os bancos de coral se esgotam, a ilha é pequena demais pra uma população que cresceu, e o assédio dos corsários e dos beis de Túnis e Argel vira insuportável. Em <strong>1738</strong>, parte da comunidade pede asilo à Casa de Savoia. <strong>Carlo Emanuele III</strong> lhes concede a ilha de San Pietro, desabitada, ao largo do Sulcis. Em <strong>17 de abril de 1738</strong>, cerca de <strong>quinhentos colonos</strong> desembarcam na ilha de San Pietro. Fundam <em>Carloforte</em> — o <strong>'Forte de Carlo'</strong>, em homenagem ao rei que os acolheu. A parte da comunidade que ficou em Tabarka foi, poucos anos depois, escravizada pelo bei de Túnis.</p> <p>Andando pelos <em>caruggi</em> — as ruelas estreitas e altas do centro — vocês estarão andando por uma cópia de Pegli feita de memória. As casas pastel, o traçado, a maneira de encaixar a vila entre o porto e a colina: tudo é ligure, transplantado por gente que não via Gênova havia duzentos anos.</p> <p>O que os sustentou aqui foi o <strong>atum</strong>. A <em>tonnara</em> de Carloforte foi uma das últimas armações tradicionais em funcionamento no Mediterrâneo: um labirinto de redes fixas ancorado no caminho da migração do atum-rabilho, que culminava na <em>mattanza</em>, a matança em câmara final, com os pescadores puxando as redes ao ritmo de cantos que também eram em tabarchino. A pesca industrial e as quotas internacionais acabaram com o sistema; o que sobrou é a memória e a cozinha.</p> <p>E a cozinha é o motivo real de vir aqui. O <strong>atum</strong> aparece em todos os cortes: a <em>ventresca</em> (a barriga, a parte gorda e a melhor), a <em>bottarga</em> de atum — diferente da de tainha que vocês vão comer em Càbras —, o <em>musciame</em>, o lombo curado. E há o <strong>cascà</strong>: um cuscuz de sêmola cozido no vapor sobre caldo de legumes, herança do tempo de Tabarka, que é literalmente um prato norte-africano falando genovês. Não existe em nenhum outro lugar da Sardenha, nem da Itália.</p>",
       "fontes": [
         {
           "o": "Carloforte Turismo · site oficial do município",
@@ -4303,12 +4536,21 @@
         {
           "o": "SardegnaTurismo · Regione Sardegna",
           "u": "https://www.sardegnaturismo.it/"
+        },
+        {
+          "o": "Treccani · Carloforte",
+          "u": "https://www.treccani.it/enciclopedia/carloforte_(Enciclopedia-Italiana)/",
+          "tier": "editorial",
+          "data": "2026-08-09",
+          "prova": [
+            "Forte de Carlo"
+          ]
         }
       ]
     },
     {
       "titulo": "⛏️ O Sulcis, Porto Flavia e a filha do engenheiro",
-      "prosa_html": "<p>O sudoeste da Sardenha é <strong>terra de mina</strong> desde antes de Roma. Chumbo, zinco, prata e carvão saíram destas montanhas por dois mil e quinhentos anos, e no fim do século XIX a região virou o motor industrial de uma ilha que, fora dali, era pastoril. Iglesias — o nome vem do catalão, 'igrejas' — cresceu como cidade mineira. Vilas inteiras foram construídas, habitadas por três gerações e depois esvaziadas quando o minério acabou ou deixou de compensar. Hoje o conjunto é <strong>Parco Geominerario</strong> reconhecido pela UNESCO, o que é uma forma elegante de dizer que a paisagem é feita de ruínas industriais espetaculares.</p> <p>O problema técnico que gerou Porto Flavia era prosaico e caríssimo. O minério de <strong>Masua</strong> precisava chegar a Carloforte, do outro lado do canal, pra ser embarcado em navios de longo curso. O transporte era feito por <em>bilancelle</em>, barcos pequenos de vela latina, carregados <strong>a pá e a cesto</strong> por homens que desciam o penhasco. Um navio levava <em>dias</em> pra encher. Cada dia parado era dinheiro.</p> <p>Em <strong>1924</strong>, o engenheiro <strong>Cesare Vecelli</strong>, a serviço da <em>Société de la Vieille Montagne</em> — belga, dona das minas de Masua, Montecani e Acquaresi —, propôs uma solução que ninguém havia tentado: em vez de descer o minério até o mar, <strong>furar a montanha até o mar</strong>. Duas galerias sobrepostas atravessando o penhasco. Na de cima, um trenzinho despeja o minério em nove silos verticais escavados na rocha, com capacidade pra dez mil toneladas. Na de baixo, um braço mecânico retrátil sai da parede do penhasco e despeja a carga direto no porão do navio ancorado embaixo.</p> <p>A capacidade saltou pra <strong>500 toneladas por hora</strong>. O que levava dias passou a levar horas. E a obra foi feita em dois anos, num penhasco, com a tecnologia de 1924.</p> <p>O nome tem uma explicação simples e boa: no mesmo ano em que a obra ficou pronta, nasceu <strong>Flavia</strong>, a filha primogênita de Vecelli. Ele pediu autorização pra batizar a obra com o nome dela. É por isso que a engenharia mais audaciosa da mineração mediterrânea tem nome de menina.</p> <p>Quando estiverem na varanda final, esculpida na parede a cinquenta metros de altura, olhem pra frente: o rochedo solitário que emerge do mar é o <strong>Pan di Zucchero</strong>, 133 metros de calcário, o maior <em>faraglione</em> do Mediterrâneo. Estava ali antes das minas e continuará depois. Foi o que os mineiros viram todos os dias de trabalho da vida deles.</p>",
+      "prosa_html": "<p>O sudoeste da Sardenha é <strong>terra de mina</strong> desde antes de Roma. Chumbo, zinco, prata e carvão saíram destas montanhas por dois mil e quinhentos anos, e no fim do século XIX a região virou o motor industrial de uma ilha que, fora dali, era pastoril. Iglesias — o nome vem do catalão, 'igrejas' — cresceu como cidade mineira. Vilas inteiras foram construídas, habitadas por três gerações e depois esvaziadas quando o minério acabou ou deixou de compensar. Hoje o conjunto é <strong>Parco Geominerario</strong> reconhecido pela UNESCO, o que é uma forma elegante de dizer que a paisagem é feita de ruínas industriais espetaculares.</p> <p>O problema técnico que gerou Porto Flavia era prosaico e caríssimo. O minério de <strong>Masua</strong> precisava chegar a Carloforte, do outro lado do canal, pra ser embarcado em navios de longo curso. O transporte era feito por <em>bilancelle</em>, barcos pequenos de vela latina, carregados <strong>a pá e a cesto</strong> por homens que desciam o penhasco. Um navio levava <em>dias</em> pra encher. Cada dia parado era dinheiro.</p> <p>Em <strong>1924</strong>, o engenheiro <strong>Cesare Vecelli</strong>, a serviço da <em>Société de la Vieille Montagne</em> — belga, dona das minas de Masua, Montecani e Acquaresi —, propôs uma solução que ninguém havia tentado: em vez de descer o minério até o mar, <strong>furar a montanha até o mar</strong>. Duas galerias sobrepostas atravessando o penhasco. Na de cima, um trenzinho despeja o minério em nove silos verticais escavados na rocha, com capacidade pra dez mil toneladas. Na de baixo, um braço mecânico retrátil sai da parede do penhasco e despeja a carga direto no porão do navio ancorado embaixo.</p> <p>A capacidade saltou pra <strong>cerca de 400 toneladas por hora</strong> — o número da fonte oficial do parque; há publicações falando em 500. O que levava dias passou a levar horas. E a obra foi feita em dois anos, num penhasco, com a tecnologia de 1924.</p> <p>O nome tem uma explicação simples e boa: no mesmo ano em que a obra ficou pronta, nasceu <strong>Flavia</strong>, a filha primogênita de Vecelli. Ele pediu autorização pra batizar a obra com o nome dela. É por isso que a engenharia mais audaciosa da mineração mediterrânea tem nome de menina.</p> <p>Quando estiverem na varanda final, esculpida na parede a cinquenta metros de altura, olhem pra frente: o rochedo solitário que emerge do mar é o <strong>Pan di Zucchero</strong>, 133 metros de calcário, o maior <em>faraglione</em> do Mediterrâneo. Estava ali antes das minas e continuará depois. Foi o que os mineiros viram todos os dias de trabalho da vida deles.</p>",
       "fontes": [
         {
           "o": "Iglesias Turismo · site oficial",
@@ -4317,12 +4559,21 @@
         {
           "o": "SardegnaTurismo · Masua e Porto Flavia",
           "u": "https://www.sardegnaturismo.it/en/explore/masua-and-porto-flavia"
+        },
+        {
+          "o": "Parco Geominerario (oficial) · Porto Flavia",
+          "u": "https://parcogeominerario.sardegna.it/en/porto-flavia-2",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "cerca de 400 toneladas por hora"
+          ]
         }
       ]
     },
     {
       "titulo": "🔴 Garibaldi em Caprera — os últimos vinte e seis anos",
-      "prosa_html": "<p>Em <strong>1855</strong>, Giuseppe Garibaldi comprou metade de Caprera. Não era ainda o herói nacional que seria: era um marinheiro nascido em Nice, veterano de guerras na América do Sul, exilado, viúvo de Anita e recém-saído de um período trabalhando como fabricante de velas em Nova York. Comprou a ilha com dinheiro de uma herança do irmão. Em <strong>1856</strong> instalou-se de vez e começou a levantar a <strong>Casa Bianca</strong>, de traço sul-americano — casa térrea, teto plano, pátio interno —, que é a casa que vocês vão visitar.</p> <p>Caprera era, na época, praticamente pedra nua. Garibaldi levou terra, plantou vinha, oliveira e árvores frutíferas, criou cabras e gado, cavou poços e construiu muros de arrimo. A imagem que a Itália guardou dele é a do general de camisa vermelha; a que Caprera guarda é a de um homem de sessenta anos consertando cerca. Ele mesmo cultivava a distinção — chamava-se <em>agricultor</em> nas cartas.</p> <p>Daqui ele saiu pra a <strong>Expedição dos Mil</strong> em 1860, que entregou o sul da Itália a Vítor Emanuel II e praticamente fechou a unificação italiana. E pra cá voltou, recusando títulos, terras e pensão. É a parte da biografia que os italianos mais gostam de contar: o homem que deu um reino a um rei e voltou pra sua ilha plantar batata.</p> <p>Voltou também ferido. Em <strong>1862</strong>, no Aspromonte, tropas do próprio exército italiano atiraram na sua coluna pra impedir a marcha sobre Roma, e uma bala alojou-se no tornozelo direito. A artrite que se seguiu foi progressiva e cruel. Nos últimos anos ele mal andava, e circulava pela casa numa cadeira de rodas de vime que continua no lugar.</p> <p>Garibaldi morreu em <strong>2 de junho de 1882</strong>, aos setenta e quatro anos. Nos dias finais, pediu que a cama fosse puxada pra junto da janela, pra ver o mar. A cama está exatamente ali. O relógio da parede marca <strong>18h20</strong> e o calendário, a data — quem parou o relógio foi o filho, <strong>Menotti</strong>, e a família mandou que nunca mais fosse dado corda. Na tarde daquele 2 de junho, Garibaldi viu <em>duas toutinegras</em> pousadas no peitoril. Pensou nas duas filhas que tinha perdido e pediu que não as espantassem. A cama está protegida por uma redoma de vidro doada ainda em 1882 pela Sociedade dos Veteranos de Livorno. Ele queria ser cremado numa pira de lenha de acácia e mirto no próprio terreno; o Estado italiano decidiu de outra forma, e o corpo está no túmulo de granito bruto do jardim, ao lado dos filhos.</p> <p>O <strong>Compendio Garibaldino</strong> é hoje o museu mais visitado da Sardenha. Vale menos pelas relíquias que pela sensação estranha de andar por uma casa que ninguém redecorou desde 1882 — as botas, o poncho da América do Sul, o telescópio na janela, a mesa de trabalho. E a ilha em volta é hoje reserva natural, com um pinhal que ele mesmo plantou.</p>",
+      "prosa_html": "<p>Em <strong>1855</strong>, Giuseppe Garibaldi comprou metade de Caprera. Não era ainda o herói nacional que seria: era um marinheiro nascido em Nice, veterano de guerras na América do Sul, exilado, viúvo de Anita e recém-saído de um período trabalhando como fabricante de velas em Nova York. Comprou a ilha com dinheiro de uma herança do irmão. Em <strong>1856</strong> instalou-se de vez e começou a levantar a <strong>Casa Bianca</strong>, de traço sul-americano — casa térrea, teto plano, pátio interno —, que é a casa que vocês vão visitar.</p> <p>Caprera era, na época, praticamente pedra nua. Garibaldi levou terra, plantou vinha, oliveira e árvores frutíferas, criou cabras e gado, cavou poços e construiu muros de arrimo. A imagem que a Itália guardou dele é a do general de camisa vermelha; a que Caprera guarda é a de um homem de sessenta anos consertando cerca. Ele mesmo cultivava a distinção — chamava-se <em>agricultor</em> nas cartas.</p> <p>Daqui ele saiu pra a <strong>Expedição dos Mil</strong> em 1860, que entregou o sul da Itália a Vítor Emanuel II e praticamente fechou a unificação italiana. E pra cá voltou, recusando títulos, terras e pensão. É a parte da biografia que os italianos mais gostam de contar: o homem que deu um reino a um rei e voltou pra sua ilha plantar batata.</p> <p>Voltou também ferido. Em <strong>1862</strong>, no Aspromonte, tropas do próprio exército italiano atiraram na sua coluna pra impedir a marcha sobre Roma, e uma bala alojou-se no tornozelo direito. A artrite que se seguiu foi progressiva e cruel. Nos últimos anos ele mal andava, e circulava pela casa numa cadeira de rodas de vime que continua no lugar.</p> <p>Garibaldi morreu em <strong>2 de junho de 1882</strong>, aos setenta e quatro anos. Nos dias finais, pediu que a cama fosse puxada pra junto da janela, pra ver o mar. A cama está exatamente ali. O relógio da parede marca <strong>18h20</strong> e o calendário, a data — segundo o próprio museu, quem parou o relógio foi o filho, <strong>Menotti</strong>, e a família mandou que nunca mais fosse dado corda. Na tarde daquele 2 de junho, Garibaldi viu <em>duas toutinegras</em> pousadas no peitoril. Pensou nas duas filhas que tinha perdido e pediu que não as espantassem. A cama está protegida por uma redoma de vidro doada ainda em 1882 pela Sociedade dos Veteranos de Livorno. Ele queria ser cremado numa pira de lenha de acácia e mirto no próprio terreno; o Estado italiano decidiu de outra forma, e o corpo está no túmulo de granito bruto do jardim, ao lado dos filhos.</p> <p>O <strong>Compendio Garibaldino</strong> é hoje um dos museus mais visitados da Sardenha — a direção dos museus estatais o anuncia como 'o mais visitado', mas sem estatística recente publicada. Vale menos pelas relíquias que pela sensação estranha de andar por uma casa que ninguém redecorou desde 1882 — as botas, o poncho da América do Sul, o telescópio na janela, a mesa de trabalho. E a ilha em volta é hoje reserva natural, com um pinhal que ele mesmo plantou.</p>",
       "fontes": [
         {
           "o": "Compendio Garibaldino di Caprera · Ministero della Cultura",
@@ -4331,6 +4582,25 @@
         {
           "o": "SardegnaTurismo · Regione Sardegna",
           "u": "https://www.sardegnaturismo.it/"
+        },
+        {
+          "o": "Compendio Garibaldino (site oficial) · stanza della morte",
+          "u": "http://www.compendiogaribaldino.it/index.php?idrec=44&module=contents",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "Menotti",
+            "18h20"
+          ]
+        },
+        {
+          "o": "Direzione Musei Nazionali Sardegna · Compendio",
+          "u": "https://musei.sardegna.beniculturali.it/musei/compendio-garibaldino-di-caprera-2/",
+          "tier": "oficial",
+          "data": "2026-08-09",
+          "prova": [
+            "um dos museus mais visitados"
+          ]
         }
       ]
     }

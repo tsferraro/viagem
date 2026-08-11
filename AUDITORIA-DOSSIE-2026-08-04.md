@@ -35,7 +35,7 @@ Passou por `validate.py`, por `audit.py` **e por um FACTCHECK completo rodado na
 |---|---|---|
 | 2 | Cala Lazarina "ao norte da ilha, 10min do desembarque" | Fica no **sudoeste**; o desembarque é a leste |
 | 3 | Coordenada fornecida como Cala Lazarina | Era da **Cala di Achiarinu** (praia vizinha). Conferida em DUAS fontes náuticas concordantes — que concordavam na posição e erravam no rótulo |
-| 4 | Spiaggia La Bobba (Carloforte) | Coord ~**3 km** fora |
+| 4 | Spiaggia La Bobba (Carloforte) | Coord ~**3 km** fora · ⚠️ **REFUTADO pela auditoria independente de 2026-08-08 (§2.7)**: a coord do roteiro (39.09611, 8.29472) bate ao 5º decimal com 2 fontes náuticas — estava CERTA. Este item do dossiê era ele próprio afirmação sem checagem |
 
 ### 2.3 Estabelecimento na cidade errada
 
@@ -51,7 +51,7 @@ Passou por `validate.py`, por `audit.py` **e por um FACTCHECK completo rodado na
 | 7 | Pertusato "ponto mais ao sul da França metropolitana" | É o **segundo**; o extremo é o Capu Testagro |
 | 8 | Pointe Saint-Antoine "ponto mais ao sul da Córsega" | Falso |
 | 9 | "A Moby é o operador único" da rota Bonifacio–Santa Teresa | A **Ichnusa Lines** opera — foi por ela que a mãe do Tobia comprou. Eu havia acabado de *"corrigir"* o card removendo a Blu Navy, com base em agregadores |
-| 10 | Stagno di Càbras: "maior população europeia de flamingos rosa" | A colônia é **Molentargius, em Cagliari**, a 500 km — e nem ela é a maior da Europa (é uma das três do Mediterrâneo ocidental) |
+| 10 | Stagno di Càbras: "maior população europeia de flamingos rosa" | A colônia é **Molentargius, em Cagliari**, a 500 km — e nem ela é a maior da Europa (é uma das três do Mediterrâneo ocidental) · ⚠️ o "**a 500 km**" foi **REFUTADO pela auditoria de 2026-08-08 (§2.7)**: são ~105km de carro (a Sardenha tem ~270km — 500 é geometricamente impossível). O resto do item permanece válido. O erro chegou a ser promovido a doutrina no CLAUDE.md; corrigido em 2026-08-09 |
 
 ### 2.5 Sazonalidade vendida errada
 
@@ -162,6 +162,16 @@ walking tour e road trip — onde o que importa é *por onde se anda*, não o ho
 fonte pode ser superior a qualquer portal oficial.
 
 Nenhuma parte do repo hoje distingue, prioriza ou cataloga esse tipo de fonte.
+
+**Decisão do Tobia (04/Ago)**: ele não tem hoje uma lista de blogs de confiança — tentou lembrar e
+nenhum se destacou. Então isto **não deve ser entregue como lista pronta**, e sim como **processo
+(ou skill) de curadoria progressiva**, que roda em paralelo à construção dos próximos roteiros e vai
+acumulando fontes validadas por perfil de viagem.
+
+Observação para quem desenhar isso: o repo já tem o mecanismo de feedback que fecha o ciclo — a
+**caixa 📣 de relato de campo** e os `DIARIO.md`. Quando uma recomendação é confirmada ou demolida em
+campo, isso é evidência sobre **a fonte que a originou**, não só sobre o item. Uma curadoria com esse
+laço tem lastro; uma lista mantida por gosto, não.
 
 ---
 

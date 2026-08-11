@@ -145,9 +145,32 @@ fecha **quartas**; Museu de Càbras e Compendio Garibaldino fecham **segundas**.
 
 ---
 
-## Sandbox cloud · rede externa (2026-08-03 · atualiza a nota de geocoding acima)
+## Sandbox cloud · rede externa (2026-08-03 · **re-testado 2026-08-09: SEGUE BLOQUEADA**)
 
-Testado nesta sessão, **tudo** devolve `000`/`403` (falha de CONNECT no proxy):
+> **Re-teste de 2026-08-09** (Lote 7f · o Tobia tinha liberado a política de rede do ambiente e
+> a expectativa era que o factcheck subisse pra nível-página). **Não subiu — nada mudou.**
+> O que foi rodado, verbatim, e o que voltou:
+>
+> | Teste | Resultado |
+> |---|---|
+> | `WebFetch https://www.comune.bosa.or.it/` | `EGRESS_BLOCKED · blocked by the network egress proxy` |
+> | `curl -sI https://www.comune.bosa.or.it/` | `HTTP/1.1 403 Forbidden` |
+> | `curl -sI https://www.sardegnaturismo.it/` | `HTTP/1.1 403 Forbidden` |
+> | `curl -sI https://tsferraro.github.io/viagem/` | `HTTP/1.1 403 Forbidden` ← **nem o próprio Pages** |
+> | `WebSearch` (Bosa · horário de ufficio turistico) | **funciona** · devolveu 10 resultados com títulos e snippets |
+>
+> Diagnóstico do proxy (`$HTTPS_PROXY/__agentproxy/status`): `connect_rejected · gateway
+> answered 403 to CONNECT (policy denial or upstream failure)` pros três hosts. Ou seja, é
+> negação de política no gateway, não erro de TLS nem de DNS — não há nada a consertar do lado
+> de cá. **Tudo abaixo continua valendo integralmente**, inclusive `--check-links` inútil em
+> cloud e a regra de só entrar raiz-de-domínio no `links_map`.
+>
+> Duas consequências que valem repetir: o **factcheck em sessão cloud segue nível-SNIPPET**
+> (não nível-página) — e isso tem que ser declarado no artefato `FACTCHECK-<data>.md`, não
+> presumido; e o passo do `wrap-up.sh` que faz `curl HEAD` nas URLs ao vivo **não roda aqui** —
+> a confirmação de HTTP 200 é do desktop do Tobia.
+
+Testado em 2026-08-03, **tudo** devolve `000`/`403` (falha de CONNECT no proxy):
 Nominatim · Photon/Komoot · geocode.maps.co · Geoapify · open-meteo geocoding · Overpass ·
 openstreetmap.org · **it.wikipedia.org** · e a maioria dos sites oficiais via WebFetch
 (monteprama.it, coopculture.it, museocabras.it, gesecoarzachena.it, calagononecrociere.it).
@@ -200,9 +223,88 @@ Trata todo status ≠2xx como "link quebrado", com a mesma severidade:
 
 Só **404/410** é prova de morte. Sugestão pra quem for mexer no `audit.py`: cair pra `GET` quando o
 `HEAD` devolver 403/405, e separar "morto" (404/410) de "não verificável" (403/405/timeout).
-- Coordenada só sai de busca quando a fonte publica DMS (`41°13'01"N`). **Truque útil**: converter DMS pra decimal gera naturalmente 5+ casas, o que contorna o bug do `coord_4dec` (que usa `str()` e lê `41.8440` como 3 casas, porque JSON não guarda zero à direita).
+- Coordenada só sai de busca quando a fonte publica DMS (`41°13'01"N`). Converter DMS pra decimal gera naturalmente 5+ casas — bom pra precisão. (O bug do `coord_4dec` que esta nota contornava — `str()` lia `41.8440` como 3 casas — foi **consertado no Lote 1 da auditoria, 2026-08-09**: o parser agora guarda o texto bruto do JSON.)
 
 ---
+
+## Verificação de conteúdo · o que efetivamente melhora o roteiro (2026-08-04 · Córsega em campo)
+
+Só o que muda a qualidade do produto. A narrativa dos erros está em
+`AUDITORIA-DOSSIE-2026-08-04.md`; aqui ficam as regras de fabricação.
+
+### As 3 checagens de maior retorno por minuto gasto
+
+1. **Cruzar DIA DA SEMANA de cada ocorrência × horário da fonte.** Foi de onde saíram os três
+   achados mais úteis da revisão: `Il Caminetto` ⭐⭐⭐ num jantar de **segunda** (fecha às segundas)
+   · `Il Rifugio` ⭐⭐⭐ num almoço de **domingo** (fontes divergem sobre domingo) · `L'Archivolto`
+   ⭐⭐⭐ como opção de almoço (**só serve jantar**). Nenhum aparece como erro em ferramenta nenhuma
+   — só o cruzamento manual pega.
+2. **Confirmar a FUNÇÃO, não só o nome.** Enoteca não é trattoria; bistrô de sanduíche não é jantar;
+   "loggia" pode ser pórtico de igreja e não mirante. *Nome real com função inventada* é o modo de
+   falha mais perigoso, e é invisível a quem só confere se o nome existe.
+3. **Superlativo e sazonalidade são as duas classes que mais apodrecem** — e as que guia turístico
+   mais repete sem checar. Tratar como afirmação a PROVAR, nunca como cor de prosa. Exemplos reais
+   que passaram: "ponto mais ao sul da França" (era o segundo) · "maior população europeia de
+   flamingos" (a colônia é a 500km) · "operador único" (havia dois) · flamingo vendido em agosto
+   (pico é outono/inverno).
+
+### Régua de fonte por tipo de pergunta
+
+| Pergunta | Fonte que serve |
+|---|---|
+| Horário, preço, regra de acesso, dia de fechamento | portal/órgão **oficial** · site do próprio estabelecimento |
+| O lugar existe e é o que digo que é | oficial + guia reconhecido (Michelin, Touring Club, Accademia Italiana della Cucina) |
+| **Por onde se anda** (walking tour, road trip) | **quem andou** — relato de campo com My Maps montado vale mais que portal oficial, que não sabe de rua |
+| Exclusividade ("o único", "o maior") | precisa de fonte que **afirme a exclusividade**. Agregador que lista N operadores **não prova** que são todos — foi assim que a Ichnusa Lines sumiu do roteiro |
+
+**Anexar fonte não é verificar.** A fonte tem que sustentar a FRASE. Card com `fontes` preenchido e
+prosa nunca lida contra elas passa em qualquer gate e continua falso.
+
+### Regras de dado que afetam o uso
+
+- **Item de `opcoes` precisa de `coord` própria.** Sem ela o restaurante não vira pino — some do
+  mapa do dia E da aba "Tudo no Mapa", que é justamente a tela para decidir onde comer a partir de
+  onde se está. Estado em 2026-08-04: 72/73 na Córsega e 82/82 na Sardenha sem coord.
+- **`valeAPena` é recompensa do LUGAR**, não valor emocional do momento. "Encontro com a família"
+  não é ⭐⭐⭐ de POI. Card de pura logística leva `noMaps: true` e sai da conta.
+- **Coordenada de site náutico marca fundeadouro, não areia** — e pode estar rotulada com o nome da
+  cala vizinha. Duas fontes concordando na posição não garantem o rótulo.
+
+### O loop de campo é a fonte mais confiável que este repo tem
+
+Na Córsega, **os erros graves foram achados pelo viajante, nenhum pelos gates**. Consequências
+práticas para a fabricação:
+
+- Coordenada medida no local entra marcada (`verificado_em_campo`) e vale mais que qualquer busca.
+  Exemplo: a escada da marina à cidadela de Bonifacio, `41.3884, 9.1596`, e o **Chemin de Ronde**
+  (~300m sobre as muralhas, acesso gratuito pelo Escritório de Turismo) — que o Tobia encontrou
+  sozinho e o tour original não tinha.
+- Quando um relato de campo confirma ou derruba uma recomendação, isso é evidência sobre **a fonte
+  que a originou**, não só sobre o item. É o lastro para a curadoria de fontes.
+- Ao processar relatos, manter a fronteira: erro factual → `data.json` · dica útil a qualquer
+  viajante → card · preferência da família → `MEMORY.md` · contexto → `DIARIO.md`.
+
+### Contar a história inteira
+
+O card do cerco de Bonifacio contava 1420 (a cidade resistiu cinco meses) e omitia 1553 (a cidade
+foi tomada e capitulou). O Tobia leu um painel no local e achou que o roteiro estava errado — o
+roteiro estava **incompleto de um jeito que soa épico**. Curadoria que seleciona só a parte gloriosa
+produz o mesmo efeito de um erro factual: o viajante descobre no local que o texto não bate.
+
+## Auditoria adversarial · o que a crise de ago/2026 provou (2026-08-09 · aprovado pelo Tobia)
+
+- **Papéis separados, com artefato, corrigem nos DOIS sentidos.** Construtor ≠ verificador ≠
+  auditor. No ciclo dos Lotes 1-7: a executora refutou uma instrução do auditor com fonte
+  (caso Menotti) e estava certa; o auditor achou 2 furos operacionais da executora. Nenhum
+  dos três papéis é confiável sozinho — o LAÇO é.
+- **Gate cobrável por regex vira tutorial de gaming.** Um roteiro 100% inventado tirou 35/40
+  "Aprovado" em 3 iterações copiando os tokens que as mensagens de erro do próprio gate
+  listavam. Regex trava FORMATO; verdade só existe com verificação que deixa rastro
+  (FACTCHECK-<data>.md) e alguém adversarial pra conferir o rastro.
+- **A taxa de base de escrever sem verificar é ~20-50% de erro — medida QUATRO vezes**
+  (15/55 fantasmas · 11/21 refutadas · 12/30 no scout · ~19% na auditoria externa). Não é
+  risco, é aritmética: cada item além do orçamento de checagem entra com essa taxa. Por isso
+  a cota editorial é 2 verificadas > 3 plausíveis.
 
 ## Evolução da skill
 
@@ -395,3 +497,27 @@ está em aberto é só o transporte da planilha até mim.
 
 - [ ] Propagar o aviso de storage não-persistente (maybeWarnStorage · template) pros outros roteiros: rebuildar corsica, marais, valencia, pais-sardenha via build.py (só NYC foi reconstruído em 2026-07-08).
 - [ ] Propagar a **aba "Tudo no Mapa" + classificação `poiCat`/`valeAPena`** pros outros roteiros (o template já herda a aba; falta classificar os POIs e dar coord às opções de cada viagem).
+
+### Execução da auditoria em 5 lotes · 2026-08-09 (sessão executora + auditoria de volta)
+
+Três lições que generalizam além desta rodada:
+
+1. **Instrução recebida também é afirmação a verificar.** O handoff mandava remover "quem
+   parou o relógio foi Menotti" como sem-fonte. O sub-agente cético (contexto limpo) achou a
+   fonte — o site oficial do Compendio Garibaldino — e a auditora confirmou que o erro era do
+   verificador DELA. A REGRA ZERO vale pra ordem escrita em documento interno tanto quanto pra
+   prosa de card: **conferir antes de aplicar, mesmo vindo de auditoria**. O laço adversarial
+   só funciona se roda nos dois sentidos.
+
+2. **Coord idêntica em stops distintos tem DUAS causas, e a segunda é a traiçoeira.** Ou um
+   dos stops está no lugar errado (Tophet/MAB), ou os dois nomes são **o mesmo lugar** — Valle
+   della Luna e Cala Grande eram isso (o vale desemboca na enseada; SardegnaTurismo intitula a
+   página "Cala Grande - Valle della Luna"). O check mecânico do `maps-audit.py` pega o
+   sintoma; diagnosticar QUAL das duas causas é trabalho de pesquisa, não de regex.
+
+3. **Custo real da verificação com rastro, medido**: 3 sub-agentes céticos, ~68 buscas pra
+   ~20 afirmações (~10-15min de parede, rodando em paralelo ao resto). Retorno: além de
+   confirmar/refutar, os céticos devolveram **refinamentos que a instrução não pedia** (a
+   composição exata dos +2 Gigantes: um pugilista de Cavalupo e um arqueiro — não "2 novas";
+   a formulação "quase cinco meses" no cerco de 1420). Verificação barata o bastante pra ser
+   default em edição de conteúdo sensível — o gate 4d agora cobra o artefato de qualquer jeito.

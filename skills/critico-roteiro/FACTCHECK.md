@@ -4,6 +4,11 @@ Camada 3 da avaliação de conteúdo. O `audit.py` (regex) mede **forma**; este 
 
 Régua de fontes: `references/source-credibility.md` (tiers + padrões de prova).
 
+> ⚠️ **Execução é com RASTRO e sem auto-verificação** (R6 · 2026-08-09): quem escreveu não
+> roda o próprio factcheck no mesmo contexto — despacha sub-agentes céticos e o resultado
+> persiste em `<viagem>/FACTCHECK-<AAAA-MM-DD>.md`, cobrado pelo `scripts/factcheck-gate.py`
+> no deploy. Modo de execução completo: **`FACTCHECK-EXEC.md`** (neste diretório).
+
 ## Quando roda (gatilhos — NÃO rodar em edit pequeno)
 
 | Situação | Escopo |
@@ -22,7 +27,7 @@ Régua de fontes: `references/source-credibility.md` (tiers + padrões de prova)
 2. **Qualquer afirmação sem fonte registrada** que seja verificável (coords de POI, fato histórico com data/nome, "fecha às 14h de quinta")
 3. **Amostra de ~20%** das afirmações COM proveniência (auditoria de honestidade — a fonte diz mesmo aquilo?).
    ⛔ **A amostragem NUNCA se aplica ao tipo `existência`** — lugar se confere 100%, ou não se confere.
-4. **Vereditos 🟢-âncora**: a convergência exigida pelo padrão de prova existe? A busca negativa foi rodada?
+4. **Vereditos 🏆-âncora**: a convergência exigida pelo padrão de prova existe? A busca negativa foi rodada?
 
 **NÃO verifica (redundâncias cortadas):**
 - **R1**: afirmação com proveniência **T1 recente** registrada na mesma sessão de pesquisa → já verificada. Não re-caçar o que o scout acabou de citar.

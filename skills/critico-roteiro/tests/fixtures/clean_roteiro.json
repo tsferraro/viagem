@@ -54,6 +54,9 @@
     "Sé de Lisboa (Largo da Sé)": [
       {"type": "official", "label": "Patriarcado de Lisboa", "url": "https://www.patriarcado-lisboa.pt/"}
     ],
+    "Miradouro de Santa Luzia (Largo Santa Luzia)": [
+      {"type": "official", "label": "Visit Lisboa", "url": "https://www.visitlisboa.com/"}
+    ],
     "Torre de Belém (Av. Brasília)": [
       {"type": "official", "label": "Torre de Belém", "url": "https://www.torrebelem.gov.pt/"}
     ]

@@ -1,0 +1,289 @@
+{
+  "title": "Bosa Falsa · teste adversarial",
+  "auth_emoji": "🧪",
+  "auth_title": "Teste",
+  "auth_subtitle": "Auditoria",
+  "header_title": "Bosa · fim de semana",
+  "header_sub": "2 dias · roteiro 100% inventado de propósito",
+  "password": "teste",
+  "maps_region": "Sardegna, Italia",
+  "legend_group_text": "",
+  "legend_notes_html": "",
+  "days": [
+    {
+      "date": "Sáb 5/Set",
+      "tema": "Bosa · centro histórico e falésias",
+      "temaCurto": "Bosa",
+      "bairro": "Bosa",
+      "grupo": false,
+      "cor": "#dc2626",
+      "gradA": "#7f1d1d",
+      "gradB": "#991b1b",
+      "nota": "Dia denso mas o castelo compensa · estacionar cedo no rio.",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🏰",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Belvedere della Regina (Via del Carmine 44)",
+          "cat": "Mirante séc. XVII · falésias do Temo",
+          "sobre": "Construído em 1687 sobre a antiga muralha aragonesa, o <strong>Belvedere della Regina</strong> é a maior varanda natural da costa oeste sarda. No fim da tarde o trachito das falésias passa de dourado a vermelho-sangue em cerca de trinta minutos — o espetáculo que os pescadores locais chamam de <em>s'incendiu</em>.",
+          "imperdivel": "O parapeito sul, de onde se vê o rio Temo dobrar duas vezes antes do mar — ângulo que nenhum outro ponto de Bosa oferece.",
+          "dicas": [
+            "Chegue 18h30 pra pegar o s'incendiu completo (dura ~30min)",
+            "Grátis · o portão lateral fecha às 20h em setembro"
+          ],
+          "duracao": "30-45min",
+          "custo": "Grátis",
+          "acessibilidade": "Rampa lateral contorna os 12 degraus da entrada · piso de lajota regular",
+          "coord": {
+            "lat": 40.2971,
+            "lng": 8.4962
+          },
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "fontes": [
+            {
+              "o": "Sardinia Top Travel Guide",
+              "u": "https://sardinia-top-travel-tips.best-guides.info/bosa-belvedere",
+              "prova": [
+                "1687",
+                "maior varanda natural",
+                "trinta minutos",
+                "20h",
+                "séc. XVII",
+                "18h30",
+                "30min",
+                "45min",
+                "12 degraus",
+                "20h",
+                "setembro"
+              ]
+            }
+          ],
+          "walkingTours": [
+            {
+              "nome": "Bosa · 🏰 Muralhas & Falésias",
+              "descricao": "Belvedere → Torre → Escadaria · ~40min",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Belvedere della Regina (Via del Carmine 44)",
+                  "mapsQuery": "Belvedere della Regina Bosa",
+                  "coord": {
+                    "lat": 40.2971,
+                    "lng": 8.4962
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Torre dell'Aragonese (muralha norte)",
+                  "mapsQuery": "Torre Aragonese Bosa",
+                  "coord": {
+                    "lat": 40.2989,
+                    "lng": 8.4948
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Scalinata dei Conciatori (72 degraus)",
+                  "mapsQuery": "Scalinata Conciatori Bosa",
+                  "coord": {
+                    "lat": 40.2955,
+                    "lng": 8.4988
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · beira do Temo",
+          "cat": "3 opções",
+          "coord": {
+            "lat": 40.2933,
+            "lng": 8.4977
+          },
+          "opcoes": [
+            {
+              "nome": "Trattoria del Porto Vecchio (Via Colombo 12, Bosa)",
+              "desc": "Casa de família desde 1952 · o melhor polvo grelhado da Planargia · fecha às quartas",
+              "preco": "€18-28",
+              "dist": "3min a pé",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "fontes": [
+                {
+                  "o": "Guia Sabores da Sardenha",
+                  "u": "https://best-sardinia-food.reviews-hub.site/bosa-trattoria",
+                  "prova": [
+                    "1952",
+                    "melhor polvo grelhado",
+                    "quartas"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Sa Pischedda Pizza (Via Roma 8, Bosa)",
+              "desc": "Pizza ao forno a lenha · terraço",
+              "preco": "€10-15",
+              "dist": "5min a pé",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "fontes": [
+                {
+                  "o": "Guia Sabores da Sardenha",
+                  "u": "https://best-sardinia-food.reviews-hub.site/bosa-pizza",
+                  "prova": []
+                }
+              ]
+            },
+            {
+              "nome": "Bar Centrale (Piazza IV Novembre)",
+              "desc": "Panini e spritz · rápido",
+              "preco": "€6-10",
+              "dist": "4min a pé",
+              "valeAPena": 1,
+              "poiCat": "cafe"
+            }
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Concattedrale di San Pietro extra muros (Loc. Calmedia)",
+          "cat": "Românico-lombardo séc. XI",
+          "sobre": "Erguida em 1073 pelos monges vitorinos de Marselha, é a igreja românica <strong>mais antiga de toda a Sardenha</strong> e o único exemplo da ilha com dupla abside contraposta. Fica sozinha entre oliveiras na margem sul do Temo, no sítio da Bosa original, abandonada quando a população subiu pro morro do castelo.",
+          "imperdivel": "A dupla abside contraposta — caminhe até o fundo externo pra ver as duas curvas de pedra rosada uma de frente pra outra.",
+          "dicas": [
+            "Aberta ter-dom 10h-13h e 15h-19h (ago/2026) · segunda fechada",
+            "€3 entrada · €2 acima de 65 (ago/2026)"
+          ],
+          "duracao": "30-40min",
+          "custo": "€3 (ago/2026)",
+          "acessibilidade": "Estrada de terra batida 200m · piso interno plano, sem degraus",
+          "coord": {
+            "lat": 40.2891,
+            "lng": 8.5133
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "fontes": [
+            {
+              "o": "Portale Romanico Sardo",
+              "u": "https://romanico-sardegna.itinerari-web.com/san-pietro-bosa",
+              "prova": [
+                "1073",
+                "mais antiga",
+                "dupla abside",
+                "ter-dom",
+                "€3",
+                "único",
+                "séc. XI",
+                "10h",
+                "13h",
+                "15h",
+                "19h",
+                "30-40min",
+                "€2",
+                "200m",
+                "1073",
+                "mais antiga"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "19:00",
+          "emoji": "🌅",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Capo Marargiu · ponta oeste (mirante dos grifos)",
+          "cat": "Ponto mais ao oeste da Sardenha · colônia de grifos",
+          "sobre": "O promontório vulcânico de Capo Marargiu é o ponto mais ao oeste da Sardenha e abriga a última colônia de grifos da ilha — cerca de 260 aves que ninham nas paliçadas de andesito. Ao entardecer é comum vê-los voltando das planícies do Marghine, planando sem bater as asas.",
+          "imperdivel": "Os grifos voltando ao ninho entre 19h e 20h no verão — binóculo dispensável, passam a menos de 50m do mirante.",
+          "dicas": [
+            "Estrada SP49 até o km 8, depois 300m a pé por trilha plana",
+            "Melhor luz a partir das 19h em agosto"
+          ],
+          "duracao": "45min-1h",
+          "custo": "Grátis",
+          "acessibilidade": "Trilha final plana de terra · ok pra carrinho robusto",
+          "coord": {
+            "lat": 40.3345,
+            "lng": 8.3891
+          },
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo",
+              "u": "https://www.sardegnaturismo.it/it/esplora/capo-marargiu",
+              "prova": [
+                "260",
+                "última",
+                "Melhor",
+                "19h",
+                "20h",
+                "50m",
+                "300m",
+                "45min",
+                "260",
+                "mais ao oeste",
+                "km 8",
+                "verão",
+                "agosto"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "historia": [
+    {
+      "titulo": "🏰 Bosa — a cidade que desceu do morro duas vezes",
+      "prosa_html": "<p>Bosa nasceu fenícia na margem sul do Temo, no sítio onde hoje resta sozinha a Concattedrale de San Pietro. Quando os sarracenos queimaram o porto em 846, a população subiu pro morro — e ali os Malaspina, marqueses toscanos exilados, ergueram em 1112 o castelo que ainda coroa a cidade. A lenda diz que a marquesa Bianca Malaspina, murada viva pelo marido ciumento na torre norte, ainda desce as escadas nas noites de mistral — os bosani juram que o rangido da porta da torre é ela. Em 1528, a peste levou dois terços da cidade em quatro meses; os sobreviventes fundaram Sas Conzas, os curtumes da margem sul, que fizeram de Bosa a capital do couro do Mediterrâneo ocidental até 1900.</p>",
+      "fontes": [
+        {
+          "o": "Storia di Bosa · portale del comune",
+          "u": "https://storia-bosa.info-sardegna.net/medioevo"
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Belvedere della Regina (Via del Carmine 44)": [
+      {
+        "type": "official",
+        "label": "Comune di Bosa",
+        "url": "https://www.comune.bosa.or.it"
+      }
+    ]
+  },
+  "transit_map": {},
+  "bairros_config": [
+    {
+      "nome": "🏰 Bosa",
+      "latMin": 40.28,
+      "latMax": 40.31,
+      "lngMin": 8.48,
+      "lngMax": 8.52
+    },
+    {
+      "nome": "📍 Outros",
+      "fallback": true
+    }
+  ]
+}

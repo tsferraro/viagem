@@ -29,7 +29,7 @@ if [ -z "$COMMIT_MSG" ] || [ -z "$SUBDIR" ] || [ -z "$NEW_SLUG" ]; then
   exit 2
 fi
 
-if [ "$SUBDIR" = "archive" ] || [ "$SUBDIR" = "scripts" ] || [ "$SUBDIR" = "templates" ] || [ "$SUBDIR" = "references" ] || [ "$SUBDIR" = "skills" ]; then
+if [ "$SUBDIR" = "archive" ] || [ "$SUBDIR" = "scripts" ] || [ "$SUBDIR" = "templates" ] || [ "$SUBDIR" = "references" ] || [ "$SUBDIR" = "skills" ] || [ "$SUBDIR" = "entregas" ] || [ "$SUBDIR" = "fontes" ]; then
   echo "❌ SUBDIR '$SUBDIR' é reservado · use nome de viagem (nyc, corsica, etc)"
   exit 2
 fi
@@ -54,6 +54,54 @@ echo "→ Subpasta: $SUBDIR · slug: $NEW_SLUG"
 cp "$SRC_HTML" "$TARGET_HTML"
 echo "$NEW_SLUG" > "$TARGET_SLUG"
 
+# Gate de SCOUT (soft · Lote 7c · 2026-08-09): viagem NOVA que nasce sem levantamento macro.
+# Córsega e Sardenha nasceram assim — pesquisa dia-a-dia, sem mapa do destino antes — e o
+# resultado está na auditoria de 2026-08-08. Não bloqueia por default porque mini-roteiro e
+# coletânea de cidade (marais) são casos legítimos sem scout. VIAGEM_STRICT=1 bloqueia.
+# "Viagem nova" = subdir sem NENHUM commit no histórico (o cp acima ainda não foi commitado).
+if [ -z "$(git log --oneline -1 -- "$SUBDIR" 2>/dev/null)" ]; then
+  if ! ls entregas/"$NEW_SLUG"*.md >/dev/null 2>&1; then
+    echo ""
+    echo "⚠️  VIAGEM NOVA SEM LEVANTAMENTO SCOUT"
+    echo "    Não existe entregas/${NEW_SLUG}*.md · esta viagem está indo pro ar sem o degrau 0"
+    echo "    (skills/destination-scout: mapa do destino, vereditos e proveniência ANTES do"
+    echo "    dia-a-dia). Córsega e Sardenha nasceram assim — o resultado está na auditoria de"
+    echo "    2026-08-08. Legítimo pra mini-roteiro/coletânea; suspeito pra viagem de verdade."
+    echo "    Pra transformar este aviso em bloqueio: VIAGEM_STRICT=1"
+    echo ""
+    if [ "$VIAGEM_STRICT" = "1" ]; then
+      echo "❌ VIAGEM_STRICT=1 · viagem nova sem scout · ABORTADO"
+      exit 1
+    fi
+  fi
+fi
+
+# Gate de SINCRONIA (Lote 7a · 2026-08-09): o index.html que vai pro ar veio MESMO do
+# data.json? O edit inline no `const DAYS` (que o CLAUDE.md recomendava até hoje) fazia duas
+# coisas ruins: dessincronizava o data.json (o próximo rebuild apaga em silêncio) e BURLAVA o
+# gate 4d — o factcheck-gate projeta o conteúdo sensível a partir do data.json, então um edit
+# só-no-HTML muda o que a família lê sem mexer na projeção. Roda ANTES dos outros gates
+# porque é o que garante que os outros estão auditando o arquivo certo.
+# Falha-FECHADO se o script sumir · override: VIAGEM_SKIP_GATES=1.
+SYNC_PY="$SCRIPT_DIR/sync-check.py"
+if [ -f "$SYNC_PY" ]; then
+  echo "→ Gate de sincronia (data.json ↔ index.html)..."
+  if ! python3 "$SYNC_PY" "$TARGET_DIR/data.json" "$TARGET_HTML" --quiet; then
+    if [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+      echo "⚠️⚠️⚠️  VIAGEM_SKIP_GATES=1 · seguindo com HTML DESSINCRONIZADO do data.json ⚠️⚠️⚠️"
+    else
+      echo "❌ Gate de sincronia BLOQUEOU · rode build.py · ABORTADO"
+      exit 1
+    fi
+  fi
+elif [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+  echo "⚠️⚠️⚠️  sync-check.py NÃO ENCONTRADO · VIAGEM_SKIP_GATES=1 · PULANDO gate de sincronia ⚠️⚠️⚠️"
+else
+  echo "❌ sync-check.py não encontrado · gate de sincronia falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_GATES=1 scripts/deploy.sh ..."
+  exit 1
+fi
+
 # Validar (estrutural · bloqueia sempre que falhar)
 echo "→ Validando (estrutura)..."
 python3 "$VALIDATE_PY" "$TARGET_HTML" || { echo "❌ validate.py falhou · ABORTADO"; exit 1; }
@@ -62,25 +110,60 @@ python3 "$VALIDATE_PY" "$TARGET_HTML" || { echo "❌ validate.py falhou · ABORT
 # Bloqueia SÓ em P0 (erro objetivo: card vazio, link oficial morto). Nota < 32 vira
 # aviso — a régua de 32 é enforçada no LOOP da sessão, não no push (heurística mole
 # não deve brickar o acesso da família). VIAGEM_STRICT=1 endurece (bloqueia < 32).
+#
+# Falha-FECHADO se o script sumir (Lote 7g · mesmo padrão do 6b): gate que "pula" quando o
+# script some não é gate, é sugestão. Override: VIAGEM_SKIP_GATES=1.
 AUDIT_PY="$REPO_DIR/skills/critico-roteiro/audit.py"
 if [ -f "$AUDIT_PY" ]; then
   echo "→ Gate de conteúdo (critico-roteiro)..."
   python3 "$AUDIT_PY" "$TARGET_HTML" --deploy-gate \
     || { echo "❌ Gate de conteúdo BLOQUEOU (P0 · erro objetivo) · ABORTADO"; exit 1; }
+elif [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+  echo "⚠️⚠️⚠️  critico-roteiro/audit.py NÃO ENCONTRADO · VIAGEM_SKIP_GATES=1 · PULANDO gate de conteúdo (deploy SEM checagem de P0) ⚠️⚠️⚠️"
 else
-  echo "⚠️  critico-roteiro não encontrado · pulando gate de conteúdo"
+  echo "❌ critico-roteiro/audit.py não encontrado · gate de conteúdo falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_GATES=1 scripts/deploy.sh ..."
+  exit 1
 fi
 
 # Gate de MAPAS (maps-audit.py): monta as URLs do Google Maps como o app monta e bloqueia
 # busca genérica / waypoint fantasma / ponto repetido. Existe porque validate e audit leem o
 # DADO, e os bugs de ago/2026 (pino no mar, "Can't find that place") só existiam na URL final.
+# Falha-FECHADO se o script sumir (Lote 7g) · override VIAGEM_SKIP_GATES=1.
 MAPS_PY="$SCRIPT_DIR/maps-audit.py"
 if [ -f "$MAPS_PY" ]; then
   echo "→ Gate de mapas (maps-audit)..."
   python3 "$MAPS_PY" "$TARGET_HTML" --quiet \
     || { echo "❌ Gate de mapas BLOQUEOU · corrija com mapsQuery/noMaps · ABORTADO"; exit 1; }
+elif [ "$VIAGEM_SKIP_GATES" = "1" ]; then
+  echo "⚠️⚠️⚠️  maps-audit.py NÃO ENCONTRADO · VIAGEM_SKIP_GATES=1 · PULANDO gate de mapas (deploy SEM checagem das URLs do Maps) ⚠️⚠️⚠️"
 else
-  echo "⚠️  maps-audit.py não encontrado · pulando gate de mapas"
+  echo "❌ maps-audit.py não encontrado · gate de mapas falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_GATES=1 scripts/deploy.sh ..."
+  exit 1
+fi
+
+# Gate de FACTCHECK (frescor+formato · R6 auditoria 2026-08-08): verificação sem artefato
+# não conta. Bloqueia se não existe <viagem>/FACTCHECK-*.md, se o formato não tem vereditos
+# por item com fonte, ou se conteúdo sensível (⭐⭐⭐/WT/historia) mudou depois do último
+# factcheck. Cobra timestamp+estrutura (não gameable por substring); a VERDADE do factcheck
+# é trabalho da sessão auditora. Ver skills/critico-roteiro/FACTCHECK-EXEC.md.
+#
+# Falha-FECHADO se o script sumir (refinamento 6b · auditoria de volta 2026-08-09): um gate
+# que "pula" quando o script some não é gate, é sugestão — o mesmo "⚠ pulando" que os outros
+# gates ainda usam foi a causa-raiz da crise (verificação sem testemunha). Override explícito
+# e ruidoso pra quando o script precisa mesmo sumir por um instante: VIAGEM_SKIP_FCGATE=1.
+FCGATE_PY="$SCRIPT_DIR/factcheck-gate.py"
+if [ -f "$FCGATE_PY" ]; then
+  echo "→ Gate de factcheck (frescor+formato)..."
+  python3 "$FCGATE_PY" "$TARGET_DIR" --quiet \
+    || { echo "❌ Gate de factcheck BLOQUEOU · rode o FACTCHECK-EXEC e versione o artefato · ABORTADO"; exit 1; }
+elif [ "$VIAGEM_SKIP_FCGATE" = "1" ]; then
+  echo "⚠️⚠️⚠️  factcheck-gate.py NÃO ENCONTRADO · VIAGEM_SKIP_FCGATE=1 · PULANDO gate de factcheck (deploy SEM verificação de frescor) ⚠️⚠️⚠️"
+else
+  echo "❌ factcheck-gate.py não encontrado · gate de factcheck falha-FECHADO · ABORTADO"
+  echo "   Override explícito (assumindo o risco): VIAGEM_SKIP_FCGATE=1 scripts/deploy.sh ..."
+  exit 1
 fi
 
 # Regenerar landing AUTOMATICAMENTE (lê todas subpastas atuais + monta cards)

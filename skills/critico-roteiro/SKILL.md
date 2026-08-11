@@ -115,7 +115,7 @@ No `--json`, cada achado carrega `station`, `hint` e `half` — um sub-agente de
 ## Regras da avaliação (herança do repo)
 
 - **Honestidade > diplomacia**: a auditoria é real. Link morto → acusa. Card raso → nota baixa. Sem teatro.
-- **Uma fonte de verdade**: veredito 🟢🟡🔴, preço datado e Fontes vêm da `mapping-rubric.md` da destination-scout. Esta skill VERIFICA, não redefine.
+- **Uma fonte de verdade**: veredito 🏆⚠️⏭️ (🟢🟡🔴 nas entregas até 2026-08-09 · o audit aceita os dois), preço datado e Fontes vêm da `mapping-rubric.md` da destination-scout. Esta skill VERIFICA, não redefine.
 - **Alertas não viram cortes**: o alerta de ritmo (dias "pesados" pra criança) é **P3 advisory** — sinaliza pra o Tobia decidir e remanejar se achar válido; **nunca** corta stop automaticamente nem bloqueia entrega.
 - **Falso-positivo é bug**: se um check acusa algo legítimo (ex: "perto" na etimologia de um nome, não numa distância), o check está errado e se corrige — não se ignora.
 
@@ -125,7 +125,7 @@ D1 Storytelling · D2 Profundidade de card · D3 Logística & precisão · D4 Co
 
 ## As 5 dimensões (scout) · resumo
 
-S1 Anti-invenção & preços (datados) · S2 Veredito 🟢🟡🔴 & honestidade · S3 Logística (km, não "perto") · S4 Fontes & verificação · S5 Estrutura & cobertura (ordem mapeamento→história, sabores-assinatura, clusters).
+S1 Anti-invenção & preços (datados) · S2 Veredito 🏆⚠️⏭️ & honestidade · S3 Logística (km, não "perto") · S4 Fontes & verificação · S5 Estrutura & cobertura (ordem mapeamento→história, sabores-assinatura, clusters).
 
 ## Loop-até-excelente · como iterar
 

@@ -68,7 +68,7 @@ for(const n of FUNCS){
 let F;
 try{ F=new Function('MAPS_REGION','DAYS',code+';return {getMapsUrl,getRouteUrl,getWalkingTourUrl};')(MAPS_REGION,DAYS); }
 catch(e){ console.log(JSON.stringify({erro:'template não executa: '+e.message})); process.exit(0); }
-const out={maps_region:MAPS_REGION,rotas:[],cards:[],opcoes:[],tours:[]};
+const out={maps_region:MAPS_REGION,rotas:[],cards:[],opcoes:[],tours:[],dias_coords:[],tours_coords:[]};
 const safe=(fn,ctx)=>{ try{ return fn(); }catch(e){ return 'ERRO: '+e.message+' @ '+ctx; } };
 DAYS.forEach((d,di)=>{
   out.rotas.push({dia:d.date, url:safe(()=>F.getRouteUrl(d),'rota '+d.date)});
@@ -80,7 +80,13 @@ DAYS.forEach((d,di)=>{
       nome:t.nome, n:(t.stops||[]).length,
       comQuery:(t.stops||[]).filter(w=>(w.mapsQuery||'').trim()).length,
       url:safe(()=>F.getWalkingTourUrl(t.stops),t.nome)}));
+    (s.walkingTours||[]).forEach(t=>out.tours_coords.push({
+      grupo:'walking tour '+JSON.stringify(t.nome),
+      stops:(t.stops||[]).filter(w=>w.coord).map(w=>({nome:w.nome,lat:w.coord.lat,lng:w.coord.lng}))}));
   });
+  out.dias_coords.push({grupo:'dia '+d.date,
+    stops:(d.stops||[]).filter(s=>s.tipo==='card'&&s.coord&&!s.noMaps)
+      .map(s=>({nome:s.nome,lat:s.coord.lat,lng:s.coord.lng}))});
 });
 console.log(JSON.stringify(out));
 '''
@@ -171,6 +177,28 @@ def main():
                          f"paradas — cai pra coordenada em silêncio")
     print(f"  {'✓' if not wt_coord else '⚠'} Walking tours: "
           f"{len(data['tours']) - len(wt_coord)} por nome · {len(wt_coord)} por coordenada")
+
+    # ── coordenada idêntica em stops distintos (mesmo dia · mesmo walking tour)
+    # Caso Tophet/MAB (auditoria 2026-08-08): dois stops de WT com a MESMA coord
+    # passavam invisíveis — a rota vai por nome, então ninguém olhava as coords,
+    # mas são elas que desenham os pinos do mapa in-app. Coord repetida = ou um
+    # dos stops está no lugar errado, ou é copy-paste não conferido. Bloqueia.
+    # No nível do dia só compara CARDS: transit compartilha coord com o destino
+    # por design, e opcoes herda a coord do stop — não são suspeitos.
+    dup_coords = []
+    for g in data.get('tours_coords', []) + data.get('dias_coords', []):
+        vistos = {}
+        for s in g['stops']:
+            key = (s['lat'], s['lng'])
+            if key in vistos and vistos[key] != s['nome']:
+                dup_coords.append((g['grupo'], vistos[key], s['nome'], key))
+            else:
+                vistos.setdefault(key, s['nome'])
+    for grupo, a, b, (lat, lng) in dup_coords:
+        problemas.append(f"{grupo}: coord idêntica ({lat}, {lng}) em {a!r} e {b!r} "
+                         f"— um dos dois está no lugar errado (caso Tophet/MAB)")
+    print(f"  {'✓' if not dup_coords else '✗'} Coords: "
+          f"{len(dup_coords)} ponto(s) repetido(s) entre stops distintos")
 
     # ── buscas (cards + opções)
     genericas, vazias = [], []

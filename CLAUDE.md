@@ -12,7 +12,7 @@ Você é **especialista em roteiros turísticos** pra família do Tobia. Roteiro
 
 **NÃO existe mais "viagem ativa no root"**. Root tem só landing (`index.html` regenerada pelo `wrap-up.sh`).
 
-Cada viagem · um subdir dedicado: `nyc/`, `corsica/`, `sardenha/`, etc. Subdirs reservados (proibidos como nome de viagem): `archive`, `scripts`, `templates`, `references`, `skills`, `entregas`.
+Cada viagem · um subdir dedicado: `nyc/`, `corsica/`, `sardenha/`, etc. Subdirs reservados (proibidos como nome de viagem): `archive`, `scripts`, `templates`, `references`, `skills`, `entregas`, `fontes`.
 
 `entregas/` guarda os **documentos gerados pela `destination-scout`** (`.md` fonte + `.pdf` final), versionados — ver `skills/destination-scout/SKILL.md` PASSO 5.
 
@@ -46,11 +46,14 @@ viagem/
 │   ├── lessons-learned.md          ← decisões de design do NYC com motivo (245L)
 │   ├── design-rubric.md            ← rubrica de avaliação de UI + skill impeccable
 │   └── content-rubric.md           ← rubrica de CONTEÚDO (roteiro /40 + scout /20) · runnable em skills/critico-roteiro/
+├── fontes/
+│   └── registro.json               ← curadoria de fontes · registro por evento (skill curadoria-fontes)
 ├── skills/
 │   ├── destination-scout/          ← levantamento macro (atrações+restaurantes+histórico) · degrau 0
 │   ├── walking-tour-designer/
 │   ├── road-trip-designer/
 │   ├── critico-roteiro/            ← PORTÃO de qualidade de CONTEÚDO · audit.py (roteiro /40 + scout /20)
+│   ├── curadoria-fontes/           ← fontes com lastro de campo · estados movidos SÓ por evento
 │   └── impeccable/                 ← skill de design/UI · avaliar·gerar·polir (Apache 2.0)
 └── archive/
     └── <slug>/                     ← viagens passadas movidas pra cá manualmente
@@ -69,7 +72,7 @@ Este `CLAUDE.md` tem a skill **resumida**. Pra trabalhos mais profundos, ler tam
 | Vai mudar CSS / cores / type scale | `references/design-tokens.md` |
 | Vai avaliar ou elevar design/UI de um roteiro | `references/design-rubric.md` + `skills/impeccable/` |
 | Vai auditar/elevar CONTEÚDO (escrita, links, coords, logística, levantamento) | `references/content-rubric.md` + skill `skills/critico-roteiro/` (roda `audit.py`) |
-| Vai avaliar credibilidade de fonte · provar um 🟢 imperdível · rodar fact-check/judge | `references/source-credibility.md` + `skills/critico-roteiro/FACTCHECK.md` / `JUDGE.md` |
+| Vai avaliar credibilidade de fonte · provar um 🏆 imperdível · rodar fact-check/judge | `references/source-credibility.md` + `skills/critico-roteiro/FACTCHECK.md` / `JUDGE.md` |
 | Vai CONSERTAR achados do `--suggest` (pesquisar 🔎 · reescrever ✍️) | `skills/critico-roteiro/RESEARCH.md` / `REWRITE.md` (loop fechado c/ `--diff`) |
 | Vai criar viagem nova · quer pesquisa macro do destino | `skills/destination-scout/SKILL.md` (degrau 0 antes do roteiro) |
 | Vai entender por que código JS é assim | `references/ui-patterns.md` |
@@ -88,6 +91,7 @@ Se mexer manualmente em subpastas (criar/renomear/remover viagens) SEM usar `dep
 Antes de declarar sessão terminada:
 
 1. **Pergunte ao Tobia** se quer adicionar lição em `MEMORY.md` (o que funcionou · ajustes necessários · padrão pro destino/composição). Se sim, edite a seção apropriada.
+1b. **Balanço de fontes** (curadoria · 2026-08-09): quais fontes embarcaram/validaram/demoliram nesta viagem? Gravar os eventos em `fontes/registro.json` e mover estados se o critério bateu (`skills/curadoria-fontes/SKILL.md` §5).
 2. **Execute** `scripts/wrap-up.sh` · ele faz:
    - `git status` · mostra tudo modificado
    - `validate.py` em cada HTML modificado
@@ -164,9 +168,21 @@ Retorna nota (2 metades) + achados P0-P3 + checklist manual + veredito. Exit: 0=
 | Edit pequeno (stop, dica) | validate + audit (como sempre) |
 | Viagem nova / entrega scout | pesquisa c/ proveniência → audit → FACTCHECK lean → JUDGE 1×(+1) → deploy |
 | Aprofundamento de roteiro | audit → FACTCHECK só do alterado → JUDGE nos cards tocados |
-| Pré-viagem (1-2 sem antes) | FACTCHECK modo re-check (só fatos operacionais — preço/horário apodrecem) |
+| Pré-viagem (**7-10 dias antes** · gatilho AGENDADO, não opcional — R11) | FACTCHECK modo re-check (só operacional: preço/horário/regra de acesso/fechamento — apodrecem em meses; caso Orosei: o regime mudou inteiro em 12 meses). Com rastro: o resultado vira `FACTCHECK-<data>.md` da viagem. **Próxima aplicação real: roma-toscana set/2026** — o scout tem 12 correções conhecidas e nunca aplicadas (`entregas/roma-toscana-*.FACTCHECK.md`) |
 
-Régua de fontes (tiers T1-T5 + o que prova um 🟢 imperdível): `references/source-credibility.md`.
+Régua de fontes (tiers T1-T5 + o que prova um 🏆 imperdível): `references/source-credibility.md`.
+
+### `sync-check.py` — o HTML que vai pro ar veio MESMO do data.json? (gate 3b)
+
+```bash
+python3 scripts/sync-check.py <viagem>            # relatório
+python3 scripts/sync-check.py <viagem> --quiet    # modo deploy
+```
+
+Nasceu do Lote 7a: o edit inline no `const DAYS` dessincronizava o `data.json` **e burlava o
+gate 4d** (o factcheck-gate projeta o data.json; o que só existe no HTML é invisível pra ele).
+Compara a **projeção de dados** dos dois arquivos — consts JSON + escalares — e não os bytes,
+pra que ajuste em `templates/` não vire falso bloqueio. Sem `data.json` na viagem, BLOQUEIA.
 
 ### `maps-audit.py` — confere TODA URL de Google Maps que o app gera
 
@@ -185,49 +201,129 @@ execução. **É gate no `deploy.sh`** — roda sozinho, não dá pra esquecer.
 
 Não confirma que o lugar existe: isso é o `FACTCHECK.md` §4.
 
+### `factcheck-gate.py` — frescor + formato do factcheck (gate 4d do deploy)
+
+```bash
+python3 scripts/factcheck-gate.py <viagem>            # relatório
+python3 scripts/factcheck-gate.py <viagem> --quiet    # modo deploy
+```
+
+Nasceu do achado F6 da auditoria 2026-08-08: o FACTCHECK era protocolo de honra — "rodei um
+factcheck completo" era inverificável, inclusive por quem rodou. O gate cobra o que É cobrável
+por máquina sem ser gameable por substring: o artefato `<viagem>/FACTCHECK-<AAAA-MM-DD>.md`
+**existe**, tem **formato válido** (vereditos por item · OK/ERRO/RISCO com URL · ERRO marcado
+`→ corrigido` · data não-futura) e é **mais novo que a última mudança de conteúdo sensível**
+(cards ⭐⭐⭐ · TODA parada de WT · opções ⭐⭐⭐ · historia[]). Edit não-sensível passa sem
+factcheck novo. Viagem nova (data.json sem nenhum commit) + factcheck de HOJE passa com aviso de
+primeiro-deploy — sem esse tratamento o gate bloquearia o primeiro deploy legítimo de toda viagem
+nova. O que ele NÃO garante: a verdade do factcheck — isso é a sessão auditora e o campo.
+**Escopo do frescor: ⭐⭐⭐ · WT · `historia[]`. Item ⭐⭐ está deliberadamente FORA** — incluí-lo
+faria quase todo edit disparar o gate, e gate que sempre bloqueia vira gate sempre pulado. Quem
+cobre ⭐⭐ é o **re-check pré-viagem (R11 · 7-10 dias antes)**. Protocolo de execução:
+`skills/critico-roteiro/FACTCHECK-EXEC.md`.
+
 ### `deploy.sh` — archive + push
 
 ```bash
-# Modo principal (root)
-scripts/deploy.sh "feat: roteiro lisboa-ago2026" "lisboa-ago2026"
+# Assinatura real (errata da auditoria 2026-08-09 · o doc antigo mostrava 2 args e o script exige 3):
+#   deploy.sh "<commit-msg>" "<subdir>" "<slug>" [/path/index.html] [/path/repo]
 
-# Modo paralelo (subdir)
-scripts/deploy.sh "feat: roteiro familia em paralelo" "lisboa-ago2026" \
-  ./index-nova.html . familia
+# Viagem em subpasta (o caso normal · TODA viagem vive em subpasta)
+scripts/deploy.sh "feat: roteiro lisboa-ago2026" "lisboa" "lisboa-ago2026"
+
+# Com HTML e repo explícitos (roteiro paralelo ou build fora do default)
+scripts/deploy.sh "feat: roteiro familia em paralelo" "lisboa-familia" "lisboa-ago2026" \
+  ./index-nova.html .
 ```
 
 Workflow:
 1. Detecta slug atual em `SLUG.txt`
 2. Se mudou (modo principal): archive `index.html` + subpastas paralelas em `archive/<slug-anterior>/`
 3. Substitui target HTML
+3a. **scout-gate soft** (viagem nova · Lote 7c): subdir sem nenhum commit no histórico E sem `entregas/<slug>*.md` → **aviso duro** de que a viagem nasceu sem o degrau 0 (Córsega e Sardenha nasceram assim). Não bloqueia por default — mini-roteiro e coletânea de cidade são casos legítimos. `VIAGEM_STRICT=1` bloqueia.
+3b. `sync-check.py --quiet` (BLOQUEIA se o `index.html` não veio do `data.json` · mata o edit inline e a burla do gate 4d que ele permitia · roda ANTES dos outros gates pra garantir que eles auditam o arquivo certo · falha-FECHADO se o script sumir · override `VIAGEM_SKIP_GATES=1`)
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
-4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32)
-4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido)
+4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32 · falha-FECHADO se o script sumir)
+4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos · falha-FECHADO se o script sumir)
+4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia — mudou depois do último factcheck · viagem nova + factcheck de hoje passa com aviso · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`). **Falha-FECHADO se o script sumir** (BLOQUEIA · script ausente não é "sem gate") — override explícito e ruidoso: `VIAGEM_SKIP_FCGATE=1` no env pula com aviso gritante.
 5. Backup local em `~/.skill-backups/`
 6. Re-gera `archive/index.html` (índice navegável)
 7. `git add` · `commit` · `push origin main`
 
 **SEMPRE merge na main após cada entrega · NÃO deixar em branch isolada.**
 
+**Todos os gates falham-FECHADO** (Lote 7g · 2026-08-09): script de gate ausente **BLOQUEIA** o
+deploy. Um gate que "pula quando o script some" não é gate, é sugestão — e verificação sem
+testemunha foi a causa-raiz da crise de ago/2026. Dois overrides, ambos gritantes no log:
+
+| Env | Pula |
+|---|---|
+| `VIAGEM_SKIP_GATES=1` | sync-check · critico-roteiro · maps-audit (ausência do script, ou dessincronia conhecida) |
+| `VIAGEM_SKIP_FCGATE=1` | factcheck-gate (mantido separado: é o gate mais caro de burlar por acidente) |
+
 ## Pipeline · ajuste (mode update)
 
 Quando Tobia pede mudança em viagem existente:
 
-1. Lê `index.html` da viagem ativa
+1. Lê `<viagem>/data.json` (a fonte de verdade · o `index.html` é saída, nunca entrada)
 2. Identifica o que mudar (stop X, walking tour Y, dica Z, dia novo)
-3. **Para mudanças pequenas**: edita inline o `const DAYS = [...]` (formato JSON pretty)
-4. **Para mudanças grandes** (novo dia, novo walking tour, troca atração principal): re-gera via `build.py` a partir de data.json
+3. **TODA mudança de conteúdo — do typo ao dia novo — edita o `data.json`** e re-gera com `python3 scripts/build.py <viagem>/data.json <viagem>/index.html`
+4. ⛔ **NUNCA editar o `const DAYS` (ou qualquer const de dado) inline no `index.html`** · ver o bloco abaixo
 5. Roda `scripts/validate.py index.html` (obrigatório)
 5b. Roda `skills/critico-roteiro/audit.py <viagem>/data.json` (recomendado) · corrige P1s até nota ≥32 e P0=0 (mecânico primeiro · confirma dims ⚖️ no checklist)
 6. `git add · commit · push origin main` (sem branch)
 7. Confirma pro Tobia com link da URL + nota de conteúdo
+
+### ⛔ Edit inline no HTML está MORTO (decisão Tobia · 2026-08-09 · Lote 7a)
+
+O atalho "pra mudança pequena, edita o `const DAYS` direto no HTML" existiu até hoje e custava
+segundos a menos que o `build.py`. Ele saiu por dois motivos, o segundo é grave:
+
+1. **Drift** · `data.json` deixa de ser a fonte de verdade e o próximo rebuild — que sempre
+   chega — apaga em silêncio o que só existia no HTML (drift já registrado no HANDOFF-PENDENTE).
+2. **Burla o gate 4d** · o `factcheck-gate.py` projeta o conteúdo sensível (⭐⭐⭐ · paradas de
+   WT · `historia[]`) **a partir do `data.json`**. Um edit inline muda o que a família LÊ sem
+   mudar a projeção: o gate de frescor não vê nada e o deploy passa sem factcheck novo.
+
+Cadeado: `scripts/sync-check.py` roda como gate no `deploy.sh` (passo 3b) e **BLOQUEIA** se o
+HTML não bate com o `data.json`. Ele compara a *projeção de dados* dos dois (as consts `DAYS ·
+LINKS_MAP · TRANSIT_MAP · BAIRROS_CONFIG · HISTORIA · EXTRAS` + escalares como `AUTH_PASSWORD ·
+MAPS_REGION · ROTEIRO_SLUG`), não os bytes — assim mexer em `templates/` não gera falso bloqueio.
+Fora do escopo dele (dito pra ninguém alegar cobertura que não existe): campos de cabeçalho/auth,
+que viram markup, e a verdade do conteúdo (isso é FACTCHECK).
+
+```bash
+python3 scripts/sync-check.py <viagem>          # confere · exit 1 se dessincronizado
+```
+
+## Mapa de fases · viagem nova (o trilho · 2026-08-09)
+
+O pipeline abaixo tem 6 fases. Elas existem pra que o Tobia saiba **onde estamos, o que vem
+depois e o que vai ser perguntado a ele** — sem precisar decorar o pipeline.
+
+| Fase | Objetivo | O que peço ao Tobia | Gate que fecha |
+|---|---|---|---|
+| **1 · Pesquisa** | levantamento macro do destino (`destination-scout`) + **curadoria de fontes** (15-20min · skill `curadoria-fontes`, antes de sair pesquisando: quem é confiável neste destino) | briefing (uma pergunta por vez) · profundidade (básica/profunda/toggle) · OK no levantamento | `audit.py --scout` ≥16/20 e P0=0 |
+| **2 · Construção** | esqueleto (1 linha/dia) → expansão dia-a-dia → walking tours → `data.json` | OK no esqueleto · OK a cada bloco de 5-7 dias | `build.py` roda e `validate.py` passa |
+| **3 · Forma** | o roteiro está bem escrito, ligado e navegável | nada (é trabalho interno) | `audit.py` ≥32/40 e P0=0 · `maps-audit.py` limpo |
+| **4 · Verdade** | o roteiro é **verdadeiro** · sub-agentes céticos, contexto limpo | nada — e é de propósito: quem escreveu não valida a si mesmo | `FACTCHECK-<data>.md` versionado · erros corrigidos ANTES do deploy |
+| **5 · Deploy** | no ar pra família | senha, se ainda não definida | `deploy.sh` (sync-check · validate · conteúdo · mapas · factcheck) |
+| **6 · Campo** | o que a viagem ensina volta pro repo | relatos de campo (in-app ou WhatsApp) | `wrap-up.sh` + balanço de fontes em `fontes/registro.json` |
+
+**Conduta ao ENTRAR numa fase**: anunciar em 1 linha — *"fase 3 de 6 · Forma · vou rodar o audit
+e consertar o que ele achar · não preciso de nada seu até o fim dela"*.
+**Conduta ao SAIR**: anunciar o que fechou, o que ficou pendente **do Tobia**, e qual é a próxima
+fase. Nada além disso — o trilho é pra orientar, não pra virar formulário.
+
+Ajuste em viagem existente não entra no trilho: vai direto pro "Pipeline · ajuste" acima
+(fases 2→5 comprimidas), a menos que a mudança seja grande a ponto de pedir pesquisa nova.
 
 ## Pipeline · viagem nova (mode create)
 
 1. **Briefing parse**: destino, datas, base, composição, voos, reservas, mobilidade
 2. **UMA pergunta por vez** pra preencher lacunas críticas (NÃO checklist)
 2b. **Pergunta de profundidade** (sempre, pra walking tours/roteiros/road trips/levantamentos): _versão **básica** (essencial enxuto), **profunda** (história, curiosidades, o que observar parada-a-parada — padrão Marais), ou **as 2 com toggle** (botão Básico↔Profundo no mesmo dia, via stops marcados `essencial: true`)?_ Default = profunda.
-3. **Levantamento macro** (degrau 0) via `skills/destination-scout/SKILL.md`: fan-out de pesquisa (≥10-12 buscas/polo no macro) → mapeamento de atrações+restaurantes (veredito 🟢🟡🔴 + Recompensa ★ + proveniência) + histórico/curiosidades · valida com Tobia antes de sequenciar dias. **Se já existe `entregas/<slug>.md` APROVADO: consome, NÃO re-pesquisa** (vereditos→cards · ★→valeAPena · clusters→esqueleto · prosa→HISTORIA[] · Fontes→proveniência)
+3. **Levantamento macro** (degrau 0) via `skills/destination-scout/SKILL.md`: fan-out de pesquisa (≥10-12 buscas/polo no macro) → mapeamento de atrações+restaurantes (veredito 🏆 entra · ⚠️ talvez · ⏭️ pula + Recompensa ★ + proveniência) + histórico/curiosidades · valida com Tobia antes de sequenciar dias. **Se já existe `entregas/<slug>.md` APROVADO: consome, NÃO re-pesquisa** (vereditos→cards · ★→valeAPena · clusters→esqueleto · prosa→HISTORIA[] · Fontes→proveniência)
 4. **Esqueleto** em tabela (1 linha/dia: data/bairro/tema/atração) · valida com Tobia antes de detalhar
 5. **Expansão dia-a-dia** · se viagem >14 dias, **OBRIGATÓRIO** dividir em blocos de 5-7 dias com validação entre cada
 6. **Walking tours** com rubrica de valor (alto/médio/baixo) + justificativa
@@ -236,8 +332,11 @@ Quando Tobia pede mudança em viagem existente:
 9. **Roda `validate.py index.html`** (BLOQUEIA se falhar)
 9b. **Roda `skills/critico-roteiro/audit.py data.json`** · loop até nota ≥32 e P0=0 (máx 3 iterações · mecânico primeiro → confirma ⚖️ no checklist → re-build → re-audit) · aspiração ≥36
 9b2. **Roda `scripts/maps-audit.py <viagem>/index.html --urls`** · zero busca genérica e zero waypoint fantasma ANTES de conferir lugar a lugar
-9c. **FACTCHECK lean (incl. §4: lugar no Maps + links + situação do atrativo) + JUDGE 1×(+1)** (é entrega → pilha completa da tabela de gatilhos · `skills/critico-roteiro/FACTCHECK.md` e `JUDGE.md`) · só após audit limpo
-10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar na entrega: nota (2 metades) + placar factcheck + veredito judge
+9c. **FACTCHECK com RASTRO + JUDGE 1×(+1)** · **quem escreveu NÃO roda o próprio factcheck no mesmo contexto** — despacha sub-agentes céticos (contexto limpo, sem o texto de justificativa do construtor) ou pede sessão nova. O resultado PERSISTE em `<viagem>/FACTCHECK-<AAAA-MM-DD>.md` (item → veredito OK/ERRO/RISCO/INCONCLUSIVO → fonte com URL → data), versionado; erros viram correção ANTES do deploy. Protocolo: `skills/critico-roteiro/FACTCHECK-EXEC.md` (estratos + formato) · o que verificar: `FACTCHECK.md` · `JUDGE.md` como antes · só após audit limpo. O `deploy.sh` BLOQUEIA sem esse artefato fresco (gate 4d)
+10. **Roda `deploy.sh "feat: roteiro <slug>" "<slug>"`** · o deploy roda o gate de conteúdo (`--deploy-gate`) automaticamente e bloqueia em P0 · reportar na entrega: **placar do factcheck (X confirmados / Y corrigidos / Z inconclusivos) + veredito judge** como manchete · a nota /40 é **FORMA** (não mede verdade — um roteiro 100% falso tirou 35/40 na auditoria de 2026-08-08) e vai no rodapé, nunca na manchete
+11. **Agenda as duas verificações que vêm DEPOIS do deploy** (nenhuma é opcional):
+    - **Auditoria externa · a cada viagem nova entregue** — sessão AUDITORA independente, nunca a que construiu, rodando o protocolo adversarial (amostra factual nova + ataque aos gates). Cadência fixada em 2026-08-09: a auditoria de 2026-08-08 achou 17 erros que factchecks do próprio construtor não acharam, e a de volta (2026-08-09) ainda achou 2 furos operacionais. Uma entrega sem auditoria externa é uma entrega auto-aprovada.
+    - **Re-check pré-viagem · 7-10 dias antes (R11)** — só o operacional (preço/horário/regra de acesso/fechamento), que apodrece em meses. É também o que cobre os itens ⭐⭐, deliberadamente fora do frescor do gate 4d.
 
 ## Schema dos dados (JSON pretty embedded no HTML)
 
@@ -448,6 +547,14 @@ Não é regra de card. É regra de **tudo que afirma algo**:
 | `extras` ⭐⭐+ | P1 |
 | **superlativo ou data histórica** em `sobre`/`imperdivel`/`dicas` sem `fontes` | P1 — generaliza os 4 erros de campo: "ponto mais ao sul" (era o segundo) · "operador único" (havia dois) · "séc. XVI" (era XIII) · "mirante" (não existia) |
 
+### Cota editorial de refeição · 2 verificadas > 3 plausíveis (R8 · decisão Tobia 2026-08-09)
+
+**2 opções VERIFICADAS por refeição são suficientes; a 3ª é opcional e só entra verificada.**
+Item só entra se couber no orçamento de checagem da sessão. A "cota de 3" do schema/D9 foi
+apontada como causa dos 15 restaurantes-fantasma (MEMORY) e a auditoria mediu a taxa de base:
+~20-50% de erro em tudo que se escreve além do que se verifica. Densidade tinha gate; verdade
+não — esta cota inverte a pressão. Não mexer em roteiros existentes por causa disto.
+
 ### Dívida de proveniência · `<viagem>/.proveniencia-debt.json`
 
 A regra entrou com dois roteiros **já em uso em campo**. Aplicá-la retroativamente bloquearia o
@@ -467,7 +574,7 @@ Congelado em 2026-08-04: `corsica` 50 itens · `pais-sardenha` 67. **Só encolhe
 O Tobia pegou o furo seguinte no mesmo dia: *"parece que a época de flamingos é outono"*. Estava
 certo — e o card tinha **dois** erros: vendia agosto como temporada (o pico é outono/inverno) e
 dizia *"maior população europeia de flamingos rosa"* sobre o Stagno di Càbras (a colônia é
-**Molentargius, em Cagliari**, a 500km — e nem ela é a maior da Europa: é uma das três do
+**Molentargius, em Cagliari**, a ~100km — e nem ela é a maior da Europa: é uma das três do
 Mediterrâneo ocidental).
 
 **Esse card tinha `fontes` preenchido e passava no gate.** Porque `fontes` no nível do card só
@@ -478,10 +585,12 @@ nota enquanto o conteúdo seguia falso.
 
 ```json
 "fontes": [
-  {"o": "SardegnaTurismo", "u": "https://...",
+  {"o": "SardegnaTurismo", "u": "https://...", "tier": "oficial", "data": "2026-08",
    "prova": ["22 km²", "outono à primavera"]}
 ]
 ```
+
+(Schema unificado 2026-08-09: `{o, u, tier, data, prova[]}` · tier ∈ `oficial/editorial/campo/diretorio/crowd` · o `audit.py` avisa P3 se faltar tier/data em item novo · régua: `references/source-credibility.md`.)
 
 O `audit.py` (`check_claims_cobertos`) extrai da prosa quatro classes de afirmação —
 **superlativo · data histórica · número com unidade · época/sazonalidade** — e cobra que cada uma
@@ -555,6 +664,7 @@ Partition: >8 stops → 2 partes ~6 cada · numeração reseta por parte.
 
 - **SEMPRE web_search** antes de usar uma coord
 - **NUNCA inventar** baseado em "perto de X"
+- **Item periférico (praia, mirante, parada fora do centro): coord ou é COPIADA de fonte com o 5º decimal, ou entra `coord_unverified: true`. PROIBIDO derivar.** (R7 · auditoria 2026-08-08: as 5 coords derivadas da amostra estavam TODAS erradas, 0,5-7,8km; as copiadas, 100% certas)
 - **4 casas decimais** (~10m precisão)
 - **Mantém endereço entre parens no nome**: `"Caffe Reggio (119 MacDougal)"` — ajuda Google Maps acertar
 - Range: lat ∈ [-90,90] · lng ∈ [-180,180]
@@ -644,7 +754,7 @@ O toggle continua no template pronto pra reuso — é só (re)adicionar `essenci
 
 **Pra ligar a planilha** (uma vez só · serve todos os roteiros): `scripts/apps-script-relatos.gs` tem o código e o passo-a-passo. Publica como Web App ("Executar como: Eu" · "Quem pode acessar: Qualquer pessoa"), pega a URL `/exec` e põe em `feedback_url` no `data.json` da viagem. O `slug` sai do `SLUG.txt` automaticamente.
 
-**Fronteira dura ao processar os relatos**: preferência da família **NUNCA** entra no card — vai pro `MEMORY.md`. O roteiro é compartilhável; *"a filha cansa às 17h"* é verdade sobre eles, não sobre o lugar. Roteamento: erro factual → `data.json` · dica útil a qualquer viajante → card · preferência → `MEMORY.md` · contexto → `DIARIO.md`.
+**Fronteira dura ao processar os relatos**: preferência da família **NUNCA** entra no card — vai pro `MEMORY.md`. O roteiro é compartilhável; *"a filha cansa às 17h"* é verdade sobre eles, não sobre o lugar. Roteamento: erro factual → `data.json` · dica útil a qualquer viajante → card · preferência → `MEMORY.md` · contexto → `DIARIO.md` · **e anote o evento no registro da fonte que originou o item confirmado/demolido** (`fontes/registro.json` · skill `skills/curadoria-fontes/` — é o laço que dá lastro à curadoria).
 
 ## Classificação de POI · 2 eixos independentes (2026-07-12)
 

@@ -17,7 +17,7 @@ A primeira versão foi calibrada pra criança de 3 anos (carrinho, colo, sombra,
 |---|---|---|
 | Trilha dos Saltos (11km) | 🔴 inviável | 🟡 se topam caminhar o dia |
 | Cachoeira do Segredo | 🟡 pesada p/ 3a | 🟡 exige fôlego, factível |
-| Santa Bárbara (dia inteiro) | ⚠️ cansativo | 🟢 vale, custo do guia divide bem |
+| Santa Bárbara (dia inteiro) | ⚠️ cansativo | 🏆 vale, custo do guia divide bem |
 
 **Moral**: fixar o perfil ANTES de pesquisar economiza retrabalho. (Por isso o Passo 1 da SKILL.md.)
 
@@ -35,7 +35,7 @@ A primeira versão foi calibrada pra criança de 3 anos (carrinho, colo, sombra,
 ## Destaques do mapeamento
 
 - **Ângulo único**: rochas de 1,8 bilhão de anos, Paralelo 14 (mesmo de Machu Picchu), garimpo de cristal
-- **Veredito-estrela**: Vale da Lua 🟢 (9km da base, curto, icônico) + ⚠️ cabeça d'água
+- **Veredito-estrela**: Vale da Lua 🏆 (9km da base, curto, icônico) + ⚠️ cabeça d'água
 - **Turismo comunitário**: Santa Bárbara exige guia Kalunga (quilombo) — grana fica na comunidade
 - **Sabores-assinatura**: pequi, baru, jatobá, guavira, cagaita, araticum; sorvetes de araticum/pequi
 - **Restaurante-destaque**: Na Mata (chef Mara Alcamim), Santo Cerrado Risoteria, Cozinha do Cavaleiro

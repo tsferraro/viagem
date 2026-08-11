@@ -228,9 +228,19 @@ def build_stop_index(data: Dict) -> Dict[str, Dict]:
 # DATA LOADING
 # ---------------------------------------------------------------------------
 
+class _RawFloat(float):
+    """Float que lembra o texto original do JSON. Bug ago/2026 (MEMORY): coord_4dec
+    usava str() e lia 41.8440 como 3 casas — o round-trip por float perde o zero à
+    direita. Guardar o texto bruto resolve sem mudar nenhuma aritmética (é float)."""
+    def __new__(cls, s):
+        obj = super().__new__(cls, s)
+        obj.raw = s
+        return obj
+
+
 def load_from_json(path: Path) -> Dict:
     with open(path, encoding='utf-8') as f:
-        return json.load(f)
+        return json.load(f, parse_float=_RawFloat)
 
 def extract_from_html(content: str) -> Dict:
     result: Dict = {}
@@ -240,7 +250,7 @@ def extract_from_html(content: str) -> Dict:
         if not m:
             return fallback
         try:
-            return json.loads(m.group(1))
+            return json.loads(m.group(1), parse_float=_RawFloat)
         except json.JSONDecodeError:
             return fallback
 
@@ -333,7 +343,9 @@ def coord_4dec(coord: Optional[Dict]) -> bool:
     if not coord:
         return False
     def check(v):
-        s = str(v)
+        # Usa o texto bruto do JSON quando disponível (_RawFloat) — "41.8440" tem
+        # 4 casas mesmo que str(float) devolva "41.844".
+        s = getattr(v, 'raw', str(v))
         return '.' in s and len(s.split('.')[1]) >= 4
     return check(coord.get('lat', '')) and check(coord.get('lng', ''))
 
@@ -719,18 +731,25 @@ def d6_adaptacao(data: Dict, F: List[Finding]) -> int:
         for date, n in overloaded[:2]:
             F.append(Finding(2, 6, f'{n} cards em {date} — ritmo família: máx 6 por dia (c/ filha 3a)'))
 
-    # Dia de chegada/saída ≤ 3 cards
+    # Dia de chegada/saída ≤ 3 cards. Bug ago/2026: um `break` incondicional fazia o
+    # loop examinar SÓ o primeiro dia — o último dia (partida) nunca era olhado e o
+    # `else` dava +1 grátis. Agora os DOIS dias são examinados; o ponto só vem se
+    # nenhum dos dois estiver pesado.
     if days:
-        for day in [days[0], days[-1]]:
+        borda = [days[0]] + ([days[-1]] if len(days) > 1 else [])
+        pesados = []
+        for day in borda:
             note  = (day.get('nota', '') + day.get('tema', '')).lower()
             is_travel = any(w in note for w in ['chegada', 'partida', 'saída', 'voo', 'pouso'])
             n_cards   = sum(1 for s in day.get('stops', []) if s.get('tipo') == 'card')
             if is_travel and n_cards > 3:
+                pesados.append((day.get('date', ''), n_cards))
+        if pesados:
+            for date, n in pesados:
                 F.append(Finding(2, 6,
-                    f'dia de viagem ({day.get("date","")}) tem {n_cards} cards — pesado pra dia chegada/saída'))
-            else:
-                score += 1
-            break  # só o primeiro
+                    f'dia de viagem ({date}) tem {n} cards — pesado pra dia chegada/saída'))
+        else:
+            score += 1
 
     # Pacing advisory · NÃO pontua · NÃO bloqueia — só alerta pra Tobia decidir.
     # Especialistas em viagem c/ criança pequena: 1-2 atividades "pesadas"/dia,
@@ -809,15 +828,20 @@ def d7_walking_tours(data: Dict, F: List[Finding]) -> int:
     return min(4, score)
 
 
-# Padrões que marcam AFIRMAÇÃO A PROVAR — não cor de prosa. Os quatro erros de campo de
-# ago/2026 caem todos aqui: "ponto mais ao sul da França" (era o segundo) · "operador único"
-# (havia dois) · "séc. XVI" (era XIII) · "mirante" (não existia).
+# Padrões que marcam AFIRMAÇÃO A PROVAR — não cor de prosa. HONESTIDADE SOBRE O ALCANCE
+# (auditoria 2026-08-08): dos 4 erros de campo de ago/2026, o regex pega DOIS — "operador
+# único" (via "únic[oa]") e "séc. XVI" (via DATA_HIST_RE). Os outros dois FICAM DE FORA
+# por decisão: "ponto mais ao sul" é POSIÇÃO relativa ("mais ao/à" não está na lista de
+# adjetivos) e "mirante" é FUNÇÃO de lugar — cobrir função/posição por regex geraria mar
+# de falso positivo sem provar nada (relatório da auditoria §3: invenção fluente satisfaz
+# qualquer padrão de texto). Essas duas classes são responsabilidade do FACTCHECK.md
+# (verificação contra o mundo, não contra o texto).
 SUPERLATIVO_RE = re.compile(
     r'\b(?:'
     # com ou SEM artigo — "Maior lagoa salobra da Sardenha" e "maior população
     # europeia" abriam frase sem artigo e escapavam da versão anterior. Foi
     # exatamente assim que "maior população europeia de flamingos" (falso: é
-    # Molentargius, a 500km) sobreviveu ao gate.
+    # Molentargius, a ~100km) sobreviveu ao gate.
     r'maior(?:es)?|menor(?:es)?|melhor(?:es)?|pior(?:es)?|[uú]nic[oa]s?'
     r'|primeir[oa]s?|[uú]ltim[oa]s?'
     r'|mais\s+(?:antig|alt|nov|larg|long|profund|important|preserv|visit|bonit|barat|car)\w*'
@@ -903,7 +927,7 @@ def load_debt(src: Optional[str]) -> set:
 # ---------------------------------------------------------------------------
 # Erro de 2026-08-04 (pego pelo Tobia): o card do Stagno di Càbras recebeu uma URL
 # do SardegnaTurismo e continuou dizendo "maior população europeia de flamingos"
-# (é Molentargius, a 500km) e vendendo agosto como temporada (o pico é outono).
+# (é Molentargius, a ~100km) e vendendo agosto como temporada (o pico é outono).
 # Anexar `fontes` passou no gate; a afirmação seguiu falsa.
 #
 # Diagnóstico: `fontes` no nível do CARD é grosso demais. Premia o campo presente,
@@ -988,6 +1012,50 @@ def check_claims_cobertos(data: Dict, F: List[Finding], debt: Optional[set] = No
             hint='cada afirmação entra em `prova`: '
                  '"fontes":[{"o":"<fonte>","u":"...","prova":["22 km²","outono à primavera"]}]'))
     return pendentes
+
+
+# ---------------------------------------------------------------------------
+# SCHEMA DE `fontes` · unificado em 2026-08-09 (Lote 3 da auditoria · R9 lite)
+# ---------------------------------------------------------------------------
+# Havia 3 formatos divergentes documentados (source-credibility.md · data-schema.md ·
+# o formato real {o,u,prova}). Unificado: {o, u, tier, data, prova[]} com
+# tier ∈ {oficial, editorial, campo, diretorio, crowd}. tier+data existem porque a
+# auditoria mostrou que fonte SEO-farm satisfazia tem_fonte() — sem tier, o gate não
+# tem como nem AVISAR que a fonte é lixo. AVISA (P3), nunca bloqueia: dados antigos
+# seguem válidos; a régua vale pra item novo/alterado.
+
+FONTE_TIERS = {'oficial', 'editorial', 'campo', 'diretorio', 'crowd'}
+
+def check_fontes_schema(data: Dict, F: List[Finding]) -> None:
+    sem: List[str] = []
+
+    def olha(nome, obj):
+        for f in (obj.get('fontes') or []):
+            if not isinstance(f, dict):
+                continue
+            if f.get('tier') not in FONTE_TIERS or not f.get('data'):
+                sem.append(nome or '(sem nome)')
+                return
+
+    for c in get_cards(data):
+        olha(c.get('nome', ''), c)
+    for day in data.get('days', []) or []:
+        for st in day.get('stops', []) or []:
+            for o in st.get('opcoes', []) or []:
+                olha(o.get('nome', ''), o)
+    for h in data.get('historia', []) or []:
+        olha(h.get('titulo', ''), h)
+    for e in data.get('extras', []) or []:
+        olha(e.get('nome', ''), e)
+
+    if sem:
+        F.append(Finding(3, 5,
+            f'{len(sem)} item(ns) com `fontes` sem tier/data no schema unificado '
+            f'{{o, u, tier, data, prova[]}} · tier ∈ oficial/editorial/campo/diretorio/crowd '
+            f'— ex: {" · ".join(sem[:3])}',
+            station='🔧',
+            hint='"fontes": [{"o": "<órgão>", "u": "https://...", "tier": "oficial", '
+                 '"data": "2026-08"}] — régua: references/source-credibility.md'))
 
 
 def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None) -> List[str]:
@@ -1324,8 +1392,13 @@ def split_scores(dim_scores: Dict[int, int]) -> Tuple[int, int]:
 # a gente MOSTRA a oscilação em vez de esconder no agregado — é o modo de falha
 # clássico (mecânico +3 mascarando julgamento −1, total "saudável", roteiro pior).
 
-def audit_roteiro(data: Dict, check_links: bool = False) -> Tuple[Dict[int, int], List[Finding]]:
-    """Roda as 10 dimensões e devolve (dim_scores, findings já roteados).
+def audit_roteiro(data: Dict, check_links: bool = False,
+                  debt: Optional[set] = None) -> Tuple[Dict[int, int], List[Finding], List[str]]:
+    """Roda as 10 dimensões + checks transversais e devolve
+    (dim_scores, findings já roteados, pendentes de proveniência).
+    ÚNICA FONTE DE VERDADE da lista de auditores — main() e --diff chamam aqui.
+    (Bug ago/2026: main() duplicava a lista, check novo não rodava pelo CLI; e o
+    --diff rodava os checks transversais SEM a dívida, inflando severidades no diff.)
     Função pura — sem prints. main() imprime; --diff chama duas vezes."""
     findings: List[Finding] = []
     auditors = [
@@ -1343,10 +1416,11 @@ def audit_roteiro(data: Dict, check_links: bool = False) -> Tuple[Dict[int, int]
     dim_scores = {i: fn() for i, fn in auditors}
     # Transversal: não pontua dimensão, só levanta achado. Proveniência é pré-requisito
     # de tudo — sem ela, nota alta só mede se o texto SOA bem (ver comentário do check).
-    check_proveniencia(data, findings)
-    check_claims_cobertos(data, findings)
+    pendentes = check_proveniencia(data, findings, debt)
+    pendentes += check_claims_cobertos(data, findings, debt)
+    check_fontes_schema(data, findings)
     assign_stations(findings)
-    return dim_scores, findings
+    return dim_scores, findings, pendentes
 
 
 def _finding_key(f: Finding) -> Tuple:
@@ -1423,8 +1497,10 @@ def run_diff(after_path: Path, before_path: Path, check_links: bool, json_out: b
         if not p or not p.exists():
             print(f"{C.ERR}✗{C.END} --diff precisa de 2 arquivos: <depois> --diff <antes>")
             sys.exit(2)
-    bs, bf  = audit_roteiro(load_data(before_path), check_links)
-    as_, af = audit_roteiro(load_data(after_path), check_links)
+    # A dívida de proveniência de cada arquivo entra no diff também — senão um
+    # self-diff mostra severidades diferentes do modo normal (bug ago/2026).
+    bs, bf, _  = audit_roteiro(load_data(before_path), check_links, load_debt(str(before_path)))
+    as_, af, _ = audit_roteiro(load_data(after_path), check_links, load_debt(str(after_path)))
     b_mech, _ = split_scores(bs)
     a_mech, _ = split_scores(as_)
     resolved, new, kept = compute_diff(bf, af)
@@ -1536,14 +1612,17 @@ def print_report(dim_scores: Dict[int, int], findings: List[Finding],
     mech, judg = split_scores(dim_scores)
     print('─' * 62)
     ok_color = C.OK if is_approved(total, findings) else C.ERR
-    print(f"{C.BOLD}★ Conteúdo: {ok_color}{total}/40{C.END}"
+    # R3 (auditoria 2026-08-08): a nota mede FORMA, não verdade — um roteiro 100%
+    # falso tirou 35/40. Ela é rodapé, nunca manchete de entrega.
+    print(f"{C.BOLD}★ FORMA: {ok_color}{total}/40{C.END}"
+          f" {C.DIM}(não mede verdade — ver FACTCHECK){C.END}"
           f" · {bcolor}{band}{C.END}"
           f" {C.DIM}(mec {mech}/20 · julg⚖️ {judg}/20){C.END}"
           f"  |  P0: {pcnts[0]}  P1: {pcnts[1]}  P2: {pcnts[2]}  P3: {pcnts[3]}")
 
     if is_approved(total, findings):
-        print(f"{C.OK}✓ Aprovado pra entrega{C.END} "
-              f"{C.DIM}(confirme as dims ⚖️ no checklist antes de fechar){C.END}")
+        print(f"{C.OK}✓ Forma aprovada{C.END} "
+              f"{C.DIM}(confirme as dims ⚖️ no checklist · verdade é o FACTCHECK, não esta nota){C.END}")
     elif pcnts[0] > 0:
         print(f"{C.ERR}✗ Bloqueado: {pcnts[0]} P0(s) — erro objetivo, corrigir antes de continuar{C.END}")
     else:
@@ -1678,7 +1757,27 @@ SCOUT_DIM_NAMES = {
 }
 
 PRICE_AMOUNT_RE = re.compile(r'(?:R\$|US\$|€|\$)\s?\d[\d.,]*', re.I)
-VERDICT_RE      = re.compile(r'🟢|🟡|🔴')
+# Veredito do scout · DOIS vocabulários aceitos (Lote 7d · 2026-08-09).
+#   novo   🏆 entra · ⚠️ talvez · ⏭️ pula
+#   antigo 🟢 faça  · 🟡 depende · 🔴 pula  (entregas até 2026-08-09 · não serão reescritas)
+# A troca aconteceu porque 🟢🟡🔴 é também o `risco` do roteiro, que mede ATRITO — as mesmas
+# três cores diziam duas coisas diferentes e um lugar podia ser "🟢 e 🔴 ao mesmo tempo".
+VERDICT_NOVO_RE = re.compile(r'🏆|⏭️?')
+VERDICT_TALVEZ_RE = re.compile(r'⚠️?')
+VERDICT_ANTIGO_RE = re.compile(r'🟢|🟡|🔴')
+
+
+def count_verdicts(text: str) -> int:
+    """Conta vereditos aceitando os dois vocabulários.
+
+    O ⚠️ só conta como veredito "talvez" num doc que JÁ usa o vocabulário novo (tem 🏆/⏭️).
+    Sem essa condição, os ⚠️ de alerta de segurança ("⚠️ cabeça d'água"), que o scout sempre
+    usou, seriam contados como veredito e inflariam o check em entregas antigas — o gate
+    passaria a aprovar levantamento sem crítica nenhuma."""
+    novo = len(VERDICT_NOVO_RE.findall(text))
+    antigo = len(VERDICT_ANTIGO_RE.findall(text))
+    talvez = len(VERDICT_TALVEZ_RE.findall(text)) if novo else 0
+    return novo + antigo + talvez
 FONTES_RE       = re.compile(r'^#{1,4}\s*(fontes|refer[êe]ncias|sources)\b', re.I | re.M)
 ARMADILHA_RE    = re.compile(r'armadilha|cilada|turistada|superestimad|pula sem culpa|fila inútil|não vale a pena', re.I)
 KM_MIN_RE       = re.compile(r'\d+\s?(km|min|minutos|h\b|horas)', re.I)
@@ -1690,7 +1789,7 @@ CONFIRMAR_RE    = re.compile(r'\[a confirmar\]|\[confirmar\]', re.I)
 def detect_mini_plano(text: str) -> bool:
     """Mini-plano = 1 bloco/meia-diária com âncora fixa, sem tabela de veredito."""
     has_table  = bool(re.search(r'esfor[çc]o.*recompensa', text, re.I))
-    n_verdicts = len(VERDICT_RE.findall(text))
+    n_verdicts = count_verdicts(text)
     has_anchor = bool(ANCHOR_RE.search(text))
     return n_verdicts < 2 and not has_table and has_anchor
 
@@ -1721,8 +1820,8 @@ def s1_precos(text: str, F: List[Finding]) -> int:
 
 
 def s2_veredito(text: str, F: List[Finding], is_mini: bool) -> int:
-    """S2 · Veredito 🟢🟡🔴 + honestidade (armadilhas, anti-hype)."""
-    n_verdicts    = len(VERDICT_RE.findall(text))
+    """S2 · Veredito 🏆⚠️⏭️ (ou 🟢🟡🔴 antigo) + honestidade (armadilhas, anti-hype)."""
+    n_verdicts    = count_verdicts(text)
     has_armadilha = bool(ARMADILHA_RE.search(text))
     hype          = len(HYPE_RE.findall(text))
 
@@ -1742,9 +1841,9 @@ def s2_veredito(text: str, F: List[Finding], is_mini: bool) -> int:
         score += 2
     elif n_verdicts >= 1:
         score += 1
-        F.append(Finding(2, 2, f'poucos vereditos 🟢🟡🔴 ({n_verdicts}) — cada atração precisa do seu, calibrado ao perfil'))
+        F.append(Finding(2, 2, f'poucos vereditos 🏆⚠️⏭️ ({n_verdicts}) — cada atração precisa do seu, calibrado ao perfil'))
     else:
-        F.append(Finding(1, 2, 'nenhum veredito 🟢🟡🔴 — levantamento sem crítica vira folder de agência'))
+        F.append(Finding(1, 2, 'nenhum veredito 🏆⚠️⏭️ (nem 🟢🟡🔴 antigo) — levantamento sem crítica vira folder de agência'))
     if has_armadilha:
         score += 1
     else:
@@ -1870,7 +1969,7 @@ SCOUT_CHECKLIST = """
 │  CHECKLIST MANUAL · levantamento scout (julgamento humano)               │
 ├──────────────────────────────────────────────────────────────────────────┤
 │  Perfil & Calibração                                                     │
-│  [ ] veredito 🟢🟡🔴 calibrado ao PERFIL informado (não genérico)?      │
+│  [ ] veredito 🏆⚠️⏭️ calibrado ao PERFIL informado (não genérico)?     │
 │  [ ] distâncias medidas a partir da BASE certa?                          │
 │                                                                          │
 │  Prosa (bloco História & Curiosidades)                                   │
@@ -2046,21 +2145,6 @@ def main() -> None:
         print(f"{C.ERR}✗{C.END} Erro ao carregar dados: {e}")
         sys.exit(2)
 
-    findings: List[Finding] = []
-
-    AUDITORS = [
-        (1,  lambda: d1_storytelling(data, findings)),
-        (2,  lambda: d2_profundidade(data, findings)),
-        (3,  lambda: d3_logistica(data, findings)),
-        (4,  lambda: d4_coords(data, findings)),
-        (5,  lambda: d5_links(data, findings, check_links)),
-        (6,  lambda: d6_adaptacao(data, findings)),
-        (7,  lambda: d7_walking_tours(data, findings)),
-        (8,  lambda: d8_honestidade(data, findings)),
-        (9,  lambda: d9_cobertura(data, findings)),
-        (10, lambda: d10_arco(data, findings)),
-    ]
-
     if verbose:
         n_days  = len(data.get('days', []))
         n_cards = len(get_cards(data))
@@ -2068,22 +2152,18 @@ def main() -> None:
         print(f"{C.DIM}  {n_days} dias · {n_cards} cards · {n_wt} partes de walking tour{C.END}\n")
         print(f"{C.DIM}── Rodando 10 dimensões ──{C.END}")
 
-    dim_scores: Dict[int, int] = {}
-    for dim_idx, auditor in AUDITORS:
-        s = auditor()
-        dim_scores[dim_idx] = s
-        if verbose:
+    # UMA fonte de verdade: audit_roteiro() roda dimensões + checks transversais.
+    # (Bug ago/2026, consertado: main() duplicava a lista de auditores — check novo
+    # registrado em audit_roteiro NÃO rodava pelo CLI.)
+    debt = load_debt(path_arg)
+    dim_scores, findings, pendentes = audit_roteiro(data, check_links, debt)
+
+    if verbose:
+        for dim_idx in sorted(dim_scores):
+            s = dim_scores[dim_idx]
             color = C.OK if s >= 3 else (C.WARN if s >= 2 else C.ERR)
             icon  = '✓' if s >= 3 else ('⚠' if s >= 2 else '✗')
             print(f"  {color}{icon}{C.END} {dim_label(dim_idx)}: {s}/4")
-
-    # Checks transversais (não pontuam dimensão · só levantam achado).
-    # BUG ago/2026: main() duplicava a lista de auditores de audit_roteiro(), então
-    # check novo registrado lá NÃO rodava pelo CLI. Duas fontes de verdade. Enquanto
-    # as listas não são unificadas, todo check transversal tem que entrar NOS DOIS.
-    debt = load_debt(path_arg)
-    pendentes = check_proveniencia(data, findings, debt)
-    pendentes += check_claims_cobertos(data, findings, debt)
 
     if write_baseline:
         p = _debt_path(path_arg)
@@ -2105,11 +2185,11 @@ def main() -> None:
         print(f"{C.OK}✓{C.END} dívida registrada em {p} · {len(pendentes)} item(ns)")
         sys.exit(0)
 
-    if debt:
+    # Linha informativa da dívida SÓ em modo verbose — em --json NADA além do objeto
+    # JSON pode ir pro stdout (bug ago/2026: esta linha quebrava json.load do caller).
+    if debt and verbose:
         print(f"{C.DIM}  dívida de proveniência herdada: {len(debt)} item(ns) "
               f"(P2 · só encolhe · ver .proveniencia-debt.json){C.END}")
-
-    assign_stations(findings)   # despacha cada achado pra sua estação de conserto
 
     total    = sum(dim_scores.values())
     n_p0     = sum(1 for f in findings if f.sev == 0)
@@ -2121,7 +2201,8 @@ def main() -> None:
         mech, judg = split_scores(dim_scores)
         band, _ = score_band(total)
         blocked = n_p0 > 0 or (strict and not approved)
-        print(f"{C.BOLD}★ Conteúdo (gate deploy): {total}/40 · {band}{C.END} "
+        print(f"{C.BOLD}★ FORMA (gate deploy): {total}/40 · {band}{C.END} "
+              f"{C.DIM}(não mede verdade — ver FACTCHECK){C.END} "
               f"(mec {mech}/20 · julg⚖️ {judg}/20) | P0:{n_p0} P1:{sum(1 for f in findings if f.sev==1)}")
         if n_p0 > 0:
             for f in findings:

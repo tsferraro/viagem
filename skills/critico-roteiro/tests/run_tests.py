@@ -16,11 +16,15 @@ Exit: 0 = tudo passou · 1 = alguma regressão.
 import sys
 import json
 import subprocess
+import tempfile
+from datetime import date, timedelta
 from pathlib import Path
 
-HERE     = Path(__file__).resolve().parent
-AUDIT    = HERE.parent / 'audit.py'
-FIXTURES = HERE / 'fixtures'
+HERE      = Path(__file__).resolve().parent
+AUDIT     = HERE.parent / 'audit.py'
+FIXTURES  = HERE / 'fixtures'
+FCGATE    = HERE.parent.parent.parent / 'scripts' / 'factcheck-gate.py'
+SYNCCHK   = HERE.parent.parent.parent / 'scripts' / 'sync-check.py'
 
 GREEN = '\033[92m'; RED = '\033[91m'; DIM = '\033[2m'; BOLD = '\033[1m'; END = '\033[0m'
 
@@ -50,16 +54,77 @@ def has_finding(d, sev, needle):
                for f in d['findings'])
 
 
+def _fc_gate_viagem_nova(fc_date_str):
+    """Monta um repo git temporário com data.json NUNCA commitado + FACTCHECK-<fc_date_str>.md
+    válido, e roda factcheck-gate.py contra ele. Devolve (exit_code, stdout+stderr)."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        subprocess.run(['git', 'init', '-q'], cwd=tmp, check=True)
+        subprocess.run(['git', 'config', 'user.email', 'test@test.com'], cwd=tmp, check=True)
+        subprocess.run(['git', 'config', 'user.name', 'Test'], cwd=tmp, check=True)
+        (tmp / 'README.md').write_text('init')
+        subprocess.run(['git', 'add', 'README.md'], cwd=tmp, check=True)
+        subprocess.run(['git', 'commit', '-q', '-m', 'init'], cwd=tmp, check=True)
+        vdir = tmp / 'viagem-x'
+        vdir.mkdir()
+        (vdir / 'data.json').write_text('{"days": []}')  # NUNCA commitado (o ponto do teste)
+        (vdir / f'FACTCHECK-{fc_date_str}.md').write_text(
+            f"# FACTCHECK · viagem-x · {fc_date_str}\n\n"
+            f"| Item | Afirmação | Veredito | Fonte(s) | Data |\n"
+            f"|---|---|---|---|---|\n"
+            f"| card:Teste | Existe | OK | https://example.com | {fc_date_str} |\n")
+        proc = subprocess.run([sys.executable, str(FCGATE), str(vdir), '--quiet'],
+                              capture_output=True, text=True)
+        return proc.returncode, proc.stdout + proc.stderr
+
+
+def _sync_check(mutar_html):
+    """Builda um data.json mínimo, aplica `mutar_html` no HTML gerado e roda sync-check.py.
+    Devolve (exit_code, stdout+stderr). Com mutar_html=None, testa o caso em sincronia."""
+    data = {
+        "title": "Teste", "password": "x", "maps_region": "Roma, Italia",
+        "days": [{
+            "date": "Sex 5/Set", "tema": "Teste", "temaCurto": "Teste", "bairro": "Centro",
+            "cor": "#dc2626", "gradA": "#7f1d1d", "gradB": "#991b1b",
+            "stops": [{
+                "hora": "09:00", "emoji": "⛪", "periodo": "manha", "tipo": "card",
+                "risco": "green", "valeAPena": 3, "poiCat": "atracao",
+                "nome": "Pantheon (Piazza della Rotonda)", "cat": "Templo 126 d.C.",
+                "sobre": "Cúpula de concreto não-armado maior do mundo.",
+                "coord": {"lat": 41.8986, "lng": 12.4769},
+            }],
+        }],
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        vdir = Path(tmp) / 'viagem-x'
+        vdir.mkdir()
+        (vdir / 'data.json').write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
+        (vdir / 'SLUG.txt').write_text('viagem-x\n', encoding='utf-8')
+        build = HERE.parent.parent.parent / 'scripts' / 'build.py'
+        subprocess.run([sys.executable, str(build), str(vdir / 'data.json'),
+                        str(vdir / 'index.html')], capture_output=True, check=True)
+        if mutar_html:
+            html = (vdir / 'index.html').read_text(encoding='utf-8')
+            (vdir / 'index.html').write_text(mutar_html(html), encoding='utf-8')
+        proc = subprocess.run([sys.executable, str(SYNCCHK), str(vdir), '--quiet'],
+                              capture_output=True, text=True)
+        return proc.returncode, proc.stdout + proc.stderr
+
+
 def main():
     check_links = '--check-links' in sys.argv
     print(f'\n{BOLD}=== Regressão do critico-roteiro/audit.py ==={END}\n')
 
     # --- ROTEIRO · clean (golden) --------------------------------------------
+    # Pin recalibrado 38→39 em 2026-08-09 (Lote 1 da auditoria): o conserto do
+    # coord_4dec (lia -9.2160 como 3 casas via str(float)) removeu um P2 FALSO
+    # da Torre de Belém — a nota subiu porque o instrumento parou de errar,
+    # não porque o check afrouxou.
     print(f'{DIM}clean_roteiro.json (golden · roteiro bem curado){END}')
     d = _json('clean_roteiro.json')
-    check('clean · nota == 38/40 (pin de regressão)', d['score'] == 38,
+    check('clean · nota == 39/40 (pin de regressão)', d['score'] == 39,
           f"obtido {d['score']}")
-    check('clean · mecânico == 18/20', d['mechanical'] == 18, f"obtido {d['mechanical']}")
+    check('clean · mecânico == 19/20', d['mechanical'] == 19, f"obtido {d['mechanical']}")
     check('clean · julgamento == 20/20', d['judgment'] == 20, f"obtido {d['judgment']}")
     check('clean · P0 == 0', d['p0'] == 0)
     check('clean · aprovado (≥32)', d['approved'] is True)
@@ -92,6 +157,22 @@ def main():
     d = _json('scout_mini_plano.md', '--scout')
     check('scout mini · Fontes NÃO é P1 (mini = opcional)', not has_finding(d, 'P1', 'Fontes'))
 
+    # --- SCOUT · vocabulário do veredito (Lote 7d) ---------------------------
+    # 🏆 entra · ⚠️ talvez · ⏭️ pula substituiu 🟢🟡🔴 (que colidia com o `risco` do
+    # roteiro). Entrega antiga NÃO pode quebrar, e ⚠️ solto — que o scout sempre usou pra
+    # alerta de segurança — NÃO pode virar crédito de veredito num doc sem crítica nenhuma.
+    print(f'{DIM}veredito 🏆⚠️⏭️ vs 🟢🟡🔴 (os dois aceitos){END}')
+    d_velho = _json('scout_macro_sem_fontes.md', '--scout')
+    d_novo  = _json('scout_veredito_novo.md', '--scout')
+    check('scout · vocabulário novo pontua igual ao antigo',
+          d_novo['score'] == d_velho['score'], f"novo {d_novo['score']} vs antigo {d_velho['score']}")
+    check('scout · vocabulário novo NÃO gera achado de veredito ausente',
+          not has_finding(d_novo, 'P1', 'nenhum veredito')
+          and not has_finding(d_novo, 'P2', 'poucos vereditos'))
+    d_alerta = _json('scout_so_alertas.md', '--scout')
+    check('scout · ⚠️ de alerta sem 🏆/⏭️ NÃO conta como veredito',
+          has_finding(d_alerta, 'P1', 'nenhum veredito'))
+
     # --- Fase A · roteamento (station/hint/half no JSON) ---------------------
     print(f'{DIM}--suggest · cada achado roteado numa estação{END}')
     d = _json('unverified_coord.json')
@@ -116,6 +197,71 @@ def main():
     dj = json.loads(dd_out)
     check('diff --json · regressed=True quando mecânico cai', dj['regressed'] is True,
           f"mech {dj['before']['mechanical']}→{dj['after']['mechanical']}")
+
+    # --- Schema unificado de fontes · {o,u,tier,data,prova[]} (Lote 3) -------
+    print(f'{DIM}fonte_sem_tier.json (fonte sem tier/data = P3 aviso, nunca bloqueia){END}')
+    d = _json('fonte_sem_tier.json')
+    check('fonte sem tier · gera P3 de schema', has_finding(d, 'P3', 'tier'))
+    check('fonte sem tier · NÃO bloqueia (p0 == 0)', d['p0'] == 0, f"p0={d['p0']}")
+
+    # --- FIXTURE DE CONTEÚDO FALSO · bosa_falsa (auditoria 2026-08-08) -------
+    # Este arquivo é 100% INVENTADO de propósito (mirante inexistente, torre e
+    # escadaria fictícias com mapsQuery plausível, restaurante inventado ⭐⭐⭐,
+    # fontes SEO-farm) — e os gates o APROVAM. O teste TRAVA esse fato:
+    #   (a) impede comentário/documentação futura de alegar cobertura que não existe;
+    #   (b) no dia em que alguém implementar um check que pegue conteúdo falso,
+    #       este teste quebra DE PROPÓSITO — atualize-o com festa, é o dia em que
+    #       o gate passou a medir alguma coisa além de forma.
+    print(f'{DIM}bosa_falsa.json (roteiro 100% falso · especificação executável do que '
+          f'os gates NÃO cobrem){END}')
+    d = _json('bosa_falsa.json')
+    check('bosa-falsa · APROVADA pelos gates (nota ≥32 — regex não mede verdade)',
+          d['score'] >= 32, f"obtido {d['score']}")
+    check('bosa-falsa · P0 == 0 (nenhum check pega invenção fluente)',
+          d['p0'] == 0, f"p0={d['p0']}")
+    check('bosa-falsa · approved=True (por isso a nota é FORMA e o FACTCHECK é '
+          'obrigatório)', d['approved'] is True)
+
+    # --- maps-audit · coord idêntica em stops distintos ----------------------
+    # Caso Tophet/MAB: rota por nome nunca olha coords, mas são elas que desenham
+    # os pinos in-app. O fixture coord_repetida/ tem 2 paradas de WT com a mesma
+    # coord — maps-audit deve BLOQUEAR (exit 1).
+    print(f'{DIM}coord_repetida/ (maps-audit · coord idêntica = bloqueia){END}')
+    maps_audit = HERE.parent.parent.parent / 'scripts' / 'maps-audit.py'
+    proc = subprocess.run([sys.executable, str(maps_audit),
+                           str(FIXTURES / 'coord_repetida' / 'index.html')],
+                          capture_output=True, text=True)
+    check('coord_repetida · maps-audit BLOQUEIA (exit 1)', proc.returncode == 1,
+          f"exit={proc.returncode}")
+    check('coord_repetida · achado menciona coord idêntica',
+          'coord idêntica' in proc.stdout)
+
+    # --- factcheck-gate.py · viagem nova (refinamento 6a · auditoria de volta) ---
+    # data.json sem NENHUM commit é indistinguível pro git de "factcheck velho demais".
+    # Sem tratamento especial isso bloqueava até o primeiro deploy legítimo de toda
+    # viagem nova. Factcheck de HOJE deve passar (com aviso); de ontem, continua bloqueando.
+    print(f'{DIM}factcheck-gate.py · viagem nova sem commit do data.json{END}')
+    hoje = date.today().isoformat()
+    ontem = (date.today() - timedelta(days=1)).isoformat()
+    code, out = _fc_gate_viagem_nova(hoje)
+    check('viagem nova · factcheck de HOJE → gate PASSA (exit 0)', code == 0, f"exit={code}")
+    code, out = _fc_gate_viagem_nova(ontem)
+    check('viagem nova · factcheck de ONTEM → gate BLOQUEIA (exit 1)', code == 1, f"exit={code}")
+
+    # --- sync-check.py · edit inline no HTML (Lote 7a) -----------------------
+    # O edit inline não só dessincronizava o data.json: BURLAVA o gate 4d, que projeta
+    # o conteúdo sensível a partir do data.json. Os 3 casos que importam:
+    print(f'{DIM}sync-check.py · index.html tem que vir do data.json{END}')
+    code, out = _sync_check(None)
+    check('sync · HTML recém-buildado → PASSA (exit 0)', code == 0, f"exit={code}")
+
+    code, out = _sync_check(lambda h: h.replace('Cúpula de concreto', 'Cupola de concreto'))
+    check('sync · 1 char editado inline no DAYS → BLOQUEIA (exit 1)', code == 1, f"exit={code}")
+    check('sync · aponta o campo divergente (DAYS…sobre)', 'sobre' in out, out[:120])
+
+    code, out = _sync_check(lambda h: h.replace('const MAPS_REGION = "Roma, Italia"',
+                                                'const MAPS_REGION = "Bosa, Italia"'))
+    check('sync · escalar editado inline (MAPS_REGION) → BLOQUEIA', code == 1, f"exit={code}")
 
     # --- Rede (opcional · só com --check-links) ------------------------------
     if check_links:
