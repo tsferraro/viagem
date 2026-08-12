@@ -1420,7 +1420,7 @@
           "tipo": "card",
           "risco": "yellow",
           "nome": "Estacionar · Parcheggio Regina Elena (Viale Regina Elena)",
-          "cat": "628 vagas · coberto · no pé do Bastião",
+          "cat": "628 vagas · coberto · ônibus 10 sobe daqui ao Castello",
           "valeAPena": 1,
           "poiCat": "atracao",
           "coord": {
@@ -1429,13 +1429,14 @@
           },
           "coord_unverified": true,
           "mapsQuery": "Parcheggio Regina Elena APCOA, Viale Regina Elena, Cagliari",
-          "sobre": "O estacionamento certo pra este dia não é o mais perto do começo do passeio — é o mais perto do <em>fim</em>. O <strong>Regina Elena</strong> é um multipiano coberto de <strong>628 vagas</strong> no viale Regina Elena, na zona <em>debaixo</em> do Bastião de Saint Remy. Vocês sobem ao Castello de ônibus, atravessam o platô a pé, descem a escadaria do Bastião — e caem em cima do carro. Nenhuma subida nas pernas, nenhum retorno pelo mesmo caminho, e o carro esperando na sombra no fim de uma tarde de agosto.",
+          "sobre": "O estacionamento certo pra este dia não é o mais perto do começo do passeio — é o mais perto do <em>fim</em>. O <strong>Regina Elena</strong> é um multipiano coberto de <strong>628 vagas</strong> no viale Regina Elena, na zona <em>debaixo</em> do Bastião de Saint Remy. Vocês sobem ao Castello de ônibus (linha 10, 8min porta a porta, €1,30), atravessam o platô a pé, descem a escadaria do Bastião — e caem em cima do carro. Nenhuma subida nas pernas, nenhum retorno pelo mesmo caminho, e o carro esperando na sombra no fim de uma tarde de agosto.",
           "imperdivel": "Guardar o ticket na carteira, não no carro: é multipiano com cancela, o pagamento é na máquina antes de voltar pro veículo",
           "dicas": [
             "Tarifa: <strong>~€1,20-1,60/h com teto diário de €5-8</strong> (ago/2026) · <strong>[a confirmar no local]</strong> — dois agregadores dão números diferentes e não achei a tabela oficial da APCOA",
-            "<strong>Subida:</strong> ônibus <strong>CTM linha 7</strong>, que faz o anel piazza Yenne → Castello → Villanova → via Roma → piazza Yenne a cada 30min · saltar em <strong>piazza Indipendenza</strong> (é o ponto que o próprio museu indica)",
-            "⚠️ <strong>Confiram no app CTM ou no Maps qual ponto da linha 7 serve o estacionamento</strong> — a linha passa por Villanova, mas não achei o mapa de pontos com esse detalhe",
-            "⛔ <strong>Não contem com o elevador do Bastião</strong>: por ordem de serviço ARST 1/2026 ele fica <strong>fechado das 11:00 às 15:15 todos os dias</strong> — e em dia de alerta de calor, até as 18:00",
+            "<strong>Subida · ônibus CTM linha 10</strong> (conferido em campo pelo Tobia em 11/ago/2026, print do Google Maps): ponto <strong>Regina Elena (fronte Unione Sarda)</strong>, a <strong>120m / 2min a pé</strong> do estacionamento · sentido <strong>Sant'Ignazio da Laconi</strong> · <strong>2 paradas, 3min</strong> · descer em <strong>Buoncammino (Polizia)</strong> · depois <strong>200m / 3min a pé</strong> até a piazza Indipendenza, que é a 1ª parada do walking tour · <strong>€1,30</strong> · porta a porta, 8min",
+            "⚠️ <strong>A linha 10 roda a cada ~25-30min</strong> — perder uma custa quase uma hora do dia · confiram o horário no Maps antes de fechar o carro",
+            "A linha 7 também serve o Castello, <strong>mas a partir da piazza Yenne</strong>, do outro lado da cidade — não é a de vocês saindo do Regina Elena",
+            "⛔ <strong>Não contem com o elevador do Bastião</strong>: por ordem de serviço ARST 1/2026 ele fica <strong>fechado das 11:00 às 15:15 todos os dias</strong> — e em dia de alerta de calor, até as 18:00 · o elevador da Unione Sarda, que fica ao lado do próprio ponto de ônibus, está suspenso 10:00-13:00",
             "O pino deste card cai no <strong>Bastião, logo acima</strong> — a entrada do estacionamento fica embaixo, no viale Regina Elena · o botão Abrir no Maps leva à garagem"
           ],
           "duracao": "10min pra estacionar",
@@ -1454,6 +1455,20 @@
               "u": "https://www.comune.cagliari.it/portale/page/it/ascensori_cittadini_chiusure_parziali_per_il_caldo_dall1_luglio?contentId=NVT260179",
               "prova": [
                 "fechado das 11:00 às 15:15"
+              ]
+            },
+            {
+              "o": "Campo · print do Google Maps (Tobia, 11/ago/2026, no local)",
+              "u": "https://www.ctmcagliari.it/linee/linea-10/",
+              "prova": [
+                "linha 10",
+                "Regina Elena",
+                "Buoncammino",
+                "€1,30",
+                "120m",
+                "200m",
+                "2 paradas",
+                "8min"
               ]
             }
           ]
@@ -4343,7 +4358,7 @@
         },
         {
           "modo": "rota",
-          "texto": "Estacionar no multipiano Regina Elena (viale Regina Elena, sob o Bastião) e subir ao Castello de ônibus — a linha 7 da CTM faz o anel por Castello a cada 30min"
+          "texto": "Estacionar no multipiano Regina Elena (viale Regina Elena, sob o Bastião) e subir ao Castello de ônibus — <strong>linha 10</strong> no ponto Regina Elena (fronte Unione Sarda), 2 paradas até Buoncammino (Polizia), depois 200m a pé até a piazza Indipendenza · €1,30 · ~8min porta a porta"
         }
       ]
     },
