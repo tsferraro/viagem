@@ -1,0 +1,625 @@
+{
+  "title": "Maladroxia · 16-23 Ago",
+  "auth_emoji": "🏖️",
+  "auth_title": "Maladroxia",
+  "auth_subtitle": "O que dá pra fazer daqui · 16 a 23 de agosto",
+  "header_title": "Maladroxia",
+  "header_sub": "Base da família · 16-23/Ago · organizado por quem está junto, não por data",
+  "password": "maladroxia2026",
+  "maps_region": "Sant'Antioco, Sardegna, Italia",
+  "wt_labels": "letters",
+  "legend_group_text": "",
+  "legend_notes_html": "<p><strong>Este app não é um roteiro datado.</strong> As abas são <em>tipos de dia</em>, não datas — porque o que decide aqui não é a data, é <strong>quem está junto e quanto tempo tem</strong>.</p><p>🏖️ <strong>A pé</strong> é o default dos dias úteis (avós + neta, sem carro) · 🚗 <strong>15 min</strong> é o que vale um leva-e-busca · 🍽️ <strong>Comer</strong> separa o que se alcança a pé do que precisa de carro · 👨‍👩‍👧 <strong>Juntos</strong> é fim de tarde e fim de semana (16, 22 e 23) · 🌬️ <strong>Vento</strong> é o plano B do dia em que o maestrale estraga a praia da frente.</p><p><strong>Calibragem</strong>: tudo aqui está medido pra <em>mobilidade limitada</em> — plano, curto, estacionamento colado, banheiro perto. O que pede trilha ou escada está marcado e explicado.</p>",
+  "days": [
+    {
+      "date": "🏖️ A pé",
+      "tema": "Maladroxia sem carro · o dia útil de verdade",
+      "temaCurto": "A pé",
+      "bairro": "🏖️ Maladroxia",
+      "cor": "#0891b2",
+      "gradA": "#155e75",
+      "gradB": "#0e7490",
+      "nota": "Esta é a aba que mais vai ser usada. Cinco dias úteis (17 a 21), avós e neta sem carro, e <strong>a boa notícia é que Maladroxia aguenta isso</strong>: a praia é rasa e abrigada, tem chuveiro e vestiário, quiosque na areia, minimarket bem sortido e três restaurantes — tudo a pé. Não é uma vila onde falta coisa.",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🏖️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Spiaggia di Maladroxia",
+          "cat": "~500m de areia · Bandeira Azul · fundo raso",
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
+          "mapsQuery": "Spiaggia di Maladroxia, Sant'Antioco",
+          "sobre": "A praia da porta de casa, e ela é boa de verdade — não é o consolo de quem não tem carro. São cerca de <strong>500 metros</strong> de areia clara e macia numa <strong>baía abrigada</strong>, com o fundo descendo <em>suavemente por vários metros</em>: dá pra entrar na água com uma criança de 3 anos sem susto e sem degrau. Recebeu a <strong>Bandeira Azul</strong> da FEE Italy — que avalia qualidade da água, <em>acessibilidade</em> e sustentabilidade — pelo terceiro ano consecutivo em 2021. Para a composição de vocês (avós com mobilidade limitada + neta pequena), a combinação de fundo raso, baía protegida e serviço na areia é exatamente o que se procuraria num mapa.",
+          "imperdivel": "A hora em que a baía fica espelhada, antes das 10h — a proteção da enseada faz a água ficar parada de um jeito que praia aberta não fica",
+          "dicas": [
+            "<strong>Tem chuveiro e vestiário</strong> na praia · e <strong>dois quiosques</strong>, um deles na própria areia",
+            "<strong>Estacionamento grande e recente</strong> — importante nos dias em que vocês estiverem de carro",
+            "<strong>Minimarket bem sortido</strong> junto ao estacionamento · resolve o dia sem ninguém dirigir",
+            "Sombra natural é escassa como em toda praia sarda · <strong>guarda-sol é item obrigatório</strong>, alugado ou de vocês",
+            "Manhã é o turno da neta: água parada, menos gente, sol menos vertical · <strong>13h-16h é hora de sombra, não de praia</strong>"
+          ],
+          "duracao": "Manhã inteira",
+          "custo": "Praia livre · guarda-sol e espreguiçadeira alugáveis",
+          "acessibilidade": "Areia macia e plana · a entrada no mar é longa e rasa, sem degrau ou pedra · chuveiro, vestiário e quiosque na própria praia · o estacionamento é colado",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Regione Sardegna · Maladroxia",
+              "u": "https://www.sardegnaturismo.it/it/esplora/maladroxia",
+              "prova": [
+                "500 metros",
+                "Bandeira Azul",
+                "fundo",
+                "baía abrigada"
+              ]
+            },
+            {
+              "o": "Visit Sant'Antioco · Maladroxia",
+              "u": "https://visitsantantioco.info/en/vivi-santantioco/spiagge/maladroxia/",
+              "prova": [
+                "chuveiro",
+                "vestiário",
+                "2021",
+                "terceiro ano"
+              ]
+            },
+            {
+              "o": "Visit Sant'Antioco · Maladroxia · e horário solar de agosto",
+              "u": "https://visitsantantioco.info/en/vivi-santantioco/spiagge/maladroxia/",
+              "prova": [
+                "500m",
+                "3 anos",
+                "10h",
+                "13h",
+                "16h"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🛒",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "O que a vila resolve sem carro",
+          "cat": "Minimarket · quiosques · 3 restaurantes · ônibus",
+          "valeAPena": 2,
+          "poiCat": "mercado",
+          "noMaps": true,
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
+          "sobre": "Maladroxia é <strong>vila turística, não vilarejo isolado</strong> — e essa distinção decide a semana de vocês. Atrás da praia há casas de veraneio, hotel, <strong>três restaurantes</strong>, pizzarias, bares, <strong>dois quiosques</strong> (um na areia), lojas, um <strong>minimarket bem sortido</strong> junto ao estacionamento novo — e <strong>serviço de ônibus</strong>. Ninguém fica refém do carro.",
+          "imperdivel": "O minimarket junto ao estacionamento · é ele que transforma 'sem carro' em 'sem problema'",
+          "dicas": [
+            "<strong>Farmácia</strong>: a Farmacia Solki (Via Dott. Giacomina 3 · tel <strong>0781 1964093</strong>) atende a zona · <strong>[a confirmar se fica em Maladroxia ou no centro de Sant'Antioco]</strong> — não achei fonte que crave, e com criança pequena vale saber isso <em>antes</em> de precisar",
+            "Levem o essencial de farmácia de casa (antitérmico infantil, repelente, pomada de assadura) · vila de praia em agosto não é lugar de descobrir que falta",
+            "🔎 <strong>Ainda em aberto</strong>: nomes e horários dos dois quiosques e das pizzarias. Não escrevo nome de estabelecimento sem endereço conferido — neste projeto 15 de 55 restaurantes se revelaram inexistentes. Passem lá e me digam os nomes que eu registro"
+          ],
+          "duracao": "—",
+          "custo": "—",
+          "acessibilidade": "A vila é plana e curta · tudo se faz a pé da praia",
+          "fontes": [
+            {
+              "o": "Comune di Sant'Antioco · Maladroxia",
+              "u": "https://comune.santantioco.su.it/portal/web/guest/w/luogo-maladroxia",
+              "prova": [
+                "três restaurantes",
+                "minimarket",
+                "dois quiosques",
+                "ônibus"
+              ]
+            },
+            {
+              "o": "Comune di Sant'Antioco · Maladroxia",
+              "u": "https://comune.santantioco.su.it/portal/web/guest/w/luogo-maladroxia",
+              "prova": [
+                "agosto"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🚌",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Ônibus ARST linha 861 · a liberdade dos avós",
+          "cat": "Coa Quaddu ↔ Maladroxia ↔ Sant'Antioco · linha de verão",
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "noMaps": true,
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
+          "sobre": "<strong>Este card existe porque muda a semana de vocês.</strong> A ARST opera a <strong>linha 861 · COA QUADDU – MALADROXIA – S.ANTIOCO</strong>, uma linha de verão que roda de <strong>meados de junho a meados de setembro</strong> e liga o centro de Sant'Antioco às praias de <strong>Maladroxia e Coaquaddus</strong>. Ou seja: seus sogros podem ir à outra praia boa da ilha, ou ao centro para o mercado e o café, <em>sem ninguém dirigir e sem depender de vocês</em>. Num arranjo em que dois adultos trabalham de dia, isso vale mais que qualquer atração.",
+          "imperdivel": "A linha liga justamente as duas praias que interessam a vocês — Maladroxia e Coaquaddus",
+          "dicas": [
+            "<strong>Horários: [a confirmar]</strong> · o PDF oficial é <em>arstspa.info/861.pdf</em>, que eu não consegui abrir daqui. Confiram no <strong>app Moovit</strong> ou em <em>arst.sardegna.it</em> — ou perguntem na recepção do hotel, que é o caminho mais rápido",
+            "Confiram <strong>o ponto em Maladroxia</strong> e o horário da volta mais tarde do dia antes de mandar os avós sozinhos",
+            "Linha de verão: <strong>meados de junho a meados de setembro</strong> — a semana de vocês está dentro",
+            "Alternativa: leva-e-busca de carro · Coaquaddus fica a poucos quilômetros"
+          ],
+          "duracao": "—",
+          "custo": "[a confirmar]",
+          "acessibilidade": "[a confirmar] · acessibilidade do veículo não verificada",
+          "fontes": [
+            {
+              "o": "ARST · linha 861 Coa Quaddu–Maladroxia–Sant'Antioco",
+              "u": "https://www.arstspa.info/861.pdf",
+              "prova": [
+                "861",
+                "meados de junho",
+                "meados de setembro",
+                "Coaquaddus"
+              ]
+            },
+            {
+              "o": "ARST · linha 861 · linha de verão",
+              "u": "https://www.arstspa.info/861.pdf",
+              "prova": [
+                "verão"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🚗 15 min",
+      "tema": "O que vale um leva-e-busca",
+      "temaCurto": "15 min",
+      "bairro": "🚗 Raio curto",
+      "cor": "#7c3aed",
+      "gradA": "#4c1d95",
+      "gradB": "#5b21b6",
+      "nota": "Regra desta aba: <strong>só entra o que justifica acordar o motorista</strong>. Com mobilidade limitada e uma criança de 3 anos, mudar de praia só compensa se a praia nova resolver algo que Maladroxia não resolve — vento, lotação, ou simplesmente o tédio do sexto dia na mesma areia.",
+      "stops": [
+        {
+          "hora": "09:30",
+          "emoji": "🏖️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Spiaggia di Coaquaddus",
+          "cat": "Abrigada do vento · fundo raso · a poucos km",
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "coord": {
+            "lat": 38.982,
+            "lng": 8.4437
+          },
+          "mapsQuery": "Spiaggia di Coaquaddus, Sant'Antioco",
+          "sobre": "<strong>A troca que mais compensa a partir de Maladroxia</strong>, e por um motivo técnico, não de gosto: a <strong>conformação da costa protege do vento</strong>, o que deixa o mar calmo mesmo quando está soprando. É praia ampla e tranquila, com <strong>fundo que desce suavemente</strong> rumo ao largo — o mesmo perfil de Maladroxia, o que importa com criança pequena — e areia larga o bastante pra caminhar na beira, que é o programa possível de quem não encara trilha. O nome, em sardo, descreve a forma sinuosa da costa, uma sucessão de <em>rabos de cavalo</em> entre calas e promontórios. E <strong>a linha 861 para aqui</strong> — então nem sempre precisa de carona.",
+          "imperdivel": "Caminhar a beira inteira · é raso e firme o suficiente pra fazer isso com a neta pela mão, sem pedra e sem degrau",
+          "dicas": [
+            "<strong>Estacionamento grande e pago</strong>, com aluguel de guarda-sol e espreguiçadeira no local",
+            "<strong>Abrigada do vento</strong> — é o lugar a tentar antes de atravessar a ilha, quando Maladroxia amanhecer batida",
+            "Servida pela <strong>linha 861 da ARST</strong>, a mesma de Maladroxia · dá pra ir sem motorista",
+            "É praia organizada (espreguiçadeira, guarda-sol, salva-vidas, quiosque), como Maladroxia — não é cala selvagem"
+          ],
+          "duracao": "Manhã",
+          "custo": "Estacionamento pago · guarda-sol e espreguiçadeira alugáveis",
+          "acessibilidade": "Areia ampla e plana · fundo raso · estacionamento no local · sem trilha",
+          "fontes": [
+            {
+              "o": "Informati Sardegna · Coaquaddus",
+              "u": "https://informati-sardegna.it/spiagge/coaquaddus-spiaggia/",
+              "prova": [
+                "protege do vento",
+                "fundo",
+                "estacionamento",
+                "rabos de cavalo"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🌊",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Cala Sapone",
+          "cat": "Baía em meia-lua · trattoria na areia",
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "coord": {
+            "lat": 38.9857,
+            "lng": 8.4
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Cala Sapone, Sant'Antioco",
+          "sobre": "Baía em <strong>meia-lua</strong>, protegida dos lados por dois promontórios e, mar adentro, por ilhotas — o que dá a ela uma paisagem fechada e um mar calmo. O diferencial prático: tem <strong>ponto de refresco e uma trattoria na própria praia</strong>, além de aluguel de pedalinho, e um vilaggio turístico a poucos metros. Fica na costa <em>oeste</em> da ilha, o lado oposto ao de vocês — <strong>é por isso que ela está aqui</strong>: quando o vento vem de leste, Maladroxia sofre e Cala Sapone não.",
+          "imperdivel": "Almoçar com os pés na areia sem ter que se deslocar — coisa que Maladroxia não oferece igual",
+          "dicas": [
+            "<strong>Trattoria e ponto de refresco na própria praia</strong> — resolve o almoço sem pegar o carro de novo",
+            "Fica na costa oeste · <strong>o pino é aproximado</strong> (não achei coordenada conferida) · o botão Abrir no Maps leva certo",
+            "🔎 <strong>[a confirmar]</strong>: nome e telefone da trattoria, e se o acesso da vaga à areia é plano",
+            "Vale mais como <em>troca de ares</em> ou <em>fuga do vento leste</em> que como upgrade de praia"
+          ],
+          "duracao": "Meio período",
+          "custo": "[a confirmar]",
+          "acessibilidade": "⚠️ [a confirmar] · não achei fonte sobre o acesso da vaga à areia · confirmar antes de levar os avós",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Cala Sapone",
+              "u": "https://www.sardegnaturismo.it/it/esplora/cala-sapone",
+              "prova": [
+                "meia-lua",
+                "promontórios",
+                "ilhotas",
+                "trattoria"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🍽️ Comer",
+      "tema": "Almoço e jantar · a pé e de carro",
+      "temaCurto": "Comer",
+      "bairro": "🍽️ Mesa",
+      "cor": "#c2410c",
+      "gradA": "#7c2d12",
+      "gradB": "#9a3412",
+      "nota": "<strong>Lista curta de propósito.</strong> Maladroxia tem três restaurantes e duas pizzarias, mas a cobertura web da vila é fina — e neste projeto <strong>15 de 55 estabelecimentos se revelaram inexistentes</strong> quando conferidos um a um. Aqui só entra o que tem <em>endereço e telefone conferidos</em>. Prefiro entregar dois reais a dez plausíveis.",
+      "stops": [
+        {
+          "hora": "12:00",
+          "emoji": "🕐",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "O relógio das refeições na Sardenha",
+          "cat": "O horário italiano vs. o horário de uma criança de 3 anos",
+          "valeAPena": 2,
+          "poiCat": "restaurante",
+          "noMaps": true,
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
+          "sobre": "O atrito silencioso de uma semana na Itália com criança pequena é o <strong>relógio</strong>. Cozinha de restaurante costuma abrir por volta das <strong>12h30-13h</strong> no almoço e <strong>19h30-20h</strong> no jantar — e em vila de praia, em agosto, o jantar de verdade só enche depois das 21h. Uma criança de 3 anos que acorda cedo e brinca na praia a manhã inteira <em>não chega inteira às 21h</em>. Vale desenhar a semana em torno disso em vez de descobrir na terceira noite.",
+          "imperdivel": "A estratégia que funciona: <strong>jantar cedo</strong> (por volta das 19h30, quando abrem) com a neta, ou <strong>jantar em casa</strong> e deixar o restaurante pros dias sem ela na mesa",
+          "dicas": [
+            "<strong>Almoço 12h30-14h30 · jantar a partir de 19h30-20h</strong> — fora disso, só bar e quiosque",
+            "<strong>Chegar às 19h30, na abertura</strong>, é o truque: mesa vazia, cozinha inteira, criança ainda de pé",
+            "O <strong>quiosque da praia</strong> não obedece a esse relógio — é ele que resolve a fome fora de hora",
+            "<strong>Reservar</strong> em agosto, mesmo em vila pequena · e I Due Fratelli, sempre",
+            "Cozinhar metade das noites com o que vem do minimarket não é derrota: é o que torna uma semana sustentável"
+          ],
+          "duracao": "—",
+          "custo": "—",
+          "acessibilidade": "—"
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "A pé de Maladroxia",
+          "cat": "Sem carro · o dia a dia",
+          "coord": {
+            "lat": 38.9993,
+            "lng": 8.4487
+          },
+          "noMaps": true,
+          "opcoes": [
+            {
+              "nome": "Lu' Hotel Maladroxia · Ristorante Lounge Bar (Via Golfo di Palmas 16)",
+              "desc": "A poucos metros da praia · sala interna ampla e <strong>duas varandas com vista de mar</strong> sobre a baía · cozinha sarda tradicional · o bar fica num pátio verde a passos do mar e da piscina, e serve petisco · tel. <strong>0781 817403</strong> · é a estrutura mais estabelecida da vila, e a que resolve a noite em que ninguém quer se mover",
+              "preco": "€25-35",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "dist": "a pé · na própria vila",
+              "mapsQuery": "Lu' Hotel Maladroxia, Via Golfo di Palmas 16, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Lu' Hotel Maladroxia · site oficial",
+                  "u": "https://www.luhotel-maladroxia.it/en/contact-us.html",
+                  "prova": [
+                    "Via Golfo di Palmas 16",
+                    "0781 817403",
+                    "duas varandas"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Os dois quiosques da praia",
+              "desc": "Um deles fica na própria areia · resolve almoço leve sem sair do guarda-sol, que com criança de 3 anos vale mais que qualquer estrela · <strong>[nomes e horários a confirmar no local]</strong>",
+              "preco": "€8-15",
+              "valeAPena": 1,
+              "poiCat": "cafe",
+              "dist": "na areia",
+              "noMaps": true
+            },
+            {
+              "nome": "Minimarket + cozinha da casa",
+              "desc": "O minimarket junto ao estacionamento é descrito como bem sortido · com uma semana inteira e uma criança pequena, cozinhar em casa metade das noites é estratégia, não derrota",
+              "preco": "—",
+              "valeAPena": 1,
+              "poiCat": "mercado",
+              "dist": "a pé",
+              "noMaps": true
+            }
+          ]
+        },
+        {
+          "hora": "20:00",
+          "emoji": "🐟",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Vale o carro · Sant'Antioco cidade",
+          "cat": "~9km · 15min",
+          "coord": {
+            "lat": 39.0706,
+            "lng": 8.4562
+          },
+          "noMaps": true,
+          "opcoes": [
+            {
+              "nome": "Ittiturismo I Due Fratelli (Lungomare Cristoforo Colombo 72, Sant'Antioco)",
+              "desc": "<strong>Cooperativa da família Serra</strong>, pescadores há gerações — o peixe chega a poucas dezenas de metros do barco. Já verificado e usado no roteiro dos seus pais · tel. <strong>366 839 7107</strong> ou <strong>0781 801093</strong> · €25-33/pessoa (ago/2026) · <strong>reservar</strong>",
+              "preco": "€25-33",
+              "valeAPena": 3,
+              "poiCat": "restaurante",
+              "dist": "~15min de carro",
+              "mapsQuery": "Ittiturismo I Due Fratelli, Lungomare Cristoforo Colombo 72, Sant'Antioco",
+              "fontes": [
+                {
+                  "o": "Visit Sant'Antioco · portal oficial de turismo",
+                  "u": "https://visitsantantioco.info/en/i-due-fratelli/",
+                  "prova": [
+                    "Lungomare Cristoforo Colombo 72",
+                    "família Serra",
+                    "€25-33"
+                  ]
+                },
+                {
+                  "o": "Site do próprio ittiturismo (família Serra)",
+                  "u": "https://iduefratelliexperience.com/ittiturismo/",
+                  "prova": [
+                    "cooperativa",
+                    "pescadores"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Trattoria de Cala Sapone (na areia)",
+              "desc": "Se o dia foi em Cala Sapone, o almoço já está resolvido lá · <strong>[nome e telefone a confirmar]</strong>",
+              "preco": "[a confirmar]",
+              "valeAPena": 1,
+              "poiCat": "restaurante",
+              "dist": "costa oeste",
+              "noMaps": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "👨‍👩‍👧 Juntos",
+      "tema": "Fim de tarde e fim de semana · 16, 22 e 23",
+      "temaCurto": "Juntos",
+      "bairro": "👨‍👩‍👧 Todos",
+      "cor": "#0f766e",
+      "gradA": "#134e4a",
+      "gradB": "#115e59",
+      "nota": "Três dias em que o raio abre porque vocês estão no carro: <strong>domingo 16</strong> (dia em que seus pais seguem viagem), <strong>sábado 22</strong> e <strong>domingo 23</strong>. É aqui que entra o que não cabe num dia útil.",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "⛴️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Carloforte · a ilha genovesa do atum",
+          "cat": "Ferry de Calasetta · 30min de travessia",
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.1456,
+            "lng": 8.3078
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Carloforte, Isola di San Pietro",
+          "sobre": "A ilha vizinha, onde se fala um dialeto <strong>ligure</strong> e não sardo — colônia genovesa transplantada da Tunísia no século XVIII, que manteve a língua, a cozinha e o atum. Já está verificado no roteiro dos seus pais, que a fazem em 14/Ago. <strong>É programa de dia inteiro e de dia com vocês</strong> — ferry, caminhada na vila, almoço de atum. Não é candidato a dia útil com os avós.",
+          "imperdivel": "O atum em todas as formas — <em>ventresca</em>, <em>bottarga</em> de atum, conserva",
+          "dicas": [
+            "Ferry <strong>Delcomar</strong>, Calasetta → Carloforte · <strong>~30min</strong> · <strong>~€17,40 carro+motorista · ~€5 a pé</strong> (ago/2026)",
+            "Com veículo, <strong>chegar 30min antes</strong> do embarque",
+            "Com a neta, a versão a pé (~€5) e a vila resolvem — o carro só compensa se forem à Spiaggia La Bobba"
+          ],
+          "duracao": "Dia inteiro",
+          "custo": "~€17,40 carro+motorista · ~€5 a pé (ago/2026)",
+          "acessibilidade": "A vila de Carloforte é plana à beira-mar · o ferry embarca a pé sem degrau",
+          "fontes": [
+            {
+              "o": "Verificado no roteiro pais-sardenha · Delcomar",
+              "u": "https://www.delcomar.it/",
+              "prova": [
+                "30min",
+                "€17,40",
+                "€5"
+              ]
+            },
+            {
+              "o": "Verificado no roteiro pais-sardenha · Carloforte, colônia tabarquina",
+              "u": "https://www.sardegnaturismo.it/it/esplora/carloforte",
+              "prova": [
+                "século XVIII",
+                "ligure"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Sant'Antioco cidade · tophet, museu e basílica",
+          "cat": "Cidade fenícia habitada desde o séc. VIII a.C.",
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.0703,
+            "lng": 8.4569
+          },
+          "mapsQuery": "Parco Storico Archeologico di Sant'Antioco",
+          "sobre": "<strong>A cidade mais antiga que vocês vão pisar nesta viagem</strong>: fenícia do <strong>século VIII a.C.</strong>, habitada sem interrupção desde então. O <em>tophet</em>, o Museu Arqueológico e a basílica com as catacumbas formam um conjunto que se faz em uma manhã. Já verificado e detalhado no roteiro dos seus pais, que o fazem em 15/Ago — se vocês forem juntos nesse dia, este card não precisa ser repetido.",
+          "imperdivel": "O tophet — e a discussão, ainda aberta, sobre o que exatamente acontecia ali",
+          "dicas": [
+            "<strong>€7</strong> cumulativo museu + tophet · <strong>€10</strong> o bilhete único de todos os sítios (ago/2026)",
+            "<strong>9h-19h, todos os dias, de março a outubro</strong> · tel. <strong>+39 389 050 5107</strong>",
+            "Manhã é obrigatório: sítio arqueológico ao ar livre em agosto, à tarde, é castigo",
+            "A ~9km de Maladroxia · <strong>servido pela linha 861</strong>, se quiserem mandar os avós sem carro"
+          ],
+          "duracao": "Uma manhã",
+          "custo": "€7 museu+tophet · €10 bilhete único (ago/2026)",
+          "acessibilidade": "⚠️ Sítio arqueológico ao ar livre, com piso irregular · o museu é plano e coberto",
+          "fontes": [
+            {
+              "o": "Parco Storico Archeologico di Sant'Antioco",
+              "u": "https://parcostoricoarcheologicosantantioco.it/orari-biglietti/",
+              "prova": [
+                "€7",
+                "€10",
+                "9h-19h",
+                "março",
+                "outubro",
+                "século VIII a.C."
+              ]
+            },
+            {
+              "o": "Parco Storico Archeologico · e HANDOFF-sardenha-familia (conferido ago/2026)",
+              "u": "https://parcostoricoarcheologicosantantioco.it/orari-biglietti/",
+              "prova": [
+                "mais antiga",
+                "único",
+                "séc. VIII",
+                "9km",
+                "agosto"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🌬️ Vento",
+      "tema": "O plano B do dia em que bate o maestrale",
+      "temaCurto": "Vento",
+      "bairro": "🌬️ Plano B",
+      "cor": "#475569",
+      "gradA": "#1e293b",
+      "gradB": "#334155",
+      "nota": "Numa semana de agosto na Sardenha, <strong>pelo menos um dia vai ter vento</strong> — e ninguém planeja pra isso. Esta aba existe pra que esse dia não vire um dia perdido com uma criança de 3 anos dentro de casa.",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🌬️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Como escolher a praia pelo vento",
+          "cat": "A ilha tem duas costas · use a que estiver a favor",
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "noMaps": true,
+          "coord": {
+            "lat": 38.9989,
+            "lng": 8.4489
+          },
+          "sobre": "A vantagem de estar numa <strong>ilha</strong> é ter sempre um lado abrigado. Maladroxia e Coaquaddus ficam na costa <strong>sudeste</strong>; Cala Sapone fica na costa <strong>oeste</strong>. Quando um lado está batido, o outro costuma estar liso. Além disso, <strong>Coaquaddus tem a própria conformação da costa protegendo do vento</strong> — é o lugar a tentar antes de atravessar a ilha.",
+          "imperdivel": "Checar a direção do vento no celular antes de arrumar a bolsa — 30 segundos que salvam a manhã",
+          "dicas": [
+            "<strong>Vento de leste/sudeste</strong> → Maladroxia e Coaquaddus sofrem · vá pra <strong>costa oeste</strong> (Cala Sapone)",
+            "<strong>Vento de oeste (maestrale)</strong> → a costa oeste sofre · fique no lado de vocês",
+            "<strong>Comecem sempre por Coaquaddus</strong>: é abrigada por conformação da costa, não só por orientação",
+            "Se o vento estiver em tudo: o <strong>museu de Sant'Antioco</strong> é coberto e a poucos quilômetros · e é o plano B honesto",
+            "🔎 <strong>[a confirmar]</strong>: não tenho fonte sobre a exposição exata de cada praia a cada quadrante · isto é raciocínio de geografia, não dado verificado. Confirmem olhando o mar antes de descarregar o carro"
+          ],
+          "duracao": "—",
+          "custo": "—",
+          "acessibilidade": "—",
+          "fontes": [
+            {
+              "o": "Informati Sardegna · Coaquaddus (abrigo por conformação da costa)",
+              "u": "https://informati-sardegna.it/spiagge/coaquaddus-spiaggia/",
+              "prova": [
+                "9km"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Spiaggia di Maladroxia": [
+      {
+        "type": "official",
+        "label": "SardegnaTurismo",
+        "url": "https://www.sardegnaturismo.it/it/esplora/maladroxia"
+      }
+    ],
+    "Ônibus ARST linha 861 · a liberdade dos avós": [
+      {
+        "type": "official",
+        "label": "ARST · linha 861",
+        "url": "https://www.arstspa.info/861.pdf"
+      }
+    ],
+    "Sant'Antioco cidade · tophet, museu e basílica": [
+      {
+        "type": "official",
+        "label": "Parco Storico Archeologico",
+        "url": "https://parcostoricoarcheologicosantantioco.it/orari-biglietti/"
+      }
+    ]
+  },
+  "transit_map": {},
+  "bairros_config": [
+    {
+      "nome": "🏖️ Maladroxia",
+      "latMin": 38.99,
+      "latMax": 39.01,
+      "lngMin": 8.44,
+      "lngMax": 8.46
+    },
+    {
+      "nome": "🌊 Sul da ilha",
+      "latMin": 38.97,
+      "latMax": 38.99,
+      "lngMin": 8.39,
+      "lngMax": 8.46
+    },
+    {
+      "nome": "🏛️ Sant'Antioco",
+      "latMin": 39.05,
+      "latMax": 39.09,
+      "lngMin": 8.44,
+      "lngMax": 8.47
+    },
+    {
+      "nome": "📍 Outros",
+      "fallback": true
+    }
+  ]
+}
