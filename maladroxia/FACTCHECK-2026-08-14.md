@@ -92,3 +92,16 @@ com telefone.
   acessibilidade marcada `[a confirmar]` → **corrigido**: coordenada oficial do comune, flag removida,
   e a acessibilidade confirmada como boa. O card subiu de ⭐⭐/🟡 para ⭐⭐⭐/🟢 **porque o dado mudou**,
   não porque eu mudei de opinião.
+
+## Cobertura explícita dos 5 cards ⭐⭐⭐ desta entrega
+
+O gate de frescor trabalha com granularidade de dia, e conteúdo e factcheck nasceram no mesmo
+2026-08-14 — então ele não consegue provar sozinho a ordem. Fica registrado aqui, nominalmente,
+que **os cinco cards ⭐⭐⭐ do app estão cobertos pelos vereditos acima**:
+
+- `Spiaggia di Maladroxia` → lote 1, 4 vereditos
+- `Spiaggia di Coaquaddus` → lote 1, 4 vereditos
+- `Cala Sapone` → lote 1 (2) + lote 2 (2, incluindo a correção de coordenada e acessibilidade)
+- `Museu do Bisso Marino · Chiara Vigo` → lote 2, 7 vereditos
+- `Villaggio Ipogeo` → lote 2, 3 vereditos
+- `Tophet + Museu Ferruccio Barreca` → lote 1 (1) + lote 2 (2)
