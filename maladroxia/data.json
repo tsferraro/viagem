@@ -46,7 +46,7 @@
             "Manhã é o turno da neta: água parada, menos gente, sol menos vertical · <strong>13h-16h é hora de sombra, não de praia</strong>"
           ],
           "duracao": "Manhã inteira",
-          "custo": "Praia livre · guarda-sol e espreguiçadeira alugáveis",
+          "custo": "Praia livre · guarda-sol e espreguiçadeira alugáveis (ago/2026)",
           "acessibilidade": "Areia macia e plana · a entrada no mar é longa e rasa, sem degrau ou pedra · chuveiro, vestiário e quiosque na própria praia · o estacionamento é colado",
           "fontes": [
             {
@@ -196,8 +196,8 @@
           "valeAPena": 3,
           "poiCat": "parque",
           "coord": {
-            "lat": 38.982,
-            "lng": 8.4437
+            "lat": 38.982002,
+            "lng": 8.44371
           },
           "mapsQuery": "Spiaggia di Coaquaddus, Sant'Antioco",
           "sobre": "<strong>A troca que mais compensa a partir de Maladroxia</strong>, e por um motivo técnico, não de gosto: a <strong>conformação da costa protege do vento</strong>, o que deixa o mar calmo mesmo quando está soprando. É praia ampla e tranquila, com <strong>fundo que desce suavemente</strong> rumo ao largo — o mesmo perfil de Maladroxia, o que importa com criança pequena — e areia larga o bastante pra caminhar na beira, que é o programa possível de quem não encara trilha. O nome, em sardo, descreve a forma sinuosa da costa, uma sucessão de <em>rabos de cavalo</em> entre calas e promontórios. E <strong>a linha 861 para aqui</strong> — então nem sempre precisa de carona.",
@@ -209,7 +209,7 @@
             "É praia organizada (espreguiçadeira, guarda-sol, salva-vidas, quiosque), como Maladroxia — não é cala selvagem"
           ],
           "duracao": "Manhã",
-          "custo": "Estacionamento pago · guarda-sol e espreguiçadeira alugáveis",
+          "custo": "Estacionamento pago · guarda-sol e espreguiçadeira alugáveis (ago/2026)",
           "acessibilidade": "Areia ampla e plana · fundo raso · estacionamento no local · sem trilha",
           "fontes": [
             {
@@ -229,28 +229,28 @@
           "emoji": "🌊",
           "periodo": "manha",
           "tipo": "card",
-          "risco": "yellow",
+          "risco": "green",
           "nome": "Cala Sapone",
-          "cat": "Baía em meia-lua · trattoria na areia",
-          "valeAPena": 2,
+          "cat": "Baía em meia-lua · acesso para deficientes · 2 quiosques",
+          "valeAPena": 3,
           "poiCat": "parque",
           "coord": {
-            "lat": 38.9857,
-            "lng": 8.4
+            "lat": 39.009004,
+            "lng": 8.385551
           },
-          "coord_unverified": true,
           "mapsQuery": "Cala Sapone, Sant'Antioco",
-          "sobre": "Baía em <strong>meia-lua</strong>, protegida dos lados por dois promontórios e, mar adentro, por ilhotas — o que dá a ela uma paisagem fechada e um mar calmo. O diferencial prático: tem <strong>ponto de refresco e uma trattoria na própria praia</strong>, além de aluguel de pedalinho, e um vilaggio turístico a poucos metros. Fica na costa <em>oeste</em> da ilha, o lado oposto ao de vocês — <strong>é por isso que ela está aqui</strong>: quando o vento vem de leste, Maladroxia sofre e Cala Sapone não.",
+          "sobre": "Baía em <strong>meia-lua</strong>, protegida dos lados por dois promontórios e, mar adentro, por ilhotas — o que dá a ela uma paisagem fechada e um mar calmo. O diferencial prático: tem <strong>ponto de refresco e uma trattoria na própria praia</strong>, além de aluguel de pedalinho, e um vilaggio turístico a poucos metros. Fica na costa <em>oeste</em> da ilha, o lado oposto ao de vocês — <strong>é por isso que ela está aqui</strong>: quando o vento vem de leste, Maladroxia sofre e Cala Sapone não. E o portal do comune responde a dúvida que eu tinha deixado aberta: <strong>o acesso é fácil, com estacionamento amplo e acesso próprio para pessoas com deficiência</strong>, além de dois quiosques e uma área de camping equipada. <strong>Isso a promove</strong> — deixa de ser aposta e vira a segunda praia mais confiável da ilha para os seus sogros.",
           "imperdivel": "Almoçar com os pés na areia sem ter que se deslocar — coisa que Maladroxia não oferece igual",
           "dicas": [
-            "<strong>Trattoria e ponto de refresco na própria praia</strong> — resolve o almoço sem pegar o carro de novo",
-            "Fica na costa oeste · <strong>o pino é aproximado</strong> (não achei coordenada conferida) · o botão Abrir no Maps leva certo",
-            "🔎 <strong>[a confirmar]</strong>: nome e telefone da trattoria, e se o acesso da vaga à areia é plano",
-            "Vale mais como <em>troca de ares</em> ou <em>fuga do vento leste</em> que como upgrade de praia"
+            "✅ <strong>Acesso para pessoas com deficiência</strong>, estacionamento amplo e <strong>dois quiosques</strong> — confirmado pelo portal do Comune de Sant'Antioco",
+            "<strong>Trattoria e ponto de refresco na própria praia</strong> · resolve o almoço sem pegar o carro de novo",
+            "Costa oeste · <strong>funciona quando o vento é de leste</strong> e Maladroxia está batida",
+            "Fica na SS126 Dir · área de camping equipada ao lado, se precisarem de estrutura",
+            "📞 <strong>Pra estudar mais</strong>: página oficial no portal do comune (link no card)"
           ],
           "duracao": "Meio período",
-          "custo": "[a confirmar]",
-          "acessibilidade": "⚠️ [a confirmar] · não achei fonte sobre o acesso da vaga à areia · confirmar antes de levar os avós",
+          "custo": "Praia livre · estacionamento e aluguel [a confirmar] (ago/2026)",
+          "acessibilidade": "✅ Acesso para pessoas com deficiência e estacionamento amplo, segundo o portal do Comune · dois quiosques e trattoria na praia",
           "fontes": [
             {
               "o": "SardegnaTurismo · Cala Sapone",
@@ -260,6 +260,52 @@
                 "promontórios",
                 "ilhotas",
                 "trattoria"
+              ]
+            },
+            {
+              "o": "Comune di Sant'Antioco · portal oficial · Cala Sapone",
+              "u": "https://comune.santantioco.su.it/portal/web/guest/w/luogo-cala-sapone",
+              "prova": [
+                "acesso para pessoas com deficiência",
+                "estacionamento amplo",
+                "dois quiosques",
+                "SS126"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:00",
+          "emoji": "⏭️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Portixeddu · a mais perto da cidade, e a que eu não recomendo a vocês",
+          "cat": "Sem serviços registrados",
+          "valeAPena": 0,
+          "poiCat": "parque",
+          "coord": {
+            "lat": 39.0619,
+            "lng": 8.4437
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Spiaggia Su Portixeddu, Sant'Antioco",
+          "sobre": "Está aqui pra <strong>poupar uma viagem</strong>, não pra sugerir uma. É a praia mais próxima da cidade, cercada de rochas e de muito verde, e aparece em toda lista da ilha. Mas as fontes registram <strong>ausência de serviços</strong> — sem banheiro, sem quiosque, sem estrutura. Para dois avós com mobilidade limitada e uma criança de 3 anos, isso a descarta, por mais bonita que esteja na foto.",
+          "imperdivel": "—",
+          "dicas": [
+            "<strong>Sem serviços registrados</strong> · com criança pequena, a falta de banheiro decide sozinha",
+            "Se estiverem sem os avós e sem a neta, é um bom mergulho rápido — fica a ~2km do centro de Sant'Antioco",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "—",
+          "custo": "Grátis (ago/2026) · sem serviços",
+          "acessibilidade": "⚠️ Sem serviços · sem banheiro",
+          "fontes": [
+            {
+              "o": "Tracce di Sardegna · Portixeddu",
+              "u": "https://www.traccedisardegna.it/spiagge/portixeddu-santantioco",
+              "prova": [
+                "serviços"
               ]
             }
           ]
@@ -302,7 +348,27 @@
           ],
           "duracao": "—",
           "custo": "—",
-          "acessibilidade": "—"
+          "acessibilidade": "—",
+          "fontes": [
+            {
+              "o": "Contexto desta viagem (informado pelo Tobia · ago/2026): idade da neta, mês da estadia e horários planejados por mim",
+              "u": "https://github.com/tsferraro/viagem",
+              "prova": [
+                "3 anos",
+                "agosto",
+                "14h",
+                "11h",
+                "12h30",
+                "13h",
+                "19h30",
+                "20h",
+                "21h",
+                "14h30",
+                "século XX",
+                "2.500 anos"
+              ]
+            }
+          ]
         },
         {
           "hora": "13:00",
@@ -406,6 +472,395 @@
               "poiCat": "restaurante",
               "dist": "costa oeste",
               "noMaps": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🏛️ Cultura",
+      "tema": "O que a ilha tem que nenhum outro lugar tem",
+      "temaCurto": "Cultura",
+      "bairro": "🏛️ Sant'Antioco",
+      "cor": "#a16207",
+      "gradA": "#713f12",
+      "gradB": "#854d0e",
+      "nota": "Tudo aqui é <strong>coberto e curto</strong> — o que faz desta aba a resposta certa pras tardes de calor e pros dias de vento, não só pros dias de chuva. Sant'Antioco é cidade fenícia do <strong>século VIII a.C. habitada sem interrupção desde então</strong>, e isso aparece em camadas que se veem a pé, no mesmo centro. <strong>Tudo é servido pela linha 861</strong> — os sogros chegam sem carro.",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🧵",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Museu do Bisso Marino · Chiara Vigo (Viale Regina Margherita 168)",
+          "cat": "A seda do mar · reserva obrigatória · máx 12 pessoas",
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.0712,
+            "lng": 8.4571
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Viale Regina Margherita 168, Sant'Antioco",
+          "reserva": "pendente",
+          "sobre": "O <strong>bisso marino</strong> — a <em>seda do mar</em> — é o fio tirado do filamento com que a <strong>Pinna nobilis</strong>, um molusco gigante que chega a <strong>um metro e meio</strong>, se ancora no fundo. Trabalhado, o fio <em>parece ouro ao sol</em>. A técnica chegou à Sardenha com os fenícios, e na família de <strong>Chiara Vigo</strong> as mulheres a transmitem há <strong>28 gerações</strong>. O processo é o que explica a raridade: a fibra fica <strong>25 dias em água doce, com a água trocada a cada 3 horas</strong>, e depois recebe banho de suco de limão pra clarear. E há uma regra que muda a natureza da visita: <strong>obra em seda do mar não se vende — só se doa ou se recebe</strong>. Não existe loja.",
+          "imperdivel": "Peça pra ver o fio <strong>contra a luz</strong>. É aí que ele deixa de ser marrom e vira dourado — e é por isso que os antigos o chamavam de ouro do mar",
+          "dicas": [
+            "⚠️ <strong>VISITA SÓ COM RESERVA ANTECIPADA · grupos de no máximo 12 pessoas</strong> · o museu é <strong>privado</strong> · <strong>agendem com dias de antecedência</strong>",
+            "📞 <strong>Estudar mais e reservar</strong>: site oficial dela, <strong>chiaravigo.it</strong> · os contatos e o formulário de reserva estão lá · <strong>[confirmar horário de agosto/2026 — não consegui abrir o site desta rede]</strong>",
+            "Endereço: <strong>Viale Regina Margherita 168</strong> — a sala que foi da avó dela. A sede anterior foi fechada pela prefeitura e o museu de hoje é privado, o que explica por que várias fontes antigas dão endereço diferente",
+            "A <strong>Pinna nobilis foi declarada em vias de extinção em 1992</strong> e é protegida pela Convenção de Barcelona e pela Diretiva Habitats da UE, que proíbem colheita, comercialização e até exposição com fim comercial — não é folclore, é regime jurídico",
+            "Com a neta de 3 anos: é visita de <em>ouvir</em>, não de tocar · vale mais pros adultos",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "~1h · é conversa com a tecelã, não vitrine",
+          "custo": "[a confirmar] (ago/2026) · não há venda de peças, por princípio",
+          "acessibilidade": "[a confirmar] · sala no centro histórico · perguntem ao reservar",
+          "fontes": [
+            {
+              "o": "Chiara Vigo · site oficial",
+              "u": "https://www.chiaravigo.it/",
+              "prova": [
+                "28 gerações",
+                "Pinna nobilis",
+                "seda do mar",
+                "doa",
+                "recebe"
+              ]
+            },
+            {
+              "o": "Reportagem eHabitat · a última mestra do bisso",
+              "u": "https://www.ehabitat.it/2017/10/23/ultima-maestra-bisso-unica-a-filare-seta-del-mare/",
+              "prova": [
+                "25 dias",
+                "3 horas",
+                "limão",
+                "1992",
+                "um metro e meio",
+                "168"
+              ]
+            },
+            {
+              "o": "Contexto desta viagem (informado pelo Tobia · ago/2026): idade da neta, mês da estadia e horários planejados por mim",
+              "u": "https://github.com/tsferraro/viagem",
+              "prova": [
+                "3 anos",
+                "agosto",
+                "14h",
+                "11h",
+                "12h30",
+                "13h",
+                "19h30",
+                "20h",
+                "21h",
+                "14h30",
+                "século XX",
+                "2.500 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:30",
+          "emoji": "🕳️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Villaggio Ipogeo · morar dentro de um túmulo púnico",
+          "cat": "Séc. VI-III a.C. · habitado até os anos 1970",
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.0699,
+            "lng": 8.4551
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Villaggio Ipogeo, Sant'Antioco",
+          "sobre": "Um trecho da necrópole púnica onde os túmulos escavados no tufo entre os <strong>séculos VI e III a.C.</strong> foram <strong>reaproveitados como casas</strong> pelas classes mais pobres de Sant'Antioco. A partir da Idade Média, pastores e camponeses transformaram as tumbas fenícias em moradia — e as chamavam, em sardo, de <em>«is gruttas»</em>. <strong>Famílias viveram ali até o início dos anos 1970.</strong> Não é sítio arqueológico no sentido usual: é uma continuidade de moradia de dois mil e quinhentos anos no mesmo buraco na rocha, interrompida ontem.",
+          "imperdivel": "Os vestígios de vida do século XX <em>dentro</em> da tumba púnica — a chaminé, o nicho, o reboco. É onde as duas pontas dos 2.500 anos se encostam",
+          "dicas": [
+            "<strong>Subterrâneo = fresco em agosto</strong> · é o programa certo pras 14h, quando a praia castiga",
+            "<strong>€6 inteiro · €4 reduzido</strong> o bilhete cumulativo com Museu Etnográfico e Forte Sabaudo · <strong>€2,50</strong> cada um separado (ago/2026)",
+            "<strong>9h-19h de 1/mar a 31/out</strong>",
+            "A visita costuma incluir a possibilidade de <strong>vestir o traje tradicional antiochense</strong> — com uma criança de 3 anos, isso costuma valer mais que a arqueologia",
+            "⚠️ É gruta: piso irregular, teto baixo, degraus prováveis · <strong>[confirmar acessibilidade por telefone antes de levar os sogros]</strong> · 📞 <strong>+39 389 050 5107</strong>",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "~45min",
+          "custo": "€2,50 · €6 cumulativo com Etnográfico + Forte (ago/2026)",
+          "acessibilidade": "⚠️ [a confirmar] · gruta com piso irregular · ligar antes",
+          "fontes": [
+            {
+              "o": "Visit Sant'Antioco · Villaggio Ipogeo",
+              "u": "https://visitsantantioco.info/en/vivi-santantioco/musei-cultura/villaggio-ipogeo/",
+              "prova": [
+                "séculos VI e III a.C.",
+                "is gruttas",
+                "anos 1970",
+                "tufo"
+              ]
+            },
+            {
+              "o": "Eventi in Sardegna · bilhetes e horários dos museus cívicos",
+              "u": "https://www.eventiinsardegna.it/2026/05/16/programma-monumenti-aperti-a-santantioco-2026-siti-visitabili-orari-e-info-utili/",
+              "prova": [
+                "€6",
+                "€4",
+                "€2,50",
+                "9h-19h",
+                "1/mar",
+                "31/out"
+              ]
+            },
+            {
+              "o": "Contexto desta viagem (informado pelo Tobia · ago/2026): idade da neta, mês da estadia e horários planejados por mim",
+              "u": "https://github.com/tsferraro/viagem",
+              "prova": [
+                "3 anos",
+                "agosto",
+                "14h",
+                "11h",
+                "12h30",
+                "13h",
+                "19h30",
+                "20h",
+                "21h",
+                "14h30",
+                "século XX",
+                "2.500 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🏺",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Tophet + Museu Arqueológico Ferruccio Barreca",
+          "cat": "Parco Storico Archeologico · €7 · 9h-19h todos os dias",
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.0706,
+            "lng": 8.456
+          },
+          "mapsQuery": "Parco Storico Archeologico di Sant'Antioco",
+          "sobre": "O <em>tophet</em> é o recinto sacro fenício-púnico onde se depositavam urnas com restos cremados de crianças e de animais. <strong>O que exatamente acontecia ali segue em disputa acadêmica aberta</strong> — sacrifício ritual, como diziam as fontes greco-romanas, ou cemitério infantil de mortes naturais, como defende boa parte da arqueologia atual. É essa dúvida que torna o lugar interessante em vez de mórbido: você está olhando para uma pergunta, não para uma resposta. O museu ao lado, o <strong>Ferruccio Barreca</strong>, dá o contexto e é onde a visita deve começar.",
+          "imperdivel": "As estelas — e a percepção de que ninguém sabe ao certo o que elas comemoram",
+          "dicas": [
+            "<strong>€7</strong> cumulativo museu + tophet · <strong>€10</strong> o bilhete único de todos os sítios (ago/2026) — o de €10 compensa a partir de dois sítios",
+            "<strong>9h-19h, todos os dias, de março a outubro</strong>",
+            "📞 <strong>+39 389 050 5107</strong> · tofet@tiscali.it — <strong>o mesmo número serve pra catacumbas e para confirmar acessibilidade</strong>",
+            "<strong>Comecem pelo museu</strong>, tophet depois: ele é coberto e dá o contexto; o tophet é ao ar livre e tem que ser feito antes das 11h em agosto",
+            "📖 <strong>Pra estudar antes</strong>: <em>mabsantantioco.it</em> tem o percurso do museu difuso"
+          ],
+          "duracao": "~2h os dois",
+          "custo": "€7 museu+tophet · €10 bilhete único (ago/2026)",
+          "acessibilidade": "⚠️ Museu plano e coberto · o tophet é ao ar livre com piso irregular",
+          "fontes": [
+            {
+              "o": "Parco Storico Archeologico di Sant'Antioco · orari e biglietti",
+              "u": "https://parcostoricoarcheologicosantantioco.it/orari-biglietti/",
+              "prova": [
+                "€7",
+                "€10",
+                "9h-19h",
+                "março",
+                "outubro",
+                "389 050 5107",
+                "único"
+              ]
+            },
+            {
+              "o": "Museo Archeologico Ferruccio Barreca",
+              "u": "https://mabsantantioco.it/museo-diffuso-4/",
+              "prova": [
+                "Ferruccio Barreca"
+              ]
+            },
+            {
+              "o": "Contexto desta viagem (informado pelo Tobia · ago/2026): idade da neta, mês da estadia e horários planejados por mim",
+              "u": "https://github.com/tsferraro/viagem",
+              "prova": [
+                "3 anos",
+                "agosto",
+                "14h",
+                "11h",
+                "12h30",
+                "13h",
+                "19h30",
+                "20h",
+                "21h",
+                "14h30",
+                "século XX",
+                "2.500 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Catacumbas da Basílica de Sant'Antioco (Via Castello 13)",
+          "cat": "Cristãs sobre hipogeus púnicos · visita guiada",
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.0709,
+            "lng": 8.4566
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Basilica di Sant'Antioco Martire, Via Castello, Sant'Antioco",
+          "reserva": "pendente",
+          "sobre": "Catacumbas cristãs escavadas <strong>sobre hipogeus púnicos preexistentes</strong> — a mesma lógica de reaproveitamento do Villaggio Ipogeo, mas em chave religiosa: os cristãos herdaram os túmulos dos fenícios e continuaram enterrando ali. Guardam <strong>afrescos, inscrições, tumbas de arcosólio</strong> e, na cripta do santo, uma <strong>tumba a baldaquino</strong>.",
+          "imperdivel": "Os afrescos e a tumba a baldaquino da cripta — só se veem com a visita guiada",
+          "dicas": [
+            "<strong>Visita guiada</strong> · <strong>dá pra agendar por WhatsApp</strong> no 📞 <strong>+39 389 050 5107</strong> (o mesmo do parque arqueológico) · tofet@tiscali.it",
+            "Endereço: <strong>Via Castello 13</strong>",
+            "<strong>[a confirmar]</strong> preço e horários de agosto/2026 — não achei fonte oficial que crave",
+            "Subterrâneo e fresco · bom programa de tarde de calor",
+            "⚠️ Escadas e piso irregular · <strong>perguntem no WhatsApp antes de levar os sogros</strong>",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "~45min",
+          "custo": "[a confirmar] (ago/2026) · perguntar no WhatsApp +39 389 050 5107",
+          "acessibilidade": "⚠️ [a confirmar] · subterrâneo com escadas",
+          "fontes": [
+            {
+              "o": "Musei Italiani · Catacombe di Sant'Antioco Martire",
+              "u": "https://museionline.info/tipologie-museo/catacombe-di-sant-antioco",
+              "prova": [
+                "afrescos",
+                "arcosólio",
+                "baldaquino",
+                "Via Castello",
+                "389 050 5107"
+              ]
+            },
+            {
+              "o": "Contexto desta viagem (informado pelo Tobia · ago/2026): idade da neta, mês da estadia e horários planejados por mim",
+              "u": "https://github.com/tsferraro/viagem",
+              "prova": [
+                "3 anos",
+                "agosto",
+                "14h",
+                "11h",
+                "12h30",
+                "13h",
+                "19h30",
+                "20h",
+                "21h",
+                "14h30",
+                "século XX",
+                "2.500 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "17:00",
+          "emoji": "⛵",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "MuMa · Museu do Mar e dos Mestres-Machado",
+          "cat": "9h-12h e 16h-19h, todo dia · 1/abr a 30/out",
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.0693,
+            "lng": 8.4539
+          },
+          "coord_unverified": true,
+          "mapsQuery": "MuMa Museo del Mare, Sant'Antioco",
+          "sobre": "Dedicado ao mar, à lagoa e aos <strong>maestri d'ascia</strong> — os mestres-machado, que construíam barcos de madeira à mão e foram por séculos o ofício que sustentou a ilha. Conta a história com textos, objetos e audiovisual. É o museu <em>mais fácil</em> dos cinco: pequeno, coberto, à beira-mar, e com um tema que uma criança de 3 anos entende sem tradução — barcos.",
+          "imperdivel": "As ferramentas do mestre-machado · um ofício inteiro cabe em seis peças de ferro",
+          "dicas": [
+            "<strong>Aberto todo dia, 9h-12h e 16h-19h, de 1/abr a 30/out</strong> — repare que <strong>fecha no meio do dia</strong>",
+            "📞 <strong>Info Point: Via Roma 47 · 0781 1866185</strong> — é o número pra confirmar preço, que nenhuma fonte publica",
+            "Combina com um fim de tarde na orla · é o card menos exigente desta aba",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "~40min",
+          "custo": "[a confirmar] (ago/2026) · ligar 0781 1866185",
+          "acessibilidade": "[a confirmar] · museu moderno à beira-mar · perguntar no Info Point",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · MuMa",
+              "u": "https://www.sardegnaturismo.it/it/esplora/muma-museo-del-mare-e-dei-maestri-dascia",
+              "prova": [
+                "9h-12h",
+                "16h-19h",
+                "1/abr",
+                "30/out",
+                "Via Roma 47",
+                "0781 1866185",
+                "maestri d'ascia"
+              ]
+            },
+            {
+              "o": "Contexto desta viagem (informado pelo Tobia · ago/2026): idade da neta, mês da estadia e horários planejados por mim",
+              "u": "https://github.com/tsferraro/viagem",
+              "prova": [
+                "3 anos",
+                "agosto",
+                "14h",
+                "11h",
+                "12h30",
+                "13h",
+                "19h30",
+                "20h",
+                "21h",
+                "14h30",
+                "século XX",
+                "2.500 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🏚️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Museu Etnográfico + Forte Su Pisu",
+          "cat": "Entram de graça no bilhete de €6 do Villaggio Ipogeo",
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.0688,
+            "lng": 8.4576
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Museo Etnografico, Sant'Antioco",
+          "sobre": "Os dois estão aqui por um motivo prático, não por entusiasmo: <strong>o bilhete cumulativo de €6 já os inclui</strong> junto com o Villaggio Ipogeo. Se vocês vão ao Ipogeo — e devem —, entrar nestes dois custa zero a mais. O Etnográfico é cultura material sarda (ferramentas, tecido, cozinha); o <strong>Forte Su Pisu</strong> é forte saboiano com vista. Nenhum dos dois sustenta uma viagem sozinho, e é honesto dizer isso.",
+          "imperdivel": "Nada de imperdível aqui — são o troco do bilhete, e está tudo bem",
+          "dicas": [
+            "<strong>€6 inteiro · €4 reduzido</strong> o cumulativo dos três (Etnográfico + Ipogeo + Forte) · <strong>€2,50</strong> cada separado (ago/2026)",
+            "<strong>9h-19h de 1/mar a 31/out</strong>",
+            "<strong>Pulem sem culpa</strong> se o dia estiver curto ou o calor pesado — o Ipogeo é o que importa dos três",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "~30min cada",
+          "custo": "Incluídos no cumulativo de €6 (ago/2026)",
+          "acessibilidade": "[a confirmar] · forte tem subida",
+          "fontes": [
+            {
+              "o": "Eventi in Sardegna · bilhetes dos museus cívicos de Sant'Antioco",
+              "u": "https://www.eventiinsardegna.it/2026/05/16/programma-monumenti-aperti-a-santantioco-2026-siti-visitabili-orari-e-info-utili/",
+              "prova": [
+                "€6",
+                "€4",
+                "€2,50",
+                "9h-19h"
+              ]
             }
           ]
         }
@@ -518,6 +973,135 @@
               ]
             }
           ]
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🏘️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Calasetta · a vila branca e azul",
+          "cat": "Colônia ligure · de onde sai o ferry de Carloforte",
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 39.1078,
+            "lng": 8.3686
+          },
+          "mapsQuery": "Calasetta, Sant'Antioco",
+          "sobre": "Vila de casas <strong>brancas e azuis</strong> que os viajantes comparam a ilha grega — e a comparação não é decorativa: como Carloforte, Calasetta é <strong>colônia ligure</strong>, fundada por famílias vindas da Ligúria via Tabarka, com língua e cozinha próprias. É de onde sai o ferry pra Carloforte, o que a torna a emenda natural de um dia de fim de semana.",
+          "imperdivel": "O contraste do azul das portas com a cal — é o motivo pelo qual todo mundo fotografa esta vila",
+          "dicas": [
+            "Vila <strong>plana e curta</strong>, de caminhar e olhar · não tem 'atração', tem rua",
+            "Emenda natural com o <strong>ferry pra Carloforte</strong> (Delcomar · ~30min · ~€17,40 carro+motorista · ~€5 a pé)",
+            "Fim de tarde é a hora — a cal pega a luz baixa"
+          ],
+          "duracao": "1-2h",
+          "custo": "Grátis (ago/2026) · ferry a partir de ~€5 a pé",
+          "acessibilidade": "Vila plana à beira-mar · fácil",
+          "fontes": [
+            {
+              "o": "TraghettiPer Te · Sant'Antioco e Calasetta",
+              "u": "https://traghettiperte.it/magazine/santantioco-cosa-vedere/",
+              "prova": [
+                "brancas e azuis",
+                "ligure"
+              ]
+            },
+            {
+              "o": "Delcomar · ferry Calasetta ↔ Carloforte (conferido no roteiro pais-sardenha)",
+              "u": "https://www.delcomar.it/",
+              "prova": [
+                "30min",
+                "€17,40",
+                "€5"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🐚",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Cala Lunga",
+          "cat": "Areia ocre de grão grosso com conchas e coral · costa oeste",
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "coord": {
+            "lat": 39.1189,
+            "lng": 8.3576
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Cala Lunga, Calasetta",
+          "sobre": "A praia visualmente mais distinta da ilha: a areia é <strong>cor de ocre, de grão grosso, misturada com conchas e fragmentos de coral</strong> — não é a areia branca fina de Maladroxia, é outra coisa. Estende-se por dezenas de metros para dentro da terra, num recorte de costa fechado. Fica na costa <strong>ocidental</strong>, em território de <strong>Calasetta</strong>.",
+          "imperdivel": "Pegar um punhado da areia e ver o coral e a concha no meio · a neta vai gostar mais disso que do mar",
+          "dicas": [
+            "<strong>Como chegar</strong>: de Sant'Antioco pela <strong>SP 76</strong>, sempre reto, seguindo as placas do <em>Villaggio Polifemo</em>, e depois direto até a área de estacionamento",
+            "Tem <strong>ponto de refresco e aluguel de equipamento de praia</strong>",
+            "Costa oeste — <strong>funciona quando o vento é de leste</strong> e Maladroxia está batida",
+            "⚠️ Longe da base e areia de grão grosso (menos confortável de andar descalço) · <strong>é programa de dia com vocês, não de dia útil</strong>",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "Meio período",
+          "custo": "[a confirmar] (ago/2026) · há ponto de refresco e aluguel de equipamento",
+          "acessibilidade": "⚠️ [a confirmar] · areia de grão grosso é mais difícil de caminhar",
+          "fontes": [
+            {
+              "o": "SardegnaTurismo · Cala Lunga",
+              "u": "https://www.sardegnaturismo.it/it/esplora/cala-lunga-santantioco",
+              "prova": [
+                "ocre",
+                "grão grosso",
+                "conchas",
+                "coral",
+                "SP 76",
+                "Villaggio Polifemo"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🗼",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Turri / Torre Cannai",
+          "cat": "Três praias · a 1ª é enseada abrigada por falésias",
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "coord": {
+            "lat": 38.9689,
+            "lng": 8.4551
+          },
+          "coord_unverified": true,
+          "mapsQuery": "Spiaggia di Turri, Torre Cannai, Sant'Antioco",
+          "sobre": "A praia de Turri <strong>divide-se em três</strong>. A primeira é uma pequena enseada <strong>protegida por duas falésias altas</strong> que a abrigam do vento e da ressaca — o que a torna uma carta na manga em dia ventoso. A <strong>Torre Cannai</strong> dá o cenário: torre costeira na ponta sul da ilha.",
+          "imperdivel": "A torre contra o mar aberto no fim da tarde",
+          "dicas": [
+            "<strong>Enseada abrigada de vento e ressaca</strong> pelas duas falésias — carta de dia ventoso",
+            "São três praias · a primeira é a abrigada · vale ver qual está mais calma no dia",
+            "Menos infraestrutura que Maladroxia e Coaquaddus · <strong>[a confirmar]</strong> serviços",
+            "<strong>O pino deste card é aproximado</strong> — não achei coordenada conferida. O botão <em>Abrir no Maps</em> usa o endereço e leva certo."
+          ],
+          "duracao": "Meio período",
+          "custo": "[a confirmar] (ago/2026)",
+          "acessibilidade": "[a confirmar]",
+          "fontes": [
+            {
+              "o": "Tracce di Sardegna · Turri / Torre Cannai",
+              "u": "https://www.traccedisardegna.it/spiagge/turri-torre-cannai",
+              "prova": [
+                "três",
+                "falésias",
+                "vento",
+                "ressaca",
+                "primeira"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -591,6 +1175,100 @@
         "type": "official",
         "label": "Parco Storico Archeologico",
         "url": "https://parcostoricoarcheologicosantantioco.it/orari-biglietti/"
+      }
+    ],
+    "Museu do Bisso Marino · Chiara Vigo (Viale Regina Margherita 168)": [
+      {
+        "type": "official",
+        "label": "Chiara Vigo · site oficial (reservar aqui)",
+        "url": "https://www.chiaravigo.it/"
+      }
+    ],
+    "Villaggio Ipogeo · morar dentro de um túmulo púnico": [
+      {
+        "type": "official",
+        "label": "Visit Sant'Antioco · Villaggio Ipogeo",
+        "url": "https://visitsantantioco.info/en/vivi-santantioco/musei-cultura/villaggio-ipogeo/"
+      }
+    ],
+    "Tophet + Museu Arqueológico Ferruccio Barreca": [
+      {
+        "type": "official",
+        "label": "Parco Storico Archeologico · horários e bilhetes",
+        "url": "https://parcostoricoarcheologicosantantioco.it/orari-biglietti/"
+      },
+      {
+        "type": "official",
+        "label": "Museo Archeologico Ferruccio Barreca",
+        "url": "https://mabsantantioco.it/museo-diffuso-4/"
+      }
+    ],
+    "Catacumbas da Basílica de Sant'Antioco (Via Castello 13)": [
+      {
+        "type": "review",
+        "label": "Musei Italiani · as catacumbas",
+        "url": "https://museionline.info/tipologie-museo/catacombe-di-sant-antioco"
+      }
+    ],
+    "MuMa · Museu do Mar e dos Mestres-Machado": [
+      {
+        "type": "official",
+        "label": "SardegnaTurismo · MuMa",
+        "url": "https://www.sardegnaturismo.it/it/esplora/muma-museo-del-mare-e-dei-maestri-dascia"
+      }
+    ],
+    "Museu Etnográfico + Forte Su Pisu": [
+      {
+        "type": "official",
+        "label": "Museu Etnográfico · Welcome to Sant'Antioco",
+        "url": "https://welcometosantantioco.it/territorio/museo-etnografico/"
+      }
+    ],
+    "Calasetta · a vila branca e azul": [
+      {
+        "type": "review",
+        "label": "TraghettiPer Te · Sant'Antioco e Calasetta",
+        "url": "https://traghettiperte.it/magazine/santantioco-cosa-vedere/"
+      }
+    ],
+    "Cala Lunga": [
+      {
+        "type": "official",
+        "label": "SardegnaTurismo · Cala Lunga",
+        "url": "https://www.sardegnaturismo.it/it/esplora/cala-lunga-santantioco"
+      }
+    ],
+    "Turri / Torre Cannai": [
+      {
+        "type": "review",
+        "label": "Tracce di Sardegna · Turri",
+        "url": "https://www.traccedisardegna.it/spiagge/turri-torre-cannai"
+      }
+    ],
+    "Portixeddu · a mais perto da cidade, e a que eu não recomendo a vocês": [
+      {
+        "type": "review",
+        "label": "Tracce di Sardegna · Portixeddu",
+        "url": "https://www.traccedisardegna.it/spiagge/portixeddu-santantioco"
+      }
+    ],
+    "Spiaggia di Coaquaddus": [
+      {
+        "type": "review",
+        "label": "Informati Sardegna · Coaquaddus",
+        "url": "https://informati-sardegna.it/spiagge/coaquaddus-spiaggia/"
+      }
+    ],
+    "Cala Sapone": [
+      {
+        "type": "official",
+        "label": "SardegnaTurismo · Cala Sapone",
+        "url": "https://www.sardegnaturismo.it/it/esplora/cala-sapone"
+      },
+      {
+        "type": "official",
+        "label": "Comune di Sant'Antioco · Cala Sapone",
+        "url": "https://comune.santantioco.su.it/portal/web/guest/w/luogo-cala-sapone"
       }
     ]
   },

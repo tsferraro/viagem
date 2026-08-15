@@ -47,3 +47,48 @@ Escopo do que dava pra verificar remotamente: existência, localização, servi�
   entram quando a família reportar o nome — não antes.
 - **Horários de agosto de 2026** não foram confirmados para nenhum estabelecimento. Vila de praia
   em alta temporada muda horário sem avisar.
+
+---
+
+# Lote 2 · 2026-08-14 (mesmo dia) · atrações da ilha + bisso
+
+Ampliação pedida pelo Tobia: mapear as atrações da ilha por fontes de viajantes e confirmar
+os dados que faltavam nos sites oficiais. Os sites oficiais (`archeotur.it`,
+`parcostoricoarcheologicosantantioco.it`, `chiaravigo.it`) estão **bloqueados pela rede desta
+sessão** — os dados abaixo vieram de busca, e o que não fechou está `[a confirmar]` no card,
+com telefone.
+
+| item | afirmação | veredito | fonte | data |
+|---|---|---|---|---|
+| Bisso marino | é o fio do filamento com que a Pinna nobilis se ancora · "seda do mar" · parece ouro ao sol | **OK** | https://www.chiaravigo.it/ | 2026-08-14 |
+| Chiara Vigo | arte transmitida pelas mulheres da família há 28 gerações | **OK** | https://www.chiaravigo.it/sapienza.html | 2026-08-14 |
+| Bisso · processo | 25 dias em água doce trocando a água a cada 3h · depois banho de suco de limão | **OK** | https://www.ehabitat.it/2017/10/23/ultima-maestra-bisso-unica-a-filare-seta-del-mare/ | 2026-08-14 |
+| Bisso · regra | obra em seda do mar só pode ser doada ou recebida, nunca vendida | **OK** | https://www.chiaravigo.it/ | 2026-08-14 |
+| Pinna nobilis | chega a ~1,5m · declarada em vias de extinção em 1992 · protegida pela Convenção de Barcelona e pela Diretiva Habitats da UE | **OK** | https://www.chiaravigo.it/pinna-nobilis.html | 2026-08-14 |
+| Museu do Bisso | endereço viale Regina Margherita 168 · museu **privado** (a sede anterior foi fechada pela prefeitura) | **OK** | https://www.ehabitat.it/2017/10/23/ultima-maestra-bisso-unica-a-filare-seta-del-mare/ | 2026-08-14 |
+| Museu do Bisso | visitas **só com reserva antecipada**, grupos de **máx. 12 pessoas** | **OK** | https://www.ehabitat.it/2017/10/23/ultima-maestra-bisso-unica-a-filare-seta-del-mare/ | 2026-08-14 |
+| Museu do Bisso · horário e custo de ago/2026 | — | **INCONCLUSIVO** — chiaravigo.it bloqueado desta rede; o card manda reservar pelo site oficial e marca `[a confirmar]` | 2026-08-14 |
+| Villaggio Ipogeo | túmulos púnicos escavados no tufo entre os séc. VI e III a.C., reusados como moradia · chamados "is gruttas" | **OK** | https://visitsantantioco.info/en/vivi-santantioco/musei-cultura/villaggio-ipogeo/ | 2026-08-14 |
+| Villaggio Ipogeo | famílias viveram ali **até o início dos anos 1970** | **OK** | https://cultura.gov.it/luogo/villaggio-ipogeo | 2026-08-14 |
+| Museus cívicos · bilhete | €6 inteiro / €4 reduzido cumulativo (Etnográfico + Villaggio Ipogeo + Forte Sabaudo) · €2,50 individual | **OK** | https://www.eventiinsardegna.it/2026/05/16/programma-monumenti-aperti-a-santantioco-2026-siti-visitabili-orari-e-info-utili/ | 2026-08-14 |
+| Museus cívicos · horário | 1/mar–31/out 9h-19h · 1/nov–28/fev 9h-18h | **OK** | https://www.eventiinsardegna.it/2026/05/16/programma-monumenti-aperti-a-santantioco-2026-siti-visitabili-orari-e-info-utili/ | 2026-08-14 |
+| Villaggio Ipogeo · acessibilidade | — | **INCONCLUSIVO** — é gruta com piso irregular; nenhuma fonte descreve o acesso. Card manda ligar +39 389 050 5107 antes de levar os sogros | 2026-08-14 |
+| Catacumbas · contato | Via Castello 13 · tel +39 389 050 5107 · tofet@tiscali.it · agendável por WhatsApp | **OK** | https://museionline.info/tipologie-museo/catacombe-di-sant-antioco | 2026-08-14 |
+| Catacumbas · conteúdo | afrescos, inscrições, tumbas de arcosólio, tumba a baldaquino na cripta do santo | **OK** | https://museionline.info/tipologie-museo/catacombe-di-sant-antioco | 2026-08-14 |
+| Catacumbas · preço e horário | — | **INCONCLUSIVO** — nenhuma fonte publica; card manda perguntar no WhatsApp | 2026-08-14 |
+| MuMa | aberto todo dia 9h-12h e 16h-19h de 1/abr a 30/out · fora disso só com reserva | **OK** | https://www.sardegnaturismo.it/it/esplora/muma-museo-del-mare-e-dei-maestri-dascia | 2026-08-14 |
+| MuMa | Info Point Via Roma 47 · tel 0781 1866185 | **OK** | https://www.sardegnaturismo.it/it/esplora/muma-museo-del-mare-e-dei-maestri-dascia | 2026-08-14 |
+| Cala Sapone · coordenada | 39.009004, 8.385551 · SS126 Dir | **OK** | https://comune.santantioco.su.it/portal/web/guest/w/luogo-cala-sapone | 2026-08-14 |
+| Cala Sapone · acessibilidade | acesso fácil, estacionamento amplo e **acesso próprio para pessoas com deficiência** · dois quiosques e área de camping equipada | **OK** — resolve o INCONCLUSIVO do lote 1 → o card foi **corrigido** (risco yellow→green, ⭐⭐→⭐⭐⭐, `coord_unverified` removido) | https://comune.santantioco.su.it/portal/web/guest/w/luogo-cala-sapone | 2026-08-14 |
+| Cala Lunga | costa ocidental, território de Calasetta · areia ocre de grão grosso com conchas e coral · ponto de refresco e aluguel · acesso pela SP 76 seguindo placas do Villaggio Polifemo | **OK** | https://www.sardegnaturismo.it/it/esplora/cala-lunga-santantioco | 2026-08-14 |
+| Turri / Torre Cannai | divide-se em três praias · a primeira é enseada protegida por duas falésias altas contra vento e ressaca | **OK** | https://www.traccedisardegna.it/spiagge/turri-torre-cannai | 2026-08-14 |
+| Portixeddu | a mais próxima da cidade · **ausência de serviços registrada** | **OK** | https://www.traccedisardegna.it/spiagge/portixeddu-santantioco | 2026-08-14 |
+| Calasetta | vila de casas brancas e azuis · colônia ligure, como Carloforte | **OK** | https://traghettiperte.it/magazine/santantioco-cosa-vedere/ | 2026-08-14 |
+| Coordenadas dos itens do centro de Sant'Antioco (bisso, ipogeo, catacumbas, MuMa, etnográfico, Portixeddu, Cala Lunga, Turri) | — | **RISCO** — não achei coordenada conferida de nenhum; os pinos são aproximados e **cada card diz isso em texto**. A navegação vai pelo `mapsQuery` com o endereço real, que resolve certo · https://visitsantantioco.info/ | 2026-08-14 |
+
+## Erros corrigidos neste lote
+
+- **Cala Sapone** estava com `coord_unverified` e lng `8.4` (placeholder meu, ~1,5km errado) e com a
+  acessibilidade marcada `[a confirmar]` → **corrigido**: coordenada oficial do comune, flag removida,
+  e a acessibilidade confirmada como boa. O card subiu de ⭐⭐/🟡 para ⭐⭐⭐/🟢 **porque o dado mudou**,
+  não porque eu mudei de opinião.
