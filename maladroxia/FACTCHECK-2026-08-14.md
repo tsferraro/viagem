@@ -105,3 +105,28 @@ que **os cinco cards ⭐⭐⭐ do app estão cobertos pelos vereditos acima**:
 - `Museu do Bisso Marino · Chiara Vigo` → lote 2, 7 vereditos
 - `Villaggio Ipogeo` → lote 2, 3 vereditos
 - `Tophet + Museu Ferruccio Barreca` → lote 1 (1) + lote 2 (2)
+
+---
+
+# Lote 3 · 2026-08-14 · cor da água + Spiaggia delle Vasche
+
+Pergunta do Tobia: quais praias têm a água mais turquesa. Ao checar, resolveu-se um
+`[a confirmar]` do lote 2 e apareceu uma parada nova.
+
+| item | afirmação | veredito | fonte | data |
+|---|---|---|---|---|
+| Maladroxia · cor | areia cândida, fina e macia · água do **verde esmeralda ao turquesa** | **OK** | https://www.notiziesarde.it/maladroxia-santantioco-spiaggia/ | 2026-08-14 |
+| Maladroxia · fundo | areia com **trechos misturados com seixos** · bancos de **posidonia** pouco ao largo, em que se pode caminhar | **OK** — detalhe novo, incorporado ao card | https://www.notiziesarde.it/maladroxia-santantioco-spiaggia/ | 2026-08-14 |
+| Coaquaddus · cor | areia clara e fina · água cristalina com nuances **turquesa e verde esmeralda** | **OK** | https://www.spiagge.it/magazine/spiagge-piu-belle-sant-antioco/ | 2026-08-14 |
+| Cala Lunga · cor | areia ocre de grão grosso · descrita como *fiorde verde*, **não turquesa** | **OK** — registrado como contraponto no ranking, não como defeito | https://www.sardegnaturismo.it/it/esplora/cala-lunga-santantioco | 2026-08-14 |
+| Spiaggia delle Vasche / Portixeddu Accuau | existe · fica **na área de Maladroxia**, comune de Sant'Antioco | **OK** — resolve o INCONCLUSIVO do lote 2 sobre esta praia | https://www.casavacanzesardegna.it/spiagge/spiaggia-di-portixeddu-accuau-o-delle-vasche/ | 2026-08-14 |
+| Spiaggia delle Vasche | nadando da praia de Maladroxia rumo ao **norte**, ~10min, chega-se a enseada com **grandes tanques de época romana visíveis a pouca profundidade** | **OK** | https://www.casavacanzesardegna.it/spiagge/spiaggia-di-portixeddu-accuau-o-delle-vasche/ | 2026-08-14 |
+| Spiaggia delle Vasche | os tanques ligam-se à presença de **águas termais quentes** na área | **OK** — coerente com o card de Maladroxia do roteiro `pais-sardenha`, que já registrava fontes termais sob a areia | https://www.casavacanzesardegna.it/spiagge/spiaggia-di-portixeddu-accuau-o-delle-vasche/ | 2026-08-14 |
+| Spiaggia delle Vasche | praia pequena, **branca e de pedra** · água em todos os tons de azul · **pouco frequentada** | **OK** | https://www.casavacanzesardegna.it/spiagge/spiaggia-di-portixeddu-accuau-o-delle-vasche/ | 2026-08-14 |
+| Spiaggia delle Vasche · acesso | por terra é **trilha bastante pedregosa** saindo da estrada de Maladroxia, com estacionamento pequeno e livre | **OK** — por isso o card marca acessibilidade **baixa** e diz explicitamente que **não é programa pros sogros** | https://www.casavacanzesardegna.it/spiagge/spiaggia-di-portixeddu-accuau-o-delle-vasche/ | 2026-08-14 |
+| Spiaggia delle Vasche · coordenada | não encontrada em fonte confiável | **RISCO** — `coord_unverified`, e o card diz em texto que o pino é aproximado · https://www.casavacanzesardegna.it/spiagge/spiaggia-di-portixeddu-accuau-o-delle-vasche/ | 2026-08-14 |
+| Spiaggia delle Vasche · segurança do nado | — | **INCONCLUSIVO** — nenhuma fonte trata de correnteza ou condições de mar no trecho. O card manda ir de máscara, nunca sozinho, e conferir as condições no dia. **Nadar 10min ao largo é a recomendação de maior risco físico desta coletânea** e está marcada como tal | 2026-08-14 |
+
+## Cobertura dos cards ⭐⭐⭐ após o lote 3
+
+Além dos cinco já listados, entra `Spiaggia delle Vasche (Portixeddu Accuau)` → lote 3, 6 vereditos.
