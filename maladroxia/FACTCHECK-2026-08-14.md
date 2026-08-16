@@ -130,3 +130,33 @@ Pergunta do Tobia: quais praias têm a água mais turquesa. Ao checar, resolveu-
 ## Cobertura dos cards ⭐⭐⭐ após o lote 3
 
 Além dos cinco já listados, entra `Spiaggia delle Vasche (Portixeddu Accuau)` → lote 3, 6 vereditos.
+
+---
+
+# Lote 4 · 2026-08-14 · passeios de barco
+
+Tobia relatou do cais que há vários barcos de passeio na marina do centro de Sant'Antioco e
+pediu ranking. Verificado o que é verificável remotamente — e o que **não** é está dito
+como pergunta a fazer no cais, não como dado.
+
+| item | afirmação | veredito | fonte | data |
+|---|---|---|---|---|
+| Saídas | há excursões partindo do porto de Sant'Antioco e do de Calasetta | **OK** | https://www.sardiniasailing.com/i-migliori-tour-in-barca-a-santantioco-e-carloforte/ | 2026-08-14 |
+| Preço | compartilhado ~€50-70/pessoa · algumas opções a partir de €40 | **OK** | https://www.sardiniasailing.com/i-migliori-tour-in-barca-a-santantioco-e-carloforte/ | 2026-08-14 |
+| Preço · vela | a partir de €119 | **OK** | https://freedome.it/escursioni-barca-vela/santantioco/ | 2026-08-14 |
+| Volta a San Pietro · itinerário | Isola Piana, Grotta del Pulpito, Grotta delle Oche, Cala Vinagra, Cala Fico, Grotta della Regina, Le Spine, La Caletta, Cala Luna, Punta Nera, Le Colonne, Spiaggia del Giunco | **OK** | https://www.civitatis.com/en/sant-antioco/san-pietro-island-masua-boat-tour/ | 2026-08-14 |
+| Volta a San Pietro · logística | encontro 09:15 no porto de Sant'Antioco · embarque 09:30 · ~40min até a parada inicial · 1h livre em Carloforte | **OK** | https://www.civitatis.com/en/sant-antioco/san-pietro-island-masua-boat-tour/ | 2026-08-14 |
+| Volta a San Pietro · comida | parada em Punta del Capodoglio com pane guttiau e vinho branco sardo · alguns tours incluem atum e farinata em Carloforte | **OK** | https://www.civitatis.com/en/sant-antioco/san-pietro-island-masua-boat-tour/ | 2026-08-14 |
+| Outras rotas | meia diária pelas calas da própria ilha (Capo Sperone, Grotta delle Sirene) · gommone de 4h · pescaturismo | **OK** | https://freedome.it/en/boat-tours/santantioco/ | 2026-08-14 |
+| Operadores nomeados | Sardinia Sailing, RC Charter, BelluMari (Calasetta), Sardinia Adventure | **OK** — existência e atuação na área confirmadas; **nenhum foi verificado individualmente** quanto a licença, frota ou avaliação | https://visitsantantioco.info/filtro-esperienze/pescaturismo-e-escursioni-in-barca/ | 2026-08-14 |
+| Toldo, banheiro e escada de banho a bordo | — | **INCONCLUSIVO** — **nenhuma fonte publica isso para nenhum operador**, e é exatamente o que decide se dois avós de mobilidade limitada conseguem fazer o passeio. O card transforma isso em **3 perguntas a fazer no cais** em vez de inventar resposta | 2026-08-14 |
+| Preço e regras para criança de 3 anos · colete infantil | — | **INCONCLUSIVO** — nenhuma fonte publica tarifa infantil, idade mínima ou disponibilidade de colete no tamanho. Card manda perguntar | 2026-08-14 |
+| Porto turístico de Sant'Antioco · coordenada | — | **RISCO** — `coord_unverified`; o card diz que o pino é aproximado e o `mapsQuery` leva ao porto turístico | 2026-08-14 |
+
+## Nota de método deste lote
+
+A recomendação principal do card (**privado de meia diária em vez de compartilhado**) é
+**julgamento meu**, não dado de fonte — está escrita como recomendação e o raciocínio é explícito
+(controle de ritmo com criança de 3 anos e avós; para 6 pessoas a conta se aproxima do
+compartilhado). O card também registra que **os barcos visíveis no cais podem não constar de
+plataforma nenhuma**, e que isso não depõe contra eles.
