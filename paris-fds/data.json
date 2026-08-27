@@ -1,36 +1,57 @@
 {
-  "title": "Paris & região · 29-30 Ago",
-  "auth_emoji": "🍂",
+  "title": "Paris · 29-30 Ago + ideias de fds",
+  "auth_emoji": "🎨",
   "auth_title": "Fim de semana 29-30/Ago",
-  "auth_subtitle": "Paris & região · com a filha e os avós",
-  "header_title": "Fim de semana 29-30/Ago",
-  "header_sub": "Base Boulogne-Billancourt · calibrado pelos avós (≤1km por bloco) e pela filha de 3a",
+  "auth_subtitle": "Paris · o fds com os avós + um pool de ideias sem eles",
+  "header_title": "Paris · 29-30/Ago",
+  "header_sub": "2 dias datados com a filha e os avós · e 8 abas de ideias soltas pra outros fins de semana",
   "password": "paris2026",
   "maps_region": "France",
   "wt_labels": "numbers",
   "legend_group_text": "Dia com os avós juntos",
-  "legend_notes_html": "<p><strong>Dois fatos externos decidiram este fim de semana antes de qualquer atração.</strong></p><p>🎸 <strong>Rock en Seine</strong> ocupa o <strong>Domaine de Saint-Cloud</strong> de 26 a 30/ago, com mais de 100.000 pessoas. Acesso de veículo fechado das <strong>11h às 2h</strong> em todas as grades. <strong>Evitem o eixo Pont de Saint-Cloud / D910 / A13 nos dois dias</strong> — é isso que exclui Saint-Cloud, Versailles e Giverny.</p><p>🌬️ <strong>Previsão outonal</strong>: sábado com rajadas de 50-60 km/h · domingo com pancadas fortes sobre a Île-de-France · 20-24°C. <strong>Sábado é o dia bom</strong> — por isso o carro é gasto nele, e no domingo tudo fica a ≤15min de casa com teto por perto.</p><p>🔄 Cards com <strong>🔄 ALT</strong> são alternativas que <em>substituem</em> a parada principal — não entram na rota do dia.</p><p>🧓 <strong>Calibragem</strong>: os avós andam até ~1km por bloco e precisam sentar a cada 15-20min. Por isso cada dia tem <strong>um destino</strong>, não quatro. É de propósito.</p>",
+  "legend_notes_html": "<p><strong>Este app tem duas metades.</strong> As <strong>duas primeiras abas são datadas</strong> — o fim de semana de 29-30/ago com a filha e os avós: <strong>sábado ao ar livre</strong> (Marmottan + Ranelagh) porque é o dia de menos chuva, <strong>domingo sob teto</strong> (Atelier des Lumières + Marais) porque é o dia das pancadas. As <strong>oito seguintes não têm data</strong>: são propostas de fim de semana <strong>sem os avós</strong>, pra pescar quando der vontade.</p><p>🎸 <strong>Rock en Seine</strong> ocupa o <strong>Domaine de Saint-Cloud</strong> de 26 a 30/ago, com mais de 100.000 pessoas e veículo fechado das <strong>11h às 2h</strong> em todas as grades. <strong>Evitem o eixo Pont de Saint-Cloud / D910 / A13 nos dois dias.</strong> Os dois roteiros datados vão de <strong>metrô linha 9, direto, sem baldeação</strong> — foi assim de propósito.</p><p>🌬️ <strong>Previsão outonal</strong>: sábado com rajadas de 50-60 km/h · domingo com pancadas fortes · 20-24°C. Cada dia datado tem um <strong>abrigo coberto</strong> embutido.</p><p>⏰ <strong>Corte às 18h</strong> — os dois dias datados terminam antes disso, com folga.</p><p>🔄 Cards com <strong>🔄 ALT</strong> substituem a parada principal e <em>não</em> entram na rota do dia.</p><p>🧓 <strong>Calibragem dos dias datados</strong>: os avós andam até ~1km por bloco e sentam a cada 15-20min. As abas sem data <strong>não</strong> seguem essa régua.</p>",
   "bairros_config": [
     {
-      "nome": "🐎 Chantilly (Oise)",
-      "latMin": 49.15,
-      "latMax": 49.25,
-      "lngMin": 2.4,
-      "lngMax": 2.55
+      "nome": "🎨 Paris 11e",
+      "latMin": 48.85,
+      "latMax": 48.875,
+      "lngMin": 2.37,
+      "lngMax": 2.4
     },
     {
-      "nome": "🍁 Boulogne-Billancourt",
-      "latMin": 48.82,
-      "latMax": 48.845,
-      "lngMin": 2.21,
-      "lngMax": 2.26
+      "nome": "🏛️ Marais (3e-4e)",
+      "latMin": 48.85,
+      "latMax": 48.868,
+      "lngMin": 2.355,
+      "lngMax": 2.37
     },
     {
-      "nome": "🌳 Bois de Boulogne & 16e",
-      "latMin": 48.845,
+      "nome": "📚 Rive Gauche (5e)",
+      "latMin": 48.838,
+      "latMax": 48.852,
+      "lngMin": 2.345,
+      "lngMax": 2.36
+    },
+    {
+      "nome": "🌳 16e & Bois de Boulogne",
+      "latMin": 48.84,
       "latMax": 48.885,
       "lngMin": 2.22,
       "lngMax": 2.3
+    },
+    {
+      "nome": "🏰 Yvelines & oeste",
+      "latMin": 48.6,
+      "latMax": 48.95,
+      "lngMin": 1.7,
+      "lngMax": 2.1
+    },
+    {
+      "nome": "⚔️ Seine-et-Marne & leste",
+      "latMin": 48.5,
+      "latMax": 48.62,
+      "lngMin": 2.6,
+      "lngMax": 3.4
     },
     {
       "nome": "📍 Outros",
@@ -40,248 +61,198 @@
   "days": [
     {
       "date": "Sáb 29/Ago",
-      "tema": "Chantilly · cavalos, château e a crème que Vatel não inventou",
-      "temaCurto": "Chantilly",
-      "bairro": "🐎 Oise — Domaine de Chantilly",
+      "tema": "Monet e o carrossel · Marmottan e o Ranelagh",
+      "temaCurto": "Marmottan",
+      "bairro": "🌳 Paris — 16e La Muette / Ranelagh",
       "grupo": true,
-      "cor": "#15803d",
-      "gradA": "#14532d",
-      "gradB": "#16a34a",
-      "transport": "driving",
-      "baseCoord": {
-        "lat": 48.8337,
-        "lng": 2.2435
-      },
-      "baseName": "Boulogne-Billancourt, France",
-      "nota": "Um destino, o dia inteiro — e é de propósito. Com os avós em ≤1km por bloco, um domínio bem explorado bate três cidades atravessadas. Chantilly é o único lugar da região onde 115 hectares não custam 115 hectares de caminhada: tem voiturette elétrica, barca e petit train. E fica ao NORTE, na direção oposta ao Rock en Seine.",
+      "cor": "#0e7490",
+      "gradA": "#164e63",
+      "gradB": "#06b6d4",
+      "nota": "O dia inteiro cabe num quarteirão: o museu fica no lado oeste do próprio Jardin du Ranelagh — sai do Marmottan e já está no parque. <strong>Este é o dia ao ar livre de propósito</strong>: sábado tem vento forte mas pouca chuva, e é a melhor janela do fim de semana pro carrossel, as aires de jeux e o Guignol das 15h15. O museu é o abrigo se o vento apertar, e a Maison de Balzac é a carta de reserva — grátis e coberta.",
       "stops": [
         {
-          "hora": "08:45",
-          "emoji": "🚗",
+          "hora": "10:15",
+          "emoji": "🚇",
           "periodo": "manha",
           "tipo": "transit",
-          "nome": "Boulogne-Billancourt → Chantilly",
-          "cat": "~56 km · ~55min · A86 → A1 (Autoroute du Nord) · sair antes das 9h30",
-          "roadType": "autopista",
-          "mapsQuery": "Château de Chantilly",
+          "nome": "Casa → La Muette (linha 9)",
+          "cat": "~10min de carro, ou linha 9 direta até La Muette / Ranelagh",
+          "mapsQuery": "Musée Marmottan Monet, Paris",
           "coord": {
-            "lat": 49.1938,
-            "lng": 2.4852
+            "lat": 48.8593,
+            "lng": 2.2673
           }
         },
         {
-          "hora": "10:00",
-          "emoji": "🐎",
+          "hora": "10:30",
+          "emoji": "🖼️",
           "periodo": "manha",
           "tipo": "card",
           "risco": "green",
           "poiCat": "atracao",
           "valeAPena": 3,
-          "nome": "Grandes Écuries · Musée vivant du Cheval (7-9 rue du Connétable)",
-          "mapsQuery": "Grandes Écuries du Château de Chantilly",
-          "cat": "Cavalariças de 1719-1735 · cúpula de 28 m · cavalos vivos lá dentro",
-          "sobre": "As <strong>maiores cavalariças da Europa</strong>, erguidas entre <strong>1719 e 1735</strong> pelo arquiteto <strong>Jean Aubert</strong> para <strong>Louis-Henri de Bourbon, 7º príncipe de Condé</strong>. São <strong>duas naves de 70 metros</strong> em torno de uma <strong>cúpula de 28 metros de altura</strong>, dimensionadas para <strong>240 cavalos e 500 cães</strong>. A razão para esse exagero é a curiosidade que o domínio guarda: conta-se que o príncipe acreditava que <em>renasceria como cavalo</em> — e quis garantir que o cavalo em questão tivesse um palácio à altura. Desde 1982 o prédio abriga o Musée vivant du Cheval, com cerca de <strong>200 objetos e obras</strong>: pinturas, gravuras, esculturas, manuscritos e equipamento equestre de coleções do mundo inteiro.",
-          "imperdivel": "Antes de entrar, olhe de onde vocês vieram: as Écuries <strong>não ficam nos fundos</strong> do château, como seria de esperar de uma dependência de serviço — ficam <strong>na frente</strong>, no eixo nobre, visíveis da estrada. Isso não é acaso arquitetônico, é uma declaração sobre a ordem em que o príncipe queria ser lido.",
+          "nome": "Musée Marmottan Monet (2 rue Louis-Boilly, 16e)",
+          "mapsQuery": "Musée Marmottan Monet, Paris",
+          "cat": "A maior coleção Monet do mundo · e o quadro que batizou o Impressionismo",
+          "sobre": "Em <strong>1966</strong>, <strong>Michel Monet</strong>, segundo filho do pintor, legou ao museu a propriedade de Giverny e a coleção de quadros herdada do pai — e foi isso que fez do Marmottan o guardião da <strong>maior coleção de obras de Monet do mundo</strong>. O <strong>Impression, soleil levant</strong>, o quadro de onde saiu a palavra \"impressionismo\", chegou antes e por outro caminho: pela <strong>doação de Victorine Donop de Monchy em 1957</strong>, que o herdara do pai, o <strong>doutor Georges de Bellio</strong>. Foi exposto aqui pela primeira vez em <strong>1946</strong>.",
+          "imperdivel": "Pergunte na recepção onde está o <strong>Impression, soleil levant</strong> e pare na frente dele sabendo disto: em <strong>27 de outubro de 1985</strong>, ladrões entraram neste museu <strong>em plena luz do dia</strong>, renderam público e guardas <strong>sob a mira de armas</strong> e levaram <strong>nove quadros</strong>, esse entre eles. O quadro só foi recuperado em <strong>dezembro de 1990</strong>, em <strong>Porto-Vecchio</strong>, na Córsega.",
           "dicas": [
-            "🕐 Abrem <strong>10h</strong> e fecham <strong>18h</strong> (abril a outubro) — comecem por aqui, é o pedaço coberto e o que a filha de 3a mais vai querer (cavalo de verdade, na baia, a um metro).",
-            "🚫 <strong>Não conte com o espetáculo equestre.</strong> O show de verão <em>\"Un jour à Paris\"</em> rodou de <strong>11/jul a 16/ago/2026</strong>, às 14h30 — em 29-30/ago ele já acabou. Quem prometer o show está lendo calendário velho.",
-            "🎫 O ingresso das Écuries está incluído no bilhete 1 dia do domínio — não se compra separado.",
-            "🧓 Piso plano e contínuo nas naves; é o trecho mais tranquilo do dia para os avós."
+            "🕐 <strong>10h-18h, fechado às segundas</strong> — domingo abre normalmente. Nocturne às quintas até 21h.",
+            "💶 <strong>€14 · €9 reduzido · grátis abaixo de 7 anos</strong>, então a filha não paga.",
+            "🌊 Os <strong>Nymphéas</strong> estão numa <strong>sala subterrânea</strong> construída de propósito para eles — desça, é o oposto de uma galeria comum e a filha reage à escala.",
+            "🚇 Linha 9, estação <strong>La Muette</strong> ou <strong>Ranelagh</strong>, e depois <strong>8 a 12 minutos a pé atravessando o Jardin du Ranelagh</strong> — o passeio até o museu já é o parque.",
+            "♿ O museu tem acesso para pessoa com mobilidade reduzida."
           ],
-          "duracao": "1h-1h30",
-          "custo": "Incluído no bilhete 1 dia (ago/2026) · ver card do château",
-          "acessibilidade": "Naves térreas e planas · carrinho passa sem esforço · bancos ao longo do percurso",
+          "duracao": "1h30",
+          "custo": "€14 · €9 reduzido · grátis <7 anos (ago/2026)",
+          "acessibilidade": "Acesso PMR · sala dos Nymphéas no subsolo, com elevador · casarão do séc. XIX, percurso compacto",
           "coord": {
-            "lat": 49.19372,
-            "lng": 2.47901
+            "lat": 48.8593,
+            "lng": 2.2673
           },
           "fontes": [
             {
-              "o": "Château de Chantilly (site oficial) · histoire des Grandes Écuries",
-              "u": "https://chateaudechantilly.fr/grandes-ecuries/histoire-des-grandes-ecuries/",
-              "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "1719 e 1735",
-                "Jean Aubert",
-                "Louis-Henri de Bourbon, 7º príncipe de Condé",
-                "duas naves de 70 metros",
-                "cúpula de 28 metros",
-                "240 cavalos e 500 cães",
-                "200 objetos e obras",
-                "10h",
-                "1982",
-                "18h",
-                "abril a outubro"
-              ]
-            },
-            {
-              "o": "SNCF Connect · les écuries de Chantilly, les plus grandes d'Europe",
-              "u": "https://www.sncf-connect.com/article/les-ecuries-de-chantilly-les-plus-grandes-ecuries-du-monde-67871",
-              "tier": "editorial",
-              "data": "2026-08",
-              "prova": [
-                "maiores cavalariças da Europa"
-              ]
-            },
-            {
-              "o": "JDS · spectacle équestre \"Un jour à Paris\" (calendário)",
-              "u": "https://www.jds.fr/paris/spectacles/spectacle-equestre-un-jour-a-paris-aux-grandes-ecuries-de-chantilly-1426813_A",
-              "tier": "editorial",
-              "data": "2026-08",
-              "prova": [
-                "11/jul a 16/ago/2026",
-                "14h30",
-                "verão",
-                "show de verão"
-              ]
-            },
-            {
-              "o": "Wikidata · Grandes écuries du château de Chantilly (coordenada)",
-              "u": "https://www.wikidata.org/wiki/Q97366464",
-              "tier": "diretorio",
-              "data": "2026-08",
-              "prova": [
-                "coordenada 49.19372, 2.47901",
-                "7-9 rue du Connétable"
-              ]
-            },
-            {
-              "o": "Hauts-de-France Tourisme · Château de Chantilly (horários oficiais)",
-              "u": "https://www.tourisme-en-hautsdefrance.com/offres/chateau-de-chantilly-chantilly-fr-3274893/",
+              "o": "Musée Marmottan Monet · informations pratiques (site oficial)",
+              "u": "https://www.marmottan.fr/en/prepare-your-visit/practical-information/",
               "tier": "oficial",
               "data": "2026-08-27",
               "prova": [
-                "Château e Grandes Écuries 10h-18h de abril a outubro",
-                "parque 10h-20h",
-                "fechado às terças",
-                "10h",
-                "18h"
+                "2 rue Louis-Boilly",
+                "10h-18h",
+                "fechado às segundas",
+                "€14",
+                "€9",
+                "grátis abaixo de 7 anos",
+                "La Muette",
+                "Ranelagh",
+                "acesso para pessoa com mobilidade reduzida",
+                "21h"
+              ]
+            },
+            {
+              "o": "Proantic · histoire du Musée Marmottan Monet",
+              "u": "https://www.proantic.com/magazine/musee-marmottan-monet/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "1966",
+                "Michel Monet",
+                "maior coleção de obras de Monet do mundo",
+                "Victorine Donop de Monchy em 1957",
+                "doutor Georges de Bellio",
+                "1946",
+                "Nymphéas",
+                "sala subterrânea",
+                "primeira",
+                "exposto aqui pela primeira vez"
+              ]
+            },
+            {
+              "o": "Claude Monet Giverny · a saga do Impression, soleil levant",
+              "u": "https://claudemonetgiverny.fr/en/actualites/impression-sunrise-the-saga-of-a-legendary-painting/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "Impression, soleil levant",
+                "27 de outubro de 1985",
+                "em plena luz do dia",
+                "sob a mira de armas",
+                "nove quadros",
+                "dezembro de 1990",
+                "Porto-Vecchio"
+              ]
+            },
+            {
+              "o": "Bonjour RATP · acesso ao Musée Marmottan Monet",
+              "u": "https://www.bonjour-ratp.fr/en/lieux/musee-marmottan-monet/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "8 a 12 minutos a pé",
+                "Jardin du Ranelagh"
+              ]
+            },
+            {
+              "o": "Wikipedia · Musée Marmottan Monet (coordenada)",
+              "u": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Marmottan_Monet",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.85930, 2.26730"
               ]
             }
           ]
         },
         {
-          "hora": "11:30",
-          "emoji": "🏰",
-          "periodo": "manha",
+          "hora": "12:15",
+          "emoji": "🎠",
+          "periodo": "tarde",
           "tipo": "card",
-          "risco": "yellow",
-          "poiCat": "atracao",
+          "risco": "green",
+          "poiCat": "parque",
           "valeAPena": 3,
-          "nome": "Château de Chantilly · Musée Condé",
-          "mapsQuery": "Château de Chantilly",
-          "cat": "Château + coleção de pintura · o interior é o trecho de escada do dia",
-          "sobre": "O château está no meio de um domínio de <strong>115 hectares</strong> com três jardins de três séculos empilhados: o <strong>jardim à francesa de Le Nôtre</strong> (séc. XVII), o <strong>anglo-chinês</strong> (fim do séc. XVIII) e o <strong>inglês</strong> (séc. XIX). Dentro fica o <strong>Musée Condé</strong>. E foi aqui, em <strong>abril de 1671</strong>, que o intendente <strong>François Vatel</strong> se matou com a própria espada durante três dias de festa que o Grand Condé oferecia a <strong>Luís XIV</strong>, porque o peixe encomendado não chegou a tempo. Foi essa morte — não uma receita — que o tornou eterno. <em>(A crème Chantilly não é dele: ver a aba História.)</em>",
-          "imperdivel": "As <strong>abóbadas das antigas cozinhas de Vatel</strong>, hoje o restaurante La Capitainerie. É literalmente o cômodo onde a história aconteceu, e quase ninguém que almoça ali sabe disso.",
+          "nome": "Jardin du Ranelagh · carrossel e Guignol (16e)",
+          "mapsQuery": "Jardin du Ranelagh, Paris",
+          "cat": "O carrossel mais velho de Paris + 3 aires de jeux + marionetes",
+          "sobre": "O parque fica colado no museu — o Marmottan ocupa o <strong>lado oeste</strong> dele. Dentro há <strong>o carrossel mais antigo de Paris</strong>, <strong>três aires de jeux</strong>, um <strong>kiosque à musique</strong> e o <strong>Théâtre de Marionnettes du Ranelagh</strong>, um dos guignols mais conhecidos da cidade, que funciona <strong>de março a novembro</strong>.",
+          "imperdivel": "O <strong>Guignol</strong>: sessões <strong>quarta, sábado e domingo das 15h15 às 16h15</strong>, e <strong>todos os dias durante as férias parisienses</strong> — que só terminam em <strong>1º de setembro de 2026</strong>, ou seja, o domingo 30 está dentro. O espetáculo dura <strong>40 minutos</strong> e custa <strong>€5</strong>. Todo mundo sentado, sob teto, os avós inclusive.",
           "dicas": [
-            "🕐 Château e Grandes Écuries <strong>10h-18h</strong> (abril a outubro) · <strong>parque 10h-20h</strong> · <strong>fechado às terças</strong> (sábado e domingo, ok).",
-            "🎫 Bilhete 1 dia (château + parc + écuries): <strong>€21 cheio · €17,50 reduzido (7-25 anos)</strong> na tarifa <strong>revista para 2026</strong> — o valor de <strong>€18</strong> que circula em vários sites é a tabela antiga. Só o parque: <strong>€9</strong> (€7 reduzido). O Cabinet des Livres é suplemento de €3 (€24 no total).",
-            "♿ <strong>Sala de Leitura e Grands Appartements são acessíveis; capela, galeria dos cervos, galeria de pinturas e o logis só por escada de vários degraus.</strong> Há <strong>duas cadeiras de rodas no Hall de Honra</strong> e sanitários adaptados.",
-            "☎️ Se os avós andarem menos de 1km, liguem antes: <strong>03 44 27 31 80</strong>. Existe avaliação pública de visitante intitulada <em>\"Visite catastrophique en PMR\"</em> — não é o consenso, mas é honesto saber que existe.",
-            "🌬️ Com rajadas de 50-60 km/h previstas, aléias arborizadas podem fechar. O plano B já está no ingresso: château, Musée Condé e Écuries são cobertos."
+            "🎭 <strong>Encaixem o Guignol das 15h15</strong> — é a âncora do dia. Cheguem uns 15 minutos antes pra pegar lugar.",
+            "☀️ <strong>É o motivo de este dia ser o sábado</strong>: com pouca chuva prevista, o carrossel e as aires de jeux funcionam. Se o vento de 50-60 km/h incomodar, o Guignol é coberto e o museu fica a cem metros.",
+            "🧓 O kiosque à musique e os bancos do parque resolvem a espera entre o almoço e as 15h15.",
+            "💶 Jardim grátis · Guignol €5 · o carrossel cobra à parte."
           ],
-          "duracao": "1h-1h30",
-          "custo": "€21/adulto (ago/2026) · reduzido €17,50 (7-25 anos) · <7 anos grátis · só parque €9",
-          "acessibilidade": "Parcial · térreo acessível, andares só por escada · duas cadeiras de rodas emprestadas no Hall de Honra · carrinho não sobe",
+          "duracao": "1h-3h conforme o céu",
+          "custo": "Jardim grátis · Guignol €5 (ago/2026)",
+          "acessibilidade": "Plano, com bancos e kiosque · teatro de marionetes coberto · aires de jeux ao ar livre",
           "coord": {
-            "lat": 49.1938,
-            "lng": 2.4852
+            "lat": 48.85917,
+            "lng": 2.26917
           },
           "fontes": [
             {
-              "o": "Château de Chantilly (site oficial) · horaires",
-              "u": "https://chateaudechantilly.fr/en/hours/",
+              "o": "Ville de Paris · Jardin du Ranelagh",
+              "u": "https://www.paris.fr/lieux/jardin-du-ranelagh-1778",
               "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "10h-18h",
-                "parque até 20h",
-                "fechado às terças"
-              ]
-            },
-            {
-              "o": "Château de Chantilly (site oficial) · visitors with disabilities",
-              "u": "https://chateaudechantilly.fr/en/visitors-with-disabilities/",
-              "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "Sala de Leitura e Grands Appartements são acessíveis",
-                "capela, galeria dos cervos, galeria de pinturas e o logis só por escada",
-                "duas cadeiras de rodas no Hall de Honra",
-                "03 44 27 31 80"
-              ]
-            },
-            {
-              "o": "TripAdvisor · avaliação PMR do château",
-              "u": "https://www.tripadvisor.fr/ShowUserReviews-g227607-d246223-r854878620-Chateau_De_Chantilly-Chantilly_City_Chantilly_Oise_Hauts_de_France.html",
-              "tier": "crowd",
-              "data": "2026-08",
-              "prova": [
-                "Visite catastrophique en PMR"
-              ]
-            },
-            {
-              "o": "Paris Mômes · le parc du château de Chantilly",
-              "u": "https://parismomes.fr/se-balader-en-famille/le-parc-du-chateau-de-chantilly/",
-              "tier": "editorial",
-              "data": "2026-08",
-              "prova": [
-                "115 hectares",
-                "jardim à francesa de Le Nôtre",
-                "séc. XVII",
-                "anglo-chinês",
-                "fim do séc. XVIII",
-                "inglês",
-                "séc. XIX"
-              ]
-            },
-            {
-              "o": "Université de Liège · Vatel et l'invention de la crème chantilly",
-              "u": "https://www.uliege.be/cms/c_10297893/fr/les-grands-mythes-de-la-gastronomie-vatel-et-l-invention-de-la-creme-chantilly",
-              "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "abril de 1671",
-                "François Vatel",
-                "Luís XIV",
-                "intendente"
-              ]
-            },
-            {
-              "o": "Château de Chantilly · restaurant La Capitainerie (cuisines de Vatel)",
-              "u": "https://chateaudechantilly.fr/restaurant-la-capitainerie/",
-              "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "abóbadas das antigas cozinhas de Vatel"
-              ]
-            },
-            {
-              "o": "La Souris Globe-trotteuse · château de Chantilly (tarifa revista 2026)",
-              "u": "https://www.lasourisglobe-trotteuse.fr/chateau-chantilly/",
-              "tier": "editorial",
               "data": "2026-08-27",
               "prova": [
-                "€21",
-                "€17,50",
-                "7-25 anos",
-                "€9",
-                "€7",
-                "€3",
-                "€24",
-                "€18",
-                "tarifa revista para 2026"
+                "carrossel mais antigo de Paris",
+                "três aires de jeux",
+                "kiosque à musique"
               ]
             },
             {
-              "o": "Briefing do Tobia (perfil da família) + rota medida no Google Maps em 27/ago/2026",
-              "u": "https://www.google.com/maps",
-              "tier": "campo",
+              "o": "Marionnettes du Ranelagh · site oficial",
+              "u": "https://www.marionnettesduranelagh.com/",
+              "tier": "oficial",
               "data": "2026-08-27",
               "prova": [
-                "1km",
-                "andarem menos de 1km"
+                "Théâtre de Marionnettes du Ranelagh",
+                "quarta, sábado e domingo das 15h15 às 16h15",
+                "todos os dias durante as férias parisienses",
+                "40 minutos",
+                "€5",
+                "de março a novembro"
+              ]
+            },
+            {
+              "o": "Vacances Scolaires Éducation · calendário 2025-2026",
+              "u": "https://www.vacances-scolaires-education.fr/vacances-scolaires-2025-2026.html",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "1º de setembro de 2026",
+                "férias parisienses"
+              ]
+            },
+            {
+              "o": "Wikipedia · Jardin du Ranelagh (coordenada e posição do museu)",
+              "u": "https://en.wikipedia.org/wiki/Jardin_du_Ranelagh",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "lado oeste",
+                "coordenada 48.85917, 2.26917"
               ]
             },
             {
@@ -290,21 +261,20 @@
               "tier": "editorial",
               "data": "2026-08-27",
               "prova": [
+                "pancadas fortes",
                 "50-60 km/h",
                 "60 km",
-                "rajadas de 50-60 km/h"
+                "vento de 50-60 km/h"
               ]
             },
             {
-              "o": "Hauts-de-France Tourisme · Château de Chantilly (horários oficiais)",
-              "u": "https://www.tourisme-en-hautsdefrance.com/offres/chateau-de-chantilly-chantilly-fr-3274893/",
-              "tier": "oficial",
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
               "data": "2026-08-27",
               "prova": [
-                "abril a outubro",
-                "outubro",
-                "Château e Grandes Écuries 10h-18h",
-                "parque 10h-20h"
+                "15 min",
+                "15 minutos"
               ]
             }
           ]
@@ -314,101 +284,98 @@
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
-          "nome": "Almoço · dentro do domínio",
-          "cat": "3 opções · reservem, é fim de férias escolares francesas",
+          "nome": "Almoço · La Muette",
+          "cat": "3 opções conferidas para SÁBADO · todas a caminho do parque",
           "coord": {
-            "lat": 49.1946,
-            "lng": 2.4937
+            "lat": 48.8593,
+            "lng": 2.2673
           },
           "opcoes": [
             {
-              "nome": "Aux Goûters Champêtres \"Le Hameau\" (parc du château de Chantilly)",
-              "mapsQuery": "Aux Goûters Champêtres Le Hameau Chantilly",
-              "desc": "Numa das casinhas do Hameau, no coração do jardim anglo-chinês. Cozinha picarda — foie gras, confit de canard — e a <strong>crème Chantilly da casa</strong> sobre morangos frescos. Está <em>dentro</em> do parque: zero deslocamento extra, que é o recurso mais escasso do dia.",
-              "preco": "€€",
-              "dist": "no parque · a pé do château e das Écuries",
+              "nome": "La Gare (19 chaussée de la Muette, 16e)",
+              "mapsQuery": "Restaurant La Gare, 19 chaussée de la Muette, Paris",
+              "desc": "Instalado na <strong>antiga estação Passy-La-Muette</strong> da petite ceinture: <strong>1.000 m²</strong>, <strong>250 lugares dentro e 90 no terraço</strong> arborizado — e terraço abrigado conta num sábado de rajadas. Aberto <strong>todos os dias, o ano inteiro, das 12h às 14h30</strong>. ⚠️ O <strong>brunch de €39,50 é só aos domingos</strong>, das 12h às 15h — no sábado é a carta normal.",
+              "preco": "€€€",
+              "dist": "~450 m do Marmottan",
               "poiCat": "restaurante",
               "valeAPena": 3,
               "fontes": [
                 {
-                  "o": "Chantilly-Senlis Tourisme · Aux Goûters Champêtres \"Le Hameau\"",
-                  "u": "https://www.chantilly-senlis-tourisme.com/en/restaurants/aux-gouters-champetres/",
+                  "o": "Restaurant La Gare · site oficial",
+                  "u": "https://restaurantlagare.com/le-restaurant/",
                   "tier": "oficial",
-                  "data": "2026-08",
+                  "data": "2026-08-27",
                   "prova": [
-                    "Le Hameau",
-                    "no parque do château de Chantilly",
-                    "jardim anglo-chinês",
-                    "crème Chantilly da casa",
-                    "12h-18h",
-                    "fechado às terças"
-                  ]
-                },
-                {
-                  "o": "Château de Chantilly (site oficial) · restaurants & shops",
-                  "u": "https://chateaudechantilly.fr/en/plan-your-visit/restaurants-and-shops/",
-                  "tier": "oficial",
-                  "data": "2026-08",
-                  "prova": [
-                    "Le Hameau é restaurante do domínio",
-                    "cozinha picarda"
+                    "antiga estação Passy-La-Muette",
+                    "1.000 m²",
+                    "250 lugares dentro",
+                    "90 no terraço",
+                    "todos os dias",
+                    "12h às 14h30",
+                    "brunch das 12h às 15h",
+                    "€39,50",
+                    "19 chaussée de la Muette"
                   ]
                 }
               ]
             },
             {
-              "nome": "La Capitainerie – Les Cuisines de Vatel (7 rue du Connétable)",
-              "mapsQuery": "La Capitainerie Château de Chantilly",
-              "desc": "Sob as abóbadas das antigas cozinhas de Vatel, dentro do château. <strong>Pâté en croûte Richelieu</strong>, vol-au-vent, chou à la crème chantilly. Cenário imbatível — mas <strong>3,5/5 no TripAdvisor</strong> e relatos de <strong>mais de 20min de espera mesmo com reserva</strong> em 2026. Reserve, e não vá com pressa.",
+              "nome": "La Rotonde de la Muette (12 chaussée de la Muette, 16e)",
+              "mapsQuery": "La Rotonde de la Muette, Paris",
+              "desc": "Brasserie de bairro <strong>desde 1980</strong>, <strong>aberta todos os dias com serviço contínuo das 7h às 23h</strong> — a opção que nunca falha por horário. Banquettes confortáveis, clássicos de brasserie francesa, voiturier.",
               "preco": "€€€",
-              "dist": "dentro do château",
+              "dist": "~500 m do Marmottan",
               "poiCat": "restaurante",
               "valeAPena": 2,
               "fontes": [
                 {
-                  "o": "Château de Chantilly (site oficial) · restaurant La Capitainerie",
-                  "u": "https://chateaudechantilly.fr/restaurant-la-capitainerie/",
+                  "o": "La Rotonde de la Muette · site oficial",
+                  "u": "https://www.en.rotondemuette.paris/",
                   "tier": "oficial",
-                  "data": "2026-08",
+                  "data": "2026-08-27",
                   "prova": [
-                    "7 rue du Connétable",
-                    "abóbadas das antigas cozinhas de Vatel",
-                    "pâté en croûte Richelieu",
-                    "vol-au-vent",
-                    "chou à la crème chantilly"
-                  ]
-                },
-                {
-                  "o": "TripAdvisor · La Capitainerie (avaliações 2026)",
-                  "u": "https://www.tripadvisor.com/Restaurant_Review-g227607-d1330823-Reviews-La_Capitainerie-Chantilly_City_Chantilly_Oise_Hauts_de_France.html",
-                  "tier": "crowd",
-                  "data": "2026-08",
-                  "prova": [
-                    "3,5/5 no TripAdvisor",
-                    "mais de 20min de espera mesmo com reserva"
+                    "desde 1980",
+                    "todos os dias",
+                    "serviço contínuo das 7h às 23h",
+                    "12 chaussée de la Muette",
+                    "banquettes",
+                    "voiturier"
                   ]
                 }
               ]
             },
             {
-              "nome": "L'Étrier (8 rue du Connétable, Chantilly)",
-              "mapsQuery": "L'Étrier restaurant Chantilly",
-              "desc": "De frente para as Grandes Écuries, com terraço e serviço contínuo ao longo do dia. Bistrô sem pretensão. Só faz sentido se quiserem sair do domínio — o que, com os avós, custa uma caminhada que vocês não têm de sobra.",
+              "nome": "Breizh Café Passy (4 impasse des Carrières, 16e)",
+              "mapsQuery": "Breizh Café Passy, Paris",
+              "desc": "Creperia com <strong>terraço no fundo de uma viela de paralelepípedo</strong> — abrigado do vento, o que neste fim de semana conta. Galettes de trigo-sarraceno de produto selecionado. <strong>Aos domingos abre 11h30-22h30, sem fechar à tarde.</strong> Carta €25-45. Nota <strong>3,8/5</strong> em 388 avaliações. Tel. <strong>09 80 49 41 67</strong>.",
               "preco": "€€",
-              "dist": "~350 m das Écuries, fora dos portões",
+              "dist": "~1,2 km do Marmottan",
               "poiCat": "restaurante",
-              "valeAPena": 1,
+              "valeAPena": 2,
               "fontes": [
                 {
-                  "o": "Chantilly-Senlis Tourisme · L'Étrier",
-                  "u": "https://www.chantilly-senlis-tourisme.com/en/restaurants/letter-carrier/",
+                  "o": "Breizh Café Passy · site oficial",
+                  "u": "https://www.breizhcafe.com/passy",
                   "tier": "oficial",
-                  "data": "2026-08",
+                  "data": "2026-08-27",
                   "prova": [
-                    "8 rue du Connétable",
-                    "de frente para as Grandes Écuries",
-                    "terraço",
-                    "serviço contínuo"
+                    "terraço no fundo de uma viela de paralelepípedo",
+                    "galettes de trigo-sarraceno",
+                    "4 impasse des Carrières"
+                  ]
+                },
+                {
+                  "o": "PagesJaunes · Breizh Café Passy (horários e avaliações)",
+                  "u": "https://www.pagesjaunes.fr/pros/50030973",
+                  "tier": "diretorio",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "11h30-22h30",
+                    "domingos",
+                    "€25-45",
+                    "3,8/5",
+                    "388 avaliações",
+                    "09 80 49 41 67"
                   ]
                 }
               ]
@@ -416,94 +383,412 @@
           ]
         },
         {
-          "hora": "14:30",
-          "emoji": "🦘",
+          "hora": "16:30",
+          "emoji": "🏡",
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
-          "poiCat": "parque",
-          "valeAPena": 3,
-          "nome": "Parc du château · Hameau, cangurus e a volta de voiturette",
-          "mapsQuery": "Le Hameau, Parc du Château de Chantilly",
-          "cat": "A tarde inteira · 115 ha percorridos sentado",
-          "sobre": "Este é o card que faz o dia funcionar. O <strong>Hameau</strong> é uma <em>folie</em> de <strong>1774</strong>: <strong>sete casinhas de aparência rústica</strong> com interiores luxuosos, projetadas por <strong>Jean-François Leroy</strong> para <strong>Louis Joseph, príncipe de Condé</strong>. O sucesso delas é que inspirou <strong>Marie-Antoinette</strong> a mandar construir o <em>Hameau de la Reine</em> no Petit Trianon de Versalhes — ou seja, o hameau famoso é a cópia, e o original está aqui. Em volta: um <strong>jogo da oca gigante do séc. XVIII espalhado por 3,5 hectares</strong>, um dos maiores já construídos, um <strong>labirinto-horta</strong>, uma <strong>aire de jeux</strong> e um <strong>cercado de cangurus</strong> — incluindo <strong>Ice, uma canguru albina nascida em 2013</strong>.",
-          "imperdivel": "A filha de 3 anos vai atravessar o <strong>jogo da oca</strong> sem fazer ideia de que está pisando num tabuleiro de trezentos anos do tamanho de um quarteirão. Aponte as casas numeradas no chão pra ela.",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "🔄 ALT · Maison de Balzac (47 rue Raynouard) · se chover forte",
+          "mapsQuery": "Maison de Balzac, Paris",
+          "cat": "Substitui o parque · grátis, coberta e com vista da Torre Eiffel",
+          "sobre": "A casa onde <strong>Honoré de Balzac (1799-1850)</strong> alugou o último andar <strong>de 1840 a 1847</strong> — <strong>sob o nome da governanta</strong>, para escapar dos credores — e onde escreveu <em>La Comédie humaine</em>. É museu da Ville de Paris.",
+          "imperdivel": "O <strong>jardim escondido com vista da Torre Eiffel</strong>, e o café <strong>Rose Bakery</strong> instalado nele. O jardim é <strong>gratuito o ano inteiro</strong> durante o horário do museu.",
           "dicas": [
-            "🛺 <strong>Aluguem a voiturette elétrica</strong> assim que chegarem ao parque (4 ou 6 lugares). É o que transforma 115 hectares num passeio possível para os avós. Há também <strong>rosalies</strong> (5 lugares · 3 adultos + 2 crianças), <strong>barcas de 4 lugares</strong> nos fossos e um <strong>petit train com visita comentada de ~35min</strong>.",
-            "💶 <strong>Os preços dessas atividades eu não consegui confirmar</strong> em fonte confiável — todas são suplemento ao bilhete, e o valor se pergunta na bilheteria. Não inventei número.",
-            "🧭 A <strong>caça ao tesouro gratuita</strong> do domínio é anunciada como ideal <strong>a partir dos 5-6 anos</strong>. Aos 3 ela ainda não pega — peguem mesmo assim se quiserem, mas não contem com ela.",
-            "🍨 Se sobrar fôlego na saída, <strong>L'Atelier de la Chantilly (48 rue du Connétable)</strong> é um salão de chá dedicado à crème Chantilly. É uma parada curta e sentada, não um programa.",
-            "🧓 Bancos e sombra são frequentes no jardim anglo-chinês — é a parte do parque desenhada pra passear devagar, e foi feita exatamente pra isso."
+            "💶 <strong>Coleção permanente e jardim grátis</strong> — só exposição temporária é paga.",
+            "🕐 <strong>Terça a domingo, 10h-18h.</strong>",
+            "🚗 A ~1,5 km do Ranelagh, ainda no 16e — é a carta de reserva do domingo: grátis e sob teto."
           ],
-          "duracao": "2h-3h",
-          "custo": "Parque incluído no bilhete 1 dia (ago/2026) · voiturette, barca e petit train são suplemento [a confirmar na bilheteria]",
-          "acessibilidade": "Aléias largas e de terra batida · voiturette elétrica alugável no local resolve a distância · aire de jeux e cercado dos cangurus com acesso plano",
+          "duracao": "1h",
+          "custo": "Coleção permanente e jardim grátis (ago/2026)",
+          "acessibilidade": "Casa do séc. XIX em desnível · jardim e café no nível da entrada · conferir por telefone se precisar de acesso pleno",
           "coord": {
-            "lat": 49.1946,
-            "lng": 2.4937
+            "lat": 48.85544,
+            "lng": 2.281004
           },
           "fontes": [
             {
-              "o": "Wikipedia · Hameau de Chantilly",
-              "u": "https://en.wikipedia.org/wiki/Hameau_de_Chantilly",
+              "o": "Maison de Balzac · informations pratiques (site oficial)",
+              "u": "https://www.maisondebalzac.paris.fr/en/your-visit/practical-information",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Terça a domingo, 10h-18h",
+                "Coleção permanente e jardim grátis",
+                "47 rue Raynouard",
+                "Rose Bakery",
+                "gratuito o ano inteiro"
+              ]
+            },
+            {
+              "o": "Wikipedia · Maison de Balzac",
+              "u": "https://en.wikipedia.org/wiki/Maison_de_Balzac",
               "tier": "diretorio",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
-                "1774",
-                "sete casinhas de aparência rústica",
-                "Jean-François Leroy",
-                "Louis Joseph, príncipe de Condé",
-                "inspirou Marie-Antoinette",
-                "Hameau de la Reine",
-                "coordenada 49.1946, 2.4937"
+                "Honoré de Balzac (1799-1850)",
+                "de 1840 a 1847",
+                "sob o nome da governanta",
+                "La Comédie humaine",
+                "último andar",
+                "último"
               ]
             },
             {
-              "o": "Paris Mômes · le parc du château de Chantilly",
-              "u": "https://parismomes.fr/se-balader-en-famille/le-parc-du-chateau-de-chantilly/",
+              "o": "Sortiraparis · o jardim secreto da Maison de Balzac com vista da Torre Eiffel",
+              "u": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/196412-the-maison-de-balzac-home-of-the-famous-writer-and-his-secret-garden-overlooking-the-eiffel-tower",
               "tier": "editorial",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
-                "jogo da oca gigante do séc. XVIII",
-                "3,5 hectares",
-                "um dos maiores já construídos",
-                "labirinto-horta",
-                "aire de jeux",
-                "cercado de cangurus",
-                "Ice, uma canguru albina nascida em 2013",
-                "115 hectares",
-                "a partir dos 5-6 anos",
-                "115 ha"
+                "jardim escondido com vista da Torre Eiffel"
               ]
             },
             {
-              "o": "Familin'Paris · le parc du Domaine de Chantilly",
-              "u": "https://www.familinparis.fr/parc-du-domaine-chantilly-tarif/",
-              "tier": "editorial",
-              "data": "2026-08",
-              "prova": [
-                "voiturette elétrica",
-                "4 ou 6 lugares",
-                "rosalies",
-                "5 lugares",
-                "3 adultos + 2 crianças",
-                "barcas de 4 lugares",
-                "petit train",
-                "35min"
-              ]
-            },
-            {
-              "o": "Chantilly-Senlis Tourisme · restaurants rue du Connétable",
-              "u": "https://www.chantilly-senlis-tourisme.com/en/restaurants/letter-carrier/",
+              "o": "Apple Maps · Maison de Balzac (coordenada)",
+              "u": "https://maps.apple.com/place?address=47+Rue+Raynouard%2C+75016+Paris%2C+France&coordinate=48.8554399%2C2.2810042&name=Maison+de+Balzac",
               "tier": "diretorio",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
-                "L'Atelier de la Chantilly",
-                "48 rue du Connétable"
+                "coordenada 48.85544, 2.28100"
               ]
             },
             {
-              "o": "Briefing do Tobia (perfil da família) + rota medida no Google Maps em 27/ago/2026",
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "~1,5 km"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Dom 30/Ago",
+      "tema": "Van Gogh numa antiga fundição · 11e e Marais",
+      "temaCurto": "11e + Marais",
+      "bairro": "🎨 Paris — 11e Saint-Ambroise + Marais",
+      "grupo": true,
+      "cor": "#7c3aed",
+      "gradA": "#4c1d95",
+      "gradB": "#8b5cf6",
+      "nota": "<strong>Este é o dia de chuva, e foi desenhado pra ela.</strong> A previsão é de pancadas fortes: o Atelier des Lumières são 50 minutos sentados no escuro, com elevador e acesso PMR, e tudo o que vem depois no Marais tem teto. O único trecho aberto é o parquinho da manhã. Tudo alcançável pela linha 9 sem baldeação.",
+      "stops": [
+        {
+          "hora": "10:30",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Casa → Saint-Ambroise (linha 9)",
+          "cat": "~30min · linha 9 direta de Boulogne, sem baldeação",
+          "mapsQuery": "Métro Saint-Ambroise, Paris",
+          "coord": {
+            "lat": 48.8616,
+            "lng": 2.3791
+          }
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🛝",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 2,
+          "nome": "Square Maurice-Gardette (2 rue du Général Blaise)",
+          "mapsQuery": "Square Maurice-Gardette, Paris",
+          "cat": "9.443 m² · aire de jeux refeita em 2025",
+          "sobre": "Jardim de <strong>9.443 m²</strong> entre o boulevard Voltaire e a avenue de la République, a 300 m das estações <strong>Rue Saint-Maur (linha 3)</strong> e <strong>Saint-Ambroise (linha 9)</strong>. O nome é de <strong>Maurice Gardette</strong>, conselheiro municipal do bairro e resistente, <strong>fuzilado em 1941</strong> — o square foi rebatizado em homenagem a ele depois da Segunda Guerra.",
+          "imperdivel": "A <strong>aire de jeux foi refeita em 2025</strong> e é <strong>totalmente inclusiva</strong>: tema marinho, com um <strong>grande navio</strong>, uma <strong>tirolesa</strong> e painéis de raciocínio e motricidade pensados para as crianças pequenas. É desenhada para a faixa de <strong>1 a 12 anos</strong> — a filha está no meio dela.",
+          "dicas": [
+            "🕐 Comecem por aqui: gasta energia antes de 50 minutos parada no escuro do Atelier.",
+            "🧓 Há bancos e <strong>mastros de sombra</strong> instalados para segurar velas em dia de calor — os avós sentam enquanto ela sobe no navio.",
+            "🚶 Do square até o Atelier des Lumières são <strong>menos de 400 m</strong> a pé, plano.",
+            "🏓 Tem mesas de ping-pong, se quiserem esticar mais um pouco."
+          ],
+          "duracao": "45min-1h",
+          "custo": "Grátis (ago/2026)",
+          "acessibilidade": "Plano, com bancos e sombra · carrinho circula em tudo · 300 m do metrô",
+          "coord": {
+            "lat": 48.8616,
+            "lng": 2.3791
+          },
+          "fontes": [
+            {
+              "o": "Ville de Paris · nouvelle aire de jeux inclusive au square Maurice-Gardette",
+              "u": "https://www.paris.fr/pages/une-nouvelle-aire-de-jeux-inclusive-au-square-maurice-gardette-33757",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "aire de jeux foi refeita em 2025",
+                "totalmente inclusiva",
+                "grande navio",
+                "tirolesa",
+                "1 a 12 anos",
+                "mastros de sombra",
+                "mesas de ping-pong",
+                "tema marinho"
+              ]
+            },
+            {
+              "o": "Wikipédia · Square Maurice-Gardette",
+              "u": "https://fr.wikipedia.org/wiki/Square_Maurice-Gardette",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "9.443 m²",
+                "Maurice Gardette",
+                "fuzilado em 1941",
+                "Rue Saint-Maur (linha 3)",
+                "Saint-Ambroise (linha 9)",
+                "300 m",
+                "coordenada 48.86160, 2.37910"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "menos de 400 m",
+                "50 minutos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · 11e",
+          "cat": "3 opções · as 2 primeiras conferidas para DOMINGO, a 3ª não",
+          "coord": {
+            "lat": 48.8616,
+            "lng": 2.38087
+          },
+          "opcoes": [
+            {
+              "nome": "Eunoé (6 rue Rochebrune, 11e)",
+              "mapsQuery": "Eunoe restaurant, 6 rue Rochebrune, Paris",
+              "desc": "Cozinha do chef japonês <strong>Ryuji Sato</strong> sobre produto de estação, a poucos passos do Atelier. <strong>Abre no almoço de domingo</strong> (e de terça a sábado). <strong>€8 a entrada, €15 o prato, €7 a sobremesa</strong>, ou menus de <strong>€21 e €26</strong>. Reserva pelo site ou <strong>07 67 96 86 36</strong>.",
+              "preco": "€€",
+              "dist": "~350 m do Atelier",
+              "poiCat": "restaurante",
+              "valeAPena": 3,
+              "fontes": [
+                {
+                  "o": "Sortiraparis · Eunoé, o achado de bairro perto do Atelier des Lumières",
+                  "u": "https://www.sortiraparis.com/en/where-to-eat-in-paris/restaurant/articles/295776-restaurant-eunoe-a-friendly-affordable-neighborhood-nugget-near-atelier-des-lumieres",
+                  "tier": "editorial",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "6 rue Rochebrune",
+                    "Ryuji Sato",
+                    "terça a sábado no almoço",
+                    "€8",
+                    "€15",
+                    "€7",
+                    "€21",
+                    "€26",
+                    "07 67 96 86 36"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "À La Renaissance (87 rue de la Roquette, 11e)",
+              "mapsQuery": "À La Renaissance, 87 rue de la Roquette, Paris",
+              "desc": "Bistrô histórico do leste de Paris, <strong>aberto desde 1919</strong> e revivido pela dupla do Candelaria e do Le Mary Celeste. <strong>Aberto todos os dias, das 8h às 0h30</strong> — a opção que não depende de dia da semana. Fórmula de almoço <strong>€21</strong>, menu <strong>€23</strong>. Tel. <strong>01 43 79 83 09</strong>.",
+              "preco": "€€",
+              "dist": "~800 m do Atelier",
+              "poiCat": "restaurante",
+              "valeAPena": 3,
+              "fontes": [
+                {
+                  "o": "À La Renaissance · site oficial",
+                  "u": "https://www.alarenaissance.com/",
+                  "tier": "oficial",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "87 rue de la Roquette",
+                    "aberto desde 1919",
+                    "8h às 0h30",
+                    "todos os dias"
+                  ]
+                },
+                {
+                  "o": "Paris ZigZag · À La Renaissance, rue de la Roquette",
+                  "u": "https://www.pariszigzag.fr/bar-restaurant/a-la-renaissance-restaurant-rue-de-la-roquette/",
+                  "tier": "editorial",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "€21",
+                    "€23",
+                    "Candelaria",
+                    "Le Mary Celeste",
+                    "01 43 79 83 09"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "East Side Burgers (60 bd Voltaire, 11e)",
+              "mapsQuery": "East Side Burgers, 60 boulevard Voltaire, Paris",
+              "desc": "Hamburgueria <strong>100% vegetariana desde 2012</strong>, quase tudo em versão vegana, na saída do metrô <strong>Saint-Ambroise (linha 9)</strong>. ⚠️ <strong>Não consegui verificar o domingo</strong>: uma fonte diz <strong>11h-16h</strong>, outra <strong>12h-15h30</strong> e uma terceira diz que <strong>fecha aos domingos</strong>. <strong>Liguem antes: 01 48 06 78 72.</strong> Entra na lista porque vocês pediram três, não porque está confirmada.",
+              "preco": "€",
+              "dist": "~500 m do Atelier",
+              "poiCat": "restaurante",
+              "valeAPena": 1,
+              "fontes": [
+                {
+                  "o": "Green Hotels Paris · East Side Burgers",
+                  "u": "http://greenhotelparis.com/en/east-side-burgers-restaurant-vegetarien-et-vegan/",
+                  "tier": "editorial",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "100% vegetariana desde 2012",
+                    "versão vegana",
+                    "60 bd Voltaire",
+                    "Saint-Ambroise (linha 9)"
+                  ]
+                },
+                {
+                  "o": "Yelp + Firmania · East Side Burgers (horários divergentes de domingo)",
+                  "u": "https://www.yelp.com/biz/east-side-burgers-paris",
+                  "tier": "crowd",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "11h-16h",
+                    "12h-15h30",
+                    "fecha aos domingos",
+                    "01 48 06 78 72",
+                    "Não consegui verificar o domingo"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "✨",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Atelier des Lumières (38 rue Saint-Maur)",
+          "mapsQuery": "Atelier des Lumières, Paris",
+          "cat": "Van Gogh em 360° · 50min sentados no escuro",
+          "sobre": "O prédio é uma <strong>antiga fundição</strong>: a <strong>Fonderie du Chemin-Vert</strong>, aberta em <strong>1835</strong> pelos <strong>irmãos Plichon</strong> para fundir peças de ferro de alta qualidade para a marinha e as ferrovias. Ficou <strong>quatro gerações</strong> na mesma família e prosperou por mais de cem anos, até a <strong>crise de 1929</strong> fechá-la; foi vendida à família Martin em <strong>1935</strong>. A <strong>Culturespaces</strong> procurou dois anos por um lugar com identidade e volume, escolheu esta fundição, e abriu o Atelier em <strong>13 de abril de 2018</strong>. Hoje são <strong>140 projetores de vídeo</strong> e som espacializado sobre <strong>3.300 m²</strong>.",
+          "imperdivel": "Procure o que sobrou da fábrica no meio da projeção: as <strong>estruturas metálicas foram preservadas</strong> e a <strong>velha chaminé de tijolo foi desmontada e remontada peça por peça</strong>. E leve a filha até a <strong>borda do bassin</strong> — a água reflete as imagens projetadas e é ali que uma criança de 3 anos entende o que está acontecendo.",
+          "dicas": [
+            "🎟️ <strong>Reservem horário.</strong> €16 adulto · €11 dos 5 aos 25 anos · <strong>grátis abaixo de 5</strong>, então a filha não paga.",
+            "🕐 <strong>Terça a domingo, 10h-18h.</strong> A sessão dura <strong>cerca de 50 minutos</strong> e roda em loop — dá pra entrar e ficar mais de uma volta.",
+            "♿ <strong>Totalmente acessível a pessoa com mobilidade reduzida, com elevador até a mezanina.</strong> É o card mais confortável do fim de semana para os avós.",
+            "🚇 Metrô: <strong>Voltaire</strong> e <strong>Saint-Ambroise</strong> (linha 9) a 6min a pé · Rue Saint-Maur (linha 3) a 4min.",
+            "🅿️ <strong>O transporte público é o recomendado pela própria casa</strong> — estacionar no 11e num sábado é perder o horário reservado.",
+            "🎬 Em cartaz: <strong>Van Gogh · La Nuit Étoilée</strong> e <strong>Japon Rêvé</strong>, de 30 de julho a 11 de setembro de 2026."
+          ],
+          "duracao": "1h-1h15",
+          "custo": "€16 adulto · €11 (5-25 anos) · grátis <5 (ago/2026)",
+          "acessibilidade": "Totalmente acessível PMR, com elevador · piso plano · bancos na sala · sala escura e som alto (avisar a filha antes)",
+          "coord": {
+            "lat": 48.8616,
+            "lng": 2.38087
+          },
+          "fontes": [
+            {
+              "o": "Atelier des Lumières · histoire du lieu (site oficial)",
+              "u": "https://www.atelier-lumieres.com/en/explore/place-of-history",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Fonderie du Chemin-Vert",
+                "1835",
+                "irmãos Plichon",
+                "marinha e as ferrovias",
+                "quatro gerações",
+                "crise de 1929",
+                "1935",
+                "Culturespaces",
+                "13 de abril de 2018",
+                "estruturas metálicas foram preservadas",
+                "chaminé de tijolo foi desmontada e remontada peça por peça",
+                "bassin"
+              ]
+            },
+            {
+              "o": "Atelier des Lumières · adresse et accès (site oficial)",
+              "u": "https://www.atelier-lumieres.com/en/visit/access",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Voltaire",
+                "Saint-Ambroise",
+                "linha 9",
+                "6min",
+                "Rue Saint-Maur (linha 3)",
+                "4min",
+                "transporte público é o recomendado",
+                "38 rue Saint-Maur"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Atelier des Lumières",
+              "u": "https://parisjetaime.com/eng/culture/atelier-des-lumieres-p3639",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "140 projetores de vídeo",
+                "3.300 m²",
+                "antiga fundição"
+              ]
+            },
+            {
+              "o": "Atelier des Lumières · exposition Van Gogh (site oficial)",
+              "u": "https://vangogh.atelier-lumieres.com/en/",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Van Gogh · La Nuit Étoilée",
+                "Japon Rêvé",
+                "30 de julho a 11 de setembro de 2026",
+                "cerca de 50 minutos",
+                "50min"
+              ]
+            },
+            {
+              "o": "Allovoyages · Atelier des Lumières, avis et tarifs",
+              "u": "https://allovoyages.fr/destinations/atelier-des-lumieres-avis/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "€16",
+                "€11",
+                "5 aos 25 anos",
+                "grátis abaixo de 5",
+                "Terça a domingo, 10h-18h",
+                "elevador",
+                "Totalmente acessível"
+              ]
+            },
+            {
+              "o": "Apple Maps · Atelier des Lumières (coordenada)",
+              "u": "https://maps.apple.com/place?address=38+Rue+Saint-Maur%2C+75011+Paris%2C+France&coordinate=48.8616022%2C2.3808736&name=Atelier+des+Lumi%C3%A8res",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.86160, 2.38087"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
               "u": "https://www.google.com/maps",
               "tier": "campo",
               "data": "2026-08-27",
@@ -515,252 +800,289 @@
           ]
         },
         {
-          "hora": "17:30",
-          "emoji": "🚗",
+          "hora": "15:20",
+          "emoji": "🚕",
           "periodo": "tarde",
           "tipo": "transit",
-          "nome": "Chantilly → Boulogne-Billancourt",
-          "cat": "~56 km · ~55min · A1 → A86 · voltar antes das 18h evita o fluxo do festival",
-          "roadType": "autopista",
-          "mapsQuery": "Boulogne-Billancourt",
+          "nome": "Atelier → Marais",
+          "cat": "~10min de Uber · evita 2 km a pé com carrinho",
+          "mapsQuery": "Musée Carnavalet, Paris",
           "coord": {
-            "lat": 48.8337,
-            "lng": 2.2435
-          }
-        }
-      ]
-    },
-    {
-      "date": "Dom 30/Ago",
-      "tema": "Boulogne & Bois de Boulogne · o dia de chuva, resolvido perto de casa",
-      "temaCurto": "Boulogne",
-      "bairro": "🍁 Hauts-de-Seine — Boulogne-Billancourt + Bois de Boulogne",
-      "grupo": true,
-      "cor": "#be123c",
-      "gradA": "#881337",
-      "gradB": "#e11d48",
-      "nota": "Previsão de pancadas fortes sobre a Île-de-France. Por isso o domingo inteiro cabe num raio de 5 km, começa tarde (11h) e tem três portas de tarde para escolher olhando pela janela. Se chover o dia inteiro, a resposta certa é fazer só o Albert-Kahn e voltar pra casa — isso não é derrota, é o plano.",
-      "stops": [
-        {
-          "hora": "10:40",
-          "emoji": "🚗",
-          "periodo": "manha",
-          "tipo": "transit",
-          "nome": "Casa → Musée Albert-Kahn",
-          "cat": "~2 km · ~8min de carro · são 15min a pé, mas com chuva e os avós vale o carro",
-          "mapsQuery": "Musée départemental Albert-Kahn, Boulogne-Billancourt",
-          "coord": {
-            "lat": 48.8417,
-            "lng": 2.2278
+            "lat": 48.8574,
+            "lng": 2.36214
           }
         },
         {
-          "hora": "11:00",
-          "emoji": "🍁",
-          "periodo": "manha",
+          "hora": "15:45",
+          "emoji": "🏛️",
+          "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
           "poiCat": "atracao",
           "valeAPena": 3,
-          "nome": "Musée & jardins départementaux Albert-Kahn (10-14 rue du Port)",
-          "mapsQuery": "Musée départemental Albert-Kahn, Boulogne-Billancourt",
-          "cat": "Jardim japonês + o arquivo em cores do mundo · na cidade de vocês",
-          "sobre": "O passeio mais improvável do fim de semana está a 2 km da porta de vocês. <strong>Albert Kahn (1860-1940)</strong> era um banqueiro rico que, em <strong>1909</strong>, começou a gastar a fortuna num projeto que ninguém pediu: mandar operadores fotografarem o mundo <em>em cor</em>, para registrar culturas e ofícios que ele suspeitava que fossem desaparecer. Chamou de <strong>Archives de la Planète</strong>. A técnica era o <strong>autochrome</strong>, o primeiro processo industrial de fotografia colorida, sobre placas de vidro. <strong>Entre 1909 e 1931</strong>, os operadores dele percorreram <strong>mais de 50 países</strong> e voltaram com <strong>mais de 72.000 imagens</strong> e <strong>170 quilômetros de filme</strong> — a maior coleção de autochromes do mundo, guardada aqui. Em volta da casa ele montou <strong>4 hectares</strong> de jardins de estilos do mundo inteiro, com um <strong>jardim japonês</strong> e uma <strong>aldeia de chá tradicional</strong> instalada ainda no tempo dele. O edifício de exposições de <strong>2.300 m²</strong> é de <strong>Kengo Kuma</strong>.",
-          "imperdivel": "O fecho da história, que ninguém conta na bilheteria: <strong>a crise de 1929 arruinou Kahn</strong>. O homem que financiou o inventário visual do planeta perdeu a capacidade de sustentá-lo, o projeto parou em 1931, e ele morreu em <strong>1940</strong>, aqui em Boulogne, com a Alemanha já ocupando a França — vendo o mundo que fotografara justamente para preservar entrar na segunda guerra em trinta anos. <strong>As imagens sobreviveram a ele. Nada mais sobreviveu.</strong>",
+          "nome": "Musée Carnavalet (23 rue de Sévigné, 3e)",
+          "mapsQuery": "Musée Carnavalet, Paris",
+          "cat": "História de Paris · grátis, coberto e totalmente acessível",
+          "sobre": "O museu da <strong>história de Paris</strong>, instalado em dois palacetes do Marais com jardins internos. A <strong>coleção permanente é gratuita</strong> e não precisa de reserva.",
+          "imperdivel": "A acessibilidade, que aqui é exemplar: <strong>elevadores e rampas adaptadas em todo o percurso</strong>, e o museu <strong>empresta cadeira de rodas de graça na recepção</strong>. Há ainda obras penduradas em altura ajustada, transcrições em braille e peças de tocar.",
           "dicas": [
-            "🕐 <strong>Abre 11h</strong> (terça a domingo, 11h-19h de abril a setembro · <strong>última entrada 18h</strong>) — não adianta chegar antes. Os <strong>jardins fecham 20min antes</strong> do resto.",
-            "💶 <strong>€9 cheio · €6 reduzido · grátis abaixo de 26 anos</strong>, então a filha não paga e os quatro adultos sim. A entrada é grátis para todos no <strong>1º domingo do mês</strong> — <strong>30/ago não é 1º domingo</strong>, não contem com isso.",
-            "🐟 Levem a filha direto para as <strong>pontes vermelhas do jardim japonês</strong>: as carpas embaixo delas seguram uma criança de 3 anos por mais tempo que qualquer brinquedo — e é a atração do fim de semana em que os avós sentam e veem exatamente a mesma coisa que a neta.",
-            "☔ Se cair água, o museu de 2.300 m² e a estufa são teto — o passeio não acaba, só muda de sala.",
-            "⚠️ <strong>Honestidade</strong>: o auge do jardim japonês são as <em>sakura</em> na primavera e os bordos no outono. Fim de agosto é o vale entre os dois. Avaliações recentes citam <strong>banheiros sujos</strong> e, em algum momento, falta de água em elementos aquáticos e caminhos bloqueados. Continua valendo — só não vá esperando o cartão-postal de abril."
+            "🕐 <strong>10h-18h, fechado às segundas.</strong> Sábado e domingo abrem normalmente.",
+            "💶 <strong>Coleção permanente grátis</strong> — só as exposições temporárias são pagas.",
+            "🚶 Fica a ~700 m do Marché des Enfants Rouges e a ~600 m da Place des Vosges: é o triângulo do Marais inteiro em menos de 1 km.",
+            "🥘 O <strong>Marché des Enfants Rouges</strong>, o mercado coberto mais antigo de Paris (1615), fica a ~700 m — mas <strong>aos domingos fecha por volta das 14h</strong>, antes de vocês chegarem ao Marais. Fica pra uma manhã de sábado."
           ],
-          "duracao": "1h30-2h",
-          "custo": "€9 cheio · €6 reduzido (ago/2026) · grátis <26 anos",
-          "acessibilidade": "4 hectares planos com bancos frequentes · percurso inteiro bem abaixo de 1km · museu com piso único e teto · sanitários no local",
+          "duracao": "1h-1h30",
+          "custo": "Coleção permanente grátis (ago/2026)",
+          "acessibilidade": "Totalmente acessível · elevadores e rampas · cadeira de rodas emprestada gratuitamente na recepção · sanitários adaptados",
           "coord": {
-            "lat": 48.8417,
-            "lng": 2.2278
+            "lat": 48.8574,
+            "lng": 2.36214
           },
           "fontes": [
             {
-              "o": "Conseil départemental des Hauts-de-Seine · le jardin du musée Albert-Kahn",
-              "u": "https://www.hauts-de-seine.fr/sortir-et-decouvrir/patrimoine-vert/les-espaces-verts-pres-de-chez-vous/les-jardins-et-les-bois/le-jardin-albert-kahn",
+              "o": "Musée Carnavalet · informations pratiques (site oficial)",
+              "u": "https://www.carnavalet.paris.fr/en/visit/pratical-information",
               "tier": "oficial",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
-                "4 hectares",
-                "jardim japonês",
-                "aldeia de chá tradicional"
+                "10h-18h",
+                "fechado às segundas",
+                "Coleção permanente grátis",
+                "elevadores e rampas adaptadas",
+                "empresta cadeira de rodas de graça na recepção",
+                "braille",
+                "história de Paris"
               ]
             },
             {
-              "o": "Office de Tourisme de Boulogne-Billancourt · musée Albert-Kahn",
-              "u": "https://otbb.org/en/musee-departemental-albert-kahn/",
-              "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "11h-19h",
-                "abril a setembro",
-                "jardins fecham 20min antes",
-                "€9",
-                "€6",
-                "grátis abaixo de 26 anos",
-                "1º domingo do mês",
-                "10-14 rue du Port",
-                "última entrada 18h",
-                "18h"
-              ]
-            },
-            {
-              "o": "Phototrend · musée Albert-Kahn, em imersão nas Archives de la Planète",
-              "u": "https://phototrend.fr/2022/04/musee-albert-kahn-archives-de-la-planete/",
-              "tier": "editorial",
-              "data": "2026-08",
-              "prova": [
-                "1860-1940",
-                "1909",
-                "Archives de la Planète",
-                "autochrome",
-                "primeiro processo industrial de fotografia colorida",
-                "entre 1909 e 1931",
-                "mais de 50 países",
-                "mais de 72.000 imagens",
-                "170 quilômetros de filme",
-                "maior coleção de autochromes do mundo",
-                "crise de 1929",
-                "1931",
-                "1940"
-              ]
-            },
-            {
-              "o": "CLIC France · o novo museu Albert-Kahn (Kengo Kuma)",
-              "u": "https://www.club-innovation-culture.fr/nouveau-musee-albert-kahn-regard-humain-innovant-monde-voyage/",
-              "tier": "editorial",
-              "data": "2026-08",
-              "prova": [
-                "2.300 m²",
-                "Kengo Kuma"
-              ]
-            },
-            {
-              "o": "TripAdvisor + Experts Environnement · avaliações do jardim Albert-Kahn",
-              "u": "https://www.tripadvisor.com/Attraction_Review-g196560-d729704-Reviews-Albert_kahn_Musee_Departemental-Boulogne_Billancourt_Hauts_de_Seine_Ile_de_France.html",
-              "tier": "crowd",
-              "data": "2026-08",
-              "prova": [
-                "banheiros sujos",
-                "sakura na primavera",
-                "bordos no outono",
-                "outono"
-              ]
-            },
-            {
-              "o": "Wikipedia · Musée Albert-Kahn (endereço e coordenada)",
-              "u": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Albert-Kahn",
+              "o": "Wikipedia · Musée Carnavalet (coordenada)",
+              "u": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Carnavalet",
               "tier": "diretorio",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
-                "coordenada 48.8417, 2.2278"
+                "coordenada 48.85740, 2.36214"
               ]
             },
             {
-              "o": "Briefing do Tobia (perfil da família) + rota medida no Google Maps em 27/ago/2026",
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
               "u": "https://www.google.com/maps",
               "tier": "campo",
               "data": "2026-08-27",
               "prova": [
-                "2 km",
-                "3 anos",
-                "agosto",
-                "fim de agosto"
+                "~700 m",
+                "~600 m",
+                "1 km"
+              ]
+            },
+            {
+              "o": "Ville de Paris + Paris Mômes · Marché des Enfants Rouges (horário de domingo)",
+              "u": "https://dansmonquartier.parismomes.fr/lieux/marche-des-enfants-rouges-_dvskv",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "aos domingos fecha por volta das 14h",
+                "mercado coberto mais antigo de Paris",
+                "1615",
+                "~700 m"
               ]
             }
           ]
         },
         {
-          "hora": "13:15",
-          "emoji": "🍽️",
+          "hora": "15:45",
+          "emoji": "🌳",
           "periodo": "tarde",
-          "tipo": "opcoes",
-          "nome": "Almoço · Boulogne-Billancourt",
-          "cat": "3 opções · a terceira é sentar em casa, e é uma opção de verdade",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 2,
+          "nome": "🔄 ALT · Place des Vosges (se o céu abrir)",
+          "mapsQuery": "Place des Vosges, Paris",
+          "cat": "Substitui o Carnavalet · arcadas cobertas em volta",
+          "sobre": "A praça é cercada de <strong>arcadas e galerias</strong>, com a <strong>Maison de Victor Hugo</strong> num dos cantos. No meio há <strong>três fontes</strong>, gramados em geral liberados, e <strong>bancos à sombra de árvores grandes</strong>.",
+          "imperdivel": "O <strong>bac à sable</strong> e as estruturas de escalada com tobogã e balanço — e, para os adultos, o fato de as <strong>arcadas darem a volta inteira na praça</strong>: se começar a chover, dá pra continuar o passeio seco, andando por baixo delas.",
+          "dicas": [
+            "👶 Funciona bem com carrinho: é plana e o espaço verde é fechado, então ela corre sem susto.",
+            "🧓 Bancos à sombra em quantidade — é uma das praças de Paris com mais lugar pra sentar.",
+            "🚇 Se voltarem de metrô: <strong>Chemin Vert</strong> (linha 8) ou <strong>Bastille</strong>, e depois baldeação pra linha 9 — o Uber direto é mais simples com os avós.",
+            "💶 <strong>Grátis, sem horário de fechamento de museu.</strong> Se sobrar fôlego, a <strong>Maison de Victor Hugo</strong> fica no nº 6 da própria praça e a coleção permanente é gratuita.",
+            "🏚️ Já que estão no Marais: o <strong>Village Saint-Paul</strong> costuma aparecer em lista de passeio, mas com criança de 3 anos é <strong>pula sem culpa</strong> — são lojas de antiquário e pátios calmos, nada pra ela fazer."
+          ],
+          "duracao": "45min",
+          "custo": "Grátis (ago/2026)",
+          "acessibilidade": "Plana · gramado e areia · bancos à sombra abundantes · arcadas cobertas em todo o perímetro",
           "coord": {
-            "lat": 48.8337,
-            "lng": 2.2435
+            "lat": 48.85556,
+            "lng": 2.36556
           },
-          "opcoes": [
+          "fontes": [
             {
-              "nome": "Papilla Boulogne (58 av. du Général Leclerc)",
-              "mapsQuery": "Papilla Boulogne-Billancourt",
-              "desc": "Italiano, <strong>abre aos domingos</strong>, ticket médio <strong>~€25</strong> (entrada+prato ou prato+sobremesa, sem bebida). <strong>Escalope milanesa</strong>, pizza de forno e sorvete da casa. É a resposta simples: aberto no domingo, a ~1,5 km de casa, e criança de 3 anos come pizza sem discussão.",
-              "preco": "€€",
-              "dist": "~1,5 km de casa · ~5min de carro",
-              "poiCat": "restaurante",
-              "valeAPena": 2,
-              "fontes": [
-                {
-                  "o": "TheFork · Papilla Boulogne",
-                  "u": "https://www.thefork.fr/restaurant/papilla-boulogne-r822367",
-                  "tier": "diretorio",
-                  "data": "2026-08",
-                  "prova": [
-                    "58 av. du Général Leclerc",
-                    "abre aos domingos",
-                    "~€25",
-                    "escalope milanesa",
-                    "pizza de forno",
-                    "sorvete da casa"
-                  ]
-                }
+              "o": "Kimini · aire de jeux da Place des Vosges",
+              "u": "https://kimini.fr/lieux/aire-de-jeux-place-des-vosges/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "bac à sable",
+                "estruturas de escalada",
+                "tobogã",
+                "balanço"
               ]
             },
             {
-              "nome": "Bellota-Bellota® Boulogne",
-              "mapsQuery": "Bellota-Bellota Boulogne-Billancourt",
-              "desc": "Casa de <strong>jamón ibérico de bellota</strong>, cortado na hora, com terraço. Ótimo para os adultos e fraco para a filha de 3a — entrem sabendo que metade da mesa vai comer pão.",
-              "preco": "€€€",
-              "dist": "em Boulogne · ~5min de carro",
-              "poiCat": "restaurante",
-              "valeAPena": 2,
-              "fontes": [
-                {
-                  "o": "TheFork · restaurantes com terraço em Boulogne-Billancourt",
-                  "u": "https://www.thefork.fr/restaurants/boulogne-billancourt-c62568/terrasse-t370",
-                  "tier": "diretorio",
-                  "data": "2026-08",
-                  "prova": [
-                    "Bellota-Bellota Boulogne",
-                    "terraço",
-                    "jamón ibérico de bellota"
-                  ]
-                }
+              "o": "Evous · jardin de la place des Vosges",
+              "u": "https://www.evous.fr/paris/le-marais/Visiter-le-Marais/Parcs-et-jardins-Le-Marais/Jardin-de-la-place-des-Vosges,1129380.html",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "três fontes",
+                "bancos à sombra de árvores grandes",
+                "arcadas e galerias",
+                "Maison de Victor Hugo",
+                "gramados"
               ]
             },
             {
-              "nome": "Almoço em casa (Boulogne-Billancourt)",
-              "noMaps": true,
-              "desc": "Com pancadas fortes previstas e cinco pessoas incluindo uma de 3 anos e dois de mais de setenta, <strong>almoçar em casa no domingo é uma decisão legítima</strong>, não uma derrota. Libera a tarde inteira e economiza a única coisa que falta no fim de semana: energia.",
-              "preco": "€",
-              "dist": "em casa",
-              "poiCat": "restaurante",
-              "valeAPena": 1,
-              "fontes": [
-                {
-                  "o": "Briefing do Tobia (a base é a casa da família em Boulogne-Billancourt)",
-                  "u": "https://www.google.com/maps",
-                  "tier": "campo",
-                  "data": "2026-08-27",
-                  "prova": [
-                    "em casa",
-                    "Boulogne-Billancourt"
-                  ]
-                }
+              "o": "Wikipedia · Place des Vosges (coordenada)",
+              "u": "https://en.wikipedia.org/wiki/Place_des_Vosges",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.85556, 2.36556"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "3 anos",
+                "criança de 3 anos"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🌳",
+      "tema": "Bois de Boulogne · parque de diversões e estufas",
+      "temaCurto": "Bois de Boul.",
+      "bairro": "🌳 Paris — Bois de Boulogne (16e)",
+      "grupo": false,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. Este é o dia de <strong>sol</strong>: quase tudo é ao ar livre. A 15 minutos de casa.",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🎠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "parque",
+          "valeAPena": 3,
+          "nome": "Jardin d'Acclimatation (Bois de Boulogne)",
+          "mapsQuery": "Jardin d'Acclimatation, Paris",
+          "cat": "19 hectares · brinquedos desenhados pra 2-6 anos",
+          "sobre": "Aberto em <strong>6 de outubro de 1860</strong>, com <strong>19 hectares</strong> no norte do Bois, ao lado da Fondation Louis Vuitton. Hoje pertence à <strong>LVMH</strong>. Cerca de quarenta atrações, <strong>450 animais</strong> e um bloco de brinquedos desenhado especificamente para a faixa de <strong>2 a 6 anos</strong>.",
+          "imperdivel": "O <strong>teatro de Guignol</strong>, que está no jardim <strong>desde 1953</strong>. É a mesma marionete de vara que fazia rir os bisavós das crianças que riem hoje.",
+          "dicas": [
+            "💶 Entrada <strong>€7</strong> (a partir de 80 cm) · <strong>€5</strong> para sêniores de 60 anos ou mais · grátis abaixo de 80 cm. <strong>As atrações são suplemento</strong>: €4,50 avulsa ou €46 o passe ilimitado. Combo entrada+atrações a partir de 3 anos vai de €19 a €48.",
+            "🕐 Em <strong>agosto de 2026 abre 10h-19h todos os dias</strong>; fora das férias, 11h-18h em dia de semana.",
+            "🅿️ <strong>Não tem estacionamento próprio.</strong> A rota indicada é sair na Porte Maillot, deixar o carro no Indigo do Palais des Congrès e <strong>caminhar ~20 min pelo Bois</strong> — mas <strong>aos domingos e feriados o estacionamento no Bois de Boulogne é gratuito</strong>, e é por aí que se resolve.",
+            "🎡 A <strong>Fête à Neuneu</strong>, feira de mais de 200 atrações, fica na <strong>Pelouse de la Muette</strong>, no mesmo Bois, de <strong>28 de agosto a 11 de outubro de 2026</strong>, com <strong>entrada gratuita</strong>. Acesso pelo metrô <strong>linha 9, estação Rue de la Pompe</strong>. Não montei parada pra ela porque não achei coordenada publicada do terreno — vale como desvio de fim de tarde, não como programa."
+          ],
+          "duracao": "3h-dia inteiro",
+          "custo": "€7 entrada · €5 sênior 60+ · atrações à parte (ago/2026)",
+          "acessibilidade": "Parque plano · sem estacionamento próprio, ~20 min a pé da Porte Maillot",
+          "coord": {
+            "lat": 48.87757,
+            "lng": 2.26994
+          },
+          "fontes": [
+            {
+              "o": "Jardin d'Acclimatation · préparez votre visite (site oficial)",
+              "u": "https://www.jardindacclimatation.fr/preparez-votre-visite",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "€7",
+                "80 cm",
+                "€5",
+                "sêniores de 60 anos",
+                "€4,50",
+                "€46",
+                "€19 a €48",
+                "Não tem estacionamento próprio",
+                "Porte Maillot",
+                "~20 min",
+                "estacionamento no Bois de Boulogne é gratuito"
+              ]
+            },
+            {
+              "o": "Jardin d'Acclimatation · horaires (site oficial)",
+              "u": "https://www.jardindacclimatation.fr/horaires-ouverture-du-jardin",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "agosto de 2026 abre 10h-19h todos os dias",
+                "11h-18h"
+              ]
+            },
+            {
+              "o": "Wikipedia · Jardin d'Acclimatation",
+              "u": "https://en.wikipedia.org/wiki/Jardin_d%27Acclimatation",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "6 de outubro de 1860",
+                "19 hectares",
+                "LVMH",
+                "coordenada 48.87757, 2.26994"
+              ]
+            },
+            {
+              "o": "VisitParisRegion · Jardin d'Acclimatation",
+              "u": "https://www.visitparisregion.com/fr/jardin-d-acclimatation",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "450 animais",
+                "2 a 6 anos",
+                "teatro de Guignol",
+                "desde 1953",
+                "Fondation Louis Vuitton"
+              ]
+            },
+            {
+              "o": "Sortiraparis · La Fête à Neuneu 2026",
+              "u": "https://www.sortiraparis.com/en/what-to-visit-in-paris/walks/articles/43564-the-neuneu-festival-2026-the-fair-and-its-attractions-are-back-at-the-bois-de-boulogne",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "Fête à Neuneu",
+                "200 atrações",
+                "Pelouse de la Muette",
+                "28 de agosto a 11 de outubro de 2026",
+                "entrada gratuita",
+                "linha 9, estação Rue de la Pompe"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "3 anos"
               ]
             }
           ]
         },
         {
-          "hora": "15:00",
+          "hora": "15:30",
           "emoji": "🌴",
           "periodo": "tarde",
           "tipo": "card",
@@ -769,44 +1091,41 @@
           "valeAPena": 2,
           "nome": "Jardin des Serres d'Auteuil (3 av. de la Porte d'Auteuil)",
           "mapsQuery": "Jardin des Serres d'Auteuil, Paris",
-          "cat": "Estufas de 1898 · grátis · a carta na manga de dia chuvoso",
-          "sobre": "O sítio já servia de jardim botânico em <strong>1761</strong>, sob <strong>Luís XV</strong>. As estufas de ferro e vidro que estão lá hoje são posteriores: <strong>Jean-Camille Formigé</strong>, arquiteto dos Passeios e Plantações de Paris, as desenhou e construiu <strong>entre 1895 e 1898</strong>, com a missão de dar aos parisienses um lugar aberto a todos e dedicado à aclimatação de plantas exóticas — que era a moda da época. Guarda <strong>cerca de 5.000 espécies</strong> e um <strong>palmarium</strong> com uma imponente palmeira-das-canárias e <strong>carpas japonesas</strong> no tanque.",
-          "imperdivel": "O <strong>palmarium</strong>. É o lugar deste fim de semana onde vocês ficam debaixo de vidro, no calor, cercados de trópico, enquanto chove de verdade lá fora — e ainda por cima de graça.",
+          "cat": "Estufas de 1898 · grátis · carpas no palmarium",
+          "sobre": "O sítio já era jardim botânico em <strong>1761</strong>, sob <strong>Luís XV</strong>. As estufas de ferro e vidro atuais foram desenhadas e construídas por <strong>Jean-Camille Formigé</strong> entre <strong>1895 e 1898</strong>, para dar aos parisienses um lugar aberto a todos e dedicado à aclimatação de plantas exóticas. Guarda <strong>cerca de 5.000 espécies</strong>.",
+          "imperdivel": "O <strong>palmarium</strong>, com uma palmeira-das-canárias e <strong>carpas japonesas</strong> no tanque. Debaixo do vidro, no calor, com trópico em volta.",
           "dicas": [
-            "🕐 O jardim abre <strong>9h-20h30</strong> de 1º/mai a 31/ago, mas <strong>as estufas fecham bem antes</strong> — e aqui as fontes divergem: <strong>16h45, 17h ou 17h30</strong> no fim de semana. <strong>Cheguem até as 16h</strong> e o problema deixa de existir; na dúvida, <strong>01 40 72 16 16</strong>.",
-            "💶 <strong>Entrada grátis, sempre</strong> — jardim e estufas.",
-            "🐟 As carpas do palmarium fazem o mesmo serviço que as de Albert-Kahn, com a diferença de estarem sob teto.",
-            "🚗 A ~3,5 km de casa (~10min). De metrô, é a estação Porte d'Auteuil.",
-            "🧓 Pequeno de propósito: dá pra ver tudo devagar, sentando duas vezes no caminho.",
-            "🌹 <strong>Enquanto estiverem no Bois: o Parc de Bagatelle é pula sem culpa.</strong> As 10.000 roseiras de 1.200 variedades são um evento de <strong>junho</strong>, e os pavões abrem a cauda <strong>entre abril e junho</strong>. Em 30 de agosto vocês pagam €2,70 para ver um parque bonito e comum."
+            "💶 <strong>Entrada grátis, sempre.</strong>",
+            "🕐 O jardim abre <strong>9h-20h30</strong> de 1º/maio a 31/agosto. As <strong>estufas fecham bem antes</strong> — e aqui as fontes divergem entre <strong>16h45, 17h e 17h30</strong> no fim de semana. Cheguem até as 16h; na dúvida, <strong>01 40 72 16 16</strong>.",
+            "🚇 Metrô <strong>Porte d'Auteuil</strong>. A ~3,5 km de casa."
           ],
           "duracao": "30min-1h",
           "custo": "Grátis (ago/2026)",
-          "acessibilidade": "Plano e curto · estufas com piso liso e teto · bancos no jardim · carrinho passa em tudo",
+          "acessibilidade": "Plano e curto · estufas com piso liso e teto · bancos no jardim",
           "coord": {
-            "lat": 48.8479,
-            "lng": 2.2547
+            "lat": 48.84794,
+            "lng": 2.25469
           },
           "fontes": [
             {
               "o": "Ville de Paris · Jardin des Serres d'Auteuil",
               "u": "https://www.paris.fr/lieux/jardin-des-serres-d-auteuil-1780",
               "tier": "oficial",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
                 "9h-20h30",
-                "1º/mai a 31/ago",
+                "1º/maio a 31/agosto",
                 "Entrada grátis",
                 "3 av. de la Porte d'Auteuil"
               ]
             },
             {
-              "o": "L'Officiel des spectacles + Ville de Paris · Serres d'Auteuil (horário das estufas · fontes divergem)",
+              "o": "L'Officiel des spectacles · Serres d'Auteuil (horário das estufas · fontes divergem)",
               "u": "https://www.offi.fr/a-travers-paris/serres-dauteuil-3182.html",
               "tier": "editorial",
               "data": "2026-08-27",
               "prova": [
-                "as estufas fecham bem antes",
+                "estufas fecham bem antes",
                 "16h45",
                 "17h",
                 "17h30",
@@ -817,12 +1136,12 @@
               "o": "Paris je t'aime · Jardin des Serres d'Auteuil",
               "u": "https://parisjetaime.com/eng/culture/jardin-des-serres-d-auteuil-jardin-botanique-de-paris-p938",
               "tier": "editorial",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
                 "1761",
                 "Luís XV",
                 "Jean-Camille Formigé",
-                "entre 1895 e 1898",
+                "1895 e 1898",
                 "cerca de 5.000 espécies",
                 "palmarium",
                 "palmeira-das-canárias",
@@ -831,197 +1150,94 @@
               ]
             },
             {
-              "o": "Briefing do Tobia (perfil da família) + rota medida no Google Maps em 27/ago/2026",
-              "u": "https://www.google.com/maps",
-              "tier": "campo",
-              "data": "2026-08-27",
-              "prova": [
-                "3,5 km",
-                "10min",
-                "~10min de casa",
-                "agosto",
-                "30 de agosto"
-              ]
-            },
-            {
-              "o": "Paris je t'aime · Parc de Bagatelle",
-              "u": "https://parisjetaime.com/eng/culture/parc-de-bagatelle-jardin-botanique-de-paris-p1162",
-              "tier": "editorial",
-              "data": "2026-08",
-              "prova": [
-                "10.000 roseiras",
-                "1.200 variedades",
-                "junho",
-                "entre abril e junho",
-                "€2,70",
-                "pavões"
-              ]
-            }
-          ]
-        },
-        {
-          "hora": "15:00",
-          "emoji": "🎠",
-          "periodo": "tarde",
-          "tipo": "card",
-          "risco": "yellow",
-          "poiCat": "parque",
-          "valeAPena": 3,
-          "nome": "🔄 ALT · Jardin d'Acclimatation (se o céu abrir)",
-          "mapsQuery": "Jardin d'Acclimatation, Paris",
-          "cat": "Substitui as estufas · só faz sentido sem chuva",
-          "sobre": "Parque de <strong>19 hectares</strong> aberto em <strong>6 de outubro de 1860</strong>, no norte do Bois de Boulogne ao lado da Fondation Louis Vuitton, hoje da <strong>LVMH</strong>. Cerca de quarenta atrações, <strong>450 animais</strong>, e brinquedos desenhados especificamente para <strong>2 a 6 anos</strong> — o que faz dele o lugar do fim de semana calibrado na idade da filha. O <strong>teatro de Guignol</strong> está lá <strong>desde 1953</strong>: é a mesma marionete que fazia rir os bisavós das crianças que riem hoje.",
-          "imperdivel": "O <strong>Guignol</strong>. Não é nostalgia de adulto — uma criança de 3 anos que nunca viu marionete de vara reage a ele como se alguém tivesse inventado a televisão na frente dela.",
-          "dicas": [
-            "💶 Entrada simples <strong>€7</strong> (adultos e crianças a partir de 80cm) · <strong>€5 reduzido para sêniores a partir de 60 anos</strong> · grátis abaixo de 80cm. <strong>As atrações são suplemento</strong>: €4,50 avulsa ou €46 o Liberty Pass ilimitado. Entrada + atrações a partir de 3 anos vai de €19 a €48 conforme o período.",
-            "🕐 Em <strong>agosto de 2026 o parque abre 10h-19h todos os dias</strong>. As férias de verão só terminam em <strong>1º de setembro de 2026</strong> — este fim de semana ainda é alta temporada de família francesa.",
-            "🅿️ <strong>O problema real é chegar.</strong> O Jardin <strong>não tem estacionamento próprio</strong>: a rota de carro indicada é sair na Porte Maillot, estacionar no Indigo do Palais des Congrès e <strong>caminhar ~20min pelo Bois</strong>. Com carrinho e avós de 1km, esses 20 minutos são o passeio antes do passeio.",
-            "🅿️ <strong>A saída</strong>: aos domingos e feriados o estacionamento no <strong>Bois de Boulogne é gratuito</strong> — é por aí que se resolve. Confirmem o ponto exato na hora.",
-            "⚠️ Sem sol, este card não existe. Com chuva, é o Serres d'Auteuil."
-          ],
-          "duracao": "2h-3h",
-          "custo": "€7 entrada · €5 sênior 60+ (ago/2026) · atrações à parte (€4,50 avulsa · €46 passe)",
-          "acessibilidade": "Parque plano, mas 19 hectares · sem estacionamento próprio, ~20min a pé da Porte Maillot · com os avós, é o card de maior atrito do fim de semana",
-          "coord": {
-            "lat": 48.8776,
-            "lng": 2.2699
-          },
-          "fontes": [
-            {
-              "o": "Jardin d'Acclimatation (site oficial) · preparez votre visite",
-              "u": "https://www.jardindacclimatation.fr/preparez-votre-visite",
-              "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "€7",
-                "a partir de 80cm",
-                "€5",
-                "sêniores a partir de 60 anos",
-                "€4,50",
-                "€46",
-                "€19 a €48",
-                "não tem estacionamento próprio",
-                "Porte Maillot",
-                "~20min",
-                "Bois de Boulogne é gratuito",
-                "20 min",
-                "~20min a pé",
-                "10h-19h",
-                "agosto de 2026"
-              ]
-            },
-            {
-              "o": "Wikipedia · Jardin d'Acclimatation",
-              "u": "https://en.wikipedia.org/wiki/Jardin_d%27Acclimatation",
+              "o": "Jardinez · Jardin des Serres d'Auteuil (coordenada)",
+              "u": "https://www.jardinez.com/Parcs-Jardins-des-Serres-d-Auteuil_fr_1133",
               "tier": "diretorio",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
-                "19 hectares",
-                "6 de outubro de 1860",
-                "LVMH",
-                "coordenada 48.8776, 2.2699"
+                "coordenada 48.84794, 2.25469"
               ]
             },
             {
-              "o": "VisitParisRegion · Jardin d'Acclimatation",
-              "u": "https://www.visitparisregion.com/fr/jardin-d-acclimatation",
-              "tier": "oficial",
-              "data": "2026-08",
-              "prova": [
-                "450 animais",
-                "2 a 6 anos",
-                "teatro de Guignol",
-                "desde 1953",
-                "Fondation Louis Vuitton"
-              ]
-            },
-            {
-              "o": "Briefing do Tobia (perfil da família) + rota medida no Google Maps em 27/ago/2026",
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
               "u": "https://www.google.com/maps",
               "tier": "campo",
               "data": "2026-08-27",
               "prova": [
-                "3 anos",
-                "1km",
-                "avós de 1km"
-              ]
-            },
-            {
-              "o": "Jardin d'Acclimatation (site oficial) · horaires d'ouverture",
-              "u": "https://www.jardindacclimatation.fr/horaires-ouverture-du-jardin",
-              "tier": "oficial",
-              "data": "2026-08-27",
-              "prova": [
-                "10h-19h",
-                "agosto de 2026 o parque abre 10h-19h todos os dias"
-              ]
-            },
-            {
-              "o": "Vacances Scolaires Éducation · calendário 2025-2026 (rentrée)",
-              "u": "https://www.vacances-scolaires-education.fr/vacances-scolaires-2025-2026.html",
-              "tier": "oficial",
-              "data": "2026-08-27",
-              "prova": [
-                "1º de setembro de 2026",
-                "férias de verão",
-                "alta temporada",
-                "temporada",
-                "este fim de semana ainda é alta temporada de família francesa"
+                "~3,5 km"
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "date": "🐠",
+      "tema": "Trocadéro e Passy · tubarões e o jardim do Balzac",
+      "temaCurto": "Trocadéro",
+      "bairro": "🌳 Paris — 16e Trocadéro / Passy",
+      "grupo": false,
+      "cor": "#0284c7",
+      "gradA": "#075985",
+      "gradB": "#38bdf8",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. Dia curto e <strong>à prova de chuva</strong>: as duas paradas são cobertas e ficam a 2 km uma da outra.",
+      "stops": [
         {
-          "hora": "15:00",
-          "emoji": "🐠",
-          "periodo": "tarde",
+          "hora": "10:00",
+          "emoji": "🦈",
+          "periodo": "manha",
           "tipo": "card",
           "risco": "yellow",
           "poiCat": "atracao",
           "valeAPena": 2,
-          "nome": "🔄 ALT · Aquarium de Paris (5 av. Albert de Mun) · se cair o mundo",
+          "nome": "Aquarium de Paris (5 av. Albert de Mun, 16e)",
           "mapsQuery": "Aquarium de Paris",
-          "cat": "Substitui as estufas · 100% coberto, e caro do jeito que soa",
-          "sobre": "Nos jardins do Trocadéro. Tem o <strong>maior tanque de tubarões da França</strong> — <strong>3 milhões de litros</strong>, cerca de <strong>40 tubarões de seis espécies</strong> (cinzento, ponta-preta, zebra, nutriz, chabot e chabot-bambu) — e o <strong>maior Medusarium da Europa</strong>. É o seguro-chuva mais confiável a 15 minutos de casa, e a filha de 3 anos sai feliz.",
-          "imperdivel": "O <strong>Medusarium</strong> — e não o tanque de tubarões. As águas-vivas iluminadas em coluna são hipnóticas para uma criança pequena de um jeito que peixe grande não é, e é ali que o lugar realmente é o maior da Europa em alguma coisa.",
+          "cat": "Tubarões e o Medusarium · caro, e honesto sobre isso",
+          "sobre": "Nos jardins do Trocadéro. Tem o <strong>maior tanque de tubarões da França</strong> — <strong>3 milhões de litros</strong> e cerca de <strong>40 tubarões de seis espécies</strong> — e o <strong>maior Medusarium da Europa</strong>.",
+          "imperdivel": "O <strong>Medusarium</strong>, e não o tanque dos tubarões. As águas-vivas iluminadas em coluna prendem uma criança pequena de um jeito que peixe grande não prende.",
           "dicas": [
-            "💶 <strong>€27,50 adulto (13+) · €20,50 criança (3-12)</strong>. Para quatro adultos e uma criança de 3 anos: <strong>€130,50</strong>.",
-            "⚠️ <strong>Honestidade</strong>: as avaliações são mitigadas, e o motivo recorrente é sempre o mesmo — <strong>caro para o tamanho</strong>, e a visita dura <strong>1h a 1h30</strong>, não um dia. A animação da sereia dura <strong>5 minutos</strong> e frustra as crianças que esperavam mais.",
-            "🎟️ <strong>Reservem online</strong> em vez de comprar na bilheteria: comprar na hora significa somar fila ao preço.",
-            "🕐 <strong>9h30-19h todos os dias</strong>, última entrada e fechamento das caixas <strong>antes das 18h</strong>.",
-            "🧮 A conta honesta: €130,50 por 1h30 é o preço da <em>garantia</em> de que a tarde funciona com chuva forte, não o preço do valor. Se esse número incomodar, o Serres d'Auteuil é grátis e também tem teto.",
-            "💭 Se esse número incomodar, <strong>é pula sem culpa</strong>: com chuva, o Serres d'Auteuil é grátis, tem teto e fica a 3,5 km de casa. O aquário é conforto pago, não é imperdível."
+            "💶 <strong>€27,50 adulto (13+) · €20,50 criança de 3 a 12.</strong> Para três: cerca de €75,50.",
+            "⚠️ As avaliações são mitigadas, e sempre pelo mesmo motivo: <strong>caro para o tamanho</strong>, e a visita real dura <strong>1h a 1h30</strong>. A animação da sereia dura <strong>5 minutos</strong> e costuma frustrar quem esperava mais.",
+            "🕐 <strong>9h30-19h todos os dias</strong>, última entrada e fechamento das caixas antes das 18h. <strong>Reservem online</strong> — comprar na bilheteria é somar fila ao preço."
           ],
           "duracao": "1h-1h30",
-          "custo": "€27,50 adulto · €20,50 criança 3-12 (ago/2026) · ~€130,50 para os cinco",
-          "acessibilidade": "100% coberto e plano · rampas internas · bancos nas salas escuras · o melhor card do fim de semana para os avós em dia de chuva",
+          "custo": "€27,50 adulto · €20,50 criança 3-12 (ago/2026)",
+          "acessibilidade": "100% coberto e plano · rampas internas · bancos nas salas escuras",
           "coord": {
             "lat": 48.86222,
             "lng": 2.29099
           },
           "fontes": [
             {
-              "o": "Aquarium de Paris (site oficial) · tarifs",
+              "o": "Aquarium de Paris · tarifs (site oficial)",
               "u": "https://aquariumdeparis.com/tarifs/",
               "tier": "oficial",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
                 "€27,50 adulto",
                 "13+",
                 "€20,50 criança",
-                "3-12",
-                "€130,50",
-                "18h",
-                "última entrada",
-                "última entrada às 18h",
-                "9h30-19h"
+                "3 a 12",
+                "€75,50"
+              ]
+            },
+            {
+              "o": "Aquarium de Paris · accès et horaires (site oficial)",
+              "u": "https://aquariumdeparis.com/acces-horaire-restauration/",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "9h30-19h todos os dias",
+                "antes das 18h",
+                "5 av. Albert de Mun",
+                "última entrada"
               ]
             },
             {
               "o": "Anigaido · Aquarium de Paris (coleção)",
               "u": "https://www.anigaido.com/lieux/aquariums-2/aquarium-de-paris",
               "tier": "editorial",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
                 "maior tanque de tubarões da França",
                 "3 milhões de litros",
@@ -1030,10 +1246,10 @@
               ]
             },
             {
-              "o": "Allovoyages · Aquarium de Paris, avis et durée de visite",
+              "o": "Allovoyages · Aquarium de Paris, avis",
               "u": "https://allovoyages.fr/destinations/aquarium-de-paris-avis/",
               "tier": "crowd",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
                 "caro para o tamanho",
                 "1h a 1h30",
@@ -1041,38 +1257,855 @@
               ]
             },
             {
-              "o": "Google Maps · Aquarium de Paris (coordenada e endereço)",
+              "o": "Google Maps · Aquarium de Paris (coordenada)",
               "u": "https://www.google.com/maps/place/Aquarium+de+Paris/@48.8622162,2.2909927,15z/data=!4m5!3m4!1s0x0:0xf88aec5c3eb444e8!8m2!3d48.8622162!4d2.2909927",
               "tier": "diretorio",
-              "data": "2026-08",
+              "data": "2026-08-27",
               "prova": [
-                "coordenada 48.86222, 2.29099",
-                "5 av. Albert de Mun"
+                "coordenada 48.86222, 2.29099"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🏡",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "Maison de Balzac (47 rue Raynouard, 16e)",
+          "mapsQuery": "Maison de Balzac, Paris",
+          "cat": "Grátis · jardim escondido com vista da Torre Eiffel",
+          "sobre": "<strong>Honoré de Balzac (1799-1850)</strong> alugou o último andar desta casa <strong>de 1840 a 1847</strong>, <strong>sob o nome da governanta</strong>, para despistar credores. Foi neste pavilhão que escreveu <em>La Comédie humaine</em>.",
+          "imperdivel": "O <strong>jardim escondido com vista da Torre Eiffel</strong> e o café <strong>Rose Bakery</strong> dentro dele. O jardim é <strong>gratuito o ano inteiro</strong> no horário do museu.",
+          "dicas": [
+            "💶 <strong>Coleção permanente e jardim grátis</strong> · só exposição temporária é paga.",
+            "🕐 <strong>Terça a domingo, 10h-18h.</strong>",
+            "🚶 A ~2 km do Aquarium, ainda no 16e."
+          ],
+          "duracao": "1h",
+          "custo": "Coleção permanente e jardim grátis (ago/2026)",
+          "acessibilidade": "Casa do séc. XIX em desnível · jardim e café no nível da entrada",
+          "coord": {
+            "lat": 48.85544,
+            "lng": 2.281004
+          },
+          "fontes": [
+            {
+              "o": "Maison de Balzac · informations pratiques (site oficial)",
+              "u": "https://www.maisondebalzac.paris.fr/en/your-visit/practical-information",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Terça a domingo, 10h-18h",
+                "Coleção permanente e jardim grátis",
+                "47 rue Raynouard",
+                "Rose Bakery",
+                "gratuito o ano inteiro"
               ]
             },
             {
-              "o": "Briefing do Tobia (perfil da família) + rota medida no Google Maps em 27/ago/2026",
+              "o": "Wikipedia · Maison de Balzac",
+              "u": "https://en.wikipedia.org/wiki/Maison_de_Balzac",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "Honoré de Balzac (1799-1850)",
+                "de 1840 a 1847",
+                "sob o nome da governanta",
+                "La Comédie humaine",
+                "coordenada 48.85544, 2.28100",
+                "último andar",
+                "último"
+              ]
+            },
+            {
+              "o": "Sortiraparis · o jardim secreto da Maison de Balzac",
+              "u": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/196412-the-maison-de-balzac-home-of-the-famous-writer-and-his-secret-garden-overlooking-the-eiffel-tower",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "jardim escondido com vista da Torre Eiffel"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
               "u": "https://www.google.com/maps",
               "tier": "campo",
               "data": "2026-08-27",
               "prova": [
-                "15 min",
-                "3 anos",
-                "a 15 minutos de casa",
-                "3,5 km"
+                "~2 km"
               ]
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🕌",
+      "tema": "Rive Gauche · terraço árabe e a caravana dos animais",
+      "temaCurto": "Rive Gauche",
+      "bairro": "📚 Paris — 5e Jussieu / Jardin des Plantes",
+      "grupo": false,
+      "cor": "#c2410c",
+      "gradA": "#7c2d12",
+      "gradB": "#f97316",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. As duas paradas ficam a <strong>menos de 1 km</strong> uma da outra, às margens do Sena.",
+      "stops": [
+        {
+          "hora": "10:30",
+          "emoji": "🕌",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "Institut du monde arabe (1 rue des Fossés-Saint-Bernard, 5e)",
+          "mapsQuery": "Institut du monde arabe, Paris",
+          "cat": "Museu pago · e um terraço panorâmico de graça",
+          "sobre": "Instituição fundada em Paris em <strong>1980</strong> pela França com <strong>18 países árabes</strong> para pesquisar e difundir a cultura do mundo árabe. O prédio, de Jean Nouvel, é conhecido pela fachada de diafragmas fotossensíveis.",
+          "imperdivel": "A <strong>terrasse panoramique</strong>, que é <strong>de acesso livre</strong> — sem pagar nada — e abre sobre a <strong>abside da Notre-Dame</strong>, a <strong>Île Saint-Louis</strong> e o Sena. É uma das vistas mais bem guardadas de Paris justamente porque as pessoas acham que precisa comprar ingresso.",
+          "dicas": [
+            "💶 Museu <strong>€10</strong> · reduzido <strong>€7</strong> · <strong>grátis abaixo de 26 anos</strong> e para pessoa com deficiência e acompanhante, com comprovante.",
+            "🕐 Museu e exposições: <strong>terça a sexta 10h-18h</strong>, <strong>fim de semana e feriados 10h-19h</strong>. Terraço: mesma grade.",
+            "🎫 A exposição <strong>Byblos, cidade milenar do Líbano</strong> — mais de <strong>400 peças</strong> cobrindo <strong>9.000 anos</strong> — estava anunciada <strong>até agosto de 2026</strong>. Confiram no site se ainda está em cartaz antes de contar com ela.",
+            "👶 Com 3 anos, o programa é o terraço e o elevador; o museu é adulto."
+          ],
+          "duracao": "1h-1h30",
+          "custo": "Museu €10 · reduzido €7 · grátis <26 anos · terraço grátis (ago/2026)",
+          "acessibilidade": "Prédio moderno com elevadores · terraço acessível · entrada gratuita para pessoa com deficiência e acompanhante",
+          "coord": {
+            "lat": 48.8489,
+            "lng": 2.35704
+          },
+          "fontes": [
             {
-              "o": "Aquarium de Paris (site oficial) · accès, horaires, restauration",
-              "u": "https://aquariumdeparis.com/acces-horaire-restauration/",
+              "o": "Institut du monde arabe · horaires & tarifs (site oficial)",
+              "u": "http://www.imarabe.org/fr/horaires-tarifs",
               "tier": "oficial",
               "data": "2026-08-27",
               "prova": [
-                "9h30-19h todos os dias",
-                "última entrada",
-                "antes das 18h",
-                "18h",
-                "5 avenue Albert de Mun"
+                "€10",
+                "€7",
+                "grátis abaixo de 26 anos",
+                "terça a sexta 10h-18h",
+                "fim de semana e feriados 10h-19h"
+              ]
+            },
+            {
+              "o": "Institut du monde arabe · terrasse (site oficial)",
+              "u": "http://www.imarabe.org/fr/terrasse",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "terrasse panoramique",
+                "de acesso livre",
+                "abside da Notre-Dame",
+                "Île Saint-Louis"
+              ]
+            },
+            {
+              "o": "Wikipedia · Institut du monde arabe",
+              "u": "https://en.wikipedia.org/wiki/Institut_du_monde_arabe",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "1980",
+                "18 países árabes",
+                "1 rue des Fossés-Saint-Bernard"
+              ]
+            },
+            {
+              "o": "Wikidata · Institut du monde arabe (coordenada)",
+              "u": "https://www.wikidata.org/wiki/Q860166",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.84890, 2.35704"
+              ]
+            },
+            {
+              "o": "JDS · 10 expositions incontournables à Paris en août 2026",
+              "u": "https://www.jds.fr/paris/actu/10-expositions-incontournables-a-voir-a-paris-en-aout-2026-1678096_A",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "Byblos, cidade milenar do Líbano",
+                "400 peças",
+                "9.000 anos",
+                "até agosto de 2026"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "3 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🦒",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Grande Galerie de l'Évolution (36 rue Geoffroy-Saint-Hilaire, 5e)",
+          "mapsQuery": "Grande Galerie de l'Évolution, Paris",
+          "cat": "A caravana de animais · €12 e grátis abaixo de 26 anos",
+          "sobre": "A galeria do Muséum national d'Histoire naturelle, dentro do Jardin des Plantes. A coleção permanente custa <strong>€12</strong> e é <strong>gratuita abaixo de 26 anos</strong>, além de grátis para menores de 3 anos, pessoa com deficiência e acompanhante. Tem uma <strong>galeria dedicada às crianças</strong>, com espaço didático para os menores.",
+          "imperdivel": "A <strong>caravana de animais empalhados atravessando o salão central</strong> em fila indiana. Para uma criança de 3 anos é o que um museu consegue fazer de parecido com um sonho.",
+          "dicas": [
+            "🕐 <strong>10h-18h todos os dias, exceto terça.</strong> Última entrada nas bilheterias <strong>45 minutos antes</strong> do fechamento.",
+            "🚗 Estacionar no 5e é difícil — aqui o <strong>metrô ganha do carro</strong>.",
+            "🌿 Está dentro do <strong>Jardin des Plantes</strong>: se sobrar tempo e sol, o jardim inteiro está do lado de fora, de graça."
+          ],
+          "duracao": "1h30-2h",
+          "custo": "€12 · grátis <26 anos (ago/2026)",
+          "acessibilidade": "Museu moderno em vários níveis, com elevador · carrinho circula",
+          "coord": {
+            "lat": 48.84187,
+            "lng": 2.35638
+          },
+          "fontes": [
+            {
+              "o": "MNHN · Grande Galerie de l'Évolution (site oficial)",
+              "u": "https://www.mnhn.fr/en/grande-galerie-de-l-evolution-gallery-of-evolution",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Muséum national d'Histoire naturelle",
+                "Jardin des Plantes",
+                "36 rue Geoffroy-Saint-Hilaire"
+              ]
+            },
+            {
+              "o": "Familin'Paris · Grande Galerie de l'Évolution, tarifas 2026",
+              "u": "https://www.familinparis.fr/la-grande-galerie-de-l-evolution-tarif/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "€12",
+                "gratuita abaixo de 26 anos",
+                "menores de 3 anos",
+                "10h-18h todos os dias, exceto terça",
+                "45 minutos",
+                "galeria dedicada às crianças",
+                "Última entrada",
+                "última entrada"
+              ]
+            },
+            {
+              "o": "Apple Maps · Grande galerie de l'évolution (coordenada)",
+              "u": "https://maps.apple.com/place?coordinate=48.8418666%2C+2.3563799&name=Grande+galerie+de+l%27%C3%A9volution",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.84187, 2.35638"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "menos de 1 km"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🏰",
+      "tema": "Saint-Germain-en-Laye · o terraço de Le Nôtre",
+      "temaCurto": "St-Germain",
+      "bairro": "🏰 Yvelines — Saint-Germain-en-Laye",
+      "grupo": false,
+      "cor": "#4338ca",
+      "gradA": "#312e81",
+      "gradB": "#6366f1",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. ~25-30 min de carro a oeste. <strong>Atenção à rota</strong>: fujam do Pont de Saint-Cloud pela A86 norte + N13 via Rueil. De RER A é direto e evita a discussão.",
+      "stops": [
+        {
+          "hora": "09:45",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Boulogne → Saint-Germain-en-Laye",
+          "cat": "~25-30 min · A86 norte + N13 via Rueil (evita o Pont de Saint-Cloud) · ou RER A direto",
+          "roadType": "interior",
+          "mapsQuery": "Château de Saint-Germain-en-Laye",
+          "coord": {
+            "lat": 48.89778,
+            "lng": 2.09556
+          }
+        },
+        {
+          "hora": "10:15",
+          "emoji": "🏰",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Château e Musée d'Archéologie nationale (Saint-Germain-en-Laye)",
+          "mapsQuery": "Musée d'Archéologie nationale, Saint-Germain-en-Laye",
+          "cat": "Antiga residência dos reis · e o terraço que Le Nôtre desenhou",
+          "sobre": "O <strong>Musée d'Archéologie nationale</strong> ocupa um château cujas origens remontam ao <strong>século XII</strong>, antiga residência dos reis da França. Em volta ficam jardins desenhados por <strong>Le Nôtre</strong> — o mesmo de Versalhes — e uma floresta de <strong>3.500 hectares</strong>.",
+          "imperdivel": "Depois do museu, subir ao <strong>terraço</strong>: dali o domínio inteiro e o <strong>vale do Sena</strong> ficam aos seus pés. É plano, longo e feito para caminhar devagar — o oposto de um parque de château.",
+          "dicas": [
+            "💶 <strong>€7 · reduzido €5,50.</strong>",
+            "🕐 <strong>Todos os dias, exceto terça, das 10h às 17h.</strong> Tel. <strong>01 39 10 13 00</strong>.",
+            "🅿️ A cidade tem <strong>seis estacionamentos públicos</strong> (Centre-château, Coches, Pologne, Marché-Neuf, Pompidou, Lisière Pereire), somando <strong>2.841 vagas</strong>. É pago de segunda a sábado das 9h às 19h e <strong>gratuito aos domingos e feriados</strong>. O <strong>Marché-Neuf tem vaga PMR</strong>.",
+            "🛍️ O centro tem mercado e é caminhável — dá pra emendar almoço sem pegar o carro de novo."
+          ],
+          "duracao": "2h-3h",
+          "custo": "€7 · reduzido €5,50 (ago/2026)",
+          "acessibilidade": "Château histórico · terraço de Le Nôtre plano e longo · estacionamento Marché-Neuf com vaga PMR",
+          "coord": {
+            "lat": 48.89778,
+            "lng": 2.09556
+          },
+          "fontes": [
+            {
+              "o": "Musée d'Archéologie nationale · informations pratiques (site oficial)",
+              "u": "https://musee-archeologienationale.fr/en/practical-information",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "€7",
+                "€5,50",
+                "Todos os dias, exceto terça, das 10h às 17h",
+                "01 39 10 13 00"
+              ]
+            },
+            {
+              "o": "ArtsHebdoMédias · Musée d'Archéologie nationale, domaine de Saint-Germain-en-Laye",
+              "u": "https://www.artshebdomedias.com/annuaire/190613-musee-archeologie-nationale-domaine-de-saint-germain-en-laye/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "século XII",
+                "residência dos reis da França",
+                "Le Nôtre",
+                "3.500 hectares",
+                "terraço",
+                "vale do Sena"
+              ]
+            },
+            {
+              "o": "Ville de Saint-Germain-en-Laye · stationnement",
+              "u": "https://www.saintgermainenlaye.fr/1667/la-ville-vous/me-stationner/ou-et-comment.htm",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "seis estacionamentos públicos",
+                "2.841 vagas",
+                "9h às 19h",
+                "gratuito aos domingos e feriados",
+                "Marché-Neuf tem vaga PMR"
+              ]
+            },
+            {
+              "o": "Wikipedia · Saint-Germain-en-Laye (coordenada do château)",
+              "u": "https://en.wikipedia.org/wiki/Saint-Germain-en-Laye",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.89778, 2.09556"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "~25-30 min",
+                "A86 norte",
+                "N13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🧚",
+      "tema": "Château de Breteuil · os contos de Perrault em cera",
+      "temaCurto": "Breteuil",
+      "bairro": "🏰 Yvelines — Choisel, vale de Chevreuse",
+      "grupo": false,
+      "cor": "#a21caf",
+      "gradA": "#701a75",
+      "gradB": "#d946ef",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. ~35 km e ~45 min a sudoeste. É o passeio da lista mais desenhado para uma criança pequena.",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Boulogne → Choisel (Breteuil)",
+          "cat": "~35 km · ~45 min · sudoeste, pelo vale de Chevreuse",
+          "roadType": "interior",
+          "mapsQuery": "Château de Breteuil, Choisel",
+          "coord": {
+            "lat": 48.67944,
+            "lng": 2.02344
+          }
+        },
+        {
+          "hora": "10:45",
+          "emoji": "🧚",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Château de Breteuil (Choisel, 78)",
+          "mapsQuery": "Château de Breteuil, Choisel",
+          "cat": "7 contos de Perrault encenados com figuras de cera",
+          "sobre": "Nas dependências do château, <strong>sete contos de Charles Perrault</strong> estão encenados com <strong>cerca de vinte personagens de cera</strong>: o Pequeno Polegar e os irmãos, o Chapeuzinho Vermelho, a Cinderela, o Barba Azul e a Pele de Asno.",
+          "imperdivel": "A <strong>conteuse</strong>, que recebe crianças e adultos <strong>às 16h30 todos os sábados, domingos e feriados</strong>, e <strong>todos os dias durante as férias escolares da região parisiense</strong>. É a diferença entre ver bonecos e ouvir a história.",
+          "dicas": [
+            "💶 Só o parque <strong>€13,50</strong> (reduzido €12,50) · château + jardins + contos <strong>€19,50</strong> (€17,50 sêniores e professores, €16,50 crianças e famílias numerosas). <strong>Grátis abaixo de 5 anos</strong>.",
+            "🕐 O parque abre <strong>às 10h</strong> todos os dias. Château e jardins <strong>10h-20h</strong>, com <strong>última entrada às 17h30</strong>.",
+            "⚠️ <strong>Barba Azul em cera aos 3 anos pode não ser o que vocês querem.</strong> Dá pra passar reto por essa dependência — vale saber antes, não na frente da criança.",
+            "🕟 A conteuse às 16h30 empurra a volta pra depois das 17h30. Num dia sem compromisso à noite, funciona."
+          ],
+          "duracao": "3h-4h",
+          "custo": "Parque €13,50 · château+jardins+contos €19,50 · grátis <5 anos (ago/2026)",
+          "acessibilidade": "Parque grande e château histórico · dependências dos contos no térreo",
+          "coord": {
+            "lat": 48.67944,
+            "lng": 2.02344
+          },
+          "fontes": [
+            {
+              "o": "Château de Breteuil · horaires, tarifs, accès (site oficial)",
+              "u": "https://www.breteuil.fr/en/opening-times-prices-directions/",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "€13,50",
+                "€12,50",
+                "€19,50",
+                "€17,50",
+                "€16,50",
+                "Grátis abaixo de 5 anos",
+                "às 10h",
+                "10h-20h",
+                "última entrada às 17h30"
+              ]
+            },
+            {
+              "o": "Familin'Paris · Château de Breteuil et les contes de Perrault",
+              "u": "https://www.familinparis.fr/chateau-de-breteuil-tarif/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "sete contos de Charles Perrault",
+                "cerca de vinte personagens de cera",
+                "Pequeno Polegar",
+                "Chapeuzinho Vermelho",
+                "Cinderela",
+                "Barba Azul",
+                "Pele de Asno",
+                "às 16h30 todos os sábados, domingos e feriados",
+                "todos os dias durante as férias escolares"
+              ]
+            },
+            {
+              "o": "Monumentum · Château de Breteuil à Choisel (coordenada)",
+              "u": "https://monumentum.fr/chateau-breteuil-pa00087406.html",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.67944, 2.02344",
+                "Choisel"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "~35 km",
+                "~45 min"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "3 anos"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "⚔️",
+      "tema": "Provins · cidade medieval e o balé das aves de rapina",
+      "temaCurto": "Provins",
+      "bairro": "⚔️ Seine-et-Marne — Provins",
+      "grupo": false,
+      "cor": "#b45309",
+      "gradA": "#78350f",
+      "gradB": "#f59e0b",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. <strong>91 km e ~1h15</strong> a leste — é o mais longe da lista, e o dia todo se organiza em volta do espetáculo das 15h45.",
+      "stops": [
+        {
+          "hora": "09:30",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Boulogne → Provins",
+          "cat": "~91 km · ~1h15 · leste · direção limpa em relação ao oeste de Paris",
+          "roadType": "autopista",
+          "mapsQuery": "Provins",
+          "coord": {
+            "lat": 48.56028,
+            "lng": 3.29889
+          }
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🏰",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Provins · cidade medieval e Aigles des Remparts",
+          "mapsQuery": "Provins cité médiévale",
+          "cat": "Patrimônio Mundial desde 2001 · falcoaria a cavalo às 15h45",
+          "sobre": "Provins conservou a arquitetura medieval e foi <strong>centro econômico e sede de feiras anuais</strong> durante a Idade Média; virou <strong>Patrimônio Mundial da UNESCO em 2001</strong>. A <strong>Tour César</strong> está atestada por uma carta de <strong>1137</strong> e foi reconstruída no reinado de <strong>Henri le Libéral (1152-1181)</strong>, servindo de torre de vigia e também de prisão.",
+          "imperdivel": "<strong>Les Aigles des Remparts</strong>: falcoaria a cavalo, com <strong>mais de 25 espécies de aves de rapina em voo livre</strong>. Em agosto, <strong>15h45 nos fins de semana e feriados</strong> (15h em dia de semana). A temporada vai de <strong>28 de março a 1º de novembro de 2026</strong>.",
+          "dicas": [
+            "💶 Espetáculo <strong>€12 adulto · €8 criança de 4 a 12 anos</strong>. O <strong>Pass Provins + Aigles des Remparts</strong> sai <strong>a partir de €29</strong>, com tarifa família (2 adultos + 2 crianças) e <strong>grátis abaixo de 4 anos</strong>.",
+            "⚠️ <strong>Algumas datas ficam fora do pass</strong> — 13-14 de junho, 23 de agosto e 19-20 de setembro. Confiram a data antes de comprar.",
+            "🎪 Há um segundo espetáculo, <strong>La Légende des Chevaliers</strong>, equestre e medieval, no mesmo horário de 15h45 no fim de semana — ou seja, <strong>os dois competem pelo mesmo slot</strong>. Escolham um.",
+            "🧗 A cidade alta é <strong>calçada em pedra e tem ladeira</strong>. Com carrinho, dá trabalho — porta-bebê resolve o que o carrinho não resolve."
+          ],
+          "duracao": "Dia inteiro",
+          "custo": "Espetáculo €12 adulto · €8 (4-12 anos) · Pass a partir de €29 (ago/2026)",
+          "acessibilidade": "⚠️ Cidade alta com calçamento de pedra e ladeira · carrinho sofre de verdade · arquibancada do espetáculo ao ar livre",
+          "coord": {
+            "lat": 48.56028,
+            "lng": 3.29889
+          },
+          "fontes": [
+            {
+              "o": "Provins Tourisme · Les Aigles des Remparts (site oficial)",
+              "u": "https://provins.net/en/discover-visit/the-medieval-town-of-provins/to-the-medieval-show/the-eagles-of-the-ramparts/",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Les Aigles des Remparts",
+                "mais de 25 espécies de aves de rapina em voo livre",
+                "falcoaria a cavalo"
+              ]
+            },
+            {
+              "o": "Vol Libre · Aigles des Remparts, horários e tarifas 2026",
+              "u": "https://www.vollibre.fr/en/tickets-prices-eagles-of-the-ramparts-provins/",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "€12 adulto",
+                "€8 criança de 4 a 12 anos",
+                "15h45 nos fins de semana e feriados",
+                "15h",
+                "28 de março a 1º de novembro de 2026",
+                "temporada"
+              ]
+            },
+            {
+              "o": "Provins Tourisme · Pass Provins + Aigles des Remparts",
+              "u": "https://reservation.provins.net/z13583e3f11588b3671_fr-pass-provins-aigles-des-remparts-legende-des-chevaliers.aspx",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "Pass Provins + Aigles des Remparts",
+                "a partir de €29",
+                "grátis abaixo de 4 anos",
+                "13-14 de junho",
+                "23 de agosto",
+                "19-20 de setembro",
+                "La Légende des Chevaliers"
+              ]
+            },
+            {
+              "o": "Wikipedia · Provins",
+              "u": "https://en.wikipedia.org/wiki/Provins",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "centro econômico e sede de feiras anuais",
+                "Patrimônio Mundial da UNESCO em 2001",
+                "Tour César",
+                "1137",
+                "Henri le Libéral (1152-1181)",
+                "coordenada 48.56040, 3.29900",
+                "91 km",
+                "coordenada 48.56028, 3.29889"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "~1h15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "👑",
+      "tema": "Vaux-le-Vicomte · o château que custou a liberdade do dono",
+      "temaCurto": "Vaux-le-Vic.",
+      "bairro": "⚔️ Seine-et-Marne — Maincy",
+      "grupo": false,
+      "cor": "#0f766e",
+      "gradA": "#134e4a",
+      "gradB": "#14b8a6",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. ~65 km e ~1h10 a sudeste. <strong>Aos sábados abre só às 11h</strong> por causa da soirée aux chandelles — planejem a saída por isso.",
+      "stops": [
+        {
+          "hora": "09:45",
+          "emoji": "🚗",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Boulogne → Vaux-le-Vicomte (Maincy)",
+          "cat": "~65 km · ~1h10 · sudeste",
+          "roadType": "autopista",
+          "mapsQuery": "Château de Vaux-le-Vicomte",
+          "coord": {
+            "lat": 48.56873,
+            "lng": 2.71358
+          }
+        },
+        {
+          "hora": "11:00",
+          "emoji": "👑",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Château de Vaux-le-Vicomte (Maincy, 77)",
+          "mapsQuery": "Château de Vaux-le-Vicomte",
+          "cat": "Jardins de Le Nôtre · e carrinho elétrico pra atravessá-los",
+          "sobre": "O château e seus jardins abrem <strong>de 14 de março a 1º de novembro de 2026</strong>, <strong>todos os dias das 10h às 17h30</strong>. <strong>Aos sábados</strong>, de <strong>16 de maio a 26 de setembro</strong>, há <strong>soirées aux chandelles</strong> e a grade muda: <strong>11h às 21h30</strong>.",
+          "imperdivel": "O <strong>carrinho elétrico de aluguel</strong>, <strong>€20 por 45 minutos</strong>: leva vocês até o fim do jardim, na altura da <strong>estátua monumental de Hércules</strong>, de onde se vê a perspectiva inteira do domínio de uma vez. É o jeito de fazer os jardins de Le Nôtre com uma criança de 3 anos sem carregá-la no colo na volta.",
+          "dicas": [
+            "💶 Château + jardins <strong>€18</strong> adulto · <strong>€14,50</strong> dos 6 aos 17 anos · <strong>grátis abaixo de 6</strong>. Só os jardins: <strong>€13,50</strong>, tarifa única.",
+            "🕯️ As <strong>velas</strong> só ficam boas depois do anoitecer — com 3 anos, é tarde demais. Vale como programa de casal noutro dia.",
+            "📖 Há <strong>livrets-jeux</strong> para as crianças, além do aluguel dos carrinhos."
+          ],
+          "duracao": "Meio dia a dia inteiro",
+          "custo": "€18 adulto · €14,50 (6-17) · grátis <6 · só jardins €13,50 · carrinho €20/45min (ago/2026)",
+          "acessibilidade": "Jardins vastos · carrinho elétrico de aluguel resolve a distância · château histórico com escadas",
+          "coord": {
+            "lat": 48.56873,
+            "lng": 2.71358
+          },
+          "fontes": [
+            {
+              "o": "Familin'Paris · Château de Vaux-le-Vicomte, tarifas e horários",
+              "u": "https://www.familinparis.fr/chateau-de-vaux-le-vicomte-tarif/",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "de 14 de março a 1º de novembro de 2026",
+                "todos os dias das 10h às 17h30",
+                "Aos sábados",
+                "16 de maio a 26 de setembro",
+                "soirées aux chandelles",
+                "11h às 21h30",
+                "€18",
+                "€14,50",
+                "6 aos 17 anos",
+                "grátis abaixo de 6",
+                "€13,50",
+                "tarifa única",
+                "única"
+              ]
+            },
+            {
+              "o": "Kidiklik Île-de-France · Vaux-le-Vicomte em família",
+              "u": "https://iledefrance.kidiklik.fr/visites-ludiques/238310-chateau-de-vaux-le-vicomte-une-visite-incontournable-en-ile-de-france-77",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "carrinho elétrico de aluguel",
+                "€20 por 45 minutos",
+                "estátua monumental de Hércules",
+                "livrets-jeux"
+              ]
+            },
+            {
+              "o": "Apple Maps · Château de Vaux-le-Vicomte (coordenada)",
+              "u": "https://maps.apple.com/place?place-id=ID0E9154182A8BD61",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.56873, 2.71358",
+                "Maincy"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "~65 km",
+                "~1h10"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "3 anos"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "🐑",
+      "tema": "Rambouillet · a fazenda que Luís XVI mandou construir",
+      "temaCurto": "Rambouillet",
+      "bairro": "🏰 Yvelines — Rambouillet",
+      "grupo": false,
+      "cor": "#65a30d",
+      "gradA": "#365314",
+      "gradB": "#84cc16",
+      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. ~50 min a sudoeste. <strong>Rota oeste</strong> — nos fins de semana do Rock en Seine, sair pela A86 sul e não pelo Pont de Saint-Cloud.",
+      "stops": [
+        {
+          "hora": "13:00",
+          "emoji": "🚗",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Boulogne → Rambouillet",
+          "cat": "~50 min · sudoeste · evitar o eixo do Pont de Saint-Cloud",
+          "roadType": "autopista",
+          "mapsQuery": "Bergerie nationale de Rambouillet",
+          "coord": {
+            "lat": 48.648,
+            "lng": 1.818
+          }
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🐑",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 3,
+          "nome": "Bergerie nationale de Rambouillet (Parc du Château)",
+          "mapsQuery": "Bergerie nationale de Rambouillet",
+          "cat": "Fazenda de verdade no parque do château · merinos desde Luís XVI",
+          "sobre": "A Bergerie foi <strong>construída por Luís XVI</strong> e fica <strong>no parque do Château de Rambouillet</strong>. É uma fazenda em atividade, com estábulo, cavalariça, pocilga, terreiro e o aprisco onde nascem <strong>mais de mil cordeiros por ano</strong>, incluindo os <strong>merinos</strong> de Rambouillet. Tem centro equestre e um centro de conservação da raça.",
+          "imperdivel": "Ver a <strong>ordenha e a alimentação dos animais</strong> — a fazenda organiza esses momentos para as famílias, e é a diferença entre um zoológico e uma fazenda que trabalha.",
+          "dicas": [
+            "⚠️ <strong>As fontes divergem em horário e preço</strong>, e a divergência é grande: uma diz <strong>11h-18h30 de 18/abr a 1º/nov, €7,50 adulto e €5,50 dos 3 aos 12 anos</strong>; outra diz <strong>14h-18h com bilheteria até 17h, €6 adulto e €4 dos 3 aos 12</strong>. <strong>Liguem ou confiram no site antes de sair</strong> — 50 minutos de estrada é caro para descobrir na porta.",
+            "📅 As duas fontes concordam no calendário: aberta <strong>quartas, sábados, domingos e feriados</strong>, e <strong>todos os dias durante as férias escolares da zona C</strong>.",
+            "🧒 <strong>Grátis abaixo de 3 anos</strong> nas duas fontes. Há caça ao tesouro e oficinas sobre leite, horta e cuidado com os animais.",
+            "🕐 O circuito de visita leva <strong>cerca de 1h30</strong>.",
+            "📍 <strong>O pino deste card é aproximado</strong> — não achei coordenada publicada com precisão suficiente. Naveguem pelo nome, não pelo ponto."
+          ],
+          "duracao": "1h30-2h",
+          "custo": "⚠️ divergente: €7,50 ou €6 adulto · €5,50 ou €4 (3-12) · grátis <3 (ago/2026) — confirmar",
+          "acessibilidade": "Fazenda com terreiro de terra · estacionamento no local · circuito de visita livre",
+          "coord": {
+            "lat": 48.648,
+            "lng": 1.818
+          },
+          "coord_unverified": true,
+          "fontes": [
+            {
+              "o": "Bergerie nationale · infos pratiques (site oficial)",
+              "u": "https://www.bergerie-nationale.fr/animations-bergerie/infos-visite-ferme/",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "11h-18h30",
+                "18/abr a 1º/nov",
+                "€7,50",
+                "€5,50",
+                "3 aos 12 anos",
+                "quartas, sábados, domingos e feriados",
+                "todos os dias durante as férias escolares",
+                "cerca de 1h30",
+                "Grátis abaixo de 3 anos"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Bergerie nationale, parc du château",
+              "u": "https://parisjetaime.com/eng/culture/bergerie-nationale-parc-du-chateau-p1300",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "construída por Luís XVI",
+                "no parque do Château de Rambouillet",
+                "mais de mil cordeiros por ano",
+                "merinos",
+                "14h-18h",
+                "17h",
+                "€6",
+                "€4"
+              ]
+            },
+            {
+              "o": "Rambouillet Tourisme · Bergerie Nationale",
+              "u": "https://www.rambouillet-tourisme.fr/en/bergerie-nationale-de-rambouillet/",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "ordenha e a alimentação dos animais",
+                "centro equestre",
+                "centro de conservação",
+                "estábulo",
+                "cavalariça",
+                "pocilga"
+              ]
+            },
+            {
+              "o": "Briefing do Tobia + rota medida no Google Maps em 27/ago/2026",
+              "u": "https://www.google.com/maps",
+              "tier": "campo",
+              "data": "2026-08-27",
+              "prova": [
+                "~50 min",
+                "50 minutos",
+                "A86 sul"
               ]
             }
           ]
@@ -1081,62 +2114,76 @@
     }
   ],
   "links_map": {
-    "Grandes Écuries · Musée vivant du Cheval (7-9 rue du Connétable)": [
+    "Square Maurice-Gardette (2 rue du Général Blaise)": [
       {
         "type": "official",
-        "label": "Château de Chantilly · Grandes Écuries",
-        "url": "https://chateaudechantilly.fr/grandes-ecuries/histoire-des-grandes-ecuries/"
+        "label": "Ville de Paris · square Maurice-Gardette",
+        "url": "https://www.paris.fr/lieux/square-maurice-gardette-2725"
       },
       {
         "type": "official",
-        "label": "Musée vivant du Cheval",
-        "url": "https://chateaudechantilly.fr/en/great-stables/the-living-museum-of-the-horse/"
+        "label": "A nova aire de jeux inclusiva",
+        "url": "https://www.paris.fr/pages/une-nouvelle-aire-de-jeux-inclusive-au-square-maurice-gardette-33757"
       }
     ],
-    "Château de Chantilly · Musée Condé": [
+    "Atelier des Lumières (38 rue Saint-Maur)": [
       {
         "type": "official",
-        "label": "Château de Chantilly",
-        "url": "https://chateaudechantilly.fr/en/"
+        "label": "Atelier des Lumières",
+        "url": "https://www.atelier-lumieres.com/en"
       },
       {
         "type": "official",
-        "label": "Horaires",
-        "url": "https://chateaudechantilly.fr/en/hours/"
+        "label": "Exposição Van Gogh",
+        "url": "https://vangogh.atelier-lumieres.com/en/"
       },
       {
         "type": "official",
-        "label": "Visiteurs en situation de handicap",
-        "url": "https://chateaudechantilly.fr/en/visitors-with-disabilities/"
+        "label": "História do lugar (a fundição)",
+        "url": "https://www.atelier-lumieres.com/en/explore/place-of-history"
       }
     ],
-    "Parc du château · Hameau, cangurus e a volta de voiturette": [
+    "Musée Marmottan Monet (2 rue Louis-Boilly, 16e)": [
       {
         "type": "official",
-        "label": "Activités du parc · Château de Chantilly",
-        "url": "https://chateaudechantilly.fr/en/evenement/park-activities/"
+        "label": "Musée Marmottan Monet",
+        "url": "https://www.marmottan.fr/en/"
       },
       {
-        "type": "review",
-        "label": "Paris Mômes · le parc du château de Chantilly",
-        "url": "https://parismomes.fr/se-balader-en-famille/le-parc-du-chateau-de-chantilly/"
+        "type": "official",
+        "label": "Informações práticas",
+        "url": "https://www.marmottan.fr/en/prepare-your-visit/practical-information/"
       }
     ],
-    "Musée & jardins départementaux Albert-Kahn (10-14 rue du Port)": [
+    "Jardin du Ranelagh · carrossel e Guignol (16e)": [
       {
         "type": "official",
-        "label": "Hauts-de-Seine · jardin Albert-Kahn",
-        "url": "https://www.hauts-de-seine.fr/sortir-et-decouvrir/patrimoine-vert/les-espaces-verts-pres-de-chez-vous/les-jardins-et-les-bois/le-jardin-albert-kahn"
+        "label": "Ville de Paris · Jardin du Ranelagh",
+        "url": "https://www.paris.fr/lieux/jardin-du-ranelagh-1778"
       },
       {
         "type": "official",
-        "label": "Office de Tourisme de Boulogne-Billancourt",
-        "url": "https://otbb.org/en/musee-departemental-albert-kahn/"
+        "label": "Marionnettes du Ranelagh",
+        "url": "https://www.marionnettesduranelagh.com/"
+      }
+    ],
+    "🔄 ALT · Maison de Balzac (47 rue Raynouard) · se chover forte": [
+      {
+        "type": "official",
+        "label": "Maison de Balzac",
+        "url": "https://www.maisondebalzac.paris.fr/en/your-visit/practical-information"
+      }
+    ],
+    "Jardin d'Acclimatation (Bois de Boulogne)": [
+      {
+        "type": "official",
+        "label": "Jardin d'Acclimatation · preparar a visita",
+        "url": "https://www.jardindacclimatation.fr/preparez-votre-visite"
       },
       {
-        "type": "review",
-        "label": "Phototrend · Archives de la Planète",
-        "url": "https://phototrend.fr/2022/04/musee-albert-kahn-archives-de-la-planete/"
+        "type": "official",
+        "label": "Horários",
+        "url": "https://www.jardindacclimatation.fr/horaires-ouverture-du-jardin"
       }
     ],
     "Jardin des Serres d'Auteuil (3 av. de la Porte d'Auteuil)": [
@@ -1144,271 +2191,317 @@
         "type": "official",
         "label": "Ville de Paris · Serres d'Auteuil",
         "url": "https://www.paris.fr/lieux/jardin-des-serres-d-auteuil-1780"
-      },
-      {
-        "type": "review",
-        "label": "Paris je t'aime · Serres d'Auteuil",
-        "url": "https://parisjetaime.com/eng/culture/jardin-des-serres-d-auteuil-jardin-botanique-de-paris-p938"
       }
     ],
-    "🔄 ALT · Jardin d'Acclimatation (se o céu abrir)": [
+    "Aquarium de Paris (5 av. Albert de Mun, 16e)": [
       {
         "type": "official",
-        "label": "Jardin d'Acclimatation · preparar a visita",
-        "url": "https://www.jardindacclimatation.fr/preparez-votre-visite"
-      }
-    ],
-    "🔄 ALT · Aquarium de Paris (5 av. Albert de Mun) · se cair o mundo": [
-      {
-        "type": "official",
-        "label": "Aquarium de Paris · tarifs",
+        "label": "Aquarium de Paris · tarifas",
         "url": "https://aquariumdeparis.com/tarifs/"
       },
       {
         "type": "review",
-        "label": "Allovoyages · avis e duração real da visita",
+        "label": "Allovoyages · avis e duração real",
         "url": "https://allovoyages.fr/destinations/aquarium-de-paris-avis/"
+      }
+    ],
+    "Maison de Balzac (47 rue Raynouard, 16e)": [
+      {
+        "type": "official",
+        "label": "Maison de Balzac",
+        "url": "https://www.maisondebalzac.paris.fr/en/your-visit/practical-information"
+      }
+    ],
+    "Institut du monde arabe (1 rue des Fossés-Saint-Bernard, 5e)": [
+      {
+        "type": "official",
+        "label": "IMA · horaires & tarifs",
+        "url": "http://www.imarabe.org/fr/horaires-tarifs"
+      },
+      {
+        "type": "official",
+        "label": "IMA · terrasse panoramique",
+        "url": "http://www.imarabe.org/fr/terrasse"
+      }
+    ],
+    "Grande Galerie de l'Évolution (36 rue Geoffroy-Saint-Hilaire, 5e)": [
+      {
+        "type": "official",
+        "label": "MNHN · Grande Galerie de l'Évolution",
+        "url": "https://www.mnhn.fr/en/grande-galerie-de-l-evolution-gallery-of-evolution"
+      }
+    ],
+    "Château e Musée d'Archéologie nationale (Saint-Germain-en-Laye)": [
+      {
+        "type": "official",
+        "label": "Musée d'Archéologie nationale",
+        "url": "https://musee-archeologienationale.fr/"
+      },
+      {
+        "type": "official",
+        "label": "Estacionamento em Saint-Germain-en-Laye",
+        "url": "https://www.saintgermainenlaye.fr/1667/la-ville-vous/me-stationner/ou-et-comment.htm"
+      }
+    ],
+    "Château de Breteuil (Choisel, 78)": [
+      {
+        "type": "official",
+        "label": "Château de Breteuil · horários e tarifas",
+        "url": "https://www.breteuil.fr/en/opening-times-prices-directions/"
+      }
+    ],
+    "Provins · cidade medieval e Aigles des Remparts": [
+      {
+        "type": "official",
+        "label": "Provins Tourisme · Aigles des Remparts",
+        "url": "https://provins.net/en/discover-visit/the-medieval-town-of-provins/to-the-medieval-show/the-eagles-of-the-ramparts/"
+      },
+      {
+        "type": "official",
+        "label": "Pass Provins",
+        "url": "https://provins.net/en/discover-visit/the-medieval-town-of-provins/monuments-and-pass-provins/"
+      }
+    ],
+    "Château de Vaux-le-Vicomte (Maincy, 77)": [
+      {
+        "type": "official",
+        "label": "Vaux-le-Vicomte · informações práticas",
+        "url": "https://vaux-le-vicomte.com/en/prepare-my-visit/visitor-information/"
+      }
+    ],
+    "Bergerie nationale de Rambouillet (Parc du Château)": [
+      {
+        "type": "official",
+        "label": "Bergerie nationale · infos visite",
+        "url": "https://www.bergerie-nationale.fr/animations-bergerie/infos-visite-ferme/"
+      },
+      {
+        "type": "official",
+        "label": "Rambouillet Tourisme",
+        "url": "https://www.rambouillet-tourisme.fr/en/bergerie-nationale-de-rambouillet/"
+      }
+    ],
+    "Musée Carnavalet (23 rue de Sévigné, 3e)": [
+      {
+        "type": "official",
+        "label": "Musée Carnavalet · informações práticas",
+        "url": "https://www.carnavalet.paris.fr/en/visit/pratical-information"
+      }
+    ],
+    "🔄 ALT · Place des Vosges (se o céu abrir)": [
+      {
+        "type": "review",
+        "label": "Evous · jardin de la place des Vosges",
+        "url": "https://www.evous.fr/paris/le-marais/Visiter-le-Marais/Parcs-et-jardins-Le-Marais/Jardin-de-la-place-des-Vosges,1129380.html"
       }
     ]
   },
   "transit_map": {
-    "Boulogne-Billancourt → Chantilly": {
+    "Casa → Saint-Ambroise (linha 9)": {
       "opcoes": [
         {
-          "modo": "carro",
-          "texto": "~56 km · ~55min · A86 norte → A1 (Autoroute du Nord) · rota inteira ao NORTE, sem tocar o Pont de Saint-Cloud. Sair antes das 9h30: as grades de Saint-Cloud fecham às 11h no sábado e é a partir daí que o entorno engarrafa."
+          "modo": "metro",
+          "texto": "[9] direto de Marcel Sembat / Billancourt até <strong>Saint-Ambroise</strong> ou <strong>Voltaire</strong> · ~30min · <strong>sem baldeação</strong>, que é o que importa com carrinho e avós. Do metrô ao Atelier são 6min a pé."
         },
         {
-          "modo": "trem",
-          "texto": "Alternativa sem carro: Gare du Nord → Chantilly-Gouvieux, ~25min de TER. Mas de Boulogne até a Gare du Nord são ~40min de metrô com baldeação, e da estação até o château ainda falta ~2 km — inviável com os avós."
+          "modo": "uber",
+          "texto": "~25-35min conforme o trânsito. Mais caro e não necessariamente mais rápido num sábado."
+        },
+        {
+          "modo": "carro",
+          "texto": "Não recomendado: a própria casa recomenda transporte público, e estacionar no 11e num sábado custa o horário reservado."
         }
       ]
     },
-    "Chantilly → Boulogne-Billancourt": {
+    "Atelier → Marais": {
       "opcoes": [
         {
-          "modo": "carro",
-          "texto": "~56 km · ~55min · A1 → A86 sul. Voltar antes das 18h: o Rock en Seine termina no domingo e o fluxo de saída do festival satura o oeste no fim da tarde."
-        }
-      ]
-    },
-    "Casa → Musée Albert-Kahn": {
-      "opcoes": [
-        {
-          "modo": "carro",
-          "texto": "~2 km · ~8min · estacionamento de rua no entorno da rue du Port. Com chuva e os avós, vale mais que os 15min a pé."
+          "modo": "uber",
+          "texto": "~10min · é o trecho onde o Uber compra conforto de verdade: evita 2 km a pé com carrinho depois de uma manhã inteira."
         },
         {
           "modo": "a-pe",
-          "texto": "~15-20min a pé de Marcel Sembat, plano o caminho inteiro. Só se o tempo estiver bom."
-        },
+          "texto": "~25-30min pelo boulevard Beaumarchais. Bonito, mas é o dobro do que os avós têm no dia."
+        }
+      ]
+    },
+    "Casa → La Muette (linha 9)": {
+      "opcoes": [
         {
           "modo": "metro",
-          "texto": "[10] Boulogne–Jean Jaurès fica a ~600m do museu. De Marcel Sembat (linha 9) não compensa: é quase o mesmo tempo a pé."
+          "texto": "[9] direto até <strong>La Muette</strong> ou <strong>Ranelagh</strong> · sem baldeação · depois 8-12min a pé atravessando o próprio Jardin du Ranelagh."
+        },
+        {
+          "modo": "carro",
+          "texto": "~10min. Estacionamento de rua no entorno do Ranelagh; num domingo de chuva compensa."
+        }
+      ]
+    },
+    "Boulogne → Saint-Germain-en-Laye": {
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "~25-30min · <strong>A86 norte + N13 via Rueil</strong>. Evita deliberadamente o Pont de Saint-Cloud, que é o gargalo do oeste."
+        },
+        {
+          "modo": "trem",
+          "texto": "RER A direto até Saint-Germain-en-Laye, que fica na saída do château. Sem carro é o caminho mais simples."
+        }
+      ]
+    },
+    "Boulogne → Choisel (Breteuil)": {
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "~35 km · ~45min · sudoeste, pelo vale de Chevreuse. Estacionamento no domínio."
+        }
+      ]
+    },
+    "Boulogne → Provins": {
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "~91 km · ~1h15 · leste. É o trajeto mais longo da coletânea — com criança pequena, prever uma parada na metade."
+        },
+        {
+          "modo": "trem",
+          "texto": "Gare de l'Est → Provins, e a estação fica na cidade baixa; a cité médiévale é subida."
+        }
+      ]
+    },
+    "Boulogne → Vaux-le-Vicomte (Maincy)": {
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "~65 km · ~1h10 · sudeste. Aos sábados o château só abre às 11h — não adianta chegar cedo."
+        }
+      ]
+    },
+    "Boulogne → Rambouillet": {
+      "opcoes": [
+        {
+          "modo": "carro",
+          "texto": "~50min · sudoeste. <strong>Sair pela A86 sul</strong> e não pelo Pont de Saint-Cloud."
+        },
+        {
+          "modo": "trem",
+          "texto": "Transilien semi-direto de Paris-Montparnasse até Rambouillet, ~35min."
         }
       ]
     }
   },
   "historia": [
     {
-      "titulo": "🐎 Chantilly · o cozinheiro que não inventou a chantilly",
-      "prosa_html": "<p>Há um lugar na França onde o creme batido tem nome próprio, e a história que todo mundo conta sobre ele é falsa. Vale a pena contar direito, porque a verdade é mais interessante que a lenda.</p><p><strong>François Vatel</strong> não era cozinheiro. Era <em>intendente</em> — o equivalente moderno de um maître d'hôtel — a serviço de Louis II de Bourbon, o <strong>Grand Condé</strong>, no château de Chantilly. Em <strong>abril de 1671</strong>, Condé recebeu <strong>Luís XIV</strong> e uma corte inteira para três dias de festa, e Vatel foi o homem encarregado de que nada faltasse. Faltou. Na terceira manhã, o peixe encomendado não chegou a tempo, e Vatel se matou com a própria espada antes que a corte descobrisse. Foi essa morte — não uma receita — que o tornou eterno.</p><p>A <strong>crème Chantilly não veio dele</strong>. Creme batido já circulava pela Europa desde o século XVI, embalado pelo entusiasmo do Renascimento italiano por laticínios, e a <strong>primeira receita publicada saiu na Inglaterra por volta de 1545</strong> — mais de cem anos antes do banquete de Chantilly. O nome \"Chantilly\" aparece pela primeira vez associado ao creme em <strong>1784</strong>, quando a <strong>baronesa Marie Féodorovna</strong> relatou uma recepção no Hameau do domínio. Ou seja: o creme só ficou famoso com esse nome mais de cinquenta anos depois da morte de Vatel.</p><p>Então de onde veio a lenda? Ela tem autor e data: em <strong>1893</strong>, o confeiteiro <strong>Pierre Lacam</strong> foi o primeiro a escrever que Vatel havia inventado a chantilly, durante as festas de Vaux em 1661. Não existe nenhum testemunho escrito do que foi servido naquelas festas — muito menos menção a creme batido. No século XIX, Vatel já era confundido com um <em>chef</em> em vez de um intendente, e a atribuição colou. <strong>É uma lenda de 1893 sobre um homem de 1671, e hoje ela é mais famosa que os dois.</strong></p><p>O resto de Chantilly é igualmente denso. As <strong>Grandes Écuries</strong> foram erguidas entre <strong>1719 e 1735</strong> pelo arquiteto <strong>Jean Aubert</strong> para <strong>Louis-Henri de Bourbon, 7º príncipe de Condé</strong>: duas naves de setenta metros em torno de uma cúpula de vinte e oito, dimensionadas para 240 cavalos e 500 cães. A razão para esse exagero é a melhor curiosidade do lugar — conta-se que o príncipe acreditava que renasceria como cavalo, e quis garantir que o cavalo em questão tivesse um palácio à altura.</p><p>O parque tem três jardins de três séculos empilhados: o <strong>jardim à francesa de Le Nôtre</strong> (XVII), o <strong>anglo-chinês</strong> (fim do XVIII) e o <strong>inglês</strong> (XIX). No meio do anglo-chinês está o <strong>Hameau</strong>, de <strong>1774</strong>: sete casinhas de aparência rústica com interiores luxuosos, desenhadas por <strong>Jean-François Leroy</strong> para Louis Joseph, príncipe de Condé. O sucesso delas foi tanto que inspirou <strong>Marie-Antoinette</strong> a mandar construir o Hameau de la Reine em Versalhes — o hameau famoso é a cópia; o original está aqui. E, espalhado por três hectares e meio, sobrevive um <strong>jogo da oca gigante do século XVIII</strong>, um dos maiores já construídos: um tabuleiro do tamanho de um quarteirão que uma criança de 3 anos vai atravessar sem fazer ideia de que está pisando num brinquedo de trezentos anos.</p><p><strong>O que observar</strong>, e que o visitante distraído perde: as Grandes Écuries não ficam nos fundos do château, como seria de esperar de uma dependência de serviço. Ficam <em>na frente</em>, no eixo nobre, visíveis da estrada. Isso não é acaso arquitetônico — é uma declaração sobre o que o príncipe achava mais importante mostrar.</p>",
+      "titulo": "🎨 A fundição que virou Van Gogh",
       "fontes": [
         {
-          "o": "Université de Liège · Vatel et l'invention de la crème chantilly",
-          "u": "https://www.uliege.be/cms/c_10297893/fr/les-grands-mythes-de-la-gastronomie-vatel-et-l-invention-de-la-creme-chantilly",
+          "o": "Atelier des Lumières · histoire du lieu (site oficial)",
+          "u": "https://www.atelier-lumieres.com/en/explore/place-of-history",
           "tier": "oficial",
-          "data": "2026-08",
+          "data": "2026-08-27",
           "prova": [
-            "François Vatel",
-            "intendente",
-            "abril de 1671",
-            "Luís XIV",
-            "primeira receita publicada saiu na Inglaterra por volta de 1545",
-            "1784",
-            "baronesa Marie Féodorovna",
-            "1893",
-            "Pierre Lacam",
-            "festas de Vaux em 1661",
-            "século XVI"
-          ]
-        },
-        {
-          "o": "Château de Chantilly (site oficial) · qui a inventé la crème Chantilly",
-          "u": "https://chateaudechantilly.fr/en/who-is-the-inventor-of-the-creme-chantilly/",
-          "tier": "oficial",
-          "data": "2026-08",
-          "prova": [
-            "Grand Condé",
-            "crème Chantilly não veio dele"
-          ]
-        },
-        {
-          "o": "Ministère de l'Agriculture · à Chantilly, sur les traces d'une crème fouettée",
-          "u": "https://agriculture.gouv.fr/chantilly-sur-les-traces-dune-creme-fouettee-mondialement-connue",
-          "tier": "oficial",
-          "data": "2026-08",
-          "prova": [
-            "crème Chantilly",
-            "Chantilly"
-          ]
-        },
-        {
-          "o": "Château de Chantilly (site oficial) · histoire des Grandes Écuries",
-          "u": "https://chateaudechantilly.fr/grandes-ecuries/histoire-des-grandes-ecuries/",
-          "tier": "oficial",
-          "data": "2026-08",
-          "prova": [
-            "1719 e 1735",
-            "Jean Aubert",
-            "Louis-Henri de Bourbon, 7º príncipe de Condé",
-            "240 cavalos e 500 cães",
-            "setenta metros",
-            "vinte e oito"
-          ]
-        },
-        {
-          "o": "Wikipedia · Hameau de Chantilly",
-          "u": "https://en.wikipedia.org/wiki/Hameau_de_Chantilly",
-          "tier": "diretorio",
-          "data": "2026-08",
-          "prova": [
-            "1774",
-            "sete casinhas de aparência rústica",
-            "Jean-François Leroy",
-            "Marie-Antoinette",
-            "Hameau de la Reine"
-          ]
-        },
-        {
-          "o": "Paris Mômes · le parc du château de Chantilly",
-          "u": "https://parismomes.fr/se-balader-en-famille/le-parc-du-chateau-de-chantilly/",
-          "tier": "editorial",
-          "data": "2026-08",
-          "prova": [
-            "jardim à francesa de Le Nôtre",
-            "anglo-chinês",
-            "inglês",
-            "jogo da oca gigante do século XVIII",
-            "três hectares e meio"
-          ]
-        }
-      ]
-    },
-    {
-      "titulo": "🍁 Boulogne-Billancourt · o banqueiro que fotografou o mundo antes de perdê-lo",
-      "prosa_html": "<p>O passeio mais improvável do fim de semana está a dois quilômetros da porta de vocês, e a maioria dos moradores de Boulogne nunca entrou.</p><p><strong>Albert Kahn</strong> (1860-1940) era um banqueiro rico. Em <strong>1909</strong>, no auge da fortuna, ele começou a gastá-la num projeto que ninguém tinha pedido: enviar operadores fotográficos ao mundo inteiro para registrar, <em>em cor</em>, culturas e ofícios que ele suspeitava que fossem desaparecer. Chamou o projeto de <strong>Archives de la Planète</strong>.</p><p>A técnica era o <strong>autochrome</strong> — o primeiro processo industrial de fotografia colorida, sobre placas de vidro. Entre <strong>1909 e 1931</strong>, os operadores de Kahn percorreram <strong>mais de 50 países</strong> na Ásia, América Latina, África e Europa, e voltaram com <strong>mais de 72.000 imagens</strong> e <strong>170 quilômetros de filme</strong>. É a maior coleção de autochromes do mundo, e está guardada em Boulogne-Billancourt.</p><p>O fecho é o que dá peso à visita. <strong>A crise de 1929 arruinou Kahn.</strong> O homem que financiou o inventário visual do planeta perdeu a capacidade de sustentá-lo, o projeto parou em 1931, e ele morreu em <strong>1940</strong> — em Boulogne, com a Alemanha já ocupando a França, tendo perdido a fortuna e vendo o mundo que fotografara justamente para preservar entrar na segunda guerra em trinta anos. As imagens sobreviveram a ele. Foi a única coisa que sobreviveu.</p><p>Os jardins que ele montou em volta da casa são o mesmo projeto em outra mídia: <strong>quatro hectares</strong> onde estilos do mundo inteiro convivem — um <strong>jardim japonês</strong> com uma aldeia de chá tradicional instalada ainda no tempo dele, cerejeiras japonesas ao lado de cedros marroquinos, abetos do Colorado e roseiras europeias. Era o mundo inteiro num quarteirão, para um homem que passou a vida mandando gente fotografá-lo.</p><p>Em <strong>2022</strong>, o museu reabriu com um edifício de exposições de <strong>2.300 m²</strong> assinado por <strong>Kengo Kuma</strong>, que releu elementos da arquitetura japonesa presente nos jardins através da escolha e do uso dos materiais — o auditório tem estrutura de madeira desenhada por ele. É raro um prédio novo conversar tão bem com o que já estava lá.</p><p><strong>O que observar</strong>: as pontes vermelhas do jardim japonês e as carpas embaixo delas prendem uma criança de 3 anos por mais tempo que qualquer brinquedo — e é a única atração do fim de semana em que os avós podem sentar e ver exatamente a mesma coisa que a neta está vendo.</p>",
-      "fontes": [
-        {
-          "o": "Phototrend · musée Albert-Kahn, em imersão nas Archives de la Planète",
-          "u": "https://phototrend.fr/2022/04/musee-albert-kahn-archives-de-la-planete/",
-          "tier": "editorial",
-          "data": "2026-08",
-          "prova": [
-            "Albert Kahn",
-            "1860-1940",
-            "1909",
-            "Archives de la Planète",
-            "autochrome",
-            "1909 e 1931",
-            "mais de 50 países",
-            "mais de 72.000 imagens",
-            "170 quilômetros de filme",
+            "Fonderie du Chemin-Vert",
+            "1835",
+            "irmãos Plichon",
+            "marinha e as ferrovias",
+            "quatro gerações",
             "crise de 1929",
-            "1931",
-            "1940"
+            "1935",
+            "Culturespaces",
+            "13 de abril de 2018",
+            "chaminé de tijolo",
+            "desmontada e remontada peça por peça",
+            "estruturas metálicas"
           ]
         },
         {
-          "o": "Public Domain Review · The Color of Memory: Albert Kahn's Archives of the Planet",
-          "u": "https://publicdomainreview.org/essay/albert-kahns-archives-of-the-planet/",
+          "o": "Paris je t'aime · Atelier des Lumières",
+          "u": "https://parisjetaime.com/eng/culture/atelier-des-lumieres-p3639",
           "tier": "editorial",
-          "data": "2026-08",
+          "data": "2026-08-27",
           "prova": [
-            "maior coleção de autochromes do mundo",
-            "primeiro processo industrial de fotografia colorida"
-          ]
-        },
-        {
-          "o": "Conseil départemental des Hauts-de-Seine · le jardin du musée Albert-Kahn",
-          "u": "https://www.hauts-de-seine.fr/sortir-et-decouvrir/patrimoine-vert/les-espaces-verts-pres-de-chez-vous/les-jardins-et-les-bois/le-jardin-albert-kahn",
-          "tier": "oficial",
-          "data": "2026-08",
-          "prova": [
-            "quatro hectares",
-            "jardim japonês",
-            "aldeia de chá tradicional",
-            "cerejeiras japonesas",
-            "cedros marroquinos",
-            "abetos do Colorado",
-            "roseiras europeias"
-          ]
-        },
-        {
-          "o": "CLIC France · o novo museu Albert-Kahn (Kengo Kuma)",
-          "u": "https://www.club-innovation-culture.fr/nouveau-musee-albert-kahn-regard-humain-innovant-monde-voyage/",
-          "tier": "editorial",
-          "data": "2026-08",
-          "prova": [
-            "2022",
-            "2.300 m²",
-            "Kengo Kuma",
-            "auditório tem estrutura de madeira"
+            "140 projetores",
+            "3.300 m²",
+            "antiga fundição",
+            "11e"
           ]
         }
-      ]
+      ],
+      "prosa_html": "<p>O prédio do <strong>38 rue Saint-Maur</strong> passou cem anos fazendo ferro antes de passar a fazer luz, e a passagem de um estado ao outro é a melhor coisa que se pode saber antes de entrar.</p><p>Em <strong>1835</strong>, os <strong>irmãos Plichon</strong> abriram ali a <strong>Fonderie du Chemin-Vert</strong>, para fundir peças de ferro de alta qualidade destinadas à marinha e às ferrovias — as duas indústrias que estavam, naquele momento, redesenhando a França. A fábrica ficou <strong>quatro gerações</strong> na mesma família e prosperou por mais de cem anos. Foi a <strong>crise de 1929</strong> que a fechou; em <strong>1935</strong> foi vendida à família Martin.</p><p>A <strong>Culturespaces</strong> passou dois anos procurando um lugar que tivesse ao mesmo tempo identidade e volume, escolheu esta fundição, e abriu o <strong>Atelier des Lumières em 13 de abril de 2018</strong>. Hoje são <strong>140 projetores de vídeo</strong> e som espacializado cobrindo <strong>3.300 m²</strong>.</p><p><strong>O que observar</strong>, e que quase todo mundo perde olhando pra cima: a fábrica não foi apagada. As <strong>estruturas metálicas foram preservadas</strong>, e a <strong>velha chaminé de tijolo foi desmontada e remontada peça por peça</strong>. Quando as projeções passam por cima delas, você está vendo Van Gogh escorrer sobre o esqueleto de uma siderúrgica do século XIX. É por isso que o lugar funciona e um galpão novo não funcionaria.</p>"
     },
     {
-      "titulo": "🌳 O Bois de Boulogne · e por que Saint-Cloud está fora este fim de semana",
-      "prosa_html": "<p>O contexto que amarra o resto. O <strong>Jardin des Serres d'Auteuil</strong> já era jardim botânico em <strong>1761</strong>, sob <strong>Luís XV</strong>. As estufas de ferro e vidro que estão lá hoje são posteriores: <strong>Jean-Camille Formigé</strong>, arquiteto dos Passeios e Plantações de Paris, as desenhou e construiu <strong>entre 1895 e 1898</strong>, com a missão de dar aos parisienses um lugar aberto a todos e dedicado à aclimatação de plantas exóticas — que era a moda do momento. Cerca de 5.000 espécies, e um palmarium com palmeira-das-canárias e carpas japonesas no tanque.</p><p>A poucos quilômetros dali, o <strong>Jardin d'Acclimatation</strong> abriu em <strong>6 de outubro de 1860</strong> com o mesmo espírito de época: aclimatar o exótico e mostrá-lo ao público. Dezenove hectares no norte do Bois. Hoje pertence à LVMH e virou parque infantil, mas o <strong>Guignol</strong> que está lá <strong>desde 1953</strong> é o mesmo teatro de marionetes que fazia rir os bisavós das crianças que riem hoje.</p><p>E o <strong>Domaine national de Saint-Cloud</strong>, do outro lado da ponte — 460 hectares, jardim de Le Nôtre, o château que Napoleão III deixou e nunca mais voltou. Em qualquer outro fim de semana seria a escolha óbvia: está a 3 km da porta de vocês. <strong>Neste, não.</strong></p><p>O <strong>Rock en Seine 2026</strong> acontece ali de <strong>26 a 30 de agosto</strong>, com mais de 80 shows e mais de <strong>100.000 festivaleiros</strong>. A <strong>Grille du Mail</strong> (Sèvres) fecha ao veículo <em>e ao pedestre</em> das 11h às 7h30 do dia seguinte, de quarta 26 a sábado 29, e das 9h30 às 7h30 no domingo 30. A <strong>Avenue e a Grille d'Honneur</strong> e a <strong>Grille des Communs</strong> (Saint-Cloud) fecham ao veículo das <strong>11h às 2h</strong>, de 26 a 30 — pedestre e bicicleta ainda passam. E os horários podem mudar no dia por decisão do Prefeito dos Hauts-de-Seine.</p><p>Some a isso que os organizadores <strong>não previram nenhum estacionamento de carro</strong> e que as ruas próximas saturam desde as primeiras horas. O acesso oficial ao festival é pelo metrô <strong>linha 10 (Boulogne – Pont de Saint-Cloud)</strong> e pelo <strong>tram T2</strong> — ou seja, a massa de gente desemboca exatamente no ponto que vocês teriam que atravessar para ir a oeste.</p><p><strong>É isso, e não a qualidade das atrações, que exclui Versailles e Giverny deste fim de semana.</strong> Ir para o norte, sentido Chantilly, contorna o problema inteiro. Em setembro, Saint-Cloud volta a ser o que é — e vale a caminhada de vocês.</p>",
+      "titulo": "🖼️ Monet, o quadro que batizou um movimento — e o assalto de 1985",
       "fontes": [
         {
-          "o": "Paris je t'aime · Jardin des Serres d'Auteuil",
-          "u": "https://parisjetaime.com/eng/culture/jardin-des-serres-d-auteuil-jardin-botanique-de-paris-p938",
+          "o": "Proantic · histoire du Musée Marmottan Monet",
+          "u": "https://www.proantic.com/magazine/musee-marmottan-monet/",
           "tier": "editorial",
-          "data": "2026-08",
+          "data": "2026-08-27",
           "prova": [
-            "1761",
-            "Luís XV",
-            "Jean-Camille Formigé",
-            "entre 1895 e 1898",
-            "5.000 espécies",
-            "palmarium",
-            "palmeira-das-canárias",
-            "carpas japonesas"
+            "1966",
+            "Michel Monet",
+            "segundo filho",
+            "Giverny",
+            "maior coleção de obras de Monet do mundo",
+            "Victorine Donop de Monchy",
+            "1957",
+            "doutor Georges de Bellio",
+            "1946"
           ]
         },
         {
-          "o": "Wikipedia · Jardin d'Acclimatation",
-          "u": "https://en.wikipedia.org/wiki/Jardin_d%27Acclimatation",
-          "tier": "diretorio",
-          "data": "2026-08",
+          "o": "Claude Monet Giverny · a saga do Impression, soleil levant",
+          "u": "https://claudemonetgiverny.fr/en/actualites/impression-sunrise-the-saga-of-a-legendary-painting/",
+          "tier": "editorial",
+          "data": "2026-08-27",
           "prova": [
-            "6 de outubro de 1860",
-            "Dezenove hectares",
-            "LVMH"
+            "27 de outubro de 1985",
+            "em plena luz do dia",
+            "sob a mira de armas",
+            "nove quadros",
+            "dezembro de 1990",
+            "Porto-Vecchio",
+            "Impression, soleil levant"
           ]
         },
         {
-          "o": "VisitParisRegion · Jardin d'Acclimatation",
-          "u": "https://www.visitparisregion.com/fr/jardin-d-acclimatation",
+          "o": "Ville de Paris · Jardin du Ranelagh",
+          "u": "https://www.paris.fr/lieux/jardin-du-ranelagh-1778",
           "tier": "oficial",
-          "data": "2026-08",
+          "data": "2026-08-27",
           "prova": [
-            "Guignol",
-            "desde 1953"
+            "carrossel mais antigo de Paris",
+            "três aires de jeux",
+            "kiosque à musique"
           ]
         },
+        {
+          "o": "Marionnettes du Ranelagh · site oficial",
+          "u": "https://www.marionnettesduranelagh.com/",
+          "tier": "oficial",
+          "data": "2026-08-27",
+          "prova": [
+            "Théâtre de Marionnettes du Ranelagh",
+            "de março a novembro",
+            "40 minutos"
+          ]
+        }
+      ],
+      "prosa_html": "<p>O Marmottan não nasceu museu de Monet. Virou um — e por herança.</p><p>Em <strong>1966</strong>, <strong>Michel Monet</strong>, <strong>segundo filho</strong> do pintor, legou ao museu a propriedade de <strong>Giverny</strong> e a coleção de quadros que herdara do pai. Foi essa doação que fez do Marmottan o guardião da <strong>maior coleção de obras de Monet do mundo</strong>.</p><p>O quadro mais importante da casa, porém, chegou antes e por outra porta. O <strong>Impression, soleil levant</strong> — a tela cujo título um crítico usou como deboche e que acabou dando nome ao Impressionismo inteiro — foi exposto aqui pela primeira vez em <strong>1946</strong> e entrou na coleção pela doação de <strong>Victorine Donop de Monchy</strong>, em <strong>1957</strong>, que o herdara do pai, o <strong>doutor Georges de Bellio</strong>.</p><p>E então, em <strong>27 de outubro de 1985</strong>, ladrões entraram no Marmottan <strong>em plena luz do dia</strong>, renderam o público e os guardas <strong>sob a mira de armas</strong> e levaram <strong>nove quadros</strong> — o <em>Impression, soleil levant</em> entre eles. Ele passou cinco anos desaparecido. Foi recuperado em <strong>dezembro de 1990</strong>, em <strong>Porto-Vecchio</strong>, na Córsega.</p><p><strong>O que observar</strong>: pare na frente dele sabendo que essa tela já esteve enrolada num porta-malas. E depois saia pela porta e entre no <strong>Jardin du Ranelagh</strong> — o museu ocupa o lado oeste dele. Lá dentro está <strong>o carrossel mais antigo de Paris</strong>, <strong>três aires de jeux</strong>, um <strong>kiosque à musique</strong> e o <strong>Théâtre de Marionnettes du Ranelagh</strong>, que funciona <strong>de março a novembro</strong> com sessões de <strong>40 minutos</strong>. É o raro par em que o museu e o parquinho estão a cem metros um do outro.</p>"
+    },
+    {
+      "titulo": "🎸 Por que Saint-Cloud está fora neste fim de semana",
+      "fontes": [
         {
           "o": "Ville de Saint-Cloud · Rock en Seine, restrictions de circulation",
           "u": "https://www.saintcloud.fr/actualite/rock-en-seine-restrictions-de-circulation",
           "tier": "oficial",
-          "data": "2026-08",
+          "data": "2026-08-27",
           "prova": [
             "Grille du Mail",
             "11h às 7h30",
             "9h30 às 7h30",
-            "Avenue e a Grille d'Honneur",
+            "Grille d'Honneur",
             "Grille des Communs",
             "11h às 2h",
             "26 a 30",
@@ -1419,38 +2512,40 @@
           "o": "L'Officiel des spectacles · Rock en Seine 2026",
           "u": "https://www.offi.fr/concerts/festival/rock-en-seine-8624.html",
           "tier": "editorial",
-          "data": "2026-08",
+          "data": "2026-08-27",
           "prova": [
-            "Rock en Seine 2026",
             "26 a 30 de agosto",
             "mais de 80 shows",
-            "100.000 festivaleiros"
+            "100.000 festivaleiros",
+            "Domaine national de Saint-Cloud"
           ]
         },
         {
           "o": "Indigo Neo · où se garer pour Rock en Seine 2026",
           "u": "https://blog.indigoneo.fr/ou-se-garer-festival-rock-en-seine/",
           "tier": "editorial",
-          "data": "2026-08",
+          "data": "2026-08-27",
           "prova": [
             "não previram nenhum estacionamento de carro",
-            "linha 10 (Boulogne – Pont de Saint-Cloud)",
+            "linha 10",
+            "Boulogne – Pont de Saint-Cloud",
             "tram T2",
             "ruas próximas saturam"
           ]
         },
         {
-          "o": "Wikipedia · Parc de Saint-Cloud",
-          "u": "https://en.wikipedia.org/wiki/Parc_de_Saint-Cloud",
-          "tier": "diretorio",
-          "data": "2026-08",
+          "o": "Météo-Paris · offensive automnale (previsão fim de agosto 2026)",
+          "u": "https://www.meteo-paris.com/actualites/nouvelle-offensive-automnale-apres-les-violents-orages-de-jeudi",
+          "tier": "editorial",
+          "data": "2026-08-27",
           "prova": [
-            "460 hectares",
-            "Le Nôtre",
-            "Napoleão III"
+            "50-60 km/h",
+            "pancadas fortes",
+            "20-24°C"
           ]
         }
-      ]
+      ],
+      "prosa_html": "<p>Em qualquer outro fim de semana, o <strong>Domaine national de Saint-Cloud</strong> seria a escolha óbvia: fica a 3 km da porta de vocês. Neste, não — e vale saber exatamente por quê, porque é o tipo de coisa que ninguém checa justamente por ser perto demais.</p><p>O <strong>Rock en Seine 2026</strong> ocupa o domínio de <strong>26 a 30 de agosto</strong>, com <strong>mais de 80 shows</strong> e mais de <strong>100.000 festivaleiros</strong>. As restrições publicadas pela prefeitura de Saint-Cloud: a <strong>Grille du Mail</strong> (Sèvres) fecha <em>a veículo e a pedestre</em> das <strong>11h às 7h30</strong> do dia seguinte, de quarta 26 a sábado 29, e das <strong>9h30 às 7h30</strong> no domingo 30; a <strong>Grille d'Honneur</strong> e a <strong>Grille des Communs</strong> fecham ao veículo das <strong>11h às 2h</strong>, de <strong>26 a 30</strong>. Os horários podem ainda mudar no dia por decisão do <strong>Prefeito dos Hauts-de-Seine</strong>.</p><p>Some a isso que os organizadores <strong>não previram nenhum estacionamento de carro</strong>, que as <strong>ruas próximas saturam</strong> desde as primeiras horas, e que o acesso oficial ao festival é pela <strong>linha 10</strong> (estação <strong>Boulogne – Pont de Saint-Cloud</strong>) e pelo <strong>tram T2</strong>. Ou seja: a massa desemboca exatamente no ponto que vocês teriam que atravessar para ir a oeste.</p><p>É isso — e não a qualidade das atrações — que tira Versailles e Giverny do tabuleiro neste fim de semana, e que explica por que os dois dias datados deste app foram desenhados <strong>inteiros sobre a linha 9</strong>, que corre para o lado oposto.</p><p>O segundo fator é o céu: a previsão virou outonal, com <strong>rajadas de 50-60 km/h</strong> no sábado, <strong>pancadas fortes</strong> no domingo e <strong>20-24°C</strong> entre elas. Por isso cada um dos dois dias tem um abrigo coberto embutido no meio — o museu no sábado, o Atelier no domingo.</p>"
     }
   ],
   "feedback_url": ""
