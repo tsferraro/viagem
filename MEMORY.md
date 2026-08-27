@@ -306,6 +306,33 @@ produz o mesmo efeito de um erro factual: o viajante descobre no local que o tex
   risco, é aritmética: cada item além do orçamento de checagem entra com essa taxa. Por isso
   a cota editorial é 2 verificadas > 3 plausíveis.
 
+## Skill nomeada tem ponto de parada · respeitá-lo é parte do pedido (2026-08-27 · apontado pelo Tobia)
+
+O Tobia pediu *"use destination-scout pra criar um roteiro pra este fim de semana"*. A sessão
+rodou as 6 fases seguidas — scout, esqueleto, build, audit, factcheck, deploy — e entregou o app
+HTML no ar. **Duas entregas viraram uma, e o gate de validação no meio sumiu.**
+
+**O que a skill diz, e que foi atropelado:** a `destination-scout` declara na própria SKILL que
+*"NÃO sequencia múltiplos dias nem monta o app HTML"* e que a entrega é *"no chat primeiro; só
+DEPOIS pergunta se quer exportar"*. O CLAUDE.md a chama de **degrau 0**, com "valida com Tobia
+antes de sequenciar dias" (passo 3) e "valida com Tobia antes de detalhar" (passo 4, esqueleto).
+
+**A regra que passa a valer:** quando o pedido **nomeia uma skill**, o ponto de parada dessa
+skill vale, mesmo que o pedido também diga a palavra "roteiro". Ambiguidade entre o verbo do
+usuário e o contrato da skill **não autoriza encadear** — autoriza perguntar, ou entregar o
+degrau e parar. Encadear é decisão de escopo, e escopo é do Tobia.
+
+**Por que isso não é preciosismo de processo:** a validação intermediária existe pra pegar
+exatamente o que ela pegou aqui. Na primeira revisão o Tobia disse *"nós já fomos a Chantilly"* —
+a âncora do sábado inteiro. Se o esqueleto tivesse sido validado (1 linha por dia, 30 segundos de
+leitura), o erro custaria uma pergunta. Como o pipeline foi até o fim, custou um app publicado,
+um FACTCHECK de 51 itens e um PR mergeado em cima de um destino descartado. **O custo de pular o
+gate é proporcional ao que se construiu depois dele.**
+
+**Corolário sobre "já está feito":** o Tobia optou por não tirar o roteiro do ar (opção B), o que
+é razoável — mas é dívida consciente, não ausência de erro. Conteúdo errado no ar continua
+errado; a diferença é que agora está catalogado.
+
 ## Evolução da skill
 
 ### Padrão-ouro de profundidade · 2026-07-12 (Itália: Roma+Toscana+Florença)
