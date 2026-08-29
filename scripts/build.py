@@ -42,6 +42,86 @@ def _slug_vizinho(data_path: Path) -> str:
     return f.read_text(encoding="utf-8").strip() if f.exists() else ""
 
 
+def _icone_app(data: dict) -> str:
+    """PNG 180x180 em data URI pro `apple-touch-icon`.
+
+    Por que PNG e não SVG: o iOS **ignora SVG** em apple-touch-icon — sem um PNG
+    de verdade, o atalho na Home Screen sai com um screenshot da página, que é o
+    que o Tobia viu em 2026-08-27. 180px é o tamanho do iPhone @3x; o iOS
+    arredonda os cantos sozinho, então a arte vai quadrada e sangrada.
+
+    Fundo = gradiente do 1º dia (gradA→gradB), pra cada viagem ter um ícone
+    distinguível na tela cheia de atalhos. Emoji do `auth_emoji` por cima, via
+    NotoColorEmoji quando existir; sem ela, cai pras iniciais do nome curto.
+    Se o PIL não estiver disponível, devolve "" e o template omite a tag —
+    degradar sem ícone é melhor que quebrar o build.
+    """
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        return ""
+    import base64, glob, io
+
+    dias = data.get("days") or [{}]
+    a = data.get("icon_grad_a") or dias[0].get("gradA") or "#1e3a8a"
+    b = data.get("icon_grad_b") or dias[0].get("gradB") or "#3b82f6"
+    rgb = lambda h: tuple(int(h.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
+    ca, cb, N = rgb(a), rgb(b), 180
+
+    img = Image.new("RGB", (N, N))
+    px = img.load()
+    for y in range(N):                       # gradiente diagonal
+        for x in range(N):
+            t_ = (x + y) / (2 * (N - 1))
+            px[x, y] = tuple(round(ca[i] + (cb[i] - ca[i]) * t_) for i in range(3))
+    d = ImageDraw.Draw(img)
+
+    emoji = (data.get("icon_emoji") or data.get("auth_emoji") or "").strip()
+    fontes = glob.glob("/usr/share/fonts/**/NotoColorEmoji*.ttf", recursive=True)
+    if emoji and fontes:
+        try:
+            # NotoColorEmoji é bitmap: só carrega em 109px, daí reduz-se a imagem.
+            # NotoColorEmoji é bitmap: só carrega em 109px. Renderiza grande,
+            # RECORTA no bbox real do glifo (senão a folga interna da fonte faz o
+            # ícone sair pequeno e torto) e só então escala e centraliza.
+            camada = Image.new("RGBA", (218, 218), (0, 0, 0, 0))
+            ImageDraw.Draw(camada).text((109, 109), emoji, anchor="mm",
+                                        font=ImageFont.truetype(fontes[0], 109),
+                                        embedded_color=True)
+            camada = camada.crop(camada.getbbox())
+            alvo = round(N * 0.62)                    # ocupa ~62% do lado
+            w, h = camada.size
+            esc = alvo / max(w, h)
+            camada = camada.resize((max(1, round(w * esc)), max(1, round(h * esc))),
+                                   Image.LANCZOS)
+            ox, oy = (N - camada.width) // 2, (N - camada.height) // 2
+            sombra = Image.new("RGBA", (N, N), (0, 0, 0, 0))
+            sombra.paste(camada, (ox, oy + 5), camada)
+            img.paste(Image.new("RGB", (N, N), (0, 0, 0)), (0, 0),
+                      sombra.split()[3].point(lambda v: v // 5))
+            img.paste(camada, (ox, oy), camada)
+        except Exception:
+            emoji = ""
+    if not emoji or not fontes:
+        txt = (data.get("app_short_name") or data.get("auth_title") or "?")[:2].upper()
+        try:
+            f = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 88)
+        except OSError:
+            f = ImageFont.load_default()
+        d.text((N // 2, N // 2 - 4), txt, font=f, anchor="mm", fill=(255, 255, 255))
+
+    buf = io.BytesIO()
+    img.save(buf, format="PNG", optimize=True)
+    return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
+def _nome_curto(data: dict) -> str:
+    """Rótulo do atalho na Home Screen. O iPhone trunca por volta de 12 chars —
+    `title` de viagem quase sempre estoura, então usa-se `app_short_name`."""
+    n = (data.get("app_short_name") or "").strip()
+    return n or (data.get("auth_title") or data.get("title") or "Roteiro").strip()
+
+
 def build(data_path: Path, output_path: Path, minify=False):
     # 1. Carregar data
     with data_path.open(encoding="utf-8") as f:
@@ -55,6 +135,9 @@ def build(data_path: Path, output_path: Path, minify=False):
     # 3. Substituições (ordem importa: placeholders dentro de styles/render NÃO devem ser substituídos)
     replacements = {
         "{{TITLE}}": data.get("title", "Roteiro"),
+        "{{APP_SHORT_NAME}}": _nome_curto(data),
+        "{{APP_ICON}}": _icone_app(data),
+        "{{THEME_COLOR}}": (data.get("days") or [{}])[0].get("gradA", "#111827"),
         "{{AUTH_EMOJI}}": data.get("auth_emoji", "✈️"),
         "{{AUTH_TITLE}}": data.get("auth_title", "Roteiro"),
         "{{AUTH_SUBTITLE}}": data.get("auth_subtitle", "Acesso restrito família"),

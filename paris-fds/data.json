@@ -1,5 +1,5 @@
 {
-  "title": "Paris · 29-30 Ago + ideias de fds",
+  "title": "Paris · 29-30 Ago",
   "auth_emoji": "🎨",
   "auth_title": "Fim de semana 29-30/Ago",
   "auth_subtitle": "Paris · o fds com os avós + um pool de ideias sem eles",
@@ -2548,5 +2548,7 @@
       "prosa_html": "<p>Em qualquer outro fim de semana, o <strong>Domaine national de Saint-Cloud</strong> seria a escolha óbvia: fica a 3 km da porta de vocês. Neste, não — e vale saber exatamente por quê, porque é o tipo de coisa que ninguém checa justamente por ser perto demais.</p><p>O <strong>Rock en Seine 2026</strong> ocupa o domínio de <strong>26 a 30 de agosto</strong>, com <strong>mais de 80 shows</strong> e mais de <strong>100.000 festivaleiros</strong>. As restrições publicadas pela prefeitura de Saint-Cloud: a <strong>Grille du Mail</strong> (Sèvres) fecha <em>a veículo e a pedestre</em> das <strong>11h às 7h30</strong> do dia seguinte, de quarta 26 a sábado 29, e das <strong>9h30 às 7h30</strong> no domingo 30; a <strong>Grille d'Honneur</strong> e a <strong>Grille des Communs</strong> fecham ao veículo das <strong>11h às 2h</strong>, de <strong>26 a 30</strong>. Os horários podem ainda mudar no dia por decisão do <strong>Prefeito dos Hauts-de-Seine</strong>.</p><p>Some a isso que os organizadores <strong>não previram nenhum estacionamento de carro</strong>, que as <strong>ruas próximas saturam</strong> desde as primeiras horas, e que o acesso oficial ao festival é pela <strong>linha 10</strong> (estação <strong>Boulogne – Pont de Saint-Cloud</strong>) e pelo <strong>tram T2</strong>. Ou seja: a massa desemboca exatamente no ponto que vocês teriam que atravessar para ir a oeste.</p><p>É isso — e não a qualidade das atrações — que tira Versailles e Giverny do tabuleiro neste fim de semana, e que explica por que os dois dias datados deste app foram desenhados <strong>inteiros sobre a linha 9</strong>, que corre para o lado oposto.</p><p>O segundo fator é o céu: a previsão virou outonal, com <strong>rajadas de 50-60 km/h</strong> no sábado, <strong>pancadas fortes</strong> no domingo e <strong>20-24°C</strong> entre elas. Por isso cada um dos dois dias tem um abrigo coberto embutido no meio — o museu no sábado, o Atelier no domingo.</p>"
     }
   ],
-  "feedback_url": ""
+  "feedback_url": "",
+  "app_short_name": "Paris FdS",
+  "icon_emoji": "🎨"
 }

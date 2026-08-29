@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>{{TITLE}}</title>
+<!-- Atalho na Home Screen (iOS/Android). O iOS ignora SVG em apple-touch-icon:
+     sem PNG de verdade o atalho vira screenshot da página. `apple-mobile-web-app-title`
+     é o rótulo — o iPhone trunca por volta de 12 chars, daí `app_short_name` no data.json.
+     ⛔ NÃO adicionar `apple-mobile-web-app-capable`: em standalone o iOS abre os links
+     externos (Maps, sites oficiais, o CSV do My Maps) dentro do app sem botão de voltar,
+     que é a mesma armadilha já documentada no CLAUDE.md pro download do pois.csv. -->
+<meta name="apple-mobile-web-app-title" content="{{APP_SHORT_NAME}}">
+<meta name="application-name" content="{{APP_SHORT_NAME}}">
+<meta name="theme-color" content="{{THEME_COLOR}}">
+<link rel="apple-touch-icon" href="{{APP_ICON}}">
+<link rel="icon" type="image/png" href="{{APP_ICON}}">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <style>
 {{STYLES_CSS}}
