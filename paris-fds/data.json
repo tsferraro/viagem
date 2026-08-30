@@ -1173,17 +1173,158 @@
     },
     {
       "date": "🐠",
-      "tema": "Trocadéro e Passy · tubarões e o jardim do Balzac",
+      "tema": "Trocadéro em duas trilhas · o Aquário e o entorno",
       "temaCurto": "Trocadéro",
       "bairro": "🌳 Paris — 16e Trocadéro / Passy",
-      "grupo": false,
+      "grupo": true,
       "cor": "#0284c7",
       "gradA": "#075985",
       "gradB": "#38bdf8",
-      "nota": "Aba sem data · proposta de fim de semana <strong>sem os avós</strong> (Tobia, esposa e a filha). Sem a régua de 1km — mas a criança de 3 anos segue mandando no ritmo. Dia curto e <strong>à prova de chuva</strong>: as duas paradas são cobertas e ficam a 2 km uma da outra.",
+      "nota": "Aba <strong>sem data</strong>, estreada no <strong>domingo 30/ago</strong>: a chuva não veio e este roteiro entrou no lugar do plano coberto. Desenhado em <strong>duas trilhas paralelas às 14h</strong> — a filha e um adulto fazem o <strong>Aquário</strong>; os outros três fazem o <strong>Cimetière de Passy</strong>, que é grátis, curto e arborizado. <strong>Todo mundo se reencontra nos Jardins do Trocadéro por volta das 16h</strong>, e o Aquário sai literalmente dentro deles. <strong>Calibrada para os avós</strong>: a trilha B tem uma parada só, com um plano B coberto (Cité de l'architecture) se o cansaço ou o tempo virarem.",
       "stops": [
         {
-          "hora": "10:00",
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Trocadéro e Passy",
+          "cat": "3 casas conferidas · todas abertas aos domingos · come antes de dividir",
+          "coord": {
+            "lat": 48.86284,
+            "lng": 2.28714
+          },
+          "opcoes": [
+            {
+              "nome": "Café du Trocadéro (8 place du Trocadéro, 16e)",
+              "mapsQuery": "Restaurant Café du Trocadéro, 8 Place du Trocadéro et du 11 Novembre, Paris",
+              "desc": "Fica <strong>na própria praça</strong> — por isso é o ponto natural pra almoçar, dividir as trilhas e se reencontrar depois. <strong>Aberto todos os dias das 7h às 2h</strong>, carta que revisita clássicos de brasserie, <strong>terraço vasto</strong> mais sala interna. Reserva pelo site; <strong>grupo de 15 ou mais só por e-mail</strong>. ⚠️ <strong>Não publica preços</strong> — brasserie de praça turística, contem com caro.",
+              "preco": "€€€",
+              "dist": "na place du Trocadéro",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.86284,
+                "lng": 2.28714
+              },
+              "coord_unverified": true,
+              "fontes": [
+                {
+                  "o": "Café du Trocadéro · site oficial",
+                  "u": "https://cafedutrocadero.com/",
+                  "tier": "oficial",
+                  "data": "2026-08-30",
+                  "prova": [
+                    "8 Place du Trocadéro et du 11 Novembre",
+                    "Ouvert tous les jours 07:00 — 02:00",
+                    "7h às 2h",
+                    "todos os dias",
+                    "vaste terrasse",
+                    "terraço",
+                    "15",
+                    "brasserie"
+                  ]
+                },
+                {
+                  "o": "Nominatim / OpenStreetMap · endereços do 16e",
+                  "u": "https://nominatim.openstreetmap.org/",
+                  "tier": "diretorio",
+                  "data": "2026-08-30",
+                  "prova": [
+                    "coordenada 48.86284, 2.28714",
+                    "coordenada 48.85882, 2.28505",
+                    "coordenada 48.85846, 2.28134"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Amourette (10 bd Delessert, 16e)",
+              "mapsQuery": "Amourette, 10 Boulevard Delessert, Paris",
+              "desc": "Cozinha francesa de produto, <strong>aberta todos os dias das 11h30 às 2h</strong>. <strong>200 lugares no terraço</strong> de frente pros haussmannianos de Passy — espaço que cinco pessoas com uma criança pequena agradecem. <strong>Entradas €12-28 · pratos €24-45</strong>: pela carta, conte <strong>€150-200 pra cinco</strong> (estimativa, não é preço de menu). Reserva <strong>09 52 86 14 47</strong>.",
+              "preco": "€€€€",
+              "dist": "em Passy, descendo do Trocadéro",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.85882,
+                "lng": 2.28505
+              },
+              "coord_unverified": true,
+              "fontes": [
+                {
+                  "o": "Amourette Passy · site oficial",
+                  "u": "https://www.amourette-passy.fr/en/",
+                  "tier": "oficial",
+                  "data": "2026-08-30",
+                  "prova": [
+                    "10 Boulevard Delessert",
+                    "Mon - Sun: 11:30 AM - 2:00 AM",
+                    "11h30 às 2h",
+                    "todos os dias",
+                    "200 seats",
+                    "200 lugares",
+                    "€12-28",
+                    "€24-45",
+                    "09 52 86 14 47"
+                  ]
+                },
+                {
+                  "o": "Nominatim / OpenStreetMap · endereços do 16e",
+                  "u": "https://nominatim.openstreetmap.org/",
+                  "tier": "diretorio",
+                  "data": "2026-08-30",
+                  "prova": [
+                    "coordenada 48.86284, 2.28714",
+                    "coordenada 48.85882, 2.28505",
+                    "coordenada 48.85846, 2.28134"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Breizh Café Passy (4 impasse des Carrières, 16e)",
+              "mapsQuery": "Breizh Café Passy, Paris",
+              "desc": "A mais barata e a mais fácil com uma criança de 3 anos: <strong>galettes</strong> de trigo-sarraceno num terraço no fundo de uma viela de paralelepípedo. <strong>Domingo 11h30-22h30, sem fechar à tarde</strong> — resolve almoço tardio. Carta <strong>€25-45</strong>. Nota <strong>3,8/5</strong> em 388 avaliações. Tel. <strong>09 80 49 41 67</strong>.",
+              "preco": "€€",
+              "dist": "em Passy",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.85846,
+                "lng": 2.28134
+              },
+              "fontes": [
+                {
+                  "o": "Breizh Café Passy · site oficial",
+                  "u": "https://www.breizhcafe.com/passy",
+                  "tier": "oficial",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "4 impasse des Carrières",
+                    "galettes",
+                    "terraço no fundo de uma viela de paralelepípedo"
+                  ]
+                },
+                {
+                  "o": "PagesJaunes · Breizh Café Passy (horários e avaliações)",
+                  "u": "https://www.pagesjaunes.fr/pros/50030973",
+                  "tier": "diretorio",
+                  "data": "2026-08-27",
+                  "prova": [
+                    "11h30-22h30",
+                    "domingo",
+                    "€25-45",
+                    "3,8/5",
+                    "388 avaliações",
+                    "09 80 49 41 67"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:00",
           "emoji": "🦈",
           "periodo": "manha",
           "tipo": "card",
@@ -1192,16 +1333,17 @@
           "valeAPena": 2,
           "nome": "Aquarium de Paris (5 av. Albert de Mun, 16e)",
           "mapsQuery": "Aquarium de Paris",
-          "cat": "Tubarões e o Medusarium · caro, e honesto sobre isso",
+          "cat": "TRILHA A · um adulto + a filha · tubarões e o Medusarium",
           "sobre": "Nos jardins do Trocadéro. Tem o <strong>maior tanque de tubarões da França</strong> — <strong>3 milhões de litros</strong> e cerca de <strong>40 tubarões de seis espécies</strong> — e o <strong>maior Medusarium da Europa</strong>.",
           "imperdivel": "O <strong>Medusarium</strong>, e não o tanque dos tubarões. As águas-vivas iluminadas em coluna prendem uma criança pequena de um jeito que peixe grande não prende.",
           "dicas": [
-            "💶 <strong>€27,50 adulto (13+) · €20,50 criança de 3 a 12.</strong> Para três: cerca de €75,50.",
+            "💶 <strong>€27,50 adulto (13+) + €20,50 criança de 3 a 12 = €48</strong> pela dupla que entra.",
             "⚠️ As avaliações são mitigadas, e sempre pelo mesmo motivo: <strong>caro para o tamanho</strong>, e a visita real dura <strong>1h a 1h30</strong>. A animação da sereia dura <strong>5 minutos</strong> e costuma frustrar quem esperava mais.",
-            "🕐 <strong>9h30-19h todos os dias</strong>, última entrada e fechamento das caixas antes das 18h. <strong>Reservem online</strong> — comprar na bilheteria é somar fila ao preço."
+            "🕐 <strong>9h30-19h todos os dias</strong>, última entrada e fechamento das caixas antes das 18h. <strong>Reservem online</strong> — comprar na bilheteria é somar fila ao preço.",
+            "🤝 A visita real dura <strong>1h a 1h30</strong> — entrando no começo da tarde, a dupla sai a tempo do reencontro nos jardins, que ficam do lado de fora da porta."
           ],
           "duracao": "1h-1h30",
-          "custo": "€27,50 adulto · €20,50 criança 3-12 (ago/2026)",
+          "custo": "€27,50 adulto · €20,50 criança 3-12 · €48 pela dupla (ago/2026)",
           "acessibilidade": "100% coberto e plano · rampas internas · bancos nas salas escuras",
           "coord": {
             "lat": 48.86222,
@@ -1268,22 +1410,288 @@
           ]
         },
         {
-          "hora": "14:30",
+          "hora": "14:00",
+          "emoji": "⚰️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "Cimetière de Passy (2 rue du Commandant-Schloesing, 16e)",
+          "mapsQuery": "Cimetière de Passy, Paris",
+          "cat": "TRILHA B · os três adultos · grátis · Manet, Morisot, Debussy",
+          "sobre": "Pequena necrópole <strong>logo acima da place du Trocadéro</strong>: <strong>2.600 túmulos</strong> e <strong>290 árvores de 15 essências</strong>, segundo a prefeitura. Virou a <em>necrópole aristocrática</em> de Paris a partir de <strong>1874</strong>. Estão aqui <strong>Édouard Manet (1832-1883)</strong> e a cunhada <strong>Berthe Morisot (1841-1895)</strong>, além de <strong>Claude Debussy</strong>, Fernandel e Maurice Genevoix.",
+          "imperdivel": "<strong>Manet e Berthe Morisot na mesma sepultura de família.</strong> A prefeitura publica um <strong>plano das sepulturas mais procuradas</strong> — vale abrir no celular antes de entrar, porque o cemitério não sinaliza.",
+          "dicas": [
+            "🕐 <strong>Domingo 9h-18h</strong> (16 de março a 5 de novembro). ⚠️ <strong>A prefeitura não admite mais ninguém nos 15 minutos finais</strong> — na prática, <strong>última entrada 17h45</strong>.",
+            "💶 <strong>Grátis.</strong> (gratuidade em fonte editorial · a página oficial não menciona tarifa)",
+            "🌳 <strong>290 árvores de 15 essências</strong> num cemitério pequeno: sombra e ritmo lento, que é exatamente o que a trilha B precisa. Conta <strong>30-45min</strong> sem apressar ninguém.",
+            "🚢 <strong>Por que NÃO a Marine hoje:</strong> ela cobra <strong>€15 por adulto e não tem tarifa de idoso</strong> (o reduzido de €12 é só para <em>familles nombreuses</em> e ex-combatentes) — <strong>€45 pelos três</strong>. E o que ela tem de melhor é o <strong>sac du marin, gratuito e desenhado para 3 a 5 anos</strong>, emprestado na recepção contra documento — só faz sentido com a filha junto. Fica pro próximo fim de semana."
+          ],
+          "duracao": "30-45min",
+          "custo": "Grátis (ago/2026)",
+          "acessibilidade": "Cemitério do séc. XIX · aleias pavimentadas · [degraus na entrada a confirmar em campo]",
+          "coord": {
+            "lat": 48.86248,
+            "lng": 2.28509
+          },
+          "fontes": [
+            {
+              "o": "Ville de Paris · Cimetière de Passy (página oficial)",
+              "u": "https://www.paris.fr/lieux/cimetiere-de-passy-4481",
+              "tier": "oficial",
+              "data": "2026-08-30",
+              "prova": [
+                "2, rue du Commandant-Schloesing",
+                "09 h 00 – 18 h 00",
+                "16 de março a 5 de novembro",
+                "2 600 tombes",
+                "290 arbres",
+                "15 essences",
+                "1/4 d'heure avant la fermeture",
+                "15 minutos"
+              ]
+            },
+            {
+              "o": "Paris la douce · Cimetière de Passy",
+              "u": "https://www.parisladouce.com/2025/04/cimetiere-de-passy-paris-16.html",
+              "tier": "editorial",
+              "data": "2026-08-30",
+              "prova": [
+                "1874",
+                "necrópole aristocrática",
+                "Édouard Manet (1832-1883)",
+                "Berthe Morisot (1841-1895)",
+                "Claude Debussy",
+                "Fernandel",
+                "Maurice Genevoix"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Cimetière de Passy",
+              "u": "https://parisjetaime.com/eng/culture/cimetiere-de-passy-p1750",
+              "tier": "editorial",
+              "data": "2026-08-30",
+              "prova": [
+                "grátis",
+                "gratuito"
+              ]
+            },
+            {
+              "o": "Ville de Paris · plano das sepulturas mais procuradas (PDF)",
+              "u": "https://cdn.paris.fr/paris/2022/06/15/7942a72808bfc7085973ff83fbeab723.pdf",
+              "tier": "oficial",
+              "data": "2026-08-30",
+              "prova": [
+                "plano das sepulturas",
+                "personalidades mais procuradas"
+              ]
+            },
+            {
+              "o": "Musée national de la Marine · tarifas e oferta de famílias (site oficial)",
+              "u": "https://www.musee-marine.fr/nos-musees/paris/visiter/informations-pratiques/acces-horaires-tarifs.html",
+              "tier": "oficial",
+              "data": "2026-08-30",
+              "prova": [
+                "15€",
+                "tarif plein",
+                "12€",
+                "familles nombreuses",
+                "anciens combattants",
+                "€15",
+                "€12",
+                "moins de 18 ans"
+              ]
+            },
+            {
+              "o": "Musée national de la Marine · visiter en autonomie, sac du marin (site oficial)",
+              "u": "https://www.musee-marine.fr/nos-musees/paris/visiter/offre-culturelle/loffre-destinee-aux-familles/visiter-en-autonomie.html",
+              "tier": "oficial",
+              "data": "2026-08-30",
+              "prova": [
+                "sac du marin",
+                "3 to 5 years old",
+                "3 a 5 anos",
+                "Free",
+                "gratuito",
+                "en échange d'une pièce d'identité",
+                "documento de identidade"
+              ]
+            },
+            {
+              "o": "Nominatim / OpenStreetMap · Cimetière de Passy",
+              "u": "https://nominatim.openstreetmap.org/search?q=Cimeti%C3%A8re+de+Passy%2C+Paris&format=json",
+              "tier": "diretorio",
+              "data": "2026-08-30",
+              "prova": [
+                "coordenada 48.86248, 2.28509"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:15",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "🔄 ALT · Cité de l'architecture (1 place du Trocadéro) · se quiserem teto",
+          "mapsQuery": "Cité de l'architecture et du patrimoine, Paris",
+          "cat": "Substitui a caminhada da trilha B · galerie des moulages",
+          "sobre": "Na ala do Palais de Chaillot que dá pra praça, <strong>aberta aos domingos das 11h às 19h</strong> (fecha só às terças; quinta até 21h). A <strong>galerie des moulages</strong> reúne mais de <strong>350 gessos</strong>, alguns com <strong>mais de 10 metros de altura</strong>: portais de catedral e fachadas inteiras reproduzidos em tamanho real, sob teto.",
+          "imperdivel": "A escala dos <em>moulages</em> — um portal de catedral em tamanho real, num volume coberto que se atravessa devagar e sentando quando quiser.",
+          "dicas": [
+            "🕐 <strong>11h-19h, fecha às terças</strong> · quinta até 21h (site oficial).",
+            "💶 Guias locais citam <strong>€9</strong> o bilhete museu e <strong>€12</strong> museu + exposição, com gratuidade para menores. ⚠️ <strong>A página oficial de tarifas deu 404 na checagem de 30/ago</strong> — confirmem na bilheteria. [a confirmar]",
+            "☔ É o plano B coberto da trilha B, se o tempo virar ou o cansaço chegar antes das 16h."
+          ],
+          "duracao": "1h-1h30",
+          "custo": "~€9/adulto segundo guias · [a confirmar na bilheteria]",
+          "acessibilidade": "Museu sob teto, ala do Palais de Chaillot · [acessos e elevadores a confirmar]",
+          "coord": {
+            "lat": 48.86289,
+            "lng": 2.28898
+          },
+          "fontes": [
+            {
+              "o": "Cité de l'architecture & du patrimoine · informations pratiques (oficial)",
+              "u": "https://www.citedelarchitecture.fr/fr/informations-pratiques",
+              "tier": "oficial",
+              "data": "2026-08-30",
+              "prova": [
+                "tous les jours de 11h à 19h",
+                "sauf le mardi",
+                "jusqu'à 21h",
+                "1, Place du Trocadéro et du 11 Novembre",
+                "11h-19h",
+                "fecha às terças",
+                "quinta até 21h"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Cité de l'architecture (preços e galerie des moulages)",
+              "u": "https://parisjetaime.com/eng/culture/cite-de-l-architecture-du-patrimoine-p3506",
+              "tier": "editorial",
+              "data": "2026-08-30",
+              "prova": [
+                "€9",
+                "€12",
+                "350 gessos",
+                "10 metros",
+                "trois cent cinquante moulages"
+              ]
+            },
+            {
+              "o": "Nominatim / OpenStreetMap · Cité de l'architecture",
+              "u": "https://nominatim.openstreetmap.org/search?q=Cit%C3%A9+de+l%27architecture+et+du+patrimoine&format=json",
+              "tier": "diretorio",
+              "data": "2026-08-30",
+              "prova": [
+                "coordenada 48.86289, 2.28898"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🎠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 3,
+          "nome": "Jardins du Trocadéro (place du Trocadéro-et-du-11-Novembre, 16e)",
+          "mapsQuery": "Jardins du Trocadéro, Paris",
+          "cat": "REENCONTRO das duas trilhas · grátis · aberto 24h",
+          "sobre": "É o jardim que o Aquário ocupa por dentro — ou seja, a dupla da trilha A já sai dentro do ponto de encontro. A prefeitura lista <strong>abertura 24h por dia</strong>, <strong>aire de jeux</strong>, <strong>pontos de água potável</strong>, <strong>mesas de ping-pong</strong>, toaletes públicos móveis e serviço de lanche. Guias locais somam um <strong>carrossel</strong>, balanços e caixa de areia, e citam cerca de <strong>94.000 m²</strong>.",
+          "imperdivel": "A <strong>Fonte de Varsóvia</strong>, de <strong>1937</strong>: <strong>20 canhões oblíquos com alcance de 50 metros</strong> apontados na direção da Torre Eiffel.",
+          "dicas": [
+            "💶 <strong>Grátis e aberto 24h</strong> — não cobra bilhete e não tem hora de fechar. Depois de um Aquário de €48, isso conta.",
+            "🎠 O jardim é grátis, <strong>o carrossel não</strong> — não achei preço em fonte confiável. [a confirmar no lugar]",
+            "📶 A prefeitura lista <strong>WIFI na parte alta do jardim</strong>, água potável e cães permitidos na coleira."
+          ],
+          "duracao": "1h-2h",
+          "custo": "Grátis · carrossel à parte (ago/2026)",
+          "acessibilidade": "O jardim tem parte alta e parte baixa (a prefeitura distingue as duas) · [desnível, rampas e escadas a confirmar em campo]",
+          "coord": {
+            "lat": 48.86135,
+            "lng": 2.28936
+          },
+          "fontes": [
+            {
+              "o": "Ville de Paris · Jardins du Trocadéro (página oficial)",
+              "u": "https://www.paris.fr/lieux/jardins-du-trocadero-1789",
+              "tier": "oficial",
+              "data": "2026-08-30",
+              "prova": [
+                "24/24 h",
+                "24h",
+                "place du Trocadéro-et-du-11-Novembre",
+                "Aire de jeux",
+                "Points d'eau potable",
+                "Tables de ping-pong",
+                "Toilettes",
+                "WIFI",
+                "partie haute",
+                "parte alta",
+                "tenus en laisse",
+                "coleira"
+              ]
+            },
+            {
+              "o": "JDS · Jardins du Trocadéro (parque com aire de jeux)",
+              "u": "https://www.jds.fr/paris/parc-avec-aire-de-jeux/jardins-du-trocadero-22258_L",
+              "tier": "editorial",
+              "data": "2026-08-30",
+              "prova": [
+                "carrossel",
+                "caixa de areia",
+                "balanços"
+              ]
+            },
+            {
+              "o": "Evous · Les jardins du Trocadéro",
+              "u": "https://www.evous.fr/paris/16eme-Arrondissement/Lieux-cles-Paris-16e/Les-jardins-du-Trocadero/",
+              "tier": "editorial",
+              "data": "2026-08-30",
+              "prova": [
+                "94.000 m²",
+                "1937",
+                "20 canhões oblíquos",
+                "50 metros",
+                "Fonte de Varsóvia"
+              ]
+            },
+            {
+              "o": "Nominatim / OpenStreetMap · Jardins du Trocadéro",
+              "u": "https://nominatim.openstreetmap.org/search?q=Jardins+du+Trocad%C3%A9ro%2C+Paris&format=json",
+              "tier": "diretorio",
+              "data": "2026-08-30",
+              "prova": [
+                "coordenada 48.86135, 2.28936"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "17:15",
           "emoji": "🏡",
           "periodo": "tarde",
           "tipo": "card",
           "risco": "green",
           "poiCat": "atracao",
           "valeAPena": 2,
-          "nome": "Maison de Balzac (47 rue Raynouard, 16e)",
+          "nome": "🔄 ALT · Maison de Balzac (47 rue Raynouard) · se sobrar pique",
           "mapsQuery": "Maison de Balzac, Paris",
-          "cat": "Grátis · jardim escondido com vista da Torre Eiffel",
+          "cat": "Substitui a tarde no jardim · grátis, mas fecha às 18h",
           "sobre": "<strong>Honoré de Balzac (1799-1850)</strong> alugou o último andar desta casa <strong>de 1840 a 1847</strong>, <strong>sob o nome da governanta</strong>, para despistar credores. Foi neste pavilhão que escreveu <em>La Comédie humaine</em>.",
           "imperdivel": "O <strong>jardim escondido com vista da Torre Eiffel</strong> e o café <strong>Rose Bakery</strong> dentro dele. O jardim é <strong>gratuito o ano inteiro</strong> no horário do museu.",
           "dicas": [
             "💶 <strong>Coleção permanente e jardim grátis</strong> · só exposição temporária é paga.",
-            "🕐 <strong>Terça a domingo, 10h-18h.</strong>",
-            "🚶 A ~2 km do Aquarium, ainda no 16e."
+            "🕐 <strong>Terça a domingo, 10h-18h</strong> — saindo dos jardins às 17h, sobra pouco. É ALT justamente por isso.",
+            "⚠️ Fica a <strong>~2 km do Aquário</strong>, ainda no 16e. Com dois avós e uma criança de 3 anos depois de um dia inteiro, <strong>é honesto assumir que provavelmente não rola hoje</strong> — fica marcado pra um dia que comece por aqui."
           ],
           "duracao": "1h",
           "custo": "Coleção permanente e jardim grátis (ago/2026)",
@@ -2293,6 +2701,56 @@
         "type": "review",
         "label": "Evous · jardin de la place des Vosges",
         "url": "https://www.evous.fr/paris/le-marais/Visiter-le-Marais/Parcs-et-jardins-Le-Marais/Jardin-de-la-place-des-Vosges,1129380.html"
+      }
+    ],
+    "Cimetière de Passy (2 rue du Commandant-Schloesing, 16e)": [
+      {
+        "type": "official",
+        "label": "Ville de Paris · horários",
+        "url": "https://www.paris.fr/lieux/cimetiere-de-passy-4481"
+      },
+      {
+        "type": "official",
+        "label": "Plano das sepulturas (PDF)",
+        "url": "https://cdn.paris.fr/paris/2022/06/15/7942a72808bfc7085973ff83fbeab723.pdf"
+      }
+    ],
+    "🔄 ALT · Cité de l'architecture (1 place du Trocadéro) · se quiserem teto": [
+      {
+        "type": "official",
+        "label": "Cité de l'architecture",
+        "url": "https://www.citedelarchitecture.fr/fr/informations-pratiques"
+      }
+    ],
+    "Jardins du Trocadéro (place du Trocadéro-et-du-11-Novembre, 16e)": [
+      {
+        "type": "official",
+        "label": "Ville de Paris · Jardins du Trocadéro",
+        "url": "https://www.paris.fr/lieux/jardins-du-trocadero-1789"
+      }
+    ],
+    "Almoço · Trocadéro e Passy": [
+      {
+        "type": "official",
+        "label": "Café du Trocadéro",
+        "url": "https://cafedutrocadero.com/"
+      },
+      {
+        "type": "official",
+        "label": "Amourette Passy",
+        "url": "https://www.amourette-passy.fr/en/"
+      },
+      {
+        "type": "official",
+        "label": "Breizh Café Passy",
+        "url": "https://www.breizhcafe.com/passy"
+      }
+    ],
+    "🔄 ALT · Maison de Balzac (47 rue Raynouard) · se sobrar pique": [
+      {
+        "type": "official",
+        "label": "Maison de Balzac",
+        "url": "https://www.maisondebalzac.paris.fr/en/your-visit/practical-information"
       }
     ]
   },
