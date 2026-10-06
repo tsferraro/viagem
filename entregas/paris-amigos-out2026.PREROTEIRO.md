@@ -1,7 +1,7 @@
 # Pré-roteiro · Paris 9-15/out/2026 · família amiga (2 adultos + menino 4a)
 
 Pré-roteiro para avaliar **antes** do app (fase 1 de 6 · Pesquisa). Pesquisa feita em 06/10/2026 por
-dois agentes de contexto limpo; todo fato abaixo tem fonte na seção Fontes. Inferência minha leva
+sete agentes de contexto limpo (2 operacionais + 5 bairros); todo fato abaixo tem fonte na seção Fontes. Inferência minha leva
 **(sugestão Claude · validar)**.
 
 ## Briefing
@@ -35,6 +35,11 @@ dois agentes de contexto limpo; todo fato abaixo tem fonte na seção Fontes. In
 | 9 | **Mondial de l'Auto** aberto ao público de ter 13 a dom 18 · qua 14: 9h30-20h · **menor de 7 anos grátis** · Porte de Versailles (vizinho de Boulogne) | opção forte pra menino de 4a na qua 14 (sugestão Claude · validar) |
 | 10 | Férias de Toussaint começam sáb 17/out · semana 10-14 **sem férias escolares** | Disney de terça fora de férias · atrações infantis em regime qua/sáb/dom |
 | 11 | Greves: **nenhum préavis** RATP/SNCF/aéreo pra 9-15/out | reconferir na véspera |
+| 12 | **Orsay em obras** (10/03/2026 → verão/2028): aberto, mas **reserva de horário obrigatória**, entrada pelo cais do Sena | reservar a quarta 9h30 já |
+| 13 | **Square Jean-XXIII** (parquinho atrás de Notre-Dame) **fechado até 30/jun/2027** · Square de l'Île-de-France fechado · **cripta arqueológica fechada** desde 28/jun/2026 | parquinho do domingo = **Square Barye** (Île Saint-Louis) |
+| 14 | Montmartre: **Mur des je t'aime inacessível** · **parquinho do Square Louise-Michel indisponível** | parquinho = **Parc de la Turlure** (aberto até 18:30 em out) |
+| 15 | **Galerie de Paléontologie** (dinossauros) do Jardin des Plantes **fechada** até 2027 | só a ménagerie e a Grande Galerie |
+| 16 | Orangerie: **todas as visitas infantis de outubro lotadas** ("Complet", página oficial checada 06/10) | visita por conta própria, 1h |
 
 ## Regra que manda no dia · em casa até 18:30 (no máximo 19:00)
 
@@ -48,10 +53,10 @@ Pedido do Tobia (06/10): as duas crianças jantam e vão pra cama cedo. Todo dia
 |---|---|---|---|---|
 | **Sex 9** | eles + vocês em casa | Chegada | Orly 19:55 → Uber ~€34 → Boulogne | jantar em casa |
 | **Sáb 10** | 🤝 juntos | **Rive Gauche · Luxembourg + Saint-Germain** | L10 direto até Odéon (27 min) · Luxembourg de manhã: Ludo Jardin, carrossel, pôneis (qua/sáb/dom) · almoço em Saint-Germain · Église Saint-Germain-des-Prés | **L10 de Odéon/Mabillon ~17:45** → casa ~18:15 |
-| **Dom 11** | 🤝 juntos | **Manhã em casa · tarde nas ilhas · Bateau Mouche** | manhã: malhar todos juntos + almoço em casa (a corrida 20 km fecha as ruas mesmo) · 14h: Notre-Dame (grátis, reserva no próprio dia) → Square Jean-XXIII → Île Saint-Louis · **16:30 Bateaux-Mouches na Pont de l'Alma** (1h) | **L9 de Alma-Marceau ~17:40** (18 min, direto) → casa ~18:00 |
-| **Seg 12** | eles 3 | **Louvre · Tuileries · Palais-Royal** + Montmartre | **Orangerie 9h** (exposição "Monet, peindre le temps") → Tuileries (parquinho grátis, trampolim €3, carrossel €3) → colunas de Buren do Palais-Royal → pirâmide por fora · tarde: **Montmartre calmo** (funicular €2,55 · carrossel Saint-Pierre · Parc de la Turlure · Sacré-Cœur grátis) | sair de Montmartre **~17:30** → casa ~18:15 [tempo a confirmar] |
+| **Dom 11** | 🤝 juntos | **Manhã em casa · tarde nas ilhas · Bateau Mouche** | manhã: malhar todos juntos + almoço em casa (a corrida 20 km fecha as ruas mesmo) · L10 direto até Maubert-Mutualité (~25 min) · 13:30 Notre-Dame (grátis · janela boa 13h-17h, entre as missas) → Point Zéro → Pont Saint-Louis → sorvete Berthillon (abre domingo) → **Square Barye** (o único parquinho das ilhas) · **16:30 Bateaux-Mouches na Pont de l'Alma** (1h) | **L9 de Alma-Marceau ~17:40** (18 min, direto) → casa ~18:00 |
+| **Seg 12** | eles 3 | **Louvre · Tuileries · Palais-Royal** + Montmartre | **Orangerie 9h** (exposição "Monet, peindre le temps") → Tuileries (parquinho grátis, trampolim €3, carrossel €3) → colunas de Buren do Palais-Royal → pirâmide por fora · tarde: **Montmartre calmo** (funicular · carrossel Saint-Pierre · parquinho do Parc de la Turlure · Sacré-Cœur grátis) | sair de Montmartre **~17:30** (~45 min, 2 baldeações) → casa ~18:15 |
 | **Ter 13** | eles 3 (+ vocês?) | **Disney Adventure World** | parque 9h30-22h · World of Frozen · ~1h15-1h30 de Boulogne (L9 → RER A) · sair de casa ~8h | **sair do parque ~17:15** pra cumprir a regra · ou exceção no dia (decidir) |
-| **Qua 14** | eles 3 (+ vocês se não foram na Disney) | **Orsay + tarde à escolha** | **Orsay 9h30** (bilhete com horário recomendado · criança grátis) · visita curta, ~1h30 (sugestão Claude · validar) · tarde: 🔄 Mondial de l'Auto · 🔄 Jardin des Plantes (ménagerie + carrossel do Dodo) · 🔄 Guignol do Ranelagh 15h15 | casa ~18:00 · mala pronta · **noite cedo** |
+| **Qua 14** | eles 3 (+ vocês se não foram na Disney) | **Orsay + tarde à escolha** | **Orsay 9h30** (**reserva de horário obrigatória** · museu em obras até 2028, entrada pelo cais · criança grátis) · visita curta, ~1h30 (sugestão Claude · validar) · tarde: 🔄 Mondial de l'Auto · 🔄 Jardin des Plantes (ménagerie + carrossel do Dodo) · 🔄 Guignol do Ranelagh 15h15 | casa ~18:00 · mala pronta · **noite cedo** |
 | **Qui 15** | todos | Partida | voo 6:30 | — |
 
 **Por que esta ordem** (sugestão Claude · validar):
@@ -62,20 +67,21 @@ Pedido do Tobia (06/10): as duas crianças jantam e vão pra cama cedo. Todo dia
 
 ## Formato do app · "ela seleciona os bairros"
 
-O modelo já existe no repo: o **paris-fds** tem **dias datados + abas de bairro sem data** (o "pool"). Ela abre a aba do bairro e puxa pro dia que quiser.
+O modelo já existe no repo: o **paris-fds** tem **dias datados + abas de bairro sem data** (o "pool").
+Ela abre a aba do bairro e puxa pro dia que quiser. As abas de bairro abaixo são levantadas **no formato
+da coletânea Marais** (uma walking tour por tema) pra virarem, depois, coletâneas próprias no `paris.html`.
 
-| Aba | Tipo | Conteúdo-base (já pesquisado) |
-|---|---|---|
-| Sex 9 → Qui 15 | datadas (7) | esqueleto acima |
-| 🌳 Luxembourg + Saint-Germain | pool | Ludo Jardin · carrossel · pôneis · igreja · rue de Buci |
-| 📚 Quartier Latin + Jardin des Plantes | pool | ménagerie (€13/€10) · carrossel do Dodo · Grande Galerie de l'Évolution (fecha terça) · Arènes de Lutèce · Shakespeare and Company |
-| 🏛️ Louvre · Tuileries · Palais-Royal | pool | Orangerie · parquinho · trampolim · Buren |
-| 🎨 Montmartre | pool | funicular · carrossel Saint-Pierre · Turlure · Sacré-Cœur · Mur des je t'aime |
-| ⛪ Île de la Cité | pool | Notre-Dame · Square du Vert-Galant · Sainte-Chapelle (pula: €22 adulto, nada pra criança) |
-| 🗼 Trocadéro | pool | **reaproveitar** a aba do paris-fds (Aquário + entorno) |
-| 🏘️ Marais | link | **reaproveitar** a coletânea `marais/` (aba Família) |
+## Cardápio de bairros (Parte 2 deste documento)
 
-As abas de bairro novas podem virar **coletâneas no paris.html** depois (patrimônio pra próximas visitas), como o Marais. (sugestão Claude · validar)
+| Bairro | Abas propostas (formato Marais) | Paradas | Encaixe nesta viagem |
+|---|---|---|---|
+| 📚 **Quartier Latin** | 👶 Família (bichos, gladiadores, chá de menta) · 🎨 História (da Paris romana ao Panthéon, 2 partes) · 🍫 Guloso · 🖼️ Museus | 28 | qua 14 à tarde (Jardin des Plantes) |
+| 🌳 **Saint-Germain · Odéon · Luxembourg** | 👶 Família (Luxembourg de ponta a ponta) · 🎨 História (de Childebert à guilhotina) · 🍫 Guloso · 🖼️ Museus (Delacroix → Orsay) | 26 | sáb 10 · Orsay qua 14 |
+| 🏛️ **Louvre · Tuileries · Palais-Royal** | 👶 Família (Tuileries de ponta a ponta) · 🎨 História (de Luís XVI a Napoleão) · 🖼️ Museus (Orangerie + Louvre-relâmpago) · 🕰️ Passagens cobertas (plano de chuva) · 🍫 Guloso | 31 | seg 12 de manhã |
+| 🎨 **Montmartre** | 👶 Família · 🎨 História (2 partes: artistas e moinhos · o topo da Butte) · 🍫 Guloso (versão segunda-feira) · 🖼️ Museus | 30 | seg 12 à tarde |
+| ⛪ **Île de la Cité + Île Saint-Louis** | 👶 Família (catedral, ponte, sorvete, parquinho) · 🎨 História (2 partes) · 🍫 Guloso · 🏛️ Monumentos com ingresso | 23 | dom 11 à tarde |
+| 🏘️ **Marais** | já existe · coletânea `marais/` (5 abas) | 35 | reserva / dia de chuva |
+| 🐠 **Trocadéro** | já existe · aba do paris-fds (Aquário + entorno) | 6 | reserva |
 
 ## Pula sem culpa
 
