@@ -12,9 +12,9 @@ pra confirmar está marcado `[a confirmar]`.
 | **Sex 9** | — | Chegada em Orly 19:55 → Uber até Boulogne | jantar em casa |
 | **Sáb 10** | as duas famílias | 🌳 **Jardin du Luxembourg + Saint-Germain-des-Prés** | ~18:15 |
 | **Dom 11** | as duas famílias | 🏠 malhar juntos em casa · ⛪ **Notre-Dame + Île Saint-Louis** · 🚤 **Bateau Mouche** | ~18:00 |
-| **Seg 12** | vocês 3 | 🏛️ **Orangerie + Tuileries** · 🎨 **Montmartre** | ~18:15 |
-| **Ter 13** | vocês 3 (talvez com a gente) | 🏰 **Disney Adventure World** | ~18:45 |
-| **Qua 14** | vocês 3 (+ nós, se não formos à Disney) | 🖼️ **Orsay** · tarde à escolha | ~18:00 · mala pronta |
+| **Seg 12** | vocês 3 | 🏛️ **Orangerie + Tuileries** · 🌻 **Van Gogh no Atelier des Lumières** (último dia) | ~17:00 |
+| **Ter 13** | as duas famílias | 🏰 **Disney Adventure World** | ~18:45 |
+| **Qua 14** | vocês 3 | 🖼️ **Orsay** · 🗼 **subir a Torre Eiffel** | ~17:30 · mala pronta · saída de casa às 3h |
 | **Qui 15** | todos | ✈️ voo das 6:30 pra Copenhague | — |
 
 ## Antes de vir · o que reservar ou comprar
@@ -24,6 +24,8 @@ pra confirmar está marcado `[a confirmar]`.
 | **Ingresso da Disney** | antes de terça | **A bilheteria do parque não vende na hora**, só antecipado e com data. Criança de 3 a 11 anos paga tarifa infantil |
 | **Orsay · horário de quarta 9h30** | já | **Reserva de horário obrigatória**, porque o museu está em obras até 2028 (entrada pelo cais do Sena). Menor de 18 não paga |
 | **Orangerie · segunda 9h** | recomendado | €12,50 online · menor de 18 não paga. As visitas infantis de outubro estão todas lotadas, então a visita é por conta própria |
+| **Atelier des Lumières · segunda 12** | já | **12/out é o último dia da exposição Van Gogh**, e segunda é dia de Van Gogh na programação. A partir de €17 adulto · **abaixo de 5 anos não paga** · não pode entrar carrinho. Reservar horário |
+| **Torre Eiffel · quarta 14** | **já** | Bilhete com horário em ticket.toureiffel.paris. **Sem reserva, a bilheteria do local não garante a entrada** se a lotação estiver cheia. Elevador até o topo: €36,70 adulto · €9,20 criança 4-11 anos. Até o 2º andar: €23,50 · €6 |
 | **Bateaux-Mouches** | quando quiserem | €17 adulto e €8 criança online. O bilhete vale pra qualquer saída do dia: não precisa marcar horário |
 | **Notre-Dame** | no próprio domingo | Entrada grátis. A reserva de horário também é grátis e evita a fila; as vagas abrem pouco antes |
 | **Metrô** | ao chegar | **Não existe mais bilhete de papel**: é preciso o cartão Navigo Easy (€2) ou o app da IDFM. Bilhete €2,55; criança de 4 a 9 anos paga €1,30 |
@@ -52,7 +54,7 @@ Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min).
 |-----|------------------|--------------------------------|
 | 10:00 | **Jardin du Luxembourg** · entrada pelo lado Odéon | Grátis. Fontaine Médicis logo na entrada |
 | 10:15 | **Ludo Jardin**, o parquinho do Luxembourg (é o "ludo" da sua lista) | ~€3 criança, €1 adulto `[preço a confirmar]`. Abre às 10h e enche à tarde |
-| 11:30 | **Carrossel** + **passeio de pônei** | Os pôneis só funcionam quarta, sábado e domingo · preços `[a confirmar]` |
+| 11:30 | **Carrossel** | o mais antigo de Paris · preço `[a confirmar]` |
 | 12:30 | **Almoço** | **Bouillon Racine** (3 rue Racine): salão Art Nouveau de 1906, menu infantil €14,50, cozinha sem intervalo. Reserva: 01 44 32 15 60. Ou **Breizh Café Odéon** (1 rue de l'Odéon), crepes |
 | 14:30 | **Passeio por Saint-Germain** | Cour du Commerce Saint-André → Place de Furstenberg → **Église Saint-Germain-des-Prés** (uma das igrejas mais antigas de Paris, grátis) |
 | 16:30 | **Pausa doce** | Pierre Hermé (72 rue Bonaparte) ou sorvete no Il Gelato del Marchese |
@@ -70,18 +72,18 @@ Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min).
 | 16:30 | 🚤 **Bateaux-Mouches** (Port de la Conférence, Pont de l'Alma) | ~1h. Saídas a cada 30 min. Criança abaixo de 4 anos não paga. A corrida usa o cais de manhã: conferir no sábado à noite se reabriu à tarde |
 | 17:40 | Metrô de volta | Linha 9 direto de **Alma-Marceau** (18 min) → casa ~18:00 |
 
-### Segunda 12 · Orangerie, Tuileries e Montmartre
+### Segunda 12 · Orangerie, Tuileries e Van Gogh
 | Hora | O quê | Detalhe |
 |-----|------------------|--------------------------------|
 | 8:30 | Metrô | Linha 9 até Franklin D. Roosevelt → linha 1 até **Concorde** (~30 min) |
 | 9:00 | **Musée de l'Orangerie** · as salas ovais das Ninféias de Monet | ~1h é o tamanho certo pra criança de 4 anos. Exposição "Monet, peindre le temps" em cartaz |
 | 10:15 | **Jardin des Tuileries** | **Parquinho grátis** (perto da entrada Castiglione) · **cama elástica €3** (a partir de 2 anos) · **carrossel €3**. Os barquinhos à vela não funcionam às segundas |
-| 12:00 | Metrô até Montmartre | **Linha 12 direto de Concorde até Abbesses**. Abbesses é muito funda: usar o elevador |
-| 12:30 | **Almoço na rue des Abbesses** | **Breizh Café Abbesses** (crepes, abre segunda) · **Coquelicot** (padaria-café) · **La Mascotte** (brasserie de 1889, cozinha sem intervalo) |
-| 14:00 | **Carrossel Saint-Pierre** → **funicular** até o topo | Funicular com o mesmo bilhete do metrô (criança €1,30) |
-| 14:45 | **Sacré-Cœur** | Basílica grátis. A cúpula tem ~300 degraus estreitos: pula com criança |
-| 15:30 | **Parc de la Turlure** | Parquinho atrás do Sacré-Cœur, com banheiro, aberto até 18:30. A Place du Tertre fica a 2 passos: é turística, vale só olhar |
-| 17:15 | Metrô de volta | ~45 min com 2 baldeações → casa ~18:15 |
+| 12:00 | **Almoço** | **Iovine's** (pizzaria, 7bis rue du Colonel Driant, 12h-15h) ou sanduíche da **Bo&Mie** (91 rue de Rivoli) pra comer num banco das Tuileries |
+| 13:30 | Metrô até o 11e | Linha 1 até Franklin D. Roosevelt → **linha 9 até Voltaire ou Saint-Ambroise**, a 6 min a pé do Atelier `[tempo total a confirmar]` |
+| 14:15 | 🌻 **Atelier des Lumières** · *Van Gogh, La Nuit Étoilée* (38 rue Saint-Maur) | Último dia da exposição. Uma antiga fundição de 1835 transformada em sala de projeção imersiva: ~50 min, em loop, dá pra ficar mais de uma volta. A partir de 2 anos · sem carrinho |
+| 15:30 | Volta pra casa | **Linha 9 direto** de Voltaire até Boulogne, sem baldeação · tarde livre pra descansar |
+
+🔄 **Se preferirem Montmartre** (funicular, carrossel, Sacré-Cœur), ele entra no lugar do Atelier. Mas a exposição Van Gogh acaba nesse dia, e Montmartre continua lá: ver o anexo.
 
 ### Terça 13 · Disney Adventure World
 | Hora | O quê | Detalhe |
@@ -92,15 +94,15 @@ Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min).
 | — | Halloween | O desfile e os personagens de Halloween ficam **só no Parc Disneyland**, o outro parque |
 | ~17:15 | Saída do parque | pra chegar em casa ~18:45 |
 
-### Quarta 14 · Orsay e tarde à escolha
+### Quarta 14 · Orsay e Torre Eiffel
 | Hora | O quê | Detalhe |
 |-----|------------------|--------------------------------|
 | 9:00 | Metrô | Linha 10 até Sèvres-Babylone → linha 12 até Solférino `[a confirmar]` |
 | 9:30 | **Musée d'Orsay** (horário reservado) | Era uma estação de trem, e o **relógio gigante** é o que a criança vai lembrar. Visita curta, ~1h: relógio → café do 5º andar, de frente pra um relógio externo → **urso polar de Pompon**. Livretos infantis grátis (4-12 anos) |
 | 11:00 | **Deyrolle** (46 rue du Bac) | Loja-gabinete de curiosidades com bichos empalhados desde 1831. Entrada grátis |
 | 12:30 | Almoço | — |
-| tarde | **Escolha uma** | 🚗 **Mondial de l'Auto** (Porte de Versailles, pertinho de Boulogne · 9h30-20h · **criança abaixo de 7 anos não paga**) · 🦁 **Ménagerie do Jardin des Plantes** (zoológico; €13 adulto, €10 de 3 a 25 anos; linha 10 até Jussieu) + carrossel de bichos extintos · 🎭 **Guignol do Ranelagh** (16e, 15h15 · peça `[a confirmar]`) |
-| ~17:30 | Volta pra casa | mala pronta · noite cedo (voo às 6:30) |
+| ~14:30 | 🗼 **Torre Eiffel** (horário reservado) | A promessa da viagem. Topo pelo elevador ou só até o 2º andar (preços em "Antes de vir"). Chegar com folga pra fila de segurança `[tempo a confirmar]` |
+| ~16:45 | Volta pra casa | Linha 9 de **Trocadéro** ou **Bir-Hakeim (linha 6) → Trocadéro → linha 9** `[rota a confirmar]` · jantar cedo · **cama cedo: saída de casa às 3h** |
 
 ---
 
