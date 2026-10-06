@@ -12,7 +12,7 @@ pra confirmar está marcado `[a confirmar]`.
 | **Sex 9** | — | Chegada em Orly 19:55 → Uber até Boulogne | jantar em casa |
 | **Sáb 10** | as duas famílias | 🌳 **Jardin du Luxembourg + Saint-Germain-des-Prés** | ~18:15 |
 | **Dom 11** | as duas famílias | 🏠 malhar juntos em casa · ⛪ **Notre-Dame + Île Saint-Louis** · 🚤 **Bateau Mouche** | ~18:00 |
-| **Seg 12** | vocês 3 | 🏛️ **Orangerie + Tuileries** · 🌻 **Van Gogh no Atelier des Lumières** (último dia) | ~17:00 |
+| **Seg 12** | vocês 3 | 🏛️ **Orangerie + Tuileries** · 🌻 **Van Gogh no Atelier des Lumières** (último dia) · 🍷 **noite só de vocês duas** | ~17:00 |
 | **Ter 13** | as duas famílias | 🏰 **Disney Adventure World** | ~18:45 |
 | **Qua 14** | vocês 3 | 🖼️ **Orsay** · 🗼 **subir a Torre Eiffel** | ~17:30 · mala pronta · saída de casa às 3h |
 | **Qui 15** | todos | ✈️ voo das 6:30 pra Copenhague | — |
@@ -82,6 +82,22 @@ Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min).
 | 13:30 | Metrô até o 11e | Linha 1 até Franklin D. Roosevelt → **linha 9 até Voltaire ou Saint-Ambroise**, a 6 min a pé do Atelier `[tempo total a confirmar]` |
 | 14:15 | 🌻 **Atelier des Lumières** · *Van Gogh, La Nuit Étoilée* (38 rue Saint-Maur) | Último dia da exposição. Uma antiga fundição de 1835 transformada em sala de projeção imersiva: ~50 min, em loop, dá pra ficar mais de uma volta. A partir de 2 anos · sem carrinho |
 | 15:30 | Volta pra casa | **Linha 9 direto** de Voltaire até Boulogne, sem baldeação · tarde livre pra descansar |
+| ~19:30 | 🍷 **Noite só de vocês duas** | Crianças jantadas e na cama. As 8 opções abaixo **abrem na segunda à noite** (o dia em que muito restaurante de Paris fecha) e ficam a uma linha de metrô de Boulogne, sem baldeação |
+
+**🍷 Noite das duas · 8 opções** (⭐ = as duas sugeridas)
+
+| Lugar | Por que vale | Preço | Como ir · reserva |
+|------------|--------------------------------|-----------|------------------|
+| ⭐ **Café de l'Homme** (17 place du Trocadéro) | Terraço aquecido de frente pra Torre Eiffel. Dá pra ir só pro drinque ("After Dinner", reserva até 00:15) | pratos €34-65 · mesa no terraço €60/pessoa com uma taça de champanhe | L9 Trocadéro, saída 6 · reserva no site ou 01 44 05 30 15 · **dress code chique** · jantar ~1h30 |
+| ⭐ **Freddy's** (54 rue de Seine) → **Prescription Cocktail Club** (23 rue Mazarine) | Bar de vinho com pratinhos e "uma das melhores seleções de vinho em taça da cidade", depois coquetel num lounge escuro e silencioso, a poucas quadras | vinho "razoável" `[a confirmar]` · coquetel €13-15 `[dado antigo]` | L10 Mabillon / Odéon · **o Freddy's não reserva** e lota depois das 19:30 |
+| **Bouillon Racine** (3 rue Racine) | Brasserie Art Nouveau de 1906, monumento histórico | €19,50-39 sem bebida (Gault&Millau 2026) | L10 Odéon · 01 44 32 15 60 |
+| **Baca'v** (33 av. du Général-Leclerc, Boulogne) | O único Bib Gourmand Michelin de Boulogne · bistrô generoso | menu €45 · degustação €65 | em Boulogne · 01 55 60 79 95 |
+| **Les Galopins** (17 rue Paul Bert, Boulogne) | Bistrô de bairro alegre, vinhos de pequenos produtores | €35-45 `[preço de 2017]` | L9 Billancourt · 01 47 12 13 03 |
+| **Les Ombres** (27 quai Jacques Chirac) | Sala toda de vidro no topo do Quai Branly, vista da Torre | menu €98 / €118 | L9 Alma-Marceau · **reserva obrigatória** · último serviço 22h · o museu fecha às segundas: confirmar a entrada ao reservar |
+| **Monsieur Bleu** (Palais de Tokyo) | Salão Art Déco de mármore e dourado | pratos €35-55 · coquetel €20-22 | L9 Iéna · em outubro, sem o terraço |
+
+**Volta**: o último metrô chega ao terminal ~01:15 (de domingo a quinta) e passa antes nas estações do meio: sair até ~00:30 · ou Uber ~€19 do centro até Boulogne (preço dinâmico).
+
 
 🔄 **Se preferirem Montmartre** (funicular, carrossel, Sacré-Cœur), ele entra no lugar do Atelier. Mas a exposição Van Gogh acaba nesse dia, e Montmartre continua lá: ver o anexo.
 
