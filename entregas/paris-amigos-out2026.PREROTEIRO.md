@@ -14,6 +14,7 @@ dois agentes de contexto limpo; todo fato abaixo tem fonte na seção Fontes. In
 | Saída | qui 15/out · voo 6:30 pra Copenhague (junto com a família do Tobia) |
 | Disney | ter 13/out · **Disney Adventure World** (ex-Studios) · família do Tobia talvez vai; se não, junta na qua 14 |
 | Juntos (2 famílias · crianças 3a + 4a) | sáb 10 · dom 11 · Bateau Mouche juntos |
+| Ritmo | **em casa até 18:30, no máximo 19:00** (jantar e cama das crianças) |
 | Fora | Jardin d'Acclimatation (já tem Disney + Tivoli) · Louvre por dentro ("too much") |
 | Lista dela | Orangerie + Orsay · Luxembourg + "ludo" · Bateau Mouche · malhar todos juntos em casa · passeios vários · Disney |
 
@@ -35,21 +36,27 @@ dois agentes de contexto limpo; todo fato abaixo tem fonte na seção Fontes. In
 | 10 | Férias de Toussaint começam sáb 17/out · semana 10-14 **sem férias escolares** | Disney de terça fora de férias · atrações infantis em regime qua/sáb/dom |
 | 11 | Greves: **nenhum préavis** RATP/SNCF/aéreo pra 9-15/out | reconferir na véspera |
 
+## Regra que manda no dia · em casa até 18:30 (no máximo 19:00)
+
+Pedido do Tobia (06/10): as duas crianças jantam e vão pra cama cedo. Todo dia termina com o
+**metrô de volta saindo até ~17:45-18:00**. Consequência: **nada de pôr do sol nem Torre cintilando**
+(pôr do sol 19h11 em 10/out · 1ª cintilação às 20h) — fica de fora sem culpa.
+
 ## Esqueleto proposto (1 linha por dia)
 
-| Dia | Quem | Bairro / tema | Âncora | Fechamento do dia |
+| Dia | Quem | Bairro / tema | Âncora | Volta pra casa |
 |---|---|---|---|---|
 | **Sex 9** | eles + vocês em casa | Chegada | Orly 19:55 → Uber ~€34 → Boulogne | jantar em casa |
-| **Sáb 10** | 🤝 juntos | **Rive Gauche · Luxembourg + Saint-Germain** | L10 direto até Odéon (27 min) · Luxembourg: Ludo Jardin, carrossel, pôneis (qua/sáb/dom) | almoço Saint-Germain · Église Saint-Germain-des-Prés · volta L10 |
-| **Dom 11** | 🤝 juntos | **Manhã em casa · tarde Cité + Marais · Bateau Mouche** | manhã: malhar todos juntos (a corrida fecha as ruas mesmo) · tarde: Notre-Dame (grátis, reserva no próprio dia) → Île Saint-Louis → Marais (Place des Vosges · aba "Marais Clássico em Família" já existe) | **Bateaux-Mouches 19h na Pont de l'Alma** (pôr do sol 19h11) → cintilação da Torre às 20h → L9 direto pra casa (18 min) |
-| **Seg 12** | eles 3 | **Louvre · Tuileries · Palais-Royal** + Montmartre | **Orangerie 9h** (exposição "Monet, peindre le temps") → Tuileries (parquinho grátis, trampolim €3, carrossel €3) → colunas de Buren do Palais-Royal → pirâmide por fora | tarde: **Montmartre calmo** (funicular €2,55 · carrossel Saint-Pierre · Parc de la Turlure · Sacré-Cœur grátis) |
-| **Ter 13** | eles 3 (+ vocês?) | **Disney Adventure World** | 9h30-22h · World of Frozen · ~1h15-1h30 de Boulogne (L9 → RER A) | volta tarde · arrumar mala? (sugestão Claude · validar) |
-| **Qua 14** | eles 3 (+ vocês se não foram na Disney) | **Orsay + tarde à escolha** | **Orsay 9h30** (bilhete com horário recomendado · criança grátis) · visita curta, ~1h30 (sugestão Claude · validar) | tarde: 🔄 Mondial de l'Auto · 🔄 Jardin des Plantes (ménagerie + carrossel do Dodo) · 🔄 Guignol do Ranelagh 15h15 · **noite cedo** |
+| **Sáb 10** | 🤝 juntos | **Rive Gauche · Luxembourg + Saint-Germain** | L10 direto até Odéon (27 min) · Luxembourg de manhã: Ludo Jardin, carrossel, pôneis (qua/sáb/dom) · almoço em Saint-Germain · Église Saint-Germain-des-Prés | **L10 de Odéon/Mabillon ~17:45** → casa ~18:15 |
+| **Dom 11** | 🤝 juntos | **Manhã em casa · tarde nas ilhas · Bateau Mouche** | manhã: malhar todos juntos + almoço em casa (a corrida 20 km fecha as ruas mesmo) · 14h: Notre-Dame (grátis, reserva no próprio dia) → Square Jean-XXIII → Île Saint-Louis · **16:30 Bateaux-Mouches na Pont de l'Alma** (1h) | **L9 de Alma-Marceau ~17:40** (18 min, direto) → casa ~18:00 |
+| **Seg 12** | eles 3 | **Louvre · Tuileries · Palais-Royal** + Montmartre | **Orangerie 9h** (exposição "Monet, peindre le temps") → Tuileries (parquinho grátis, trampolim €3, carrossel €3) → colunas de Buren do Palais-Royal → pirâmide por fora · tarde: **Montmartre calmo** (funicular €2,55 · carrossel Saint-Pierre · Parc de la Turlure · Sacré-Cœur grátis) | sair de Montmartre **~17:30** → casa ~18:15 [tempo a confirmar] |
+| **Ter 13** | eles 3 (+ vocês?) | **Disney Adventure World** | parque 9h30-22h · World of Frozen · ~1h15-1h30 de Boulogne (L9 → RER A) · sair de casa ~8h | **sair do parque ~17:15** pra cumprir a regra · ou exceção no dia (decidir) |
+| **Qua 14** | eles 3 (+ vocês se não foram na Disney) | **Orsay + tarde à escolha** | **Orsay 9h30** (bilhete com horário recomendado · criança grátis) · visita curta, ~1h30 (sugestão Claude · validar) · tarde: 🔄 Mondial de l'Auto · 🔄 Jardin des Plantes (ménagerie + carrossel do Dodo) · 🔄 Guignol do Ranelagh 15h15 | casa ~18:00 · mala pronta · **noite cedo** |
 | **Qui 15** | todos | Partida | voo 6:30 | — |
 
 **Por que esta ordem** (sugestão Claude · validar):
 - **Sábado na Rive Gauche** porque Montmartre está tomado pelo desfile e o domingo tem a corrida de manhã.
-- **Barco no domingo às 19h na Alma**: pega o pôr do sol, e quem estiver no barco ou no cais às 20h vê a Torre cintilar. A volta é a L9 direto pra Boulogne, sem baldeação.
+- **Barco no domingo às 16:30 na Alma**: a tarde de domingo é a mais leve, a Bateaux-Mouches sai a cada 30 min (10h-21h30) sem reserva, e a volta é a L9 direto pra Boulogne. A Alma fica no cais da Rive Droite, que a corrida usa de manhã — **reconferir no sábado à noite se o cais reabriu à tarde** [a confirmar].
 - **Orangerie na segunda** porque o Orsay fecha nesse dia.
 - **Orsay na quarta**: abre às 9h30, a manhã rende com a criança descansada, e a tarde fica leve antes do voo das 6:30.
 

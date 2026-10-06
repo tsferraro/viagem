@@ -71,6 +71,10 @@ pra montagem de qualquer roteiro futuro.
   ago/2026: recomendei Torralba + Nuraghe Santu Antine tratando o modo (a) como default porque
   estava escrito no MEMORY — ele queria (b). **Sempre apresentar os dois com o custo em minutos e
   perguntar**, nunca inferir de lição registrada.
+- **Com criança pequena, o dia acaba em casa às 18:30 (no máximo 19:00)** · jantar e cama. Pedido
+  explícito do Tobia (06/10/2026, roteiro Paris com família amiga + crianças 3a e 4a) ao recusar um
+  barco no Sena às 19h pelo pôr do sol. Default pra toda viagem com criança pequena: volta de
+  metrô/carro saindo ~17:45 · programa de pôr do sol/noturno não entra (vira 🔄 só se pedirem).
 - **O fio que liga tudo: ele quer o custo explícito pra decidir, não a decisão pronta.** Vale pros
   cards `🔄`, pros desvios, pras trocas de dia e pro modo da parada-almoço. Suprimir opção "pra
   facilitar" — ou escolher por ele porque um padrão antigo diz qual é a boa — é o anti-padrão.
