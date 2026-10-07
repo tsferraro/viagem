@@ -1,0 +1,3279 @@
+{
+  "title": "Paris · 9-15 Out",
+  "auth_emoji": "🗼",
+  "auth_title": "Paris · 9 a 15 de outubro",
+  "auth_subtitle": "O roteiro de vocês em Paris",
+  "header_title": "Paris · 9-15/Out",
+  "header_sub": "Cinco dias de Paris e um de Disney, saindo de Boulogne · em casa até 18:30",
+  "password": "paris2026",
+  "maps_region": "Paris, France",
+  "wt_labels": "letters",
+  "legend_group_text": "Dia com as duas famílias juntas",
+  "legend_notes_html": "<p>⏰ <strong>Regra de ouro da semana: em casa até 18:30</strong>, no máximo 19:00, pra jantar e dormir cedo. Por isso todo dia termina com o metrô de volta saindo por volta das 17:45.</p><p>🗓️ As <strong>sete primeiras abas são datadas</strong> (sex 9 a qui 15). A aba 🏘️ <strong>Bairros</strong> não tem data: leva pra página de Paris com os percursos a pé por bairro.</p><p>⚠️ <strong>Avisos da semana</strong> · <strong>sáb 10</strong>: Fête des Vendanges em Montmartre, com desfile e multidão (por isso Montmartre ficou de fora) · <strong>dom 11 de manhã</strong>: corrida de 20 km de Paris na margem direita, ruas fechadas e táxi travado; as linhas 9 e 10 funcionam normalmente · <strong>fechados nesta semana</strong>: o Guignol do Luxembourg, o parquinho atrás de Notre-Dame, o Mur des je t'aime e a galeria dos dinossauros do Jardin des Plantes · <strong>estação Saint-Michel (linha 4) fechada</strong>: pras ilhas, a linha 10 resolve · <strong>Orsay fecha às segundas, Orangerie e Louvre às terças</strong>.</p><p>🔄 Card com <strong>🔄</strong> é alternativa: substitui uma parada e não entra na rota do dia.</p><p>☐ Os cards com <strong>RESERVAR</strong> são os bilhetes a comprar antes. Toque pra marcar quando estiver feito.</p>",
+  "feedback_url": "",
+  "app_short_name": "Paris Out",
+  "icon_emoji": "🗼",
+  "bairros_config": [
+    {
+      "nome": "⛪ Ilhas e Quartier Latin",
+      "latMin": 48.845,
+      "latMax": 48.858,
+      "lngMin": 2.338,
+      "lngMax": 2.365
+    },
+    {
+      "nome": "🌳 Saint-Germain e Luxembourg",
+      "latMin": 48.84,
+      "latMax": 48.858,
+      "lngMin": 2.32,
+      "lngMax": 2.338
+    },
+    {
+      "nome": "🏛️ Concorde, Tuileries e Orsay",
+      "latMin": 48.856,
+      "latMax": 48.868,
+      "lngMin": 2.31,
+      "lngMax": 2.338
+    },
+    {
+      "nome": "🗼 Torre Eiffel, Alma e Trocadéro",
+      "latMin": 48.85,
+      "latMax": 48.868,
+      "lngMin": 2.28,
+      "lngMax": 2.31
+    },
+    {
+      "nome": "🌻 11e",
+      "latMin": 48.85,
+      "latMax": 48.875,
+      "lngMin": 2.365,
+      "lngMax": 2.4
+    },
+    {
+      "nome": "🏰 Disney",
+      "latMin": 48.85,
+      "latMax": 48.88,
+      "lngMin": 2.76,
+      "lngMax": 2.8
+    },
+    {
+      "nome": "📍 Outros",
+      "fallback": true
+    }
+  ],
+  "days": [
+    {
+      "date": "Sex 9/Out",
+      "tema": "Chegada · Orly → Boulogne",
+      "temaCurto": "Chegada",
+      "bairro": "🛬 Orly → Boulogne",
+      "grupo": false,
+      "cor": "#475569",
+      "gradA": "#1e293b",
+      "gradB": "#64748b",
+      "nota": "<strong>Hoje é só chegar:</strong> táxi no ponto e jantar em casa. A manhã de sábado é livre de propósito.<br><strong>Antes de vir · o que reservar ou comprar</strong><ul><li>🏰 <strong>Ingresso da Disney</strong> (terça): já comprado.</li><li>🖼️ <strong>Orsay · quarta 9h30</strong>: reserva de horário fortemente recomendada.</li><li>🌸 <strong>Orangerie · segunda 9h</strong>: reserva recomendada.</li><li>🌻 <strong>Atelier des Lumières · segunda</strong>: é o último dia da exposição Van Gogh, reservar horário. Adulto a partir de €19,50 (−€1 online) · ele paga tarifa criança (3-11 anos, a partir de €12,50): grátis só abaixo de 3.</li><li>🗼 <strong>Torre Eiffel · quarta</strong>: reservar <strong>já</strong>, bilhete com horário no site oficial.</li><li>🚤 <strong>Bateaux-Mouches</strong> (sábado): a gente compra.</li><li>⛪ <strong>Notre-Dame</strong> (sábado): reserva de horário grátis; as fontes divergem sobre quando as vagas abrem, então tentem já na <strong>quinta 8</strong> e repitam na sexta.</li><li>🚇 <strong>Metrô</strong>: não existe mais bilhete de papel. Tem que ser o cartão <strong>Navigo Easy</strong> (€2) ou o app da IDFM. Bilhete €2,55; criança de 4 a 9 anos paga €1,30.</li></ul>",
+      "stops": [
+        {
+          "hora": "19:55",
+          "emoji": "🚕",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Orly → Casa (táxi)",
+          "cat": "Táxi, não Uber · seguir as indicações pintadas no chão até o ponto de táxi · taxímetro ~€54",
+          "mapsQuery": "Aéroport de Paris-Orly",
+          "coord": {
+            "lat": 48.73006,
+            "lng": 2.36783
+          }
+        },
+        {
+          "hora": "21:00",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "restaurante",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Jantar em casa",
+          "cat": "Primeira noite: chegar, comer e dormir",
+          "sobre": "Sem programa: a chegada é tarde e a manhã de sábado fica livre pra descansar.",
+          "imperdivel": "O descanso: amanhã o dia começa só depois do almoço.",
+          "dicas": [
+            "Cama cedo hoje: amanhã de manhã é a folga, e o passeio só sai depois do almoço.",
+            "Sábado o metrô sai às 12:50: deixem a mochila e o Navigo Easy prontos hoje à noite."
+          ],
+          "duracao": "livre",
+          "custo": "em casa",
+          "acessibilidade": "Sem deslocamento: em casa, sem escadas a considerar com ele."
+        }
+      ]
+    },
+    {
+      "date": "Sáb 10/Out",
+      "tema": "Notre-Dame, Île Saint-Louis e Bateau Mouche",
+      "temaCurto": "Notre-Dame",
+      "bairro": "⛪ Île de la Cité e Île Saint-Louis",
+      "grupo": true,
+      "cor": "#b45309",
+      "gradA": "#78350f",
+      "gradB": "#f59e0b",
+      "nota": "<strong>O dia em uma linha:</strong> manhã em casa, metrô depois do almoço, catedral, as duas ilhas e o barco no fim da tarde, com a gente. Casa por volta de 18:00.<br><strong>⚠️ Por que não Montmartre hoje:</strong> sábado é o desfile da Fête des Vendanges (11h45-13h30), com uma multidão. Montmartre ficou pra segunda.<br><strong>⛪ Notre-Dame:</strong> faça a reserva de horário (grátis) no próprio sábado de manhã. <strong>🍦 Sem sorvete de fila hoje:</strong> a gente acha que o Berthillon não vale o hype.",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🏠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Manhã em casa · malhar juntos + almoço",
+          "cat": "Manhã livre depois da chegada de sexta à noite",
+          "sobre": "Todo mundo junto em casa: treino, café e almoço sem pressa. O passeio só sai depois do almoço.",
+          "imperdivel": "Chegaram ontem à noite: a manhã é de descanso.",
+          "dicas": [
+            "Almoçar em casa antes de sair, pra chegar no Point Zéro com ele alimentado.",
+            "Saída às 12:50 pro metrô: mochila, água e o Navigo Easy já na porta às 12:40."
+          ],
+          "duracao": "até o almoço",
+          "custo": "em casa",
+          "acessibilidade": "Sem deslocamento: em casa, sem escadas a considerar com ele."
+        },
+        {
+          "hora": "12:50",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Casa → Maubert-Mutualité (linha 10)",
+          "cat": "~30 min · linha 10 direto",
+          "mapsQuery": "Maubert - Mutualité, Paris",
+          "coord": {
+            "lat": 48.85006,
+            "lng": 2.34843
+          }
+        },
+        {
+          "hora": "13:30",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Point Zéro + Notre-Dame (6 parvis Notre-Dame, 4e)",
+          "mapsQuery": "Cathédrale Notre-Dame de Paris",
+          "cat": "A catedral reaberta · e a rosa dos ventos onde se pisa pra voltar a Paris",
+          "sobre": "O <strong>Point Zéro</strong> é a rosa dos ventos de latão no parvis, a uns <strong>50 m</strong> da catedral: de lá se medem as estradas da França, e diz a lenda que quem pisa nela volta a Paris. A catedral <strong>reabriu em 7/dez/2024</strong>, depois do incêndio de <strong>15/abr/2019</strong>.",
+          "imperdivel": "Brincadeira pra ele: lá em cima, o <strong>galo dourado</strong> com asas de chama, que parece uma fênix, e, na fachada, o santo que segura a <strong>própria cabeça</strong> (São Denis, no portal da esquerda). Antes de entrar, é só pisar na rosa dos ventos e pedir pra voltar.",
+          "dicas": [
+            "🎟️ Entrada <strong>grátis</strong> (sábado 8h15-19h30). A <strong>reserva de horário também é grátis</strong> e evita a fila: sem ela a fila pode passar de <strong>1-2 h</strong>. As fontes divergem sobre quando as vagas abrem (dois dias antes, véspera ou poucas horas antes): tentem já na <strong>quinta 8</strong> e repitam na sexta e no sábado de manhã.",
+            "⏱️ A nave leva uns <strong>30-40 min</strong> com criança: é escura, alta e silenciosa, e funciona se for rápido.",
+            "🧸 O parquinho atrás da catedral (Square Jean-XXIII) está <strong>fechado até 2027</strong>. O parquinho das ilhas hoje é o Square Barye, a parada das 15:00.",
+            "🚧 Os vitrais novos da nave sul estão sendo instalados: pode haver capelas com tapume. A obra atrás da catedral (Square de l'Île-de-France e quai de l'Archevêché) começa em novembro de 2026; o parvis da frente, onde fica o Point Zéro, deve estar livre [confirmar no local].",
+            "🪜 As torres ficam pra outra viagem: muitos degraus sem carrinho."
+          ],
+          "aprofundar": "<p><strong>O Point Zéro.</strong> Segundo a tradição, Luís XV fixou o ponto em <strong>1769</strong>, e a placa atual é de <strong>1924</strong>. Antes, ali ficava a \"escada da justiça\", onde os condenados se ajoelhavam.</p><p><strong>A fachada guarda uma vingança.</strong> Em <strong>1793</strong>, revolucionários cortaram a cabeça dos <strong>28 reis de Judá</strong> da Galeria dos Reis, achando que eram reis da França. Em <strong>1977</strong>, <strong>21 cabeças</strong> foram achadas por acaso num pátio de Paris e hoje estão no Museu de Cluny.</p><p><strong>A flecha refeita.</strong> No <strong>séc. XIX</strong>, quando refez a flecha, Viollet-le-Duc se pôs ali como São Tomé, <strong>o único apóstolo</strong> que, em vez de olhar pra cidade, olha pra própria obra. As <strong>16 estátuas</strong> dos apóstolos desceram pra restauro em <strong>11/abr/2019</strong>, <strong>quatro dias antes</strong> do incêndio, e foi isso que as salvou.</p>",
+          "duracao": "~1h (nave 30-40 min + Point Zéro)",
+          "custo": "grátis (out/2026)",
+          "acessibilidade": "Piso plano no parvis e na nave. Dentro é escuro e silencioso: segurar a mão dele.",
+          "coord": {
+            "lat": 48.85294,
+            "lng": 2.35005
+          },
+          "reserva": "pendente",
+          "fontes": [
+            {
+              "o": "Notre-Dame · horários (diretório)",
+              "u": "https://paris-notredame.com/?p=2038",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "8h15-19h30"
+              ]
+            },
+            {
+              "o": "L'Echo touristique · reserva e reabertura",
+              "u": "https://www.lechotouristique.com/article/notre-dame-de-paris-la-reservation-ne-sera-pas-obligatoire-mais-vivement-conseillee",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "reserva de horário também é grátis",
+                "1-2 h",
+                "7/dez/2024",
+                "15/abr/2019"
+              ]
+            },
+            {
+              "o": "Pariszigzag · Point Zéro",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/point-zero-de-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "50 m",
+                "22 de abril de 1769",
+                "1924",
+                "escada da justiça"
+              ]
+            },
+            {
+              "o": "History.com · a Galeria dos Reis",
+              "u": "https://www.history.com/news/notre-dame-fire-french-revolution",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1793",
+                "28 reis de Judá",
+                "21 cabeças",
+                "1977"
+              ]
+            },
+            {
+              "o": "Pariszigzag · Viollet-le-Duc",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/viollet-duc-notre-dame/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "o único apóstolo",
+                "séc. XIX"
+              ]
+            },
+            {
+              "o": "Ministério da Cultura · as 16 estátuas da flecha",
+              "u": "https://www.culture.gouv.fr/regions/drac-ile-de-france/Actualites/actualite-a-la-une/Les-16-statues-de-la-fleche-de-Notre-Dame-de-Paris-enfin-reunies",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "16 estátuas",
+                "11/abr/2019",
+                "quatro dias antes",
+                "2019"
+              ]
+            },
+            {
+              "o": "Smithsonian · o novo galo da flecha",
+              "u": "https://www.smithsonianmag.com/smart-news/notre-dame-cathedral-gets-new-spire-and-golden-rooster-180983465/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "galo dourado"
+              ]
+            },
+            {
+              "o": "Paris.fr · Square Jean-XXIII",
+              "u": "https://www.paris.fr/lieux/square-jean-xxiii-35",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "até 2027",
+                "2027"
+              ]
+            },
+            {
+              "o": "Paris.fr · fases da obra de Notre-Dame (ago/2026)",
+              "u": "https://cdn.paris.fr/paris/2026/08/18/lar_a3_notre-dame_phasage_gd_chantier_-aout-2026-soS4.pdf",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "nov/2026",
+                "2026"
+              ]
+            },
+            {
+              "o": "Euronews · vitrais novos",
+              "u": "https://www.euronews.com/culture/2026/07/24/controversial-new-stained-glass-windows-for-paris-notre-dame-to-be-unveiled-in-december",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "vitrais"
+              ]
+            },
+            {
+              "o": "Pariscityvision · duração da visita",
+              "u": "https://www.pariscityvision.com/fr/paris/monuments/notre-dame-de-paris/messe",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "30-40 min"
+              ]
+            },
+            {
+              "o": "Paris.fr · le Point Zéro réinstallé (FACTCHECK 2026-10-07)",
+              "u": "https://www.paris.fr/pages/le-point-zero-reinstalle-sur-le-parvis-de-notre-dame-de-paris-31306",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "latão",
+                "1769",
+                "novembro de 2026",
+                "1-2 h"
+              ]
+            },
+            {
+              "o": "Wikipédia FR · Point zéro des routes de France (FACTCHECK 2026-10-07)",
+              "u": "https://fr.wikipedia.org/wiki/Point_z%C3%A9ro_des_routes_de_France",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "Segundo a tradição",
+                "1769",
+                "1924"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🌉",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "Pont Saint-Louis (entre as duas ilhas, 4e)",
+          "mapsQuery": "Pont Saint-Louis, Paris",
+          "cat": "A passarela entre a Cité e a Île Saint-Louis · palco de rua",
+          "sobre": "A <strong>única ponte</strong> entre a Cité e a Île Saint-Louis, só pra pedestres: funciona mais como passarela. Vira palco de rua, com <strong>mímicos, acrobatas e músicos</strong>, mais frequentes com tempo bom.",
+          "imperdivel": "Parado no meio da ponte, olhe a ilha à sua frente: eram duas ilhotas, separadas por um canal que hoje é a rue Poulletier, a rua que corta a ilha de norte a sul mais adiante (a história está no \"Quer saber mais?\").",
+          "dicas": [
+            "⏱️ Parem alguns minutos no meio da ponte, às 14:30: é o espetáculo grátis do passeio.",
+            "🚻 Os squares das ilhas não têm banheiro: use o de um café onde consumir. A pesquisa indica o <strong>Le Saint-Régis</strong> (6 rue Jean-du-Bellay), na esquina da ponte, que é brasserie e abre todo dia sem pausa; o hit da casa é a <strong>brioche perdue</strong> com sorvete de caramelo salgado.",
+            "🍦 O sorvete Berthillon fica na rua Saint-Louis-en-l'Île, mas a gente acha que <strong>não vale o hype</strong>: pula sem culpa."
+          ],
+          "aprofundar": "<p><strong>A ilha que foi fabricada.</strong> A <strong>primeira ponte</strong> aqui foi de madeira, concluída em <strong>1634</strong>; a atual, de metal, é de <strong>1970</strong>. A ilha à frente eram duas ilhotas, a Île Notre-Dame e a \"Île aux Vaches\" (das vacas), usadas como pasto, varal e lugar de duelo, separadas por um canal escavado em <strong>1360</strong>.</p><p>Em <strong>1614</strong>, Luís XIII entregou o projeto a Christophe Marie, que aterrou o canal (hoje a rue Poulletier), cercou a ilha de cais e construiu a Pont Marie, que até hoje leva o nome dele. Os ricos vieram atrás: o Hôtel Lambert foi encomendado em <strong>1640</strong> a Louis Le Vau, e a Galerie d'Hercule, de Charles Le Brun, antecipou a Galeria dos Espelhos de Versalhes. No 19 quai de Bourbon, a escultora Camille Claudel trabalhou sozinha de <strong>1899 a 1913</strong>, até ser internada.</p>",
+          "duracao": "~30 min (até a próxima parada)",
+          "custo": "grátis (out/2026)",
+          "acessibilidade": "Ponte só de pedestres, plana, sem degraus.",
+          "coord": {
+            "lat": 48.85276,
+            "lng": 2.35276
+          },
+          "fontes": [
+            {
+              "o": "Audiala · Pont Saint-Louis",
+              "u": "https://audiala.com/fr/france/paris/pont-saint-louis",
+              "tier": "crowd",
+              "data": "2026-10-06",
+              "prova": [
+                "única ponte",
+                "primeira ponte aqui foi de madeira",
+                "1970",
+                "mímicos, acrobatas e músicos"
+              ]
+            },
+            {
+              "o": "Evous · Île Saint-Louis e Cité",
+              "u": "https://www.evous.fr/paris/Visiter/Visites-guidees-de-Paris/Iles-Saint-Louis-et-la-Cite-Lutece-la-visite-du-coeur-de-Paris,1192712.html",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "única ponte",
+                "primeira ponte",
+                "1970"
+              ]
+            },
+            {
+              "o": "Wikipedia · Île Saint-Louis",
+              "u": "https://en.wikipedia.org/wiki/%C3%8Ele_Saint-Louis",
+              "tier": "crowd",
+              "data": "2026-10-06",
+              "prova": [
+                "1360",
+                "1614"
+              ]
+            },
+            {
+              "o": "IU Paris · a criação da Île Saint-Louis",
+              "u": "https://paris10.sitehost.iu.edu/ParisOSS/Day_2_Early_Paris/Early_Mod/StLouis_Creation.html",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1614"
+              ]
+            },
+            {
+              "o": "Pariszigzag · Hôtel Lambert",
+              "u": "https://www.pariszigzag.fr/?p=140578",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1640"
+              ]
+            },
+            {
+              "o": "Musée Camille Claudel · biografia",
+              "u": "https://www.museecamilleclaudel.fr/en/collections/camille-claudel-biography/1893-1908-period-solitary-creation",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "1899 a 1913"
+              ]
+            },
+            {
+              "o": "Sortiraparis · Le Saint-Régis",
+              "u": "https://www.sortiraparis.com/en/hotels-and-restaurants/restaurant/articles/269861-le-saint-regis-la-brasserie-100-parisienne-de-l-ile-saint-louis",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "brioche perdue"
+              ]
+            },
+            {
+              "o": "Dica de campo · moradores (07/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-07",
+              "prova": [
+                "não vale o hype"
+              ]
+            },
+            {
+              "o": "Wikipédia FR · Pont Saint-Louis (FACTCHECK 2026-10-07)",
+              "u": "https://fr.wikipedia.org/wiki/Pont_Saint-Louis",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "1634",
+                "1970"
+              ]
+            },
+            {
+              "o": "Wikipédia FR · Rue Poulletier (FACTCHECK 2026-10-07)",
+              "u": "https://fr.wikipedia.org/wiki/Rue_Poulletier",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "rue Poulletier",
+                "canal"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🧸",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 3,
+          "nome": "Square Barye (2 bd Henri-IV, Île Saint-Louis)",
+          "mapsQuery": "Square Barye, Paris",
+          "cat": "O parquinho das ilhas · ponta leste da Île Saint-Louis",
+          "sobre": "Jardim de <strong>1938</strong> na ponta leste da Île Saint-Louis, em homenagem ao escultor Barye, com um cedro-do-líbano e o Sena dos dois lados. <strong>Tem parquinho</strong>: é onde ele gasta a energia.",
+          "imperdivel": "O cedro-do-líbano e o Sena aberto dos dois lados: foi daqui que a Lady Gaga cantou na abertura dos Jogos de <strong>2024</strong>.",
+          "dicas": [
+            "🧸 Com o Square Jean-XXIII fechado (até <strong>2027</strong>), este é <strong>o único parquinho das ilhas</strong>.",
+            "🚻 <strong>Não tem banheiro nem trocador</strong>; tem bebedouro. Vão ao banheiro antes, no café.",
+            "🕐 Aberto <strong>24h</strong>, grátis.",
+            "🚇 Daqui, sair às <strong>15:35</strong>: a estação boa é <strong>Sully-Morland (linha 7)</strong>, do outro lado da Pont de Sully."
+          ],
+          "duracao": "~45 min",
+          "custo": "grátis (out/2026)",
+          "acessibilidade": "Jardim plano, com parquinho. Sem banheiro.",
+          "coord": {
+            "lat": 48.84992,
+            "lng": 2.35979
+          },
+          "fontes": [
+            {
+              "o": "Paris.fr · Square Barye",
+              "u": "https://www.paris.fr/lieux/square-barye-29",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "1938",
+                "24h",
+                "o único parquinho das ilhas"
+              ]
+            },
+            {
+              "o": "Sortiraparis · de onde a Lady Gaga cantou",
+              "u": "https://www.sortiraparis.com/actualites/jeux-olympiques-paris-2024/articles/318285-jo-2024-quel-est-le-square-depuis-lequel-lady-gaga-a-chante-lors-de-la-ceremonie-d-ouverture",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "2024"
+              ]
+            },
+            {
+              "o": "Paris.fr · Square Jean-XXIII (fechado)",
+              "u": "https://www.paris.fr/lieux/square-jean-xxiii-35",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "2027"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:35",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Square Barye → Alma-Marceau (linha 7 + linha 9)",
+          "cat": "~40-45 min de porta a porta · linha 7 (Sully-Morland) → linha 9 (Alma-Marceau) · saída 15:35 pra estar no barco às 16:30",
+          "mapsQuery": "Alma - Marceau, Paris",
+          "coord": {
+            "lat": 48.86487,
+            "lng": 2.30029
+          }
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🚤",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "Bateaux-Mouches (Port de la Conférence, Pont de l'Alma)",
+          "mapsQuery": "Bateaux-Mouches, Port de la Conférence, Paris",
+          "cat": "Passeio de ~1h no Sena · embarque ao lado da Pont de l'Alma",
+          "sobre": "Passeio de <strong>~1h</strong> pelo Sena, com embarque no Port de la Conférence, bem junto à Pont de l'Alma. O barco sobe o rio rumo a Notre-Dame e volta pelo outro lado até a Torre Eiffel.",
+          "imperdivel": "Notre-Dame, que vocês acabaram de visitar a pé, aparece de novo da água. Pela janela passam também a Conciergerie, o Louvre, o Hôtel de Ville, o Musée d'Orsay e a Assemblée nationale, rumo à Torre Eiffel.",
+          "dicas": [
+            "🎟️ A gente compra online: <strong>€17</strong> adulto e <strong>€8</strong> criança (na bilheteria é €20 e €10). <strong>Menor de 4 anos não paga</strong>. O bilhete vale pra qualquer saída do dia, sem horário marcado.",
+            "🕓 Em outubro as saídas são <strong>a cada 45 min</strong> até as <strong>16h</strong> e <strong>a cada 30 min</strong> das 16h às <strong>21h30</strong>: a das 16:30 cai na faixa de 30 min.",
+            "🚇 Volta: linha 9 direto de Alma-Marceau, <strong>18 min</strong> até Boulogne. Metrô de volta às 17:40, casa por volta de 18:00."
+          ],
+          "duracao": "~1h",
+          "custo": "€17 adulto · €8 criança (online, out/2026) · <4 anos grátis",
+          "acessibilidade": "Embarque no cais, junto à ponte. Sem carrinho, ele sobe a pé.",
+          "coord": {
+            "lat": 48.86398,
+            "lng": 2.30583
+          },
+          "reserva": "pendente",
+          "fontes": [
+            {
+              "o": "Bateaux-Mouches · preços e saídas (site oficial)",
+              "u": "https://www.bateaux-mouches.fr/fr/croisiere/visite_promenade",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "€17",
+                "€8",
+                "menor de 4 anos não paga",
+                "Em outubro",
+                "outubro",
+                "a cada 45 min",
+                "a cada 30 min",
+                "16h",
+                "21h30"
+              ]
+            },
+            {
+              "o": "Bateaux-Mouches · informações do passeio (site oficial)",
+              "u": "https://www.bateaux-mouches.fr/en/cruise/information",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "~1h"
+              ]
+            },
+            {
+              "o": "Itineraire-metro.fr · linha 9",
+              "u": "https://www.itineraire-metro.fr/subway/from-Marcel+Sembat-to-Alma+Marceau.html",
+              "tier": "crowd",
+              "data": "2026-10-06",
+              "prova": [
+                "18 min"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "17:40",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Alma-Marceau → Casa (linha 9)",
+          "cat": "18 min · linha 9 direto · casa por volta de 18:00",
+          "mapsQuery": "Alma - Marceau, Paris",
+          "coord": {
+            "lat": 48.86487,
+            "lng": 2.30029
+          }
+        }
+      ]
+    },
+    {
+      "date": "Dom 11/Out",
+      "tema": "Luxembourg + Saint-Germain-des-Prés",
+      "temaCurto": "Luxembourg",
+      "bairro": "🌳 Luxembourg · Saint-Germain-des-Prés",
+      "grupo": true,
+      "cor": "#15803d",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "nota": "<strong>O dia em uma linha:</strong> jardim e parquinho de manhã, almoço perto do Odéon, passeio curto por Saint-Germain, doce e volta pra casa por volta de 18:15, com a gente.<br><strong>⚠️ Corrida de 20 km de Paris (domingo de manhã):</strong> ruas fechadas, táxi e Uber travados. As linhas 9 e 10 de metrô, as de Boulogne, funcionam normalmente <strong>[confirmar no app da RATP na véspera]</strong>, e o Luxembourg fica fora do percurso. Vão de metrô.<br><strong>🎭 Guignol do Luxembourg fechado:</strong> reabre dia 18/out, depois da viagem.",
+      "stops": [
+        {
+          "hora": "09:20",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Casa → Odéon (linha 10)",
+          "cat": "27 min · linha 10 direto · sair ~9:20 [horário de saída a ajustar]",
+          "mapsQuery": "Odéon, Paris",
+          "coord": {
+            "lat": 48.8523,
+            "lng": 2.33937
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "⛲",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 2,
+          "nome": "Jardin du Luxembourg · Fontaine Médicis (entrada lado Odéon)",
+          "mapsQuery": "Fontaine Médicis, Paris",
+          "cat": "O jardim do Senado · a fonte logo na entrada",
+          "sobre": "Jardim grátis, aberto das 7h45 às 18h45 de 1º a 15 de outubro. A <strong>Fontaine Médicis</strong>, logo na entrada pelo lado Odéon, foi construída em <strong>1630</strong> por ordem de Maria de Médici, a mesma que mandou erguer o Palácio do Luxembourg, hoje o Senado.",
+          "imperdivel": "O espelho d'água comprido sob os plátanos: é o canto \"de cartão-postal\" do jardim.",
+          "dicas": [
+            "⏱️ Das 10:00 às 10:15 bastam: ele tem peixe pra olhar e um corredor sombreado pra caminhar até o parquinho. O jardim fecha às 18h45.",
+            "🎭 O Guignol do Luxembourg está fechado: reabre dia 18/out.",
+            "🥪 Se bater fome antes do almoço, o jardim tem quiosques <strong>[o que vendem: a confirmar]</strong>."
+          ],
+          "duracao": "~15 min",
+          "custo": "grátis (out/2026)",
+          "acessibilidade": "Alamedas planas de cascalho, sombra de plátanos.",
+          "coord": {
+            "lat": 48.84806,
+            "lng": 2.33929
+          },
+          "fontes": [
+            {
+              "o": "Pariszigzag · Fontaine Médicis",
+              "u": "https://www.pariszigzag.fr/?p=206354",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1630"
+              ]
+            },
+            {
+              "o": "Offi · Jardin du Luxembourg",
+              "u": "https://www.offi.fr/a-travers-paris/jardin-du-luxembourg-2536.html",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "em outubro",
+                "outubro",
+                "out"
+              ]
+            },
+            {
+              "o": "Guignol du Luxembourg · site oficial",
+              "u": "https://www.guignolduluxembourg.fr/",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "18/out"
+              ]
+            },
+            {
+              "o": "Sénat · Jardin du Luxembourg, horaires d'ouverture (FACTCHECK 2026-10-07)",
+              "u": "https://jardin.senat.fr/infos-pratiques/horaires-douverture.html",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "7h45",
+                "18h45",
+                "1º a 15 de outubro"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "10:15",
+          "emoji": "🛝",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 3,
+          "nome": "Ludo Jardin (parquinho do Luxembourg, rue Auguste-Comte)",
+          "mapsQuery": "Ludo Jardin, Jardin du Luxembourg, Paris",
+          "cat": "O parquinho cercado e pago do Luxembourg · setor sudoeste",
+          "sobre": "Parquinho cercado e reformado, com duas áreas: uma pra menores de 7 (mini-arvorismo, balanços, escorregadores) e outra pra crianças de 7 a 12 anos, onde fica a tirolesa — essa não é pra ele.",
+          "imperdivel": "A área dos menores de 7: é o descarrego de energia do dia.",
+          "dicas": [
+            "🕙 Abre às 10h no verão (horário de outubro [a confirmar]) e enche à tarde: chegar às 10:15 é a hora boa.",
+            "💶 Cerca de <strong>€3</strong> a criança e <strong>€1</strong> o adulto <strong>[preço a confirmar: fonte sem data]</strong>.",
+            "📍 Fica no setor sudoeste do jardim, a uma caminhada da Fontaine Médicis."
+          ],
+          "duracao": "~1h15",
+          "custo": "~€3 criança · ~€1 adulto [a confirmar, out/2026]",
+          "acessibilidade": "Parquinho cercado, piso de areia e borracha. Adultos entram junto.",
+          "coord": {
+            "lat": 48.84581,
+            "lng": 2.33422
+          },
+          "fontes": [
+            {
+              "o": "Familinparis · aires de jeux de Paris",
+              "u": "https://www.familinparis.fr/aire-de-jeux-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "30 estruturas",
+                "menores de 7",
+                "7 a 12 anos",
+                "€3",
+                "€1",
+                "10h"
+              ]
+            },
+            {
+              "o": "Familinparis · aires de jeux Paris (FACTCHECK 2026-10-07)",
+              "u": "https://www.familinparis.fr/aire-de-jeux-paris/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "verão",
+                "outubro",
+                "10h"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:30",
+          "emoji": "🎠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Carrossel do Luxembourg (perto do parquinho)",
+          "mapsQuery": "Manège du Jardin du Luxembourg, Paris",
+          "cat": "O carrossel de Garnier · jeu de bagues",
+          "sobre": "O carrossel é de <strong>1879</strong>, com animais desenhados por <strong>Charles Garnier</strong>, o arquiteto da Ópera.",
+          "imperdivel": "O <strong>jeu de bagues</strong>: na fileira de fora, a criança recebe um bastão e tenta espetar argolas de lata que um funcionário repõe a toda velocidade. Pra uma criança pequena, é o máximo.",
+          "dicas": [
+            "💶 Preço do giro: <strong>[a confirmar]</strong>.",
+            "🕚 Às 11:30, depois do parquinho das 10:15: vocês vão ao parquinho antes e ao giro depois. Posição exata no jardim: <strong>[a confirmar]</strong>."
+          ],
+          "duracao": "~20 min",
+          "custo": "[a confirmar, out/2026]",
+          "acessibilidade": "Piso plano, embarque com ajuda de um adulto.",
+          "coord": {
+            "lat": 48.84622,
+            "lng": 2.3342
+          },
+          "fontes": [
+            {
+              "o": "Untapped Cities · seis carrosséis de Paris",
+              "u": "https://untappedcities.com/six-beautiful-carousels-of-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1879"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · nó 9848180370 (attraction=carousel) + plano oficial do Senado (FACTCHECK 2026-10-07)",
+              "u": "https://www.openstreetmap.org/node/9848180370",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "perto do parquinho"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Odéon",
+          "mapsQuery": "Bouillon Racine, 3 rue Racine, Paris",
+          "cat": "2 opções a 2-3 quadras da entrada Odéon · com as duas famílias, ligar antes pra reservar",
+          "coord": {
+            "lat": 48.85016,
+            "lng": 2.34202
+          },
+          "opcoes": [
+            {
+              "nome": "Bouillon Racine (3 rue Racine)",
+              "mapsQuery": "Bouillon Racine, 3 rue Racine, Paris",
+              "desc": "Salão Art Nouveau de 1906, cozinha contínua 12h-23h todos os dias. Reserva: 01 44 32 15 60.",
+              "preco": "menu infantil €14,50 · pratos €19,50-39 sem bebida",
+              "dist": "2-3 quadras da entrada Odéon",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "coord": {
+                "lat": 48.85016,
+                "lng": 2.34202
+              },
+              "fontes": [
+                {
+                  "o": "Gault&Millau · Bouillon Racine",
+                  "u": "https://fr.gaultmillau.com/fr/restaurant/bouillon-racine",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "1906",
+                    "€14,50",
+                    "12h-23h",
+                    "€19,50-39"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Breizh Café Odéon (1 rue de l'Odéon)",
+              "mapsQuery": "Breizh Café Odéon, 1 rue de l'Odéon, Paris",
+              "desc": "Crepes bretões: o doce é sucesso garantido com criança, e a galette salgada é pros adultos. Aberto 10h-23h todos os dias. Preços: [a confirmar].",
+              "preco": "[a confirmar]",
+              "dist": "1 quadra da Cour du Commerce Saint-André",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "coord": {
+                "lat": 48.85167,
+                "lng": 2.33883
+              },
+              "fontes": [
+                {
+                  "o": "Gault&Millau · Breizh Café Odéon",
+                  "u": "https://fr.gaultmillau.com/fr/restaurant/breizh-cafe-odeon",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "11h30-23h"
+                  ]
+                },
+                {
+                  "o": "Time Out · Breizh Café Odéon",
+                  "u": "https://www.timeout.fr/paris/restaurants/breizh-cafe-odeon",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "11h30-23h"
+                  ]
+                },
+                {
+                  "o": "Breizh Café · Odéon (site oficial) (FACTCHECK 2026-10-07)",
+                  "u": "https://www.breizhcafe.com/breizh-cafe-odeon",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "10h-23h"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🚶",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "nome": "Passeio por Saint-Germain (Cour du Commerce → Furstenberg → igreja)",
+          "mapsQuery": "Cour du Commerce Saint-André, Paris",
+          "cat": "Três paradas curtas a pé · da passagem da muralha a uma das igrejas mais antigas de Paris",
+          "sobre": "Passeio curto na margem esquerda, em três paradas: uma passagem de pedra sem carro, uma pracinha escondida e uma das igrejas mais antigas de Paris, com o campanário mais antigo da cidade (c. 990). Pra ele, o chão de paralelepípedo e o teto colorido da igreja; pra vocês, as histórias.",
+          "imperdivel": "Na igreja, olhe pra cima: o interior foi todo pintado por <strong>Hippolyte Flandrin a partir de 1842-43</strong>. A lápide de Descartes fica sob uma janela da 2ª capela.",
+          "dicas": [
+            "🚶 <strong>Passeio parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "○ <strong>Cour du Commerce Saint-André</strong>: passagem de pedra sem carro, aberta. Dentro do restaurante Un Dimanche à Paris (nº 4) aparecem restos de uma torre da muralha.",
+            "Ⓐ <strong>Place de Furstenberg</strong>: pracinha minúscula e silenciosa. Repare na fachada rosa renascentista do palácio, na rue de l'Abbaye.",
+            "Ⓑ <strong>Église Saint-Germain-des-Prés</strong>: grátis, aberta aos domingos <strong>9h30-20h</strong>. Poucos minutos lá dentro bastam: o teto estrelado prende ele.",
+            "⏱️ O passeio todo cabe nas duas horas até a pausa doce das 16:30."
+          ],
+          "aprofundar": "<p><strong>A abadia dos prés.</strong> Antes de ser o bairro dos cafés, isto era um campo (\"prés\") de uma abadia. A igreja foi fundada por Childebert, filho de Clóvis, no <strong>séc. VI</strong> e consagrada em <strong>558</strong>. O prédio de pé é do ano 990 em diante, e o campanário é <strong>o mais antigo de Paris</strong>. Na Revolução virou <strong>refinaria de salitre</strong>. A pracinha de Furstenberg era o pátio das cocheiras do palácio do abade, aberta por volta de <strong>1699</strong> pelo cardeal de Fürstenberg; o palácio abacial, de <strong>1586</strong>, tem a fachada rosa que ainda está de pé na rue de l'Abbaye.</p><p><strong>A Paris medieval encosta na da Revolução.</strong> A Cour du Commerce Saint-André segue o traçado da muralha de Filipe Augusto, erguida por volta de <strong>1200</strong>. No <strong>séc. XVIII</strong> virou caldeirão revolucionário: Marat imprimia ali o jornal <em>L'Ami du Peuple</em>, Danton morava no <strong>nº 20</strong> (prédio demolido na abertura do boulevard) e a guilhotina foi testada em fardos de palha e em ovelhas vivas num ateliê da passagem (história pra adulto). Nos fundos fica o Procope, de <strong>1686</strong>.</p>",
+          "duracao": "~2h com a pausa até a doceria",
+          "custo": "grátis (out/2026)",
+          "acessibilidade": "Calçada de paralelepípedo, sem degraus. A igreja tem entrada plana [a confirmar].",
+          "coord": {
+            "lat": 48.85339,
+            "lng": 2.33898
+          },
+          "fontes": [
+            {
+              "o": "Paris.fr · decoração restaurada de Saint-Germain-des-Prés",
+              "u": "https://www.paris.fr/pages/immersion-dans-les-decors-restaures-de-l-eglise-saint-germain-des-pres-7835",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "séc. VI",
+                "558",
+                "1840",
+                "refinaria de salitre"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Église Saint-Germain-des-Prés",
+              "u": "https://parisjetaime.com/culture/eglise-saint-germain-des-pres-p1011",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "dom 9h30-20h"
+              ]
+            },
+            {
+              "o": "Pariszigzag · Cour du Commerce Saint-André",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/cour-saint-andre-saint-germain-odeon/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "séc. XII",
+                "séc. XVIII",
+                "Filipe Augusto",
+                "L'Ami du Peuple",
+                "nº 20",
+                "Procope",
+                "1686"
+              ]
+            },
+            {
+              "o": "Bonjour Paris · la Cour du Commerce Saint-André",
+              "u": "https://bonjourparis.com/history/streets-and-stories-la-cour-du-commerce-saint-andre/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "Marat",
+                "guilhotina",
+                "1686"
+              ]
+            },
+            {
+              "o": "The Culture Trip · Place de Furstenberg",
+              "u": "https://theculturetrip.com/europe/france/paris/articles/place-de-furstenberg-paris-most-charming-square",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1586"
+              ]
+            },
+            {
+              "o": "Pariszigzag · Place de Furstenberg",
+              "u": "https://www.pariszigzag.fr/?p=426",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1586"
+              ]
+            },
+            {
+              "o": "Église Saint-Germain-des-Prés · guide touristique (paróquia) (FACTCHECK 2026-10-07)",
+              "u": "https://eglise-saintgermaindespres.fr/wp-content/uploads/2025/03/Guide-touristique-francais.pdf",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "uma das igrejas mais antigas de Paris",
+                "c. 990",
+                "o campanário mais antigo da cidade",
+                "o mais antigo de Paris",
+                "990",
+                "1842-43"
+              ]
+            },
+            {
+              "o": "Wikipédia FR · Place de Furstemberg (FACTCHECK 2026-10-07)",
+              "u": "https://fr.wikipedia.org/wiki/Place_de_Furstemberg",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "1699",
+                "cardeal de Fürstenberg"
+              ]
+            },
+            {
+              "o": "Paris.fr · sur la piste de l'enceinte de Philippe Auguste (FACTCHECK 2026-10-07)",
+              "u": "https://www.paris.fr/pages/sur-la-piste-de-l-enceinte-de-philippe-auguste-2384",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1200"
+              ]
+            }
+          ],
+          "walkingTours": [
+            {
+              "nome": "Saint-Germain · da muralha à abadia",
+              "descricao": "Cour du Commerce Saint-André → Place de Furstenberg → Église Saint-Germain-des-Prés",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Cour du Commerce Saint-André (entre o bd Saint-Germain e a rue Saint-André-des-Arts)",
+                  "mapsQuery": "Cour du Commerce Saint-André, Paris",
+                  "coord": {
+                    "lat": 48.85339,
+                    "lng": 2.33898
+                  }
+                },
+                {
+                  "n": 2,
+                  "nome": "Place de Furstenberg (rue de Furstemberg, 6e)",
+                  "mapsQuery": "Place de Furstemberg, Paris",
+                  "coord": {
+                    "lat": 48.85431,
+                    "lng": 2.33575
+                  }
+                },
+                {
+                  "n": 3,
+                  "nome": "Église Saint-Germain-des-Prés (3 place Saint-Germain-des-Prés)",
+                  "mapsQuery": "Église Saint-Germain-des-Prés, Paris",
+                  "coord": {
+                    "lat": 48.85397,
+                    "lng": 2.33452
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🍰",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Pausa doce · Saint-Germain",
+          "mapsQuery": "Pierre Hermé, 72 rue Bonaparte, Paris",
+          "cat": "2 opções · um macaron na Pierre Hermé ou um sorvete",
+          "coord": {
+            "lat": 48.85153,
+            "lng": 2.33279
+          },
+          "opcoes": [
+            {
+              "nome": "Pierre Hermé Bonaparte (72 rue Bonaparte)",
+              "mapsQuery": "Pierre Hermé, 72 rue Bonaparte, Paris",
+              "desc": "A primeira boutique parisiense dele, de 2001. Peçam o Ispahan (rosa, lichia e framboesa) e dividam um macaron. Loja pequena, pode ter fila. Aberta seg-sáb 10h-20h e domingo 10h-19h.",
+              "preco": "[a confirmar]",
+              "dist": "perto do Odéon",
+              "valeAPena": 3,
+              "poiCat": "padaria",
+              "coord": {
+                "lat": 48.85153,
+                "lng": 2.33279
+              },
+              "fontes": [
+                {
+                  "o": "Mes Prestiges · Pierre Hermé Bonaparte",
+                  "u": "https://mesprestiges.com/en/paris/places/pierre-herme-bonaparte",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "2001",
+                    "2016",
+                    "10h-19h"
+                  ]
+                },
+                {
+                  "o": "Paris je t'aime · Pierre Hermé Bonaparte",
+                  "u": "https://parisjetaime.com/shopping/pierre-herme-bonaparte-p2388",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "10h-19h"
+                  ]
+                },
+                {
+                  "o": "Pierre Hermé · nos boutiques (site oficial) (FACTCHECK 2026-10-07)",
+                  "u": "https://www.pierreherme.com/fr/nos-boutiques",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "10h-20h",
+                    "10h-19h"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Il Gelato del Marchese (2 rue de Condé, Carrefour de l'Odéon)",
+              "mapsQuery": "Il Gelato del Marchese, rue des Quatre-Vents, Paris",
+              "desc": "Sorveteria com sorvete feito no local. Os horários divergem entre as fontes: confirmar antes de ir. ⚠️ O site oficial da sorveteria saiu do ar: confiram no Maps antes de ir; se estiver fechada, o Pierre Hermé resolve.",
+              "preco": "[a confirmar]",
+              "dist": "perto do Odéon",
+              "valeAPena": 2,
+              "poiCat": "cafe",
+              "coord": {
+                "lat": 48.85168,
+                "lng": 2.33823
+              },
+              "fontes": [
+                {
+                  "o": "Visit Paris Region · Il Gelato del Marchese",
+                  "u": "https://www.visitparisregion.com/fr/il-gelato-del-marchese",
+                  "tier": "diretorio",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "sorvete feito no local"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "17:45",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Saint-Germain → Casa (linha 10)",
+          "cat": "Linha 10 em Mabillon ou Odéon · casa por volta de 18:15",
+          "mapsQuery": "Mabillon, Paris",
+          "coord": {
+            "lat": 48.8523,
+            "lng": 2.33937
+          }
+        }
+      ]
+    },
+    {
+      "date": "Seg 12/Out",
+      "tema": "Orangerie, Tuileries e Van Gogh",
+      "temaCurto": "Van Gogh",
+      "bairro": "Concorde, Tuileries e 11e",
+      "grupo": false,
+      "cor": "#7c3aed",
+      "gradA": "#4c1d95",
+      "gradB": "#a78bfa",
+      "nota": "Manhã nas <strong>Ninféias e nas Tuileries</strong>, tarde no <strong>último dia do Van Gogh</strong> no Atelier, e em casa 16:30 pra preparar a Disney. À noite, as duas saem sozinhas. ⚠️ <strong>Orsay fecha às segundas</strong>, por isso ele fica pra quarta. Montmartre é a alternativa pra tarde.",
+      "stops": [
+        {
+          "hora": "08:30",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Casa → Concorde (linha 9 + linha 1)",
+          "cat": "~30 min · L9 até Franklin D. Roosevelt → L1 até Concorde",
+          "mapsQuery": "Concorde (métro), Paris",
+          "coord": {
+            "lat": 48.86541,
+            "lng": 2.32111
+          }
+        },
+        {
+          "hora": "09:00",
+          "emoji": "🪷",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "pendente",
+          "nome": "Musée de l'Orangerie (Jardin des Tuileries)",
+          "mapsQuery": "Musée de l'Orangerie, Paris",
+          "cat": "Ninféias de Monet · salas ovais · ~1h",
+          "sobre": "As <strong>salas ovais das Ninféias</strong> de Monet: 8 composições em 2 salas em forma de ovo, com luz natural vinda do teto. É o museu do tamanho certo pra um menino de 4 anos: ~1h e pronto. Em cartaz também a exposição <em>Monet, peindre le temps</em>.",
+          "imperdivel": "Sentem no banco do meio e olhem pra cima: a luz vem do <strong>teto</strong>. Repare na orientação das salas: tons de <strong>amanhecer a leste</strong> e de <strong>pôr do sol a oeste</strong>.",
+          "dicas": [
+            "🎟️ <strong>€12,50</strong> online (€11 na bilheteria) · <strong>grátis abaixo de 18 anos</strong>. Reservar horário é recomendado, inclusive pra quem não paga.",
+            "🕘 Abre às <strong>9h</strong> e <strong>fecha às terças</strong>. Por isso a visita é na segunda, com o Orsay fechado.",
+            "👶 As visitas infantis de outubro (dançada pra 3-5 anos e a de 4-6 anos) estão <strong>lotadas</strong> na página oficial, checado em 06/10. A visita é por conta própria.",
+            "🎨 Exposição <em>Monet, peindre le temps</em>: cerca de <strong>40 telas</strong>, até 25/01/2027. É coisa de adulto: com ele, uma volta rápida."
+          ],
+          "aprofundar": "<p>Em <strong>12 de novembro de 1918</strong>, um dia depois do Armistício, Monet ofereceu seus painéis decorativos ao Estado, por intermédio de Clemenceau. O contrato foi assinado em <strong>12 de abril de 1922</strong>, pela doação de <strong>19 painéis</strong>, e as telas foram expostas aqui em <strong>1927</strong>, poucos meses depois da morte dele.</p><p>Monet projetou a instalação pra receber a luz do dia vinda de cima. Ela foi perdida na reforma dos <strong>anos 1960</strong>, que bloqueou a luz natural, e a reforma de <strong>2006</strong> devolveu a sala ao estado original.</p>",
+          "duracao": "~1h",
+          "custo": "€12,50 adulto · grátis <18 anos (out/2026)",
+          "acessibilidade": "Visita curta e a pé, sem carrinho. Há banco nas salas ovais [a confirmar no local].",
+          "coord": {
+            "lat": 48.86385,
+            "lng": 2.32254
+          },
+          "fontes": [
+            {
+              "o": "Musée de l'Orangerie · horários e tarifas (site oficial)",
+              "u": "https://www.musee-orangerie.fr/fr/visite/acces-horaires-tarifs",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "€12,50",
+                "€11",
+                "9h",
+                "fecha às terças"
+              ]
+            },
+            {
+              "o": "Musée de l'Orangerie · as Ninféias (site oficial)",
+              "u": "https://www.musee-orangerie.fr/en/node/33",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "8 composições",
+                "2 salas",
+                "teto",
+                "amanhecer a leste",
+                "pôr do sol a oeste",
+                "12 de novembro de 1918",
+                "um dia depois do Armistício",
+                "12 de abril de 1922",
+                "19 painéis",
+                "1927",
+                "anos 1960",
+                "2006",
+                "luz do dia vinda de cima"
+              ]
+            },
+            {
+              "o": "Musée de l'Orangerie · visita dançada 3-5 anos (página oficial)",
+              "u": "https://www.musee-orangerie.fr/fr/programme/agenda/visites-et-ateliers/visite-dansee-3-5-ans",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "3-5 anos",
+                "4-6 anos",
+                "lotadas",
+                "outubro"
+              ]
+            },
+            {
+              "o": "Paris.fr · Monet, peindre le temps",
+              "u": "https://www.paris.fr/evenements/monet-peindre-le-temps-116716",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "40 telas",
+                "25/01/2027",
+                "Monet, peindre le temps"
+              ]
+            },
+            {
+              "o": "Visit Paris Region · Musée de l'Orangerie (gratuidade)",
+              "u": "https://www.visitparisregion.com/fr/musee-de-l-orangerie",
+              "tier": "diretorio",
+              "data": "2026-10-07",
+              "prova": [
+                "18 anos"
+              ]
+            },
+            {
+              "o": "Roteiro proposto · ritmo e plano do dia (06/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-06",
+              "prova": [
+                "~1h",
+                "1h",
+                "4 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "10:15",
+          "emoji": "🎠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 3,
+          "nome": "Jardin des Tuileries (entrada Castiglione)",
+          "mapsQuery": "Jardin des Tuileries, Paris",
+          "cat": "Parquinho grátis · cama elástica · carrossel",
+          "sobre": "Depois dos museus, a recompensa dele: <strong>parquinho grátis</strong> no norte do jardim, perto da entrada Castiglione, com o carrossel ao lado. A cama elástica fica no norte também, entre a Terrasse des Feuillants e o Grand Bassin octogonal.",
+          "imperdivel": "Deixem ele gastar energia na <strong>cama elástica (€3, a partir de 2 anos)</strong> e fechem num giro de <strong>carrossel (€3)</strong> ao lado do parquinho.",
+          "dicas": [
+            "🎠 <strong>Parquinho grátis</strong> · <strong>cama elástica €3</strong> (a partir de 2 anos) · <strong>carrossel €3</strong>.",
+            "⛵ Os <strong>barquinhos à vela não funcionam às segundas</strong>: fora das férias, só às quartas, sextas, sábados, domingos e feriados (€6 por 30 min).",
+            "🥪 Se o almoço for sanduíche, dá pra comer num banco do próprio jardim (opções logo abaixo)."
+          ],
+          "duracao": "~1h45",
+          "custo": "Parquinho grátis · €3 cama elástica · €3 carrossel (out/2026)",
+          "acessibilidade": "Tudo a pé, sem carrinho. Parquinho e carrossel ficam juntos, perto da entrada Castiglione.",
+          "coord": {
+            "lat": 48.8639,
+            "lng": 2.3261
+          },
+          "fontes": [
+            {
+              "o": "Louvre · Jardin des Tuileries, atividades (site oficial)",
+              "u": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "Parquinho grátis",
+                "€3",
+                "a partir de 2 anos",
+                "€6 por 30 min",
+                "fora das férias, só às quartas, sextas, sábados, domingos e feriados",
+                "barquinhos",
+                "perto da entrada Castiglione",
+                "entre a Terrasse des Feuillants e o Grand Bassin octogonal"
+              ]
+            },
+            {
+              "o": "Roteiro proposto · ritmo e plano do dia (06/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-06",
+              "prova": [
+                "~1h45"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🍕",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Tuileries",
+          "cat": "2 opções · pizza sentada ou sanduíche no banco do jardim",
+          "coord": {
+            "lat": 48.86327,
+            "lng": 2.34049
+          },
+          "opcoes": [
+            {
+              "nome": "Iovine's (7bis rue du Colonel Driant)",
+              "mapsQuery": "Iovine's, 7bis rue du Colonel Driant, Paris",
+              "desc": "Pizzaria napolitana <strong>desde 2015</strong>, entre o Palais-Royal e a Galerie Véro-Dodat, aberta <strong>12h-15h</strong> ao almoço. Margherita é o almoço sem risco, e o ambiente é divertido. Abre segunda no almoço. ⚠️ Há um \"Iovine's Louvre\" fechado no nº 5 da mesma rua: o que vale é o 7bis.",
+              "preco": "~€35/pessoa à la carte (diretório, sem data)",
+              "dist": "perto do Palais-Royal",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.86327,
+                "lng": 2.34049
+              },
+              "fontes": [
+                {
+                  "o": "ParisMuse · onde comer com criança perto dos museus (abr/2026)",
+                  "u": "https://parismuse.com/2026/04/where-to-eat-with-kids-near-paris-museums/",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "desde 2010",
+                    "divertido",
+                    "7bis rue du Colonel Driant"
+                  ]
+                },
+                {
+                  "o": "ParisBouge · Iovine's",
+                  "u": "https://www.parisbouge.com/places/4400",
+                  "tier": "diretorio",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "12h-15h",
+                    "~€35/pessoa"
+                  ]
+                },
+                {
+                  "o": "Iovine's (site oficial) (FACTCHECK 2026-10-07)",
+                  "u": "https://www.iovines.com/",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "2015",
+                    "12h-15h"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Bo&Mie (91 rue de Rivoli)",
+              "mapsQuery": "Bo&Mie, 91 rue de Rivoli, Paris",
+              "desc": "Sanduíche e viennoiserie pra comer num banco das Tuileries. Padaria enorme, com mais de 450 m², aberta em 24/10/2020. Abre segunda, 7h30-20h.",
+              "preco": "[a confirmar]",
+              "dist": "rue de Rivoli, ao lado das Tuileries",
+              "poiCat": "padaria",
+              "valeAPena": 1,
+              "coord": {
+                "lat": 48.86068,
+                "lng": 2.3412
+              },
+              "fontes": [
+                {
+                  "o": "ParisMuse · onde comer com criança perto dos museus (abr/2026)",
+                  "u": "https://parismuse.com/2026/04/where-to-eat-with-kids-near-paris-museums/",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "maior padaria de Paris",
+                    "91 rue de Rivoli"
+                  ]
+                },
+                {
+                  "o": "Sortiraparis · Bo&Mie abre a maior padaria de Paris",
+                  "u": "https://sortiraparis.com/en/where-to-eat-in-paris/brunch-cafe-tea-time/articles/223991-bo-mie-opens-the-largest-bakery-in-paris-photos-video",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "400 m²",
+                    "24/10/2020"
+                  ]
+                },
+                {
+                  "o": "Bo&Mie (site oficial) (FACTCHECK 2026-10-07)",
+                  "u": "https://www.boetmie.com/",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "450 m²",
+                    "24/10/2020",
+                    "7h30-20h"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Tuileries → Voltaire (linha 1 até Nation + linha 9)",
+          "cat": "~25 min · L1 até Nation → L9 até Voltaire",
+          "mapsQuery": "Voltaire (métro), Paris",
+          "coord": {
+            "lat": 48.8578,
+            "lng": 2.38011
+          }
+        },
+        {
+          "hora": "14:15",
+          "emoji": "🌻",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "pendente",
+          "nome": "Atelier des Lumières · Van Gogh (38 rue Saint-Maur)",
+          "mapsQuery": "Atelier des Lumières, Paris",
+          "cat": "Van Gogh em 360° · último dia · ~50 min sentados no escuro",
+          "sobre": "Uma antiga fundição de <strong>1835</strong> virou sala de projeção imersiva: <em>Van Gogh, La Nuit Étoilée</em>, ~50 min em loop. <strong>12/out é o último dia da exposição</strong>.",
+          "imperdivel": "Procure o que sobrou da fábrica no meio da projeção: as <strong>estruturas metálicas foram preservadas</strong> e a velha chaminé de tijolo também foi preservada.",
+          "dicas": [
+            "🎟️ <strong>Reservem horário.</strong> Adulto a partir de €19,50 (−€1 comprando online) · <strong>ele paga</strong> a tarifa criança (3 a 11 anos), a partir de €12,50: grátis só abaixo de 3 anos.",
+            "🚫 <strong>Carrinho não entra</strong> (segurança) e mala também não. Mochila de até <strong>40x30x20 cm</strong> e sem guarda-volumes.",
+            "🕐 Segunda: <strong>10h às 18h</strong>, última entrada entre 16h45 e 17h (site oficial). A sessão dura ~50 min em loop: dá pra ficar mais de uma volta. A partir de <strong>2 anos</strong>.",
+            "💡 Tem fumaça, laser e luz estroboscópica: avisem ele antes.",
+            "🚇 Metrô <strong>Voltaire</strong> ou <strong>Saint-Ambroise</strong> (linha 9), a <strong>6 min</strong> a pé · Rue Saint-Maur (linha 3), a <strong>4 min</strong>.",
+            "⚠️ Aviso oficial: a projeção usa fumaça, laser e efeito estroboscópico. Carrinho não entra; há um espaço pra deixar, com vagas limitadas."
+          ],
+          "aprofundar": "<p>O prédio do <strong>38 rue Saint-Maur</strong> passou cem anos fazendo ferro antes de fazer luz. Em <strong>1835</strong>, os <strong>irmãos Plichon</strong> abriram ali a <strong>Fonderie du Chemin-Vert</strong>, pra fundir peças de ferro de alta qualidade pra <strong>marinha e as ferrovias</strong>. A fábrica ficou <strong>quatro gerações</strong> na mesma família. A <strong>crise de 1929</strong> a fechou e, em <strong>1935</strong>, ela foi vendida à família Martin.</p><p>A <strong>Culturespaces</strong> escolheu a fundição e abriu o Atelier em <strong>13 de abril de 2018</strong>. Hoje são <strong>140 projetores de vídeo</strong> cobrindo <strong>3.300 m²</strong>.</p>",
+          "duracao": "1h-1h15",
+          "custo": "Adulto a partir de €19,50 · criança 3-11 a partir de €12,50 · grátis <3 anos (out/2026)",
+          "acessibilidade": "Sem carrinho. Sala escura, com efeitos de luz e fumaça.",
+          "coord": {
+            "lat": 48.8616,
+            "lng": 2.38087
+          },
+          "fontes": [
+            {
+              "o": "Atelier des Lumières · histoire du lieu (site oficial)",
+              "u": "https://www.atelier-lumieres.com/en/explore/place-of-history",
+              "tier": "oficial",
+              "data": "2026-08-27",
+              "prova": [
+                "1835",
+                "irmãos Plichon",
+                "Fonderie du Chemin-Vert",
+                "marinha e as ferrovias",
+                "quatro gerações",
+                "crise de 1929",
+                "1935",
+                "Culturespaces",
+                "13 de abril de 2018",
+                "estruturas metálicas foram preservadas",
+                "cem anos"
+              ]
+            },
+            {
+              "o": "Atelier des Lumières · adresse et accès (site oficial)",
+              "u": "https://www.atelier-lumieres.com/en/visit/access",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "Voltaire",
+                "Saint-Ambroise",
+                "6 min",
+                "4 min",
+                "40x30x20 cm",
+                "Carrinho não entra",
+                "sem guarda-volumes",
+                "38 rue Saint-Maur"
+              ]
+            },
+            {
+              "o": "Atelier des Lumières · exposição Van Gogh (site oficial)",
+              "u": "https://vangogh.atelier-lumieres.com/en/",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "~50 min",
+                "10h às 18h",
+                "17h",
+                "última entrada",
+                "último dia",
+                "a partir de €12,5",
+                "abaixo de 3 anos",
+                "estroboscópica"
+              ]
+            },
+            {
+              "o": "Familinparis · expo Van Gogh Atelier des Lumières (até 12/10/2026)",
+              "u": "https://www.familinparis.fr/expo-van-gogh-atelier-des-lumieres/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "A partir de €17",
+                "2 anos",
+                "12/out é o último dia da exposição",
+                "último dia",
+                "~50 min"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Atelier des Lumières",
+              "u": "https://parisjetaime.com/eng/culture/atelier-des-lumieres-p3639",
+              "tier": "editorial",
+              "data": "2026-08-27",
+              "prova": [
+                "140 projetores de vídeo",
+                "3.300 m²"
+              ]
+            },
+            {
+              "o": "Atelier des Lumières · coordenada (Apple Maps)",
+              "u": "https://maps.apple.com/place?address=38+Rue+Saint-Maur%2C+75011+Paris%2C+France&coordinate=48.8616022%2C2.3808736&name=Atelier+des+Lumi%C3%A8res",
+              "tier": "diretorio",
+              "data": "2026-08-27",
+              "prova": [
+                "coordenada 48.86160, 2.38087"
+              ]
+            },
+            {
+              "o": "Roteiro proposto · ritmo e plano do dia (06/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-06",
+              "prova": [
+                "1h-1h15",
+                "grátis <5 anos"
+              ]
+            },
+            {
+              "o": "Atelier des Lumières · horaires et tarifs (site oficial) (FACTCHECK 2026-10-07)",
+              "u": "https://www.atelier-lumieres.com/fr/visiter/horaires-tarifs",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "€19,50",
+                "−€1",
+                "€12,50",
+                "3 a 11 anos",
+                "3 anos",
+                "16h45",
+                "17h",
+                "preservada"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:15",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "🔄 Se preferirem Montmartre (funicular, carrossel, Sacré-Cœur)",
+          "mapsQuery": "Funiculaire de Montmartre, Paris",
+          "cat": "Alternativa ao Atelier · funicular + carrossel + adro do Sacré-Cœur",
+          "sobre": "Em vez do Atelier: sobem de <strong>funicular</strong> (~1min30, com o mesmo bilhete do metrô: <strong>€1,30</strong> pra ele), olham Paris do adro do Sacré-Cœur e fecham no <strong>carrossel Saint-Pierre</strong>, de dois andares.",
+          "imperdivel": "Repare na <strong>pedra branca</strong> do Sacré-Cœur: ela <strong>branqueia com a chuva</strong>, por isso a basílica não escurece.",
+          "dicas": [
+            "🚇 De casa são <strong>~45 min</strong> e 2 baldeações. Abbesses tem elevador (a plataforma fica a <strong>36 m</strong> de profundidade). Saiam do bairro até <strong>17:15-17:30</strong> pra chegar em casa 18:15-18:30.",
+            "🎠 Preço do carrossel Saint-Pierre: [a confirmar].",
+            "⚠️ Bolsa na frente e mão nele: há batedores de carteira no Sacré-Cœur e na Place du Tertre.",
+            "🔗 Os percursos de Montmartre estão na página de Paris: <a href=\"https://tsferraro.github.io/viagem/paris.html\" target=\"_blank\" rel=\"noopener\">https://tsferraro.github.io/viagem/paris.html</a>"
+          ],
+          "duracao": "~3h",
+          "custo": "Metrô/funicular €2,55 adulto · €1,30 criança 4-9 anos (out/2026)",
+          "acessibilidade": "Subida forte: o funicular poupa as pernas dele. Sem carrinho, com ladeira e escada na volta se o funicular parar.",
+          "coord": {
+            "lat": 48.88527,
+            "lng": 2.34255
+          },
+          "fontes": [
+            {
+              "o": "Île-de-France Mobilités · tarifas 2026",
+              "u": "https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "€1,30",
+                "€2,55"
+              ]
+            },
+            {
+              "o": "Transport de personne · funicular de Montmartre",
+              "u": "https://transportdepersonne.com/funiculaire-montmartre-tarif-horaires-paris/",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "menos de 90 segundos",
+                "mesmo bilhete do metrô",
+                "funicular"
+              ]
+            },
+            {
+              "o": "A French Collection · carrosséis de Paris",
+              "u": "https://afrenchcollection.com/?p=42030",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "dois andares",
+                "carrossel Saint-Pierre"
+              ]
+            },
+            {
+              "o": "Paris.fr · Sacré-Cœur de Montmartre",
+              "u": "https://www.paris.fr/pages/le-sacre-coeur-de-montmartre-qui-fete-ses-150-ans-n-a-pas-pris-une-ride-30567",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "branqueia com a chuva",
+                "pedra branca"
+              ]
+            },
+            {
+              "o": "Itinéraire Métro · Boulogne → Abbesses (45 min, 2 baldeações)",
+              "u": "https://www.itineraire-metro.fr/subway/from-Boulogne+Jean+Jaures-to-Abbesses.html",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "~45 min"
+              ]
+            },
+            {
+              "o": "Wikipedia · Abbesses station (36 m)",
+              "u": "https://en.wikipedia.org/wiki/Abbesses_station",
+              "tier": "crowd",
+              "data": "2026-10-06",
+              "prova": [
+                "36 m"
+              ]
+            },
+            {
+              "o": "Salut from Paris · Montmartre é seguro?",
+              "u": "https://www.salutfromparis.com/is-montmartre-safe/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "batedores de carteira"
+              ]
+            },
+            {
+              "o": "Roteiro proposto · ritmo e plano do dia (06/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-06",
+              "prova": [
+                "~3h",
+                "17:15-17:30"
+              ]
+            },
+            {
+              "o": "Wikipedia · Montmartre Funicular (coordenada)",
+              "u": "https://en.wikipedia.org/wiki/Montmartre_Funicular",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "coordenada 48.88527, 2.34255"
+              ]
+            },
+            {
+              "o": "Wikipedia · Montmartre Funicular (FACTCHECK 2026-10-07)",
+              "u": "https://en.wikipedia.org/wiki/Montmartre_Funicular",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "~1min30"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Atelier → casa (linha 9 direto)",
+          "cat": "L9 direto de Voltaire até Boulogne, sem baldeação",
+          "noMaps": true,
+          "coord": {
+            "lat": 48.85761,
+            "lng": 2.38093
+          }
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🎒",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "🎒 Preparar a Disney",
+          "cat": "Em casa · mochila pronta pra terça",
+          "sobre": "Hora de deixar tudo pronto pra sair às 8h.",
+          "imperdivel": "Mochila pronta, ingressos no celular e a roupa de amanhã separada.",
+          "dicas": [
+            "🥪 Lanches e água pra o dia no parque.",
+            "📱 Ingressos no celular (a bilheteria do parque não vende na hora).",
+            "👕 Roupa separada pra sair às 8h."
+          ],
+          "duracao": "—",
+          "custo": "—",
+          "acessibilidade": "Em casa, sem deslocamento."
+        },
+        {
+          "hora": "19:30",
+          "emoji": "🍷",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "🍷 Noite só de vocês duas",
+          "cat": "7 opções abertas na segunda à noite · todas numa linha de metrô só, sem baldeação",
+          "coord": {
+            "lat": 48.8649,
+            "lng": 2.30023
+          },
+          "opcoes": [
+            {
+              "nome": "Café de l'Homme (17 place du Trocadéro)",
+              "mapsQuery": "Le Café de l'Homme, Paris 16e",
+              "desc": "Terraço de frente pra Torre Eiffel, dentro do Musée de l'Homme. Dá pra ir <strong>só pro drinque</strong> (faixa &quot;After Dinner&quot;, reserva até <strong>00:15</strong>). Pratos <strong>€34-65</strong>; garantir mesa no terraço custa <strong>€60 por pessoa</strong> (inclui uma taça de champanhe). Jantar de ~<strong>1h30</strong> e <strong>dress code chique</strong>. Mesa externa aquecida na estação de inverno [a confirmar se já vale em outubro]. Como ir: L9 Trocadéro, saída 6. Reserva no site ou 01 44 05 30 15. Querem a mesa aquecida? Peçam na reserva: o site liga a mesa aquecida à experiência \"Eiffel Dîner\".",
+              "preco": "pratos €34-65 · terraço €60/pessoa",
+              "dist": "L9 Trocadéro, saída 6",
+              "poiCat": "restaurante",
+              "valeAPena": 3,
+              "coord": {
+                "lat": 48.86223,
+                "lng": 2.28755
+              },
+              "fontes": [
+                {
+                  "o": "Café de l'Homme · informações (site oficial)",
+                  "u": "https://www.cafedelhomme.com/informations-cafe-de-lhomme",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "só pro drinque",
+                    "After Dinner",
+                    "00:15",
+                    "L9 Trocadéro, saída 6",
+                    "17 place du Trocadéro"
+                  ]
+                },
+                {
+                  "o": "Café de l'Homme · carta (site oficial)",
+                  "u": "https://www.cafedelhomme.com/la-carte",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "€34-65",
+                    "€60 por pessoa"
+                  ]
+                },
+                {
+                  "o": "Café de l'Homme · perguntas frequentes (site oficial)",
+                  "u": "https://www.cafedelhomme.com/questions-frequentes",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "1h30",
+                    "dress code chique",
+                    "01 44 05 30 15"
+                  ]
+                },
+                {
+                  "o": "Sortiraparis · Café de l'Homme (2023)",
+                  "u": "https://www.sortiraparis.com/hotel-restaurant/restaurant/articles/88124-le-cafe-de-l-homme-restaurant-terrasse-du-trocadero-avec-vue-sur-la-tour-eiffel",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "terraço de frente pra Torre Eiffel"
+                  ]
+                },
+                {
+                  "o": "Nominatim/OpenStreetMap · coordenada",
+                  "u": "https://nominatim.openstreetmap.org/search?q=Caf%C3%A9+de+l%27Homme+Paris&format=json",
+                  "tier": "crowd",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "coordenada 48.86223, 2.28755"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Freddy's (54 rue de Seine) → Prescription Cocktail Club (23 rue Mazarine)",
+              "mapsQuery": "Freddy's, 54 rue de Seine, Paris",
+              "coord_unverified": true,
+              "desc": "Começa no <strong>Freddy's</strong>, bar de vinho com pratinhos e &quot;uma das melhores seleções de vinho em taça da cidade&quot;; abre todo dia, <strong>12:30-00:00</strong>. <strong>Não reserva</strong> e lota depois das <strong>19:30</strong>. Depois, coquetel no <strong>Prescription</strong>, escuro (a decoração foi refeita, hoje \"Cosmic Theatre\") e &quot;silencioso, até teatral&quot;: seg-qui <strong>19:00-02:00</strong>, sem reserva obrigatória. Coquetel <strong>€13-15</strong> (dado antigo, [a confirmar]); vinho no Freddy's: [a confirmar]. As duas ruas ficam coladas no 6º (distância a pé [a confirmar]). Como ir: L10 Mabillon ou Odéon.",
+              "preco": "vinho [a confirmar] · coquetel €13-15 (dado antigo)",
+              "dist": "L10 Mabillon / Odéon",
+              "poiCat": "bar",
+              "valeAPena": 3,
+              "coord": {
+                "lat": 48.85417,
+                "lng": 2.33685
+              },
+              "fontes": [
+                {
+                  "o": "Paris by Mouth · Freddy's (atualizado 20/10/2023)",
+                  "u": "https://parisbymouth.com/freddys/",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "uma das melhores seleções de vinho em taça da cidade",
+                    "12:30-00:00",
+                    "Não reserva",
+                    "19:30"
+                  ]
+                },
+                {
+                  "o": "Paris by Mouth · Prescription Cocktail Club",
+                  "u": "https://parisbymouth.com/prescription-cocktail-club/",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "€13-15",
+                    "dois andares"
+                  ]
+                },
+                {
+                  "o": "Sortiraparis · Prescription Cocktail Club",
+                  "u": "https://sortiraparis.com/en/where-to-eat-in-paris/bars-cafes/articles/310387-prescription-cocktail-club-cutting-edge-creations-in-a-mystical-theatrical-bar-in-paris",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "silencioso, até teatral"
+                  ]
+                },
+                {
+                  "o": "Experimental Group · Prescription Cocktail Club (site oficial)",
+                  "u": "https://www.experimentalgroup.com/paris/prescription-cocktail-club",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "19:00-02:00",
+                    "23 rue Mazarine"
+                  ]
+                },
+                {
+                  "o": "Paris je t'aime · Freddy's (metrô)",
+                  "u": "https://parisjetaime.com/restaurant/freddy-s-p842",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "54 rue de Seine",
+                    "L10 Mabillon ou Odéon"
+                  ]
+                },
+                {
+                  "o": "Nominatim/OpenStreetMap · endereço 54 rue de Seine (coordenada aproximada)",
+                  "u": "https://nominatim.openstreetmap.org/search?q=54+rue+de+Seine+Paris&format=json",
+                  "tier": "crowd",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "coordenada 48.85417, 2.33685"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Bouillon Racine (3 rue Racine)",
+              "mapsQuery": "Bouillon Racine, 3 rue Racine, Paris",
+              "desc": "Brasserie Art Nouveau de <strong>1906</strong>, classificada monumento histórico em <strong>1995</strong>. Abre todos os dias, <strong>12:00-00:00</strong>. Média de <strong>€19,50-39</strong> por pessoa, sem bebida (Gault&amp;Millau 2026). Como ir: L10 Odéon. Reserva no site ou 01 44 32 15 60.",
+              "preco": "€19,50-39 sem bebida",
+              "dist": "L10 Odéon",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.85016,
+                "lng": 2.34202
+              },
+              "fontes": [
+                {
+                  "o": "Bouillon Racine · site oficial",
+                  "u": "https://bouillonracine.fr/",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "12:00-00:00",
+                    "3 rue Racine",
+                    "01 44 32 15 60"
+                  ]
+                },
+                {
+                  "o": "Gault&Millau · Bouillon Racine (2026)",
+                  "u": "https://fr.gaultmillau.com/restaurant/bouillon-racine",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "€19,50-39"
+                  ]
+                },
+                {
+                  "o": "ParisBouge · Bouillon Racine",
+                  "u": "https://www.parisbouge.com/places/2702",
+                  "tier": "diretorio",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "1906",
+                    "1995"
+                  ]
+                },
+                {
+                  "o": "Nominatim/OpenStreetMap · coordenada",
+                  "u": "https://nominatim.openstreetmap.org/search?q=3+rue+Racine+Paris&format=json",
+                  "tier": "crowd",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "coordenada 48.85016, 2.34202"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Baca'v (33 av. du Général-Leclerc, Boulogne)",
+              "mapsQuery": "Baca'v, 33 avenue du Général Leclerc, Boulogne-Billancourt",
+              "desc": "Bistrô generoso com acento do Limousin e o <strong>único Bib Gourmand de Boulogne</strong> (Michelin). Jantar de seg a sex <strong>19:00-22:30</strong>. Menu Bib Gourmand <strong>€45</strong> (3 tempos), degustação <strong>€65</strong> (5 tempos). Fica em Boulogne: volta curta de Uber ou a pé; estação de metrô mais próxima [a confirmar]. Reserva no site ou 01 55 60 79 95.",
+              "preco": "menu €45 · degustação €65",
+              "dist": "em Boulogne, perto de casa",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.83183,
+                "lng": 2.23831
+              },
+              "fontes": [
+                {
+                  "o": "Baca'v · site oficial",
+                  "u": "https://www.bacav.fr/",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "19:00-22:30",
+                    "€45",
+                    "€65",
+                    "3 tempos",
+                    "5 tempos",
+                    "01 55 60 79 95"
+                  ]
+                },
+                {
+                  "o": "Guide Michelin · Boulogne-Billancourt",
+                  "u": "https://guide.michelin.com/fr/fr/ile-de-france/boulogne-billancourt/restaurants",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "único Bib Gourmand de Boulogne",
+                    "Limousin"
+                  ]
+                },
+                {
+                  "o": "Nominatim/OpenStreetMap · coordenada",
+                  "u": "https://nominatim.openstreetmap.org/search?q=Baca%27v+Boulogne-Billancourt&format=json",
+                  "tier": "crowd",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "coordenada 48.83183, 2.23831"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Les Galopins (17 rue Paul Bert, Boulogne)",
+              "mapsQuery": "Les Galopins, 17 rue Paul Bert, Boulogne-Billancourt",
+              "coord_unverified": true,
+              "desc": "Bistrô de bairro alegre, com vinhos de pequenos produtores. É o plano B se o Baca'v estiver lotado. Jantar de seg a qui <strong>19:00-22:30</strong>. À la carte <strong>€35-45</strong> (dado de <strong>2017</strong>, preço atual [a confirmar]). Como ir: L9 Billancourt. Reserva no site ou 01 47 12 13 03.",
+              "preco": "€35-45 (dado de 2017)",
+              "dist": "L9 Billancourt",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.8338,
+                "lng": 2.2397
+              },
+              "fontes": [
+                {
+                  "o": "Les Galopins · site oficial",
+                  "u": "https://galopins-boulogne.com/sur-place/",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "19:00-22:30",
+                    "L9 Billancourt",
+                    "01 47 12 13 03",
+                    "17 rue Paul Bert"
+                  ]
+                },
+                {
+                  "o": "Gilles Pudlowski · Les Galopins (2017)",
+                  "u": "https://www.gillespudlowski.com/?p=177776",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "€35-45",
+                    "2017",
+                    "bistrô de bairro alegre"
+                  ]
+                },
+                {
+                  "o": "Privateaser · Les Galopins",
+                  "u": "https://www.privateaser.com/lieu/4370-les-galopins",
+                  "tier": "diretorio",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "pequenos produtores"
+                  ]
+                },
+                {
+                  "o": "Nominatim/OpenStreetMap · endereço 17 rue Paul Bert (coordenada aproximada)",
+                  "u": "https://nominatim.openstreetmap.org/search?q=17+rue+Paul+Bert+Boulogne-Billancourt&format=json",
+                  "tier": "crowd",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "coordenada 48.83380, 2.23970"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Les Ombres (27 quai Jacques Chirac)",
+              "mapsQuery": "Les Ombres, 27 quai Jacques Chirac, Paris",
+              "desc": "Sala toda envidraçada no topo do Musée du quai Branly (desenho de Jean Nouvel), com vista da Torre Eiffel. Por ser fechada com vidro, funciona em outubro. Aberto <strong>7 dias</strong>, jantar <strong>19h-22h</strong>. Menu fixo de <strong>€98</strong> (entrada, prato e sobremesa) ou <strong>€118</strong>, bebida à parte. <strong>Reserva obrigatória</strong> (OpenTable ou 01 47 53 68 00). Como ir: L9 Alma-Marceau. O museu fecha às segundas: [confirmar o acesso de entrada ao reservar].",
+              "preco": "menu €98 / €118 + bebida",
+              "dist": "L9 Alma-Marceau",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.8611,
+                "lng": 2.29847
+              },
+              "fontes": [
+                {
+                  "o": "Les Ombres · site oficial",
+                  "u": "https://www.lesombres-restaurant.com/contact/",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "7 dias",
+                    "19h-22h",
+                    "01 47 53 68 00",
+                    "27 quai Jacques Chirac"
+                  ]
+                },
+                {
+                  "o": "Les Ombres · cardápio de jantar (PDF oficial, 08/2026)",
+                  "u": "https://www.lesombres-restaurant.com/wp-content/uploads/2026/08/WEB_DIN.pdf",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "€98",
+                    "€118"
+                  ]
+                },
+                {
+                  "o": "Musée du quai Branly · Les Ombres (site oficial)",
+                  "u": "https://www.quaibranly.fr/en/useful-information/come/museum-restaurants/panoramic-restaurant-les-ombres",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "L9 Alma-Marceau",
+                    "Jean Nouvel",
+                    "vista da Torre Eiffel"
+                  ]
+                },
+                {
+                  "o": "Nominatim/OpenStreetMap · coordenada",
+                  "u": "https://nominatim.openstreetmap.org/search?q=27+quai+Jacques+Chirac+Paris&format=json",
+                  "tier": "crowd",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "coordenada 48.86110, 2.29847"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Monsieur Bleu (Palais de Tokyo, 20 av. de New York)",
+              "mapsQuery": "Monsieur Bleu, 20 avenue de New York, Paris",
+              "desc": "Salão Art Déco de mármore e dourado (desenho de Joseph Dirand), dentro do Palais de Tokyo. Em outubro conte com a sala interna: o terraço só abre quando o tempo deixa. Jantar 7 dias por semana, 19h-02h. Pratos <strong>€35-55</strong>, coquetel autoral <strong>€22</strong>. Vale pelo salão, não pela vista. Como ir: L9 Iéna ou Alma-Marceau. Reserva pelo site (SevenRooms) ou 01 47 20 90 47.",
+              "preco": "pratos €35-55 · coquetel €22",
+              "dist": "L9 Iéna / Alma-Marceau",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "coord": {
+                "lat": 48.8642,
+                "lng": 2.29689
+              },
+              "fontes": [
+                {
+                  "o": "Monsieur Bleu · menus (site oficial)",
+                  "u": "https://monsieurbleu-restaurant.com/paris/menus/",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "19:00-23:00",
+                    "€35-55",
+                    "€22",
+                    "01 47 20 90 47"
+                  ]
+                },
+                {
+                  "o": "Paris Society · Monsieur Bleu",
+                  "u": "https://paris-society.com/restaurants/monsieur-bleu/paris/",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "Joseph Dirand",
+                    "Art Déco"
+                  ]
+                },
+                {
+                  "o": "Sortiraparis · Monsieur Bleu (artigo antigo)",
+                  "u": "https://www.sortiraparis.com/hotel-restaurant/restaurant/articles/62122-monsieur-bleu-le-nou-bar-restaurant-du-palais-de-tokyo",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "maio a setembro",
+                    "L9 Iéna ou Alma-Marceau"
+                  ]
+                },
+                {
+                  "o": "Nominatim/OpenStreetMap · coordenada",
+                  "u": "https://nominatim.openstreetmap.org/search?q=20+avenue+de+New+York+Paris&format=json",
+                  "tier": "crowd",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "coordenada 48.86420, 2.29689"
+                  ]
+                },
+                {
+                  "o": "Palais de Tokyo · Monsieur Bleu (FACTCHECK 2026-10-07)",
+                  "u": "https://palaisdetokyo.com/en/monsieur-bleu/",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "19h-02h"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "00:30",
+          "emoji": "🚇",
+          "periodo": "noite",
+          "tipo": "transit",
+          "nome": "Volta da noite → casa (metrô ou Uber)",
+          "cat": "Último metrô ~01:15 no terminal · saiam até ~00:30 · Uber ~€19",
+          "noMaps": true,
+          "coord": {
+            "lat": 48.85194,
+            "lng": 2.33889
+          }
+        }
+      ]
+    },
+    {
+      "date": "Ter 13/Out",
+      "tema": "Disney Adventure World",
+      "temaCurto": "Disney",
+      "bairro": "Disney Adventure World",
+      "grupo": true,
+      "cor": "#db2777",
+      "gradA": "#831843",
+      "gradB": "#f472b6",
+      "nota": "Dia das duas famílias juntas na <strong>Disney</strong>. Saída de casa às 8h; ingressos no celular. ⚠️ O Halloween da Disney é <strong>só no Parc Disneyland</strong>, o outro parque. Voltar do parque ~17:15 pra estar em casa ~18:45.",
+      "stops": [
+        {
+          "hora": "08:00",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Casa → Disney (linha 9 + RER A)",
+          "cat": "~1h15-1h30 · L9 + RER A até Marne-la-Vallée–Chessy (baldeação Havre-Caumartin/Auber)",
+          "mapsQuery": "Marne-la-Vallée – Chessy station",
+          "coord": {
+            "lat": 48.8704,
+            "lng": 2.7828
+          }
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🏰",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "reservado",
+          "nome": "Disney Adventure World (antigo Walt Disney Studios)",
+          "mapsQuery": "Disney Adventure World, Chessy",
+          "cat": "Dia inteiro · World of Frozen · ingresso já comprado",
+          "sobre": "O antigo Walt Disney Studios virou <strong>Disney Adventure World</strong> em <strong>29 de março de 2026</strong>, com a estreia da <strong>World of Frozen</strong>. O ingresso já está comprado, com data; criança de <strong>3 a 11 anos</strong> paga tarifa infantil.",
+          "imperdivel": "Na <strong>World of Frozen</strong>, o barco <em>Frozen Ever After</em> passa por Arendelle, pelo vale dos trolls, pela North Mountain e pelo castelo de gelo. Altura mínima: três fontes dizem que não há, uma diz 102 cm: confiram na placa da fila.",
+          "dicas": [
+            "🕘 Parque aberto de <strong>9h30 às 22h</strong> em 13/10 segundo um site de horários [horário oficial a confirmar no app].",
+            "📏 <strong>Sem altura mínima: Ratatouille, Cars Quatre Roues Rallye, Slinky Dog Zigzag Spin, Spider-Man W.E.B. Adventure, Flying Carpets Over Agrabah e Raiponce Tangled Spin. 81 cm com adulto: Toy Soldiers Parachute Drop.",
+            "🎃 O desfile e os encontros de Halloween (<strong>26/set a 1/nov</strong>) acontecem <strong>só no Parc Disneyland</strong>, o outro parque. Aqui não tem.",
+            "📱 A bilheteria do parque <strong>não vende na hora</strong>: ingresso no celular, e lanche e água na mochila.",
+            "🕔 Saiam do parque ~17:15 pra chegar em casa ~18:45."
+          ],
+          "duracao": "Dia todo (9h30 às ~17:15)",
+          "custo": "Ingresso já comprado · criança 3-11 anos paga tarifa infantil",
+          "acessibilidade": "Dia longo a pé pra um menino de 4 anos: pausa e lanche na mochila. Sem carrinho.",
+          "coord": {
+            "lat": 48.8673,
+            "lng": 2.77901
+          },
+          "fontes": [
+            {
+              "o": "Disneyblog · Frozen Ever After (Disney Adventure World)",
+              "u": "https://disneyblog.com/destinations/disneyland-paris/disney-adventure-world/world-of-frozen/frozen-ever-after-disney-adventure-world/",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "29 de março de 2026",
+                "102 cm",
+                "World of Frozen"
+              ]
+            },
+            {
+              "o": "Attraction Tickets · guia da World of Frozen",
+              "u": "https://www.attractiontickets.com/en/latest-news/paris/disneylandr-paris-tickets/welcome-arendelle-your-guide-world-frozen",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "Arendelle",
+                "vale dos trolls",
+                "North Mountain",
+                "castelo de gelo",
+                "sem restrição"
+              ]
+            },
+            {
+              "o": "Parcs-France · Disneyland Paris (ingressos)",
+              "u": "https://www.parcs-france.com/disneyland-paris/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "3 a 11 anos",
+                "não vende na hora"
+              ]
+            },
+            {
+              "o": "OOParc · horários Disney Adventure World (13/10/2026)",
+              "u": "https://www.ooparc.com/fr/178-Walt_Disney_Studios/Infos/Horaires/",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "9h30 às 22h"
+              ]
+            },
+            {
+              "o": "DLP Tips · restrições de altura",
+              "u": "https://dlptips.com/advice/ride-restrictions/",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "Sem altura mínima",
+                "81 cm com adulto",
+                "Ratatouille",
+                "Cars Quatre Roues Rallye",
+                "Slinky Dog Zigzag Spin",
+                "Spider-Man W.E.B. Adventure",
+                "Toy Soldiers Parachute Drop",
+                "Flying Carpets Over Agrabah"
+              ]
+            },
+            {
+              "o": "Sortiraparis · Halloween 2026 na Disneyland Paris",
+              "u": "https://www.sortiraparis.com/en/news/halloween/articles/42930-halloween-2026-at-disneyland-paris-dates-entertainment-shows-the-program",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "26/set a 1/nov",
+                "só no Parc Disneyland"
+              ]
+            },
+            {
+              "o": "Wikipedia · Disney Adventure World (coordenada)",
+              "u": "https://en.wikipedia.org/wiki/Disney_Adventure_World",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "coordenada 48.86730, 2.77901"
+              ]
+            },
+            {
+              "o": "Roteiro proposto · ritmo e plano do dia (06/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-06",
+              "prova": [
+                "17:15",
+                "18:45"
+              ]
+            },
+            {
+              "o": "DLP Tips · ride restrictions (FACTCHECK 2026-10-07)",
+              "u": "https://dlptips.com/advice/ride-restrictions/",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "81 cm",
+                "102 cm"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "17:15",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Disney → casa (RER A + linha 9)",
+          "cat": "Saída do parque ~17:15 · casa ~18:45",
+          "noMaps": true,
+          "coord": {
+            "lat": 48.8704,
+            "lng": 2.7828
+          }
+        }
+      ]
+    },
+    {
+      "date": "Qua 14/Out",
+      "tema": "Orsay e Torre Eiffel",
+      "temaCurto": "Orsay · Torre",
+      "bairro": "Orsay e Torre Eiffel",
+      "grupo": false,
+      "cor": "#0369a1",
+      "gradA": "#0c4a6e",
+      "gradB": "#38bdf8",
+      "nota": "Manhã no <strong>Orsay</strong> (horário reservado), tarde na <strong>Torre Eiffel</strong> (horário reservado). Jantar cedo, <strong>mala pronta</strong> e cama cedo: <strong>saída de casa às 3h</strong> na quinta, pro voo das 6:30.",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Casa → Solférino (linha 10 + linha 12)",
+          "cat": "L10 até Sèvres-Babylone → L12 até Solférino [a confirmar]",
+          "mapsQuery": "Solférino (métro), Paris",
+          "coord": {
+            "lat": 48.85825,
+            "lng": 2.32323
+          }
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🚂",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "pendente",
+          "nome": "Musée d'Orsay (entrada pelo cais do Sena)",
+          "mapsQuery": "Musée d'Orsay, Paris",
+          "cat": "Estação de trem que virou museu · ~1h · relógio gigante",
+          "sobre": "Era uma <strong>estação de trem</strong>, e o <strong>relógio gigante</strong> é o que ele vai lembrar. O museu segue aberto durante as obras até <strong>2028</strong>, com entrada temporária pelo cais do Sena. Visita curta, ~1h.",
+          "imperdivel": "Roteiro curto: <strong>relógio gigante</strong> → café do <strong>5º andar</strong> (Café Campana), de frente pro relógio → o <strong>urso polar de Pompon</strong>, personagem-guia das crianças no museu.",
+          "dicas": [
+            "🎟️ Horário reservado às 9h30 (cheguem 15 min antes) e entrada pelo cais do Sena, pra quem tem horário marcado. Grátis abaixo de 18 anos. A reserva é fortemente recomendada.",
+            "💶 Adulto €16 online · €14 na bilheteria.",
+            "📚 <strong>Livretos grátis</strong> pra 4-12 anos, na recepção: &quot;1001 Histoires&quot; (<strong>45 min</strong>), &quot;1, 2, 3 statues!&quot; e &quot;Parcours Palette d'émotions&quot; (<strong>30 min</strong> cada).",
+            "📅 Aberto de terça a domingo, <strong>9h30 às 18h</strong> (quinta até 21h45). <strong>Fecha às segundas</strong>."
+          ],
+          "aprofundar": "<p>A estação foi inaugurada em <strong>1900</strong>, pra Exposição Universal, e desenhada por <strong>Victor Laloux</strong>: uma fachada de pedra escondendo uma estrutura metálica moderna. Fechou em <strong>1939</strong> e teve vários usos até virar museu. Em <strong>1º de dezembro de 1986</strong> o presidente Mitterrand o inaugurou, e ele abriu ao público em 9 de dezembro.</p><p>O projeto da conversão, escolhido entre seis propostas em <strong>1979</strong>, é do grupo ACT-Architecture (Bardon, Colboc e Philippon) e tinha de respeitar a arquitetura de Laloux. Os relógios monumentais continuam lá e enquadram a vista do Sena.</p>",
+          "duracao": "~1h",
+          "custo": "Adulto €16 online · €14 na bilheteria · grátis <18 anos (out/2026)",
+          "acessibilidade": "Visita curta e a pé, sem carrinho (a casa empresta carrinho na chapelaria [a confirmar]).",
+          "coord": {
+            "lat": 48.85997,
+            "lng": 2.32653
+          },
+          "fontes": [
+            {
+              "o": "Musée d'Orsay · da estação ao museu (site oficial, trecho via busca)",
+              "u": "https://www.musee-orsay.fr/en/node/283773",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1900",
+                "Exposição Universal",
+                "Victor Laloux",
+                "fachada de pedra",
+                "estrutura metálica",
+                "1939",
+                "1º de dezembro de 1986",
+                "9 de dezembro",
+                "seis propostas",
+                "1979",
+                "ACT-Architecture",
+                "Bardon, Colboc e Philippon",
+                "relógios monumentais"
+              ]
+            },
+            {
+              "o": "Musée d'Orsay · La grande galerie / Pompon (site oficial, trecho via busca)",
+              "u": "https://www.musee-orsay.fr/en/node/199539",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "urso polar de Pompon",
+                "personagem-guia das crianças",
+                "relógio"
+              ]
+            },
+            {
+              "o": "Les Restos · Café Campana, 5º andar (2020)",
+              "u": "https://www.lesrestos.com/decouvrir/info-du-jour/reouverture-du-cafe-campana-au-musee-d-orsay",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "Café Campana",
+                "5º andar"
+              ]
+            },
+            {
+              "o": "Familinparis · Musée d'Orsay com crianças",
+              "u": "https://www.familinparis.fr/536-musee-dorsay",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "Livretos grátis",
+                "4-12 anos",
+                "45 min",
+                "30 min",
+                "9h30 às 18h",
+                "21h45",
+                "Fecha às segundas",
+                "1001 Histoires",
+                "1, 2, 3 statues!",
+                "Parcours Palette d'émotions"
+              ]
+            },
+            {
+              "o": "Tarifs.org · Musée d'Orsay (preço, 2026)",
+              "u": "https://www.tarifs.org/musee-orsay-tarif",
+              "tier": "diretorio",
+              "data": "2026-10-07",
+              "prova": [
+                "€14",
+                "€18",
+                "18 anos",
+                "recomendada"
+              ]
+            },
+            {
+              "o": "Finestre sull'Arte · obras do Orsay (05/03/2026)",
+              "u": "https://www.finestresullarte.info/fr/musees/a-partir-du-10-mars-2026-le-musee-d-orsay-fait-peau-neuve-avec-un-chantier-de-restauration-de-deux-ans-et-demi",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "2028",
+                "entrada temporária pelo cais do Sena",
+                "cais do Sena"
+              ]
+            },
+            {
+              "o": "Wikipedia · Musée d'Orsay (coordenada)",
+              "u": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "coordenada 48.85997, 2.32653"
+              ]
+            },
+            {
+              "o": "Roteiro proposto · ritmo e plano do dia (06/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-06",
+              "prova": [
+                "~1h",
+                "1h",
+                "9h30",
+                "Horário reservado"
+              ]
+            },
+            {
+              "o": "Musée d'Orsay · tarifs (trecho via busca) + JDS, obras de 10/03/2026 (FACTCHECK 2026-10-07)",
+              "u": "https://www.musee-orsay.fr/fr/visite/tarifs",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "€16",
+                "€14",
+                "15 min",
+                "18 anos"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🦁",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "loja",
+          "valeAPena": 3,
+          "nome": "Deyrolle (46 rue du Bac)",
+          "mapsQuery": "Deyrolle, 46 rue du Bac, Paris",
+          "cat": "Gabinete de curiosidades · bichos empalhados desde 1831 · grátis",
+          "sobre": "Loja de taxidermia e entomologia desde <strong>1831</strong>, com um gabinete de curiosidades de verdade. A <strong>entrada é grátis</strong>. É uma loja, então ele olha e não toca.",
+          "imperdivel": "Suba ao <strong>1º andar</strong>: ursos, leões, zebras, cisnes e avestruzes empalhados e caixas de borboletas.",
+          "dicas": [
+            "🕙 Quarta: <strong>10h às 19h</strong>, o mesmo horário dos outros dias úteis. Fecha aos domingos.",
+            "🆓 Entrada grátis."
+          ],
+          "duracao": "Visita curta",
+          "custo": "Grátis",
+          "acessibilidade": "Loja-museu num casarão histórico, com um 1º andar [a confirmar acesso sem escada].",
+          "coord": {
+            "lat": 48.85654,
+            "lng": 2.32646
+          },
+          "fontes": [
+            {
+              "o": "Deyrolle · La Maison Deyrolle (site oficial)",
+              "u": "https://deyrolle.com/en/pages/la-maison-deyrolle",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1831",
+                "10h às 19h",
+                "Entrada grátis",
+                "46 rue du Bac"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Maison Deyrolle",
+              "u": "https://parisjetaime.com/shopping/maison-deyrolle-p2598",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "1º andar",
+                "Fecha aos domingos"
+              ]
+            },
+            {
+              "o": "France Today · Deyrolle e taxidermia em Paris",
+              "u": "https://www.francetoday.com/culture/shopping-boutiques/animal-kingdom-deyrolle-and-taxidermy-shops-in-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "ursos, leões, zebras, cisnes e avestruzes",
+                "caixas de borboletas"
+              ]
+            },
+            {
+              "o": "Nominatim/OpenStreetMap · coordenada",
+              "u": "https://nominatim.openstreetmap.org/search?q=46+rue+du+Bac+Paris&format=json",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "coordenada 48.85654, 2.32646"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "restaurante",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "🍽️ Almoço (a definir)",
+          "cat": "Pausa entre Deyrolle e a Torre",
+          "sobre": "O roteiro não fixa o lugar do almoço de quarta. Escolham na hora, entre a rue du Bac e o caminho da Torre.",
+          "imperdivel": "Almoçar sem pressa: a Torre é só às 14:30.",
+          "dicas": [
+            "🍽️ Lugar a definir [a confirmar].",
+            "🗺️ Quando escolherem, vale conferir se abre na quarta e se aceita criança sem reserva [a confirmar]."
+          ],
+          "duracao": "—",
+          "custo": "—",
+          "acessibilidade": "A definir junto com o lugar [a confirmar]."
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🗼",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "pendente",
+          "nome": "Torre Eiffel (Champ de Mars)",
+          "mapsQuery": "Tour Eiffel, Paris",
+          "cat": "A promessa da viagem · horário reservado",
+          "sobre": "A promessa da viagem. Sobem de elevador até o <strong>topo (€36,70 adulto · €9,20 criança de 4 a 11 anos)</strong> ou só até o <strong>2º andar (€23,50 · €6)</strong>.",
+          "imperdivel": "Decidam antes de chegar: o ingresso é <strong>nominativo</strong> e vale só pro dia e horário reservados.",
+          "dicas": [
+            "🎟️ Ingresso com horário em <strong>ticket.toureiffel.paris</strong>. Sem reserva, a bilheteria do local não garante a entrada se a lotação estiver cheia (roteiro de 06/10).",
+            "💶 Topo €36,70 adulto · €9,20 criança 4-11 anos · 2º andar €23,50 adulto · €6 criança. <strong>Menor de 4 anos entra grátis</strong>. Conferir o valor da criança no checkout: uma fonte secundária lista outro valor.",
+            "⏳ Fila de segurança: [tempo a confirmar]. Cheguem com folga do horário reservado.",
+            "🪪 O bilhete é nominativo: levem documento de cada um, inclusive o dele."
+          ],
+          "duracao": "[a confirmar]",
+          "custo": "Topo €36,70 / €9,20 · 2º andar €23,50 / €6 (out/2026)",
+          "acessibilidade": "Subida de elevador até o 2º andar e até o topo; antes, fila de segurança [tempo a confirmar].",
+          "coord": {
+            "lat": 48.85822,
+            "lng": 2.2945
+          },
+          "fontes": [
+            {
+              "o": "La tour Eiffel · billet 2ème étage par ascenseur (site oficial, via busca)",
+              "u": "https://www.toureiffel.paris/fr/tarifs-offres/billet-2eme-etage-par-ascenseur",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "€23,50",
+                "€6",
+                "Menor de 4 anos entra grátis"
+              ]
+            },
+            {
+              "o": "TheBetterVacation · site oficial da Torre Eiffel 2026",
+              "u": "https://thebettervacation.com/fr/Paris/site-officiel-de-la-tour-Eiffel/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "€36,70",
+                "nominativo",
+                "Topo",
+                "2º andar"
+              ]
+            },
+            {
+              "o": "Roteiro proposto · pesquisa em ticket.toureiffel.paris (06/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "€9,20",
+                "€36,70",
+                "€23,50",
+                "€6",
+                "Sem reserva, a bilheteria do local não garante a entrada",
+                "ticket.toureiffel.paris",
+                "nominativo",
+                "4 a 11 anos",
+                "4-11 anos"
+              ]
+            },
+            {
+              "o": "Wikipedia · Eiffel Tower (coordenada)",
+              "u": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "coordenada 48.85822, 2.29450",
+                "Champ de Mars"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:45",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Torre Eiffel → casa (linha 9)",
+          "cat": "L9 de Trocadéro, ou Bir-Hakeim (L6) → Trocadéro → L9 [rota a confirmar]",
+          "noMaps": true,
+          "coord": {
+            "lat": 48.8633,
+            "lng": 2.28706
+          }
+        }
+      ]
+    },
+    {
+      "date": "Qui 15/Out",
+      "tema": "Voo das 6:30 pra Copenhague",
+      "temaCurto": "Partida",
+      "bairro": "✈️ Partida",
+      "grupo": true,
+      "cor": "#334155",
+      "gradA": "#0f172a",
+      "gradB": "#475569",
+      "nota": "<strong>Mala pronta desde a quarta à noite.</strong> Saída de casa às 3h, todos juntos, pro voo das 6:30 pra Copenhague.",
+      "stops": [
+        {
+          "hora": "03:00",
+          "emoji": "✈️",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 0,
+          "noMaps": true,
+          "nome": "Saída de casa · voo das 6:30",
+          "cat": "Voo pra Copenhague · todos juntos",
+          "sobre": "Saída de casa às 3h, pro voo das 6:30 pra Copenhague.",
+          "imperdivel": "Deixar tudo pronto na quarta: mala fechada e documentos à mão.",
+          "dicas": [
+            "🧳 Mala pronta desde a quarta à noite, e jantar e cama cedo na véspera: às 3h o dia já começou.",
+            "🛂 Documentos e passagens no celular e na mão antes de apagar a luz."
+          ],
+          "duracao": "madrugada",
+          "custo": "[a confirmar]",
+          "acessibilidade": "Madrugada: ele provavelmente vai dormir no colo."
+        }
+      ]
+    },
+    {
+      "date": "🏘️",
+      "tema": "Bairros de Paris · os percursos a pé",
+      "temaCurto": "Bairros",
+      "bairro": "📍 Paris — coletâneas por bairro",
+      "grupo": false,
+      "cor": "#9a3412",
+      "gradA": "#7c2d12",
+      "gradB": "#f97316",
+      "nota": "Aba <strong>sem data</strong>. Os percursos a pé por bairro moram numa página própria de Paris, fora deste roteiro — é lá que entram os bairros, cada um com o percurso 👶 Família e os outros temas. Serve pra trocar um dia, emendar uma tarde livre ou ter um plano de chuva.",
+      "stops": [
+        {
+          "hora": "—",
+          "emoji": "🏘️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Página de Paris · percursos por bairro",
+          "cat": "Abre fora do roteiro · <a href=\"https://tsferraro.github.io/viagem/paris.html\" target=\"_blank\" rel=\"noopener\">tsferraro.github.io/viagem/paris.html</a>",
+          "sobre": "Cada bairro tem vários percursos a pé por tema, no estilo da nossa coletânea do Marais: um 👶 pensado pra criança e outros de história, comida e museus. A página de Paris junta todos.",
+          "imperdivel": "O <strong>Marais</strong> já está pronto: abra o percurso <strong>👶 Família</strong> e veja o mapa com as paradas em ordem.",
+          "dicas": [
+            "🔗 <a href=\"https://tsferraro.github.io/viagem/paris.html\" target=\"_blank\" rel=\"noopener\">Página de Paris</a> · salve nos favoritos do celular: a lista de bairros vai crescendo.",
+            "🔗 <a href=\"https://tsferraro.github.io/viagem/marais/\" target=\"_blank\" rel=\"noopener\">Marais</a> · a coletânea que já está no ar.",
+            "🔄 Os bairros dos dias de vocês (as ilhas, Saint-Germain e Luxembourg, Tuileries, Montmartre) também ganham percurso lá. Usem pra trocar um dia ou emendar uma tarde livre."
+          ],
+          "coord": {
+            "lat": 48.8556,
+            "lng": 2.3654
+          },
+          "duracao": "1h30 a meio dia por percurso (cada um diz o seu)",
+          "custo": "a página é grátis · cada parada diz o preço dela",
+          "acessibilidade": "percursos a pé · cada um avisa ladeira, escada e banheiro"
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Point Zéro + Notre-Dame (6 parvis Notre-Dame, 4e)": [
+      {
+        "type": "official",
+        "label": "Notre-Dame · reserva grátis",
+        "url": "https://www.notredamedeparis.fr/en/visit/reservation-free/"
+      }
+    ],
+    "Square Barye (2 bd Henri-IV, Île Saint-Louis)": [
+      {
+        "type": "official",
+        "label": "Ville de Paris · Square Barye",
+        "url": "https://www.paris.fr/lieux/square-barye-29"
+      }
+    ],
+    "Bateaux-Mouches (Port de la Conférence, Pont de l'Alma)": [
+      {
+        "type": "official",
+        "label": "Bateaux-Mouches · ingressos e saídas",
+        "url": "https://www.bateaux-mouches.fr/fr/croisiere/visite_promenade"
+      }
+    ],
+    "Passeio por Saint-Germain (Cour du Commerce → Furstenberg → igreja)": [
+      {
+        "type": "official",
+        "label": "Paris je t'aime · Église Saint-Germain-des-Prés",
+        "url": "https://parisjetaime.com/culture/eglise-saint-germain-des-pres-p1011"
+      }
+    ],
+    "Musée de l'Orangerie (Jardin des Tuileries)": [
+      {
+        "type": "official",
+        "label": "Musée de l'Orangerie · horários e tarifas",
+        "url": "https://www.musee-orangerie.fr/fr/visite/acces-horaires-tarifs"
+      },
+      {
+        "type": "official",
+        "label": "Exposição Monet, peindre le temps",
+        "url": "https://www.paris.fr/evenements/monet-peindre-le-temps-116716"
+      }
+    ],
+    "Jardin des Tuileries (entrada Castiglione)": [
+      {
+        "type": "official",
+        "label": "Louvre · atividades nos Tuileries",
+        "url": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins"
+      }
+    ],
+    "Atelier des Lumières · Van Gogh (38 rue Saint-Maur)": [
+      {
+        "type": "official",
+        "label": "Atelier des Lumières",
+        "url": "https://www.atelier-lumieres.com/en"
+      },
+      {
+        "type": "official",
+        "label": "Exposição Van Gogh",
+        "url": "https://vangogh.atelier-lumieres.com/en/"
+      },
+      {
+        "type": "official",
+        "label": "Como chegar",
+        "url": "https://www.atelier-lumieres.com/en/visit/access"
+      }
+    ],
+    "🔄 Se preferirem Montmartre (funicular, carrossel, Sacré-Cœur)": [
+      {
+        "type": "official",
+        "label": "Sacré-Cœur de Montmartre",
+        "url": "https://www.sacre-coeur-montmartre.com/"
+      }
+    ],
+    "🍷 Noite só de vocês duas": [
+      {
+        "type": "official",
+        "label": "Café de l'Homme",
+        "url": "https://www.cafedelhomme.com/"
+      },
+      {
+        "type": "official",
+        "label": "Les Ombres",
+        "url": "https://www.lesombres-restaurant.com/"
+      },
+      {
+        "type": "official",
+        "label": "Monsieur Bleu",
+        "url": "https://monsieurbleu-restaurant.com/paris/"
+      },
+      {
+        "type": "official",
+        "label": "Bouillon Racine",
+        "url": "https://bouillonracine.fr/"
+      },
+      {
+        "type": "official",
+        "label": "Baca'v",
+        "url": "https://www.bacav.fr/"
+      },
+      {
+        "type": "official",
+        "label": "Les Galopins",
+        "url": "https://galopins-boulogne.com/sur-place/"
+      },
+      {
+        "type": "official",
+        "label": "Prescription Cocktail Club",
+        "url": "https://www.experimentalgroup.com/paris/prescription-cocktail-club"
+      }
+    ],
+    "Disney Adventure World (antigo Walt Disney Studios)": [
+      {
+        "type": "official",
+        "label": "Dicas de altura e atrações (DLP Tips)",
+        "url": "https://dlptips.com/advice/ride-restrictions/"
+      }
+    ],
+    "Deyrolle (46 rue du Bac)": [
+      {
+        "type": "official",
+        "label": "La Maison Deyrolle",
+        "url": "https://deyrolle.com/en/pages/la-maison-deyrolle"
+      }
+    ],
+    "Torre Eiffel (Champ de Mars)": [
+      {
+        "type": "official",
+        "label": "Torre Eiffel · site oficial",
+        "url": "https://www.toureiffel.paris/fr"
+      }
+    ],
+    "Página de Paris · percursos por bairro": [
+      {
+        "type": "official",
+        "label": "Página de Paris",
+        "url": "https://tsferraro.github.io/viagem/paris.html"
+      },
+      {
+        "type": "official",
+        "label": "Marais",
+        "url": "https://tsferraro.github.io/viagem/marais/"
+      }
+    ]
+  },
+  "transit_map": {
+    "Orly → Casa (táxi)": {
+      "opcoes": [
+        {
+          "modo": "taxi",
+          "texto": "<strong>Táxi, não Uber.</strong> Ao sair do portão de desembarque, <strong>sigam as indicações pintadas no chão até o ponto de táxi</strong>, que é garantido. Boulogne é atendida pelo mesmo táxi. Vai no taxímetro, <strong>~€54</strong>: a tarifa fixa de Orly vale só pra dentro de Paris."
+        },
+        {
+          "modo": "uber",
+          "texto": "Fica em média ~€34, mas <strong>não é a nossa recomendação</strong>: em Orly é comum o desencontro no ponto de encontro do Uber, e chegando à noite com criança o ponto de táxi é a aposta segura."
+        }
+      ]
+    },
+    "Casa → Maubert-Mutualité (linha 10)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "Linha 10 direto de Boulogne Jean Jaurès até <strong>Maubert-Mutualité</strong>, ~30 min, sem baldeação. Daí são ~10 min a pé até Notre-Dame, cruzando a Pont au Double <strong>[tempo a pé estimado: a confirmar]</strong>."
+        }
+      ]
+    },
+    "Alma-Marceau → Casa (linha 9)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "Linha 9 direto de Alma-Marceau até Boulogne, 18 min, sem baldeação. Saindo do barco por volta de 17:30, o metrô das 17:40 deixa vocês em casa perto das 18:00."
+        }
+      ]
+    },
+    "Casa → Odéon (linha 10)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "Linha 10 direto de Boulogne Jean Jaurès até <strong>Odéon</strong>, 27 min, sem baldeação. A corrida de 20 km fecha ruas de manhã: não vão de táxi nem de Uber."
+        }
+      ]
+    },
+    "Saint-Germain → Casa (linha 10)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "Linha 10 direto, saindo de Mabillon ou de Odéon, e casa por volta de 18:15."
+        }
+      ]
+    },
+    "Square Barye → Alma-Marceau (linha 7 + linha 9)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "Saiam do square às 15:35 e atravessem o braço norte da Pont de Sully até <strong>Sully-Morland (linha 7)</strong>, ~220 m. Linha 7 até <strong>Chaussée d'Antin–La Fayette</strong> → linha 9 até <strong>Alma-Marceau</strong> (27 min de estação a estação), e ~6 min a pé até o embarque. Alternativa: <strong>Saint-Paul (linha 1)</strong>, ~600 m a pé, até Franklin D. Roosevelt → linha 9 (20 min). A linha 10 não serve aqui: só cruza a 9 na ponta oeste."
+        }
+      ]
+    },
+    "Casa → Concorde (linha 9 + linha 1)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "<strong>L9</strong> até Franklin D. Roosevelt → <strong>L1</strong> até Concorde, ~30 min no total. Dali o Orangerie fica dentro do Jardin des Tuileries."
+        }
+      ]
+    },
+    "Atelier → casa (linha 9 direto)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "<strong>L9 direto</strong> de Voltaire até Boulogne, sem baldeação."
+        }
+      ]
+    },
+    "Volta da noite → casa (metrô ou Uber)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "O último metrô chega ao terminal por volta de <strong>01:15</strong> de domingo a quinta e passa 15 a 25 min antes nas estações do meio da linha: <strong>saiam até ~00:30</strong> (margem prática, confira no app da RATP). Sem obra anunciada nas L9 e L10 pra outubro; confira na véspera."
+        },
+        {
+          "modo": "uber",
+          "texto": "Uber de Paris até Boulogne: média de ~9 km, ~22 min e ~€19 no UberX, com preço dinâmico (página da Uber, 06/10/2026)."
+        }
+      ]
+    },
+    "Casa → Disney (linha 9 + RER A)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "L9 até <strong>Havre-Caumartin</strong> → corredor até <strong>Auber</strong> → RER A, trem com destino <strong>Marne-la-Vallée–Chessy</strong> (o RER A tem dois ramais a leste: confiram o destino no painel). ~1h15-1h30 de porta a porta. Alternativa às vezes mais rápida: L9 → L6 em Trocadéro → RER A em Charles de Gaulle–Étoile. Saída de casa por volta das 8h."
+        }
+      ]
+    },
+    "Disney → casa (RER A + linha 9)": {
+      "opcoes": [
+        {
+          "modo": "trem",
+          "texto": "<strong>RER A</strong> + <strong>L9</strong> de volta. Saindo do parque ~17:15, casa ~18:45."
+        }
+      ]
+    },
+    "Casa → Solférino (linha 10 + linha 12)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "<strong>L10</strong> até Sèvres-Babylone → <strong>L12</strong> até Solférino [a confirmar]. A entrada é pelo cais do Sena."
+        }
+      ]
+    },
+    "Torre Eiffel → casa (linha 9)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "<strong>L9</strong> de Trocadéro, ou Bir-Hakeim (<strong>L6</strong>) → Trocadéro → <strong>L9</strong> [rota a confirmar]. Jantar cedo e cama cedo: saída de casa às 3h."
+        }
+      ]
+    },
+    "Tuileries → Voltaire (linha 1 até Nation + linha 9)": {
+      "opcoes": [
+        {
+          "modo": "metro",
+          "texto": "L1 sentido Château de Vincennes até <strong>Nation</strong> → L9 sentido Pont de Sèvres até <strong>Voltaire</strong>: ~25 min. Do metrô, ~6 min a pé até o Atelier. (A rota por Franklin D. Roosevelt também funciona, mas volta pra oeste e leva ~35-40 min.)"
+        }
+      ]
+    }
+  },
+  "historia": [
+    {
+      "titulo": "⛪ Onde Paris começou · a Cité e Notre-Dame",
+      "prosa_html": "<p>A Île de la Cité é onde Paris começou, e os parisienses levam isso ao pé da letra: na frente de Notre-Dame, uma rosa dos ventos de latão marca o <strong>Point Zéro</strong>, de onde se medem as estradas da França. Segundo a tradição, Luís XV fixou o ponto em 1769, e a placa atual é de 1924. Antes, ali ficava a \"escada da justiça\", onde os condenados se ajoelhavam. A poucos passos, a fachada da catedral guarda uma vingança: em 1793, os revolucionários cortaram a cabeça dos 28 reis de Judá da Galeria dos Reis. Em 1977, 21 dessas cabeças apareceram por acaso num pátio de Paris e hoje estão no Museu de Cluny.</p><p>E há uma piada do arquiteto: quando refez a flecha, no séc. XIX, Viollet-le-Duc se pôs ali como São Tomé, o único apóstolo que, em vez de olhar pra cidade, olha pra própria obra. As 16 estátuas desceram pra restauro em 11 de abril de 2019, quatro dias antes do incêndio, e foi isso que as salvou.</p><p>A Île Saint-Louis é o contrário: não nasceu, foi fabricada. Eram duas ilhotas, a Île Notre-Dame e a \"Île aux Vaches\", usadas como pasto, varal e lugar de duelo, e separadas por um canal desde 1360, que hoje é a rue Poulletier. Em 1614, Luís XIII entregou o projeto a Christophe Marie, que aterrou o canal, cercou tudo de cais e construiu a ponte que até hoje leva o nome dele, a Pont Marie. Duas quadras adiante, no 19 quai de Bourbon, Camille Claudel esculpiu sozinha de 1899 a 1913, até ser internada.</p>",
+      "fontes": [
+        {
+          "o": "Pariszigzag · Point Zéro",
+          "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/point-zero-de-paris/",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "22 de abril de 1769",
+            "1924",
+            "escada da justiça"
+          ]
+        },
+        {
+          "o": "History.com · a Galeria dos Reis",
+          "u": "https://www.history.com/news/notre-dame-fire-french-revolution",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "1793",
+            "28 reis de Judá",
+            "1977",
+            "21 dessas cabeças",
+            "Museu de Cluny"
+          ]
+        },
+        {
+          "o": "Pariszigzag · Viollet-le-Duc",
+          "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/viollet-duc-notre-dame/",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "São Tomé",
+            "o único apóstolo"
+          ]
+        },
+        {
+          "o": "Ministério da Cultura · as 16 estátuas da flecha",
+          "u": "https://www.culture.gouv.fr/regions/drac-ile-de-france/Actualites/actualite-a-la-une/Les-16-statues-de-la-fleche-de-Notre-Dame-de-Paris-enfin-reunies",
+          "tier": "oficial",
+          "data": "2026-10-06",
+          "prova": [
+            "16 estátuas",
+            "11 de abril de 2019",
+            "quatro dias antes"
+          ]
+        },
+        {
+          "o": "Wikipedia · Île Saint-Louis",
+          "u": "https://en.wikipedia.org/wiki/%C3%8Ele_Saint-Louis",
+          "tier": "crowd",
+          "data": "2026-10-06",
+          "prova": [
+            "1360",
+            "Île aux Vaches"
+          ]
+        },
+        {
+          "o": "IU Paris · a criação da Île Saint-Louis",
+          "u": "https://paris10.sitehost.iu.edu/ParisOSS/Day_2_Early_Paris/Early_Mod/StLouis_Creation.html",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "1614",
+            "Christophe Marie",
+            "Pont Marie"
+          ]
+        },
+        {
+          "o": "Musée Camille Claudel · biografia",
+          "u": "https://www.museecamilleclaudel.fr/en/collections/camille-claudel-biography/1893-1908-period-solitary-creation",
+          "tier": "oficial",
+          "data": "2026-10-06",
+          "prova": [
+            "1899 a 1913",
+            "19 quai de Bourbon"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "🌳 O jardim da rainha e a abadia dos prés",
+      "prosa_html": "<p>O Luxembourg nasceu de uma saudade de rainha: a Fontaine Médicis foi construída em 1630 por ordem de Maria de Médici, que mandou erguer o Palácio do Luxembourg, hoje o Senado. O carrossel do jardim é de 1879, com animais desenhados por Charles Garnier, o arquiteto da Ópera.</p><p>Antes de ser o bairro dos cafés, Saint-Germain-des-Prés era um campo (\"prés\") de uma abadia. Childebert, filho de Clóvis, fundou no séc. VI uma basílica, consagrada em 558. É uma das igrejas mais antigas de Paris, com o campanário mais antigo da cidade (c. 990); na Revolução virou refinaria de salitre pra fazer pólvora e escapou por pouco da demolição. A Cour du Commerce Saint-André segue a linha da muralha de Filipe Augusto, erguida por volta de 1200: Marat imprimia o jornal ali, Danton morava no número 20, e a guilhotina foi testada em ovelhas num ateliê da passagem. Nos fundos, o Procope, de 1686, serviu Voltaire e depois Robespierre.</p>",
+      "fontes": [
+        {
+          "o": "Pariszigzag · Fontaine Médicis",
+          "u": "https://www.pariszigzag.fr/?p=206354",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "1630",
+            "Maria de Médici"
+          ]
+        },
+        {
+          "o": "Untapped Cities · seis carrosséis de Paris",
+          "u": "https://untappedcities.com/six-beautiful-carousels-of-paris/",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "1879",
+            "Charles Garnier"
+          ]
+        },
+        {
+          "o": "Paris.fr · decoração restaurada de Saint-Germain-des-Prés",
+          "u": "https://www.paris.fr/pages/immersion-dans-les-decors-restaures-de-l-eglise-saint-germain-des-pres-7835",
+          "tier": "oficial",
+          "data": "2026-10-06",
+          "prova": [
+            "séc. VI",
+            "558",
+            "refinaria de salitre"
+          ]
+        },
+        {
+          "o": "Pariszigzag · Cour du Commerce Saint-André",
+          "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/cour-saint-andre-saint-germain-odeon/",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "Filipe Augusto",
+            "Danton",
+            "número 20",
+            "ovelhas",
+            "1686"
+          ]
+        },
+        {
+          "o": "Bonjour Paris · la Cour du Commerce Saint-André",
+          "u": "https://bonjourparis.com/history/streets-and-stories-la-cour-du-commerce-saint-andre/",
+          "tier": "editorial",
+          "data": "2026-10-06",
+          "prova": [
+            "Marat",
+            "Procope",
+            "Voltaire",
+            "Robespierre"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "🚂 A estação que virou museu · Orsay",
+      "prosa_html": "<p>Onde hoje ficam Monet, Van Gogh e Degas, os trens chegavam de Orléans. A estação foi inaugurada em <strong>1900</strong>, pra <strong>Exposição Universal</strong>, e desenhada por <strong>Victor Laloux</strong>: uma fachada de pedra escondendo uma estrutura metálica moderna.</p><p>Fechou em <strong>1939</strong> e teve vários usos até virar museu. O projeto da conversão foi escolhido entre seis propostas em <strong>1979</strong>, e é do grupo ACT-Architecture (Bardon, Colboc e Philippon). Em <strong>1º de dezembro de 1986</strong>, o presidente <strong>Mitterrand</strong> inaugurou o museu, que abriu ao público em <strong>9 de dezembro</strong>.</p><p><strong>O que observar</strong>: os <strong>relógios monumentais</strong> continuam lá e enquadram a vista do Sena. O café do 5º andar fica de frente pro relógio gigante. Pra um menino de 4 anos, é a parte mais fácil de explicar: era uma estação de trem.</p>",
+      "fontes": [
+        {
+          "o": "Musée d'Orsay · da estação ao museu (site oficial, trecho via busca)",
+          "u": "https://www.musee-orsay.fr/en/node/283773",
+          "tier": "oficial",
+          "data": "2026-10-07",
+          "prova": [
+            "1900",
+            "Exposição Universal",
+            "Victor Laloux",
+            "fachada de pedra",
+            "estrutura metálica",
+            "1939",
+            "1º de dezembro de 1986",
+            "9 de dezembro",
+            "seis propostas",
+            "1979",
+            "ACT-Architecture",
+            "Bardon, Colboc e Philippon",
+            "relógios monumentais",
+            "Mitterrand"
+          ]
+        },
+        {
+          "o": "Les Restos · Café Campana, 5º andar",
+          "u": "https://www.lesrestos.com/decouvrir/info-du-jour/reouverture-du-cafe-campana-au-musee-d-orsay",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "café do 5º andar",
+            "relógio gigante"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "🌻 A fundição que virou Van Gogh",
+      "prosa_html": "<p>O prédio do <strong>38 rue Saint-Maur</strong> passou cem anos fazendo ferro antes de fazer luz. Em <strong>1835</strong>, os <strong>irmãos Plichon</strong> abriram ali a <strong>Fonderie du Chemin-Vert</strong>, pra fundir peças de ferro de alta qualidade pra <strong>marinha e as ferrovias</strong>. A fábrica ficou <strong>quatro gerações</strong> na mesma família, até a <strong>crise de 1929</strong> fechá-la; em <strong>1935</strong> foi vendida à família Martin.</p><p>A <strong>Culturespaces</strong> escolheu a fundição e abriu o Atelier des Lumières em <strong>13 de abril de 2018</strong>. Hoje são <strong>140 projetores de vídeo</strong> cobrindo <strong>3.300 m²</strong>.</p><p><strong>O que observar</strong>: a fábrica não foi apagada. As <strong>estruturas metálicas foram preservadas</strong> e a velha chaminé de tijolo foi <strong>preservada</strong>. Quando as projeções passam por cima delas, Van Gogh escorre sobre o esqueleto de uma siderúrgica do século XIX.</p>",
+      "fontes": [
+        {
+          "o": "Atelier des Lumières · histoire du lieu (site oficial)",
+          "u": "https://www.atelier-lumieres.com/en/explore/place-of-history",
+          "tier": "oficial",
+          "data": "2026-08-27",
+          "prova": [
+            "1835",
+            "irmãos Plichon",
+            "Fonderie du Chemin-Vert",
+            "marinha e as ferrovias",
+            "quatro gerações",
+            "crise de 1929",
+            "1935",
+            "Culturespaces",
+            "13 de abril de 2018",
+            "estruturas metálicas foram preservadas",
+            "cem anos"
+          ]
+        },
+        {
+          "o": "Paris je t'aime · Atelier des Lumières",
+          "u": "https://parisjetaime.com/eng/culture/atelier-des-lumieres-p3639",
+          "tier": "editorial",
+          "data": "2026-08-27",
+          "prova": [
+            "140 projetores de vídeo",
+            "3.300 m²"
+          ]
+        }
+      ]
+    }
+  ]
+}
