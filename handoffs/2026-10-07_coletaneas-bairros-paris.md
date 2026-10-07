@@ -64,6 +64,7 @@ Os 4 motivos (GLOBAL § 10a-bis). Paradas combinadas:
 ## Decidi sozinho
 | Decisão | Por quê | Como desfazer | Custo se errado |
 |---|---|---|---|
+| Onda iniciada 07/10 antes do app paris-amigos estar no ar | ordem do Tobia ("faça agora", 07/10) | — | colisão da landing no `main`: no deploy, `git pull --rebase` e re-rodar `regen-landing.py` antes do push |
 
 ## Roteiro de fases
 | # | Fase / passo | Quando | Quem / bastão | Chip | Depende de |
