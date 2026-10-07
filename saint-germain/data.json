@@ -1,0 +1,2615 @@
+{
+  "title": "🗺️ Walking Tours · Saint-Germain · Odéon · Luxembourg (Paris)",
+  "auth_emoji": "🗺️",
+  "auth_title": "Walking Tours · Paris",
+  "auth_subtitle": "Saint-Germain · Odéon · Luxembourg · roteiros a pé (sem data)",
+  "header_title": "🗺️ Saint-Germain · Walking Tours",
+  "header_sub": "Família · Profundo · Guloso · Museus",
+  "password": "marais2026",
+  "legend_group_text": "👨‍👩‍👧 Tour ok pra crianças pequenas",
+  "legend_notes_html": "<strong>🗺️ Coletânea de walking tours por Saint-Germain-des-Prés · Odéon · Luxembourg (6e), com borda no 7e até o Orsay</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. O Luxembourg é o <strong>parquinho-âncora</strong> do bairro, e quase tudo o resto cabe em trechos curtos a pé entre Odéon, Saint-Sulpice e Sèvres-Babylone. <strong>👶 Família</strong>: Luxembourg de ponta a ponta (barquinhos, parquinho, carrossel) + variante B em Sèvres-Babylone. <strong>🎨 Profundo</strong>: da igreja do séc. VI à guilhotina e ao gnômon de Saint-Sulpice. <strong>🍫 Guloso</strong>: sorvete, chocolate, macaron e pão (versão curta recomendada). <strong>🖼️ Museus</strong>: Delacroix, Mazarine, Pont des Arts, Orsay e Deyrolle. <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>📍 Pinos</strong>: posições copiadas do OpenStreetMap e da Wikipédia (factcheck de 07/10/2026) — só o carrossel do Luxembourg segue aproximado. <strong>🗓️ Dias de fechar</strong>: domingo fecham Poilâne, Debauve &amp; Gallais, Deyrolle e Bibliothèque Mazarine · terça fecha o Musée Delacroix · segunda fecha o Orsay.",
+  "links_map": {
+    "Fontaine Médicis (Jardin du Luxembourg, lado leste, 6e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Fontaine Médicis",
+        "url": "https://www.pariszigzag.fr/?p=206354"
+      }
+    ],
+    "Grand Bassin + Voiliers du Luxembourg (centro do jardim, frente ao Senado)": [
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Voiliers du Luxembourg",
+        "url": "https://sortiraparis.com/en/what-to-visit-in-paris/walks/articles/317791-les-voiliers-du-luxembourg-the-jardin-du-luxembourg-s-historic-boats-for-children"
+      }
+    ],
+    "Ludo Jardin · aire de jeux (setor sudoeste do Jardin du Luxembourg, 6e)": [
+      {
+        "type": "review",
+        "label": "Familin'Paris · aires de jeux",
+        "url": "https://www.familinparis.fr/aire-de-jeux-paris/"
+      }
+    ],
+    "Carrossel do Luxembourg (perto do parquinho, 6e)": [
+      {
+        "type": "review",
+        "label": "Untapped Cities · carrosséis de Paris",
+        "url": "https://untappedcities.com/six-beautiful-carousels-of-paris"
+      }
+    ],
+    "🔄 Square Boucicaut (1 rue de Babylone, 7e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square Boucicaut",
+        "url": "https://www.paris.fr/lieux/square-boucicaut-2462"
+      }
+    ],
+    "🔄 La Grande Épicerie de Paris (38 rue de Sèvres, 7e)": [
+      {
+        "type": "official",
+        "label": "Paris je t'aime · Grande Épicerie",
+        "url": "https://parisjetaime.com/shopping/la-grande-epicerie-de-paris-p3745"
+      }
+    ],
+    "🔄 Deyrolle (46 rue du Bac, 7e)": [
+      {
+        "type": "official",
+        "label": "Deyrolle · La Maison",
+        "url": "https://deyrolle.com/en/pages/la-maison-deyrolle"
+      }
+    ],
+    "Cour du Commerce Saint-André (entre o bd Saint-Germain e a rue Saint-André-des-Arts, 6e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Cour du Commerce Saint-André",
+        "url": "https://www.pariszigzag.fr/insolite/lieux-insolites/cour-saint-andre-saint-germain-odeon/"
+      }
+    ],
+    "Place de Furstenberg + Palais abbatial (rue de Furstenberg / 5 rue de l'Abbaye, 6e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Place de Furstenberg",
+        "url": "https://www.pariszigzag.fr/?p=426"
+      }
+    ],
+    "Église Saint-Germain-des-Prés (3 place Saint-Germain-des-Prés, 6e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · decoração restaurada",
+        "url": "https://www.paris.fr/pages/immersion-dans-les-decors-restaures-de-l-eglise-saint-germain-des-pres-7835"
+      }
+    ],
+    "Square Laurent-Prache (1 place Juliette-Gréco, 6e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square Laurent-Prache",
+        "url": "https://www.paris.fr/lieux/square-laurent-prache-2455"
+      }
+    ],
+    "Café de Flore / Les Deux Magots (bd Saint-Germain, esquina da igreja, 6e)": [
+      {
+        "type": "official",
+        "label": "Paris je t'aime · Café de Flore",
+        "url": "https://parisjetaime.com/restaurant/cafe-de-flore-p674"
+      }
+    ],
+    "Église Saint-Sulpice (place Saint-Sulpice, 6e)": [
+      {
+        "type": "official",
+        "label": "Paris je t'aime · Saint-Sulpice",
+        "url": "https://parisjetaime.com/culture/eglise-saint-sulpice-p1572"
+      }
+    ],
+    "Il Gelato del Marchese (2 rue de Condé, Carrefour de l'Odéon, 6e)": [
+      {
+        "type": "official",
+        "label": "Visit Paris Region · Il Gelato del Marchese",
+        "url": "https://www.visitparisregion.com/fr/il-gelato-del-marchese"
+      }
+    ],
+    "Patrick Roger (108 bd Saint-Germain, 6e)": [
+      {
+        "type": "official",
+        "label": "Visit Paris Region · Patrick Roger",
+        "url": "https://www.visitparisregion.com/fr/patrick-roger"
+      }
+    ],
+    "Pierre Hermé Bonaparte (72 rue Bonaparte, 6e)": [
+      {
+        "type": "official",
+        "label": "Paris je t'aime · Pierre Hermé Bonaparte",
+        "url": "https://parisjetaime.com/shopping/pierre-herme-bonaparte-p2388"
+      }
+    ],
+    "Poilâne (8 rue du Cherche-Midi, 6e)": [
+      {
+        "type": "review",
+        "label": "Mes Prestiges · Poilâne",
+        "url": "https://mesprestiges.com/en/paris/places/poilane"
+      }
+    ],
+    "La Grande Épicerie de Paris (38 rue de Sèvres, 7e)": [
+      {
+        "type": "official",
+        "label": "Paris je t'aime · Grande Épicerie",
+        "url": "https://parisjetaime.com/shopping/la-grande-epicerie-de-paris-p3745"
+      }
+    ],
+    "Le Bac à Glaces (109 rue du Bac, 7e)": [
+      {
+        "type": "official",
+        "label": "Paris je t'aime · Le Bac à Glaces",
+        "url": "https://parisjetaime.com/restaurant/le-bac-a-glaces-p725"
+      }
+    ],
+    "Debauve & Gallais (30 rue des Saints-Pères, 7e)": [
+      {
+        "type": "review",
+        "label": "Atlas Obscura · Debauve & Gallais",
+        "url": "https://www.atlasobscura.com/places/debauve-gallais"
+      }
+    ],
+    "Musée national Eugène Delacroix (6 rue de Furstenberg, 6e)": [
+      {
+        "type": "official",
+        "label": "Visit Paris Region · Musée Delacroix",
+        "url": "https://www.visitparisregion.com/fr/musee-eugene-delacroix"
+      }
+    ],
+    "Bibliothèque Mazarine (23 quai de Conti, no Institut de France, 6e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Bibliothèque Mazarine",
+        "url": "https://www.pariszigzag.fr/sortir-paris/tendances-culture/bibliotheque-mazarine-paris/"
+      }
+    ],
+    "Pont des Arts (entre o Institut de France e o Louvre, 6e/1er)": [
+      {
+        "type": "review",
+        "label": "Napoleon.org · Pont des Arts",
+        "url": "https://www.napoleon.org/magazine/lieux/pont-des-arts-paris/"
+      }
+    ],
+    "Musée d'Orsay (esplanade Valéry-Giscard-d'Estaing, 7e)": [
+      {
+        "type": "official",
+        "label": "Musée d'Orsay · visita",
+        "url": "https://www.musee-orsay.fr/en/node/281163"
+      }
+    ],
+    "Deyrolle (46 rue du Bac, 7e)": [
+      {
+        "type": "official",
+        "label": "Deyrolle · La Maison",
+        "url": "https://deyrolle.com/en/pages/la-maison-deyrolle"
+      }
+    ]
+  },
+  "transit_map": {
+    "Chegada · Métro L10 → Odéon": {
+      "metro": "L10 direta, sem baldeação: Boulogne Jean Jaurès → Mabillon em ~25 min (12 estações) · Odéon é a estação seguinte (L10) · Sèvres-Babylone (L10 direta) deixa na porta do Bon Marché / Square Boucicaut"
+    }
+  },
+  "bairros_config": [
+    {
+      "nome": "🌳 Jardin du Luxembourg",
+      "latMin": 48.8425,
+      "latMax": 48.8495,
+      "lngMin": 2.3305,
+      "lngMax": 2.343
+    },
+    {
+      "nome": "☕ Saint-Germain · Odéon (6e)",
+      "latMin": 48.8495,
+      "latMax": 48.8535,
+      "lngMin": 2.3265,
+      "lngMax": 2.344
+    },
+    {
+      "nome": "🖼️ 7e · Sèvres-Babylone → Orsay",
+      "latMin": 48.848,
+      "latMax": 48.861,
+      "lngMin": 2.32,
+      "lngMax": 2.33
+    },
+    {
+      "nome": "📍 Paris",
+      "fallback": true
+    }
+  ],
+  "wt_labels": "letters",
+  "days": [
+    {
+      "date": "👶",
+      "tema": "Luxembourg · Clássico em Família",
+      "temaCurto": "Família",
+      "bairro": "🌳 Jardin du Luxembourg (6e)",
+      "grupo": true,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "hideStopMarkers": true,
+      "nota": "O Luxembourg é o <strong>parquinho-âncora</strong> do bairro: um jardim com barquinhos, carrossel, parquinho e pônei onde dá pra passar a manhã inteira. Proposta: <strong>entrar pelo lado Odéon e terminar no sudoeste do jardim</strong> · ~1,5 km dentro do jardim (estimativa, não medida) · <strong>3-4h</strong> · melhor <strong>às 10h</strong> (o Ludo Jardin abre às 10h e enche à tarde). O <strong>pônei</strong> só funciona às quartas, aos sábados, aos domingos e em feriados. Almoço: Bouillon Racine ou Breizh Café, a 2-3 quadras da entrada Odéon. <strong>Variante B</strong> (cards 🔄, Parte 2 no mapa): Sèvres-Babylone, L10 direta, 1h30 — pra uma manhã curta ou dia de chuva leve. <strong>Pula sem culpa:</strong> Café de Flore e Deux Magots com a criança (ver aba História).",
+      "stops": [
+        {
+          "hora": "09:30",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro L10 → Odéon",
+          "cat": "L10 direta, sem baldeação · Boulogne Jean Jaurès → Mabillon ~25 min · Odéon é a estação seguinte",
+          "coord": {
+            "lat": 48.8523,
+            "lng": 2.33937
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "⛲",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Fontaine Médicis (Jardin du Luxembourg, lado leste, 6e)",
+          "cat": "Fonte de c. 1630 · espelho d'água sob os plátanos",
+          "sobre": "Construída por volta de <strong>1630</strong> por ordem de <strong>Maria de Médici</strong> — a mesma que mandou erguer o Palácio do Luxembourg (hoje o Senado) — é <strong>uma das fontes mais antigas de Paris</strong>. É o canto \"de cartão-postal\" do jardim: um espelho d'água comprido, ladeado por plátanos, que é da reconstrução de <strong>1862</strong> (quando a fonte foi deslocada uns 30 m).",
+          "imperdivel": "O que observar: o <strong>espelho d'água comprido sob os plátanos</strong> — água e um corredor de sombra pra entrar no jardim.",
+          "dicas": [
+            "5-10 min bastam: é a água pra olhar antes de seguir pro parquinho",
+            "Jardim grátis · o horário muda com a estação e até dentro do mês (em outubro, por exemplo, o fechamento cai de 18h45 pra 17h15) — confira a tabela do Senado",
+            "🚶 <strong>Walking Tour Parte 1 · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Fontaine Médicis</strong> — entre pelo lado Odéon: a fonte é a primeira parada, no lado leste do jardim",
+            "🚶 <strong>Ⓐ Grand Bassin</strong> — o tanque do centro, de frente pro Senado, onde correm os barquinhos à vela (se estiverem funcionando)",
+            "🚶 <strong>Ⓑ Ludo Jardin</strong> — o parquinho cercado no setor sudoeste: aqui o descarrego de energia do dia",
+            "🚶 <strong>Ⓒ Carrossel</strong> — o jogo das argolas (jeu de bagues) na fileira de fora",
+            "Fora da rota: a <strong>réplica da Estátua da Liberdade</strong> (lado oeste, junto ao portão da rue Guynemer) e o passeio de pônei (ponto de partida <strong>[a confirmar]</strong>)"
+          ],
+          "duracao": "5-10 min",
+          "custo": "Grátis",
+          "acessibilidade": "Corredor sombreado sob os plátanos",
+          "coord": {
+            "lat": 48.84806,
+            "lng": 2.33929
+          },
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 🌳 Luxembourg de ponta a ponta",
+              "descricao": "Fontaine Médicis → Grand Bassin → Ludo Jardin → Carrossel · entra pelo lado Odéon e termina no sudoeste do jardim · ~1,5 km dentro do jardim (estimativa, não medida)",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Fontaine Médicis (Jardin du Luxembourg, lado leste, 6e)",
+                  "coord": {
+                    "lat": 48.84806,
+                    "lng": 2.33929
+                  },
+                  "mapsQuery": "Fontaine Médicis, Jardin du Luxembourg, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Grand Bassin (centro do Jardin du Luxembourg, 6e)",
+                  "coord": {
+                    "lat": 48.84691,
+                    "lng": 2.3372
+                  },
+                  "mapsQuery": "Grand Bassin, Jardin du Luxembourg, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Ludo Jardin · aire de jeux (setor sudoeste do Jardin du Luxembourg, 6e)",
+                  "coord": {
+                    "lat": 48.84581,
+                    "lng": 2.33422
+                  },
+                  "mapsQuery": "Ludo Jardin, Jardin du Luxembourg, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Carrossel do Luxembourg (perto do parquinho, 6e)",
+                  "coord": {
+                    "lat": 48.84622,
+                    "lng": 2.3342
+                  },
+                  "mapsQuery": "Carrousel, Jardin du Luxembourg, Paris"
+                }
+              ]
+            },
+            {
+              "nome": "Parte 2 · 🔄 Variante B · Sèvres-Babylone (1h30)",
+              "descricao": "Alternativa pra uma manhã curta ou dia de chuva leve · L10 direta até Sèvres-Babylone, que já deixa na porta do Bon Marché e do Square Boucicaut",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Square Boucicaut (1 rue de Babylone, 7e)",
+                  "coord": {
+                    "lat": 48.85117,
+                    "lng": 2.32567
+                  },
+                  "mapsQuery": "Square Boucicaut, 1 rue de Babylone, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "La Grande Épicerie de Paris (38 rue de Sèvres, 7e)",
+                  "coord": {
+                    "lat": 48.85,
+                    "lng": 2.32328
+                  },
+                  "mapsQuery": "La Grande Épicerie de Paris, 38 rue de Sèvres, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Deyrolle (46 rue du Bac, 7e)",
+                  "coord": {
+                    "lat": 48.85648,
+                    "lng": 2.32639
+                  },
+                  "mapsQuery": "Deyrolle, 46 rue du Bac, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/?p=206354",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "mais antigas",
+                "1630",
+                "primeira",
+                "10 min"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Fontaine Médicis",
+              "u": "https://fr.wikipedia.org/wiki/Fontaine_M%C3%A9dicis",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1862",
+                "30 m"
+              ]
+            },
+            {
+              "o": "Sénat · horários do Jardin du Luxembourg",
+              "u": "https://jardin.senat.fr/infos-pratiques/horaires-douverture.html",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "18h45",
+                "17h15",
+                "outubro"
+              ]
+            },
+            {
+              "o": "Offi",
+              "u": "https://www.offi.fr/a-travers-paris/jardin-du-luxembourg-2536.html",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Fontaine Médicis, Jardin du Luxembourg, Paris"
+        },
+        {
+          "hora": "10:20",
+          "emoji": "⛵",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Grand Bassin + Voiliers du Luxembourg (centro do jardim, frente ao Senado)",
+          "cat": "Barquinhos à vela históricos empurrados com vara",
+          "sobre": "No centro do jardim, de frente pro Senado, fica o <strong>Grand Bassin</strong>: os <strong>voiliers</strong> são barquinhos à vela históricos, empurrados com uma vara. Pra uma criança de 4 anos é programa de primeira linha — <strong>se estiver funcionando</strong>.",
+          "imperdivel": "O que observar: os barquinhos à vela históricos, empurrados com uma vara.",
+          "dicas": [
+            "<strong>€6 por 30 min</strong>",
+            "Funcionam <strong>das 11h às 18h, todos os dias, só no verão (de junho a agosto)</strong> e nas férias escolares de <strong>Primavera</strong> e de <strong>Toussaint</strong> da zona C — fora dessas janelas os barquinhos ficam parados. <strong>[a confirmar]</strong> o calendário escolar na sua data (só uma fonte, editorial)"
+          ],
+          "duracao": "30 min de passeio",
+          "custo": "€6 por 30 min (Sortir à Paris, abr/2026)",
+          "coord": {
+            "lat": 48.84691,
+            "lng": 2.3372
+          },
+          "fontes": [
+            {
+              "o": "Sortir à Paris",
+              "u": "https://sortiraparis.com/en/what-to-visit-in-paris/walks/articles/317791-les-voiliers-du-luxembourg-the-jardin-du-luxembourg-s-historic-boats-for-children",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "primeira",
+                "4 anos",
+                "30 min",
+                "11h",
+                "18h",
+                "verão",
+                "junho",
+                "agosto",
+                "Primavera",
+                "abr"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Grand Bassin, Jardin du Luxembourg, Paris"
+        },
+        {
+          "hora": "10:50",
+          "emoji": "🗽",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Réplica da Estátua da Liberdade (Jardin du Luxembourg)",
+          "cat": "Modelo de bronze de ~2,8 m · caça-ao-tesouro no jardim",
+          "sobre": "Um <strong>modelo de bronze de cerca de 2,8 m</strong> (as fontes dão de 2,74 a 2,87 m) da Estátua da Liberdade mora no <strong>lado oeste do jardim, junto ao portão da rue Guynemer</strong>. O original foi pro Musée d'Orsay em <strong>2012</strong>; a cópia que está aqui foi instalada em <strong>2013</strong>.",
+          "imperdivel": "Vira caça-ao-tesouro: \"achar a estátua de Nova York\" — brincadeira de procurar, 5 min.",
+          "dicas": [
+            "5 min · grátis",
+            "Fica no caminho entre o Grand Bassin e o Ludo Jardin, no lado da rue Guynemer"
+          ],
+          "duracao": "5 min",
+          "custo": "Grátis",
+          "fontes": [
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/insolite/statues-libertes-paris/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "2013",
+                "2,87 m",
+                "rue Guynemer",
+                "5 min"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Replicas of the Statue of Liberty",
+              "u": "https://en.wikipedia.org/wiki/Replicas_of_the_Statue_of_Liberty",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "2,74 m",
+                "2012"
+              ]
+            },
+            {
+              "o": "OSM · nó da estátua",
+              "u": "https://www.openstreetmap.org/node/2549604493",
+              "tier": "diretorio",
+              "data": "2026-10-07",
+              "prova": [
+                "~2,8 m"
+              ]
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "coord": {
+            "lat": 48.84638,
+            "lng": 2.33315
+          },
+          "mapsQuery": "Statue de la Liberté, Jardin du Luxembourg, Paris"
+        },
+        {
+          "hora": "11:10",
+          "emoji": "🛝",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Ludo Jardin · aire de jeux (setor sudoeste do Jardin du Luxembourg, 6e)",
+          "cat": "Parquinho cercado reconstruído · ~30 estruturas · duas áreas por idade",
+          "sobre": "O parquinho do jardim foi reconstruído e cercado, com cerca de <strong>30 estruturas</strong>: tanque de areia, redes de escalada, escorregadores, balanços e mini-tirolesa. Tem <strong>duas áreas: menores de 7 anos e crianças de 7 a 12 anos</strong>. Fica no setor sudoeste do jardim — o descarrego de energia do dia.",
+          "imperdivel": "O que observar: as duas áreas separadas por idade — a dos menores de 7 anos é a da criança de 4.",
+          "dicas": [
+            "Entrada <strong>€3 criança (3-12 anos) · €1 adulto</strong> — a fonte não tem data de página: <strong>[a confirmar]</strong> o preço atual",
+            "Abre às <strong>10h</strong> e <strong>enche à tarde</strong> — vá cedo; no inverno funciona das 10h ao anoitecer"
+          ],
+          "duracao": "a gosto da criança",
+          "custo": "€3 criança (3-12 anos) · €1 adulto (Familin'Paris, sem data) [a confirmar]",
+          "acessibilidade": "Parquinho cercado, com duas áreas separadas por idade (menores de 7 anos e 7-12 anos)",
+          "coord": {
+            "lat": 48.84581,
+            "lng": 2.33422
+          },
+          "fontes": [
+            {
+              "o": "Familin'Paris",
+              "u": "https://www.familinparis.fr/aire-de-jeux-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "menores",
+                "7 anos",
+                "12 anos",
+                "10h",
+                "inverno",
+                "30 estruturas",
+                "€3",
+                "€1"
+              ]
+            },
+            {
+              "o": "Familin'Paris",
+              "u": "https://www.familinparis.fr/jardin-du-luxembourg-jeux-guignol",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            },
+            {
+              "o": "Sénat · brochura do Jardin",
+              "u": "https://jardin.senat.fr/fileadmin/Jardin/Accueil_Jardin/Brochure_Jardin_maj2022.pdf",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "até 12 anos"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Ludo Jardin, Jardin du Luxembourg, Paris"
+        },
+        {
+          "hora": "11:50",
+          "emoji": "🎠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Carrossel do Luxembourg (perto do parquinho, 6e)",
+          "cat": "Manège de 1879 · atribuído a Charles Garnier",
+          "sobre": "O manège é <strong>de 1879</strong> e é atribuído a <strong>Charles Garnier</strong>, o arquiteto da Ópera: a Paris Zigzag diz que foi construído sobre os planos dele; a Untapped Cities, que ele desenhou os animais. Fica perto do parquinho, no lado oeste do jardim.",
+          "imperdivel": "O que observar: o <strong>jeu de bagues</strong> — na fileira de fora, a criança recebe um bastão e tenta espetar argolas de lata que um funcionário repõe a toda velocidade. Aos 4 anos, o jogo das argolas é o máximo.",
+          "dicas": [
+            "Preço do giro: <strong>[a confirmar]</strong>",
+            "Entra na lista \"seis carrosséis bonitos de Paris\" da Untapped Cities"
+          ],
+          "custo": "Preço do giro [a confirmar]",
+          "coord": {
+            "lat": 48.84622,
+            "lng": 2.3342
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/?p=119803",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1879",
+                "Garnier"
+              ]
+            },
+            {
+              "o": "Untapped Cities",
+              "u": "https://untappedcities.com/six-beautiful-carousels-of-paris",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "4 anos",
+                "jeu de bagues"
+              ]
+            },
+            {
+              "o": "paris.fr · manèges",
+              "u": "https://www.paris.fr/en/pages/parisian-merry-go-rounds-let-s-go-for-a-ride-29624",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": []
+            },
+            {
+              "o": "OpenStreetMap (nó attraction=carousel) + plano oficial do Jardin du Luxembourg (Senado)",
+              "u": "https://www.openstreetmap.org/node/9848180370",
+              "tier": "oficial",
+              "data": "2026-10",
+              "prova": [
+                "48.84622, 2.33420"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Carrousel, Jardin du Luxembourg, Paris"
+        },
+        {
+          "hora": "12:10",
+          "emoji": "🐴",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Passeio de pônei (Jardin du Luxembourg)",
+          "cat": "Dois percursos, de 600 m ou 900 m · a partir de 15 meses",
+          "sobre": "Passeio guiado em <strong>dois percursos, de 600 m ou 900 m</strong>, a partir de <strong>15 meses</strong> de idade. Funciona <strong>só às quartas, aos sábados, aos domingos e em feriados</strong> (e nas férias da zona C), em geral a partir das 11h ou 14h, se o tempo deixar. Localização exata no jardim: <strong>[a confirmar]</strong> — sem pino no mapa.",
+          "imperdivel": "Se cair no dia certo, é programa de primeira linha pra criança de 4 anos.",
+          "dicas": [
+            "Só às <strong>quartas, aos sábados, aos domingos e em feriados</strong> (e nas férias da zona C) · <strong>€7,50 (600 m) ou €9,50 (900 m)</strong> segundo a Familin'Paris (sem data) — <strong>[a confirmar]</strong>",
+            "Fontes de blog e guia de família — <strong>conferir no local</strong> se está funcionando"
+          ],
+          "duracao": "percurso de 600 m ou 900 m",
+          "custo": "€7,50 ou €9,50 (sem data) [a confirmar]",
+          "fontes": [
+            {
+              "o": "Familin'Paris · poney",
+              "u": "https://www.familinparis.fr/ou-faire-du-poney-a-paris",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "600 m",
+                "900 m",
+                "€7,50",
+                "€9,50",
+                "15 meses",
+                "11h",
+                "14h"
+              ]
+            },
+            {
+              "o": "Alcuin Fonds (blog)",
+              "u": "https://alcuinfonds.be/blog/jardin-du-luxembourg-enfants/",
+              "tier": "crowd",
+              "data": "2026-10-07",
+              "prova": [
+                "primeira",
+                "4 anos"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "noMaps": true
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · perto da entrada Odéon",
+          "cat": "2 opções a 2-3 quadras da entrada Odéon · e lanche sem sair do jardim",
+          "coord": {
+            "lat": 48.85016,
+            "lng": 2.34202
+          },
+          "opcoes": [
+            {
+              "nome": "Bouillon Racine (3 rue Racine, 6e)",
+              "desc": "Bouillon com salão <strong>Art Nouveau de 1906</strong> — o salão já é passeio · horário <strong>[a confirmar]</strong>: as fontes divergem entre serviço contínuo 12h-23h (Mes Prestiges, mai/2026) e 12h-14h + 19h-23h30 (Gault&Millau) · tem menu enfant · reserva 01 44 32 15 60",
+              "preco": "Menu enfant (preço [a confirmar])",
+              "dist": "2-3 quadras da entrada Odéon",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Bouillon Racine, 3 rue Racine, Paris",
+              "fontes": [
+                {
+                  "o": "Gault&Millau",
+                  "u": "https://fr.gaultmillau.com/fr/restaurant/bouillon-racine",
+                  "tier": "editorial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "01 44 32 15 60",
+                    "12h",
+                    "14h",
+                    "19h",
+                    "23h30"
+                  ]
+                },
+                {
+                  "o": "Mes Prestiges",
+                  "u": "https://mesprestiges.com/en/paris/places/bouillon-racine",
+                  "tier": "editorial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "1906",
+                    "23h",
+                    "mai"
+                  ]
+                }
+              ],
+              "coord": {
+                "lat": 48.85016,
+                "lng": 2.34202
+              }
+            },
+            {
+              "nome": "Breizh Café Odéon (1 rue de l'Odéon, 6e)",
+              "desc": "Crêperia bretã de produto · crepe doce = sucesso garantido com criança, galette salgada pros adultos · todos os dias das 10h às 23h (site oficial)",
+              "preco": "Galette complète €12,80 · crêpe manteiga-açúcar €6,20 (cardápio jun/2026)",
+              "dist": "1 quadra da Cour du Commerce · 2-3 quadras da entrada Odéon",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Breizh Café Odéon, 1 rue de l'Odéon, Paris",
+              "fontes": [
+                {
+                  "o": "Breizh Café (site oficial)",
+                  "u": "https://www.breizhcafe.com/breizh-cafe-odeon",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "10h",
+                    "23h"
+                  ]
+                },
+                {
+                  "o": "Breizh Café · cardápio jun/2026",
+                  "u": "https://medias.breizhcafe.com/Menus_FR/Menu_Salade_Juin_2026_FR.pdf",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "€12,80",
+                    "€6,20",
+                    "jun"
+                  ]
+                },
+                {
+                  "o": "Time Out Paris",
+                  "u": "https://www.timeout.fr/paris/restaurants/breizh-cafe-odeon",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.85167,
+                "lng": 2.33883
+              }
+            },
+            {
+              "nome": "Quiosques e Terrasse de Madame (dentro do Jardin du Luxembourg)",
+              "desc": "A <strong>Terrasse de Madame</strong> fica no lado leste, junto à Fontaine Médicis (longe do parquinho, que é no oeste); os quiosques, espalhados pelo jardim, vendem bebida, doce e brinquedo · preços e horários <strong>[a confirmar]</strong>",
+              "preco": "[a confirmar]",
+              "dist": "dentro do jardim",
+              "valeAPena": 1,
+              "poiCat": "cafe",
+              "mapsQuery": "Terrasse de Madame, Jardin du Luxembourg, Paris",
+              "fontes": [
+                {
+                  "o": "Sénat · onde comer no Jardin",
+                  "u": "https://jardin.senat.fr/infos-pratiques/lieux-de-restauration.html",
+                  "tier": "oficial",
+                  "data": "2026-10-07",
+                  "prova": [
+                    "Terrasse de Madame",
+                    "quiosques"
+                  ]
+                },
+                {
+                  "o": "Sénat · brochura do Jardin",
+                  "u": "https://www2.senat.fr/fileadmin/Menu/Footer_Nouveaute/Senat_Brochure-Jardin.pdf",
+                  "tier": "oficial",
+                  "data": "2026-10-06",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.84752,
+                "lng": 2.33848
+              }
+            }
+          ]
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🌳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "🔄 Square Boucicaut (1 rue de Babylone, 7e)",
+          "cat": "Variante B · jardim com parquinho, carrossel e bebedouro",
+          "sobre": "Jardim haussmanniano com árvores centenárias, nomeado em homenagem a <strong>Aristide Boucicaut, criador do Bon Marché</strong> (logo em frente). Tem parquinho, <strong>carrossel</strong> e bebedouro — mas <strong>sem banheiro nem trocador</strong>.",
+          "imperdivel": "O que observar: o Bon Marché bem em frente — o jardim leva o nome do homem que criou a loja.",
+          "dicas": [
+            "Abre de segunda a sexta às 8h e aos sábados e domingos às 9h · o fechamento muda com a estação (19h30 no começo do outono, mais cedo no horário de inverno) — confira no paris.fr · grátis",
+            "Acesso também pela rue de Sèvres",
+            "Variante B, L10 direta até <strong>Sèvres-Babylone</strong>, 1h30 · ordem: Square Boucicaut → Grande Épicerie (lanche de piquenique) → Deyrolle"
+          ],
+          "custo": "Grátis",
+          "acessibilidade": "Sem banheiro nem trocador no square",
+          "coord": {
+            "lat": 48.85117,
+            "lng": 2.32567
+          },
+          "fontes": [
+            {
+              "o": "paris.fr (Prefeitura)",
+              "u": "https://www.paris.fr/lieux/square-boucicaut-2462",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "8h",
+                "9h",
+                "19h30",
+                "1h30",
+                "outono",
+                "inverno"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "mapsQuery": "Square Boucicaut, 1 rue de Babylone, Paris"
+        },
+        {
+          "hora": "10:45",
+          "emoji": "🧺",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "🔄 La Grande Épicerie de Paris (38 rue de Sèvres, 7e)",
+          "cat": "Variante B · o mercado-museu de comida do Bon Marché",
+          "sobre": "O \"mercado-museu\" de comida do Bon Marché. Serve pra montar o <strong>lanche de piquenique</strong> pro square, a poucos passos.",
+          "imperdivel": "O que observar: os corredores de doces e sucos — segure a mão da criança.",
+          "dicas": [
+            "Todos os dias das 8h30 às 21h · domingo das 10h às 20h",
+            "O Square Boucicaut leva o nome do criador do Bon Marché: o lanche comprado aqui vira piquenique no square"
+          ],
+          "custo": "[a confirmar]",
+          "acessibilidade": "Corredores de doces e sucos · risco de birra · segurar a mão da criança",
+          "coord": {
+            "lat": 48.85,
+            "lng": 2.32328
+          },
+          "fontes": [
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/shopping/la-grande-epicerie-de-paris-p3745",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "8h30",
+                "21h",
+                "10h",
+                "20h"
+              ]
+            },
+            {
+              "o": "Visit Paris Region",
+              "u": "https://www.visitparisregion.com/fr/la-grande-epicerie-de-paris",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "8h30",
+                "21h",
+                "10h",
+                "20h"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "mercado",
+          "mapsQuery": "La Grande Épicerie de Paris, 38 rue de Sèvres, Paris"
+        },
+        {
+          "hora": "11:15",
+          "emoji": "🦁",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "🔄 Deyrolle (46 rue du Bac, 7e)",
+          "cat": "Variante B · gabinete de curiosidades · taxidermia desde 1831",
+          "sobre": "Casa de <strong>taxidermia e entomologia fundada em 1831</strong>. No 1º andar: ursos, leões, zebras, girafa, flamingo e caixas de borboletas — um gabinete de curiosidades de verdade. É o \"zoológico parado\" visto de perto.",
+          "imperdivel": "O que observar: o 1º andar — os animais vistos de perto. <strong>Não tocar</strong>: é loja.",
+          "dicas": [
+            "<strong>Entrada livre</strong> · segunda a sábado das 10h às 19h (site oficial; outras fontes dão pausa de 13h às 14h na segunda) · <strong>domingo e feriados fechado</strong>",
+            "Melhor que muito museu pra criança de 4 anos"
+          ],
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85648,
+            "lng": 2.32639
+          },
+          "fontes": [
+            {
+              "o": "Deyrolle (site oficial)",
+              "u": "https://deyrolle.com/en/pages/la-maison-deyrolle",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1831",
+                "10h",
+                "19h"
+              ]
+            },
+            {
+              "o": "Time Out Paris",
+              "u": "https://www.timeout.fr/paris/musees/maison-deyrolle",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "entrada livre",
+                "girafa",
+                "flamingo",
+                "13h",
+                "14h"
+              ]
+            },
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/shopping/maison-deyrolle-p2598",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "Melhor",
+                "melhor",
+                "4 anos",
+                "ursos"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "loja",
+          "mapsQuery": "Deyrolle, 46 rue du Bac, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🎨",
+      "tema": "Saint-Germain Profundo · História",
+      "temaCurto": "História",
+      "bairro": "🎨 Saint-Germain-des-Prés · Odéon (6e)",
+      "grupo": false,
+      "cor": "#1d4ed8",
+      "gradA": "#1e3a8a",
+      "gradB": "#3b82f6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"De Childebert à guilhotina\"</strong>: da igreja do séc. VI, passando pela passagem onde a guilhotina foi testada, até o gnômon de Saint-Sulpice. Proposta: Odéon (L10) → Saint-Sulpice · ~1,5 km (estimativa) · <strong>2h</strong> · de manhã (igrejas abertas, cafés vazios). Ordem geográfica: Odéon → norte (Buci/Furstenberg) → oeste (igreja) → sul (Saint-Sulpice). Pra quem quer a visita guiada da capela Delacroix: ela acontece no <strong>2º domingo do mês, às 13h</strong>. Pensado pra adultos — com criança de 4 anos, o que funciona é o teto colorido de Saint-Germain-des-Prés e a \"linha do sol\" de Saint-Sulpice. <strong>Pula sem culpa:</strong> sentar no Café de Flore / Deux Magots com a criança (parada Ⓓ).",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🏚️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Cour du Commerce Saint-André (entre o bd Saint-Germain e a rue Saint-André-des-Arts, 6e)",
+          "cat": "Passagem sobre a muralha de Filipe Augusto · onde a guilhotina foi testada",
+          "sobre": "Passagem de pedra aberta sobre o traçado da <strong>muralha de Filipe Augusto (1190-1215)</strong>. No séc. XVIII virou caldeirão revolucionário: <strong>Marat imprimia ali o jornal L'Ami du Peuple</strong> (nº 8), <strong>Danton morava no nº 20</strong> e, na oficina do alemão <strong>Tobias Schmidt, fabricante de cravos e pianos</strong> (nº 9, vizinho do Dr. Guillotin), a guilhotina foi aperfeiçoada — <strong>testada em ovelhas</strong>. Os fundos do <strong>Procope</strong>, aberto como café por volta de <strong>1686</strong> (hoje restaurante), dão pra cá: Voltaire, Rousseau e Diderot; depois Danton, Marat e Robespierre.",
+          "imperdivel": "O que observar: dentro do restaurante <strong>Un Dimanche à Paris (nº 4)</strong> aparecem <strong>restos de uma torre da muralha</strong>.",
+          "dicas": [
+            "Paralelepípedo, sem carro · passagem aberta, grátis · a história da guilhotina é pra adulto",
+            "O Breizh Café Odéon fica a 1 quadra daqui",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Cour du Commerce Saint-André</strong> — a muralha medieval e a guilhotina, numa passagem só",
+            "🚶 <strong>Ⓐ Place de Furstenberg</strong> — o pátio das cocheiras do palácio do abade; repare na fachada de tijolo e pedra do palácio abacial, na rue de l'Abbaye",
+            "🚶 <strong>Ⓑ Église Saint-Germain-des-Prés</strong> — igreja do séc. VI; interior pintado por Flandrin",
+            "🚶 <strong>Ⓒ Square Laurent-Prache</strong> — colado na igreja: a cabeça de Dora Maar roubada em 1999",
+            "🚶 <strong>Ⓓ Café de Flore / Deux Magots</strong> — passar pela frente e seguir",
+            "🚶 <strong>Ⓔ Église Saint-Sulpice</strong> — Delacroix na capela e o gnômon no chão"
+          ],
+          "duracao": "~2h o tour inteiro (estimativa)",
+          "custo": "Grátis",
+          "acessibilidade": "Paralelepípedo, sem carro",
+          "coord": {
+            "lat": 48.85292,
+            "lng": 2.33915
+          },
+          "walkingTours": [
+            {
+              "nome": "Saint-Germain · 🎨 De Childebert à guilhotina",
+              "descricao": "Cour du Commerce → Furstenberg → Saint-Germain-des-Prés → Square Laurent-Prache → Flore/Deux Magots → Saint-Sulpice · ~1,5 km (estimativa) · ~2h",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Cour du Commerce Saint-André (entre o bd Saint-Germain e a rue Saint-André-des-Arts, 6e)",
+                  "coord": {
+                    "lat": 48.85292,
+                    "lng": 2.33915
+                  },
+                  "mapsQuery": "Cour du Commerce Saint-André, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Place de Furstenberg (rue de Furstenberg / 5 rue de l'Abbaye, 6e)",
+                  "coord": {
+                    "lat": 48.85431,
+                    "lng": 2.33575
+                  },
+                  "mapsQuery": "Place de Furstenberg, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Église Saint-Germain-des-Prés (3 place Saint-Germain-des-Prés, 6e)",
+                  "coord": {
+                    "lat": 48.85397,
+                    "lng": 2.33452
+                  },
+                  "mapsQuery": "Église Saint-Germain-des-Prés, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Square Laurent-Prache (1 place Juliette-Gréco, 6e)",
+                  "coord": {
+                    "lat": 48.85426,
+                    "lng": 2.33395
+                  },
+                  "mapsQuery": "Square Laurent-Prache, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Café de Flore / Les Deux Magots (bd Saint-Germain, 6e)",
+                  "coord": {
+                    "lat": 48.85414,
+                    "lng": 2.33263
+                  },
+                  "mapsQuery": "Le Café de Flore, boulevard Saint-Germain, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Église Saint-Sulpice (place Saint-Sulpice, 6e)",
+                  "coord": {
+                    "lat": 48.85099,
+                    "lng": 2.33487
+                  },
+                  "mapsQuery": "Église Saint-Sulpice, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Wikipédia (fr) · Cour du Commerce-Saint-André",
+              "u": "https://fr.wikipedia.org/wiki/Cour_du_Commerce-Saint-Andr%C3%A9",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "nº 8",
+                "nº 20",
+                "nº 9",
+                "ovelhas",
+                "séc. XVIII"
+              ]
+            },
+            {
+              "o": "Paris · Parcours Révolution (Prefeitura)",
+              "u": "https://parcoursrevolution.paris.fr/en/points-of-interest/86-the-cour-du-commerce-saint-andre",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "Tobias Schmidt",
+                "cravos",
+                "Marat",
+                "Danton"
+              ]
+            },
+            {
+              "o": "Bonjour Paris",
+              "u": "https://bonjourparis.com/history/streets-and-stories-la-cour-du-commerce-saint-andre/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1190-1215"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Le Procope",
+              "u": "https://fr.wikipedia.org/wiki/Le_Procope",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1686",
+                "Voltaire",
+                "Robespierre"
+              ]
+            },
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/cour-saint-andre-saint-germain-odeon/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "torre",
+                "nº 4",
+                "1999"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Église Saint-Germain-des-Prés (parada Ⓑ)",
+              "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Germain-des-Pr%C3%A9s",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "séc. VI"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Cour du Commerce Saint-André, Paris"
+        },
+        {
+          "hora": "10:25",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Place de Furstenberg + Palais abbatial (rue de Furstenberg / 5 rue de l'Abbaye, 6e)",
+          "cat": "Pátio das cocheiras do abade · palácio abacial de tijolo e pedra (1586)",
+          "sobre": "A pracinha era o <strong>pátio das cocheiras do palácio do abade</strong> (a \"cour des Écuries\"), aberta <strong>por volta de 1699</strong> pelo cardeal <strong>Guillaume-Egon de Fürstenberg</strong>, abade de Saint-Germain desde <strong>1697</strong>, que queria um acesso ao palácio independente da abadia. O <strong>Palácio abacial</strong>, de <strong>1586</strong> (cardeal Carlos I de Bourbon), foi remodelado em <strong>1699</strong>. Nos nºs 6-8 ficavam cocheiras e alojamento de criados do palácio; no nº 6 está hoje o <strong>Musée Delacroix</strong>.",
+          "imperdivel": "O que observar: a <strong>fachada de tijolo e pedra do palácio abacial (1586)</strong> na rue de l'Abbaye — um dos vestígios da abadia, ao lado da igreja.",
+          "dicas": [
+            "Praça minúscula e silenciosa · 5 min bastam · grátis",
+            "A pracinha fica ao lado do Musée Delacroix (aba Museus)"
+          ],
+          "duracao": "5 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85431,
+            "lng": 2.33575
+          },
+          "fontes": [
+            {
+              "o": "Wikipédia (fr) · Rue de Furstemberg",
+              "u": "https://fr.wikipedia.org/wiki/Rue_de_Furstemberg",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1699",
+                "1697",
+                "cour des Écuries"
+              ]
+            },
+            {
+              "o": "Musée Delacroix · os espaços",
+              "u": "https://www.musee-delacroix.fr/en/museum-studio/the-museum-today/the-premises",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "cocheiras",
+                "nº 6"
+              ]
+            },
+            {
+              "o": "The Culture Trip",
+              "u": "https://www.theculturetrip.com/europe/france/paris/articles/place-de-furstenberg-paris-most-charming-square",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1586",
+                "5 min"
+              ]
+            },
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/?p=426",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Place de Furstenberg, Paris"
+        },
+        {
+          "hora": "10:45",
+          "emoji": "⛪",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Église Saint-Germain-des-Prés (3 place Saint-Germain-des-Prés, 6e)",
+          "cat": "Igreja fundada no séc. VI · a mais antiga de Paris, segundo a Prefeitura",
+          "sobre": "Considerada pela Prefeitura <strong>a igreja mais antiga de Paris</strong> (outras fontes a põem entre as mais antigas): fundada por <strong>Childebert, filho de Clóvis, no séc. VI</strong> e consagrada em <strong>558</strong>; foi necrópole real antes de Saint-Denis. Na Revolução virou <strong>refinaria de salitre</strong> (1794-1802) e quase foi demolida.",
+          "imperdivel": "O que observar: (a) o interior <strong>pintado por Hippolyte Flandrin</strong> (encomenda dos anos 1840, trabalho até 1861), restaurado pela Prefeitura (campanha iniciada em 2015) — azuis e ouros \"como novos\"; (b) a <strong>lápide de Descartes</strong>, sob a janela da 2ª capela.",
+          "dicas": [
+            "Grátis · segunda e domingo 9h30-20h · terça a sexta 7h30-20h · sábado 8h30-20h · visitas guiadas grátis (~1h, encontro junto ao órgão): <strong>quinta às 14h30</strong>, 1º sábado e 3º domingo do mês",
+            "Pra criança de 4 anos: o teto colorido e \"estrelado\" prende 10 min; não mais"
+          ],
+          "duracao": "10 min com criança de 4 anos",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85397,
+            "lng": 2.33452
+          },
+          "fontes": [
+            {
+              "o": "paris.fr (Prefeitura)",
+              "u": "https://www.paris.fr/pages/immersion-dans-les-decors-restaures-de-l-eglise-saint-germain-des-pres-7835",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "mais antiga",
+                "1840",
+                "2015"
+              ]
+            },
+            {
+              "o": "Paróquia Saint-Germain-des-Prés · horários",
+              "u": "https://www.eglise-saintgermaindespres.fr/horaires/",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "9h30",
+                "20h",
+                "7h30",
+                "8h30",
+                "14h30",
+                "~1h"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr)",
+              "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Germain-des-Pr%C3%A9s",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "séc. VI",
+                "558",
+                "1794-1802",
+                "1861",
+                "mais antigas"
+              ]
+            },
+            {
+              "o": "Time Out Paris",
+              "u": "https://www.timeout.fr/paris/quoi-faire-a-paris/tourisme/site-a-visiter/eglise-st-germain-des-pres",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "Descartes",
+                "2ª capela",
+                "4 anos",
+                "10 min"
+              ]
+            },
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/culture/eglise-saint-germain-des-pres-p1011",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Germain-des-Prés, Paris"
+        },
+        {
+          "hora": "11:10",
+          "emoji": "🗿",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Square Laurent-Prache (1 place Juliette-Gréco, 6e)",
+          "cat": "A cabeça de Dora Maar de Picasso · roubada em 1999",
+          "sobre": "Colado na igreja, o square guarda a <strong>cabeça de Dora Maar</strong> que <strong>Picasso</strong> modelou em <strong>1941</strong> (bronze fundido no início dos anos 1950) e doou à cidade em <strong>1959</strong> em homenagem ao amigo <strong>Apollinaire</strong>. Foi <strong>roubada na noite de 30 para 31/03/1999</strong> (80 kg), achada em 2000 nos fossos do Château de Grouchy (Osny, Val-d'Oise) e devolvida em <strong>18/12/2001</strong>, sem cerimônia — vizinhos juram que a de hoje é cópia; a família nega.",
+          "imperdivel": "O que observar: o bronze sobre o pedestal — e a conversa de vizinho sobre ser ou não cópia.",
+          "dicas": [
+            "Banco e sombra · lenda boa pra adulto · grátis",
+            "Fica colado na Église Saint-Germain-des-Prés: a parada seguinte da rota, a caminho dos cafés"
+          ],
+          "custo": "Grátis",
+          "acessibilidade": "Square com banco e sombra",
+          "coord": {
+            "lat": 48.85426,
+            "lng": 2.33395
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/oeuvre-volee-square-laurent-prache/",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1999",
+                "80 kg",
+                "1959",
+                "2000",
+                "2001",
+                "Grouchy"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Tête de femme (Dora Maar)",
+              "u": "https://en.wikipedia.org/wiki/T%C3%AAte_de_femme_(Dora_Maar)",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1941",
+                "1950"
+              ]
+            },
+            {
+              "o": "paris.fr (Prefeitura)",
+              "u": "https://www.paris.fr/lieux/square-laurent-prache-2455",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "mapsQuery": "Square Laurent-Prache, Paris"
+        },
+        {
+          "hora": "11:25",
+          "emoji": "☕",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Café de Flore / Les Deux Magots (bd Saint-Germain, esquina da igreja, 6e)",
+          "cat": "Os cafés dos existencialistas · passar pela frente",
+          "sobre": "Os cafés dos <strong>existencialistas</strong>. A parada é <strong>passar pela frente e seguir</strong>: sentar com criança é pagar o mito — o chocolate quente \"à l'ancienne\" dos Deux Magots custa <strong>€10 a xícara (12,5 cl)</strong> e €12 o pote e o terraço é apertado, no bulevar. Cadeirão e menu enfant existem, mas a fonte é fraca.",
+          "imperdivel": "Passe pela frente e tire a foto. Pra comer com criança de 4 anos, Breizh Café ou Bouillon Racine (aba Família) entregam mais.",
+          "dicas": [
+            "Pula sem culpa sentar aqui com criança",
+            "Os cafés ficam na esquina da igreja, no bd Saint-Germain — dá pra ver sem parar"
+          ],
+          "custo": "Chocolate quente nos Deux Magots: €10 a xícara · €12 o pote",
+          "acessibilidade": "Terraço apertado no bulevar · cadeirão e menu enfant (fonte fraca)",
+          "coord": {
+            "lat": 48.85414,
+            "lng": 2.33263
+          },
+          "fontes": [
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/restaurant/cafe-de-flore-p674",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "4 anos"
+              ]
+            },
+            {
+              "o": "Cardápio Les Deux Magots (Menuonline)",
+              "u": "https://menuonline.fr/jp/deux-magots/boissons-et-vins",
+              "tier": "diretorio",
+              "data": "2026-10-07",
+              "prova": [
+                "€10",
+                "12,5 cl",
+                "€12"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Les Deux Magots",
+              "u": "https://fr.wikipedia.org/wiki/Les_Deux_Magots",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "existencialistas"
+              ]
+            },
+            {
+              "o": "Eurovistatrips (blog)",
+              "u": "https://eurovistatrips.com/fr/cafes-adaptes-enfants-paris-2026-guide-familles/",
+              "tier": "crowd",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "cafe",
+          "mapsQuery": "Le Café de Flore, boulevard Saint-Germain, Paris"
+        },
+        {
+          "hora": "11:45",
+          "emoji": "🌞",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Église Saint-Sulpice (place Saint-Sulpice, 6e)",
+          "cat": "Delacroix na capela · o gnômon que desenha o sol no chão",
+          "sobre": "Três murais de <strong>Delacroix</strong> na <strong>Chapelle des Saints-Anges</strong>, inaugurada em <strong>agosto de 1861</strong>, dois anos antes da morte dele: <strong>Jacó lutando com o anjo</strong>, <strong>Heliodoro expulso do Templo</strong> e, no teto, <strong>São Miguel vencendo o demônio</strong>. Na praça, a <strong>Fontaine des Quatre-Évêques</strong>, de <strong>Visconti, 1848</strong>.",
+          "imperdivel": "O que observar: o <strong>gnômon</strong> — um furinho no vitral do transepto sul projeta o sol numa <strong>linha meridiana de latão no chão</strong>, que sobe por um <strong>obelisco</strong> no transepto norte (o \"segundo obelisco de Paris\"); começado por Henry Sully em <strong>1727</strong> e concluído pelo astrônomo <strong>Le Monnier</strong> em <strong>1743</strong>. Marca o meio-dia solar, que em Paris cai por volta das 13h no inverno e das 14h no verão.",
+          "dicas": [
+            "Grátis · horário diverge entre as fontes (8h-19h45 ou 7h30-19h30) — <strong>[a confirmar]</strong>",
+            "Visita guiada da <strong>Chapelle des Anges no 2º domingo do mês, às 13h</strong> · criptas no 2º e 4º domingo, às 15h (inscrição +33 1 42 34 59 98) · com reserva",
+            "Pra criança de 4 anos: achar a \"linha do sol\" no chão vira jogo; a capela Delacroix é pra adulto"
+          ],
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85099,
+            "lng": 2.33487
+          },
+          "fontes": [
+            {
+              "o": "paris.fr · capela dos Santos Anjos",
+              "u": "https://www.paris.fr/pages/retrouvez-les-splendeurs-de-delacroix-a-la-chapelle-des-saints-anges-de-saint-sulpice-4241",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1861",
+                "Jacó",
+                "Heliodoro"
+              ]
+            },
+            {
+              "o": "Musée Delacroix",
+              "u": "https://www.musee-delacroix.fr/en/collection/paintings",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "agosto"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Gnomon de Saint-Sulpice",
+              "u": "https://fr.wikipedia.org/wiki/Gnomon_de_l%27%C3%A9glise_Saint-Sulpice",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1727",
+                "1743",
+                "Le Monnier",
+                "13h",
+                "14h",
+                "inverno",
+                "verão"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Église Saint-Sulpice",
+              "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Sulpice_de_Paris",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1848",
+                "Visconti"
+              ]
+            },
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/culture/eglise-saint-sulpice-p1572",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "8h",
+                "19h45",
+                "13h",
+                "15h",
+                "4 anos"
+              ]
+            },
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/eglise-saint-sulpice-gnomon-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "segundo obelisco"
+              ]
+            },
+            {
+              "o": "Offi",
+              "u": "https://www.offi.fr/concerts/eglise-saint-sulpice-2161.html",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "7h30",
+                "19h30"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Sulpice, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🍫",
+      "tema": "Saint-Germain Guloso · Doces, Pão & Sorvete",
+      "temaCurto": "Guloso",
+      "bairro": "🍫 Odéon → rue du Bac (6e/7e)",
+      "grupo": true,
+      "cor": "#db2777",
+      "gradA": "#9d174d",
+      "gradB": "#f472b6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Odéon → rue du Bac → Sena\"</strong>: 8 paradas em ~2,5-3 km (estimativa) — <strong>longo demais pra criança de 4 anos a pé sem carrinho de uma vez</strong>. Versão curta recomendada (sugestão Claude · validar): <strong>Gelato del Marchese → Pierre Hermé → Poilâne</strong> (Odéon–Saint-Sulpice, ~1 km) <em>ou</em> <strong>Grande Épicerie → Bac à Glaces</strong> (Sèvres-Babylone, chegando direto pela L10). Melhor num <strong>sábado ou dia útil</strong> — Poilâne e Debauve & Gallais fecham domingo. Comprar e comer no square ou no jardim. <strong>Pula sem culpa:</strong> o crawl inteiro num dia só (~2,5-3 km + açúcar = birra garantida às 16h) — faça meio crawl.",
+      "stops": [
+        {
+          "hora": "10:30",
+          "emoji": "🍦",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Il Gelato del Marchese (2 rue de Condé, Carrefour de l'Odéon, 6e)",
+          "cat": "Sorvete feito no local · sem corante nem aditivo",
+          "sobre": "Sorveteria aberta por um romano, <strong>Renato</strong>, com sorvete feito no local, sem corante nem aditivo.",
+          "imperdivel": "Sorvete = vitória certa com criança de 4 anos — e é a primeira parada, no Carrefour de l'Odéon.",
+          "dicas": [
+            "Horário <strong>diverge entre as fontes</strong>: a Visit Paris Region diz o ano todo a partir das 12h; a Lesrestos diz todo dia das 11h às 21h (sexta e sábado até 22h) — <strong>[a confirmar]</strong>",
+            "Escolha <strong>um</strong> dos dois sorvetes do roteiro: este ou o Bac à Glaces",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Il Gelato del Marchese</strong> — sorvete no Carrefour de l'Odéon",
+            "🚶 <strong>Ⓐ Patrick Roger</strong> — a vitrine-escultura de chocolate",
+            "🚶 <strong>Ⓑ Pierre Hermé Bonaparte</strong> — 1 macaron cada; peça o Ispahan",
+            "🚶 <strong>Ⓒ Poilâne</strong> — a parada salgada: o pão e os biscoitos de brinde",
+            "🚶 <strong>Ⓓ La Grande Épicerie</strong> — corredor de doces; segure a mão",
+            "🚶 <strong>Ⓔ Le Bac à Glaces</strong> — sorvete 2, na rue du Bac",
+            "🚶 <strong>Ⓕ Debauve & Gallais</strong> — o chocolate de Maria Antonieta",
+            "🚶 <strong>Ⓖ Ladurée Bonaparte</strong> — salão de chá, só se quiserem o salão/brunch"
+          ],
+          "custo": "[a confirmar]",
+          "coord": {
+            "lat": 48.85168,
+            "lng": 2.33823
+          },
+          "walkingTours": [
+            {
+              "nome": "Saint-Germain Guloso · 🍫 Odéon → rue du Bac → Sena",
+              "descricao": "Gelato del Marchese → Patrick Roger → Pierre Hermé → Poilâne → Grande Épicerie → Bac à Glaces → Debauve & Gallais → Ladurée · 8 paradas em ~2,5-3 km (estimativa)",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Il Gelato del Marchese (2 rue de Condé, 6e)",
+                  "coord": {
+                    "lat": 48.85168,
+                    "lng": 2.33823
+                  },
+                  "mapsQuery": "Il Gelato del Marchese, 2 rue de Condé, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Patrick Roger (108 bd Saint-Germain, 6e)",
+                  "coord": {
+                    "lat": 48.85186,
+                    "lng": 2.34192
+                  },
+                  "mapsQuery": "Patrick Roger, 108 boulevard Saint-Germain, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Pierre Hermé Bonaparte (72 rue Bonaparte, 6e)",
+                  "coord": {
+                    "lat": 48.85153,
+                    "lng": 2.33279
+                  },
+                  "mapsQuery": "Pierre Hermé, 72 rue Bonaparte, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Poilâne (8 rue du Cherche-Midi, 6e)",
+                  "coord": {
+                    "lat": 48.85131,
+                    "lng": 2.32899
+                  },
+                  "mapsQuery": "Poilâne, 8 rue du Cherche-Midi, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "La Grande Épicerie de Paris (38 rue de Sèvres, 7e)",
+                  "coord": {
+                    "lat": 48.85,
+                    "lng": 2.32328
+                  },
+                  "mapsQuery": "La Grande Épicerie de Paris, 38 rue de Sèvres, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Le Bac à Glaces (109 rue du Bac, 7e)",
+                  "coord": {
+                    "lat": 48.85225,
+                    "lng": 2.32374
+                  },
+                  "mapsQuery": "Le Bac à Glaces, 109 rue du Bac, Paris"
+                },
+                {
+                  "n": 7,
+                  "nome": "Debauve & Gallais (30 rue des Saints-Pères, 7e)",
+                  "coord": {
+                    "lat": 48.85536,
+                    "lng": 2.33077
+                  },
+                  "mapsQuery": "Debauve & Gallais, 30 rue des Saints-Pères, Paris"
+                },
+                {
+                  "n": 8,
+                  "nome": "Ladurée Bonaparte (21 rue Bonaparte, 6e)",
+                  "coord": {
+                    "lat": 48.85555,
+                    "lng": 2.33408
+                  },
+                  "mapsQuery": "Ladurée Bonaparte, 21 rue Bonaparte, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Visit Paris Region",
+              "u": "https://www.visitparisregion.com/fr/il-gelato-del-marchese",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "primeira",
+                "4 anos",
+                "12h",
+                "o ano todo"
+              ]
+            },
+            {
+              "o": "Lesrestos",
+              "u": "https://lesrestos.com/restaurant/fiche/paris/il-gelato-del-marchese",
+              "tier": "diretorio",
+              "data": "2026-10-07",
+              "prova": [
+                "11h",
+                "21h",
+                "22h"
+              ]
+            },
+            {
+              "o": "Paris Bouge",
+              "u": "https://www.parisbouge.com/places/3574",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "cafe",
+          "mapsQuery": "Il Gelato del Marchese, 2 rue de Condé, Paris"
+        },
+        {
+          "hora": "10:50",
+          "emoji": "🍫",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Patrick Roger (108 bd Saint-Germain, 6e)",
+          "cat": "Chocolateiro MOF 2000 · o \"Rodin do chocolate\"",
+          "sobre": "Chocolateiro <strong>Meilleur Ouvrier de France em 2000</strong>, apelidado \"o Rodin do chocolate\": esculpe peças gigantes de chocolate, e hoje algumas obras são fundidas em bronze ou alumínio.",
+          "imperdivel": "O que observar: a <strong>vitrine</strong> — as lojas dele costumam expor as esculturas.",
+          "dicas": [
+            "Aberta todos os dias, das 11h às 19h",
+            "A vitrine é o programa pra criança: o ponto é olhar as esculturas de chocolate"
+          ],
+          "custo": "[a confirmar]",
+          "coord": {
+            "lat": 48.85186,
+            "lng": 2.34192
+          },
+          "fontes": [
+            {
+              "o": "Patrick Roger (site oficial · loja Saint-Germain)",
+              "u": "https://www.patrickroger.com/en/pages/boutiques/boutique-patrick-roger-paris-saint-germain",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "11h",
+                "19h"
+              ]
+            },
+            {
+              "o": "Visit Paris Region",
+              "u": "https://www.visitparisregion.com/fr/patrick-roger",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "2000"
+              ]
+            },
+            {
+              "o": "The Art Newspaper",
+              "u": "https://www.theartnewspaper.com/2018/11/08/patrick-roger-the-rodin-of-chocolate-breaks-the-mould-with-permanent-works",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "Rodin do chocolate"
+              ]
+            },
+            {
+              "o": "Time Out Paris",
+              "u": "https://www.timeout.fr/paris/shopping/patrick-roger",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Patrick Roger, 108 boulevard Saint-Germain, Paris"
+        },
+        {
+          "hora": "11:15",
+          "emoji": "🍬",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Pierre Hermé Bonaparte (72 rue Bonaparte, 6e)",
+          "cat": "A primeira boutique parisiense dele · de 2001",
+          "sobre": "<strong>A primeira boutique parisiense dele, de 2001</strong>, entre Saint-Sulpice e Saint-Germain. Eleito <strong>melhor confeiteiro do mundo pelo World's 50 Best em 2016</strong>.",
+          "imperdivel": "Peça o <strong>Ispahan</strong> (rosa, lichia e framboesa).",
+          "dicas": [
+            "1 macaron cada · loja pequena, com fila",
+            "Segunda a sábado das 10h às 20h · domingo das 10h às 19h"
+          ],
+          "custo": "1 macaron por pessoa",
+          "acessibilidade": "Loja pequena, com fila",
+          "coord": {
+            "lat": 48.85153,
+            "lng": 2.33279
+          },
+          "fontes": [
+            {
+              "o": "Mes Prestiges",
+              "u": "https://mesprestiges.com/en/paris/places/pierre-herme-bonaparte",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "primeira",
+                "melhor",
+                "2001",
+                "2016"
+              ]
+            },
+            {
+              "o": "Pierre Hermé (site oficial · lojas)",
+              "u": "https://www.pierreherme.com/nos-boutiques",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "10h",
+                "20h",
+                "19h"
+              ]
+            },
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/shopping/pierre-herme-bonaparte-p2388",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "padaria",
+          "mapsQuery": "Pierre Hermé, 72 rue Bonaparte, Paris"
+        },
+        {
+          "hora": "11:45",
+          "emoji": "🥖",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Poilâne (8 rue du Cherche-Midi, 6e)",
+          "cat": "A padaria original, de 1932 · a parada salgada",
+          "sobre": "A padaria original, <strong>de 1932</strong>: pão de fermentação natural em forno a lenha (o fornil fica no subsolo). É a <strong>parada salgada</strong> do crawl.",
+          "imperdivel": "O que observar: as <strong>\"punitions\"</strong>, biscoitinhos de manteiga que vêm <strong>de brinde</strong> com a compra — o nome vem de uma brincadeira da avó, que \"castigava\" os filhos com biscoito.",
+          "dicas": [
+            "Segunda a sábado das 7h15 às 20h · <strong>domingo fechado</strong>",
+            "A empresa está em <strong>recuperação judicial desde 19/01/2026</strong>; em fev/2026 as lojas funcionavam normalmente e o site oficial ainda lista esta loja · desfecho da recuperação <strong>[a confirmar]</strong>: reconfirmar antes de ir"
+          ],
+          "custo": "Biscoito de brinde com a compra",
+          "coord": {
+            "lat": 48.85131,
+            "lng": 2.32899
+          },
+          "fontes": [
+            {
+              "o": "Poilâne (site oficial · loja Saint-Germain-des-Prés)",
+              "u": "https://www.poilane.com/en/blogs/store/saint-germain-des-pres",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1932",
+                "7h15",
+                "20h"
+              ]
+            },
+            {
+              "o": "Sortir à Paris",
+              "u": "https://www.sortiraparis.com/en/news/in-paris/articles/341223-poilane-enters-receivership-will-its-paris-stores-have-to-close",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "19/01/2026",
+                "fev"
+              ]
+            },
+            {
+              "o": "Paris Gourmand",
+              "u": "https://www.parisgourmand.com/boutiques-gourmandes/boulangerie-poilane.html",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "punitions"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Poilâne, 8 rue du Cherche-Midi, Paris"
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🧺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "La Grande Épicerie de Paris (38 rue de Sèvres, 7e)",
+          "cat": "O templo de comida do Bon Marché",
+          "sobre": "O templo de comida do Bon Marché, do outro lado da rua.",
+          "imperdivel": "O que observar: os corredores de doces — risco de birra; segure a mão da criança.",
+          "dicas": [
+            "Todos os dias das 8h30 às 21h · domingo das 10h às 20h",
+            "Pra um piquenique, o Square Boucicaut (variante B, aba Família) é o destino do lanche"
+          ],
+          "custo": "[a confirmar]",
+          "acessibilidade": "Corredor de doces · risco de birra",
+          "coord": {
+            "lat": 48.85,
+            "lng": 2.32328
+          },
+          "fontes": [
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/shopping/la-grande-epicerie-de-paris-p3745",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "8h30",
+                "21h",
+                "10h",
+                "20h"
+              ]
+            },
+            {
+              "o": "Visit Paris Region",
+              "u": "https://www.visitparisregion.com/fr/la-grande-epicerie-de-paris",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "8h30",
+                "21h",
+                "10h",
+                "20h"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "mercado",
+          "mapsQuery": "La Grande Épicerie de Paris, 38 rue de Sèvres, Paris"
+        },
+        {
+          "hora": "12:45",
+          "emoji": "🍨",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Le Bac à Glaces (109 rue du Bac, 7e)",
+          "cat": "Sorveteria desde 1955 · +60 sabores · pouco açúcar",
+          "sobre": "Sorveteria <strong>desde 1955</strong>, com <strong>+60 sabores</strong>, pouco açúcar, sem corante e pedaços de fruta.",
+          "imperdivel": "Sorvete número 2 do roteiro — escolha <strong>um</strong> dos dois (este ou o Gelato del Marchese).",
+          "dicas": [
+            "Todos os dias das 11h às 19h (Gilles Pudlowski, jul/2026)",
+            "Pouco açúcar e sem corante — útil pra criança pequena"
+          ],
+          "custo": "[a confirmar]",
+          "coord": {
+            "lat": 48.85225,
+            "lng": 2.32374
+          },
+          "fontes": [
+            {
+              "o": "Gilles Pudlowski",
+              "u": "https://www.gillespudlowski.com/?p=429700",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1955",
+                "11h",
+                "19h",
+                "jul"
+              ]
+            },
+            {
+              "o": "Paris Friendly",
+              "u": "https://www.paris-friendly.fr/le-bac-a-glaces-70-ans-paris.html",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "60 sabores"
+              ]
+            },
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/restaurant/le-bac-a-glaces-p725",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "cafe",
+          "mapsQuery": "Le Bac à Glaces, 109 rue du Bac, Paris"
+        },
+        {
+          "hora": "13:15",
+          "emoji": "🏺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Debauve & Gallais (30 rue des Saints-Pères, 7e)",
+          "cat": "Chocolate desde 1800 · o remédio de Maria Antonieta",
+          "sobre": "Fundada em <strong>1800</strong>; na rue des Saints-Pères desde o início do séc. XIX (a ficha oficial do patrimônio data a loja de <strong>1829</strong>; os guias falam em 1817-1819), com interior de <strong>Percier e Fontaine</strong>, arquitetos de Napoleão — loja <strong>inscrita como monumento histórico em 1984</strong> (fachada e decoração interior). Segundo a tradição da casa, <strong>Sulpice Debauve</strong>, farmacêutico de Luís XVI, misturou o remédio amargo de <strong>Maria Antonieta</strong> com chocolate, e ela chamou os discos de <strong>\"pistoles\"</strong> por parecerem moedas de ouro. Ainda vendem (sem o remédio).",
+          "imperdivel": "O que observar: o interior da loja e os discos \"pistoles\" — moedas de chocolate.",
+          "dicas": [
+            "<strong>Domingo fechado</strong> · horário de semana diverge entre as fontes (seg-sex 10h-19h ou 9h30-19h30; sáb 10h30-19h30) — <strong>[a confirmar]</strong>",
+            "Loja de vitrine fina — mão no bolso"
+          ],
+          "custo": "[a confirmar]",
+          "coord": {
+            "lat": 48.85536,
+            "lng": 2.33077
+          },
+          "fontes": [
+            {
+              "o": "POP · Mérimée (Ministério da Cultura)",
+              "u": "https://pop.culture.gouv.fr/notice/merimee/PA00088787",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1829",
+                "1984",
+                "Percier",
+                "séc. XIX"
+              ]
+            },
+            {
+              "o": "Mes Prestiges",
+              "u": "https://mesprestiges.com/en/paris/places/debauve-et-gallais",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1800",
+                "1817",
+                "10h",
+                "19h",
+                "10h30",
+                "19h30"
+              ]
+            },
+            {
+              "o": "Visit Paris Region",
+              "u": "https://www.visitparisregion.com/fr/debauve-gallais",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "9h30"
+              ]
+            },
+            {
+              "o": "Wikipedia (en)",
+              "u": "https://en.wikipedia.org/wiki/Debauve_%26_Gallais",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1819",
+                "pistoles"
+              ]
+            },
+            {
+              "o": "Atlas Obscura",
+              "u": "https://www.atlasobscura.com/places/debauve-gallais",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Debauve & Gallais, 30 rue des Saints-Pères, Paris"
+        },
+        {
+          "hora": "13:40",
+          "emoji": "🫖",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Ladurée Bonaparte (21 rue Bonaparte, 6e)",
+          "cat": "Salão de chá Ladurée · brunch todos os dias",
+          "sobre": "Salão de chá da Ladurée na rue Bonaparte (o ano de abertura diverge entre as fontes: 1997 ou 2002); segundo a revista Yonder (set/2025), é <strong>o único Ladurée de Paris com brunch todos os dias</strong>. Pro mesmo macaron, o <strong>Pierre Hermé</strong> (~450 m ao sul, atravessando o bd Saint-Germain) é a referência — Ladurée vale só se quiserem o salão ou o brunch.",
+          "imperdivel": "O salão \"de boneca\" — caro; só vale se forem pelo ambiente.",
+          "dicas": [
+            "Todos os dias das 8h30 às 19h30",
+            "Se for, vá pelo brunch (todos os dias) ou pelo salão"
+          ],
+          "custo": "Caro",
+          "acessibilidade": "Salão \"de boneca\" · caro",
+          "coord": {
+            "lat": 48.85555,
+            "lng": 2.33408
+          },
+          "fontes": [
+            {
+              "o": "Ladurée (site oficial)",
+              "u": "https://laduree.com/pages/stores/paris-centre",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "8h30",
+                "19h30"
+              ]
+            },
+            {
+              "o": "Yonder",
+              "u": "https://www.yonder.fr/les-tops/restaurants/les-10-meilleurs-brunchs-a-paris/laduree",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "único",
+                "set/2025"
+              ]
+            },
+            {
+              "o": "Wikipedia (en)",
+              "u": "https://en.wikipedia.org/wiki/Ladur%C3%A9e",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1997",
+                "2002"
+              ]
+            },
+            {
+              "o": "OSM (distância entre os nós 9776709636 e 5305889421)",
+              "u": "https://www.openstreetmap.org/node/5305889421",
+              "tier": "diretorio",
+              "data": "2026-10-07",
+              "prova": [
+                "450 m"
+              ]
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "cafe",
+          "mapsQuery": "Ladurée Bonaparte, 21 rue Bonaparte, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🖼️",
+      "tema": "Saint-Germain Museus · Delacroix → Orsay",
+      "temaCurto": "Museus",
+      "bairro": "🖼️ Saint-Germain → Sena → 7e",
+      "grupo": false,
+      "cor": "#4f46e5",
+      "gradA": "#3730a3",
+      "gradB": "#6366f1",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Delacroix → Sena → Orsay → Deyrolle\"</strong>: Saint-Germain → beira do Sena → 7e · ~2 km (estimativa) · meio dia. <strong>Delacroix fecha às terças</strong> e <strong>Orsay às segundas</strong>. Com criança de 4 anos: <strong>Orsay curto (1h) + Deyrolle</strong>; Delacroix e Mazarine são pros adultos. Pro Orsay direto de Boulogne: L10 até Sèvres-Babylone → L12 até Solférino, ~32 min no total. <strong>Pula sem culpa:</strong> Monnaie de Paris / 11 Conti (ter-dom 11h-18h, menores de 26 grátis) — as atividades de família são apontadas a partir de 7 anos e o adulto paga €12: não paga o esforço aos 4.",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🎨",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Musée national Eugène Delacroix (6 rue de Furstenberg, 6e)",
+          "cat": "O último apartamento e o ateliê no jardim escondido",
+          "sobre": "O <strong>último apartamento</strong> de Delacroix e o <strong>ateliê que ele mandou construir num jardim escondido</strong> atrás do prédio. Ele se mudou pra cá em <strong>dezembro de 1857</strong>, pra ficar perto de Saint-Sulpice, onde terminava a capela dos Santos Anjos (pintada entre 1854 e 1861), e viveu aqui até morrer, em <strong>1863</strong>.",
+          "imperdivel": "O que observar: o jardim escondido atrás do prédio e o ateliê que Delacroix mandou construir nele.",
+          "dicas": [
+            "Segunda, quarta, quinta e sexta das 12h às 17h30 · sábado e domingo das 10h às 17h30 · <strong>terça fechado</strong> · <strong>€9</strong> · grátis pra menores de 18 (de 18 a 25, só residentes do EEE) · o ingresso do Louvre dá entrada grátis no mesmo dia ou no seguinte",
+            "Com criança pequena: o jardinzinho é ok; o apartamento é chato nessa idade",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Musée Delacroix</strong> — apartamento e ateliê do pintor, no 6 rue de Furstenberg",
+            "🚶 <strong>Ⓐ Bibliothèque Mazarine</strong> — a biblioteca pública mais antiga da França, no quai de Conti",
+            "🚶 <strong>Ⓑ Pont des Arts</strong> — a ponte de pedestres entre o Institut e o Louvre",
+            "🚶 <strong>Ⓒ Musée d'Orsay</strong> — a antiga estação de trem; visita curta com criança",
+            "🚶 <strong>Ⓓ Deyrolle</strong> — o \"zoológico parado\" da rue du Bac"
+          ],
+          "custo": "€9 · menores de 18 grátis",
+          "acessibilidade": "Jardim escondido atrás do prédio",
+          "coord": {
+            "lat": 48.85464,
+            "lng": 2.33539
+          },
+          "walkingTours": [
+            {
+              "nome": "Saint-Germain Museus · 🖼️ Delacroix → Sena → Orsay → Deyrolle",
+              "descricao": "Musée Delacroix → Bibliothèque Mazarine → Pont des Arts → Musée d'Orsay → Deyrolle · ~2 km (estimativa) · meio dia",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Musée national Eugène Delacroix (6 rue de Furstenberg, 6e)",
+                  "coord": {
+                    "lat": 48.85464,
+                    "lng": 2.33539
+                  },
+                  "mapsQuery": "Musée national Eugène Delacroix, 6 rue de Furstenberg, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Bibliothèque Mazarine (23 quai de Conti, 6e)",
+                  "coord": {
+                    "lat": 48.85727,
+                    "lng": 2.33736
+                  },
+                  "mapsQuery": "Bibliothèque Mazarine, 23 quai de Conti, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Pont des Arts (entre o Institut de France e o Louvre)",
+                  "coord": {
+                    "lat": 48.85841,
+                    "lng": 2.33755
+                  },
+                  "mapsQuery": "Pont des Arts, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Musée d'Orsay (esplanade Valéry-Giscard-d'Estaing, 7e)",
+                  "coord": {
+                    "lat": 48.85992,
+                    "lng": 2.32658
+                  },
+                  "mapsQuery": "Musée d'Orsay, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Deyrolle (46 rue du Bac, 7e)",
+                  "coord": {
+                    "lat": 48.85648,
+                    "lng": 2.32639
+                  },
+                  "mapsQuery": "Deyrolle, 46 rue du Bac, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Musée Delacroix (site oficial)",
+              "u": "https://www.musee-delacroix.fr/fr/",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "12h",
+                "17h30",
+                "10h",
+                "terça fechado"
+              ]
+            },
+            {
+              "o": "Louvre · grade tarifária 2026 (inclui Delacroix)",
+              "u": "https://api-www.louvre.fr/sites/default/files/2026-08/Grille_Tarifaire%20_EPML_FR.pdf",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "€9",
+                "mesmo dia ou no seguinte",
+                "menores de 18"
+              ]
+            },
+            {
+              "o": "Visit Paris Region",
+              "u": "https://www.visitparisregion.com/fr/musee-eugene-delacroix",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "último",
+                "1857",
+                "1863"
+              ]
+            },
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/?p=164357",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1854",
+                "1861",
+                "dezembro"
+              ]
+            },
+            {
+              "o": "Bibliothèque Mazarine (parada Ⓐ)",
+              "u": "https://www.bibliotheque-mazarine.fr/fr/pratique/acces",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "mais antiga"
+              ]
+            },
+            {
+              "o": "Offi",
+              "u": "https://www.offi.fr/expositions-musees/musee-delacroix-1988.html",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée national Eugène Delacroix, 6 rue de Furstenberg, Paris"
+        },
+        {
+          "hora": "11:00",
+          "emoji": "📚",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Bibliothèque Mazarine (23 quai de Conti, no Institut de France, 6e)",
+          "cat": "A biblioteca pública mais antiga da França · fundada em 1643",
+          "sobre": "<strong>A biblioteca pública mais antiga da França</strong>, fundada por <strong>Mazarin em 1643</strong>; o acervo e o madeiramento foram instalados em <strong>1689</strong> na ala leste do Collège des Quatre-Nations (hoje o Institut). São <strong>600 mil volumes</strong>, entre eles <strong>uma Bíblia de Gutenberg</strong>.",
+          "imperdivel": "O que observar: o madeiramento de 1689 da sala — e a Bíblia de Gutenberg.",
+          "dicas": [
+            "Segunda a sábado das 10h às 18h · <strong>domingo fechado</strong> · no verão abre só de segunda a sexta, em horário reduzido, e fecha de 1 a 15 de agosto · entrada livre e grátis pra visitante (grupos de até 5, com crachá trocado por documento); pra sentar na sala de leitura é preciso cartão de leitor",
+            "Silêncio absoluto — <strong>não</strong> com criança agitada · só adulto, 10 min",
+            "<strong>44 degraus, sem acesso pra carrinho</strong>"
+          ],
+          "duracao": "10 min (só adultos)",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85727,
+            "lng": 2.33736
+          },
+          "fontes": [
+            {
+              "o": "Bibliothèque Mazarine (site oficial)",
+              "u": "https://www.bibliotheque-mazarine.fr/fr/pratique/acces",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "10h",
+                "18h",
+                "44 degraus",
+                "1 a 15 de agosto",
+                "verão"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr)",
+              "u": "https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_mazarine",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "mais antiga",
+                "1643",
+                "1689",
+                "600 mil volumes",
+                "Gutenberg"
+              ]
+            },
+            {
+              "o": "Paris Zigzag",
+              "u": "https://www.pariszigzag.fr/sortir-paris/tendances-culture/bibliotheque-mazarine-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "10 min"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Bibliothèque Mazarine, 23 quai de Conti, Paris",
+          "acessibilidade": "44 degraus · sem acesso pra carrinho nem mobilidade reduzida"
+        },
+        {
+          "hora": "11:25",
+          "emoji": "🌉",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pont des Arts (entre o Institut de France e o Louvre, 6e/1er)",
+          "cat": "A primeira ponte de ferro de Paris · pensada como \"jardim suspenso\"",
+          "sobre": "<strong>A primeira ponte de ferro de Paris</strong>, encomendada por Bonaparte (decreto de <strong>15/03/1801</strong>, construída entre 1801 e <strong>1804</strong>, inaugurada em 1803) e pensada como um <strong>\"jardim suspenso\"</strong> com arbustos e bancos; reconstruída nos anos 1980 (obra concluída em <strong>1984</strong>). Em <strong>junho/2015</strong> a Prefeitura retirou <strong>~45 toneladas</strong> de cadeados do amor.",
+          "imperdivel": "O que observar: a <strong>cúpula do Institut</strong> (Académie française) de um lado e o <strong>Louvre</strong> do outro.",
+          "dicas": [
+            "Ponte de pedestre, larga, sem carro — dá pra correr · grátis",
+            "Vá pela vista, não pelos cadeados: eles foram retirados em 2015"
+          ],
+          "custo": "Grátis",
+          "acessibilidade": "Ponte de pedestre, larga, sem carro",
+          "coord": {
+            "lat": 48.85841,
+            "lng": 2.33755
+          },
+          "fontes": [
+            {
+              "o": "Napoleon.org",
+              "u": "https://www.napoleon.org/magazine/lieux/pont-des-arts-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "primeira",
+                "1801",
+                "1804",
+                "1803",
+                "junho"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr)",
+              "u": "https://fr.wikipedia.org/wiki/Pont_des_Arts",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "1984",
+                "2015",
+                "45 toneladas",
+                "1980"
+              ]
+            },
+            {
+              "o": "Time Out Paris",
+              "u": "https://www.timeout.fr/paris/le-blog/le-retrait-definitif-des-cadenas-du-pont-des-arts",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            },
+            {
+              "o": "Sortir à Paris",
+              "u": "https://www.sortiraparis.com/arts-culture/balades/articles/9233-le-pont-des-arts",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Pont des Arts, Paris"
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🕰️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Musée d'Orsay (esplanade Valéry-Giscard-d'Estaing, 7e)",
+          "cat": "Museu numa antiga estação de trem · visita curta de 1h com criança",
+          "sobre": "Museu instalado numa <strong>antiga estação de trem</strong> — o <strong>relógio gigante</strong> lembra isso. A personagem-guia infantil do museu é o <strong>urso polar de Pompon</strong>. Visita curta com criança de 4 anos (<strong>1h</strong>): entrar → relógio → café no 5º andar, de frente pra um relógio externo → sair.",
+          "imperdivel": "O que observar: o relógio gigante da estação e o urso polar de Pompon.",
+          "dicas": [
+            "Terça a domingo das 9h30 às 18h (quinta até 21h45) · <strong>segunda fechado</strong> · <strong>menores de 18 anos grátis</strong> (e residentes do EEE com menos de 26) · adulto <strong>€16 online / €14 na bilheteria</strong>",
+            "<strong>Livretos grátis de 4 a 12 anos</strong> (\"1001 Histoires\", \"1, 2, 3 statues!\" e \"Palette d'émotions\", 30-45 min) · audioguia infantil €3,50",
+            "⚠️ <strong>Obras de 10/03/2026 até o verão de 2028</strong>: o museu segue aberto · reserva de horário <strong>fortemente recomendada</strong> (obrigatória só pra ingresso com horário e Paris Museum Pass, que entram pela entrada provisória do lado do Sena) · sem horário marcado, entra-se pelo Parvis · saída provisória pelo quai Valéry-Giscard-d'Estaing"
+          ],
+          "duracao": "1h (visita curta)",
+          "custo": "Menores de 18 anos grátis · adulto €16 online / €14 na bilheteria",
+          "acessibilidade": "Trocador no nível -1 · carrinho emprestado na chapelaria",
+          "coord": {
+            "lat": 48.85992,
+            "lng": 2.32658
+          },
+          "fontes": [
+            {
+              "o": "Musée d'Orsay",
+              "u": "https://www.musee-orsay.fr/en/node/281163",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "menores",
+                "1001",
+                "1h",
+                "4 anos",
+                "9h30",
+                "18h",
+                "21h45",
+                "18 anos",
+                "€16",
+                "€14",
+                "26",
+                "12 anos",
+                "45 min",
+                "verão",
+                "fortemente recomendada"
+              ]
+            },
+            {
+              "o": "Musée d'Orsay · horários e tarifas",
+              "u": "https://www.musee-orsay.fr/en/visit/admission-opening-times-tickets",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "9h30",
+                "18h",
+                "21h45",
+                "€16",
+                "€14",
+                "menores de 18"
+              ]
+            },
+            {
+              "o": "JDS · obras no Orsay",
+              "u": "https://www.jds.fr/paris/actu/travaux-au-musee-d-orsay-ce-qui-change-pour-les-visiteurs-des-le-10-mars-2026-1411212_A",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "10/03/2026",
+                "2028",
+                "fortemente recomendada",
+                "Parvis"
+              ]
+            },
+            {
+              "o": "Familin'Paris",
+              "u": "https://www.familinparis.fr/536-musee-dorsay",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            },
+            {
+              "o": "Finestre sull'Arte",
+              "u": "https://www.finestresullarte.info/fr/musees/a-partir-du-10-mars-2026-le-musee-d-orsay-fait-peau-neuve-avec-un-chantier-de-restauration-de-deux-ans-et-demi",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": []
+            },
+            {
+              "o": "Musée d'Orsay",
+              "u": "https://www.musee-orsay.fr/ja/node/213297",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée d'Orsay, Paris"
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🦋",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Deyrolle (46 rue du Bac, 7e)",
+          "cat": "O museu de história natural que é loja · desde 1831",
+          "sobre": "O \"museu de história natural que é loja\": casa de <strong>1831</strong>, referência mundial em <strong>taxidermia e entomologia</strong>; parisienses levam os filhos pequenos aqui pra aprender sobre a natureza.",
+          "imperdivel": "O que observar: o 1º andar, com ursos, leões, zebras, girafa, flamingo e caixas de borboletas — melhor que muito museu pra criança de 4 anos.",
+          "dicas": [
+            "<strong>Entrada livre</strong> · segunda a sábado das 10h às 19h (site oficial; outras fontes dão pausa de 13h às 14h na segunda) · <strong>domingo e feriados fechado</strong>",
+            "Também está na Variante B da aba Família (Sèvres-Babylone)"
+          ],
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85648,
+            "lng": 2.32639
+          },
+          "fontes": [
+            {
+              "o": "Deyrolle (site oficial)",
+              "u": "https://deyrolle.com/en/pages/la-maison-deyrolle",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "1831",
+                "10h",
+                "19h"
+              ]
+            },
+            {
+              "o": "Time Out Paris",
+              "u": "https://www.timeout.fr/paris/musees/maison-deyrolle",
+              "tier": "editorial",
+              "data": "2026-10-07",
+              "prova": [
+                "entrada livre",
+                "girafa",
+                "flamingo",
+                "13h",
+                "14h"
+              ]
+            },
+            {
+              "o": "Paris je t'aime (turismo oficial)",
+              "u": "https://parisjetaime.com/shopping/maison-deyrolle-p2598",
+              "tier": "oficial",
+              "data": "2026-10-07",
+              "prova": [
+                "Melhor",
+                "melhor",
+                "4 anos",
+                "ursos"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "loja",
+          "mapsQuery": "Deyrolle, 46 rue du Bac, Paris"
+        }
+      ]
+    }
+  ],
+  "historia": [
+    {
+      "titulo": "🏛️ Saint-Germain-des-Prés · do prado da abadia à guilhotina",
+      "prosa_html": "<p>Antes de ser o bairro dos cafés, isto aqui era um <strong>campo (\"prés\") de uma abadia</strong>. <strong>Childebert, filho de Clóvis</strong>, fundou no séc. VI uma basílica pra guardar relíquias — consagrada em <strong>558</strong> pelo bispo <strong>Germain</strong>, que dá nome a tudo. Ela foi <strong>necrópole dos reis merovíngios antes de Saint-Denis</strong> e a Prefeitura a chama de <strong>a igreja mais antiga de Paris</strong>; na Revolução virou <strong>fábrica de salitre</strong> pra pólvora e escapou por pouco da demolição. O que restou da abadia está escondido à vista: a <strong>pracinha de Furstenberg era o pátio das cocheiras do palácio do abade</strong>, e a <strong>fachada de tijolo e pedra</strong> do palácio (1586) ainda está de pé na rue de l'Abbaye. Do lado da igreja, uma <strong>cabeça de bronze de Picasso</strong> foi roubada em 1999 e voltou em 2001 sem cerimônia — e até hoje tem vizinho jurando que a que está lá é cópia.</p><p>Duzentos metros dali, a Paris medieval e a Revolucionária se encostam. A <strong>Cour du Commerce Saint-André</strong> segue a linha da <strong>muralha de Filipe Augusto</strong> — dá pra ver um pedaço de torre dentro de um restaurante — e no séc. XVIII virou caldeirão revolucionário: <strong>Marat imprimia o jornal ali</strong>, <strong>Danton morava ao lado</strong>, e a guilhotina foi <strong>testada em ovelhas</strong> num ateliê da passagem. Nos fundos, o <strong>Procope</strong>, café aberto por volta de 1686, serviu Voltaire e depois Robespierre. E pra quem gosta de ciência escondida em igreja: em <strong>Saint-Sulpice</strong>, um furinho no vitral desenha o sol numa <strong>linha de latão</strong> no chão ao meio-dia solar (por volta das 13h no inverno e das 14h no verão) — o \"segundo obelisco de Paris\" é, na verdade, parte de uma meridiana.</p>",
+      "fontes": [
+        {
+          "o": "paris.fr (Prefeitura)",
+          "u": "https://www.paris.fr/pages/admirez-le-ch-ur-des-moines-restaure-de-saint-germain-des-pres-4987",
+          "tier": "oficial",
+          "data": "2026-10-07",
+          "prova": [
+            "igreja mais antiga de Paris"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Église Saint-Germain-des-Prés",
+          "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Germain-des-Pr%C3%A9s",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "Childebert, filho de Clóvis",
+            "séc. VI",
+            "558",
+            "necrópole dos reis merovíngios",
+            "fábrica de salitre"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Quartier Saint-Germain-des-Prés",
+          "u": "https://fr.wikipedia.org/wiki/Quartier_Saint-Germain-des-Pr%C3%A9s",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "campo (prés) de uma abadia"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Rue de Furstemberg",
+          "u": "https://fr.wikipedia.org/wiki/Rue_de_Furstemberg",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "pracinha de Furstenberg = pátio das cocheiras do palácio do abade"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Rue de l'Abbaye",
+          "u": "https://en.wikipedia.org/wiki/Rue_de_l%27Abbaye",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "fachada de tijolo e pedra (1586)"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · Square Laurent-Prache",
+          "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/oeuvre-volee-square-laurent-prache/",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "cabeça de Picasso roubada em 1999",
+            "2001"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Cour du Commerce-Saint-André",
+          "u": "https://fr.wikipedia.org/wiki/Cour_du_Commerce-Saint-Andr%C3%A9",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "muralha de Filipe Augusto",
+            "guilhotina testada em ovelhas",
+            "Marat imprimia o jornal",
+            "Danton morava ao lado",
+            "pedaço de torre"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Le Procope",
+          "u": "https://fr.wikipedia.org/wiki/Le_Procope",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "1686",
+            "Voltaire e Robespierre"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Gnomon de Saint-Sulpice",
+          "u": "https://fr.wikipedia.org/wiki/Gnomon_de_l%27%C3%A9glise_Saint-Sulpice",
+          "tier": "editorial",
+          "data": "2026-10-07",
+          "prova": [
+            "linha de latão",
+            "meio-dia solar",
+            "13h",
+            "14h",
+            "meridiana"
+          ]
+        }
+      ]
+    }
+  ]
+}
