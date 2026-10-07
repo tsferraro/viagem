@@ -346,3 +346,17 @@ descrição**, mantendo quando parece endereço. `(Via Marconi 47)` fica · `(mu
 **Rota do dia e de walking tour usam nomes só quando TODOS os pontos têm query utilizável** —
 senão caem pra coordenada, que funciona mas o Maps rotula "Dropped pin". `maps-audit.py` mostra
 qual dos dois cada rota está usando.
+
+## `aprofundar` · aprofundamento recolhido no card (2026-10-07)
+
+Campo **opcional** de `card` (HTML, com `<p>…</p>`). Renderiza depois das dicas, dentro do card
+expandido, como bloco `<details>` **fechado por padrão** ("📖 Quer saber mais?"). Serve pra manter o
+dia enxuto (o card mostra o que é preciso pra agir) e guardar a história e as curiosidades pra quem
+quiser abrir. Nasceu no `paris-amigos` (pedido Tobia 07/10: *"deixe o profundo dos passeios em
+complementos com expande/recolhe, recolhidos"*).
+
+- **Aditivo**: viagem sem o campo renderiza igual (provado em marais, paris-fds, corsica e pais-sardenha).
+- **Não é canal fora dos gates**: o `audit.py` lê `aprofundar` junto com `sobre`/`imperdivel`/`dicas`
+  na cobrança claim-a-claim (`prova`), e o `factcheck-gate.py` o inclui na projeção sensível dos cards ⭐⭐⭐.
+- Abrir/fechar o bloco não recolhe o card (`bindCardHandlers` ignora cliques em `.stop-mais`).
+- Por que não dentro do `sobre`: o `sobre` é renderizado dentro de `<p>`, e um `<details>` ali quebra o HTML.

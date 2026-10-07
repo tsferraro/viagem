@@ -990,7 +990,7 @@ def check_claims_cobertos(data: Dict, F: List[Finding], debt: Optional[set] = No
         va = c.get('valeAPena')
         if va not in (2, 3):
             continue
-        texto = ' '.join([c.get('cat', ''), c.get('sobre', ''), c.get('imperdivel', '')]
+        texto = ' '.join([c.get('cat', ''), c.get('sobre', ''), c.get('imperdivel', ''), c.get('aprofundar', '')]
                          + list(c.get('dicas', [])))
         claims = _claims_estruturados(texto)
         if not claims:
@@ -1088,7 +1088,7 @@ def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None)
         Se tiver superlativo ou data, deixa de ser logística e volta a precisar de fonte."""
         if not c.get('noMaps'):
             return False
-        texto = ' '.join([c.get('sobre', ''), c.get('imperdivel', '')] + list(c.get('dicas', [])))
+        texto = ' '.join([c.get('sobre', ''), c.get('imperdivel', ''), c.get('aprofundar', '')] + list(c.get('dicas', [])))
         return not _claims_sem_fonte(texto)
 
     sem_fonte_3, sem_fonte_2 = [], []
@@ -1193,7 +1193,7 @@ def check_proveniencia(data: Dict, F: List[Finding], debt: Optional[set] = None)
     for c in cards:
         if c.get('tipo') != 'card' or tem_fonte(c) or isento(c):
             continue
-        texto = ' '.join([c.get('sobre', ''), c.get('imperdivel', '')] + list(c.get('dicas', [])))
+        texto = ' '.join([c.get('sobre', ''), c.get('imperdivel', ''), c.get('aprofundar', '')] + list(c.get('dicas', [])))
         cl = _claims_sem_fonte(texto)
         if cl:
             k = f'claims:{c.get("nome","")}'

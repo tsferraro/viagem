@@ -64,7 +64,7 @@ def projecao_sensivel(data: dict) -> str:
         for s in day.get('stops', []) or []:
             if s.get('tipo') == 'card' and s.get('valeAPena') == 3:
                 proj[f"card3:{s.get('nome','?')}"] = [
-                    s.get('sobre'), s.get('imperdivel'), s.get('dicas'),
+                    s.get('sobre'), s.get('imperdivel'), s.get('dicas'), s.get('aprofundar'),
                     s.get('coord'), s.get('mapsQuery')]
             for wt in s.get('walkingTours', []) or []:
                 for st in wt.get('stops', []) or []:

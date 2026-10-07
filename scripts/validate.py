@@ -13,6 +13,7 @@ import re
 import sys
 import json
 import subprocess
+import tempfile
 from pathlib import Path
 
 # ---------------------------------------------------------
@@ -92,7 +93,8 @@ def check_js_syntax(content):
         if 'leaflet' in script.lower()[:200] or len(script) < 50:
             continue
         # Salvar em temp e rodar node --check
-        tmp = Path('/tmp/_validate_script.js')
+        # gettempdir respeita $TMPDIR (o sandbox do Claude Code nega escrita em /tmp)
+        tmp = Path(tempfile.gettempdir()) / '_validate_script.js'
         tmp.write_text(script)
         try:
             result = subprocess.run(

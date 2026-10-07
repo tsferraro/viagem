@@ -432,6 +432,7 @@ function renderCard(stop,isNow,done){
       <div class="stop-dicas-title">💡 Dicas</div>
       <ul>${stop.dicas.map(d=>`<li>${d}</li>`).join('')}</ul>
     </div>`:''}
+    ${stop.aprofundar?`<details class="stop-mais"><summary>📖 Quer saber mais?</summary><div class="stop-mais-body">${stop.aprofundar}</div></details>`:''}
     ${(stop.duracao||stop.custo||stop.acessibilidade)?`<div class="stop-meta">
       ${stop.duracao?`<span>⏱️ ${stop.duracao}</span>`:''}
       ${stop.custo?`<span>💵 ${stop.custo}</span>`:''}
@@ -1168,7 +1169,9 @@ function bindCardHandlers(){
     if(c.__bound) return;
     c.__bound=true;
     c.addEventListener('click',e=>{
-      if(e.target.closest('a, button')) return;
+      // .stop-mais = aprofundamento recolhido (campo opcional `aprofundar` · 2026-10-07):
+      // abrir/fechar o bloco ou ler dentro dele não pode recolher o card.
+      if(e.target.closest('a, button, .stop-mais')) return;
       c.classList.toggle('expanded');
     });
   });
