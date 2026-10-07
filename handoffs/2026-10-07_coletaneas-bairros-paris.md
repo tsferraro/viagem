@@ -71,13 +71,17 @@ Os 4 motivos (GLOBAL § 10a-bis). Paradas combinadas:
 |---|---|---|---|---|---|
 | 1 | Levantamento dos 5 bairros | 06/10 | sessão local_a7da077a | — | ✅ `fdd9b17` |
 | 2 | App paris-amigos-out2026 | até qui 8/out | handoff `2026-10-07_app-paris-amigos.md` | criado pela mãe | 1 |
-| 3 | **Coletâneas: um bairro por onda**, na ordem Saint-Germain → Quartier Latin → Ilhas → Louvre/Tuileries → Montmartre | depois do 2 no ar | esta sessão | este | 2 |
+| 3 | **Coletâneas: um bairro por onda** (Saint-Germain ✅ `3869f3f` · 07/10), na ordem Saint-Germain → Quartier Latin → Ilhas → Louvre/Tuileries → Montmartre | depois do 2 no ar | esta sessão | este | 2 |
 | 4 | Auditoria externa das coletâneas | depois do 3 | sessão AUDITORA nova | **esta sessão cria** | 3 |
 
 ## 🔒 CONGELADO
 - `marais/` (coletânea pronta, em uso) · `paris-fds/` · `paris-amigos/` (dona: frente 2). Não editar.
 
 ## Tentado e falhou
+- (07/10, onda Saint-Germain) Montador Sonnet SEM rede no Bash derivou as 28 coords de memória (erro de 4 a 332 m) → no briefing do montador: carregar WebSearch/WebFetch por ToolSearch e copiar coord de fonte, ou deixar para o factcheck. O factcheck Opus trocou 25/26 por OSM/Wikipédia.
+- (07/10) `deploy.sh` a partir do worktree: (1) sem o 4º arg ele procura `/tmp/build/index.html`; (2) passar o próprio `<pasta>/index.html` quebra no `cp` (arquivo idêntico) → copiar o HTML pro scratchpad e passar esse caminho + `$(pwd)` como 5º arg; (3) o `git push origin main` do script empurra o `main` LOCAL, não o branch → depois do script, `git push origin HEAD:main` + `git -C <checkout principal> merge --ff-only origin/main`. Rodar com o sandbox desligado (backup em `~/.skill-backups`).
+- (07/10) `validate.py` escreve em `/tmp` → só roda com o sandbox desligado.
+- (07/10) Montador inventou `prova` de palavra solta ("4 anos", "10 min") só pra calar o regex do audit → no briefing: `prova` é trecho que a fonte AFIRMA, nunca frase de planejamento.
 - `git push` no sandbox: `CONNECT tunnel failed, 403` → push com o sandbox desligado.
 - Sites oficiais do Orsay, de Notre-Dame, da Tour Eiffel e do Guignol bloqueiam leitura automática → trecho do buscador com URL oficial, marcado "(trecho)".
 - Nominatim/Mappy bloqueados → coordenada copiada de fonte com 5 decimais ou `coord_unverified: true` (derivar é proibido, R7).
