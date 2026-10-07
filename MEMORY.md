@@ -28,6 +28,14 @@ Memórias pessoais transversais do Tobia ficam em `~/.claude/projects/.../memory
 - **Numeração de WT multi-parte tem que ser sequencial (1..N)** atravessando as partes · bug: parte 2 reiniciava em 1 e não batia com a legenda. Fix no `renderMap()` (wtSeq global).
 - **Coords das lojas ancoradas** (Nominatim/Mappy/Yelp todos bloqueados no sandbox · `Host not in allowlist`/403). Usei coords verificadas vizinhas na mesma rua + flag pro Tobia. Maps navega certo pelo nome+endereço.
 
+### Paris · dicas de campo da família (moradores · 07/10/2026)
+Relato da esposa do Tobia ao revisar o roteiro de visita de amigos (paris-amigos-out2026). Fonte tier **campo**.
+- **Orly → casa: táxi, não Uber.** No Uber é comum o desencontro no ponto de encontro, e a diferença de preço é pequena. Seguir as indicações pintadas no chão, do portão de desembarque até o ponto de táxi (garantido). Boulogne é atendida pelo mesmo táxi.
+- **Berthillon é superestimado** ("não vale o hype"). Não usar como âncora de parada; no máximo citar com a ressalva.
+- **Chegada na sexta à noite → manhã livre no sábado**, não no domingo. A primeira manhã depois da chegada é a que pede folga.
+- **Véspera de Disney precisa de bloco de logística** no roteiro (lanches, mochila, ingressos no celular), não só "tarde livre".
+- **Grande Galerie de l'Évolution** é o programa que elas indicam pra criança de 4 anos no Quartier Latin, junto com a Mesquita, e não só como plano de chuva.
+
 ---
 
 ## Padrões cross-viagem

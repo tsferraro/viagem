@@ -9,9 +9,9 @@ pra confirmar está marcado `[a confirmar]`.
 
 | Dia | Com quem | Programa | Em casa |
 |------|------------|--------------------------|------|
-| **Sex 9** | — | Chegada em Orly 19:55 → Uber até Boulogne | jantar em casa |
-| **Sáb 10** | as duas famílias | 🌳 **Jardin du Luxembourg + Saint-Germain-des-Prés** | ~18:15 |
-| **Dom 11** | as duas famílias | 🏠 malhar juntos em casa · ⛪ **Notre-Dame + Île Saint-Louis** · 🚤 **Bateau Mouche** | ~18:00 |
+| **Sex 9** | — | Chegada em Orly 19:55 → táxi até Boulogne | jantar em casa |
+| **Sáb 10** | as duas famílias | 🏠 malhar juntos em casa · ⛪ **Notre-Dame + Île Saint-Louis** · 🚤 **Bateau Mouche** | ~18:00 |
+| **Dom 11** | as duas famílias | 🌳 **Jardin du Luxembourg + Saint-Germain-des-Prés** | ~18:15 |
 | **Seg 12** | vocês 3 | 🏛️ **Orangerie + Tuileries** · 🌻 **Van Gogh no Atelier des Lumières** (último dia) · 🍷 **noite só de vocês duas** | ~17:00 |
 | **Ter 13** | as duas famílias | 🏰 **Disney Adventure World** | ~18:45 |
 | **Qua 14** | vocês 3 | 🖼️ **Orsay** · 🗼 **subir a Torre Eiffel** | ~17:30 · mala pronta · saída de casa às 3h |
@@ -26,14 +26,14 @@ pra confirmar está marcado `[a confirmar]`.
 | **Orangerie · segunda 9h** | recomendado | €12,50 online · menor de 18 não paga. As visitas infantis de outubro estão todas lotadas, então a visita é por conta própria |
 | **Atelier des Lumières · segunda 12** | já | **12/out é o último dia da exposição Van Gogh**, e segunda é dia de Van Gogh na programação. A partir de €17 adulto · **abaixo de 5 anos não paga** · não pode entrar carrinho. Reservar horário |
 | **Torre Eiffel · quarta 14** | **já** | Bilhete com horário em ticket.toureiffel.paris. **Sem reserva, a bilheteria do local não garante a entrada** se a lotação estiver cheia. Elevador até o topo: €36,70 adulto · €9,20 criança 4-11 anos. Até o 2º andar: €23,50 · €6 |
-| **Bateaux-Mouches** | quando quiserem | €17 adulto e €8 criança online. O bilhete vale pra qualquer saída do dia: não precisa marcar horário |
+| **Bateaux-Mouches** | **a gente compra** | €17 adulto e €8 criança online. O bilhete vale pra qualquer saída do dia: não precisa marcar horário |
 | **Notre-Dame** | no próprio domingo | Entrada grátis. A reserva de horário também é grátis e evita a fila; as vagas abrem pouco antes |
 | **Metrô** | ao chegar | **Não existe mais bilhete de papel**: é preciso o cartão Navigo Easy (€2) ou o app da IDFM. Bilhete €2,55; criança de 4 a 9 anos paga €1,30 |
 
 ## Avisos da semana
 
 - **Sábado 10**: Montmartre tem o desfile da Fête des Vendanges (11h45-13h30) e uma multidão. Por isso Montmartre ficou pra segunda.
-- **Domingo 11 de manhã**: corrida de 20 km de Paris (Bois de Boulogne, cais da margem direita, Tuileries). Ruas fechadas, Uber travado. **As linhas 9 e 10 de metrô, as de Boulogne, funcionam normalmente.**
+- **Domingo 11 de manhã**: corrida de 20 km de Paris (Bois de Boulogne, cais da margem direita, Tuileries). Ruas fechadas, táxi e Uber travados. **As linhas 9 e 10 de metrô, as de Boulogne, funcionam normalmente**, e o programa do domingo (Luxembourg) fica na margem esquerda, fora do percurso.
 - **Fechados nesta semana**: o Guignol do Luxembourg (reabre 18/out) · o parquinho atrás de Notre-Dame (até 2027) · o Mur des je t'aime em Montmartre · a galeria dos dinossauros do Jardin des Plantes.
 - **Estação Saint-Michel (linha 4) fechada.** Pro Quartier Latin e as ilhas, a linha 10 resolve.
 - **Orsay fecha às segundas · Orangerie e Louvre fecham às terças.**
@@ -44,11 +44,23 @@ pra confirmar está marcado `[a confirmar]`.
 ### Sexta 9 · chegada
 | Hora | O quê | Detalhe |
 |-----|------------------|--------------------------------|
-| 19:55 | Pouso em Orly | A tarifa fixa de táxi não vale pra Boulogne. **Uber, ~€34 em média**; táxi no taxímetro, ~€54. De transporte público são 58 min com 2 baldeações, carregando mala |
+| 19:55 | Pouso em Orly → **táxi** | **Táxi, não Uber**: em Orly é comum o desencontro no ponto de encontro do Uber, e a diferença de preço é pequena. Ao sair do portão de desembarque, **seguir as indicações pintadas no chão até o ponto de táxi**, que é garantido. Boulogne é atendida pelo mesmo táxi. É no taxímetro, ~€54 (a tarifa fixa vale só pra dentro de Paris) |
 | ~21:00 | Jantar em casa | — |
 
-### Sábado 10 · Luxembourg + Saint-Germain (com a gente)
-Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min).
+### Sábado 10 · Notre-Dame, Île Saint-Louis e Bateau Mouche (com a gente)
+| Hora | O quê | Detalhe |
+|-----|------------------|--------------------------------|
+| manhã | **Malhar todos juntos em casa** + almoço | manhã livre depois da chegada de sexta à noite |
+| 12:50 | Metrô | Linha 10 até **Maubert-Mutualité** (~25 min) |
+| 13:30 | **Point Zéro** + **Notre-Dame** | O marco de bronze de onde se medem as estradas da França. A catedral é grátis (sábado 8h15-19h30). A reserva de horário, também grátis, evita a fila |
+| 14:30 | **Pont Saint-Louis** | A ponte de pedestres entre as duas ilhas |
+| 15:00 | **Square Barye** | O único parquinho das ilhas, na ponta da Île Saint-Louis. Sem banheiro |
+| 15:45 | Metrô até a Pont de l'Alma | `[tempo a confirmar]` |
+| 16:30 | 🚤 **Bateaux-Mouches** (Port de la Conférence, Pont de l'Alma) | ~1h. Saídas a cada 30 min. Criança abaixo de 4 anos não paga. |
+| 17:40 | Metrô de volta | Linha 9 direto de **Alma-Marceau** (18 min) → casa ~18:00 |
+
+### Domingo 11 · Luxembourg + Saint-Germain (com a gente)
+Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min). A corrida de 20 km acontece na outra margem e não afeta a linha 10.
 
 | Hora | O quê | Detalhe |
 |-----|------------------|--------------------------------|
@@ -60,18 +72,6 @@ Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min).
 | 16:30 | **Pausa doce** | Pierre Hermé (72 rue Bonaparte) ou sorvete no Il Gelato del Marchese |
 | 17:45 | Metrô de volta | Linha 10 em Mabillon ou Odéon → casa ~18:15 |
 
-### Domingo 11 · Notre-Dame, Île Saint-Louis e Bateau Mouche (com a gente)
-| Hora | O quê | Detalhe |
-|-----|------------------|--------------------------------|
-| manhã | **Malhar todos juntos em casa** + almoço | A corrida fecha as ruas mesmo |
-| 12:50 | Metrô | Linha 10 até **Maubert-Mutualité** (~25 min) |
-| 13:30 | **Point Zéro** + **Notre-Dame** | O marco de bronze de onde se medem as estradas da França. A catedral é grátis; aos domingos a visita para durante as missas, e a janela boa é 13h-17h |
-| 14:30 | **Pont Saint-Louis** → **sorvete Berthillon** | A ponte de pedestres entre as duas ilhas. Berthillon abre de quarta a domingo |
-| 15:00 | **Square Barye** | O único parquinho das ilhas, na ponta da Île Saint-Louis. Sem banheiro |
-| 15:45 | Metrô até a Pont de l'Alma | `[tempo a confirmar]` |
-| 16:30 | 🚤 **Bateaux-Mouches** (Port de la Conférence, Pont de l'Alma) | ~1h. Saídas a cada 30 min. Criança abaixo de 4 anos não paga. A corrida usa o cais de manhã: conferir no sábado à noite se reabriu à tarde |
-| 17:40 | Metrô de volta | Linha 9 direto de **Alma-Marceau** (18 min) → casa ~18:00 |
-
 ### Segunda 12 · Orangerie, Tuileries e Van Gogh
 | Hora | O quê | Detalhe |
 |-----|------------------|--------------------------------|
@@ -81,7 +81,8 @@ Metrô **linha 10 direto** de Boulogne Jean Jaurès até **Odéon** (27 min).
 | 12:00 | **Almoço** | **Iovine's** (pizzaria, 7bis rue du Colonel Driant, 12h-15h) ou sanduíche da **Bo&Mie** (91 rue de Rivoli) pra comer num banco das Tuileries |
 | 13:30 | Metrô até o 11e | Linha 1 até Franklin D. Roosevelt → **linha 9 até Voltaire ou Saint-Ambroise**, a 6 min a pé do Atelier `[tempo total a confirmar]` |
 | 14:15 | 🌻 **Atelier des Lumières** · *Van Gogh, La Nuit Étoilée* (38 rue Saint-Maur) | Último dia da exposição. Uma antiga fundição de 1835 transformada em sala de projeção imersiva: ~50 min, em loop, dá pra ficar mais de uma volta. A partir de 2 anos · sem carrinho |
-| 15:30 | Volta pra casa | **Linha 9 direto** de Voltaire até Boulogne, sem baldeação · tarde livre pra descansar |
+| 15:30 | Volta pra casa | **Linha 9 direto** de Voltaire até Boulogne, sem baldeação |
+| 16:30 | 🎒 **Preparar a Disney** | lanches e água pra terça, mochila, ingressos no celular, roupa separada pra sair às 8h |
 | ~19:30 | 🍷 **Noite só de vocês duas** | Crianças jantadas e na cama. As 8 opções abaixo **abrem na segunda à noite** (o dia em que muito restaurante de Paris fecha) e ficam a uma linha de metrô de Boulogne, sem baldeação |
 
 **🍷 Noite das duas · 8 opções** (⭐ = as duas sugeridas)
@@ -146,7 +147,7 @@ da universidade, onde se falava latim. **Linha 10** (Cluny-La Sorbonne, Maubert,
 
 | Percurso | Trajeto | Tempo | Melhor |
 |------------|--------------------------------|-------|-----------|
-| 👶 **Bichos, gladiadores e chá de menta** | Arènes de Lutèce (arena romana) → Ménagerie do Jardin des Plantes → carrossel do Dodo → Grande Galerie de l'Évolution (se chover) → chá na Grande Mosquée → Jardin Tino-Rossi | 10h-17h | qualquer dia (a Grande Galerie fecha ter) |
+| 👶 **Bichos, gladiadores e chá de menta** | Arènes de Lutèce (arena romana) → Ménagerie do Jardin des Plantes → carrossel do Dodo → **Grande Galerie de l'Évolution** (animais em tamanho real: se forem à Mesquita, vale muito pra ele) → chá na Grande Mosquée → Jardin Tino-Rossi | 10h-17h | qualquer dia (a Grande Galerie fecha ter) |
 | 🎨 **Da Paris romana ao Panthéon** · parte 1 | Shakespeare and Company → Square Viviani (a árvore mais velha de Paris) → Saint-Julien-le-Pauvre → Saint-Séverin → termas romanas de Cluny → Panthéon | 1h30 | manhã |
 | 🎨 parte 2 | Saint-Étienne-du-Mont → apartamento do Hemingway → Place de la Contrescarpe → mercado da rue Mouffetard → Arènes de Lutèce | 1h30 | manhã (o mercado não abre seg) |
 | 🍫 **Da Contrescarpe à Mesquita** | Gelati d'Alberto → Maison Caffet → crepe no Pot O'Lait → Carl Marletti → salão de chá da Grande Mosquée | 1h30 | ter-sáb à tarde |
@@ -160,10 +161,10 @@ calmas de bairro residencial no meio do Sena. **Linha 10** (Maubert-Mutualité) 
 
 | Percurso | Trajeto | Tempo | Melhor |
 |------------|--------------------------------|-------|-----------|
-| 👶 **Catedral, ponte, sorvete e parquinho** | Marché aux fleurs → Point Zéro → Notre-Dame → Pont Saint-Louis → Berthillon → Square Barye | 3h30-4h | dom à tarde (Berthillon fecha seg/ter) |
+| 👶 **Catedral, ponte e parquinho** | Marché aux fleurs → Point Zéro → Notre-Dame → Pont Saint-Louis → Square Barye | 3h30-4h | tarde |
 | 🎨 **História** · parte 1 · Cité | Square du Vert-Galant → Pont Neuf e Henrique IV → Place Dauphine → Conciergerie → Sainte-Chapelle → Notre-Dame | 2h | manhã de semana |
 | 🎨 parte 2 · Saint-Louis | Pont Saint-Louis → rue Saint-Louis-en-l'Île → igreja → Hôtel Lambert → quai de Bourbon → Square Barye | 1h | emenda com a parte 1 |
-| 🍫 **Mini-guloso** | Le Saint-Régis → La Charlotte de l'Isle → Berthillon → Le Flore en l'Île | 1h30 | qua-dom 14h-17h |
+| 🍫 **Mini-guloso** | Le Saint-Régis → La Charlotte de l'Isle → Berthillon (famoso, mas a gente acha que não vale o hype) → Le Flore en l'Île | 1h30 | qua-dom 14h-17h |
 | 🏛️ **Monumentos pagos** | Escolha **um**: Notre-Dame (grátis) · Sainte-Chapelle (€22, vitrais, 20 min) · Conciergerie (prisão de Maria Antonieta) | — | nunca num domingo à tarde |
 
 **Comer**: Le Saint-Régis · Le Flore en l'Île (varanda virada pra Notre-Dame).
