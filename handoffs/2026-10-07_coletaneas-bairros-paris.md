@@ -98,3 +98,9 @@ data.json (com `CITY.txt` = `Paris`, `SLUG.txt`, `hideStopMarkers: true`, `mapsQ
 
 ## 🧭 Ao fechar: puxar a próxima fase
 Atualiza o «Roteiro de fases» (linha 3 ✅ com os hashes por bairro), troca `status: aberto` → `consumido`, cria o chip da linha 4 (auditoria) com bastão validado e cita no selo «Puxou a próxima fase: chip `task_…` · linha 4 do roteiro».
+
+## Nota da frente 2 (app paris-amigos · 07/10/2026, depois do deploy `6dfb10b`)
+- O portão desta frente abriu: `feat: roteiro paris-amigos-out2026` já está no `origin/main`.
+- **Mudou o escopo a favor desta frente**: por pedido do Tobia (07/10), o app **não tem abas de bairro**. Ele tem uma aba 🏘️ Bairros que só aponta pra `https://tsferraro.github.io/viagem/paris.html` e pra `marais/`. Os bairros dos dias deles (ilhas, Saint-Germain/Luxembourg, Tuileries, Montmartre) existem **só** aqui.
+- O campo de aprofundamento recolhido existe: `aprofundar` (HTML, só em `card`) · ver `references/data-schema.md`.
+- Correções do factcheck que valem pra matéria-prima `entregas/paris-bairros-out2026.md`: Luxembourg 1-15/out abre 7h45-18h45 · carrossel do Luxembourg em 48.84622, 2.33420 (canto sudoeste) · Place de Furstemberg aberta c. 1699 (não 1691) · Saint-Germain-des-Prés é "uma das igrejas mais antigas" (o campanário, c. 990, é o mais antigo) · Pont Saint-Louis: 1ª ponte concluída em 1634 · Point Zéro é de latão, 1769 "segundo a tradição" · tirolesa do Ludo Jardin é da área 7-12 · Square Barye → Alma pela linha 7 (Sully-Morland). Detalhe e URLs: `paris-amigos/FACTCHECK-2026-10-07.md`.

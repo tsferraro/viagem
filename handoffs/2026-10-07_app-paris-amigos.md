@@ -1,5 +1,5 @@
 ---
-status: aberto
+status: consumido
 de: sessão "Roteiro de viagem Paris" (local_a7da077a · 06-07/10/2026 · pré-roteiro aprovado)
 para: sessão nova · construir o app paris-amigos-out2026
 ---
@@ -73,14 +73,20 @@ Os 4 motivos (GLOBAL § 10a-bis). Paradas combinadas:
 ## Decidi sozinho
 | Decisão | Por quê | Como desfazer | Custo se errado |
 |---|---|---|---|
+| **Sem abas de bairro no app**: uma aba 🏘️ Bairros com link pra `paris.html` e `marais/` | pedido do Tobia no meio da onda (07/10): "coloque links pra cidade de Paris… que vão entrar os bairros na sessão paralela" | recriar abas no `data.json` | baixo |
+| Saída Square Barye → Alma às **15:35** (era 15:45), pela linha 7 em Sully-Morland | factcheck: a linha 10 do roteiro não cruza a 9 e a família perderia o barco das 16:30 | `data.json`, Sáb 10 | baixo |
+| Tuileries → Atelier por **Nation** (L1 → L9, ~25 min), não por Franklin D. Roosevelt | factcheck: mais rápido, sem voltar pra oeste | `data.json`, Seg 12 | baixo |
+| Notre-Dame: tentar reserva já na **qui 8** | fontes divergem sobre quando abre; o PDF dizia "no próprio domingo" (era sábado) | nota de sex 9 | baixo |
+| `audit.py` e `factcheck-gate.py` passam a ler o campo `aprofundar` (fora dos N4 nomeados) | sem isso o campo novo seria canal fora da cobrança de proveniência | reverter 2 linhas no `e3debc8` | baixo |
+| `validate.py` usa o tempdir do sistema, não `/tmp` fixo | o sandbox nega `/tmp`; o validate quebrava | reverter 1 linha | nenhum |
 
 ## Roteiro de fases
 | # | Fase / passo | Quando | Quem / bastão | Chip | Depende de |
 |---|---|---|---|---|---|
 | 1 | Pesquisa + pré-roteiro + PDF aprovado | 06-07/10 | sessão local_a7da077a | — | ✅ `d23d0b9` |
-| 2 | **App paris-amigos-out2026** (fases 2-5 do pipeline) | agora · até qui 8/out 22h | esta sessão | este | 1 |
+| 2 | **App paris-amigos-out2026** (fases 2-5 do pipeline) | ✅ 07/10 · `6dfb10b` (template `e3debc8`) | sessão local_9f1d9a16 | este | 1 |
 | 3 | Coletâneas de bairro no `paris.html` | depois do 2 no ar | handoff `2026-10-07_coletaneas-bairros-paris.md` | já criado pela sessão-mãe | 2 (evita colisão na landing) |
-| 4 | Auditoria externa do app (CLAUDE.md passo 11) | qua 8 ou qui 9 | sessão AUDITORA nova | **esta sessão cria** | 2 |
+| 4 | Auditoria externa do app (CLAUDE.md passo 11) | qua 8 ou qui 9 | sessão AUDITORA nova | chip `task_9ef64697` | 2 ✅ |
 | 5 | Campo + `wrap-up.sh` + balanço de fontes | depois de 15/out | Tobia + sessão | — | viagem |
 
 ## 🔒 CONGELADO
@@ -119,3 +125,7 @@ FACTCHECK por subagentes Opus céticos (contexto limpo) → `paris-amigos/FACTCH
 
 ## 🧭 Ao fechar: puxar a próxima fase
 Atualiza o «Roteiro de fases» deste handoff (linha 2 ✅ com hash), troca `status: aberto` → `consumido`, cria o chip da linha 4 (auditoria externa) com bastão validado e cita no selo «Puxou a próxima fase: chip `task_…` · linha 4 do roteiro». A linha 3 já tem chip, criado pela mãe.
+
+## Selo de fechamento (07/10/2026)
+No ar: https://tsferraro.github.io/viagem/paris-amigos/ (HTTP 200) · 5 gates verdes · factcheck 218 afirmações (162 OK · 16 ERRO corrigidos · 29 RISCO · 11 INCONCLUSIVO) · forma 35/40.
+Puxou a próxima fase: chip `task_9ef64697` · linha 4 do roteiro.
