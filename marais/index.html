@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>🗺️ Walking Tours · Le Marais (Paris)</title>
+<!-- Atalho na Home Screen (iOS/Android). O iOS ignora SVG em apple-touch-icon:
+     sem PNG de verdade o atalho vira screenshot da página. `apple-mobile-web-app-title`
+     é o rótulo — o iPhone trunca por volta de 12 chars, daí `app_short_name` no data.json.
+     ⛔ NÃO adicionar `apple-mobile-web-app-capable`: em standalone o iOS abre os links
+     externos (Maps, sites oficiais, o CSV do My Maps) dentro do app sem botão de voltar,
+     que é a mesma armadilha já documentada no CLAUDE.md pro download do pois.csv. -->
+<meta name="apple-mobile-web-app-title" content="Walking Tours · Paris">
+<meta name="application-name" content="Walking Tours · Paris">
+<meta name="description" content="Família · Profundo · Guloso · Museus · Lojas">
+<meta name="theme-color" content="#6b21a8">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="🗺️ Walking Tours · Le Marais (Paris)">
+<meta property="og:description" content="Família · Profundo · Guloso · Museus · Lojas">
+<meta property="og:url" content="https://tsferraro.github.io/viagem/marais/">
+<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://tsferraro.github.io/viagem/marais/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <style>
 /* ============================================================
@@ -128,6 +149,14 @@ body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .stop-card.expanded .stop-body,.stop-card.expanded .stop-imperdivel,.stop-card.expanded .stop-dicas{display:block}
 .stop-card.expanded .stop-meta{display:flex}
 .stop-card.expanded .stop-source-links{display:flex}
+.stop-card .stop-mais{display:none;margin-top:10px;border:1px solid var(--line);border-radius:12px;background:var(--line-soft)}
+.stop-card.expanded .stop-mais{display:block}
+.stop-mais>summary{cursor:pointer;padding:9px 12px;font-size:13px;font-weight:700;color:var(--day-color);list-style:none}
+.stop-mais>summary::-webkit-details-marker{display:none}
+.stop-mais>summary::after{content:' ▸';color:var(--muted)}
+.stop-mais[open]>summary::after{content:' ▾'}
+.stop-mais-body{padding:0 12px 12px;font-size:14px;line-height:1.55}
+.stop-mais-body p{margin:0 0 8px}
 .chev{position:absolute;right:13px;top:15px;width:24px;height:24px;border-radius:50%;background:var(--line-soft);color:var(--muted);font-size:10px;display:flex;align-items:center;justify-content:center;transition:transform .22s,background .15s}
 .stop-card.expanded .chev{transform:rotate(180deg);background:color-mix(in srgb,var(--day-color) 14%,#fff);color:var(--day-color)}
 .stop-head{display:flex;align-items:flex-start;gap:12px;padding-right:26px}
@@ -2703,6 +2732,7 @@ function renderCard(stop,isNow,done){
       <div class="stop-dicas-title">💡 Dicas</div>
       <ul>${stop.dicas.map(d=>`<li>${d}</li>`).join('')}</ul>
     </div>`:''}
+    ${stop.aprofundar?`<details class="stop-mais"><summary>📖 Quer saber mais?</summary><div class="stop-mais-body">${stop.aprofundar}</div></details>`:''}
     ${(stop.duracao||stop.custo||stop.acessibilidade)?`<div class="stop-meta">
       ${stop.duracao?`<span>⏱️ ${stop.duracao}</span>`:''}
       ${stop.custo?`<span>💵 ${stop.custo}</span>`:''}
@@ -2881,6 +2911,10 @@ function updateReservasNote(){
   el.innerHTML=complete?`<div class="reservas-done">✅ Reservas completas (${st.doneReservas}/${st.totalReservas})</div>`:'';
 }
 
+// Bairro com 📍 na frente só se o texto já não começar com emoji (antes saía "📍 📍 Paris" e
+// "📍 ⛪ Île de la Cité" · print do Tobia 2026-10-08).
+function comPino(t){ t=t||''; return /^\p{Extended_Pictographic}/u.test(t)?t:`📍 ${t}`; }
+
 function renderDay(day){
   const periodos=['manha','tarde','noite'];
   const bigEmoji=(day.stops.find(s=>s.tipo==='card')||day.stops[0]||{}).emoji||'📍';
@@ -2894,13 +2928,19 @@ function renderDay(day){
   const doneKicker=checkable.length?`<span class="grp">✓ ${doneCount}/${checkable.length} feitas</span>`:'';
 
   // Kicker: trip mostra "Dia N de M" · city mostra o tema-curto (label do tema) sem contagem/data
-  const kickerLabel=IS_TRIP?`🗽 Dia ${state.selIdx+1} de ${DAYS.length}`:`📍 ${day.temaCurto||day.tema.split('·')[0].trim()}`;
+  // Aba sem data (pool/bairros · `date` = só emoji, sem dígito) não é "Dia N": mostra o tema-curto.
+  // A contagem "Dia N de M" conta só as abas datadas (antes: "Dia 8 de 8" numa aba de bairros · 2026-10-08).
+  const datado=d=>/\d/.test(d.date||'');
+  const nDatados=DAYS.filter(datado).length;
+  const kickerLabel=(IS_TRIP&&datado(day))
+    ?`📅 Dia ${DAYS.slice(0,state.selIdx+1).filter(datado).length} de ${nDatados}`
+    :`📍 ${day.temaCurto||day.tema.split('·')[0].trim()}`;
   const heroAndNota=`<div class="day-hero" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}" data-bigemoji="${bigEmoji}">
       <div class="hero-inner">
         <span class="hero-kicker">${kickerLabel}${day.grupo?'<span class="grp">👥 Família junta</span>':doneKicker}</span>
-        ${IS_TRIP?`<div class="hero-date">${dow} · ${dm}</div>`:''}
+        ${(IS_TRIP&&datado(day))?`<div class="hero-date">${dow} · ${dm}</div>`:''}
         <div class="hero-title">${day.tema}</div>
-        <div class="hero-bairro">📍 ${day.bairro}</div>
+        <div class="hero-bairro">${comPino(day.bairro)}</div>
       </div>
     </div>
     ${day.nota?`<div class="day-nota">${day.nota}</div>`:''}`;
@@ -3049,7 +3089,7 @@ function renderOverview(){
         </div>
         <div class="ov-body">
           <div class="ov-tema">${d.tema}</div>
-          <div class="ov-meta"><span>📍 ${d.bairro}</span>${d.grupo?'<span class="ov-grp">👥 família</span>':''}</div>
+          <div class="ov-meta"><span>${comPino(d.bairro)}</span>${d.grupo?'<span class="ov-grp">👥 família</span>':''}</div>
           <div class="ov-attr"><b>★</b> ${main}</div>
           ${wtButtons}
         </div>
@@ -3439,7 +3479,9 @@ function bindCardHandlers(){
     if(c.__bound) return;
     c.__bound=true;
     c.addEventListener('click',e=>{
-      if(e.target.closest('a, button')) return;
+      // .stop-mais = aprofundamento recolhido (campo opcional `aprofundar` · 2026-10-07):
+      // abrir/fechar o bloco ou ler dentro dele não pode recolher o card.
+      if(e.target.closest('a, button, .stop-mais')) return;
       c.classList.toggle('expanded');
     });
   });
