@@ -1,5 +1,5 @@
 ---
-status: aberto
+status: consumido
 de: sessão "Roteiro de viagem Paris" (local_a7da077a · 06-07/10/2026)
 para: sessão nova · coletâneas de bairro de Paris no formato Marais
 ---
@@ -71,8 +71,8 @@ Os 4 motivos (GLOBAL § 10a-bis). Paradas combinadas:
 |---|---|---|---|---|---|
 | 1 | Levantamento dos 5 bairros | 06/10 | sessão local_a7da077a | — | ✅ `fdd9b17` |
 | 2 | App paris-amigos-out2026 | até qui 8/out | handoff `2026-10-07_app-paris-amigos.md` | criado pela mãe | 1 |
-| 3 | **Coletâneas: um bairro por onda** (Saint-Germain ✅ `3869f3f` · 07/10 · 30 abertos resolvidos `386ecd8` · Quartier Latin ✅ `2de8bf5` · Ilhas ✅ `dedd543` · Louvre/Tuileries ✅ `569588d` · 08/10), na ordem Saint-Germain → Quartier Latin → Ilhas → Louvre/Tuileries → Montmartre | depois do 2 no ar | esta sessão | este | 2 |
-| 4 | Auditoria externa das coletâneas | depois do 3 | sessão AUDITORA nova | **esta sessão cria** | 3 |
+| 3 | **Coletâneas: um bairro por onda** (Saint-Germain ✅ `3869f3f` · 07/10 · 30 abertos resolvidos `386ecd8` · Quartier Latin ✅ `2de8bf5` · Ilhas ✅ `dedd543` · Louvre/Tuileries ✅ `569588d` · Montmartre ✅ `7ad9360` · 08/10) ✅, na ordem Saint-Germain → Quartier Latin → Ilhas → Louvre/Tuileries → Montmartre | depois do 2 no ar | esta sessão | este | 2 ✅ |
+| 4 | Auditoria externa das coletâneas | depois do 3 | sessão AUDITORA nova | chip `task_296946a4` (criado 08/10) | 3 |
 
 ## 🔒 CONGELADO
 - `marais/` (coletânea pronta, em uso) · `paris-fds/` · `paris-amigos/` (dona: frente 2). Não editar.
@@ -112,3 +112,8 @@ Atualiza o «Roteiro de fases» (linha 3 ✅ com os hashes por bairro), troca `s
 - **Mudou o escopo a favor desta frente**: por pedido do Tobia (07/10), o app **não tem abas de bairro**. Ele tem uma aba 🏘️ Bairros que só aponta pra `https://tsferraro.github.io/viagem/paris.html` e pra `marais/`. Os bairros dos dias deles (ilhas, Saint-Germain/Luxembourg, Tuileries, Montmartre) existem **só** aqui.
 - O campo de aprofundamento recolhido existe: `aprofundar` (HTML, só em `card`) · ver `references/data-schema.md`.
 - Correções do factcheck que valem pra matéria-prima `entregas/paris-bairros-out2026.md`: Luxembourg 1-15/out abre 7h45-18h45 · carrossel do Luxembourg em 48.84622, 2.33420 (canto sudoeste) · Place de Furstemberg aberta c. 1699 (não 1691) · Saint-Germain-des-Prés é "uma das igrejas mais antigas" (o campanário, c. 990, é o mais antigo) · Pont Saint-Louis: 1ª ponte concluída em 1634 · Point Zéro é de latão, 1769 "segundo a tradição" · tirolesa do Ludo Jardin é da área 7-12 · Square Barye → Alma pela linha 7 (Sully-Morland). Detalhe e URLs: `paris-amigos/FACTCHECK-2026-10-07.md`.
+
+## Selo de fechamento (08/10/2026)
+- 5 coletâneas no ar, listadas em `paris.html` (HTTP 200 nas 5) · FACTCHECK por bairro, 0 itens em aberto em todos.
+- Puxou a próxima fase: chip `task_296946a4` · linha 4 do roteiro (auditoria externa).
+- Balanço de fontes: nenhuma fonte do `fontes/registro.json` embarcou (a única de Paris, `ontheluce`, não foi usada) · nada a gravar.
