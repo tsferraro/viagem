@@ -54,7 +54,7 @@ Nada pendente de merge: o roteiro aprovado está no `main` (commit `d23d0b9`) e 
 | 6 | Dias enxutos (logística + horário) · abas de bairro com história · **o aprofundamento vai em bloco expande/recolhe, recolhido por padrão** | Tobia 07/10 |
 | 7 | Card da segunda à noite "🍷 Noite só de vocês duas" com as **8 opções**, ⭐ em Café de l'Homme e Freddy's → Prescription | Tobia 07/10 (D11) |
 | 8 | Ajustes de campo da esposa do Tobia (07/10): táxi em Orly, não Uber · **sem Berthillon** como parada · Bateaux-Mouches: "a gente compra" (anfitriões) · bloco "Preparar a Disney" na segunda 16:30 · Grande Galerie de l'Évolution destacada no percurso Família do Quartier Latin | Tobia 07/10 |
-| 9 | Pônei fora · Montmartre fora dos dias (🔄 alternativa na segunda + aba de bairro) | Kel/Tobia 06/10 |
+| 9 | Pônei fora · Montmartre fora dos dias (🔄 alternativa na segunda + aba de bairro) | amiga/Tobia 06/10 |
 | 10 | Ingresso da Disney já comprado pra terça: não mexer | Tobia 06/10 |
 
 ## Envelope de autonomia
