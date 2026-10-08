@@ -1,0 +1,2621 @@
+{
+  "title": "🗺️ Walking Tours · Île de la Cité + Île Saint-Louis (Paris)",
+  "auth_emoji": "🗺️",
+  "auth_title": "Walking Tours · Paris",
+  "auth_subtitle": "Île de la Cité · Île Saint-Louis · Notre-Dame · roteiros a pé (sem data)",
+  "header_title": "🗺️ Ilhas · Walking Tours",
+  "header_sub": "Família · Profundo · Guloso · Monumentos",
+  "password": "marais2026",
+  "legend_group_text": "👨‍👩‍👧 Tour ok pra crianças pequenas",
+  "legend_notes_html": "<strong>🗺️ Coletânea de walking tours pelas ilhas do Sena (1er/4e)</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. Na <strong>Île de la Cité</strong> ficam Notre-Dame, a Sainte-Chapelle e a Conciergerie; a <strong>Île Saint-Louis</strong> é o oposto: uma ilha urbanizada a partir de 1614, com um parquinho na ponta leste. <strong>👶 Família</strong>: mercado de flores, Point Zéro, nave de Notre-Dame, Pont Saint-Louis e o parquinho do Square Barye. <strong>🎨 Profundo</strong>: em 2 partes, a Cité (Vert-Galant a Notre-Dame) e a Île Saint-Louis. <strong>🍫 Guloso</strong>: duas paradas na Île Saint-Louis. <strong>🏛️ Monumentos</strong>: cardápio dos que pedem ingresso. <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>📍 Pinos</strong>: posições copiadas do OpenStreetMap. <strong>🗓️ Dias de fechar</strong>: o Square Jean-XXIII (parquinho atrás de Notre-Dame) está fechado de 1/set/2023 a 30/jun/2027; o Square de l'Île-de-France (com o Mémorial da Déportação), de 24/ago/2026 a jun/2027; a Crypte archéologique, desde 28/jun/2026, sem data de reabertura divulgada.",
+  "links_map": {
+    "Marché aux fleurs Reine-Elizabeth-II (place Louis-Lépine, 4e)": [
+      {
+        "type": "review",
+        "label": "Visit Paris Region · Marché aux fleurs",
+        "url": "https://www.visitparisregion.com/fr/marche-aux-fleurs-reine-elizabeth-ii"
+      }
+    ],
+    "Point Zéro des routes de France (parvis de Notre-Dame, 4e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · le Point Zéro réinstallé",
+        "url": "https://www.paris.fr/pages/le-point-zero-reinstalle-sur-le-parvis-de-notre-dame-de-paris-31306"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Point Zéro",
+        "url": "https://www.pariszigzag.fr/insolite/lieux-insolites/point-zero-de-paris/"
+      }
+    ],
+    "Cathédrale Notre-Dame de Paris · a nave (6 parvis Notre-Dame, 4e)": [
+      {
+        "type": "review",
+        "label": "Plein Soleil · visitar Notre-Dame",
+        "url": "https://www.pleinsoleilparis.fr/visiter-notre-dame-de-paris-en-ce-moment-acces-horaires-et-reservation/"
+      },
+      {
+        "type": "review",
+        "label": "Secrets of Paris · visiting Notre-Dame",
+        "url": "https://www.secretsofparis.com/sightseeing/museums-monuments/visiting-notre-dame/"
+      }
+    ],
+    "Pont Saint-Louis (entre as duas ilhas, 4e)": [
+      {
+        "type": "review",
+        "label": "Wikipédia (fr) · Pont Saint-Louis",
+        "url": "https://fr.wikipedia.org/wiki/Pont_Saint-Louis"
+      }
+    ],
+    "Square Barye (2 bd Henri-IV, Île Saint-Louis)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square Barye",
+        "url": "https://www.paris.fr/lieux/square-barye-29"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · Square Jean-XXIII",
+        "url": "https://www.paris.fr/lieux/square-jean-xxiii-35"
+      }
+    ],
+    "Square du Vert-Galant (ponta oeste da Cité, 1er)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square du Vert-Galant",
+        "url": "https://www.paris.fr/lieux/square-du-vert-galant-2825"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Square du Vert-Galant",
+        "url": "https://en.wikipedia.org/wiki/Square_du_Vert-Galant"
+      }
+    ],
+    "Pont Neuf + estátua de Henrique IV (1er)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Pont Neuf",
+        "url": "https://en.wikipedia.org/wiki/Pont_Neuf"
+      }
+    ],
+    "Place Dauphine (1er)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Place Dauphine",
+        "url": "https://en.wikipedia.org/wiki/Place_Dauphine"
+      }
+    ],
+    "Sainte-Chapelle · a história (8 bd du Palais, 1er)": [
+      {
+        "type": "review",
+        "label": "Hérodote · 26 de abril de 1248",
+        "url": "https://www.herodote.net/26_avril_1248-evenement-12480426.php"
+      },
+      {
+        "type": "review",
+        "label": "Plein Soleil · Sainte-Chapelle",
+        "url": "https://www.pleinsoleilparis.fr/visite-de-la-sainte-chapelle-a-paris-billets-horaires-et-conseils/"
+      }
+    ],
+    "Conciergerie · a história (2 bd du Palais, 1er)": [
+      {
+        "type": "review",
+        "label": "Story of a City · a Conciergerie",
+        "url": "https://www.storyofacity.com/2020/09/29/conciergerie-royal-residence-infamous-prison/"
+      }
+    ],
+    "Notre-Dame · a fachada e a flecha (parvis, 4e)": [
+      {
+        "type": "official",
+        "label": "Ministério da Cultura · as 16 estátuas",
+        "url": "https://www.culture.gouv.fr/regions/drac-ile-de-france/Actualites/actualite-a-la-une/Les-16-statues-de-la-fleche-de-Notre-Dame-de-Paris-enfin-reunies"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · a Galeria dos Reis",
+        "url": "https://www.pariszigzag.fr/?p=65668"
+      }
+    ],
+    "Pont Saint-Louis · a ilha fabricada (4e)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Île Saint-Louis",
+        "url": "https://en.wikipedia.org/wiki/%C3%8Ele_Saint-Louis"
+      }
+    ],
+    "19 quai de Bourbon (4e)": [
+      {
+        "type": "official",
+        "label": "Musée Camille Claudel · biografia",
+        "url": "https://www.museecamilleclaudel.fr/en/collections/camille-claudel-biography/1893-1908-period-solitary-creation"
+      }
+    ],
+    "Rue Saint-Louis-en-l'Île (eixo central, 4e)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Île Saint-Louis",
+        "url": "https://en.wikipedia.org/wiki/%C3%8Ele_Saint-Louis"
+      }
+    ],
+    "Église Saint-Louis-en-l'Île (19 bis rue Saint-Louis-en-l'Île, 4e)": [
+      {
+        "type": "official",
+        "label": "Diocese de Paris · Saint-Louis-en-l'Île",
+        "url": "https://dioceseparis.fr/-saint-louis-en-l-ile-.html"
+      }
+    ],
+    "Hôtel Lambert (quai d'Anjou, 4e)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Hôtel Lambert",
+        "url": "https://en.wikipedia.org/wiki/H%C3%B4tel_Lambert"
+      }
+    ],
+    "Square Barye · o fecho (2 bd Henri-IV, 4e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square Barye",
+        "url": "https://www.paris.fr/lieux/square-barye-29"
+      }
+    ],
+    "Le Saint-Régis · a salgada (6 rue Jean-du-Bellay, 4e)": [
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Le Saint-Régis",
+        "url": "https://www.sortiraparis.com/en/hotels-and-restaurants/restaurant/articles/269861-le-saint-regis-la-brasserie-100-parisienne-de-l-ile-saint-louis"
+      }
+    ],
+    "Le Flore en l'Île (42 quai d'Orléans, 4e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Le Flore en l'Île",
+        "url": "https://www.pariszigzag.fr/bar-restaurant/restaurant/flore-ile-saint-louis/"
+      }
+    ],
+    "Sainte-Chapelle (8 bd du Palais, 1er)": [
+      {
+        "type": "official",
+        "label": "Sainte-Chapelle (site oficial)",
+        "url": "https://www.sainte-chapelle.fr/en/"
+      },
+      {
+        "type": "official",
+        "label": "CMN · tarifas 2026",
+        "url": "https://www.monuments-nationaux.fr/en/groups-tourism-professionals/what-is-advance-ticketing/rates-2026"
+      },
+      {
+        "type": "review",
+        "label": "Plein Soleil · Sainte-Chapelle",
+        "url": "https://www.pleinsoleilparis.fr/visite-de-la-sainte-chapelle-a-paris-billets-horaires-et-conseils/"
+      }
+    ],
+    "Conciergerie (2 bd du Palais, 1er)": [
+      {
+        "type": "official",
+        "label": "Conciergerie (site oficial)",
+        "url": "https://www.paris-conciergerie.fr/en/"
+      }
+    ],
+    "Torres de Notre-Dame (parvis, 4e)": [
+      {
+        "type": "official",
+        "label": "Torres de Notre-Dame (site oficial)",
+        "url": "https://www.tours-notre-dame-de-paris.fr/en/"
+      },
+      {
+        "type": "review",
+        "label": "Routard · as torres reabrem",
+        "url": "https://www.routard.com/fr/mag/actu/a/notre-dame-les-tours-rouvrent-enfin-au-public"
+      }
+    ]
+  },
+  "transit_map": {
+    "Chegada · Métro L4 → Cité": {
+      "metro": "L10 até Odéon (que é conexão com a L4) e L4 até Cité · o único acesso da estação Cité dá na place Louis-Lépine, na Île de la Cité, junto do mercado de flores e perto de Notre-Dame e da Sainte-Chapelle"
+    },
+    "Volta · Métro Sully-Morland (L7)": {
+      "metro": "Estação da L7 sob o quai des Célestins, no cruzamento do boulevard Morland com o boulevard Henri-IV, junto da Pont de Sully"
+    }
+  },
+  "bairros_config": [
+    {
+      "nome": "⛪ Île de la Cité · Notre-Dame",
+      "latMin": 48.8525,
+      "latMax": 48.8585,
+      "lngMin": 2.3385,
+      "lngMax": 2.3515
+    },
+    {
+      "nome": "🌉 Île Saint-Louis",
+      "latMin": 48.8485,
+      "latMax": 48.8535,
+      "lngMin": 2.3515,
+      "lngMax": 2.3625
+    },
+    {
+      "nome": "📍 Paris",
+      "fallback": true
+    }
+  ],
+  "wt_labels": "letters",
+  "historia": [
+    {
+      "titulo": "⛪ Onde Paris começou · a Cité e a Île Saint-Louis",
+      "prosa_html": "<p>A Île de la Cité é onde Paris começou, e os parisienses levam isso ao pé da letra: na frente de Notre-Dame, uma rosa dos ventos de <strong>latão</strong> marca o <strong>Point Zéro</strong>, de onde se medem as estradas da França. Segundo a tradição, Luís XV fixou o ponto em <strong>1769</strong>; o medalhão é de <strong>1924</strong>, e a peça de hoje é uma réplica idêntica, recolocada em 2025. Antes, ali ficava a \"escada da justiça\", o poste diante do qual os condenados se ajoelhavam. A poucos passos, a fachada da catedral guarda uma vingança: em <strong>1793</strong>, os revolucionários decapitaram as <strong>28</strong> estátuas de reis de Judá da Galeria dos Reis, achando que eram reis da França. Em <strong>1977</strong>, <strong>21</strong> cabeças foram achadas no pátio de um hotel particular da rue de la Chaussée-d'Antin e hoje estão no Museu de Cluny.</p><p>E há uma piada do arquiteto: entre as estátuas da flecha, o apóstolo <strong>São Tomé</strong>, patrono dos arquitetos, tem os traços de Viollet-le-Duc e, ao contrário dos outros, está virado pra obra dele. As <strong>16</strong> estátuas da flecha tinham sido retiradas pra restauro em <strong>11/abr/2019</strong>, poucos dias antes do incêndio de <strong>15/abr/2019</strong>.</p><p>A Île Saint-Louis é o contrário: não nasceu, foi fabricada. Era a <strong>Île Notre-Dame</strong>, que no <strong>séc. XIII</strong>, com a muralha de Philippe Auguste, um canal cortou em duas, mais ou menos onde hoje passa a rue Poulletier; a parte leste virou a <strong>Île aux Vaches</strong>. Sem casas, as ilhotas serviam de pasto e depósito, pra branquear tecidos e, de vez em quando, pra resolver duelos. A partir de <strong>1614</strong>, o empreiteiro <strong>Christophe Marie</strong> e sócios urbanizaram a ilha com ruas retas e perpendiculares a um eixo central, e a Pont Marie leva o nome dele. Os ricos vieram atrás: em <strong>1640</strong>, o financista Jean-Baptiste Lambert de Thorigny contratou <strong>Louis Le Vau</strong> pro palácio que hoje se chama Hôtel Lambert, onde a Galerie d'Hercule, de Charles Le Brun, prefigura a Galeria dos Espelhos de Versalhes. Em <strong>2022</strong>, o palácio foi vendido a Xavier Niel por mais de <strong>€200 milhões</strong>. No 19 quai de Bourbon, <strong>Camille Claudel</strong> instalou seu último ateliê em <strong>janeiro de 1899</strong>, e foi internada em <strong>10 de março de 1913</strong>.</p>",
+      "fontes": [
+        {
+          "o": "paris.fr · le Point Zéro réinstallé",
+          "u": "https://www.paris.fr/pages/le-point-zero-reinstalle-sur-le-parvis-de-notre-dame-de-paris-31306",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "latão",
+            "1º/jul/2025",
+            "quem pisa nele volta um dia a Paris",
+            "1924",
+            "30 cm",
+            "réplica idêntica",
+            "danificado"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · Point Zéro",
+          "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/point-zero-de-paris/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "Point Zéro",
+            "estradas da França",
+            "22/abr/1769",
+            "escada da justiça",
+            "condenados",
+            "se ajoelhavam",
+            "1924"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Point zéro des routes de France",
+          "u": "https://fr.wikipedia.org/wiki/Point_z%C3%A9ro_des_routes_de_France",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "Segundo a tradição",
+            "22/abr/1769"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · a Galeria dos Reis",
+          "u": "https://www.pariszigzag.fr/?p=65668",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "28",
+            "1793",
+            "reis de Judá",
+            "reis da França",
+            "1977",
+            "21 cabeças",
+            "21",
+            "pátio de um hotel particular",
+            "rue de la Chaussée-d'Antin",
+            "Museu de Cluny"
+          ]
+        },
+        {
+          "o": "Diocese de Paris · a restauração de Notre-Dame",
+          "u": "https://dioceseparis.fr/restauration-de-notre-dame-de.html",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "São Tomé",
+            "patrono dos arquitetos",
+            "traços de Viollet-le-Duc",
+            "virado pra obra dele",
+            "11/abr/2019",
+            "15/abr/2019"
+          ]
+        },
+        {
+          "o": "Ministério da Cultura · as 16 estátuas da flecha",
+          "u": "https://www.culture.gouv.fr/regions/drac-ile-de-france/Actualites/actualite-a-la-une/Les-16-statues-de-la-fleche-de-Notre-Dame-de-Paris-enfin-reunies",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "16 estátuas",
+            "11/abr/2019"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Notre-Dame de Paris",
+          "u": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "15/abr/2019",
+            "1163",
+            "Maurice de Sully",
+            "dezembro de 2024"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Île Saint-Louis",
+          "u": "https://en.wikipedia.org/wiki/%C3%8Ele_Saint-Louis",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "Île Notre-Dame",
+            "Île aux Vaches",
+            "rue Poulletier",
+            "duelos",
+            "1614",
+            "Christophe Marie",
+            "Pont Marie",
+            "retas e perpendiculares a um eixo central",
+            "principal rua comercial",
+            "Hôtel Lambert",
+            "1640"
+          ]
+        },
+        {
+          "o": "paris.fr · Huit anecdotes étonnantes sur les îles parisiennes",
+          "u": "https://www.paris.fr/pages/8-anecdotes-etonnantes-sur-les-iles-parisiennes-16403",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "séc. XIII",
+            "Philippe Auguste",
+            "Île aux Vaches",
+            "pasto",
+            "depósito"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · os nomes da Île Saint-Louis",
+          "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/differents-noms-ile-saint-louis/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "séc. XIII",
+            "Philippe Auguste",
+            "branquear tecidos",
+            "Île aux Vaches"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Hôtel Lambert",
+          "u": "https://en.wikipedia.org/wiki/H%C3%B4tel_Lambert",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "Louis Le Vau",
+            "2022",
+            "Xavier Niel",
+            "€200 milhões"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · Hôtel Lambert",
+          "u": "https://www.pariszigzag.fr/?p=140578",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1640",
+            "Jean-Baptiste Lambert de Thorigny",
+            "Galerie d'Hercule",
+            "Charles Le Brun",
+            "prefigura a Galeria dos Espelhos"
+          ]
+        },
+        {
+          "o": "Musée Camille Claudel · 1893-1908",
+          "u": "https://www.museecamilleclaudel.fr/en/collections/camille-claudel-biography/1893-1908-period-solitary-creation",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "janeiro de 1899",
+            "19 quai de Bourbon",
+            "último ateliê"
+          ]
+        },
+        {
+          "o": "Musée Camille Claudel · 1909-1943",
+          "u": "https://www.museecamilleclaudel.fr/en/collections/camille-claudel-biography/1909-1943-period-confinement",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "10 de março de 1913"
+          ]
+        }
+      ]
+    }
+  ],
+  "days": [
+    {
+      "date": "👶",
+      "tema": "Ilhas · Clássico em Família",
+      "temaCurto": "Família",
+      "bairro": "⛪ Île de la Cité → Île Saint-Louis (1er/4e)",
+      "grupo": true,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Catedral, ponte de artistas e parquinho\"</strong>: as duas ilhas do Sena num passeio curto e plano — o mercado de flores, o ritual do Point Zéro, a nave de Notre-Dame, a ponte com artistas de rua e o parquinho da ponta leste. Proposta: descer em <strong>Cité</strong> (L4) · ~1,2 km em linha reta (calculado das coordenadas, o caminho real é um pouco maior) · <strong>10h-15h</strong> com almoço na ilha. A âncora é o parquinho do Square Barye. <strong>Pula sem culpa:</strong> as <strong>torres de Notre-Dame</strong> com criança pequena (424 degraus, sem elevador e sem banheiro) e a <strong>Sainte-Chapelle</strong>, que pede reserva de horário e fila de segurança — ver a aba Monumentos.",
+      "stops": [
+        {
+          "hora": "09:45",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro L4 → Cité",
+          "cat": "L10 até Odéon e troca pra L4 até Cité · o único acesso da estação dá na place Louis-Lépine",
+          "coord": {
+            "lat": 48.8551,
+            "lng": 2.34672
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "💐",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Marché aux fleurs Reine-Elizabeth-II (place Louis-Lépine, 4e)",
+          "cat": "Mercado de flores de 1809 · pavilhões dos anos 1920 · aberto todo dia, até domingo",
+          "sobre": "Mercado de flores inaugurado em <strong>1809</strong>; os <strong>pavilhões de ferro forjado</strong> com teto de vidro são dos <strong>anos 1920</strong>. Dentro ficam <strong>duas fontes Wallace</strong> tombadas. Ganhou o nome da rainha <strong>Elizabeth II</strong> na visita dela a Paris em <strong>2014</strong>.",
+          "imperdivel": "O que observar: as <strong>duas fontes Wallace</strong> dentro do mercado.",
+          "dicas": [
+            "Aberto <strong>todos os dias do ano, 8h-19h30</strong> (inclusive domingo) · entrada grátis",
+            "A Prefeitura programou a reforma dos pavilhões em fases, do outono de <strong>2025</strong> até <strong>2028</strong>, com o mercado funcionando: parte das barracas pode estar fechada ou deslocada",
+            "Fica na saída do <strong>metrô Cité</strong> (L4): é o primeiro passo do passeio e leva uns 10 min, só pra passar entre as barracas",
+            "🚶 <strong>Walking Tour · parada a parada (toque em 🗺️ Mapa pra rota):</strong>",
+            "🚶 <strong>○ Marché aux fleurs</strong> — comece aqui, na saída do metrô Cité",
+            "🚶 <strong>Ⓐ Point Zéro</strong> — no parvis, em frente à catedral: pisar e pedir pra voltar a Paris",
+            "🚶 <strong>Ⓑ Notre-Dame</strong> — a nave, uma visita curta",
+            "🚶 <strong>Ⓒ Pont Saint-Louis</strong> — a passarela entre as ilhas, com artistas de rua na boa estação",
+            "🚶 <strong>Ⓓ Le Saint-Régis</strong> — almoço de brasserie na esquina da ponte",
+            "🚶 <strong>Ⓔ Square Barye</strong> — fecho na ponta leste: parquinho e o Sena aberto"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Entrada grátis",
+          "acessibilidade": "Ao ar livre, sob pavilhões",
+          "coord": {
+            "lat": 48.85546,
+            "lng": 2.34766
+          },
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 👶 Catedral, ponte de artistas e parquinho",
+              "descricao": "Marché aux fleurs → Point Zéro → Notre-Dame → Pont Saint-Louis → Le Saint-Régis (almoço) → Square Barye · ~1,2 km em linha reta (calculado das coordenadas) · tudo plano, com a parada de almoço",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Marché aux fleurs Reine-Elizabeth-II (place Louis-Lépine, 4e)",
+                  "coord": {
+                    "lat": 48.85546,
+                    "lng": 2.34766
+                  },
+                  "mapsQuery": "Marché aux fleurs Reine Elizabeth II, place Louis-Lépine, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Point Zéro des routes de France (parvis de Notre-Dame, 4e)",
+                  "coord": {
+                    "lat": 48.8534,
+                    "lng": 2.34879
+                  },
+                  "mapsQuery": "Point zéro des routes de France, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Cathédrale Notre-Dame de Paris · a nave (6 parvis Notre-Dame, 4e)",
+                  "coord": {
+                    "lat": 48.85294,
+                    "lng": 2.35005
+                  },
+                  "mapsQuery": "Cathédrale Notre-Dame de Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Pont Saint-Louis (entre as duas ilhas, 4e)",
+                  "coord": {
+                    "lat": 48.85276,
+                    "lng": 2.35276
+                  },
+                  "mapsQuery": "Pont Saint-Louis, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Le Saint-Régis (6 rue Jean-du-Bellay, 4e)",
+                  "coord": {
+                    "lat": 48.85293,
+                    "lng": 2.35369
+                  },
+                  "mapsQuery": "Le Saint-Régis, 6 rue Jean du Bellay, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Square Barye (2 bd Henri-IV, Île Saint-Louis)",
+                  "coord": {
+                    "lat": 48.84992,
+                    "lng": 2.35979
+                  },
+                  "mapsQuery": "Square Barye, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Visit Paris Region · Marché aux fleurs Reine-Elizabeth-II",
+              "u": "https://www.visitparisregion.com/fr/marche-aux-fleurs-reine-elizabeth-ii",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "pavilhões de ferro forjado",
+                "teto de vidro",
+                "duas fontes Wallace",
+                "Elizabeth II",
+                "2014",
+                "todos os dias do ano",
+                "8h-19h30",
+                "grátis",
+                "metrô Cité"
+              ]
+            },
+            {
+              "o": "paris.fr · De Napoléon à Elizabeth II, le marché aux fleurs",
+              "u": "https://www.paris.fr/pages/de-napoleon-a-elisabeth-ii-l-eclosion-du-marche-aux-fleurs-de-la-cite-16565",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1809",
+                "anos 1920",
+                "Elizabeth II",
+                "2014"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · o projeto do novo marché aux fleurs (29/03/2024)",
+              "u": "https://www.pariszigzag.fr/paris-au-quotidien/projet-marche-fleurs-cite-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "anos 1920",
+                "2025",
+                "2028",
+                "em fases",
+                "funcionando"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 152843972 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/152843972",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "mercado",
+          "mapsQuery": "Marché aux fleurs Reine Elizabeth II, place Louis-Lépine, Paris"
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🧭",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Point Zéro des routes de France (parvis de Notre-Dame, 4e)",
+          "cat": "Rosa dos ventos de latão · pisa e volta a Paris",
+          "sobre": "O <strong>Point Zéro</strong> é a rosa dos ventos de <strong>latão</strong> no chão do parvis, o ponto de onde se medem as <strong>estradas da França</strong>. A tradição diz que <strong>quem pisa nele volta um dia a Paris</strong>. O desenho do medalhão é de <strong>1924</strong> (cerca de <strong>30 cm</strong>); como o original ficou danificado, a cidade fez uma <strong>réplica idêntica</strong>, recolocada no parvis em <strong>1º/jul/2025</strong>.",
+          "imperdivel": "Ritual pra criança: cada um pisa no medalhão e pede pra voltar a Paris.",
+          "dicas": [
+            "É pequeno e fica no chão do parvis, diante da fachada: olhe pro piso antes de entrar na fila da catedral",
+            "Fica no caminho entre o mercado de flores e a porta da catedral"
+          ],
+          "aprofundar": "<p><strong>A escada da justiça.</strong> Segundo a tradição, Luís XV fixou o ponto em <strong>22/abr/1769</strong>. Antes, ali ficava a \"escada da justiça\", o poste diante do qual os condenados se ajoelhavam.</p>",
+          "duracao": "5 min",
+          "custo": "Grátis",
+          "acessibilidade": "Piso do parvis, ao ar livre",
+          "coord": {
+            "lat": 48.8534,
+            "lng": 2.34879
+          },
+          "fontes": [
+            {
+              "o": "paris.fr · le Point Zéro réinstallé",
+              "u": "https://www.paris.fr/pages/le-point-zero-reinstalle-sur-le-parvis-de-notre-dame-de-paris-31306",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "latão",
+                "1º/jul/2025",
+                "quem pisa nele volta um dia a Paris",
+                "1924",
+                "30 cm",
+                "réplica idêntica",
+                "danificado"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · Point Zéro",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/point-zero-de-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Point Zéro",
+                "estradas da França",
+                "22/abr/1769",
+                "escada da justiça",
+                "condenados",
+                "se ajoelhavam",
+                "1924"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Point zéro des routes de France",
+              "u": "https://fr.wikipedia.org/wiki/Point_z%C3%A9ro_des_routes_de_France",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "Segundo a tradição",
+                "22/abr/1769"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 191031796 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/191031796",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Point zéro des routes de France, Paris"
+        },
+        {
+          "hora": "10:45",
+          "emoji": "⛪",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Cathédrale Notre-Dame de Paris · a nave (6 parvis Notre-Dame, 4e)",
+          "cat": "Catedral reaberta em dez/2024 · entrada grátis",
+          "sobre": "A catedral <strong>reabriu em dezembro de 2024</strong>, depois do incêndio de <strong>15/abr/2019</strong>. A <strong>entrada é grátis</strong>, com ou sem reserva de horário.",
+          "imperdivel": "Brincadeira pra criança: o <strong>galo dourado</strong> da flecha, com <strong>asas de chama</strong> que lembram uma <strong>fênix</strong>, e, na fachada, a estátua decapitada que <strong>segura a própria cabeça</strong> (São Denis).",
+          "dicas": [
+            "Horário: <strong>sáb-dom 8h15-19h30</strong>; <strong>seg-sex 7h50-19h</strong> (quinta até 22h) · a última entrada é 30 min antes de fechar",
+            "A reserva de horário é grátis e ajuda a evitar a fila. As fontes divergem sobre quando as vagas abrem (de <strong>dois dias antes</strong> a <strong>poucas horas antes</strong>): confira no site oficial da catedral",
+            "No domingo há <strong>muitas celebrações</strong> ao longo do dia: confira no site oficial o que isso muda no horário de visita",
+            "Com criança pequena a nave funciona se a visita for curta: é alta, escura e silenciosa",
+            "Dentro, repare nas <strong>1.500 cadeiras de carvalho</strong> (design de Ionna Vautrin) e no altar de <strong>bronze</strong> de Guillaume Bardet"
+          ],
+          "duracao": "30-40 min",
+          "custo": "Grátis",
+          "acessibilidade": "Confira o acesso no site oficial da catedral",
+          "coord": {
+            "lat": 48.85294,
+            "lng": 2.35005
+          },
+          "fontes": [
+            {
+              "o": "Plein Soleil · visitar Notre-Dame",
+              "u": "https://www.pleinsoleilparis.fr/visiter-notre-dame-de-paris-en-ce-moment-acces-horaires-et-reservation/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "dezembro de 2024",
+                "grátis",
+                "7h50-19h",
+                "quinta até 22h",
+                "8h15-19h30",
+                "30 min",
+                "muitas celebrações",
+                "dois dias antes",
+                "última entrada"
+              ]
+            },
+            {
+              "o": "Secrets of Paris · visiting Notre-Dame",
+              "u": "https://www.secretsofparis.com/sightseeing/museums-monuments/visiting-notre-dame/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "grátis, com ou sem reserva",
+                "72 horas",
+                "7h50-19h",
+                "8h15-19h30"
+              ]
+            },
+            {
+              "o": "Familin'Paris · visite de Notre-Dame",
+              "u": "https://www.familinparis.fr/en/visite-notre-dame-de-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "poucas horas antes",
+                "grátis",
+                "8h15-19h30",
+                "7h50-19h"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Notre-Dame de Paris",
+              "u": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "15/abr/2019",
+                "1163",
+                "Maurice de Sully",
+                "dezembro de 2024"
+              ]
+            },
+            {
+              "o": "Smithsonian · o novo galo da flecha",
+              "u": "https://www.smithsonianmag.com/smart-news/notre-dame-cathedral-gets-new-spire-and-golden-rooster-180983465/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "galo dourado",
+                "asas de chama",
+                "fênix"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · a fonte de Saint-Denis",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/fontaine-femmes-fideles-square-suzanne-buisson/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "estátua decapitada",
+                "segura a própria cabeça",
+                "fachada"
+              ]
+            },
+            {
+              "o": "Diocese de Paris · o mobiliário litúrgico de Notre-Dame",
+              "u": "https://dioceseparis.fr/notre-dame-devoile-son-futur.html",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1.500 cadeiras",
+                "carvalho",
+                "Ionna Vautrin",
+                "Guillaume Bardet",
+                "bronze"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 201611261 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/201611261",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Cathédrale Notre-Dame de Paris"
+        },
+        {
+          "hora": "11:45",
+          "emoji": "🌉",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pont Saint-Louis (entre as duas ilhas, 4e)",
+          "cat": "A passarela entre a Cité e a Île Saint-Louis · palco de rua",
+          "sobre": "A ponte que liga a Cité à Île Saint-Louis é, desde <strong>2014</strong>, fechada à circulação motorizada e reservada a <strong>pedestres e ciclistas</strong>. Na boa estação, <strong>artistas de rua</strong> animam a ponte.",
+          "imperdivel": "O que observar: do meio da ponte, a ilha à sua frente e o rio dos dois lados.",
+          "dicas": [
+            "Pare uns minutos: o palco de rua é o espetáculo grátis do passeio",
+            "Atenção às <strong>bicicletas</strong>, que dividem a ponte com os pedestres",
+            "Na <strong>rue Saint-Louis-en-l'Île</strong>, a rua comercial da ilha, fica o sorvete <strong>Berthillon</strong> (nº 29-31): é famoso, mas a gente acha que <strong>não vale o hype</strong>"
+          ],
+          "aprofundar": "<p><strong>A primeira ponte.</strong> A primeira ponte aqui foi de madeira, obra de Christophe Marie, e ficou pronta em <strong>1634</strong>. A de hoje, toda de aço, ficou pronta em <strong>1970</strong>.</p>",
+          "duracao": "10 min",
+          "custo": "Grátis",
+          "acessibilidade": "Ponte plana e sem degraus, só com atenção às bicicletas",
+          "coord": {
+            "lat": 48.85276,
+            "lng": 2.35276
+          },
+          "fontes": [
+            {
+              "o": "Wikipédia (fr) · Pont Saint-Louis",
+              "u": "https://fr.wikipedia.org/wiki/Pont_Saint-Louis",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "2014",
+                "pedestres e ciclistas",
+                "artistas de rua",
+                "madeira",
+                "Christophe Marie",
+                "primeira ponte",
+                "A primeira ponte",
+                "1634",
+                "1970",
+                "aço"
+              ]
+            },
+            {
+              "o": "Dica de campo · moradores (07/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-08",
+              "prova": [
+                "não vale o hype"
+              ]
+            },
+            {
+              "o": "Visit Paris Region · Maison Berthillon",
+              "u": "https://www.visitparisregion.com/fr/maison-berthillon",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "29-31",
+                "famoso",
+                "rue Saint-Louis-en-l'Île"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 78329825 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/78329825",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Pont Saint-Louis, Paris"
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Île Saint-Louis",
+          "cat": "Brasserie de esquina ou salão de chá com vista pra Notre-Dame",
+          "coord": {
+            "lat": 48.85293,
+            "lng": 2.35369
+          },
+          "opcoes": [
+            {
+              "nome": "Le Saint-Régis (6 rue Jean-du-Bellay, 4e)",
+              "desc": "Brasserie com vista pra <strong>Pont Saint-Louis</strong>, <strong>aberta todos os dias, do café da manhã até 2h</strong>. O hit da casa é a <strong>brioche perdue</strong> com sorvete de caramelo de manteiga salgada; o cardápio tem <strong>croque Monsieur e Madame</strong> e há brunch aos domingos.",
+              "preco": "Pratos €20-29 · sobremesas €8-15,50 (ficha da Sortir à Paris atualizada em jan/2022: confira o cardápio)",
+              "dist": "perto da Pont Saint-Louis",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Le Saint-Régis, 6 rue Jean du Bellay, Paris",
+              "fontes": [
+                {
+                  "o": "Sortir à Paris · Le Saint-Régis (atualizado em 27/01/2022)",
+                  "u": "https://www.sortiraparis.com/en/hotels-and-restaurants/restaurant/articles/269861-le-saint-regis-la-brasserie-100-parisienne-de-l-ile-saint-louis",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "2h",
+                    "todos os dias",
+                    "brioche perdue",
+                    "sorvete de caramelo de manteiga salgada",
+                    "croque Monsieur e Madame",
+                    "brunch aos domingos",
+                    "domingos",
+                    "crêpes",
+                    "granola com fromage blanc",
+                    "Pont Saint-Louis",
+                    "€20-29",
+                    "€8-15,50",
+                    "jan/2022"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 1528702647 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/1528702647",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.85293,
+                "lng": 2.35369
+              }
+            },
+            {
+              "nome": "Le Flore en l'Île (42 quai d'Orléans, 4e)",
+              "desc": "Brasserie e salão de chá de decoração inspirada nas <strong>brasseries vienenses</strong>, com <strong>terraço de vista pro Sena e pra catedral de Notre-Dame</strong>.",
+              "preco": "Confira o cardápio na hora",
+              "dist": "perto da Pont Saint-Louis",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Le Flore en l'Île, 42 quai d'Orléans, Paris",
+              "fontes": [
+                {
+                  "o": "Paris Zigzag · Le Flore en l'Île (artigo de 13/05/2024)",
+                  "u": "https://www.pariszigzag.fr/bar-restaurant/restaurant/flore-ile-saint-louis/",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "42 quai d'Orléans",
+                    "brasseries vienenses",
+                    "terraço",
+                    "vista pro Sena",
+                    "Notre-Dame"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 1528700502 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/1528700502",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.85267,
+                "lng": 2.35346
+              }
+            }
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🧸",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Square Barye (2 bd Henri-IV, Île Saint-Louis)",
+          "cat": "O parquinho das ilhas · ponta leste da Île Saint-Louis",
+          "sobre": "Jardim de <strong>1938</strong> na ponta leste da Île Saint-Louis, com um <strong>cedro-do-líbano</strong> e o Sena aberto. Tem um monumento ao escultor <strong>Antoine-Louis Barye</strong> (1795-1875); os dois bronzes do monumento, derretidos na Ocupação em <strong>1942</strong>, foram refeitos e recolocados em <strong>2011</strong> e <strong>2014</strong>. <strong>Tem parquinho</strong> (aire de jeux).",
+          "imperdivel": "O que observar: o cedro-do-líbano e o Sena aberto dos dois lados. Foi neste square que a <strong>Lady Gaga</strong> cantou na abertura dos Jogos de <strong>2024</strong>.",
+          "dicas": [
+            "Tem <strong>bebedouro</strong>, mas <strong>sem banheiro e sem trocador</strong>: vá antes, no café do almoço",
+            "A ficha oficial lista o square aberto <strong>24h</strong> no período consultado; os horários de jardim de Paris mudam ao longo do ano, então confira em paris.fr",
+            "O <strong>Square Jean-XXIII</strong>, o parquinho atrás de Notre-Dame, está fechado de <strong>1/set/2023</strong> a <strong>30/jun/2027</strong>: este é o parquinho de reserva da região",
+            "Metrô de volta: <strong>Sully-Morland</strong> (L7), junto da Pont de Sully"
+          ],
+          "duracao": "45 min",
+          "custo": "Grátis",
+          "acessibilidade": "Jardim plano com parquinho · a ficha oficial lista acesso para mobilidade reduzida",
+          "coord": {
+            "lat": 48.84992,
+            "lng": 2.35979
+          },
+          "fontes": [
+            {
+              "o": "paris.fr · Square Barye",
+              "u": "https://www.paris.fr/lieux/square-barye-29",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1938",
+                "cedro-do-líbano",
+                "Barye",
+                "1942",
+                "2011",
+                "2014",
+                "refeitos",
+                "aire de jeux",
+                "bebedouro",
+                "sem banheiro",
+                "sem trocador",
+                "24h",
+                "Sully-Morland",
+                "2 boulevard Henri-IV"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Antoine-Louis Barye",
+              "u": "https://en.wikipedia.org/wiki/Antoine-Louis_Barye",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1795-1875"
+              ]
+            },
+            {
+              "o": "Sortir à Paris · de qual square a Lady Gaga cantou",
+              "u": "https://www.sortiraparis.com/actualites/jeux-olympiques-paris-2024/articles/318285-jo-2024-quel-est-le-square-depuis-lequel-lady-gaga-a-chante-lors-de-la-ceremonie-d-ouverture",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Lady Gaga",
+                "2024",
+                "Square Barye",
+                "26/jul/2024"
+              ]
+            },
+            {
+              "o": "paris.fr · Square Jean-XXIII",
+              "u": "https://www.paris.fr/lieux/square-jean-xxiii-35",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1/set/2023",
+                "30/jun/2027",
+                "aire de jeux"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 33189664 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/33189664",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Square Barye, Paris"
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Volta · Métro Sully-Morland (L7)",
+          "cat": "Estação da L7 no boulevard Henri-IV, junto da Pont de Sully",
+          "coord": {
+            "lat": 48.85142,
+            "lng": 2.36189
+          }
+        }
+      ]
+    },
+    {
+      "date": "🎨",
+      "tema": "Ilhas Profundo · História",
+      "temaCurto": "História",
+      "bairro": "🏛️ Cité (manhã) → Saint-Louis (tarde)",
+      "grupo": false,
+      "cor": "#1d4ed8",
+      "gradA": "#1e3a8a",
+      "gradB": "#3b82f6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Onde Paris começou\"</strong>, em 2 partes. <strong>Parte 1</strong> (manhã) cruza a Île de la Cité do Vert-Galant a Notre-Dame, ~1,0 km em linha reta (calculado das coordenadas): os Templários, a ponte mais antiga, a capela de vidro, a prisão da Maria Antonieta e os reis decapitados. <strong>Parte 2</strong> (tarde) é a Île Saint-Louis, ~0,7 km em linha reta (calculado das coordenadas): a ilha fabricada, Camille Claudel e o palácio de Le Vau. Juntas formam um dia; separadas, duas meias-manhãs. Pensado pra adultos — com criança de 3-4 anos, a aba Família faz o essencial. <strong>Pula sem culpa:</strong> o <strong>Square Jean-XXIII</strong> (atrás de Notre-Dame), <strong>fechado de 1/set/2023 a 30/jun/2027</strong>; o <strong>Square de l'Île-de-France</strong>, na ponta leste da Cité, <strong>fechado de 24/ago/2026 a jun/2027</strong> (o Mémorial des Martyrs de la Déportation fica logo abaixo dele: confira se está acessível); e a <strong>Crypte archéologique</strong>, <strong>fechada desde 28/jun/2026</strong> sem data de reabertura divulgada — confira o estado de cada uma antes de ir.",
+      "stops": [
+        {
+          "hora": "09:00",
+          "emoji": "🌳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Square du Vert-Galant (ponta oeste da Cité, 1er)",
+          "cat": "A proa da ilha · onde os Templários foram queimados",
+          "sobre": "Jardim criado em <strong>1884</strong> na proa da ilha, onde ficava a <strong>Île aux Juifs</strong>, na qual em <strong>1314</strong> o grão-mestre <strong>Jacques de Molay</strong> e outro líder dos Templários foram queimados na fogueira. \"Vert-Galant\" (galante verde) era o apelido de <strong>Henrique IV</strong>, por causa das muitas amantes.",
+          "imperdivel": "O que observar: a <strong>placa</strong> que lembra a execução de Molay, na entrada do square.",
+          "dicas": [
+            "O acesso é por uma <strong>passagem estreita</strong> na Pont Neuf, descendo ao longo de <strong>muros de pedra</strong>; a ficha oficial não informa acessibilidade pra mobilidade reduzida",
+            "O jardim <strong>fecha em caso de vento forte ou intempéries</strong>, e <strong>alaga nas cheias do Sena</strong> (ficou submerso em jan/2018)",
+            "🚶 <strong>Parte 1 · parada a parada (toque em 🗺️ Mapa pra rota):</strong>",
+            "🚶 <strong>○ Square du Vert-Galant</strong> — comece aqui, rente à água, na proa da ilha",
+            "🚶 <strong>Ⓐ Pont Neuf + estátua de Henrique IV</strong> — suba de volta e olhe as carrancas da cornija",
+            "🚶 <strong>Ⓑ Place Dauphine</strong> — a praça triangular atrás do Palácio de Justiça",
+            "🚶 <strong>Ⓒ Sainte-Chapelle</strong> — a capela de vidro de Luís IX",
+            "🚶 <strong>Ⓓ Conciergerie</strong> — a prisão de Maria Antonieta, ao lado",
+            "🚶 <strong>Ⓔ Notre-Dame</strong> — fachada e flecha: a vingança dos reis decapitados",
+            "🚶 <strong>Parte 2 · parada a parada (a segunda rota no mapa, pinos de contorno):</strong>",
+            "🚶 <strong>○ Pont Saint-Louis</strong> — a passarela que leva à ilha fabricada",
+            "🚶 <strong>Ⓐ 19 quai de Bourbon</strong> — a casa e o ateliê de Camille Claudel",
+            "🚶 <strong>Ⓑ Rue Saint-Louis-en-l'Île</strong> — o eixo comercial da ilha",
+            "🚶 <strong>Ⓒ Église Saint-Louis-en-l'Île</strong> — a torre vazada e o relógio sobre a rua",
+            "🚶 <strong>Ⓓ Hôtel Lambert</strong> — o palácio da ponta leste",
+            "🚶 <strong>Ⓔ Square Barye</strong> — fecho na ponta leste, com o Sena aberto"
+          ],
+          "duracao": "30 min",
+          "custo": "Grátis",
+          "acessibilidade": "Escada/passagem estreita pra descer · não informada na ficha oficial",
+          "coord": {
+            "lat": 48.85741,
+            "lng": 2.34033
+          },
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 🏛️ A Île de la Cité, do Vert-Galant a Notre-Dame",
+              "descricao": "Square du Vert-Galant → Pont Neuf → Place Dauphine → Sainte-Chapelle → Conciergerie → Notre-Dame · ~1,0 km em linha reta (calculado das coordenadas) · manhã",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Square du Vert-Galant (ponta oeste da Cité, 1er)",
+                  "coord": {
+                    "lat": 48.85741,
+                    "lng": 2.34033
+                  },
+                  "mapsQuery": "Square du Vert-Galant, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Pont Neuf + estátua de Henrique IV (1er)",
+                  "coord": {
+                    "lat": 48.85714,
+                    "lng": 2.34097
+                  },
+                  "mapsQuery": "Pont Neuf, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Place Dauphine (1er)",
+                  "coord": {
+                    "lat": 48.85641,
+                    "lng": 2.34265
+                  },
+                  "mapsQuery": "Place Dauphine, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Sainte-Chapelle · a história (8 bd du Palais, 1er)",
+                  "coord": {
+                    "lat": 48.85539,
+                    "lng": 2.34499
+                  },
+                  "mapsQuery": "Sainte-Chapelle, 8 boulevard du Palais, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Conciergerie · a história (2 bd du Palais, 1er)",
+                  "coord": {
+                    "lat": 48.85595,
+                    "lng": 2.34603
+                  },
+                  "mapsQuery": "Conciergerie, 2 boulevard du Palais, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Notre-Dame · a fachada e a flecha (parvis, 4e)",
+                  "coord": {
+                    "lat": 48.85294,
+                    "lng": 2.35005
+                  },
+                  "mapsQuery": "Cathédrale Notre-Dame de Paris"
+                }
+              ]
+            },
+            {
+              "nome": "Parte 2 · 🌉 A Île Saint-Louis, a ilha fabricada",
+              "descricao": "Pont Saint-Louis → 19 quai de Bourbon → Rue Saint-Louis-en-l'Île → Église Saint-Louis-en-l'Île → Hôtel Lambert → Square Barye · ~0,7 km em linha reta (calculado das coordenadas) · tarde",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Pont Saint-Louis · a ilha fabricada (4e)",
+                  "coord": {
+                    "lat": 48.85276,
+                    "lng": 2.35276
+                  },
+                  "mapsQuery": "Pont Saint-Louis, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "19 quai de Bourbon (4e)",
+                  "coord": {
+                    "lat": 48.85286,
+                    "lng": 2.35564
+                  },
+                  "mapsQuery": "19 quai de Bourbon, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Rue Saint-Louis-en-l'Île (eixo central, 4e)",
+                  "coord": {
+                    "lat": 48.85156,
+                    "lng": 2.35732
+                  },
+                  "mapsQuery": "Rue Saint-Louis en l'Île, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Église Saint-Louis-en-l'Île (19 bis rue Saint-Louis-en-l'Île, 4e)",
+                  "coord": {
+                    "lat": 48.85128,
+                    "lng": 2.35758
+                  },
+                  "mapsQuery": "Église Saint-Louis-en-l'Île, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Hôtel Lambert (quai d'Anjou, 4e)",
+                  "coord": {
+                    "lat": 48.85099,
+                    "lng": 2.35978
+                  },
+                  "mapsQuery": "Hôtel Lambert, quai d'Anjou, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Square Barye · o fecho (2 bd Henri-IV, 4e)",
+                  "coord": {
+                    "lat": 48.84992,
+                    "lng": 2.35979
+                  },
+                  "mapsQuery": "Square Barye, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Square du Vert-Galant",
+              "u": "https://en.wikipedia.org/wiki/Square_du_Vert-Galant",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1884",
+                "Île aux Juifs",
+                "1314",
+                "Jacques de Molay",
+                "outro líder dos Templários",
+                "placa",
+                "na entrada do square",
+                "Vert-Galant",
+                "apelido de Henrique IV",
+                "amantes",
+                "jan/2018",
+                "alaga nas cheias"
+              ]
+            },
+            {
+              "o": "paris.fr · Square du Vert-Galant",
+              "u": "https://www.paris.fr/lieux/square-du-vert-galant-2825",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1884",
+                "fecha em caso de vento forte",
+                "intempéries",
+                "acessibilidade"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · acesso ao Square du Vert-Galant",
+              "u": "https://www.pariszigzag.fr/?p=205259",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "passagem estreita",
+                "Pont Neuf",
+                "muros de pedra"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 53570787 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/53570787",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "mapsQuery": "Square du Vert-Galant, Paris"
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🌉",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pont Neuf + estátua de Henrique IV (1er)",
+          "cat": "A ponte mais antiga de pé de Paris · 381 carrancas",
+          "sobre": "A \"Ponte Nova\" é a <strong>mais antiga ponte de pé</strong> sobre o Sena em Paris, construída entre <strong>1578 e 1607</strong>, e foi a <strong>primeira ponte de pedra de Paris sem casas em cima</strong>, com calçadas pra proteger o pedestre da lama e dos cavalos. Em <strong>1985</strong>, Christo e Jeanne-Claude <strong>embrulharam a ponte inteira</strong>.",
+          "imperdivel": "O que observar: as <strong>381 carrancas</strong> (mascarons) de pedra: são <strong>cópias</strong> dos originais atribuídos a Germain Pilon, e há originais no Musée Carnavalet.",
+          "dicas": [
+            "A estátua equestre de Henrique IV na ponte foi derrubada em <strong>1792</strong>, durante a Revolução, e a atual foi refeita em <strong>1818</strong>",
+            "\"Ache a carranca mais feia\" é um jogo fácil com criança"
+          ],
+          "duracao": "15 min",
+          "custo": "Grátis",
+          "acessibilidade": "Calçadas na ponte, ao ar livre",
+          "coord": {
+            "lat": 48.85714,
+            "lng": 2.34097
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Pont Neuf",
+              "u": "https://en.wikipedia.org/wiki/Pont_Neuf",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "mais antiga ponte de pé",
+                "1578",
+                "1607",
+                "primeira ponte de pedra de Paris sem casas",
+                "calçadas",
+                "381",
+                "cópias",
+                "Germain Pilon",
+                "Musée Carnavalet",
+                "1792",
+                "1818",
+                "1985",
+                "Christo e Jeanne-Claude"
+              ]
+            },
+            {
+              "o": "paris.fr · Square du Vert-Galant (estátua de Henrique IV)",
+              "u": "https://www.paris.fr/lieux/square-du-vert-galant-2825",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "estátua equestre de Henrique IV",
+                "1818"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 200452259 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/200452259",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Pont Neuf, Paris"
+        },
+        {
+          "hora": "09:50",
+          "emoji": "🏘️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Place Dauphine (1er)",
+          "cat": "Praça triangular de 1607 · tijolo e pedra",
+          "sobre": "Praça <strong>triangular</strong> lançada em <strong>1607-10</strong> por <strong>Henrique IV</strong>, a <strong>segunda</strong> de seus projetos de praças públicas em Paris, depois da Place Royale (hoje <strong>Place des Vosges</strong>). As fachadas misturam <strong>tijolo</strong> e cantos de <strong>pedra calcária</strong>.",
+          "imperdivel": "O que observar: o formato de triângulo.",
+          "dicas": [
+            "Mais pra atravessar do que pra parar: com criança pequena, não há o que fazer na praça"
+          ],
+          "duracao": "10 min",
+          "custo": "Grátis",
+          "acessibilidade": "Praça plana, de pedestres",
+          "coord": {
+            "lat": 48.85641,
+            "lng": 2.34265
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Place Dauphine",
+              "u": "https://en.wikipedia.org/wiki/Place_Dauphine",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1607-10",
+                "triangular",
+                "Henrique IV",
+                "segunda",
+                "Place Royale",
+                "Place des Vosges",
+                "tijolo",
+                "pedra calcária"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 53567907 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/53567907",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "parque",
+          "mapsQuery": "Place Dauphine, Paris"
+        },
+        {
+          "hora": "10:10",
+          "emoji": "🪟",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Sainte-Chapelle · a história (8 bd du Palais, 1er)",
+          "cat": "A capela de vidro de Luís IX · consagrada em 1248",
+          "sobre": "Construída por <strong>Luís IX</strong> entre <strong>1242 e 1248</strong> e <strong>consagrada em 26/abr/1248</strong>, pra guardar a Coroa de Espinhos. O rei <strong>pagou 135.000 libras</strong> pela relíquia, enquanto a construção da capela custou cerca de <strong>40.000 libras</strong>. São <strong>15 vitrais</strong> com <strong>1.113 cenas</strong>.",
+          "imperdivel": "O que observar: a diferença entre as duas capelas. A <strong>baixa</strong> era do pessoal e dos soldados do palácio; a <strong>alta</strong>, de vidro, era da família real e de seus próximos.",
+          "dicas": [
+            "Os 15 vitrais da nave têm <strong>15,50 m</strong> de altura · numa manhã ensolarada, entre <strong>10h e 12h</strong>, o sol bate direto no coro",
+            "Preço, horário e reserva estão na aba Monumentos"
+          ],
+          "duracao": "1h",
+          "custo": "Ver aba Monumentos",
+          "acessibilidade": "Capela alta por escada em caracol: ver aba Monumentos",
+          "coord": {
+            "lat": 48.85539,
+            "lng": 2.34499
+          },
+          "fontes": [
+            {
+              "o": "Hérodote · 26 de abril de 1248",
+              "u": "https://www.herodote.net/26_avril_1248-evenement-12480426.php",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "26/abr/1248",
+                "135.000 libras",
+                "40.000 libras",
+                "Coroa de Espinhos"
+              ]
+            },
+            {
+              "o": "Plein Soleil · visita da Sainte-Chapelle",
+              "u": "https://www.pleinsoleilparis.fr/visite-de-la-sainte-chapelle-a-paris-billets-horaires-et-conseils/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1242 e 1248",
+                "Luís IX",
+                "15 vitrais",
+                "1.113 cenas"
+              ]
+            },
+            {
+              "o": "La Souris Globe-Trotteuse · Sainte-Chapelle",
+              "u": "https://www.lasourisglobe-trotteuse.fr/sainte-chapelle-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "pessoal e soldados do palácio",
+                "família real",
+                "15,50 m",
+                "10h e 12h",
+                "sol bate direto no coro",
+                "1.113 cenas"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · relation 3344870 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/relation/3344870",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Sainte-Chapelle, 8 boulevard du Palais, Paris"
+        },
+        {
+          "hora": "11:30",
+          "emoji": "⛓️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Conciergerie · a história (2 bd du Palais, 1er)",
+          "cat": "O palácio real que virou prisão · Maria Antonieta",
+          "sobre": "Palácio real medieval que foi sede da justiça e prisão, e prendeu <strong>Maria Antonieta</strong> por <strong>76 dias em 1793</strong>, sempre sob guarda e vigiada <strong>24 horas por dia</strong>. No lugar da cela dela hoje há uma <strong>capela expiatória</strong>.",
+          "imperdivel": "O que observar: a capela expiatória que ocupa o lugar da cela (a cela original não existe mais).",
+          "dicas": [
+            "Preço, horário e HistoPad estão na aba Monumentos",
+            "Fica no mesmo boulevard du Palais da Sainte-Chapelle (nº 2 e nº 8): as duas se encaixam na mesma manhã"
+          ],
+          "duracao": "1h",
+          "custo": "Ver aba Monumentos",
+          "coord": {
+            "lat": 48.85595,
+            "lng": 2.34603
+          },
+          "fontes": [
+            {
+              "o": "Story of a City · a Conciergerie",
+              "u": "https://www.storyofacity.com/2020/09/29/conciergerie-royal-residence-infamous-prison/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "76 dias",
+                "1793",
+                "24 horas por dia",
+                "capela expiatória",
+                "a cela original não existe mais"
+              ]
+            },
+            {
+              "o": "Visit Paris Region (pro) · Conciergerie",
+              "u": "https://pro.visitparisregion.com/offre-loisirs-et-affaires/offre-de-la-destination/une-activite/musees-monuments-chateaux/monuments/conciergerie",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "palácio real medieval",
+                "justiça",
+                "prisão"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 910390736 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/910390736",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Conciergerie, 2 boulevard du Palais, Paris"
+        },
+        {
+          "hora": "12:30",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Notre-Dame · a fachada e a flecha (parvis, 4e)",
+          "cat": "Primeira pedra em 1163 · reis decapitados e um apóstolo-arquiteto",
+          "sobre": "A primeira pedra foi lançada em <strong>1163</strong>, no tempo do bispo <strong>Maurice de Sully</strong>. No portal central, o do <strong>Juízo Final</strong>, um anjo pesa as almas. A <strong>Galeria dos Reis</strong> tem <strong>28</strong> estátuas de reis de Judá, que em <strong>1793</strong> foram decapitadas por revolucionários que as tomaram por reis da França.",
+          "imperdivel": "O que observar: entre as estátuas da flecha, o apóstolo <strong>São Tomé</strong>, patrono dos arquitetos, tem os traços de <strong>Viollet-le-Duc</strong> e, ao contrário dos outros, está virado pra obra dele.",
+          "dicas": [
+            "<strong>21 cabeças</strong> da galeria foram achadas em <strong>1977</strong>, no pátio de um hotel particular da <strong>rue de la Chaussée-d'Antin</strong>, e hoje estão no <strong>Museu de Cluny</strong>",
+            "As <strong>16 estátuas</strong> da flecha tinham sido retiradas pra restauro em <strong>11/abr/2019</strong>, poucos dias antes do incêndio de <strong>15/abr/2019</strong>",
+            "Visita da nave (horário e reserva): ver aba Família"
+          ],
+          "duracao": "20 min (por fora)",
+          "custo": "Fachada livre",
+          "acessibilidade": "Parvis plano e aberto",
+          "coord": {
+            "lat": 48.85294,
+            "lng": 2.35005
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Notre-Dame de Paris",
+              "u": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1163",
+                "Maurice de Sully",
+                "15/abr/2019"
+              ]
+            },
+            {
+              "o": "Plein Soleil Paris · história de Notre-Dame",
+              "u": "https://www.pleinsoleilparis.fr/?p=1548",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "primeira pedra",
+                "Primeira pedra",
+                "1163",
+                "Maurice de Sully"
+              ]
+            },
+            {
+              "o": "Cityzeum · o portal do Juízo Final",
+              "u": "https://www.cityzeum.com/le-portail-du-jugement-dernier",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "portal central",
+                "Juízo Final",
+                "anjo",
+                "pesa as almas"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · a Galeria dos Reis",
+              "u": "https://www.pariszigzag.fr/?p=65668",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "28",
+                "1793",
+                "reis de Judá",
+                "reis da França",
+                "1977",
+                "21 cabeças",
+                "21",
+                "pátio de um hotel particular",
+                "rue de la Chaussée-d'Antin",
+                "Museu de Cluny"
+              ]
+            },
+            {
+              "o": "Diocese de Paris · a restauração de Notre-Dame",
+              "u": "https://dioceseparis.fr/restauration-de-notre-dame-de.html",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "São Tomé",
+                "patrono dos arquitetos",
+                "traços de Viollet-le-Duc",
+                "virado pra obra dele",
+                "11/abr/2019",
+                "15/abr/2019"
+              ]
+            },
+            {
+              "o": "Ministério da Cultura · as 16 estátuas da flecha",
+              "u": "https://www.culture.gouv.fr/regions/drac-ile-de-france/Actualites/actualite-a-la-une/Les-16-statues-de-la-fleche-de-Notre-Dame-de-Paris-enfin-reunies",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "16 estátuas",
+                "11/abr/2019"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 201611261 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/201611261",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Cathédrale Notre-Dame de Paris"
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🌉",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pont Saint-Louis · a ilha fabricada (4e)",
+          "cat": "A ilha à sua frente era uma ilhota cortada ao meio",
+          "sobre": "A ilha à sua frente não nasceu pronta. No <strong>séc. XIII</strong>, com a muralha de <strong>Philippe Auguste</strong>, um canal cortou em duas a <strong>Île Notre-Dame</strong>, mais ou menos onde hoje passa a <strong>rue Poulletier</strong>; a parte leste virou a <strong>Île aux Vaches</strong> (\"das vacas\"). Sem casas, as ilhotas serviam de <strong>pasto</strong> e depósito, pra <strong>branquear tecidos</strong> e, de vez em quando, pra resolver <strong>duelos</strong>.",
+          "imperdivel": "O que observar: do meio da ponte, a ilha à frente, hoje toda urbanizada, como o oposto do que era: pasto e depósito.",
+          "dicas": [
+            "A ponte e o palco de rua estão na aba Família"
+          ],
+          "aprofundar": "<p><strong>A primeira ponte.</strong> A primeira ponte aqui foi de madeira, obra de Christophe Marie, e ficou pronta em <strong>1634</strong>. A de hoje, toda de aço, foi terminada em <strong>1970</strong>.</p>",
+          "duracao": "10 min",
+          "custo": "Grátis",
+          "acessibilidade": "Ponte plana, sem degraus",
+          "coord": {
+            "lat": 48.85276,
+            "lng": 2.35276
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Île Saint-Louis",
+              "u": "https://en.wikipedia.org/wiki/%C3%8Ele_Saint-Louis",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "Île Notre-Dame",
+                "Île aux Vaches",
+                "rue Poulletier",
+                "duelos",
+                "1614",
+                "Christophe Marie",
+                "Pont Marie",
+                "retas e perpendiculares a um eixo central",
+                "principal rua comercial",
+                "Hôtel Lambert",
+                "1640"
+              ]
+            },
+            {
+              "o": "paris.fr · Huit anecdotes étonnantes sur les îles parisiennes",
+              "u": "https://www.paris.fr/pages/8-anecdotes-etonnantes-sur-les-iles-parisiennes-16403",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "séc. XIII",
+                "Philippe Auguste",
+                "Île aux Vaches",
+                "pasto",
+                "depósito"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · os nomes da Île Saint-Louis",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/differents-noms-ile-saint-louis/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "séc. XIII",
+                "Philippe Auguste",
+                "branquear tecidos",
+                "Île aux Vaches"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Pont Saint-Louis",
+              "u": "https://fr.wikipedia.org/wiki/Pont_Saint-Louis",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "2014",
+                "pedestres e ciclistas",
+                "artistas de rua",
+                "madeira",
+                "Christophe Marie",
+                "primeira ponte",
+                "A primeira ponte",
+                "1634",
+                "1970",
+                "aço"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 78329825 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/78329825",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Pont Saint-Louis, Paris"
+        },
+        {
+          "hora": "14:15",
+          "emoji": "🗿",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "19 quai de Bourbon (4e)",
+          "cat": "O último endereço e ateliê de Camille Claudel",
+          "sobre": "<strong>Camille Claudel</strong> mudou-se em <strong>janeiro de 1899</strong> pra este endereço, que foi seu último alojamento e ateliê. Em <strong>10 de março de 1913</strong> ela foi internada em Ville-Évrard.",
+          "imperdivel": "O que observar: a fachada da casa no quai de Bourbon, em frente ao Sena.",
+          "dicas": [
+            "Parada de fachada, de 5 min: é o capítulo mais triste da ilha"
+          ],
+          "duracao": "5 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85286,
+            "lng": 2.35564
+          },
+          "fontes": [
+            {
+              "o": "Musée Camille Claudel · 1893-1908",
+              "u": "https://www.museecamilleclaudel.fr/en/collections/camille-claudel-biography/1893-1908-period-solitary-creation",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "janeiro de 1899",
+                "19 quai de Bourbon",
+                "último alojamento e ateliê"
+              ]
+            },
+            {
+              "o": "Musée Camille Claudel · 1909-1943",
+              "u": "https://www.museecamilleclaudel.fr/en/collections/camille-claudel-biography/1909-1943-period-confinement",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10 de março de 1913",
+                "Ville-Évrard"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 697028932 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/697028932",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "19 quai de Bourbon, Paris"
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🛍️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Rue Saint-Louis-en-l'Île (eixo central, 4e)",
+          "cat": "A principal rua comercial da ilha · loteamento de 1614",
+          "sobre": "É a <strong>principal rua comercial</strong> da ilha. O loteamento começou em <strong>1614</strong> com o empreiteiro <strong>Christophe Marie</strong> e sócios, com ruas <strong>retas e perpendiculares a um eixo central</strong>. A <strong>Pont Marie</strong>, que liga a ilha à margem direita, leva o nome dele.",
+          "imperdivel": "O que observar: a regularidade das ruas que cortam a principal em ângulo reto.",
+          "dicas": [
+            "Na rua fica a <strong>Berthillon</strong> (nº 29-31): é a sorveteria mais famosa da ilha, mas a gente acha que <strong>não vale o hype</strong>",
+            "Em 1614 o rei <strong>Luís XIII</strong> lançou a pedra fundamental da Pont Marie"
+          ],
+          "duracao": "20 min",
+          "custo": "Grátis",
+          "acessibilidade": "Rua comercial estreita, num tecido urbano antigo, e aberta a veículos de entrega: atenção com o carrinho",
+          "coord": {
+            "lat": 48.85156,
+            "lng": 2.35732
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Île Saint-Louis",
+              "u": "https://en.wikipedia.org/wiki/%C3%8Ele_Saint-Louis",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "Île Notre-Dame",
+                "Île aux Vaches",
+                "rue Poulletier",
+                "duelos",
+                "1614",
+                "Christophe Marie",
+                "Pont Marie",
+                "retas e perpendiculares a um eixo central",
+                "principal rua comercial",
+                "Hôtel Lambert",
+                "1640"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Pont Marie",
+              "u": "https://en.wikipedia.org/wiki/Pont_Marie",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1614",
+                "Luís XIII",
+                "pedra fundamental",
+                "Christophe Marie"
+              ]
+            },
+            {
+              "o": "paris.fr · rue aux écoles, rue Saint-Louis-en-l'Île (2022)",
+              "u": "https://cdn.paris.fr/paris/2022/02/03/5d2bc8ea0b48c78e50a0458c60e038c4.pdf",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "rua comercial estreita",
+                "tecido urbano antigo",
+                "veículos de entrega"
+              ]
+            },
+            {
+              "o": "Dica de campo · moradores (07/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-08",
+              "prova": [
+                "não vale o hype"
+              ]
+            },
+            {
+              "o": "Visit Paris Region · Maison Berthillon",
+              "u": "https://www.visitparisregion.com/fr/maison-berthillon",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "29-31",
+                "mais famosa"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 286540 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/286540",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Rue Saint-Louis en l'Île, Paris"
+        },
+        {
+          "hora": "14:50",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Église Saint-Louis-en-l'Île (19 bis rue Saint-Louis-en-l'Île, 4e)",
+          "cat": "Barroco do séc. XVII · torre vazada e relógio sobre a rua",
+          "sobre": "Igreja com <strong>interior em barroco francês do séc. XVII</strong>, e obra de <strong>1664</strong> (primeira pedra do coro) a <strong>1726</strong> (consagração). A torre atual, de <strong>30 m</strong>, é <strong>vazada</strong> pra deixar passar o forte vento da ilha, e foi instalada em <strong>1765</strong>, depois que a anterior foi destruída em <strong>1740</strong>.",
+          "imperdivel": "O que observar: o <strong>relógio pendurado na lateral da torre</strong>, sobre a rua como uma placa de loja.",
+          "dicas": [
+            "Horário: <strong>seg-sáb 9h30-13h e 14h-19h30</strong>, <strong>dom 9h-13h e 14h-19h</strong> (Paris je t'aime); a Prefeitura não publica horário fixo, então confira no site da paróquia",
+            "A diocese oferece <strong>audioguia gratuito</strong> no celular, em francês"
+          ],
+          "duracao": "15 min",
+          "custo": "Audioguia gratuito no celular",
+          "coord": {
+            "lat": 48.85128,
+            "lng": 2.35758
+          },
+          "fontes": [
+            {
+              "o": "Wikipédia (fr) · Église Saint-Louis-en-l'Île",
+              "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Louis-en-l%27%C3%8Ele",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1664",
+                "1726",
+                "30 m",
+                "vazada",
+                "1765",
+                "1740"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Saint-Louis-en-l'Île",
+              "u": "https://en.wikipedia.org/wiki/Saint-Louis-en-l%27%C3%8Ele",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "barroco francês do séc. XVII",
+                "vazada",
+                "vento",
+                "relógio pendurado na lateral da torre",
+                "placa de loja"
+              ]
+            },
+            {
+              "o": "Diocese de Paris · Saint-Louis-en-l'Île",
+              "u": "https://dioceseparis.fr/-saint-louis-en-l-ile-.html",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "audioguia gratuito",
+                "site da paróquia",
+                "em francês"
+              ]
+            },
+            {
+              "o": "Paris je t'aime · Église Saint-Louis-en-l'Île (trecho)",
+              "u": "https://parisjetaime.com/culture/eglise-saint-louis-en-l-ile-p965",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "seg-sáb 9h30-13h e 14h-19h30",
+                "dom 9h-13h e 14h-19h"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 55314295 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/55314295",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Louis-en-l'Île, Paris"
+        },
+        {
+          "hora": "15:10",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Hôtel Lambert (quai d'Anjou, 4e)",
+          "cat": "O palácio de Le Vau e Le Brun na ponta leste da ilha",
+          "sobre": "Mandado construir em <strong>1640</strong> pelo financista Jean-Baptiste Lambert de Thorigny ao arquiteto <strong>Louis Le Vau</strong>, no quai d'Anjou, na ponta leste da ilha. A <strong>Galerie d'Hercule</strong>, pintada por <strong>Charles Le Brun</strong>, prefigura a Galeria dos Espelhos de Versalhes. Um incêndio em <strong>julho de 2013</strong> atingiu o prédio durante uma reforma, e em <strong>2022</strong> ele foi vendido a <strong>Xavier Niel</strong> por mais de <strong>€200 milhões</strong>.",
+          "imperdivel": "O que observar: a fachada no quai d'Anjou, voltada pro rio, na ponta leste da ilha.",
+          "dicas": [
+            "Parada de fachada, no caminho do Square Barye: o interior não faz parte do passeio"
+          ],
+          "duracao": "10 min",
+          "custo": "Grátis (fachada)",
+          "coord": {
+            "lat": 48.85099,
+            "lng": 2.35978
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Hôtel Lambert",
+              "u": "https://en.wikipedia.org/wiki/H%C3%B4tel_Lambert",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "Louis Le Vau",
+                "quai d'Anjou",
+                "ponta leste",
+                "julho de 2013",
+                "reforma",
+                "2022",
+                "Xavier Niel",
+                "€200 milhões"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · Hôtel Lambert",
+              "u": "https://www.pariszigzag.fr/?p=140578",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1640",
+                "Jean-Baptiste Lambert de Thorigny",
+                "Galerie d'Hercule",
+                "Charles Le Brun",
+                "prefigura a Galeria dos Espelhos",
+                "€200 milhões"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · relation 554060 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/relation/554060",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Hôtel Lambert, quai d'Anjou, Paris"
+        },
+        {
+          "hora": "15:25",
+          "emoji": "🧸",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Square Barye · o fecho (2 bd Henri-IV, 4e)",
+          "cat": "O fecho na ponta leste da ilha, com o Sena aberto",
+          "sobre": "Jardim de <strong>1938</strong> na ponta leste da Île Saint-Louis, com um <strong>cedro-do-líbano</strong> e o Sena aberto. Fecho natural do passeio pela ilha; o parquinho está na aba Família.",
+          "imperdivel": "O que observar: o monumento ao escultor Barye, com os dois bronzes refeitos depois da guerra.",
+          "dicas": [
+            "Saída de metrô: <strong>Sully-Morland</strong> (L7), junto da Pont de Sully",
+            "Tem <strong>bebedouro</strong>, mas <strong>sem banheiro e sem trocador</strong>"
+          ],
+          "duracao": "20 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.84992,
+            "lng": 2.35979
+          },
+          "fontes": [
+            {
+              "o": "paris.fr · Square Barye",
+              "u": "https://www.paris.fr/lieux/square-barye-29",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1938",
+                "cedro-do-líbano",
+                "Barye",
+                "1942",
+                "2011",
+                "2014",
+                "refeitos",
+                "aire de jeux",
+                "bebedouro",
+                "sem banheiro",
+                "sem trocador",
+                "24h",
+                "Sully-Morland",
+                "2 boulevard Henri-IV"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 33189664 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/33189664",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Square Barye, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🍫",
+      "tema": "Ilhas Guloso · Brioche e terraço",
+      "temaCurto": "Guloso",
+      "bairro": "🍫 Île Saint-Louis (4e)",
+      "grupo": true,
+      "cor": "#db2777",
+      "gradA": "#9d174d",
+      "gradB": "#f472b6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Brioche e terraço\"</strong>: ~0,0 km em linha reta (calculado das coordenadas), 1h30 no máximo. A aba é curta de propósito: a ilha tem fama de gulosa, mas só duas paradas passaram pela verificação nesta coletânea. <strong>Pula sem culpa:</strong> a <strong>Berthillon</strong> (rue Saint-Louis-en-l'Île, nº 29-31) — é a sorveteria famosa da ilha, mas a gente acha que não vale o hype; e as redes de sorvete da mesma rua.",
+      "stops": [
+        {
+          "hora": "15:00",
+          "emoji": "🥐",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Le Saint-Régis · a salgada (6 rue Jean-du-Bellay, 4e)",
+          "cat": "Brasserie com vista pra Pont Saint-Louis · brioche perdue",
+          "sobre": "Brasserie com vista pra <strong>Pont Saint-Louis</strong>, <strong>aberta todos os dias, do café da manhã até 2h</strong>. O hit da casa é a <strong>brioche perdue</strong> com sorvete de caramelo de manteiga salgada; pra quem precisa de sal, tem <strong>croque Monsieur e Madame</strong>.",
+          "imperdivel": "O que observar: a vista da Pont Saint-Louis pela janela.",
+          "dicas": [
+            "Brunch aos <strong>domingos</strong>, com crêpes e granola com fromage blanc",
+            "Faixa de preço da ficha da Sortir à Paris, atualizada em <strong>jan/2022</strong>: pratos <strong>€20-29</strong> e sobremesas <strong>€8-15,50</strong> · confira o cardápio atual",
+            "🚶 <strong>Walking Tour · parada a parada (toque em 🗺️ Mapa pra rota):</strong>",
+            "🚶 <strong>○ Le Saint-Régis</strong> — comece aqui: brioche perdue pra dividir",
+            "🚶 <strong>Ⓐ Le Flore en l'Île</strong> — a poucos passos: terraço com vista pra Notre-Dame",
+            "🍦 <strong>Sobre a Berthillon</strong>: a sorveteria famosa da ilha fica na rue Saint-Louis-en-l'Île (nº 29-31) e <strong>não entra no traçado</strong>: é famosa, mas a gente acha que <strong>não vale o hype</strong>"
+          ],
+          "duracao": "45 min",
+          "custo": "Pratos €20-29 · sobremesas €8-15,50 (ficha de jan/2022 · confira)",
+          "coord": {
+            "lat": 48.85293,
+            "lng": 2.35369
+          },
+          "walkingTours": [
+            {
+              "nome": "Ilhas Guloso · 🍫 Brioche e terraço na Île Saint-Louis",
+              "descricao": "Le Saint-Régis → Le Flore en l'Île · ~0,0 km em linha reta (calculado das coordenadas) · duas paradas, uma a poucos passos da outra",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Le Saint-Régis (6 rue Jean-du-Bellay, 4e)",
+                  "coord": {
+                    "lat": 48.85293,
+                    "lng": 2.35369
+                  },
+                  "mapsQuery": "Le Saint-Régis, 6 rue Jean du Bellay, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Le Flore en l'Île (42 quai d'Orléans, 4e)",
+                  "coord": {
+                    "lat": 48.85267,
+                    "lng": 2.35346
+                  },
+                  "mapsQuery": "Le Flore en l'Île, 42 quai d'Orléans, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Sortir à Paris · Le Saint-Régis (atualizado em 27/01/2022)",
+              "u": "https://www.sortiraparis.com/en/hotels-and-restaurants/restaurant/articles/269861-le-saint-regis-la-brasserie-100-parisienne-de-l-ile-saint-louis",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "2h",
+                "todos os dias",
+                "brioche perdue",
+                "sorvete de caramelo de manteiga salgada",
+                "croque Monsieur e Madame",
+                "brunch aos domingos",
+                "domingos",
+                "crêpes",
+                "granola com fromage blanc",
+                "Pont Saint-Louis",
+                "€20-29",
+                "€8-15,50",
+                "jan/2022"
+              ]
+            },
+            {
+              "o": "Dica de campo · moradores (07/10/2026)",
+              "u": "https://tsferraro.github.io/viagem/",
+              "tier": "campo",
+              "data": "2026-10-08",
+              "prova": [
+                "não vale o hype"
+              ]
+            },
+            {
+              "o": "Visit Paris Region · Maison Berthillon",
+              "u": "https://www.visitparisregion.com/fr/maison-berthillon",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "29-31",
+                "famosa"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1528702647 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/1528702647",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "restaurante",
+          "mapsQuery": "Le Saint-Régis, 6 rue Jean du Bellay, Paris"
+        },
+        {
+          "hora": "16:00",
+          "emoji": "☕",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Le Flore en l'Île (42 quai d'Orléans, 4e)",
+          "cat": "Salão de chá com terraço de vista pra Notre-Dame",
+          "sobre": "Brasserie e salão de chá de decoração inspirada nas <strong>brasseries vienenses</strong>, com <strong>terraço de vista pro Sena e pra catedral de Notre-Dame</strong>.",
+          "imperdivel": "O que observar: a vista de Notre-Dame do terraço.",
+          "dicas": [
+            "O Paris Bouge lista a casa aberta <strong>todos os dias, 8h-1h</strong> (trecho do buscador): confira no local antes de contar com o horário",
+            "Confira o cardápio na hora: a ficha consultada não traz preços"
+          ],
+          "duracao": "45 min",
+          "custo": "Confira o cardápio",
+          "coord": {
+            "lat": 48.85267,
+            "lng": 2.35346
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag · Le Flore en l'Île (artigo de 13/05/2024)",
+              "u": "https://www.pariszigzag.fr/bar-restaurant/restaurant/flore-ile-saint-louis/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "42 quai d'Orléans",
+                "brasseries vienenses",
+                "terraço",
+                "vista pro Sena",
+                "Notre-Dame"
+              ]
+            },
+            {
+              "o": "Paris Bouge · Le Flore en l'Île (trecho)",
+              "u": "https://www.parisbouge.com/place/3007/",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "todos os dias, 8h-1h"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1528700502 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/1528700502",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "cafe",
+          "mapsQuery": "Le Flore en l'Île, 42 quai d'Orléans, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🏛️",
+      "tema": "Ilhas Monumentos · Visitas com ingresso",
+      "temaCurto": "Monumentos",
+      "bairro": "🏛️ Sainte-Chapelle · Conciergerie · Torres (1er/4e)",
+      "grupo": false,
+      "cor": "#4f46e5",
+      "gradA": "#3730a3",
+      "gradB": "#6366f1",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"O que vale pagar na Cité\"</strong>: não é rota linear, é um cardápio pra encaixar <strong>1 monumento por visita</strong>. A nave de Notre-Dame é grátis (ver aba Família). Dois pontos práticos: a <strong>Sainte-Chapelle</strong> pede reserva de horário e a <strong>fila de segurança</strong> do Palácio de Justiça; as <strong>torres</strong> só vendem ingresso online. <strong>Pula sem culpa:</strong> as <strong>torres</strong> com criança pequena (424 degraus, sem elevador e sem banheiro) e a <strong>Crypte archéologique</strong>, <strong>fechada desde 28/jun/2026</strong> sem data de reabertura divulgada pela ficha do órgão de turismo (confira antes de ir).",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🪟",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Sainte-Chapelle (8 bd du Palais, 1er)",
+          "cat": "Capela real de vitrais · reserva de horário obrigatória",
+          "sobre": "Capela real de <strong>Luís IX</strong>, <strong>consagrada em 26/abr/1248</strong>, com <strong>15 vitrais</strong> de <strong>1.113 cenas</strong>. A história completa está na aba Profundo.",
+          "imperdivel": "O que observar: a capela alta, onde os vitrais de 15,50 m fazem a luz da manhã entrar pelo coro.",
+          "dicas": [
+            "A <strong>reserva de horário é obrigatória</strong>, inclusive pra quem entra de graça",
+            "Conte <strong>15 a 30 min</strong> pra passar pela segurança do Palácio de Justiça, que fica antes da entrada",
+            "Horário: <strong>1/abr-30/set 9h-19h</strong>; <strong>1/out-31/mar 9h-17h</strong> · a última entrada é 30 a 40 min antes de fechar, conforme a ficha · fecha em 1º/jan, 1º/mai e 25/dez",
+            "Ingresso, desde jan/2026: <strong>€16</strong> pra quem é cidadão ou residente há mais de 4 meses de um país do Espaço Econômico Europeu e <strong>€22</strong> pros demais · combinado com a Conciergerie <strong>€23 / €30</strong> · grátis abaixo de 18 anos e, pra residentes da UE, abaixo de 26",
+            "A capela alta fica no fim de uma <strong>escada em caracol</strong>, à esquerda da entrada: com carrinho, confira com o monumento",
+            "🚶 <strong>Walking Tour · cardápio (toque em 🗺️ Mapa pra ver os 3):</strong>",
+            "🚶 <strong>○ Sainte-Chapelle</strong> — a capela de vidro",
+            "🚶 <strong>Ⓐ Conciergerie</strong> — a prisão da Maria Antonieta, a poucos passos",
+            "🚶 <strong>Ⓑ Torres de Notre-Dame</strong> — o mirante, pra adultos"
+          ],
+          "duracao": "1h",
+          "custo": "€16 (residente do EEE) · €22 (demais) · <18 anos grátis, com reserva (2026)",
+          "acessibilidade": "Capela alta por escada em caracol · confira com o monumento",
+          "coord": {
+            "lat": 48.85539,
+            "lng": 2.34499
+          },
+          "walkingTours": [
+            {
+              "nome": "Ilhas Monumentos · 🏛️ Cardápio de visitas com ingresso",
+              "descricao": "Sainte-Chapelle → Conciergerie → Torres de Notre-Dame · não é rota linear: escolha 1 por dia · ~0,5 km em linha reta entre as três (calculado das coordenadas)",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Sainte-Chapelle (8 bd du Palais, 1er)",
+                  "coord": {
+                    "lat": 48.85539,
+                    "lng": 2.34499
+                  },
+                  "mapsQuery": "Sainte-Chapelle, 8 boulevard du Palais, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Conciergerie (2 bd du Palais, 1er)",
+                  "coord": {
+                    "lat": 48.85595,
+                    "lng": 2.34603
+                  },
+                  "mapsQuery": "Conciergerie, 2 boulevard du Palais, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Torres de Notre-Dame (parvis, 4e)",
+                  "coord": {
+                    "lat": 48.85337,
+                    "lng": 2.3493
+                  },
+                  "mapsQuery": "Tours de Notre-Dame, rue du Cloître-Notre-Dame, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Centre des monuments nationaux · tarifas 2026",
+              "u": "https://www.monuments-nationaux.fr/en/groups-tourism-professionals/what-is-advance-ticketing/rates-2026",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€16",
+                "€22",
+                "€23",
+                "€30",
+                "4 meses",
+                "Espaço Econômico Europeu",
+                "jan/2026"
+              ]
+            },
+            {
+              "o": "Sainte-Chapelle (site oficial)",
+              "u": "https://www.sainte-chapelle.fr/en/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€22",
+                "abaixo de 26",
+                "1.113 cenas"
+              ]
+            },
+            {
+              "o": "Visit Paris Region (pro) · Sainte-Chapelle",
+              "u": "https://pro.visitparisregion.com/offre-loisirs-et-affaires/offre-de-la-destination/une-activite/musees-monuments-chateaux/monuments/sainte-chapelle",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "30 a 40 min",
+                "9h-19h",
+                "9h-17h"
+              ]
+            },
+            {
+              "o": "Plein Soleil · visita da Sainte-Chapelle",
+              "u": "https://www.pleinsoleilparis.fr/visite-de-la-sainte-chapelle-a-paris-billets-horaires-et-conseils/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "reserva de horário é obrigatória",
+                "inclusive pra quem entra de graça",
+                "escada em caracol",
+                "1/abr-30/set 9h-19h",
+                "última entrada",
+                "18h30",
+                "1/out-31/mar 9h-17h",
+                "16h30",
+                "1º/jan",
+                "1º/mai",
+                "25/dez",
+                "<18 anos grátis",
+                "15 vitrais",
+                "1.113 cenas",
+                "Luís IX"
+              ]
+            },
+            {
+              "o": "La Souris Globe-Trotteuse · Sainte-Chapelle",
+              "u": "https://www.lasourisglobe-trotteuse.fr/sainte-chapelle-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "15 a 30 min",
+                "segurança do Palácio de Justiça",
+                "escada em caracol",
+                "à esquerda da entrada",
+                "15,50 m"
+              ]
+            },
+            {
+              "o": "Hérodote · 26 de abril de 1248",
+              "u": "https://www.herodote.net/26_avril_1248-evenement-12480426.php",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "26/abr/1248"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · relation 3344870 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/relation/3344870",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Sainte-Chapelle, 8 boulevard du Palais, Paris"
+        },
+        {
+          "hora": "11:30",
+          "emoji": "⛓️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Conciergerie (2 bd du Palais, 1er)",
+          "cat": "Palácio real medieval e prisão · aberta todo dia",
+          "sobre": "Palácio real medieval que foi sede da justiça e prisão; <strong>Maria Antonieta</strong> ficou aqui <strong>76 dias</strong>. A história completa está na aba Profundo.",
+          "imperdivel": "O que observar: a capela expiatória no lugar da cela de Maria Antonieta.",
+          "dicas": [
+            "Aberta <strong>todos os dias, 9h30-18h</strong> · a última entrada é 30 min antes de fechar",
+            "O <strong>HistoPad</strong>, dispositivo interativo incluso no ingresso, é distribuído só até <strong>16h30</strong>",
+            "Ingresso de <strong>€13</strong> · <strong>grátis abaixo de 18 anos</strong>"
+          ],
+          "duracao": "1h",
+          "custo": "€13 (2026) · <18 anos grátis",
+          "coord": {
+            "lat": 48.85595,
+            "lng": 2.34603
+          },
+          "fontes": [
+            {
+              "o": "Conciergerie (site oficial)",
+              "u": "https://www.paris-conciergerie.fr/en/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€13"
+              ]
+            },
+            {
+              "o": "Visit Paris Region (pro) · Conciergerie",
+              "u": "https://pro.visitparisregion.com/offre-loisirs-et-affaires/offre-de-la-destination/une-activite/musees-monuments-chateaux/monuments/conciergerie",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "todos os dias, 9h30-18h",
+                "última entrada",
+                "30 min",
+                "HistoPad",
+                "16h30",
+                "grátis abaixo de 18 anos",
+                "€13",
+                "palácio real medieval",
+                "prisão"
+              ]
+            },
+            {
+              "o": "Story of a City · a Conciergerie",
+              "u": "https://www.storyofacity.com/2020/09/29/conciergerie-royal-residence-infamous-prison/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "76 dias",
+                "capela expiatória"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 910390736 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/910390736",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Conciergerie, 2 boulevard du Palais, Paris"
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🦇",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "red",
+          "nome": "Torres de Notre-Dame (parvis, 4e)",
+          "cat": "Mirante a 69 m · 424 degraus, sem elevador",
+          "sobre": "As torres <strong>reabriram em 20/set/2025</strong>, com um percurso novo de cerca de <strong>50 min</strong>: uma escadaria monumental de carvalho em <strong>dupla hélice</strong>, <strong>duas quimeras originais</strong> salvas do incêndio de 2019 e uma <strong>vista de 360°</strong> sobre Paris e a flecha, a <strong>69 m</strong> de altura.",
+          "imperdivel": "O que observar: as quimeras de perto e a flecha refeita no panorama.",
+          "dicas": [
+            "<strong>424 degraus</strong> segundo o site oficial (algumas fichas dizem 422), <strong>sem elevador e sem banheiro</strong>: com criança pequena sem carrinho, vira colo na metade da subida",
+            "Ingresso <strong>só online</strong>, sem bilheteria e sem entrada sem reserva · <strong>€16</strong> (site oficial, 2026) · <strong>grátis abaixo de 18 anos</strong> e, pra residentes da UE, abaixo de 26",
+            "A entrada das torres fica na <strong>rue du Cloître-Notre-Dame</strong> (nº 1), não na porta da catedral",
+            "O horário muda ao longo do ano e a última entrada é <strong>1 h antes</strong> do fechamento: confira no site oficial"
+          ],
+          "duracao": "50 min",
+          "custo": "€16 (site oficial, 2026) · <18 anos grátis",
+          "acessibilidade": "424 degraus, sem elevador e sem banheiro",
+          "coord": {
+            "lat": 48.85337,
+            "lng": 2.3493
+          },
+          "fontes": [
+            {
+              "o": "Torres de Notre-Dame (site oficial, CMN)",
+              "u": "https://www.tours-notre-dame-de-paris.fr/en/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "424 degraus",
+                "€16",
+                "abaixo de 26"
+              ]
+            },
+            {
+              "o": "Routard · as torres de Notre-Dame reabrem",
+              "u": "https://www.routard.com/fr/mag/actu/a/notre-dame-les-tours-rouvrent-enfin-au-public",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "20/set/2025",
+                "50 min",
+                "dupla hélice",
+                "duas quimeras originais",
+                "69 m",
+                "424 degraus",
+                "incêndio de 2019",
+                "2019"
+              ]
+            },
+            {
+              "o": "TourMaG · as torres de Notre-Dame",
+              "u": "https://www.tourmag.com/Les-tours-de-Notre-Dame-de-Paris-rouvriront-enfin-au-public-_a127739.html",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "20/set/2025",
+                "360°",
+                "50 min",
+                "69 m",
+                "chimères",
+                "424 degraus"
+              ]
+            },
+            {
+              "o": "La Souris Globe-Trotteuse · torres de Notre-Dame",
+              "u": "https://www.lasourisglobe-trotteuse.fr/tours-notre-dame-de-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "422",
+                "sem elevador",
+                "sem banheiro",
+                "reserva online",
+                "20/set/2025",
+                "€16"
+              ]
+            },
+            {
+              "o": "Visit Paris Region (pro) · torres de Notre-Dame",
+              "u": "https://pro.visitparisregion.com/offre-loisirs-et-affaires/offre-de-la-destination/une-activite/musees-monuments-chateaux/monuments/tours-de-la-cathedrale-notre-dame-de-paris",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "só online",
+                "sem bilheteria",
+                "grátis abaixo de 18 anos",
+                "última entrada",
+                "1 h antes",
+                "422",
+                "sem elevador",
+                "sem banheiro",
+                "rue du Cloître-Notre-Dame",
+                "nº 1"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1656250107 Tours de Notre-Dame (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/1656250107",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Tours de Notre-Dame, rue du Cloître-Notre-Dame, Paris"
+        }
+      ]
+    }
+  ]
+}
