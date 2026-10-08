@@ -71,13 +71,15 @@ Os 4 motivos (GLOBAL § 10a-bis). Paradas combinadas:
 |---|---|---|---|---|---|
 | 1 | Levantamento dos 5 bairros | 06/10 | sessão local_a7da077a | — | ✅ `fdd9b17` |
 | 2 | App paris-amigos-out2026 | até qui 8/out | handoff `2026-10-07_app-paris-amigos.md` | criado pela mãe | 1 |
-| 3 | **Coletâneas: um bairro por onda** (Saint-Germain ✅ `3869f3f` · 07/10 · 30 abertos resolvidos `386ecd8` · Quartier Latin ✅ `2de8bf5` · 08/10), na ordem Saint-Germain → Quartier Latin → Ilhas → Louvre/Tuileries → Montmartre | depois do 2 no ar | esta sessão | este | 2 |
+| 3 | **Coletâneas: um bairro por onda** (Saint-Germain ✅ `3869f3f` · 07/10 · 30 abertos resolvidos `386ecd8` · Quartier Latin ✅ `2de8bf5` · Ilhas ✅ `dedd543` · Louvre/Tuileries ✅ `569588d` · 08/10), na ordem Saint-Germain → Quartier Latin → Ilhas → Louvre/Tuileries → Montmartre | depois do 2 no ar | esta sessão | este | 2 |
 | 4 | Auditoria externa das coletâneas | depois do 3 | sessão AUDITORA nova | **esta sessão cria** | 3 |
 
 ## 🔒 CONGELADO
 - `marais/` (coletânea pronta, em uso) · `paris-fds/` · `paris-amigos/` (dona: frente 2). Não editar.
 
 ## Tentado e falhou
+- (08/10) **Vazamento de dado da família**: o levantamento foi escrito pra visita deles ("Como chegar de Boulogne", Marcel Sembat, Billancourt, idade da criança) e o montador copiou trajetos saindo de casa pra coletânea compartilhável. Corrigido no ar em `89a639e` (Saint-Germain) e `98a7fc1` (Quartier Latin); Ilhas e Louvre saíram limpos. Regra no briefing: chegada neutra ("Chegada · Métro X (linhas)"), nunca origem.
+- (08/10) Bairro em montagem no mesmo worktree + deploy de outro: o `git add -A` e o `regen-landing.py` publicariam a pasta crua → deploy a partir de um worktree temporário limpo (`git worktree add … origin/main`, copiar só a pasta pronta, `deploy.sh`, remover).
 - (08/10) Briefing que funcionou (Quartier Latin, 0 em aberto na 1ª passada): montador Sonnet COM WebSearch/WebFetch copia coord de fonte; factcheck Opus já resolve os `[a confirmar]` nos 3 estados (resolvido · afirmação removida · regra geral + site oficial) e confere `links_map` por WebFetch. `deploy.sh` foi consertado pra worktree em `4adefe5` (os contornos de 07/10 abaixo não são mais necessários).
 - (07/10, onda Saint-Germain) Montador Sonnet SEM rede no Bash derivou as 28 coords de memória (erro de 4 a 332 m) → no briefing do montador: carregar WebSearch/WebFetch por ToolSearch e copiar coord de fonte, ou deixar para o factcheck. O factcheck Opus trocou 25/26 por OSM/Wikipédia.
 - (07/10) `deploy.sh` a partir do worktree: (1) sem o 4º arg ele procura `/tmp/build/index.html`; (2) passar o próprio `<pasta>/index.html` quebra no `cp` (arquivo idêntico) → copiar o HTML pro scratchpad e passar esse caminho + `$(pwd)` como 5º arg; (3) o `git push origin main` do script empurra o `main` LOCAL, não o branch → depois do script, `git push origin HEAD:main` + `git -C <checkout principal> merge --ff-only origin/main`. Rodar com o sandbox desligado (backup em `~/.skill-backups`).
