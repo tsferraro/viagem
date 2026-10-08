@@ -2756,7 +2756,7 @@
       "date": "🏘️",
       "tema": "Bairros de Paris · os percursos a pé",
       "temaCurto": "Bairros",
-      "bairro": "📍 Paris — coletâneas por bairro",
+      "bairro": "Paris — coletâneas por bairro",
       "grupo": false,
       "cor": "#9a3412",
       "gradA": "#7c2d12",
@@ -3275,5 +3275,7 @@
         }
       ]
     }
-  ]
+  ],
+  "icon_grad_a": "#1e3a8a",
+  "icon_grad_b": "#7c3aed"
 }

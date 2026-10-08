@@ -82,6 +82,8 @@ def main():
         city_f = os.path.join(full, 'CITY.txt')
         city = open(city_f).read().strip() if os.path.exists(city_f) else None
         with open(html) as f: c = f.read()
+        if 'viagem-redirect' in c:  # stub de roteiro arquivado (só redireciona pro archive/)
+            continue
         # Suporta 2 layouts: antigo (<h1>/class="sub") e novo template (brand-title/brand-sub/brand-mark)
         h1 = re.search(r'class="brand-title">([^<]+)<', c) or re.search(r'<h1[^>]*>([^<]+)</h1>', c)
         sub = re.search(r'class="brand-sub">([^<]+)<', c) or re.search(r'class="sub">([^<]+)</div>', c)
@@ -91,8 +93,10 @@ def main():
         emoji = '✈️'
         nome_clean = nome
         if brand and brand.group(1).strip():
-            # novo design: emoji vem do brand-mark, nome fica inteiro
+            # novo design: emoji vem do brand-mark · se o título TAMBÉM começa com emoji
+            # (ex.: "🗺️ Le Marais · Walking Tours"), tira do nome pra não repetir no card
             emoji = brand.group(1).strip()
+            nome_clean = re.sub(r'^[^\w(]+', '', nome).strip() or nome
         elif nome and ord(nome[0]) > 127:
             # design antigo: 1º char(es) não-ASCII do <h1>
             i = 0
@@ -105,8 +109,7 @@ def main():
     def render_card(v):
         return f'''  <a class="viagem-card" href="./{v['subdir']}/">
     <span class="viagem-chev">›</span>
-    <div class="viagem-emoji">{v['emoji']}</div>
-    <div class="viagem-nome">{v['nome']}</div>
+    <div class="viagem-nome"><span class="viagem-emoji">{v['emoji']}</span>{v['nome']}</div>
     <div class="viagem-meta">{v['meta']}</div>
   </a>'''
 
@@ -135,7 +138,7 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
 .viagens{display:flex;flex-direction:column;gap:10px}
 .viagem-card{display:block;background:#fff;border-radius:12px;padding:18px 20px;text-decoration:none;color:#111827;box-shadow:0 1px 3px rgba(0,0,0,0.05);transition:transform 0.15s,box-shadow 0.15s}
 .viagem-card:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
-.viagem-emoji{font-size:28px;margin-bottom:6px}
+.viagem-emoji{font-size:22px;margin-right:8px;vertical-align:-2px}
 .viagem-nome{font-size:18px;font-weight:700;letter-spacing:-0.3px}
 .viagem-meta{font-size:13px;color:#6b7280;margin-top:3px}
 .viagem-chev{float:right;color:#9ca3af;font-size:18px;margin-top:6px}
@@ -171,11 +174,20 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
 })();
 </script>'''
 
-    def page(title, h1, sub, body):
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from icone import SITE_BASE, escrever_icones, meta_tags
+
+    def head_extra(title, sub, fname, emoji, prefixo, grad):
+        # Favicon + atalho + Open Graph em toda página da lançadora (regra Tobia 2026-10-08)
+        icones = escrever_icones(root, emoji, grad[0], grad[1], title, prefixo=prefixo)
+        return meta_tags(title, sub, SITE_BASE + fname, icones, SITE_BASE, grad[0]) + '\n'
+
+    def page(title, h1, sub, body, fname='', emoji='🗺️', prefixo='home-', grad=('#0f766e', '#2563eb')):
         return ('<!DOCTYPE html>\n<html lang="pt-BR">\n<head>\n'
                 '<meta charset="UTF-8">\n'
                 '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">\n'
                 '<meta name="robots" content="noindex,nofollow">\n'
+                + head_extra(title, sub, fname, emoji, prefixo, grad) +
                 f'<title>{title}</title>\n<style>\n{STYLE}\n</style>\n</head>\n<body>\n'
                 f'<h1>{h1}</h1>\n<div class="sub">{sub}</div>\n\n'
                 '<div class="search-box">\n  <span class="ico">🔍</span>\n'
@@ -189,8 +201,7 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
     ARCHIVE = ('<h2>📦 Arquivo</h2>\n<div class="viagens">\n'
                '  <a class="viagem-card" href="./archive/">\n'
                '    <span class="viagem-chev">›</span>\n'
-               '    <div class="viagem-emoji">📋</div>\n'
-               '    <div class="viagem-nome">Viagens passadas</div>\n'
+               '    <div class="viagem-nome"><span class="viagem-emoji">📋</span>Viagens passadas</div>\n'
                '    <div class="viagem-meta">Histórico completo</div>\n  </a>\n</div>')
 
     def slugify(s):
@@ -202,8 +213,7 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
         plural = 'passeio' if n == 1 else 'passeios'
         return (f'  <a class="viagem-card" href="./{fname}">\n'
                 f'    <span class="viagem-chev">›</span>\n'
-                f'    <div class="viagem-emoji">{emoji}</div>\n'
-                f'    <div class="viagem-nome">{cidade}</div>\n'
+                f'    <div class="viagem-nome"><span class="viagem-emoji">{emoji}</span>{cidade}</div>\n'
                 f'    <div class="viagem-meta">{n} {plural} · página separada pra compartilhar</div>\n  </a>')
 
     # 1 · Landing principal · viagens datadas inline · cada CIDADE vira 1 card → sua página
@@ -233,7 +243,9 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
         fname = slugify(cidade) + '.html'
         with open(os.path.join(root, fname), 'w') as f:
             f.write(page(f'{emoji} {cidade} · Passeios', f'{emoji} {cidade}',
-                         f'Passeios da Família Ferraro em {cidade}', body_city))
+                         f'Passeios da Família Ferraro em {cidade}', body_city,
+                         fname=fname, emoji=emoji, prefixo=slugify(cidade) + '-',
+                         grad=('#1e3a8a', '#7c3aed')))
         city_pages.append(fname)
 
     extra = f' · páginas por cidade: {", ".join(city_pages)}' if city_pages else ''

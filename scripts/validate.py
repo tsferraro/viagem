@@ -618,6 +618,30 @@ def check_required_features(content):
 # MAIN
 # ---------------------------------------------------------
 
+def check_meta_icons(content, path):
+    """Favicon + atalho + Open Graph são obrigatórios (regra Tobia 2026-10-08: "sempre entregar
+    já com e pronto"). Gerados pelo build.py via scripts/icone.py. Bloqueia se faltar a tag OU
+    se o PNG referenciado não existir ao lado do index.html (favicon quebrado no ar)."""
+    falta = []
+    for nome, rx in (("description", r'<meta name="description" content="[^"]+"'),
+                     ("og:title", r'<meta property="og:title" content="[^"]+"'),
+                     ("og:description", r'<meta property="og:description" content="[^"]+"'),
+                     ("og:image", r'<meta property="og:image" content="https://[^"]+\.png"'),
+                     ("favicon", r'<link rel="icon"[^>]*href="[^"]+"'),
+                     ("apple-touch-icon", r'<link rel="apple-touch-icon"[^>]*href="[^"]+"')):
+        if not re.search(rx, content):
+            falta.append(nome)
+    if falta:
+        err(f"Sem favicon/meta tags: {', '.join(falta)} · rode o build.py (precisa do PIL) · regra 2026-10-08")
+        return
+    sem_arquivo = [h for h in re.findall(r'<link rel="(?:icon|apple-touch-icon)"[^>]*href="([^"]+)"', content)
+                   if not h.startswith(("http", "data:")) and not (path.parent / h).exists()]
+    if sem_arquivo:
+        err(f"Ícone referenciado não existe ao lado do HTML: {', '.join(sem_arquivo)}")
+    else:
+        ok("Favicon + apple-touch-icon + Open Graph presentes")
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flags = [a for a in sys.argv[1:] if a.startswith("--")]
@@ -641,6 +665,7 @@ def main():
     print(f"{C.DIM}── Estrutura ──{C.END}")
     check_size(content)
     check_html_balance(content)
+    check_meta_icons(content, path)
     
     # JS
     print(f"\n{C.DIM}── JavaScript ──{C.END}")

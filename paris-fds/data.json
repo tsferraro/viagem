@@ -1,15 +1,15 @@
 {
-  "title": "Paris · 29-30 Ago",
+  "title": "Paris · Monet, Atelier des Lumières e passeios de um dia",
   "auth_emoji": "🎨",
-  "auth_title": "Fim de semana 29-30/Ago",
-  "auth_subtitle": "Paris · o fds com os avós + um pool de ideias sem eles",
-  "header_title": "Paris · 29-30/Ago",
-  "header_sub": "2 dias datados com a filha e os avós · e 8 abas de ideias soltas pra outros fins de semana",
+  "auth_title": "Paris · passeios",
+  "auth_subtitle": "Monet, o Atelier des Lumières e ideias de fim de semana",
+  "header_title": "Monet, Atelier des Lumières e passeios de um dia",
+  "header_sub": "Marmottan e Ranelagh · Atelier des Lumières · 3 passeios em Paris · 5 bate-voltas na Île-de-France",
   "password": "paris2026",
   "maps_region": "France",
   "wt_labels": "numbers",
-  "legend_group_text": "Dia com os avós juntos",
-  "legend_notes_html": "<p><strong>Este app tem duas metades.</strong> As <strong>duas primeiras abas são datadas</strong> — o fim de semana de 29-30/ago com a filha e os avós: <strong>sábado ao ar livre</strong> (Marmottan + Ranelagh) porque é o dia de menos chuva, <strong>domingo sob teto</strong> (Atelier des Lumières + Marais) porque é o dia das pancadas. As <strong>oito seguintes não têm data</strong>: são propostas de fim de semana <strong>sem os avós</strong>, pra pescar quando der vontade.</p><p>🎸 <strong>Rock en Seine</strong> ocupa o <strong>Domaine de Saint-Cloud</strong> de 26 a 30/ago, com mais de 100.000 pessoas e veículo fechado das <strong>11h às 2h</strong> em todas as grades. <strong>Evitem o eixo Pont de Saint-Cloud / D910 / A13 nos dois dias.</strong> Os dois roteiros datados vão de <strong>metrô linha 9, direto, sem baldeação</strong> — foi assim de propósito.</p><p>🌬️ <strong>Previsão outonal</strong>: sábado com rajadas de 50-60 km/h · domingo com pancadas fortes · 20-24°C. Cada dia datado tem um <strong>abrigo coberto</strong> embutido.</p><p>⏰ <strong>Corte às 18h</strong> — os dois dias datados terminam antes disso, com folga.</p><p>🔄 Cards com <strong>🔄 ALT</strong> substituem a parada principal e <em>não</em> entram na rota do dia.</p><p>🧓 <strong>Calibragem dos dias datados</strong>: os avós andam até ~1km por bloco e sentam a cada 15-20min. As abas sem data <strong>não</strong> seguem essa régua.</p>",
+  "legend_group_text": "Pensado pra ir com os avós",
+  "legend_notes_html": "<p><strong>Coletânea de passeios em Paris e arredores, sem data.</strong> As duas primeiras abas (<strong>Marmottan + Ranelagh</strong> e <strong>Atelier des Lumières + Marais</strong>) foram pensadas pra ir com os avós: trechos curtos a pé, banco a cada 15-20 min e um abrigo coberto em cada dia. As outras são ideias de fim de semana a três, e <strong>não</strong> seguem essa régua.</p><p>🚇 Os dois primeiros passeios vão de <strong>metrô linha 9, direto, sem baldeação</strong>.</p><p>🔄 Cards com <strong>🔄 ALT</strong> substituem a parada principal e <em>não</em> entram na rota do dia.</p>",
   "bairros_config": [
     {
       "nome": "🎨 Paris 11e",
@@ -60,7 +60,7 @@
   ],
   "days": [
     {
-      "date": "Sáb 29/Ago",
+      "date": "🖼️",
       "tema": "Monet e o carrossel · Marmottan e o Ranelagh",
       "temaCurto": "Marmottan",
       "bairro": "🌳 Paris — 16e La Muette / Ranelagh",
@@ -68,7 +68,7 @@
       "cor": "#0e7490",
       "gradA": "#164e63",
       "gradB": "#06b6d4",
-      "nota": "O dia inteiro cabe num quarteirão: o museu fica no lado oeste do próprio Jardin du Ranelagh — sai do Marmottan e já está no parque. <strong>Este é o dia ao ar livre de propósito</strong>: sábado tem vento forte mas pouca chuva, e é a melhor janela do fim de semana pro carrossel, as aires de jeux e o Guignol das 15h15. O museu é o abrigo se o vento apertar, e a Maison de Balzac é a carta de reserva — grátis e coberta.",
+      "nota": "O dia inteiro cabe num quarteirão: o museu fica no lado oeste do próprio Jardin du Ranelagh — sai do Marmottan e já está no parque. <strong>É o passeio ao ar livre</strong>: carrossel, aires de jeux e o Guignol do Ranelagh. O museu é o abrigo se ventar ou chover, e a Maison de Balzac é a carta de reserva — grátis e coberta.",
       "stops": [
         {
           "hora": "10:15",
@@ -467,7 +467,7 @@
       ]
     },
     {
-      "date": "Dom 30/Ago",
+      "date": "✨",
       "tema": "Van Gogh numa antiga fundição · 11e e Marais",
       "temaCurto": "11e + Marais",
       "bairro": "🎨 Paris — 11e Saint-Ambroise + Marais",
@@ -475,7 +475,7 @@
       "cor": "#7c3aed",
       "gradA": "#4c1d95",
       "gradB": "#8b5cf6",
-      "nota": "<strong>Este é o dia de chuva, e foi desenhado pra ela.</strong> A previsão é de pancadas fortes: o Atelier des Lumières são 50 minutos sentados no escuro, com elevador e acesso PMR, e tudo o que vem depois no Marais tem teto. O único trecho aberto é o parquinho da manhã. Tudo alcançável pela linha 9 sem baldeação.",
+      "nota": "<strong>É o passeio de dia de chuva, e foi desenhado pra ela.</strong> O Atelier des Lumières são cerca de 50 minutos sentados no escuro, com elevador e acesso PMR, e tudo o que vem depois no Marais tem teto. O único trecho aberto é o parquinho da manhã. Tudo alcançável pela linha 9 sem baldeação.",
       "stops": [
         {
           "hora": "10:30",

@@ -36,6 +36,11 @@ Relato da esposa do Tobia ao revisar o roteiro de visita de amigos (paris-amigos
 - **Véspera de Disney precisa de bloco de logística** no roteiro (lanches, mochila, ingressos no celular), não só "tarde livre".
 - **Grande Galerie de l'Évolution** é o programa que elas indicam pra criança de 4 anos no Quartier Latin, junto com a Mesquita, e não só como plano de chuva.
 
+### Paris · o PDF saiu antes do factcheck (07/10/2026 · paris-amigos · registrado a pedido do Tobia)
+- O factcheck do app (5 verificadores céticos, 218 afirmações) achou **3 erros que já estavam no PDF entregue à amiga**, todos no bloco "Antes de vir": Atelier des Lumières "abaixo de 5 anos não paga" (é abaixo de 3 · o menino de 4 paga, a partir de €12,50) e "a partir de €17" (é €19,50) · Orsay "reserva obrigatória" (é fortemente recomendada) · Notre-Dame "no próprio domingo" (era sábado, depois da troca sáb↔dom da v4).
+- **Por quê**: no pipeline o PDF do roteiro proposto sai na fase de aprovação, e o factcheck só roda na fase 4 (app). O que vai pra mão de terceiro antes do factcheck carrega a taxa de erro da pesquisa crua.
+- **Como aplicar**: antes de mandar PDF de roteiro proposto pra alguém de fora, rodar um factcheck enxuto **só do "Antes de vir"** (preço, gratuidade por idade, regra de reserva, dia da visita) — é o bloco em que o viajante age ANTES de chegar, e o erro ali custa dinheiro ou uma entrada recusada.
+
 ---
 
 ## Padrões cross-viagem

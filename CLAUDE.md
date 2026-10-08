@@ -729,6 +729,7 @@ O toggle continua no template pronto pra reuso — é só (re)adicionar `essenci
 
 ## Features do app (template · todas as viagens herdam)
 
+- **⛔ Toda página sai com favicon + meta tags, já na entrega** (regra Tobia 2026-10-08: *"sempre entregar já com e pronto"*). O `build.py` grava `apple-touch-icon.png` (180) e `icon-512.png` na pasta da viagem e injeta `description` + Open Graph (`og:title/description/image/url`) via `scripts/icone.py`; o `regen-landing.py` faz o mesmo na home e em cada página de cidade (`home-*.png`, `<cidade>-*.png` na raiz). O `validate.py` **bloqueia** app sem as tags ou com PNG ausente ao lado do `index.html`. Ícone = emoji do `icon_emoji` sobre o gradiente `icon_grad_a/b` (default: cores do 1º dia). Página nova escrita à mão (ex.: `archive/index.html`) leva as tags na mão.
 - **Roteiros NÃO têm botão "voltar pra home"** (decisão Tobia 2026-06-07 · privacidade): como as páginas de cidade (`paris.html`) são compartilhadas, um ←Início no roteiro exporia a home com as viagens pessoais. Volta-pra-home vive só nas **páginas de seção** (Arquivo tem link `../`) · no roteiro, usa-se o botão do navegador.
 - **Botão 🖨️ PDF** (`print-btn` → `window.print()`): `@media print` em `styles.css` esconde nav/mapa/gate e imprime o dia aberto em layout limpo (cards não quebram no meio). É o caminho de "salvar offline / PDF" pra levar em campo.
 - **Busca global na landing** (`regen-landing.py`): campo que filtra os cards por nome+descrição e esconde seções vazias (na home e em cada página de cidade).
@@ -810,6 +811,8 @@ URLs: `tsferraro.github.io/viagem/familia`, `/casal`, etc.
 Deploy paralelo: `scripts/deploy.sh "<msg>" "<slug>" <html-path> . <subdir>`
 
 Quando arquivar viagem principal (slug muda), TODAS as subpastas arquivam junto em `archive/<slug-anterior>/<subdir>/`.
+
+**Arquivar viagem passada (manual · 2026-10-08)**: `git mv <viagem> archive/<slug>/` + entrada em `archive/index.html` (lista à mão) + **stub de redirecionamento** em `<viagem>/index.html` (meta refresh pra `../archive/<slug>/` com a marca `viagem-redirect`), pra não matar link antigo nem atalho na Home Screen de quem usou o app em campo. O `regen-landing.py` ignora pasta com essa marca.
 
 ## Naming automático de slug
 

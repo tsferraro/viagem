@@ -611,6 +611,10 @@ function updateReservasNote(){
   el.innerHTML=complete?`<div class="reservas-done">✅ Reservas completas (${st.doneReservas}/${st.totalReservas})</div>`:'';
 }
 
+// Bairro com 📍 na frente só se o texto já não começar com emoji (antes saía "📍 📍 Paris" e
+// "📍 ⛪ Île de la Cité" · print do Tobia 2026-10-08).
+function comPino(t){ t=t||''; return /^\p{Extended_Pictographic}/u.test(t)?t:`📍 ${t}`; }
+
 function renderDay(day){
   const periodos=['manha','tarde','noite'];
   const bigEmoji=(day.stops.find(s=>s.tipo==='card')||day.stops[0]||{}).emoji||'📍';
@@ -624,13 +628,19 @@ function renderDay(day){
   const doneKicker=checkable.length?`<span class="grp">✓ ${doneCount}/${checkable.length} feitas</span>`:'';
 
   // Kicker: trip mostra "Dia N de M" · city mostra o tema-curto (label do tema) sem contagem/data
-  const kickerLabel=IS_TRIP?`🗽 Dia ${state.selIdx+1} de ${DAYS.length}`:`📍 ${day.temaCurto||day.tema.split('·')[0].trim()}`;
+  // Aba sem data (pool/bairros · `date` = só emoji, sem dígito) não é "Dia N": mostra o tema-curto.
+  // A contagem "Dia N de M" conta só as abas datadas (antes: "Dia 8 de 8" numa aba de bairros · 2026-10-08).
+  const datado=d=>/\d/.test(d.date||'');
+  const nDatados=DAYS.filter(datado).length;
+  const kickerLabel=(IS_TRIP&&datado(day))
+    ?`📅 Dia ${DAYS.slice(0,state.selIdx+1).filter(datado).length} de ${nDatados}`
+    :`📍 ${day.temaCurto||day.tema.split('·')[0].trim()}`;
   const heroAndNota=`<div class="day-hero" style="--day-color:${day.cor};--day-grad-a:${day.gradA};--day-grad-b:${day.gradB}" data-bigemoji="${bigEmoji}">
       <div class="hero-inner">
         <span class="hero-kicker">${kickerLabel}${day.grupo?'<span class="grp">👥 Família junta</span>':doneKicker}</span>
-        ${IS_TRIP?`<div class="hero-date">${dow} · ${dm}</div>`:''}
+        ${(IS_TRIP&&datado(day))?`<div class="hero-date">${dow} · ${dm}</div>`:''}
         <div class="hero-title">${day.tema}</div>
-        <div class="hero-bairro">📍 ${day.bairro}</div>
+        <div class="hero-bairro">${comPino(day.bairro)}</div>
       </div>
     </div>
     ${day.nota?`<div class="day-nota">${day.nota}</div>`:''}`;
@@ -779,7 +789,7 @@ function renderOverview(){
         </div>
         <div class="ov-body">
           <div class="ov-tema">${d.tema}</div>
-          <div class="ov-meta"><span>📍 ${d.bairro}</span>${d.grupo?'<span class="ov-grp">👥 família</span>':''}</div>
+          <div class="ov-meta"><span>${comPino(d.bairro)}</span>${d.grupo?'<span class="ov-grp">👥 família</span>':''}</div>
           <div class="ov-attr"><b>★</b> ${main}</div>
           ${wtButtons}
         </div>
