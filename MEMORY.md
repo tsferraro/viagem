@@ -322,6 +322,15 @@ produz o mesmo efeito de um erro factual: o viajante descobre no local que o tex
   (15/55 fantasmas · 11/21 refutadas · 12/30 no scout · ~19% na auditoria externa). Não é
   risco, é aritmética: cada item além do orçamento de checagem entra com essa taxa. Por isso
   a cota editorial é 2 verificadas > 3 plausíveis.
+- **O furo de gate mora onde a régua não olha, não na prosa dos cards** (auditoria externa
+  paris-amigos · 2026-10-08 · aprovado pelo Tobia). Com factcheck feito, a prosa dos cards
+  ⭐⭐⭐ saiu com ~6% de erro (2/36). O único erro que mudava a ação no dia estava numa
+  `nota` de dia ("reservem Notre-Dame no próprio sábado", quando as vagas abrem até 2 dias
+  antes), campo que nem o claim-a-claim do `audit.py` nem a projeção do `factcheck-gate`
+  leem. A régua também não via preço escrito `€36,70`, ano ≥2020 nem altura em `cm`.
+  **Na auditoria, ataque primeiro os campos fora da projeção** (`nota`, `legend_notes_html`,
+  `transit_map`, `cat` de transit, `aprofundar` de ⭐⭐) e escreva mutações numa cópia do
+  `data.json`: é o teste que mostra o furo em minutos (`paris-amigos/AUDITORIA-2026-10-08.md`).
 
 ## Skill nomeada tem ponto de parada · respeitá-lo é parte do pedido (2026-08-27 · apontado pelo Tobia)
 
