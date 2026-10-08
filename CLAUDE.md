@@ -218,11 +218,13 @@ factcheck completo" era inverificável, inclusive por quem rodou. O gate cobra o
 por máquina sem ser gameable por substring: o artefato `<viagem>/FACTCHECK-<AAAA-MM-DD>.md`
 **existe**, tem **formato válido** (vereditos por item · OK/ERRO/RISCO com URL · ERRO marcado
 `→ corrigido` · data não-futura) e é **mais novo que a última mudança de conteúdo sensível**
-(cards ⭐⭐⭐ · TODA parada de WT · opções ⭐⭐⭐ · historia[]). Edit não-sensível passa sem
+(cards ⭐⭐⭐ · `aprofundar` de qualquer card · `nota` de cada dia · TODA parada de WT · opções ⭐⭐⭐ ·
+historia[] · os dois campos do meio desde 2026-10-08). Edit não-sensível passa sem
 factcheck novo. Viagem nova (data.json sem nenhum commit) + factcheck de HOJE passa com aviso de
 primeiro-deploy — sem esse tratamento o gate bloquearia o primeiro deploy legítimo de toda viagem
 nova. O que ele NÃO garante: a verdade do factcheck — isso é a sessão auditora e o campo.
-**Escopo do frescor: ⭐⭐⭐ · WT · `historia[]`. Item ⭐⭐ está deliberadamente FORA** — incluí-lo
+**Escopo do frescor: ⭐⭐⭐ · WT · `historia[]` · `aprofundar` · `nota`. O resto de item ⭐⭐ está
+deliberadamente FORA** (e o `transit_map` também) — incluí-lo
 faria quase todo edit disparar o gate, e gate que sempre bloqueia vira gate sempre pulado. Quem
 cobre ⭐⭐ é o **re-check pré-viagem (R11 · 7-10 dias antes)**. Protocolo de execução:
 `skills/critico-roteiro/FACTCHECK-EXEC.md`.
@@ -270,7 +272,7 @@ Workflow:
 4. `validate.py` (BLOQUEIA se falhar · estrutural)
 4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32 · falha-FECHADO se o script sumir)
 4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos · falha-FECHADO se o script sumir)
-4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia — mudou depois do último factcheck · viagem nova + factcheck de hoje passa com aviso · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`). **Falha-FECHADO se o script sumir** (BLOQUEIA · script ausente não é "sem gate") — override explícito e ruidoso: `VIAGEM_SKIP_FCGATE=1` no env pula com aviso gritante.
+4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia/aprofundar/nota — mudou depois do último factcheck · viagem nova + factcheck de hoje passa com aviso · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`). **Falha-FECHADO se o script sumir** (BLOQUEIA · script ausente não é "sem gate") — override explícito e ruidoso: `VIAGEM_SKIP_FCGATE=1` no env pula com aviso gritante.
 5. Backup local em `~/.skill-backups/` (best-effort · não bloqueia)
 6. Re-gera a landing (`regen-landing.py`)
 7. `git add` · `commit` na branch atual · `push origin HEAD:main` (fast-forward) · relê o remoto antes do ✅
@@ -619,7 +621,12 @@ nota enquanto o conteúdo seguia falso.
 
 O `audit.py` (`check_claims_cobertos`) extrai da prosa quatro classes de afirmação —
 **superlativo · data histórica · número com unidade · época/sazonalidade** — e cobra que cada uma
-apareça em algum `prova`. Card ⭐⭐⭐ com afirmação descoberta é **P0**; ⭐⭐ é P1.
+apareça em algum `prova`. Card ⭐⭐⭐ com afirmação descoberta é **P0**; ⭐⭐ é P1. Desde 2026-10-08
+(auditoria paris-amigos, Frente 3): opção ⭐⭐⭐/⭐⭐ segue a mesma régua (`desc`); `nota` do dia e
+`transit_map` são P1, sem cobrar número de plano (km, min, h); `€36,70`, `120 cm` e ano ≥2020
+contam; `HH:MM` não; frase marcada `[a confirmar]` não é cobrada; conta sobre números provados
+entra na prova como `"€48 (derivado: €27,50 + €20,50)"`. Prova de nota/trajeto vai em
+`days[i].fontes` / `transit_map[k].fontes` (mesmo schema).
 
 Ver as afirmações de um card antes de escrever as provas:
 ```bash

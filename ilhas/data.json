@@ -211,7 +211,19 @@
   },
   "transit_map": {
     "Chegada · Métro L4 → Cité": {
-      "metro": "L4 · desça em Cité · o único acesso da estação dá na place Louis-Lépine, na Île de la Cité, junto do mercado de flores e perto de Notre-Dame e da Sainte-Chapelle"
+      "metro": "L4 · desça em Cité · o único acesso da estação dá na place Louis-Lépine, na Île de la Cité, junto do mercado de flores e perto de Notre-Dame e da Sainte-Chapelle",
+      "fontes": [
+        {
+          "o": "Wikipédia · Cité (métro de Paris)",
+          "u": "https://fr.wikipedia.org/wiki/Cit%C3%A9_(m%C3%A9tro_de_Paris)",
+          "tier": "editorial",
+          "data": "2026-10",
+          "prova": [
+            "único acesso",
+            "place Louis-Lépine"
+          ]
+        }
+      ]
     },
     "Volta · Métro Sully-Morland (L7)": {
       "metro": "Estação da L7 sob o quai des Célestins, no cruzamento do boulevard Morland com o boulevard Henri-IV, junto da Pont de Sully"
@@ -2538,7 +2550,8 @@
               "prova": [
                 "424 degraus",
                 "€16",
-                "abaixo de 26"
+                "abaixo de 26",
+                "2026 (consulta ao site oficial em 2026-10-08: \"Individual ticket 16 €\")"
               ]
             },
             {

@@ -331,6 +331,11 @@ produz o mesmo efeito de um erro factual: o viajante descobre no local que o tex
   **Na auditoria, ataque primeiro os campos fora da projeção** (`nota`, `legend_notes_html`,
   `transit_map`, `cat` de transit, `aprofundar` de ⭐⭐) e escreva mutações numa cópia do
   `data.json`: é o teste que mostra o furo em minutos (`paris-amigos/AUDITORIA-2026-10-08.md`).
+- **Gate novo que olha um campo novo acha erro velho no primeiro dia** (conserto da régua
+  claim-a-claim · 2026-10-08). Ao projetar a `nota` no 4d, o `paris-fds` travou: duas notas
+  escritas depois do último factcheck, nunca checadas, uma com erro de linha de metrô. Ao estender
+  a régua, meça nas viagens ativas ANTES de fixar a severidade: o número de plano (km, min) era
+  ~70% do ruído em nota/transit, e `[a confirmar]` precisava descarregar a afirmação.
 
 ## Skill nomeada tem ponto de parada · respeitá-lo é parte do pedido (2026-08-27 · apontado pelo Tobia)
 

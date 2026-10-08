@@ -475,7 +475,7 @@
       "cor": "#7c3aed",
       "gradA": "#4c1d95",
       "gradB": "#8b5cf6",
-      "nota": "<strong>É o passeio de dia de chuva, e foi desenhado pra ela.</strong> O Atelier des Lumières são cerca de 50 minutos sentados no escuro, com elevador e acesso PMR, e tudo o que vem depois no Marais tem teto. O único trecho aberto é o parquinho da manhã. Tudo alcançável pela linha 9 sem baldeação.",
+      "nota": "<strong>É o passeio de dia de chuva, e foi desenhado pra ela.</strong> O Atelier des Lumières são cerca de 50 minutos sentados no escuro, com elevador e acesso PMR, e tudo o que vem depois no Marais tem teto. O único trecho aberto é o parquinho da manhã. A ida é pela linha 9 direta, sem baldeação; do Atelier ao Marais, Uber (~10min) ou a pé (~25-30min).",
       "stops": [
         {
           "hora": "10:30",
@@ -1265,7 +1265,8 @@
                     "200 lugares",
                     "€12-28",
                     "€24-45",
-                    "09 52 86 14 47"
+                    "09 52 86 14 47",
+                    "€150-200 (derivado: estimativa pela carta, entradas €12-28 e pratos €24-45, 5 pessoas)"
                   ]
                 },
                 {
@@ -1360,7 +1361,8 @@
                 "13+",
                 "€20,50 criança",
                 "3 a 12",
-                "€75,50"
+                "€75,50",
+                "€48 (derivado: €27,50 + €20,50)"
               ]
             },
             {
@@ -1500,7 +1502,8 @@
                 "anciens combattants",
                 "€15",
                 "€12",
-                "moins de 18 ans"
+                "moins de 18 ans",
+                "€45 (derivado: 3 × €15)"
               ]
             },
             {
@@ -1671,6 +1674,15 @@
               "data": "2026-08-30",
               "prova": [
                 "coordenada 48.86135, 2.28936"
+              ]
+            },
+            {
+              "o": "Aquarium de Paris · tarifs (site oficial)",
+              "u": "https://aquariumdeparis.com/tarifs/",
+              "tier": "oficial",
+              "data": "2026-10",
+              "prova": [
+                "€48 (derivado: €27,50 adulto + €20,50 criança, card do Aquário)"
               ]
             }
           ]

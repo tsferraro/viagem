@@ -1284,6 +1284,19 @@
           "poiCat": "parque",
           "mapsQuery": "Jardin Tino-Rossi, quai Saint-Bernard, Paris"
         }
+      ],
+      "fontes": [
+        {
+          "o": "Sortir à Paris · Galerie de Paléontologie fecha por 18 meses",
+          "u": "https://www.sortiraparis.com/en/news/in-paris/articles/338340-paleontology-gallery-at-the-natural-history-museum-to-close-for-one-and-a-half-years",
+          "tier": "editorial",
+          "data": "2026-10",
+          "prova": [
+            "início de 2026 (fecha em 19/01/2026)",
+            "18 meses",
+            "2027 (previsão: verão de 2027)"
+          ]
+        }
       ]
     },
     {
@@ -2191,6 +2204,17 @@
           "valeAPena": 3,
           "poiCat": "atracao",
           "mapsQuery": "Arènes de Lutèce, 4 rue des Arènes, Paris"
+        }
+      ],
+      "fontes": [
+        {
+          "o": "Panthéon · informações práticas (site oficial)",
+          "u": "https://www.paris-pantheon.fr/visiter/informations-pratiques",
+          "tier": "oficial",
+          "data": "2026-10",
+          "prova": [
+            "out/2026 (página lida em 2026-10-08: \"Le panorama du Panthéon est fermé pour travaux\")"
+          ]
         }
       ]
     },

@@ -985,7 +985,8 @@
                     "12h-15h",
                     "19h-23h",
                     "12h-23h",
-                    "15h30"
+                    "15h30",
+                    "menores de 9 anos"
                   ]
                 },
                 {
@@ -1132,6 +1133,18 @@
           "valeAPena": 2,
           "poiCat": "atracao",
           "mapsQuery": "Pyramide du Louvre, Paris"
+        }
+      ],
+      "fontes": [
+        {
+          "o": "Mes Prestiges · Loulou",
+          "u": "https://mesprestiges.com/en/paris/places/loulou-paris",
+          "tier": "editorial",
+          "data": "2026-10",
+          "prova": [
+            "€22-30",
+            "€36-49"
+          ]
         }
       ]
     },
@@ -1809,6 +1822,30 @@
           "poiCat": "atracao",
           "mapsQuery": "Pont Neuf, Paris"
         }
+      ],
+      "fontes": [
+        {
+          "o": "Euronews · reabertura da Galerie d'Apollon (22/07/2026)",
+          "u": "https://www.euronews.com/2026/07/22/louvres-apollo-gallery-reopens-after-crown-jewels-theft-scandal",
+          "tier": "editorial",
+          "data": "2026-10",
+          "prova": [
+            "outubro de 2025",
+            "22/07/2026",
+            "séc. XVII",
+            "sem vitrines nem joias"
+          ]
+        },
+        {
+          "o": "Sortir à Paris · Galerie d'Apollon reabre",
+          "u": "https://www.sortiraparis.com/actualites/a-paris/articles/349405-9-mois-apres-le-cambriolage-le-musee-du-louvre-rouvre-la-galerie-d-apollon-sans-vitrines-ni-bijoux",
+          "tier": "editorial",
+          "data": "2026-10",
+          "prova": [
+            "19/10/2025",
+            "22/07/2026"
+          ]
+        }
       ]
     },
     {
@@ -2047,6 +2084,17 @@
           "valeAPena": 2,
           "poiCat": "atracao",
           "mapsQuery": "Musée du Louvre, Paris"
+        }
+      ],
+      "fontes": [
+        {
+          "o": "Louvre · visitas guiadas (família)",
+          "u": "https://www.louvre.fr/expositions-et-evenements/visites-guidees?age=6",
+          "tier": "oficial",
+          "data": "2026-10",
+          "prova": [
+            "6 a 10 anos"
+          ]
         }
       ]
     },

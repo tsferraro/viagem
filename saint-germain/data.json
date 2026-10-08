@@ -438,7 +438,9 @@
                 "junho",
                 "agosto",
                 "Primavera",
-                "abr"
+                "abr",
+                "€6 por 30 min",
+                "abr/2026 (atualizado em 02/04/2026)"
               ]
             },
             {
@@ -2599,7 +2601,9 @@
               "u": "https://www.familinparis.fr/536-musee-dorsay",
               "tier": "editorial",
               "data": "2026-10-06",
-              "prova": []
+              "prova": [
+                "€3,50 (audioguia jeune public até 12 anos)"
+              ]
             },
             {
               "o": "Finestre sull'Arte",

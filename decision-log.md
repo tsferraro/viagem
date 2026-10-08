@@ -453,3 +453,44 @@ arquivos (consts `DAYS · LINKS_MAP · TRANSIT_MAP · BAIRROS_CONFIG · HISTORIA
 escalares como `AUTH_PASSWORD · MAPS_REGION · ROTEIRO_SLUG`), não os bytes — assim mexer em
 `templates/` não vira falso bloqueio. Fica **fora** do escopo: cabeçalho/auth (viram markup) e
 a verdade do conteúdo (é FACTCHECK).
+
+## 2026-10-08 · Régua claim-a-claim consertada (Frente 3 da auditoria paris-amigos · D1 = S)
+
+**Contexto**: a auditoria externa de `paris-amigos` (`paris-amigos/AUDITORIA-2026-10-08.md`, Frente 3)
+injetou 10 mutações numa cópia do `data.json`: 6 passavam pelo `audit.py` sem achado e 3 passavam
+pelos dois gates. O Tobia decidiu consertar numa sessão separada da auditora.
+
+**O que muda**:
+
+| Onde | Antes | Agora |
+|---|---|---|
+| `NUMERO_RE` | só `36,70 €`; `€3,` virava afirmação `€3,` | também `€36,70` e `120 cm`; separador só entre dígitos |
+| `DATA_HIST_RE` | ano até 2019 | `20[0-9]{2}` · inclusive ano depois de barra (`30/jun/2027` é afirmação) |
+| `check_claims_cobertos` | só card ⭐⭐/⭐⭐⭐ | + opção ⭐⭐/⭐⭐⭐ (`desc`, mesma régua: P0/P1) + `nota` do dia e `transit_map` (P1) |
+| `factcheck-gate` (4d) | card ⭐⭐⭐ · WT · opção ⭐⭐⭐ · historia | + `aprofundar` de qualquer card + `nota` de cada dia |
+
+**Calibrações (medidas nas 7 viagens antes de fixar)**:
+- `HH:MM` fica fora (falso positivo nos horários do próprio roteiro). Pelo mesmo motivo, em
+  `nota`/`transit_map` não se cobra número de PLANO (km, m, min, h): sem esse corte ~70% dos
+  achados novos eram "~1,2 km a pé" e "linha 9, ~25 min".
+- Frase marcada `[a confirmar…]` não é cobrada: é a saída que a REGRA ZERO manda usar, e antes
+  marcar honestamente dava o mesmo achado que inventar.
+- Comparativo ("um pouco maior") não é superlativo.
+- `nota`/`transit_map` aceitam prova de qualquer card/opção da viagem: a nota resume e aponta
+  pras outras abas; repetir a prova seria copiar token.
+- Moeda antes ou depois casa nos dois sentidos (`€3,50` no texto, `3,50 €` na prova).
+- `days[i].fontes` e `transit_map[k].fontes` passam a existir (mesmo schema); o template ignora.
+- Número que é conta sobre números provados entra na prova como `"€48 (derivado: €27,50 + €20,50)"`:
+  a palavra `derivado:` deixa a conta auditável por grep, e as parcelas têm que estar na fonte.
+
+**Alternativas rejeitadas**: exceção pra ano colado a barra (carimbo `ago/2026`): mataria
+`fechado até 30/jun/2027`, exatamente a classe da M4. `transit_map` no gate 4d: fica de fora
+por ora — trajeto muda a cada ajuste de rota, e o P1 do audit já aponta a afirmação inventada.
+
+**Validação**: as mutações pedidas acusam (M2/M3/M4/M6 = P0 · M7/M8/M9 = P1); 11 casos viraram
+teste em `skills/critico-roteiro/tests/run_tests.py` (8 deles reprovam o código antigo · 47/47).
+Furos que continuam abertos, ditos pra ninguém alegar cobertura: M5 (`HH:MM`, por desenho), M9 no
+4d, M10b (card rebaixado a ⭐ sai da régua claim-a-claim). O gate 4d novo pegou na hora um furo
+real: as duas notas novas do `paris-fds` (pós-30/08) nunca tinham sido checadas — o factcheck
+cético achou 1 ERRO ("tudo pela linha 9 sem baldeação"; o Marais não tem estação da linha 9) →
+corrigido em `paris-fds/FACTCHECK-2026-10-08.md`.
