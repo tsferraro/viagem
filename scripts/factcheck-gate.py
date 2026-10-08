@@ -24,8 +24,8 @@ O QUE BLOQUEIA
 2. Formato inválido no mais recente: zero linhas de veredito · OK/ERRO/RISCO sem URL ·
    ERRO sem "corrigido" · data no nome do arquivo no futuro (forja).
 3. Conteúdo SENSÍVEL mudou depois da data do factcheck: projeção sensível do data.json
-   (cards ⭐⭐⭐: sobre/imperdivel/dicas/coord/mapsQuery · TODA parada de walking tour ·
-   opções ⭐⭐⭐ · historia[]) difere entre a versão commitada até a data do factcheck e a
+   (cards ⭐⭐⭐: sobre/imperdivel/dicas/coord/mapsQuery · `aprofundar` de QUALQUER card ·
+   `nota` de cada dia · TODA parada de walking tour · opções ⭐⭐⭐ · historia[]) difere entre a versão commitada até a data do factcheck e a
    que vai pro ar — e o factcheck não é de hoje. Edit não-sensível passa sem factcheck novo.
 
 VIAGEM NOVA (refinamento 6a · auditoria de volta 2026-08-09)
@@ -61,11 +61,20 @@ def projecao_sensivel(data: dict) -> str:
     coord de item ⭐⭐⭐ e TODA parada de WT (rota física nunca é 'edit pequeno')."""
     proj = {}
     for day in data.get('days', []) or []:
+        # `nota` do dia (auditoria paris-amigos 2026-10-08 · M8): resume o dia com horário,
+        # preço e regra de acesso — e mudava sem o gate ver.
+        if day.get('nota'):
+            proj[f"nota:{day.get('date','?')}"] = [day.get('nota')]
         for s in day.get('stops', []) or []:
             if s.get('tipo') == 'card' and s.get('valeAPena') == 3:
                 proj[f"card3:{s.get('nome','?')}"] = [
                     s.get('sobre'), s.get('imperdivel'), s.get('dicas'), s.get('aprofundar'),
                     s.get('coord'), s.get('mapsQuery')]
+            elif s.get('tipo') == 'card' and s.get('aprofundar'):
+                # `aprofundar` é prosa histórica, como `historia[]` — entra independente da
+                # estrela (M7: "1999, a maior da Europa" num ⭐⭐ passava pelos dois gates;
+                # M10b: rebaixar ★3→★1 tirava o card da projeção).
+                proj[f"aprofundar:{s.get('nome','?')}"] = [s.get('aprofundar')]
             for wt in s.get('walkingTours', []) or []:
                 for st in wt.get('stops', []) or []:
                     proj[f"wt:{wt.get('nome','?')}:{st.get('nome','?')}"] = [

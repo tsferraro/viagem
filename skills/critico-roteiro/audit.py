@@ -842,7 +842,10 @@ SUPERLATIVO_RE = re.compile(
     # europeia" abriam frase sem artigo e escapavam da versão anterior. Foi
     # exatamente assim que "maior população europeia de flamingos" (falso: é
     # Molentargius, a ~100km) sobreviveu ao gate.
-    r'maior(?:es)?|menor(?:es)?|melhor(?:es)?|pior(?:es)?|[uú]nic[oa]s?'
+    # ...mas não o COMPARATIVO ("o caminho real é um pouco maior"): advérbio de grau
+    # antes de maior/menor/melhor/pior marca comparação, não afirmação de topo.
+    r'(?<!pouco )(?<!muito )(?<!bem )(?<!ainda )(?<!tão )'
+    r'(?:maior(?:es)?|menor(?:es)?|melhor(?:es)?|pior(?:es)?)|[uú]nic[oa]s?'
     r'|primeir[oa]s?|[uú]ltim[oa]s?'
     r'|mais\s+(?:antig|alt|nov|larg|long|profund|important|preserv|visit|bonit|barat|car)\w*'
     r'|somente\s+(?:um|uma)|apenas\s+(?:um|uma)|the\s+only'
@@ -851,12 +854,15 @@ SUPERLATIVO_RE = re.compile(
 # Data histórica ou século. Deliberadamente ESTREITO pra não afogar o gate em ruído:
 #  · século em romano ("séc. XIII")
 #  · ano com era explícita ("VIII a.C.", "1º d.C.")
-#  · ano de 3-4 dígitos ATÉ 2019 — de 2020 em diante é carimbo de referência
-#    "(ago/2026)", não afirmação histórica.
+#  · ano de 4 dígitos 1000-2099. Até 2026-10 parava em 2019 ("de 2020 em diante é
+#    carimbo"), e a auditoria paris-amigos (2026-10-08, mutação M4) mostrou o custo:
+#    "fecha de vez em 2029" e "obras até 2028" passavam como cor de prosa. Data futura é
+#    afirmação operacional — a que mais apodrece. Sem exceção pra ano depois de barra:
+#    "obras até 30/jun/2027" tem a mesma cara de um carimbo "(ago/2026)" e é afirmação.
 DATA_HIST_RE = re.compile(
     r'\b(?:s[ée]c(?:ulo)?\.?\s*[IVXLCM]+'
     r'|\d{1,4}\s*(?:a\.?\s?C\.?|d\.?\s?C\.?)'
-    r'|1[0-9]{3}|20[01][0-9])\b')
+    r'|1[0-9]{3}|20[0-9]{2})\b')
 
 
 def _strip_html(t: str) -> str:
@@ -946,23 +952,50 @@ SAZONAL_RE = re.compile(
     r'|o\s+ano\s+todo|temporada|alta\s+esta[çc][ãa]o|baixa\s+esta[çc][ãa]o)\b', re.I)
 
 # Número COM unidade — preço, medida, contagem, horário. É a classe que mais apodrece.
+# Ajustes da auditoria paris-amigos (2026-10-08 · mutações M2/M3):
+#  · moeda ANTES do número ("€36,70") — a grafia mais comum nos roteiros e não casava;
+#  · `cm` (altura mínima de brinquedo: "exige 120 cm");
+#  · o número só aceita separador seguido de dígito, pra pontuação colada não entrar no
+#    token: "€3, depois" virava a afirmação "€3," e não casava com a prova "€3".
+#  · `HH:MM` fica FORA de propósito: testado, vira falso positivo nos horários do próprio
+#    roteiro ("13:00 almoço"), que são plano, não afirmação sobre o mundo.
+_NUM = r'\d+(?:[.,]\d+)*'
 NUMERO_RE = re.compile(
-    r'\b\d[\d.,]*\s*(?:km²|km2|km|m²|m2|ha|metros?|m\b|€|euros?|h\b|h\d{2}|min|'
-    r'casais|degraus|habitantes|s[ée]culos?|anos?)', re.I)
+    r'(?:[€$£]\s?' + _NUM + r'\b'
+    r'|\b' + _NUM + r'\s*(?:km²|km2|km|m²|m2|cm\b|ha|metros?|m\b|€|euros?|h\b|h\d{2}|min|'
+    r'casais|degraus|habitantes|s[ée]culos?|anos?))', re.I)
 
 def _norm(t: str) -> str:
     t = unicodedata.normalize('NFD', (t or '').lower())
     t = ''.join(ch for ch in t if unicodedata.category(ch) != 'Mn')
     return re.sub(r'\s+', ' ', t)
 
-def _claims_estruturados(texto: str) -> List[Tuple[str, str]]:
-    """[(tipo, trecho_chave)] · o trecho é o que precisa aparecer em algum `prova`."""
-    t = _strip_html(texto)
+A_CONFIRMAR_RE = re.compile(r'\[(?:a\s+)?confirmar\b', re.I)
+A_CONFIRMAR_SPLIT_RE = re.compile(r'(?<=[.;!?])\s+|\s·\s|\n')
+
+# Número de PLANO: distância, duração, hora do dia. Na `nota` e no `transit_map` é o
+# próprio roteiro falando ("~1,2 km a pé", "linha 9, ~25 min", "casa às 18h") — mesma
+# razão que deixou `HH:MM` fora. Medido em 2026-10-08: sem este corte, ~70% dos achados
+# novos de nota/transit eram isso. No card e na opção o corte NÃO vale ("abre às 10h"
+# ali é afirmação sobre o lugar).
+PLANO_RE = re.compile(r'(?:km|m|metros?|min|h|h\d{2})$', re.I)
+
+def _claims_estruturados(texto: str, sem_plano: bool = False) -> List[Tuple[str, str]]:
+    """[(tipo, trecho_chave)] · o trecho é o que precisa aparecer em algum `prova`.
+    `sem_plano`: pula número de plano (ver PLANO_RE) — uso em nota/transit_map.
+
+    Frase marcada `[a confirmar…]` não é cobrada: a marca É a saída que a REGRA ZERO
+    manda usar quando não há fonte ("Coquetel €13-15 (dado antigo, [a confirmar])").
+    Sem isso, marcar honestamente e inventar davam o mesmo achado."""
+    t = ' '.join(seg for seg in A_CONFIRMAR_SPLIT_RE.split(_strip_html(texto))
+                 if not A_CONFIRMAR_RE.search(seg))
     out, vistos = [], set()
     for tipo, rx in (('superlativo', SUPERLATIVO_RE), ('data', DATA_HIST_RE),
                      ('número', NUMERO_RE), ('época', SAZONAL_RE)):
         for mm in rx.finditer(t):
             chave = mm.group(0).strip()
+            if sem_plano and tipo == 'número' and PLANO_RE.search(chave):
+                continue
             k = (tipo, _norm(chave))
             if k in vistos:
                 continue
@@ -980,37 +1013,96 @@ def _provas(obj) -> List[str]:
             ps.extend(str(x) for x in pv)
     return [_norm(p) for p in ps]
 
+def _descobertos(texto: str, provas: List[str], sem_plano: bool = False) -> List[str]:
+    """Afirmações do texto que não aparecem em nenhuma `prova` · formatadas pro achado."""
+    def grafias(ch: str) -> List[str]:
+        # "€3,50" no texto e "3,50 €" na prova são a mesma afirmação
+        m = re.match(r'^([€$£])\s?(.+)$', ch)
+        return [ch, f'{m.group(2)} {m.group(1)}', f'{m.group(2)}{m.group(1)}'] if m else [ch]
+    return [f'{tipo}: "{ch}"' for tipo, ch in _claims_estruturados(texto, sem_plano)
+            if not any(_norm(g) in p for g in grafias(ch) for p in provas)]
+
+def _texto_transit(t) -> str:
+    if not isinstance(t, dict):
+        return str(t or '')
+    if isinstance(t.get('opcoes'), list):
+        return ' '.join(str(o.get('texto', '')) for o in t['opcoes'] if isinstance(o, dict))
+    return ' '.join(str(t[k]) for k in ('ferry', 'metro', 'uber', 'taxi') if t.get(k))
+
 def check_claims_cobertos(data: Dict, F: List[Finding], debt: Optional[set] = None) -> List[str]:
-    """Cobra claim-a-claim nos cards que o viajante age em cima (⭐⭐ e ⭐⭐⭐)."""
+    """Cobra claim-a-claim em tudo que o viajante age em cima: cards e opções ⭐⭐/⭐⭐⭐,
+    a `nota` de cada dia e os textos do `transit_map`.
+
+    Extensão da auditoria paris-amigos (2026-10-08 · mutações M6, M8, M9): até ali só o
+    card era cobrado — uma opção ⭐⭐⭐ com "a maior do mundo, fundada em 1890", uma nota
+    de dia com preço inventado e um trajeto com afirmação inventada passavam sem achado.
+
+    Severidade: opção segue a régua do card (⭐⭐⭐ P0 · ⭐⭐ P1). `nota` e `transit_map`
+    são P1 (sugestão, não bloqueiam deploy), não cobram número de plano (PLANO_RE) — e
+    aceitam como prova, além das próprias `fontes`, as `prova` de QUALQUER card/opção da
+    viagem: a nota resume o dia e aponta pras outras abas ("as torres, 424 degraus" na aba
+    Família, com a prova no card das torres na aba Profunda), e repetir a prova do card na
+    nota seria só copiar token. Uma afirmação inventada na nota não tem prova em lugar
+    nenhum — é isso que a régua pega."""
     debt = debt or set()
     pendentes: List[str] = []
+
+    def acusa(chave, sev_cheia, desc, nome, onde, hint):
+        pendentes.append(chave)
+        na_divida = chave in debt
+        F.append(Finding(2 if na_divida else sev_cheia, 5,
+            f'{len(desc)} afirmação(ões) {onde} SEM fonte nomeada que as sustente — '
+            f'ex: {" · ".join(desc[:3])}' + (' [dívida registrada]' if na_divida else ''),
+            stop=nome, station='🔎', hint=hint))
+
+    hint_card = ('cada afirmação entra em `prova`: '
+                 '"fontes":[{"o":"<fonte>","u":"...","prova":["22 km²","outono à primavera"]}]')
+    provas_viagem: List[str] = []
+    for day in data.get('days', []) or []:
+        provas_viagem += _provas(day)
+        for st in day.get('stops', []) or []:
+            provas_viagem += _provas(st)
+            for o in st.get('opcoes', []) or []:
+                provas_viagem += _provas(o)
+
     for c in get_cards(data):
-        if c.get('tipo') != 'card':
-            continue
         va = c.get('valeAPena')
         if va not in (2, 3):
             continue
         texto = ' '.join([c.get('cat', ''), c.get('sobre', ''), c.get('imperdivel', ''), c.get('aprofundar', '')]
                          + list(c.get('dicas', [])))
-        claims = _claims_estruturados(texto)
-        if not claims:
-            continue
-        provas = _provas(c)
-        desc = [f'{tipo}: "{ch}"' for tipo, ch in claims
-                if not any(_norm(ch) in p for p in provas)]
-        if not desc:
-            continue
-        nome = c.get('nome', '(sem nome)')
-        chave = f'claimcov:{nome}'
-        pendentes.append(chave)
-        na_divida = chave in debt
-        sev = 2 if na_divida else (0 if va == 3 else 1)
-        F.append(Finding(sev, 5,
-            f'{len(desc)} afirmação(ões) do card SEM fonte nomeada que as sustente — '
-            f'ex: {" · ".join(desc[:3])}' + (' [dívida registrada]' if na_divida else ''),
-            stop=nome, station='🔎',
-            hint='cada afirmação entra em `prova`: '
-                 '"fontes":[{"o":"<fonte>","u":"...","prova":["22 km²","outono à primavera"]}]'))
+        desc = _descobertos(texto, _provas(c))
+        if desc:
+            nome = c.get('nome', '(sem nome)')
+            acusa(f'claimcov:{nome}', 0 if va == 3 else 1, desc, nome, 'do card', hint_card)
+
+    for day in data.get('days', []) or []:
+        for st in day.get('stops', []) or []:
+            for o in st.get('opcoes', []) or []:
+                va = o.get('valeAPena')
+                if va not in (2, 3):
+                    continue
+                desc = _descobertos(o.get('desc', ''), _provas(o))
+                if desc:
+                    nome = o.get('nome', '(sem nome)')
+                    acusa(f'claimcov:opcao:{nome}', 0 if va == 3 else 1, desc, nome,
+                          'da opção', hint_card)
+
+    for i, day in enumerate(data.get('days', []) or []):
+        desc = _descobertos(day.get('nota', ''), provas_viagem, sem_plano=True)
+        if desc:
+            nome = f'nota · {day.get("date", i)}'
+            acusa(f'claimcov:nota:{day.get("date", i)}', 1, desc, nome, 'da nota do dia',
+                  'prova no card/opção do mesmo dia, ou `fontes` no próprio dia '
+                  '(`days[i].fontes` · mesmo schema) · senão `[a confirmar]`')
+
+    for nome, t in (data.get('transit_map') or {}).items():
+        provas = (_provas(t) if isinstance(t, dict) else []) + provas_viagem
+        desc = _descobertos(_texto_transit(t), provas, sem_plano=True)
+        if desc:
+            acusa(f'claimcov:transit:{nome}', 1, desc, nome, 'do trajeto (transit_map)',
+                  '`fontes` na própria entrada do transit_map (mesmo schema) · '
+                  'senão `[a confirmar]`')
     return pendentes
 
 

@@ -111,6 +111,93 @@ def _sync_check(mutar_html):
         return proc.returncode, proc.stdout + proc.stderr
 
 
+def _load(nome, caminho):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(nome, str(caminho))
+    mod = importlib.util.module_from_spec(spec)
+    argv, sys.argv = sys.argv, ['x']
+    try:
+        spec.loader.exec_module(mod)
+    finally:
+        sys.argv = argv
+    return mod
+
+
+def _claims_base():
+    """Roteiro mínimo com TODA afirmação provada · base das mutações da auditoria
+    paris-amigos (2026-10-08 · Frente 3). Controle: tem que dar zero achado claim-a-claim."""
+    fonte = lambda *prova: [{"o": "Fonte X", "u": "https://example.org", "tier": "oficial",
+                             "data": "2026-10", "prova": list(prova)}]
+    return {
+        "days": [{
+            "date": "Sáb 10/Out",
+            "nota": "Casa às 18:00 · ~1,2 km a pé · linha 9, ~25 min. O caminho real é um pouco maior. "
+                    "Coquetel €13-15 (dado antigo, [a confirmar]).",
+            "stops": [
+                {"tipo": "card", "nome": "Torre", "valeAPena": 3, "sobre": "Erguida em 1889.",
+                 "imperdivel": "O topo.", "dicas": ["Bilhete €36,70; o elevador custa €3, sem fila."],
+                 "aprofundar": "Projeto de 1884.", "fontes": fonte("1889", "36,70 €", "€3", "1884")},
+                {"tipo": "card", "nome": "Ponte", "valeAPena": 2, "sobre": "De 1634.",
+                 "aprofundar": "Refeita em 1970.", "dicas": ["Passa a pé."], "fontes": fonte("1634", "1970")},
+                {"tipo": "opcoes", "nome": "Almoço", "opcoes": [
+                    {"nome": "Bistrô", "valeAPena": 3, "desc": "Desde 1906.", "fontes": fonte("1906")}]},
+                {"tipo": "transit", "nome": "Casa → Centro"},
+            ]}],
+        "transit_map": {"Casa → Centro": {"opcoes": [
+            {"modo": "metro", "texto": "Linha 9 direto, ~25 min, 6 min a pé da saída."}]}},
+    }
+
+
+def _claims_mutacoes(audit, gate):
+    import copy
+    base = _claims_base()
+
+    def claimcov(d):
+        _, F, _ = audit.audit_roteiro(d)
+        return [(f.sev, f.stop) for f in F if 'SEM fonte nomeada' in f.msg]
+
+    def card(d, nome):
+        return next(s for s in d['days'][0]['stops'] if s.get('nome') == nome)
+
+    check('claims · controle (tudo provado, plano, comparativo, [a confirmar]) = zero achado',
+          claimcov(base) == [], str(claimcov(base)))
+    casos = [
+        ('M2 · €99,90 em dica ⭐⭐⭐ = P0', 0,
+         lambda d: card(d, 'Torre')['dicas'].append('O topo custa €99,90.')),
+        ('M3 · "120 cm" em card ⭐⭐⭐ = P0', 0,
+         lambda d: card(d, 'Torre')['dicas'].append('Exige 120 cm.')),
+        ('M4 · "2029" no aprofundar ⭐⭐⭐ = P0', 0,
+         lambda d: card(d, 'Torre').__setitem__('aprofundar', 'Projeto de 1884. Fecha em 2029.')),
+        ('M6 · opção ⭐⭐⭐ "a maior do mundo, fundada em 1890" = P0', 0,
+         lambda d: d['days'][0]['stops'][2]['opcoes'][0].__setitem__(
+             'desc', 'Desde 1906. A maior do mundo, fundada em 1890.')),
+        ('M7 · aprofundar ⭐⭐ "1999, a maior da Europa" = P1', 1,
+         lambda d: card(d, 'Ponte').__setitem__('aprofundar', 'Refeita em 1999, a maior da Europa.')),
+        ('M8 · nota com preço inventado = P1', 1,
+         lambda d: d['days'][0].__setitem__('nota', d['days'][0]['nota'] + ' O carrossel custa €7,80.')),
+        ('M9 · transit_map com afirmação inventada = P1', 1,
+         lambda d: d['transit_map']['Casa → Centro']['opcoes'][0].__setitem__(
+             'texto', 'A linha mais antiga, de 1923, bilhete €4,20.')),
+    ]
+    for label, sev, mut in casos:
+        d = copy.deepcopy(base); mut(d)
+        got = claimcov(d)
+        check(f'claims · {label}', any(s == sev for s, _ in got), str(got))
+    d = copy.deepcopy(base); card(d, 'Torre')['dicas'].append('O 2º andar fecha das 13:00-15:00.')
+    check('claims · M5 · HH:MM fica FORA por desenho (zero achado)', claimcov(d) == [], str(claimcov(d)))
+
+    # gate 4d · projeção sensível vê `aprofundar` de qualquer estrela e a `nota`
+    p0 = gate.projecao_sensivel(base)
+    for label, mut in [
+        ('aprofundar ⭐⭐ muda a projeção (M7)',
+         lambda d: card(d, 'Ponte').__setitem__('aprofundar', 'Refeita em 1999.')),
+        ('nota do dia muda a projeção (M8)',
+         lambda d: d['days'][0].__setitem__('nota', 'O carrossel custa €7,80.')),
+    ]:
+        d = copy.deepcopy(base); mut(d)
+        check(f'factcheck-gate · {label}', gate.projecao_sensivel(d) != p0)
+
+
 def main():
     check_links = '--check-links' in sys.argv
     print(f'\n{BOLD}=== Regressão do critico-roteiro/audit.py ==={END}\n')
@@ -262,6 +349,10 @@ def main():
     code, out = _sync_check(lambda h: h.replace('const MAPS_REGION = "Roma, Italia"',
                                                 'const MAPS_REGION = "Bosa, Italia"'))
     check('sync · escalar editado inline (MAPS_REGION) → BLOQUEIA', code == 1, f"exit={code}")
+
+    # --- Régua claim-a-claim · mutações da auditoria paris-amigos (2026-10-08) --
+    print(f'{DIM}claim-a-claim · mutações M2-M9 (opção, nota, transit_map, € antes, cm, 20XX){END}')
+    _claims_mutacoes(_load('audit_mod', AUDIT), _load('fcgate_mod', FCGATE))
 
     # --- Rede (opcional · só com --check-links) ------------------------------
     if check_links:

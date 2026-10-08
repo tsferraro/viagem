@@ -3,7 +3,7 @@
 O auditor testando a si mesmo. Fecha o furo que a própria auto-avaliação apontou (dim 9 · skill-creator: "um linter é o candidato perfeito pra evals").
 
 ```bash
-python3 skills/critico-roteiro/tests/run_tests.py                # 14 checks (offline)
+python3 skills/critico-roteiro/tests/run_tests.py                # offline · inclui as mutações claim-a-claim
 python3 skills/critico-roteiro/tests/run_tests.py --check-links  # +1 check de rede
 ```
 
