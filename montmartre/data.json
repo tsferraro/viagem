@@ -1,0 +1,2944 @@
+{
+  "title": "🗺️ Walking Tours · Montmartre (Paris)",
+  "auth_emoji": "🗺️",
+  "auth_title": "Walking Tours · Paris",
+  "auth_subtitle": "Montmartre · Sacré-Cœur · Abbesses · roteiros a pé (sem data)",
+  "header_title": "🗺️ Montmartre · Walking Tours",
+  "header_sub": "Família · Profundo · Guloso · Museus",
+  "password": "marais2026",
+  "legend_group_text": "👨‍👩‍👧 Tour ok pra crianças pequenas",
+  "legend_notes_html": "<strong>🗺️ Coletânea de walking tours por Montmartre (18e)</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. A Butte é uma <strong>colina com escadaria</strong>: o <strong>funicular</strong> poupa 36 m de subida e a estação <strong>Abbesses</strong> tem elevador, mas a rue Foyatier (222 degraus) e o domo do Sacré-Cœur (quase 300 degraus, sem elevador) não são pra carrinho. <strong>👶 Família</strong>: carrossel, funicular e o parquinho da Turlure. <strong>🎨 Profundo</strong>: 11 paradas em 2 partes, de Picasso e Renoir à basílica da derrota de 1870. <strong>🍫 Guloso</strong>: a rue des Martyrs até Abbesses, com baguetes premiadas. <strong>🖼️ Museus</strong>: o Musée de Montmartre e dois de reserva. <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>📍 Pinos</strong>: posições copiadas do OpenStreetMap (pontos de endereço nas padarias e confeitarias da rue des Martyrs e da rue des Abbesses). <strong>⚠️ Golpes</strong>: batedores de carteira nas escadarias do Sacré-Cœur e nas ruas perto da Place du Tertre; o golpe da pulseira acontece nas escadarias. <strong>🗓️ Horários</strong>: padarias e confeitarias fecham um ou dois dias por semana (cada card diz quais); confirme o dia antes de ir.",
+  "bairros_config": [
+    {
+      "nome": "🎨 Butte oeste · Abbesses",
+      "latMin": 48.8835,
+      "latMax": 48.8895,
+      "lngMin": 2.333,
+      "lngMax": 2.3405
+    },
+    {
+      "nome": "⛪ Sacré-Cœur · Place Saint-Pierre",
+      "latMin": 48.8835,
+      "latMax": 48.8895,
+      "lngMin": 2.3405,
+      "lngMax": 2.347
+    },
+    {
+      "nome": "🍫 Rue des Martyrs",
+      "latMin": 48.8765,
+      "latMax": 48.8835,
+      "lngMin": 2.333,
+      "lngMax": 2.347
+    },
+    {
+      "nome": "📍 Paris",
+      "fallback": true
+    }
+  ],
+  "wt_labels": "letters",
+  "days": [
+    {
+      "date": "👶",
+      "tema": "Montmartre · Clássico em Família",
+      "temaCurto": "Família",
+      "bairro": "🎠 Abbesses → Sacré-Cœur (18e)",
+      "grupo": true,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "hideStopMarkers": true,
+      "nota": "<strong>&quot;Carrossel, funicular e parquinho&quot;</strong>: o lado de criança de uma colina turística. Proposta: descer em <strong>Abbesses</strong> (L12), ~0,7 km em linha reta (estimativa, não medida), <strong>11h-16h</strong> com almoço. Montmartre é <strong>colina com escadaria</strong>: o <strong>funicular aceita carrinho</strong> (portas largas), a estação Abbesses tem <strong>elevador</strong> e o Parc de la Turlure é <strong>acessível a mobilidade reduzida</strong>; já a escadaria da <strong>rue Foyatier</strong> (222 degraus) e o <strong>domo</strong> do Sacré-Cœur (quase 300 degraus, sem elevador) <strong>não são pra carrinho</strong>. <strong>Pula sem culpa:</strong> a <strong>Place du Tertre</strong> (140 vagas de 1 m² pra pintores e retratistas, com terraços de restaurante ocupando o espaço desde os anos 1980) e as <strong>escadarias do Sacré-Cœur</strong>, onde há golpe da pulseira: suba de funicular.",
+      "stops": [
+        {
+          "hora": "11:00",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Abbesses (L12)",
+          "cat": "Linha 12 · a estação fica na place des Abbesses; plataforma funda, com elevador",
+          "coord": {
+            "lat": 48.8848041,
+            "lng": 2.3386421
+          }
+        },
+        {
+          "hora": "11:15",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Estação Abbesses · entrada Guimard (place des Abbesses, 18e)",
+          "cat": "Art Nouveau de Guimard · plataforma a 36 m de profundidade",
+          "sobre": "Esta é uma das <strong>duas únicas entradas de metrô de Guimard com cobertura de vidro</strong>, a chamada &quot;libélula&quot;, que restam em Paris, e ela <strong>não nasceu aqui</strong>: foi transferida da estação <strong>Hôtel de Ville em 1974</strong>. A estação abriu em <strong>30/01/1913</strong> e as plataformas ficam a <strong>36 m</strong> de profundidade.",
+          "imperdivel": "O que observar: o desenho Art Nouveau de <strong>Hector Guimard</strong> e a cobertura de vidro em forma de libélula, uma raridade entre as entradas de metrô de Paris.",
+          "dicas": [
+            "Pra criança pequena e pra carrinho: <strong>use o elevador</strong>. A escada em caracol tem cerca de <strong>176 degraus</strong> (Paris Zigzag)",
+            "Ticket de metrô: <strong>€2,55</strong> adulto · <strong>€1,30</strong> criança de <strong>4 a 9 anos</strong> · menor de <strong>4 anos</strong> viaja grátis (RATP, 2026)",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Estação Abbesses</strong> — ponto de partida, na place des Abbesses",
+            "🚶 <strong>Ⓐ Carrossel Saint-Pierre</strong> — a pé até o pé da colina do Sacré-Cœur (~335 m em linha reta, estimativa)",
+            "🚶 <strong>Ⓑ Funicular</strong> — logo ao lado do carrossel (~70 m em linha reta, estimativa)",
+            "🚶 <strong>Ⓒ Sacré-Cœur</strong> — o funicular deixa você no alto, junto à basílica",
+            "🚶 <strong>Ⓓ Parc de la Turlure</strong> — o parquinho, pra fechar o passeio"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis (o metrô exige ticket)",
+          "acessibilidade": "Elevadores ou escada em caracol (cerca de 176 degraus) até a plataforma; a estação não é marcada como acessível a cadeira de rodas no OpenStreetMap",
+          "coord": {
+            "lat": 48.8848041,
+            "lng": 2.3386421
+          },
+          "walkingTours": [
+            {
+              "nome": "Montmartre em família · 👶 Carrossel, funicular e parquinho",
+              "descricao": "Abbesses → Carrossel Saint-Pierre → Funicular → Sacré-Cœur → Parc de la Turlure · ~0,7 km em linha reta (estimativa, não medida) · o funicular faz a subida",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Estação Abbesses · entrada Guimard (place des Abbesses, 18e)",
+                  "coord": {
+                    "lat": 48.8848041,
+                    "lng": 2.3386421
+                  },
+                  "mapsQuery": "Métro Abbesses, Place des Abbesses, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Carrossel Saint-Pierre (place Saint-Pierre, 18e)",
+                  "coord": {
+                    "lat": 48.8846922,
+                    "lng": 2.3432261
+                  },
+                  "mapsQuery": "Carrousel de Montmartre, Place Saint-Pierre, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Funicular de Montmartre (place Saint-Pierre, 18e)",
+                  "coord": {
+                    "lat": 48.8851745,
+                    "lng": 2.3425677
+                  },
+                  "mapsQuery": "Funiculaire de Montmartre, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Basílica do Sacré-Cœur · adro (35 rue du Chevalier-de-la-Barre, 18e)",
+                  "coord": {
+                    "lat": 48.8868058,
+                    "lng": 2.3430153
+                  },
+                  "mapsQuery": "Basilique du Sacré-Cœur, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Parc de la Turlure (1 rue de la Bonne, 18e)",
+                  "coord": {
+                    "lat": 48.8876809,
+                    "lng": 2.3437147
+                  },
+                  "mapsQuery": "Parc Marcel Bleustein-Blanchet, 1 rue de la Bonne, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Abbesses station",
+              "u": "https://en.wikipedia.org/wiki/Abbesses_station",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "duas únicas entradas",
+                "libélula",
+                "Hôtel de Ville",
+                "1974",
+                "30/01/1913",
+                "36 m",
+                "elevador",
+                "linha 12"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · estação Abbesses",
+              "u": "https://www.pariszigzag.fr/?p=265124",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "36 m",
+                "176 degraus",
+                "elevador",
+                "Hector Guimard"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Montmartre Funicular",
+              "u": "https://en.wikipedia.org/wiki/Montmartre_Funicular",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "108 m",
+                "36 m",
+                "1900",
+                "1935",
+                "1991",
+                "RATP",
+                "€2,55",
+                "€1,30"
+              ]
+            },
+            {
+              "o": "RATP · Ticket Métro-Train-RER (trecho do buscador)",
+              "u": "https://www.ratp.fr/titres-et-tarifs/ticket-metro-train-rer",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€2,55",
+                "€1,30",
+                "4 a 9 anos",
+                "menor de 4 anos",
+                "funicular",
+                "2026"
+              ]
+            },
+            {
+              "o": "Transport de personne · funicular de Montmartre",
+              "u": "https://transportdepersonne.com/funiculaire-montmartre-tarif-horaires-paris/",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "6h às 0h45",
+                "menor de 4 anos",
+                "Navigo",
+                "Paris Visite"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 264505115 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/264505115",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "335 m",
+                "70 m",
+                "acessível a cadeira de rodas"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Métro Abbesses, Place des Abbesses, Paris"
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · rue des Abbesses e rue des Martyrs",
+          "cat": "Crêpes, brasserie com menu infantil ou piquenique de padaria",
+          "coord": {
+            "lat": 48.8842705,
+            "lng": 2.3396462
+          },
+          "opcoes": [
+            {
+              "nome": "Breizh Café Abbesses (93 rue des Martyrs, 18e)",
+              "desc": "Crêperie bretã com <strong>galettes de trigo-sarraceno</strong> (farinha IGP da Bretanha) e crepes doces, feitos na hora · <strong>aberta todos os dias, 9h-22h</strong> · tem <strong>terraço</strong> e aceita reserva online · o cardápio infantil não aparece no site: pergunte ao garçom",
+              "preco": "cardápio no local",
+              "dist": "~95 m da place des Abbesses em linha reta (estimativa)",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Breizh Café Abbesses, 93 rue des Martyrs, Paris",
+              "fontes": [
+                {
+                  "o": "Breizh Café · página Abbesses (site oficial)",
+                  "u": "https://en.breizhcafe.com/abbesses",
+                  "tier": "oficial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "galettes de trigo-sarraceno",
+                    "IGP",
+                    "9h-22h",
+                    "todos os dias",
+                    "terraço",
+                    "reserva online"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 8044130945 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/8044130945",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.8842705,
+                "lng": 2.3396462
+              }
+            },
+            {
+              "nome": "La Mascotte (52 rue des Abbesses, 18e)",
+              "desc": "Brasserie <strong>criada em 1889</strong> · tem <strong>menu infantil</strong> · fórmula de almoço de <strong>€21</strong> (entrada+prato ou prato+sobremesa) em dia útil, segundo o diretório: confira o valor no local",
+              "preco": "fórmula €21 (dia útil)",
+              "dist": "~250 m da place des Abbesses em linha reta (estimativa)",
+              "valeAPena": 1,
+              "poiCat": "restaurante",
+              "mapsQuery": "La Mascotte Montmartre, 52 rue des Abbesses, Paris",
+              "fontes": [
+                {
+                  "o": "LesRestos · La Mascotte Montmartre",
+                  "u": "https://www.lesrestos.com/restaurant/fiche/paris/la-mascotte-montmartre",
+                  "tier": "diretorio",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "1889",
+                    "menu infantil",
+                    "€21",
+                    "entrada+prato ou prato+sobremesa"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 1242991244 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/1242991244",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.8857113,
+                "lng": 2.3355174
+              }
+            },
+            {
+              "nome": "Le Grenier à Pain (38 rue des Abbesses, 18e) · piquenique",
+              "desc": "Padaria cuja baguette de tradição <strong>venceu o concurso de melhor de Paris em março de 2010</strong> · pegue sanduíche e baguete e coma sentado no Parc de la Turlure",
+              "preco": "padaria · preços no balcão",
+              "dist": "~150 m da place des Abbesses em linha reta (estimativa)",
+              "valeAPena": 1,
+              "poiCat": "padaria",
+              "mapsQuery": "Le Grenier à Pain, 38 rue des Abbesses, Paris",
+              "fontes": [
+                {
+                  "o": "Do It in Paris · Le Grenier à Pain",
+                  "u": "https://www.doitinparis.com/en/le-grenier-a-pain-la-meilleure-baguette-de-paris-13932",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "melhor de Paris em março de 2010",
+                    "38 rue des Abbesses"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 12798612367 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/12798612367",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.8852819,
+                "lng": 2.3367167
+              }
+            }
+          ]
+        },
+        {
+          "hora": "13:15",
+          "emoji": "🎠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Carrossel Saint-Pierre (place Saint-Pierre, 18e)",
+          "cat": "Carrossel de dois andares com tema veneziano, ao pé do Sacré-Cœur",
+          "sobre": "Ao pé do Sacré-Cœur, na place Saint-Pierre, fica o <strong>Carrossel de Saint-Pierre</strong>, de <strong>dois andares</strong>, de fabricação italiana e decorado com um <strong>tema veneziano</strong>. Tem cavalinhos, carruagens e uma <strong>xícara giratória</strong>, além de <strong>bancos de madeira</strong> pra quem prefere um passeio calmo. Ele aparece em <em>O Fabuloso Destino de Amélie Poulain</em>.",
+          "imperdivel": "O que observar: os <strong>dois andares</strong> e a decoração veneziana.",
+          "dicas": [
+            "O <strong>preço e o horário</strong> não aparecem em nenhuma fonte que conferimos: veja no local",
+            "Fica ao lado da estação baixa do funicular (~70 m em linha reta, estimativa): sobe de carrossel, depois de funicular",
+            "Tem banco de madeira pro adulto que não quer girar: dá pra ficar de olho sentado"
+          ],
+          "duracao": "15-20 min",
+          "custo": "Preço no local",
+          "acessibilidade": "Fica na praça, ao ar livre; acesso pela place Saint-Pierre",
+          "coord": {
+            "lat": 48.8846922,
+            "lng": 2.3432261
+          },
+          "fontes": [
+            {
+              "o": "A French Collection · carrosséis de Paris",
+              "u": "https://afrenchcollection.com/?p=42030",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "dois andares",
+                "tema veneziano",
+                "xícara giratória",
+                "bancos de madeira",
+                "fabricação italiana"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · os mais belos carrosséis de Paris",
+              "u": "https://www.pariszigzag.fr/sortir-paris/balade-paris/beaux-maneges-paris-2",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Amélie Poulain"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 163689495 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/way/163689495",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "70 m"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Carrousel de Montmartre, Place Saint-Pierre, Paris"
+        },
+        {
+          "hora": "13:45",
+          "emoji": "🚠",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Funicular de Montmartre (place Saint-Pierre, 18e)",
+          "cat": "36 m de desnível em cerca de 1min30 · ao lado da escadaria da rue Foyatier",
+          "sobre": "O funicular de Montmartre vence <strong>36 m</strong> de desnível em <strong>108 m</strong> de trilho, em cerca de <strong>1min30</strong>, ao lado da escadaria da rue Foyatier, que tem <strong>222 degraus</strong>. Abriu em <strong>1900</strong>, foi totalmente reconstruído em <strong>1935</strong> e de novo em <strong>1991</strong>, e hoje é operado pela RATP.",
+          "imperdivel": "O que observar: a escadaria da rue Foyatier paralela ao trilho. Do carro, dá pra contar quantos degraus você está poupando da criança.",
+          "dicas": [
+            "Funciona <strong>todos os dias, das 6h às 0h45</strong> (transportdepersonne)",
+            "<strong>Atenção ao ticket</strong>: desde <strong>jan/2025</strong> um ticket já validado no metrô <strong>não serve</strong> pro funicular, é preciso validar um ticket novo · Navigo e Paris Visite valem",
+            "Ticket Métro-Train-RER <strong>€2,55</strong> adulto · criança de <strong>4 a 9 anos</strong> paga <strong>€1,30</strong> · menor de 4 anos <strong>não paga</strong> (RATP, 2026)",
+            "<strong>Carrinhos são bem-vindos</strong> e as portas são largas (Plein Soleil)"
+          ],
+          "duracao": "10 min",
+          "custo": "€2,55 adulto / €1,30 criança de 4 a 9 anos (2026)",
+          "acessibilidade": "Portas largas, aceita carrinho; marcado como acessível a cadeira de rodas no OpenStreetMap",
+          "coord": {
+            "lat": 48.8851745,
+            "lng": 2.3425677
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Montmartre Funicular",
+              "u": "https://en.wikipedia.org/wiki/Montmartre_Funicular",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "108 m",
+                "36 m",
+                "1900",
+                "1935",
+                "1991",
+                "RATP",
+                "€2,55",
+                "€1,30"
+              ]
+            },
+            {
+              "o": "Transport de personne · funicular de Montmartre",
+              "u": "https://transportdepersonne.com/funiculaire-montmartre-tarif-horaires-paris/",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "6h às 0h45",
+                "menor de 4 anos",
+                "Navigo",
+                "Paris Visite"
+              ]
+            },
+            {
+              "o": "RATP · Ticket Métro-Train-RER (trecho do buscador)",
+              "u": "https://www.ratp.fr/titres-et-tarifs/ticket-metro-train-rer",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€2,55",
+                "€1,30",
+                "4 a 9 anos",
+                "menor de 4 anos",
+                "funicular",
+                "2026"
+              ]
+            },
+            {
+              "o": "Plein Soleil Paris · funicular de Montmartre",
+              "u": "https://www.pleinsoleilparis.fr/funiculaire-de-montmartre-votre-guide-complet-horaires-tarifs-histoire/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1min30",
+                "222 degraus",
+                "carrinhos",
+                "portas largas",
+                "jan/2025",
+                "ticket novo"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 334709716 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/334709716",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "acessível a cadeira de rodas"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Funiculaire de Montmartre, Paris"
+        },
+        {
+          "hora": "14:15",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Basílica do Sacré-Cœur · adro e interior (35 rue du Chevalier-de-la-Barre, 18e)",
+          "cat": "Vista de Paris grátis · mosaico de 475 m² por dentro",
+          "sobre": "O <strong>adro</strong> dá a vista de Paris, de graça, e a <strong>basílica é gratuita</strong>, aberta <strong>todos os dias, das 6h30 às 22h30</strong>. Por dentro, o mosaico tem <strong>475 m²</strong> e <strong>25 000 tesselas</strong> esmaltadas. A pedra, um calcário de <strong>Souppes-sur-Loing</strong>, <strong>branqueia com a chuva</strong>.",
+          "imperdivel": "O que observar: o branco da pedra, que a chuva clareia, e o mosaico lá dentro.",
+          "dicas": [
+            "Pra criança pequena, o interior rende uma visita curta, em silêncio · o <strong>domo</strong> é só escada, com quase <strong>300 degraus</strong>: pule",
+            "<strong>Cuidado com golpes</strong> nas escadarias da frente: pessoas que amarram pulseira no seu pulso e cobram, e batedores de carteira · bolsa na frente, mão na criança (Salut from Paris)"
+          ],
+          "duracao": "30-45 min",
+          "custo": "Grátis",
+          "acessibilidade": "Adro com escadaria; o domo é só escada (quase 300 degraus)",
+          "coord": {
+            "lat": 48.8868058,
+            "lng": 2.3430153
+          },
+          "fontes": [
+            {
+              "o": "Paris.fr · o Sacré-Cœur faz 150 anos",
+              "u": "https://www.paris.fr/pages/le-sacre-coeur-de-montmartre-qui-fete-ses-150-ans-n-a-pas-pris-une-ride-30567",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "16/06/1875",
+                "primeira pedra",
+                "Dez milhões",
+                "1891",
+                "16/10/1919",
+                "10 milhões",
+                "46 milhões de francos",
+                "nomes gravados",
+                "Paul Abadie",
+                "Souppes-sur-Loing",
+                "branqueia com a chuva",
+                "475 m²",
+                "25 000 tesselas",
+                "19,6 t",
+                "21/04/1944",
+                "13 bombas",
+                "13/10/2022"
+              ]
+            },
+            {
+              "o": "Basílica do Sacré-Cœur · site oficial",
+              "u": "https://www.sacre-coeur-montmartre.com/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "gratuita",
+                "6h30 às 22h30"
+              ]
+            },
+            {
+              "o": "Basílica do Sacré-Cœur · visita ao domo",
+              "u": "https://www.sacre-coeur-montmartre.com/visiter/le-dome",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "quase 300 degraus",
+                "sem elevador"
+              ]
+            },
+            {
+              "o": "Le Bonbon · spots pra ver Paris do alto de graça",
+              "u": "https://www.lebonbon.fr/paris/les-tops-spots/spots-voir-paris-hauteur-gratuitement/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "vista de Paris, de graça",
+                "pé da basílica"
+              ]
+            },
+            {
+              "o": "Salut from Paris · Montmartre é seguro?",
+              "u": "https://www.salutfromparis.com/is-montmartre-safe/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "batedores de carteira",
+                "pulseira",
+                "petição",
+                "escadarias do Sacré-Cœur"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 23762981 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/23762981",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Basilique du Sacré-Cœur, Paris"
+        },
+        {
+          "hora": "15:15",
+          "emoji": "🛝",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Parc de la Turlure (1 rue de la Bonne, 18e)",
+          "cat": "O parquinho do bairro · área de jogos, caixas de areia e banheiro",
+          "sobre": "No lugar onde ficou o <strong>moinho da Turlure, entre 1770 e 1820</strong>, hoje há um parque com <strong>área de jogos</strong>, <strong>caixas de areia</strong> e <strong>banheiro</strong> dentro do jardim, acessível a pessoas com mobilidade reduzida. Desde <strong>2004</strong> ele leva o nome do publicitário Marcel Bleustein-Blanchet.",
+          "imperdivel": "O que observar: o parque ocupa o terreno do antigo moinho; é o descarrego perfeito depois da parte de cima, que é mais turista que criança.",
+          "dicas": [
+            "O fechamento dos jardins de Paris acompanha o pôr do sol e muda <strong>seis vezes por ano</strong> (do fim da tarde no inverno até 21h30 no verão): confira o horário do dia na ficha do parque no paris.fr",
+            "Pra voltar de metrô, as estações listadas pela prefeitura são <strong>Lamarck-Caulaincourt (L12)</strong>, <strong>Château Rouge</strong> e <strong>Chevalier de la Barre</strong>",
+            "Do Sacré-Cœur ao parque são ~110 m em linha reta (estimativa)"
+          ],
+          "duracao": "45-60 min",
+          "custo": "Grátis",
+          "acessibilidade": "Acessível a pessoas com mobilidade reduzida (paris.fr); banheiro no jardim",
+          "coord": {
+            "lat": 48.8876809,
+            "lng": 2.3437147
+          },
+          "fontes": [
+            {
+              "o": "Paris.fr · Parc Marcel-Bleustein-Blanchet (Turlure)",
+              "u": "https://www.paris.fr/lieux/parc-marcel-bleustein-blanchet-dit-parc-de-la-turlure-2695",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1 rue de la Bonne",
+                "área de jogos",
+                "caixas de areia",
+                "banheiro",
+                "mobilidade reduzida",
+                "1770 e 1820",
+                "Lamarck-Caulaincourt",
+                "Château Rouge",
+                "Chevalier de la Barre",
+                "2004"
+              ]
+            },
+            {
+              "o": "Paris.fr · os horários dos jardins seguem o sol",
+              "u": "https://www.paris.fr/pages/le-saviez-vous-les-horaires-des-jardins-parisiens-suivent-le-soleil-32521",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "seis vezes por ano",
+                "21h30",
+                "inverno",
+                "verão"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 148523783 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/way/148523783",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "110 m"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Parc Marcel Bleustein-Blanchet, 1 rue de la Bonne, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🎨",
+      "tema": "Montmartre Profundo · História (2 partes)",
+      "temaCurto": "História",
+      "bairro": "🎨 Abbesses → Butte → Sacré-Cœur (18e)",
+      "grupo": false,
+      "cor": "#1d4ed8",
+      "gradA": "#1e3a8a",
+      "gradB": "#3b82f6",
+      "hideStopMarkers": true,
+      "nota": "<strong>&quot;Picasso, Renoir e a basílica da derrota&quot;</strong>: 11 paradas em <strong>2 partes</strong>. Proposta: descer em <strong>Abbesses</strong> (L12), ~1,2 km em linha reta nas duas partes (estimativa, não medida), <strong>9h45-14h30</strong> com paradas. A <strong>Parte 1</strong> faz o lado oeste da Butte (artistas e moinhos); a <strong>Parte 2</strong> sobe pro topo (museu, praça, basílica) e desce de funicular. <strong>Ladeira forte</strong>: com criança pequena, faça só a Parte 2 ou combine colo. <strong>Pula sem culpa:</strong> o <strong>domo</strong> do Sacré-Cœur (quase 300 degraus, sem elevador, para quem já tem a vista grátis do adro) e a <strong>Place du Tertre</strong> pra sentar: os terraços ocupam a praça desde os anos 1980.",
+      "stops": [
+        {
+          "hora": "09:45",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Abbesses (L12)",
+          "cat": "Linha 12 · a estação fica na place des Abbesses; plataforma funda, com elevador",
+          "coord": {
+            "lat": 48.8848041,
+            "lng": 2.3386421
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "⛲",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Place des Abbesses + entrada Guimard (18e)",
+          "cat": "As abadessas que deram nome à praça · a libélula de Guimard",
+          "sobre": "A <strong>abadia</strong> das Dames de Montmartre foi <strong>transferida em 1686 para a place des Abbesses</strong>, e a praça e a estação carregam o nome das abadessas. A entrada de metrô de Guimard, uma das <strong>duas únicas com cobertura de vidro</strong> que restam em Paris, veio da estação <strong>Hôtel de Ville em 1974</strong>.",
+          "imperdivel": "O que observar: a libélula de vidro da entrada de Guimard, que veio de outro bairro e foi remontada aqui.",
+          "dicas": [
+            "A plataforma fica a <strong>36 m</strong> de profundidade: há <strong>elevador</strong> e uma escada de cerca de <strong>176 degraus</strong>",
+            "🚶 <strong>Parte 1 · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Place des Abbesses</strong> — ponto de partida, saindo do metrô L12",
+            "🚶 <strong>Ⓐ Bateau-Lavoir</strong> — o ateliê de Picasso e do cubismo, só a fachada",
+            "🚶 <strong>Ⓑ Le Passe-Muraille</strong> — o homem preso na parede",
+            "🚶 <strong>Ⓒ Moulin de la Galette</strong> — o moinho do quadro de Renoir",
+            "🚶 <strong>Ⓓ Place Dalida</strong> — o busto de bronze",
+            "🚶 <strong>Ⓔ La Maison Rose</strong> — a casinha rosa de Utrillo, pela foto",
+            "🚶 <strong>Ⓕ Clos Montmartre</strong> — o vinhedo, fecho da Parte 1",
+            "🚶 <strong>Parte 2 · parada a parada</strong> (a segunda rota no mapa, pinos de contorno):",
+            "🚶 <strong>○ Musée de Montmartre</strong> — ao lado do vinhedo, onde Renoir morou",
+            "🚶 <strong>Ⓐ Place du Tertre</strong> — a praça dos pintores, só de passagem",
+            "🚶 <strong>Ⓑ Sacré-Cœur</strong> — a história da basílica",
+            "🚶 <strong>Ⓒ Square Louise-Michel</strong> — o jardim aos pés da basílica, com o funicular pra descer"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis (o metrô exige ticket)",
+          "acessibilidade": "Elevador até a plataforma; a escada em caracol tem cerca de 176 degraus",
+          "coord": {
+            "lat": 48.8848041,
+            "lng": 2.3386421
+          },
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 🎨 Os artistas e os moinhos do lado oeste da Butte",
+              "descricao": "Place des Abbesses → Bateau-Lavoir → Passe-Muraille → Moulin de la Galette → Place Dalida → La Maison Rose → Clos Montmartre · ~0,7 km em linha reta (estimativa, não medida) · ladeira",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Place des Abbesses + entrada Guimard (18e)",
+                  "coord": {
+                    "lat": 48.8848041,
+                    "lng": 2.3386421
+                  },
+                  "mapsQuery": "Métro Abbesses, Place des Abbesses, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Bateau-Lavoir (13 place Émile-Goudeau, 18e)",
+                  "coord": {
+                    "lat": 48.8860193,
+                    "lng": 2.3376383
+                  },
+                  "mapsQuery": "Bateau-Lavoir, 13 place Émile-Goudeau, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Le Passe-Muraille (place Marcel-Aymé, 18e)",
+                  "coord": {
+                    "lat": 48.8877095,
+                    "lng": 2.3376789
+                  },
+                  "mapsQuery": "Le Passe-Muraille, Place Marcel Aymé, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Moulin de la Galette (83 rue Lepic, 18e)",
+                  "coord": {
+                    "lat": 48.8873512,
+                    "lng": 2.3371414
+                  },
+                  "mapsQuery": "Moulin de la Galette, 83 rue Lepic, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Busto de Dalida (place Dalida, 18e)",
+                  "coord": {
+                    "lat": 48.8885139,
+                    "lng": 2.3381027
+                  },
+                  "mapsQuery": "Place Dalida, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "La Maison Rose (2 rue de l'Abreuvoir, 18e)",
+                  "coord": {
+                    "lat": 48.8879853,
+                    "lng": 2.3396455
+                  },
+                  "mapsQuery": "La Maison Rose, 2 rue de l'Abreuvoir, Paris"
+                },
+                {
+                  "n": 7,
+                  "nome": "Clos Montmartre (rue des Saules, 18e)",
+                  "coord": {
+                    "lat": 48.8881857,
+                    "lng": 2.339834
+                  },
+                  "mapsQuery": "Clos Montmartre, rue des Saules, Paris"
+                }
+              ]
+            },
+            {
+              "nome": "Parte 2 · ⛪ O topo da Butte: museu, praça e basílica",
+              "descricao": "Musée de Montmartre → Place du Tertre → Sacré-Cœur → Square Louise-Michel · ~0,5 km em linha reta (estimativa, não medida) · desce de funicular",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Musée de Montmartre + jardins Renoir (12 rue Cortot, 18e)",
+                  "coord": {
+                    "lat": 48.8880499,
+                    "lng": 2.3406297
+                  },
+                  "mapsQuery": "Musée de Montmartre, 12 rue Cortot, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Place du Tertre (18e)",
+                  "coord": {
+                    "lat": 48.8865274,
+                    "lng": 2.3408043
+                  },
+                  "mapsQuery": "Place du Tertre, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Basílica do Sacré-Cœur (35 rue du Chevalier-de-la-Barre, 18e)",
+                  "coord": {
+                    "lat": 48.8868058,
+                    "lng": 2.3430153
+                  },
+                  "mapsQuery": "Basilique du Sacré-Cœur, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Square Louise-Michel (6 place Saint-Pierre, 18e)",
+                  "coord": {
+                    "lat": 48.885382,
+                    "lng": 2.3435393
+                  },
+                  "mapsQuery": "Square Louise-Michel, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Paris Zigzag · Place du Tertre",
+              "u": "https://www.pariszigzag.fr/?p=181237",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1635",
+                "forcas",
+                "28/06/1775",
+                "140 vagas de 1 m²",
+                "anos 1980",
+                "terraços",
+                "bistro, bistro",
+                "oficiais russos",
+                "1814-1818",
+                "1686",
+                "place des Abbesses"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Abbesses station",
+              "u": "https://en.wikipedia.org/wiki/Abbesses_station",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "duas únicas entradas",
+                "libélula",
+                "Hôtel de Ville",
+                "1974",
+                "30/01/1913",
+                "36 m",
+                "elevador",
+                "linha 12"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · estação Abbesses",
+              "u": "https://www.pariszigzag.fr/?p=265124",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "36 m",
+                "176 degraus",
+                "elevador",
+                "Hector Guimard"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 264505115 (estação Abbesses, coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/264505115",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Métro Abbesses, Place des Abbesses, Paris"
+        },
+        {
+          "hora": "10:25",
+          "emoji": "🎨",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Bateau-Lavoir (13 place Émile-Goudeau, 18e)",
+          "cat": "Onde nasceu o cubismo · só a fachada",
+          "sobre": "Um antigo salão de baile e fábrica de pianos, dividido em cerca de <strong>vinte ateliês</strong> ligados por um corredor que lembrava o de um navio, e daí o nome. <strong>Picasso chegou em 1904</strong> e ficou cinco anos; foi ali que, em <strong>1907</strong>, ele mostrou <em>Les Demoiselles d'Avignon</em>, o início do cubismo. Braque, Van Dongen e Juan Gris também passaram por lá, e o lugar ganhou o apelido de <strong>&quot;Villa Médicis da pintura moderna&quot;</strong>, apesar dos ateliês <strong>sem aquecimento</strong> e de <strong>uma única fonte de água</strong>. Em <strong>12/05/1970</strong> um incêndio destruiu a estrutura de madeira e só a fachada ficou de pé; o prédio foi refeito em <strong>concreto</strong> em <strong>1978</strong>, pelo arquiteto <strong>Claude Charpentier</strong>.",
+          "imperdivel": "O que observar: a fachada preservada, o pedaço que sobreviveu ao fogo, e a praça Émile-Goudeau na frente. O prédio se vê por fora.",
+          "dicas": [
+            "Picasso resumiu o lugar assim: &quot;foi lá que fomos realmente felizes&quot; (Paris Zigzag)",
+            "Do Abbesses até aqui são ~155 m em linha reta (estimativa)"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis (por fora)",
+          "acessibilidade": "Praça em declive; o prédio não é visitável por dentro",
+          "coord": {
+            "lat": 48.8860193,
+            "lng": 2.3376383
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag · o Bateau-Lavoir",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-bateau-lavoir-cite-grands-artistes-montmartre/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "vinte ateliês",
+                "1904",
+                "Villa Médicis da pintura moderna",
+                "uma única fonte de água",
+                "sem aquecimento"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Bateau-Lavoir",
+              "u": "https://fr.wikipedia.org/wiki/Bateau-Lavoir",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1907",
+                "Les Demoiselles d'Avignon",
+                "cubismo",
+                "Braque",
+                "Van Dongen",
+                "Juan Gris",
+                "12/05/1970",
+                "1978",
+                "Claude Charpentier",
+                "concreto"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 4376631789 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/4376631789",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "155 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Bateau-Lavoir, 13 place Émile-Goudeau, Paris"
+        },
+        {
+          "hora": "10:45",
+          "emoji": "🧱",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Le Passe-Muraille (place Marcel-Aymé, 18e)",
+          "cat": "O homem que atravessava paredes · estátua de 1989",
+          "sobre": "Estátua de <strong>1989</strong> do ator e escultor <strong>Jean Marais</strong> em homenagem ao escritor <strong>Marcel Aymé</strong>. O conto, de <strong>1941</strong>, é sobre um homem que descobre que atravessa paredes, e o final é que ele fica <strong>preso na pedra</strong>: a estátua mostra a figura saindo da parede.",
+          "imperdivel": "O que observar: o homem preso no meio da parede, com o corpo só em parte pra fora.",
+          "dicas": [
+            "Boa pra criança: dá pra contar a história como &quot;o moço que ficou preso na parede&quot;",
+            "A estátua fica na place Marcel-Aymé, a poucos passos do Moulin de la Galette"
+          ],
+          "duracao": "5 min",
+          "custo": "Grátis",
+          "acessibilidade": "Fica na praça, ao ar livre",
+          "coord": {
+            "lat": 48.8877095,
+            "lng": 2.3376789
+          },
+          "fontes": [
+            {
+              "o": "Sortir à Paris · o Passe-Muraille",
+              "u": "https://sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/171843-the-passe-muraille-walker-through-walls-of-place-marcel-ayme-in-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1989",
+                "Jean Marais",
+                "Marcel Aymé",
+                "1941",
+                "preso na pedra"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 12738618613 (placa &quot;Histoire de Paris&quot; ao lado da estátua, coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/12738618613",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Le Passe-Muraille, Place Marcel Aymé, Paris"
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🌬️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Moulin de la Galette (83 rue Lepic, 18e)",
+          "cat": "O moinho do quadro de Renoir · por fora",
+          "sobre": "Em <strong>1809</strong> o moleiro <strong>Nicolas-Charles Debray</strong> comprou o moinho <strong>Blute-Fin</strong>, e em <strong>1812</strong> a família juntou o <strong>Radet</strong>. Depois de um ataque dos cossacos em <strong>1814</strong>, os Debray decidiram, em <strong>1834</strong>, reunir os moinhos e abrir uma guinguette com <strong>baile de domingo</strong>, que atraiu gente de todas as classes. <strong>Renoir</strong> pintou ali o <em>Bal du moulin de la Galette</em> (<strong>1876</strong>), hoje no <strong>Musée d'Orsay</strong>. Desde os <strong>anos 1980</strong> o lugar funciona como restaurante.",
+          "imperdivel": "O que observar: o moinho no 83 da rue Lepic, e a cena do quadro de Renoir: o baile era ao ar livre, num domingo de Montmartre.",
+          "dicas": [
+            "Van Gogh e Picasso também apareciam por lá (Paris Zigzag)",
+            "O restaurante funciona no mesmo endereço, 83 rue Lepic: a visita é por fora"
+          ],
+          "duracao": "5-10 min",
+          "custo": "Grátis (por fora)",
+          "acessibilidade": "Rua em declive; visita só por fora",
+          "coord": {
+            "lat": 48.8873512,
+            "lng": 2.3371414
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag · Moulin de la Galette",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/moulin-de-la-galette-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1809",
+                "Blute-Fin",
+                "1812",
+                "Radet",
+                "1814",
+                "1834",
+                "1876",
+                "Musée d'Orsay",
+                "anos 1980",
+                "83 rue Lepic",
+                "Nicolas-Charles Debray",
+                "baile de domingo"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 3379363204 (ponto de endereço 83 rue Lepic, coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/3379363204",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Moulin de la Galette, 83 rue Lepic, Paris"
+        },
+        {
+          "hora": "11:15",
+          "emoji": "🎤",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Busto de Dalida (place Dalida, 18e)",
+          "cat": "Praça dedicada à cantora · o bronze polido pelo toque",
+          "sobre": "A praça foi criada por decreto em <strong>5/12/1996</strong> e o busto de bronze, do escultor <strong>Aslan</strong>, foi posto em <strong>24/04/1997</strong>, no <strong>10º aniversário</strong> da morte da cantora. O bronze do peito está <strong>polido</strong> de tanto ser tocado: a crença é que traz <strong>sorte no amor</strong>.",
+          "imperdivel": "O que observar: o brilho do bronze no peito do busto, desgastado pelo toque de gerações de visitantes.",
+          "dicas": [
+            "A praça fica na esquina da rue Girardon com a rue de l'Abreuvoir",
+            "Praça pequena, de uns 19 m por 13 m, cercada de casas (Wikipedia)"
+          ],
+          "duracao": "5 min",
+          "custo": "Grátis",
+          "acessibilidade": "Praça pequena, cercada de casas",
+          "coord": {
+            "lat": 48.8885139,
+            "lng": 2.3381027
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Place Dalida",
+              "u": "https://en.wikipedia.org/wiki/Place_Dalida",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "5/12/1996",
+                "24/04/1997",
+                "10º aniversário",
+                "Aslan",
+                "19 m por 13 m"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · o busto de Dalida",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/buste-dalida-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "polido",
+                "sorte no amor",
+                "1997",
+                "Aslan"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 768666432 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/768666432",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "Place Dalida, Paris"
+        },
+        {
+          "hora": "11:25",
+          "emoji": "🏡",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "La Maison Rose (2 rue de l'Abreuvoir, 18e)",
+          "cat": "A casinha rosa de Utrillo · foto de 2 minutos",
+          "sobre": "Germaine casou-se em <strong>1906</strong> com o pintor catalão <strong>Ramon Pichot</strong>, do círculo de Picasso, e pouco depois abriu ali um restaurante. <strong>Utrillo</strong> pintou a casa nos <strong>anos 1930</strong>. Hoje é um café-restaurante famoso <strong>mais pelo cenário que pela comida</strong>.",
+          "imperdivel": "O que observar: a fachada rosa na esquina, que Utrillo imortalizou num quadro.",
+          "dicas": [
+            "O horário varia e às vezes só serve bebida: pra sentar, confira antes · pra foto, vale chegar cedo, antes da multidão (Solosophie)",
+            "A casa fica a ~26 m do Clos Montmartre em linha reta (estimativa)"
+          ],
+          "duracao": "5 min",
+          "custo": "Foto grátis",
+          "acessibilidade": "Fachada em esquina de rua em declive",
+          "coord": {
+            "lat": 48.8879853,
+            "lng": 2.3396455
+          },
+          "fontes": [
+            {
+              "o": "Solosophie · La Maison Rose",
+              "u": "https://www.solosophie.com/la-maison-rose-montmartre/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1906",
+                "Ramon Pichot",
+                "anos 1930",
+                "2 rue de l'Abreuvoir",
+                "mais pelo cenário que pela comida"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1904540725 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/1904540725",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "26 m"
+              ]
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "La Maison Rose, 2 rue de l'Abreuvoir, Paris"
+        },
+        {
+          "hora": "11:35",
+          "emoji": "🍇",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Clos Montmartre (rue des Saules, 18e)",
+          "cat": "Vinhedo urbano de 1933 · fecho da Parte 1",
+          "sobre": "O vinhedo foi <strong>criado em 1933</strong> e hoje tem <strong>mais de 1.760 pés</strong> de <strong>27 castas</strong>, entre elas <strong>gamay</strong> e <strong>pinot</strong>. Rende cerca de <strong>2.000 garrafas</strong> por ano, e os lucros do vinho vendido vão pra quem mais precisa. Outra fonte conta a origem em duas etapas: em <strong>1929</strong> o pintor <strong>Francisque Poulbot</strong> e amigos salvaram o terreno da especulação imobiliária plantando algumas vinhas, e em <strong>1933</strong> o plantio continuou.",
+          "imperdivel": "O que observar: o vinhedo no meio da cidade, uma raridade em Paris; o Musée de Montmartre fica logo ao lado, com os jardins de frente pra ele.",
+          "dicas": [
+            "Visita guiada com degustação: <strong>€43</strong>, aos <strong>sábados às 14h30</strong>, com entrada no museu incluída (bilheteria online do Musée de Montmartre) · reservada a <strong>maiores de idade</strong> (Sortir à Paris) · fora da visita, o vinhedo se vê da rua",
+            "O vinhedo fica na <strong>esquina da rue des Saules com a rue Saint-Vincent</strong> (Unidivers)"
+          ],
+          "duracao": "5-10 min",
+          "custo": "Grátis (por fora)",
+          "acessibilidade": "Rua em declive; vinhedo visto da rua",
+          "coord": {
+            "lat": 48.8881857,
+            "lng": 2.339834
+          },
+          "fontes": [
+            {
+              "o": "Sortir à Paris · o vinhedo do Clos Montmartre",
+              "u": "https://www.sortiraparis.com/arts-culture/balades/articles/298016-en-balade-au-vignoble-du-clos-montmartre-les-plus-anciennes-vignes-de-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1933",
+                "1.760 pés",
+                "27 castas",
+                "2.000 garrafas",
+                "maiores de idade",
+                "gamay",
+                "pinot"
+              ]
+            },
+            {
+              "o": "Musée de Montmartre · bilheteria online (site oficial)",
+              "u": "https://museedemontmartre.tickeasy.com/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€43",
+                "sábados às 14h30",
+                "degustação"
+              ]
+            },
+            {
+              "o": "French Moments · o vinhedo de Montmartre",
+              "u": "https://frenchmoments.eu/vineyard-of-montmartre-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1929",
+                "Francisque Poulbot",
+                "1933"
+              ]
+            },
+            {
+              "o": "Unidivers · Fête des Vendanges de Montmartre",
+              "u": "https://unidivers.fr/paris-montmartre-fete-vendanges/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "rue des Saules",
+                "rue Saint-Vincent"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 5290571510 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/5290571510",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Clos Montmartre, rue des Saules, Paris"
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🖼️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Musée de Montmartre + jardins Renoir (12 rue Cortot, 18e)",
+          "cat": "Onde Renoir e Valadon moraram · jardins de frente pro vinhedo",
+          "sobre": "Casas muito antigas cercadas de jardins, onde moraram artistas: <strong>Renoir</strong> viveu ali <strong>entre 1875 e 1877</strong> e pintou <em>Le Bal du moulin de la Galette</em> e <em>La Balançoire</em>; <strong>Suzanne Valadon</strong> ocupou o ateliê-apartamento <strong>de 1912 a 1926</strong>, com o filho <strong>Maurice Utrillo</strong>. Os jardins e o Café Renoir ficam de frente pro <strong>Clos Montmartre</strong>.",
+          "imperdivel": "O que observar: o ateliê de Suzanne Valadon, reconstituído, e a vista do vinhedo a partir dos jardins.",
+          "dicas": [
+            "Aberto <strong>todo dia, das 10h às 18h</strong> (última entrada <strong>17h15</strong>) · o <strong>Café Renoir</strong> abre de <strong>quarta a domingo, das 11h às 17h</strong> (site oficial)",
+            "Ingresso (Offi): <strong>€16</strong> com exposição, <strong>€14</strong> entre exposições, só jardins <strong>€6</strong> · <strong>grátis para menores de 10 anos</strong> · confira no site oficial",
+            "<strong>Sem guarda-volumes</strong> · metrô: Lamarck-Caulaincourt (L12), a ~235 m em linha reta (estimativa)"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "~€14-16 (2026) · jardins ~€6 · grátis &lt;10 anos",
+          "acessibilidade": "Acesso para mobilidade reduzida (Offi); sem guarda-volumes",
+          "coord": {
+            "lat": 48.8880499,
+            "lng": 2.3406297
+          },
+          "fontes": [
+            {
+              "o": "Musée de Montmartre · site oficial",
+              "u": "https://www.museedemontmartre.fr/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h às 18h",
+                "17h15",
+                "última entrada",
+                "Café Renoir",
+                "quarta a domingo",
+                "11h às 17h",
+                "ateliê de Suzanne Valadon",
+                "sem guarda-volumes",
+                "Clos Montmartre"
+              ]
+            },
+            {
+              "o": "Offi · Musée de Montmartre",
+              "u": "https://www.offi.fr/expositions-musees/musee-de-montmartre-2822.html",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1875 e 1877",
+                "Renoir",
+                "La Balançoire",
+                "1912 a 1926",
+                "Maurice Utrillo",
+                "€16",
+                "€14",
+                "€6",
+                "grátis",
+                "menores de 10 anos",
+                "Lamarck-Caulaincourt",
+                "mobilidade reduzida"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 264505153 (estação Lamarck - Caulaincourt, coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/264505153",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            },
+            {
+              "o": "OpenStreetMap · way 154679327 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/way/154679327",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "235 m"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée de Montmartre, 12 rue Cortot, Paris"
+        },
+        {
+          "hora": "12:50",
+          "emoji": "🎨",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Place du Tertre (18e)",
+          "cat": "A praça dos pintores · de passagem",
+          "sobre": "A partir de <strong>1635</strong> as religiosas passaram a equipar a praça com <strong>forcas</strong>, e a <strong>última execução pública</strong> foi em <strong>28/06/1775</strong>. Hoje a prefeitura dividiu a praça em <strong>140 vagas de 1 m²</strong> pra pintores e retratistas, mas desde os <strong>anos 1980</strong> os <strong>terraços</strong> dos restaurantes vão tomando o espaço. Diz a lenda que <strong>oficiais russos</strong> da ocupação de <strong>1814-1818</strong> apressavam os garçons repetindo <em>&quot;bistro, bistro!&quot;</em> (&quot;rápido, rápido!&quot;), e daí viria a palavra <em>bistrô</em>. É lenda, e a própria fonte diz &quot;auraient&quot;.",
+          "imperdivel": "O que observar: os pintores nos 140 cantinhos de 1 m², e a distância entre a praça de hoje e a de forcas do século XVII.",
+          "dicas": [
+            "Turistada pesada: <strong>batedores de carteira</strong> nas ruas ao redor (Salut from Paris) · bolsa na frente, mão na criança",
+            "Atravesse sem sentar: o interesse da praça está em passar por ela, não em ocupar uma mesa"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis",
+          "acessibilidade": "Praça aberta, com muita gente",
+          "coord": {
+            "lat": 48.8865274,
+            "lng": 2.3408043
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag · Place du Tertre",
+              "u": "https://www.pariszigzag.fr/?p=181237",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1635",
+                "forcas",
+                "28/06/1775",
+                "140 vagas de 1 m²",
+                "anos 1980",
+                "terraços",
+                "bistro, bistro",
+                "oficiais russos",
+                "1814-1818",
+                "1686",
+                "place des Abbesses"
+              ]
+            },
+            {
+              "o": "Salut from Paris · Montmartre é seguro?",
+              "u": "https://www.salutfromparis.com/is-montmartre-safe/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "batedores de carteira",
+                "pulseira",
+                "petição",
+                "escadarias do Sacré-Cœur"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 23369825 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/23369825",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "Place du Tertre, Paris"
+        },
+        {
+          "hora": "13:10",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Basílica do Sacré-Cœur (35 rue du Chevalier-de-la-Barre, 18e)",
+          "cat": "Uma basílica nascida da derrota de 1870 · tombada só em 2022",
+          "sobre": "A derrota de <strong>1870</strong> contra a Prússia levou ao voto de erguer um santuário ao Sagrado Coração, e a lei de utilidade pública foi votada em <strong>24/07/1873</strong>, na mesma colina onde a Comuna começou em <strong>março de 1871</strong>. A primeira pedra é de <strong>16/06/1875</strong> (arquiteto <strong>Paul Abadie</strong>), a basílica foi aberta ao culto em <strong>1891</strong> e consagrada em <strong>16/10/1919</strong>. <strong>Dez milhões</strong> de pessoas bancaram os <strong>46 milhões de francos</strong>, e os sobrenomes estão gravados nas pedras. O sino <strong>Savoyarde</strong> pesa <strong>19,6 t</strong>; em <strong>21/04/1944</strong>, <strong>treze bombas</strong> sopraram todos os vitrais; e a basílica só foi tombada em <strong>13/10/2022</strong>.",
+          "imperdivel": "O que observar: os sobrenomes gravados nas pedras, que lembram a subscrição nacional, e a pedra branqueada pela chuva.",
+          "dicas": [
+            "Basílica <strong>gratuita</strong>, aberta <strong>todos os dias, das 6h30 às 22h30</strong> (site oficial) · o <strong>domo</strong> é só escada, com quase <strong>300 degraus</strong>",
+            "<strong>Golpe da pulseira</strong> nas escadarias da frente e batedores de carteira (Salut from Paris)"
+          ],
+          "duracao": "30-45 min",
+          "custo": "Grátis",
+          "acessibilidade": "Adro com escadaria; o domo é só escada (quase 300 degraus)",
+          "coord": {
+            "lat": 48.8868058,
+            "lng": 2.3430153
+          },
+          "fontes": [
+            {
+              "o": "Paris.fr · o Sacré-Cœur faz 150 anos",
+              "u": "https://www.paris.fr/pages/le-sacre-coeur-de-montmartre-qui-fete-ses-150-ans-n-a-pas-pris-une-ride-30567",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "16/06/1875",
+                "primeira pedra",
+                "Dez milhões",
+                "1891",
+                "16/10/1919",
+                "10 milhões",
+                "46 milhões de francos",
+                "nomes gravados",
+                "Paul Abadie",
+                "Souppes-sur-Loing",
+                "branqueia com a chuva",
+                "475 m²",
+                "25 000 tesselas",
+                "19,6 t",
+                "21/04/1944",
+                "13 bombas",
+                "13/10/2022"
+              ]
+            },
+            {
+              "o": "Basílica do Sacré-Cœur · site oficial",
+              "u": "https://www.sacre-coeur-montmartre.com/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "gratuita",
+                "6h30 às 22h30"
+              ]
+            },
+            {
+              "o": "Basílica do Sacré-Cœur · visita ao domo",
+              "u": "https://www.sacre-coeur-montmartre.com/visiter/le-dome",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "quase 300 degraus",
+                "sem elevador"
+              ]
+            },
+            {
+              "o": "Plein Soleil Paris · história completa do Sacré-Cœur",
+              "u": "https://www.pleinsoleilparis.fr/lhistoire-complete-de-la-basilique-du-sacre-coeur-de-montmartre/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1870",
+                "24/07/1873",
+                "março de 1871",
+                "quase 300 degraus",
+                "83 m"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Montmartre",
+              "u": "https://fr.wikipedia.org/wiki/Montmartre",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "18 de março de 1871",
+                "canhões da Guarda Nacional"
+              ]
+            },
+            {
+              "o": "Salut from Paris · Montmartre é seguro?",
+              "u": "https://www.salutfromparis.com/is-montmartre-safe/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "batedores de carteira",
+                "pulseira",
+                "petição",
+                "escadarias do Sacré-Cœur"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 23762981 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/23762981",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Basilique du Sacré-Cœur, Paris"
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🌿",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Square Louise-Michel (6 place Saint-Pierre, 18e)",
+          "cat": "O jardim em cascata aos pés da basílica · desça de funicular",
+          "sobre": "O jardim foi imaginado em <strong>1880</strong> e concluído em <strong>1932</strong>, sobre as antigas <strong>pedreiras de gesso</strong>; o projeto é do engenheiro <strong>Jean-Charles Alphand</strong>, executado pelo arquiteto <strong>Jean-Camille Formigé</strong> pra <strong>estabilizar</strong> o terreno. Leva o nome de <strong>Louise Michel</strong> (<strong>1830-1905</strong>), educadora e figura da Comuna de 1871.",
+          "imperdivel": "O que observar: a ironia que o distraído perde. A basílica nasceu da derrota de 1870, numa colina palco da Comuna, e o jardim aos pés dela leva o nome de uma das figuras da Comuna.",
+          "dicas": [
+            "O jardim tem <strong>222 degraus</strong> e o funicular corre pelo lado oeste: pra descer, é só pegar o funicular",
+            "Voltar pelo funicular exige um ticket novo (o validado no metrô não vale)"
+          ],
+          "duracao": "20-30 min",
+          "custo": "Grátis",
+          "acessibilidade": "Jardim com degraus (222); acessível a mobilidade reduzida segundo a prefeitura",
+          "coord": {
+            "lat": 48.885382,
+            "lng": 2.3435393
+          },
+          "fontes": [
+            {
+              "o": "Paris.fr · Square Louise-Michel",
+              "u": "https://www.paris.fr/lieux/square-louise-michel-1762",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1880",
+                "1932",
+                "pedreiras de gesso",
+                "Louise Michel",
+                "1830-1905"
+              ]
+            },
+            {
+              "o": "Sortir à Paris · Square Louise-Michel",
+              "u": "https://www.sortiraparis.com/en/what-to-visit-in-paris/walks/articles/349594-square-louise-michel-the-little-known-story-of-the-hanging-garden-that-leads-to-the-sacre-coeur",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Jean-Charles Alphand",
+                "Jean-Camille Formigé",
+                "estabilizar",
+                "222 degraus",
+                "funicular",
+                "Comuna de 1871"
+              ]
+            },
+            {
+              "o": "Plein Soleil Paris · história completa do Sacré-Cœur",
+              "u": "https://www.pleinsoleilparis.fr/lhistoire-complete-de-la-basilique-du-sacre-coeur-de-montmartre/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1870",
+                "24/07/1873",
+                "março de 1871",
+                "quase 300 degraus",
+                "83 m"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 45189726 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/45189726",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "mapsQuery": "Square Louise-Michel, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🍫",
+      "tema": "Montmartre Guloso · Rue des Martyrs até Abbesses",
+      "temaCurto": "Guloso",
+      "bairro": "🍫 Rue des Martyrs → Abbesses (9e/18e)",
+      "grupo": true,
+      "cor": "#db2777",
+      "gradA": "#9d174d",
+      "gradB": "#f472b6",
+      "hideStopMarkers": true,
+      "nota": "<strong>&quot;A rua das baguetes premiadas&quot;</strong>: subir a <strong>rue des Martyrs</strong> (885 m, em ladeira) e terminar nas padarias da rue des Abbesses. Proposta: descer em <strong>Notre-Dame-de-Lorette</strong> (L12), ~1,0 km em linha reta (estimativa, não medida), <strong>10h15-14h15</strong>. O traçado tem três baguetes premiadas (<strong>Delmontel 2007</strong>, <strong>Pain Pain 2012</strong>, <strong>Grenier à Pain 2010</strong>). Com criança pequena, dá pra cortar depois do Popelini. <strong>Dias de fechar</strong>: pelos horários de cada card, a Maison Le Roux fecha domingo e segunda, o Delmontel na terça, o Pain Pain na segunda e o Grenier à Pain na terça e na quarta. <strong>De quinta a sábado</strong> todas abrem. <strong>Pula sem culpa:</strong> nada neste traçado.",
+      "stops": [
+        {
+          "hora": "10:15",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Notre-Dame-de-Lorette (L12)",
+          "cat": "Linha 12 · a estação fica sob a rue de Châteaudun; a rue des Martyrs começa perto, no cruzamento das ruas Lamartine e Notre-Dame-de-Lorette",
+          "coord": {
+            "lat": 48.876084,
+            "lng": 2.338586
+          }
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🍰",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Sébastien Gaudard · Pâtisserie des Martyrs (22 rue des Martyrs, 9e)",
+          "cat": "Clássicos franceses de pâtisserie",
+          "sobre": "Confeitaria que trabalha os <strong>clássicos franceses</strong>: <strong>tortas de frutas da estação</strong>, <strong>babás</strong>, <em>nids d'abeille</em>, <strong>éclairs</strong> e <strong>mille-feuille</strong>, além de <strong>tarte de chocolate</strong> e de <strong>limão</strong>.",
+          "imperdivel": "O que observar: a vitrine dos clássicos franceses; escolha um só e divida.",
+          "dicas": [
+            "<strong>Aberta todos os dias, das 10h às 19h</strong> (site oficial)",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Gaudard</strong> — ponto de partida, a ~235 m do metrô L12 em linha reta (estimativa)",
+            "🚶 <strong>Ⓐ Henri Le Roux</strong> — ao lado, ~20 m (estimativa)",
+            "🚶 <strong>Ⓑ Arnaud Delmontel</strong> — subindo a rua, a baguete de 2007",
+            "🚶 <strong>Ⓒ Popelini</strong> — do outro lado, os choux",
+            "🚶 <strong>Ⓓ Pain Pain</strong> — mais acima, a baguete de 2012",
+            "🚶 <strong>Ⓔ Breizh Café</strong> — a parada salgada",
+            "🚶 <strong>Ⓕ Le Grenier à Pain</strong> — fecho, a baguete de 2010"
+          ],
+          "duracao": "15-20 min",
+          "custo": "Doces avulsos, preço no balcão (2026)",
+          "acessibilidade": "Loja de rua em ladeira; sem informação de acesso",
+          "coord": {
+            "lat": 48.8780907,
+            "lng": 2.339674
+          },
+          "walkingTours": [
+            {
+              "nome": "Rue des Martyrs → Abbesses · 🍫 Doces, pães e uma crepe salgada",
+              "descricao": "Gaudard → Henri Le Roux → Delmontel → Popelini → Pain Pain → Breizh Café → Grenier à Pain · ~1,0 km em linha reta (estimativa, não medida) · a rue des Martyrs tem 885 m e sobe em ladeira",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Sébastien Gaudard · Pâtisserie des Martyrs (22 rue des Martyrs, 9e)",
+                  "coord": {
+                    "lat": 48.8780907,
+                    "lng": 2.339674
+                  },
+                  "mapsQuery": "Sébastien Gaudard, 22 rue des Martyrs, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Henri Le Roux (24 rue des Martyrs, 9e)",
+                  "coord": {
+                    "lat": 48.878249,
+                    "lng": 2.3397325
+                  },
+                  "mapsQuery": "Henri Le Roux, 24 rue des Martyrs, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Arnaud Delmontel (39 rue des Martyrs, 9e)",
+                  "coord": {
+                    "lat": 48.8795652,
+                    "lng": 2.3399721
+                  },
+                  "mapsQuery": "Arnaud Delmontel, 39 rue des Martyrs, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Popelini (44 rue des Martyrs, 9e)",
+                  "coord": {
+                    "lat": 48.8792811,
+                    "lng": 2.3400785
+                  },
+                  "mapsQuery": "Popelini, 44 rue des Martyrs, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Pain Pain (88 rue des Martyrs, 18e)",
+                  "coord": {
+                    "lat": 48.8834904,
+                    "lng": 2.3398418
+                  },
+                  "mapsQuery": "Pain Pain, 88 rue des Martyrs, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Breizh Café Abbesses (93 rue des Martyrs, 18e)",
+                  "coord": {
+                    "lat": 48.8842705,
+                    "lng": 2.3396462
+                  },
+                  "mapsQuery": "Breizh Café Abbesses, 93 rue des Martyrs, Paris"
+                },
+                {
+                  "n": 7,
+                  "nome": "Le Grenier à Pain (38 rue des Abbesses, 18e)",
+                  "coord": {
+                    "lat": 48.8852819,
+                    "lng": 2.3367167
+                  },
+                  "mapsQuery": "Le Grenier à Pain, 38 rue des Abbesses, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Sébastien Gaudard · lojas (site oficial)",
+              "u": "https://sebastiengaudard.com/en/our-stores/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "22 rue des Martyrs",
+                "todos os dias",
+                "10h às 19h"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · estação Notre-Dame-de-Lorette (coordenada 48.876084, 2.338586 copiada da ficha)",
+              "u": "https://fr.wikipedia.org/wiki/Notre-Dame-de-Lorette_(m%C3%A9tro_de_Paris)",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "rue de Châteaudun"
+              ]
+            },
+            {
+              "o": "Gilles Pudlowski · Sébastien Gaudard, Pâtisserie des Martyrs",
+              "u": "https://www.gillespudlowski.com/?p=39905",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "22 rue des Martyrs",
+                "tortas de frutas da estação",
+                "babás",
+                "nids d'abeille",
+                "éclairs",
+                "mille-feuille",
+                "tarte de chocolate",
+                "tarte de limão"
+              ]
+            },
+            {
+              "o": "Time Out · Arnaud Delmontel",
+              "u": "https://www.timeout.fr/paris/shopping/arnaud-delmontel",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "39 rue des Martyrs",
+                "melhor baguete de Paris em 2007",
+                "2007",
+                "fecha às terças",
+                "7h às 20h30",
+                "Time Out"
+              ]
+            },
+            {
+              "o": "Paris by Mouth · Pain Pain",
+              "u": "https://parisbymouth.com/pain-pain",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "88 rue des Martyrs",
+                "Sébastien Mauvieux",
+                "melhor de Paris em 2012",
+                "2012"
+              ]
+            },
+            {
+              "o": "Do It in Paris · Le Grenier à Pain",
+              "u": "https://www.doitinparis.com/en/le-grenier-a-pain-la-meilleure-baguette-de-paris-13932",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "38 rue des Abbesses",
+                "melhor de Paris em março de 2010",
+                "2010",
+                "mini-viennoiseries",
+                "geleias caseiras"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Rue des Martyrs",
+              "u": "https://fr.wikipedia.org/wiki/Rue_des_Martyrs",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "885 m",
+                "em pente",
+                "rue Lamartine",
+                "rue La Vieuville",
+                "pequenos comércios"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · estação Notre-Dame-de-Lorette",
+              "u": "https://fr.wikipedia.org/wiki/Notre-Dame-de-Lorette_(m%C3%A9tro_de_Paris)",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "linha 12",
+                "rue de Châteaudun"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1235238193 (ponto de endereço 22 rue des Martyrs · coordenada copiada, distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/1235238193",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "235 m",
+                "20 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Sébastien Gaudard, 22 rue des Martyrs, Paris"
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🍬",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Henri Le Roux (24 rue des Martyrs, 9e)",
+          "cat": "Caramelo bretão de manteiga salgada",
+          "sobre": "Caramelista e chocolatier: a loja vive do <strong>caramelo de manteiga salgada</strong>, direto da <strong>Bretanha</strong>, além de chocolates e caramelos com sabores como <strong>matcha</strong>.",
+          "imperdivel": "O que observar: a variedade de sabores de caramelo na vitrine; pra criança, um caramelo avulso resolve.",
+          "dicas": [
+            "Abre de <strong>terça a sábado, das 11h às 14h e das 15h às 19h</strong>; fecha domingo e segunda (site oficial da Maison Le Roux)",
+            "Fica a ~20 m do Gaudard em linha reta (estimativa): dá pra comprar os dois de uma vez"
+          ],
+          "duracao": "10 min",
+          "custo": "Caramelos avulsos, preço no balcão (2026)",
+          "acessibilidade": "Loja de rua em ladeira; sem informação de acesso",
+          "coord": {
+            "lat": 48.878249,
+            "lng": 2.3397325
+          },
+          "fontes": [
+            {
+              "o": "Maison Le Roux · boutiques (site oficial)",
+              "u": "https://chocolatleroux.com/boutique/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "24 rue des Martyrs",
+                "terça a sábado",
+                "11h às 14h",
+                "15h às 19h"
+              ]
+            },
+            {
+              "o": "Time Out · Henri Le Roux",
+              "u": "https://www.timeout.com/paris/en/shopping/henri-le-roux",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "24 rue des Martyrs",
+                "caramelo de manteiga salgada",
+                "Bretanha",
+                "matcha"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 9300017469 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/9300017469",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "20 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Henri Le Roux, 24 rue des Martyrs, Paris"
+        },
+        {
+          "hora": "11:15",
+          "emoji": "🥖",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Arnaud Delmontel (39 rue des Martyrs, 9e)",
+          "cat": "Padeiro da melhor baguete de Paris em 2007",
+          "sobre": "Padaria-confeitaria cujo dono ganhou o prêmio de <strong>melhor baguete de Paris em 2007</strong>.",
+          "imperdivel": "O que observar: a baguete premiada e os pães do dia, que dá pra comer andando.",
+          "dicas": [
+            "Abre das <strong>7h às 20h30</strong> e <strong>fecha às terças</strong> (Time Out e Gault&Millau)",
+            "Fica a ~33 m do Popelini em linha reta (estimativa)"
+          ],
+          "duracao": "10 min",
+          "custo": "Pães avulsos, preço no balcão (2026)",
+          "acessibilidade": "Loja de rua em ladeira; sem informação de acesso",
+          "coord": {
+            "lat": 48.8795652,
+            "lng": 2.3399721
+          },
+          "fontes": [
+            {
+              "o": "Time Out · Arnaud Delmontel",
+              "u": "https://www.timeout.fr/paris/shopping/arnaud-delmontel",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "39 rue des Martyrs",
+                "melhor baguete de Paris em 2007",
+                "2007",
+                "fecha às terças",
+                "7h às 20h30",
+                "Time Out"
+              ]
+            },
+            {
+              "o": "Gault&Millau · Delmontel À la Renaissance (trecho do buscador)",
+              "u": "https://fr.gaultmillau.com/fr/artisans/delmontel-renaissance",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "39 rue des Martyrs",
+                "fecha às terças",
+                "7h às 20h30",
+                "2007"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 8342803791 (ponto de endereço 39 rue des Martyrs · coordenada copiada, distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/8342803791",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "33 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Arnaud Delmontel, 39 rue des Martyrs, Paris"
+        },
+        {
+          "hora": "11:40",
+          "emoji": "🍮",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Popelini (44 rue des Martyrs, 9e)",
+          "cat": "Só choux, de vários sabores",
+          "sobre": "Casa que só faz <strong>choux</strong> (carolinas) recheados. No site oficial aparecem os de <strong>caramelo de manteiga salgada</strong>, <strong>baunilha de Madagascar</strong>, <strong>chocolate amargo</strong> e <strong>praliné</strong>.",
+          "imperdivel": "O que observar: o balcão só de choux, um sabor ao lado do outro; um por pessoa, ou um dividido, resolve.",
+          "dicas": [
+            "No site oficial, o choux avulso custa <strong>€3,10</strong>",
+            "Fica a ~33 m do Delmontel em linha reta (estimativa)"
+          ],
+          "duracao": "10 min",
+          "custo": "~€3,10 cada (2026)",
+          "acessibilidade": "Loja de rua em ladeira; sem informação de acesso",
+          "coord": {
+            "lat": 48.8792811,
+            "lng": 2.3400785
+          },
+          "fontes": [
+            {
+              "o": "Popelini · site oficial",
+              "u": "https://www.popelini.com/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€3,10",
+                "caramelo de manteiga salgada",
+                "baunilha de Madagascar",
+                "chocolate amargo",
+                "praliné"
+              ]
+            },
+            {
+              "o": "Evous · Popelini rue des Martyrs",
+              "u": "https://www.evous.fr/paris/9eme-Arrondissement/Guide-Paris-9e/Faire-ses-courses-Paris-9e/Alimentation-Paris-9e/Boulangeries-Patisseries-Paris-9e/Popelini-prend-ses-quartiers-rue-des-Martyrs,1175971.html",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "44 rue des Martyrs",
+                "choux"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 4682476105 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/4682476105",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "33 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Popelini, 44 rue des Martyrs, Paris"
+        },
+        {
+          "hora": "12:10",
+          "emoji": "🥖",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pain Pain (88 rue des Martyrs, 18e)",
+          "cat": "Baguete eleita a melhor de Paris em 2012",
+          "sobre": "Padaria do padeiro <strong>Sébastien Mauvieux</strong>, cuja baguete foi eleita a <strong>melhor de Paris em 2012</strong>.",
+          "imperdivel": "O que observar: a baguete premiada, boa pra beliscar no caminho.",
+          "dicas": [
+            "Abre de <strong>terça a domingo, das 7h30 às 19h30</strong>; fecha às segundas (site oficial)",
+            "Fica a ~90 m do Breizh Café em linha reta (estimativa)"
+          ],
+          "duracao": "10 min",
+          "custo": "Pães avulsos, preço no balcão (2026)",
+          "acessibilidade": "Loja de rua em ladeira; sem informação de acesso",
+          "coord": {
+            "lat": 48.8834904,
+            "lng": 2.3398418
+          },
+          "fontes": [
+            {
+              "o": "Pain Pain · site oficial",
+              "u": "https://pain-pain.fr/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "88 rue des Martyrs",
+                "terça a domingo",
+                "7h30 às 19h30",
+                "2012"
+              ]
+            },
+            {
+              "o": "Paris by Mouth · Pain Pain",
+              "u": "https://parisbymouth.com/pain-pain",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "88 rue des Martyrs",
+                "Sébastien Mauvieux",
+                "melhor de Paris em 2012",
+                "2012"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 6378730486 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/6378730486",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "90 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Pain Pain, 88 rue des Martyrs, Paris"
+        },
+        {
+          "hora": "12:40",
+          "emoji": "🥞",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Breizh Café Abbesses (93 rue des Martyrs, 18e) · a parada salgada",
+          "cat": "Galettes de trigo-sarraceno IGP",
+          "sobre": "Crêperie bretã com <strong>galettes de trigo-sarraceno</strong> (farinha <strong>IGP</strong> da Bretanha), <strong>manteiga artesanal</strong> e <strong>ovos caipiras</strong>, feitas na hora, e crepes doces de sobremesa. Tem <strong>terraço</strong>.",
+          "imperdivel": "O que observar: a galette feita na hora; uma galette salgada e um crepe doce dividido resolvem o almoço.",
+          "dicas": [
+            "<strong>Aberto todos os dias, das 9h às 22h</strong> · aceita <strong>reserva online</strong> (site oficial)",
+            "Fica a ~240 m do Grenier à Pain em linha reta (estimativa)"
+          ],
+          "duracao": "1h",
+          "custo": "Cardápio no local (2026)",
+          "acessibilidade": "Casa de esquina com terraço; sem informação de acesso",
+          "coord": {
+            "lat": 48.8842705,
+            "lng": 2.3396462
+          },
+          "fontes": [
+            {
+              "o": "Breizh Café · página Abbesses (site oficial)",
+              "u": "https://en.breizhcafe.com/abbesses",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "93 rue des Martyrs",
+                "galettes de trigo-sarraceno",
+                "IGP",
+                "9h-22h",
+                "todos os dias",
+                "terraço",
+                "reserva online",
+                "manteiga artesanal",
+                "ovos caipiras"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 8044130945 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/8044130945",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "240 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "restaurante",
+          "mapsQuery": "Breizh Café Abbesses, 93 rue des Martyrs, Paris"
+        },
+        {
+          "hora": "13:45",
+          "emoji": "🥖",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Le Grenier à Pain (38 rue des Abbesses, 18e)",
+          "cat": "Baguete de tradição eleita a melhor de Paris em 2010",
+          "sobre": "Padaria de aspecto rústico, com <strong>mini-viennoiseries</strong> expostas e uma mercearia fina com <strong>geleias caseiras</strong>. A baguete de tradição <strong>venceu o concurso de melhor de Paris em março de 2010</strong>.",
+          "imperdivel": "O que observar: a baguete premiada, ideal pra piquenique no Parc de la Turlure.",
+          "dicas": [
+            "Fecha às <strong>terças e quartas</strong>; nos outros dias abre das <strong>7h30 às 20h</strong> (Time Out)",
+            "Está a ~150 m da place des Abbesses em linha reta (estimativa): fecha o passeio na saída do metrô L12",
+            "A baguete premiada entra bem num piquenique: padaria e mercearia fina com geleias caseiras"
+          ],
+          "duracao": "10 min",
+          "custo": "Pães avulsos, preço no balcão (2026)",
+          "acessibilidade": "Loja de rua; sem informação de acesso",
+          "coord": {
+            "lat": 48.8852819,
+            "lng": 2.3367167
+          },
+          "fontes": [
+            {
+              "o": "Do It in Paris · Le Grenier à Pain",
+              "u": "https://www.doitinparis.com/en/le-grenier-a-pain-la-meilleure-baguette-de-paris-13932",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "38 rue des Abbesses",
+                "melhor de Paris em março de 2010",
+                "2010",
+                "mini-viennoiseries",
+                "geleias caseiras"
+              ]
+            },
+            {
+              "o": "Time Out · Le Grenier à Pain",
+              "u": "https://www.timeout.fr/paris/restaurant/le-grenier-a-pain",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "38 rue des Abbesses",
+                "terças e quartas",
+                "7h30 às 20h",
+                "Time Out"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 12798612367 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/node/12798612367",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "150 m"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Le Grenier à Pain, 38 rue des Abbesses, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🖼️",
+      "tema": "Montmartre Museus · Um museu, não três",
+      "temaCurto": "Museus",
+      "bairro": "🖼️ Musée de Montmartre · Dalí · Halle Saint-Pierre (18e)",
+      "grupo": false,
+      "cor": "#4f46e5",
+      "gradA": "#3730a3",
+      "gradB": "#6366f1",
+      "hideStopMarkers": true,
+      "nota": "<strong>&quot;Um museu, e dois de reserva&quot;</strong>: o <strong>Musée de Montmartre</strong> é a visita principal (jardins incluídos) e <strong>Dalí Paris</strong> e <strong>Halle Saint-Pierre</strong> são opcionais, não rota linear. Proposta: descer em <strong>Lamarck–Caulaincourt</strong> (L12, com elevadores), ~0,6 km em linha reta (estimativa, não medida), <strong>10h30-14h</strong>. <strong>Pula sem culpa:</strong> o <strong>Espace Dalí com criança pequena</strong> (€16 por adulto, sem acesso para deficientes, sem guarda-volumes, grátis só para menores de 8 anos) e o <strong>Cimetière de Montmartre</strong> (20 avenue Rachel, entrada grátis), que é programa de adulto: guarda o túmulo de Dalida, Degas, Stendhal, Truffaut e Berlioz.",
+      "stops": [
+        {
+          "hora": "10:30",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Lamarck–Caulaincourt (L12)",
+          "cat": "Linha 12 · a estação tem elevadores e fica a ~235 m do museu em linha reta (estimativa)",
+          "coord": {
+            "lat": 48.8897556,
+            "lng": 2.3387677
+          }
+        },
+        {
+          "hora": "10:45",
+          "emoji": "🖼️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Musée de Montmartre · jardins Renoir (12 rue Cortot, 18e)",
+          "cat": "O museu certo do bairro · casas de artistas e jardins",
+          "sobre": "Casas muito antigas cercadas de jardins, onde moraram artistas: <strong>Renoir</strong> viveu ali <strong>entre 1875 e 1877</strong>, e <strong>Suzanne Valadon</strong> ocupou o ateliê-apartamento <strong>de 1912 a 1926</strong>, com o filho <strong>Maurice Utrillo</strong>. Os jardins e o Café Renoir ficam de frente pro <strong>Clos Montmartre</strong>.",
+          "imperdivel": "O que observar: o ateliê de Valadon, reconstituído, e a vista do vinhedo a partir dos jardins, que valem mais que a sala de exposição.",
+          "dicas": [
+            "Aberto <strong>todo dia, das 10h às 18h</strong> (última entrada <strong>17h15</strong>) · o <strong>Café Renoir</strong> abre de <strong>quarta a domingo, das 11h às 17h</strong> (site oficial)",
+            "Ingresso (Offi): <strong>€16</strong> com exposição, <strong>€14</strong> entre exposições, só jardins <strong>€6</strong> · <strong>grátis para menores de 10 anos</strong> · confira no site oficial",
+            "<strong>Sem guarda-volumes</strong> · estação L12: Lamarck-Caulaincourt, a ~235 m em linha reta (estimativa)",
+            "🚶 <strong>Cardápio de 3 visitas</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Musée de Montmartre</strong> — a visita principal, 1 hora",
+            "🚶 <strong>Ⓐ Dalí Paris</strong> — opcional, a ~180 m em linha reta (estimativa)",
+            "🚶 <strong>Ⓑ Halle Saint-Pierre</strong> — opcional, no pé do funicular, a ~380 m do Dalí em linha reta (estimativa)"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "~€14-16 (2026) · jardins ~€6 · grátis &lt;10 anos",
+          "acessibilidade": "Acesso para mobilidade reduzida (Offi); sem guarda-volumes",
+          "coord": {
+            "lat": 48.8880499,
+            "lng": 2.3406297
+          },
+          "walkingTours": [
+            {
+              "nome": "Museus de Montmartre · 🖼️ Um museu e, se sobrar fôlego, outros dois",
+              "descricao": "Musée de Montmartre → Espace Dalí → Halle Saint-Pierre · ~0,6 km em linha reta (estimativa, não medida) · cardápio, não rota linear",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Musée de Montmartre · jardins Renoir (12 rue Cortot, 18e)",
+                  "coord": {
+                    "lat": 48.8880499,
+                    "lng": 2.3406297
+                  },
+                  "mapsQuery": "Musée de Montmartre, 12 rue Cortot, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Dalí Paris · Espace Dalí (11 rue Poulbot, 18e)",
+                  "coord": {
+                    "lat": 48.88648,
+                    "lng": 2.3399022
+                  },
+                  "mapsQuery": "Dalí Paris, 11 rue Poulbot, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Halle Saint-Pierre (2 rue Ronsard, 18e)",
+                  "coord": {
+                    "lat": 48.8848912,
+                    "lng": 2.3445287
+                  },
+                  "mapsQuery": "Halle Saint-Pierre, 2 rue Ronsard, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Musée de Montmartre · site oficial",
+              "u": "https://www.museedemontmartre.fr/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h às 18h",
+                "17h15",
+                "última entrada",
+                "Café Renoir",
+                "quarta a domingo",
+                "11h às 17h",
+                "ateliê de Suzanne Valadon",
+                "sem guarda-volumes",
+                "Clos Montmartre"
+              ]
+            },
+            {
+              "o": "Offi · Musée de Montmartre",
+              "u": "https://www.offi.fr/expositions-musees/musee-de-montmartre-2822.html",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1875 e 1877",
+                "Renoir",
+                "La Balançoire",
+                "1912 a 1926",
+                "Maurice Utrillo",
+                "€16",
+                "€14",
+                "€6",
+                "grátis",
+                "menores de 10 anos",
+                "Lamarck-Caulaincourt",
+                "mobilidade reduzida"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · estação Lamarck - Caulaincourt",
+              "u": "https://fr.wikipedia.org/wiki/Lamarck_-_Caulaincourt_(m%C3%A9tro_de_Paris)",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "linha 12",
+                "quatro cabines de elevador",
+                "25 m de profundidade"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 264505153 (estação Lamarck - Caulaincourt, coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/264505153",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            },
+            {
+              "o": "Visit Paris Region · Cimetière de Montmartre",
+              "u": "https://www.visitparisregion.com/fr/cimetiere-de-montmartre",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "20 avenue Rachel",
+                "Dalida",
+                "Degas",
+                "Stendhal",
+                "Truffaut",
+                "Berlioz",
+                "entrada grátis"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 154679327 (coordenada copiada · distâncias calculadas por linha reta)",
+              "u": "https://www.openstreetmap.org/way/154679327",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "180 m",
+                "380 m",
+                "235 m"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée de Montmartre, 12 rue Cortot, Paris"
+        },
+        {
+          "hora": "12:00",
+          "emoji": "🎭",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Dalí Paris · Espace Dalí (11 rue Poulbot, 18e)",
+          "cat": "Mais de 300 obras de Dalí · opcional",
+          "sobre": "Museu com <strong>mais de 300 obras</strong> de Salvador Dalí vindas de <strong>coleção privada</strong>: <strong>pinturas</strong>, <strong>esculturas</strong>, <strong>gravuras</strong>, <strong>objetos surrealistas</strong> e <strong>móveis</strong>. Fica a cerca de <strong>100 m</strong> da Place du Tertre.",
+          "imperdivel": "O que observar: os objetos surrealistas e os móveis, mais curiosos pra criança que as gravuras.",
+          "dicas": [
+            "<strong>Todos os dias, das 10h às 18h30</strong> (última entrada <strong>18h</strong>) · adulto <strong>€16</strong>, reduzido <strong>€13</strong> ou <strong>€11</strong>, <strong>grátis para menores de 8 anos</strong>, audioguia <strong>€3</strong> (site oficial)",
+            "<strong>Sem acesso para deficientes</strong> e <strong>sem guarda-volumes</strong>: não é lugar pra carrinho"
+          ],
+          "duracao": "45 min",
+          "custo": "€16 adulto (2026) · grátis &lt;8 anos",
+          "acessibilidade": "Sem acesso para deficientes e sem guarda-volumes (site oficial)",
+          "coord": {
+            "lat": 48.88648,
+            "lng": 2.3399022
+          },
+          "fontes": [
+            {
+              "o": "Dalí Paris · informações de visita (site oficial)",
+              "u": "https://www.daliparis.com/en/visit-information/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h às 18h30",
+                "18h",
+                "€16",
+                "€13",
+                "€11",
+                "grátis para menores de 8 anos",
+                "€3",
+                "sem acesso para deficientes",
+                "sem guarda-volumes",
+                "11 rue Poulbot"
+              ]
+            },
+            {
+              "o": "Dalí Paris · site oficial",
+              "u": "https://www.daliparis.com/en/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "mais de 300 obras",
+                "coleção privada",
+                "pinturas",
+                "esculturas",
+                "gravuras",
+                "objetos surrealistas",
+                "móveis",
+                "100 m"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 252970813 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/252970813",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "Dalí Paris, 11 rue Poulbot, Paris"
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🎨",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Halle Saint-Pierre (2 rue Ronsard, 18e)",
+          "cat": "Museu de arte bruta, com livraria e café",
+          "sobre": "Museu dedicado a <strong>Art Brut</strong>, <strong>Art Outsider</strong>, <strong>Art Singulier</strong> e <strong>Pop Culture</strong>, com <strong>livraria e café</strong> abertos nos horários do museu e uma <strong>galeria de entrada livre</strong>.",
+          "imperdivel": "O que observar: a galeria de entrada livre, que dá pra ver sem pagar ingresso do museu.",
+          "dicas": [
+            "<strong>Aberto todos os dias</strong>: em dias úteis <strong>11h às 18h</strong>, <strong>sábado das 11h às 19h</strong>, <strong>domingo das 12h às 18h</strong> (site oficial)",
+            "Metrô indicado pelo museu: <strong>Anvers</strong> ou <strong>Abbesses</strong> · preço da exposição em cartaz: veja no site oficial",
+            "O site avisa que a Halle <strong>fecha em agosto</strong> e nos dias <strong>25/12, 1/1, 1/5 e 14/7</strong>: confira antes de ir"
+          ],
+          "duracao": "30-45 min",
+          "custo": "Galeria grátis · exposição, veja no site",
+          "acessibilidade": "Sem informação de acesso no site oficial",
+          "coord": {
+            "lat": 48.8848912,
+            "lng": 2.3445287
+          },
+          "fontes": [
+            {
+              "o": "Halle Saint-Pierre · site oficial",
+              "u": "https://www.hallesaintpierre.org/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "Art Brut",
+                "Art Outsider",
+                "Art Singulier",
+                "Pop Culture",
+                "11h às 18h",
+                "sábado das 11h às 19h",
+                "domingo das 12h às 18h",
+                "livraria e café",
+                "galeria de entrada livre",
+                "2 rue Ronsard",
+                "Anvers",
+                "Abbesses",
+                "agosto",
+                "25/12",
+                "14/7"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 45073393 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/45073393",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Halle Saint-Pierre, 2 rue Ronsard, Paris"
+        }
+      ]
+    }
+  ],
+  "historia": [
+    {
+      "titulo": "🏔️ Das abadessas aos moinhos · como a Butte virou a vila dos artistas",
+      "prosa_html": "<p>Antes dos turistas, Montmartre era terra de freiras e de moinhos. Em <strong>1133-1134</strong> o rei Luís VI fundou ali a <strong>abadia real das Dames de Montmartre</strong>; a abadia ficou no alto da colina até ser <strong>transferida em 1686 para a place des Abbesses</strong>, que herdou o nome. A Butte vivia de vinhateiros, lavradores e moleiros, que abriam tavernas e bailes aos domingos e feriados.</p><p>Em <strong>1809</strong> o moleiro <strong>Nicolas-Charles Debray</strong> comprou o moinho Blute-Fin e em <strong>1812</strong> a família juntou o Radet. Depois do ataque dos <strong>cossacos em 1814</strong> eles decidiram, em <strong>1834</strong>, reunir os moinhos e abrir uma guinguette: nascia o bal du <strong>Moulin de la Galette</strong>, que <strong>Renoir</strong> pintou em <strong>1876</strong>. Do tempo da ocupação russa (<strong>1814-1818</strong>) vem a lenda do <em>&quot;bistro, bistro!&quot;</em>, gritado por oficiais russos que apressavam os garçons da Place du Tertre: é lenda, e a própria fonte diz &quot;auraient&quot;.</p><p>Quando o loteamento ameaçou o último terreno livre da Butte, o pintor <strong>Francisque Poulbot</strong> e amigos plantaram vinhas pra salvá-lo da especulação em <strong>1929</strong>; o plantio continuou em <strong>1933</strong>, data que outra fonte dá como a criação do Clos Montmartre. Hoje o vinhedo tem <strong>mais de 1.760 pés</strong> de <strong>27 castas</strong>.</p>",
+      "fontes": [
+        {
+          "o": "Wikipédia (fr) · Montmartre",
+          "u": "https://fr.wikipedia.org/wiki/Montmartre",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "1133-1134",
+            "Luís VI",
+            "vinhateiros, lavradores e moleiros",
+            "Dames de Montmartre"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · Place du Tertre",
+          "u": "https://www.pariszigzag.fr/?p=181237",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1635",
+            "forcas",
+            "28/06/1775",
+            "140 vagas de 1 m²",
+            "anos 1980",
+            "terraços",
+            "bistro, bistro",
+            "oficiais russos",
+            "1814-1818",
+            "1686",
+            "place des Abbesses"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · Moulin de la Galette",
+          "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/moulin-de-la-galette-paris/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1809",
+            "Blute-Fin",
+            "1812",
+            "Radet",
+            "1814",
+            "1834",
+            "1876",
+            "Musée d'Orsay",
+            "anos 1980",
+            "83 rue Lepic",
+            "Nicolas-Charles Debray",
+            "baile de domingo"
+          ]
+        },
+        {
+          "o": "French Moments · o vinhedo de Montmartre",
+          "u": "https://frenchmoments.eu/vineyard-of-montmartre-paris/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1929",
+            "Francisque Poulbot",
+            "1933"
+          ]
+        },
+        {
+          "o": "Sortir à Paris · o vinhedo do Clos Montmartre",
+          "u": "https://www.sortiraparis.com/arts-culture/balades/articles/298016-en-balade-au-vignoble-du-clos-montmartre-les-plus-anciennes-vignes-de-paris",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1933",
+            "1.760 pés",
+            "27 castas",
+            "2.000 garrafas",
+            "€36",
+            "sábado à tarde",
+            "maiores de idade",
+            "gamay",
+            "pinot"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "⛪ A basílica nascida de uma derrota · e o jardim da Comuna aos pés dela",
+      "prosa_html": "<p>O Sacré-Cœur nasceu da <strong>derrota de 1870</strong> contra a Prússia, que derrubou Napoleão III e levou a um voto de erguer um santuário ao Sagrado Coração. A lei de utilidade pública foi votada em <strong>24/07/1873</strong>, na mesma colina onde, em <strong>março de 1871</strong>, a Comuna de Paris começou quando o governo tentou recuperar os <strong>canhões da Guarda Nacional</strong> guardados em Montmartre.</p><p>A primeira pedra é de <strong>16/06/1875</strong> e a basílica foi consagrada só em <strong>16/10/1919</strong>, depois de quatro décadas. <strong>Dez milhões</strong> de pessoas bancaram os <strong>46 milhões de francos</strong>, e os sobrenomes delas estão gravados nas pedras. A pedra, de <strong>Souppes-sur-Loing</strong>, <strong>branqueia com a chuva</strong>. Em <strong>21/04/1944</strong>, <strong>treze bombas</strong> destruíram todos os vitrais. E a polêmica política era tanta que a basílica só foi tombada em <strong>13/10/2022</strong>.</p><p>O troco da história está no jardim aos pés dela: o <strong>Square Louise-Michel</strong>, imaginado em <strong>1880</strong> e concluído em <strong>1932</strong> sobre as pedreiras de gesso, leva o nome de uma das figuras da Comuna.</p>",
+      "fontes": [
+        {
+          "o": "Paris.fr · o Sacré-Cœur faz 150 anos",
+          "u": "https://www.paris.fr/pages/le-sacre-coeur-de-montmartre-qui-fete-ses-150-ans-n-a-pas-pris-une-ride-30567",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "16/06/1875",
+            "primeira pedra",
+            "Dez milhões",
+            "1891",
+            "16/10/1919",
+            "10 milhões",
+            "46 milhões de francos",
+            "nomes gravados",
+            "Paul Abadie",
+            "Souppes-sur-Loing",
+            "branqueia com a chuva",
+            "475 m²",
+            "25 000 tesselas",
+            "19,6 t",
+            "21/04/1944",
+            "13 bombas",
+            "13/10/2022"
+          ]
+        },
+        {
+          "o": "Plein Soleil Paris · história completa do Sacré-Cœur",
+          "u": "https://www.pleinsoleilparis.fr/lhistoire-complete-de-la-basilique-du-sacre-coeur-de-montmartre/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1870",
+            "24/07/1873",
+            "março de 1871",
+            "quase 300 degraus",
+            "83 m"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Montmartre",
+          "u": "https://fr.wikipedia.org/wiki/Montmartre",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "18 de março de 1871",
+            "canhões da Guarda Nacional"
+          ]
+        },
+        {
+          "o": "Paris.fr · Square Louise-Michel",
+          "u": "https://www.paris.fr/lieux/square-louise-michel-1762",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "1880",
+            "1932",
+            "pedreiras de gesso",
+            "Louise Michel",
+            "1830-1905"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "🎨 A vila dos pintores pobres · Picasso, Renoir, Valadon e Utrillo",
+      "prosa_html": "<p>O <strong>Bateau-Lavoir</strong> era um antigo salão de baile e fábrica de pianos, dividido em cerca de <strong>vinte ateliês</strong> sem aquecimento e com uma única fonte de água. <strong>Picasso</strong> chegou em <strong>1904</strong> e, em <strong>1907</strong>, mostrou ali <em>Les Demoiselles d'Avignon</em>, marco do início do cubismo; Braque, Van Dongen e Juan Gris passaram por lá, e o lugar ganhou o apelido de <strong>&quot;Villa Médicis da pintura moderna&quot;</strong>. A estrutura de madeira queimou em <strong>12/05/1970</strong>, sobrou a fachada, e o prédio foi refeito em concreto em <strong>1978</strong>.</p><p>Na rue Cortot, <strong>Renoir</strong> viveu <strong>entre 1875 e 1877</strong> e <strong>Suzanne Valadon</strong> ocupou o ateliê <strong>de 1912 a 1926</strong>, com o filho <strong>Maurice Utrillo</strong>, que pintou a <strong>Maison Rose</strong> nos <strong>anos 1930</strong>. Germaine casou-se em <strong>1906</strong> com <strong>Ramon Pichot</strong>, do círculo de Picasso, e pouco depois abriu ali um restaurante.</p><p>E o escritor <strong>Marcel Aymé</strong> ganhou, em <strong>1989</strong>, uma estátua de <strong>Jean Marais</strong>: o homem que atravessava paredes e ficou <strong>preso na pedra</strong>.</p>",
+      "fontes": [
+        {
+          "o": "Paris Zigzag · o Bateau-Lavoir",
+          "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-bateau-lavoir-cite-grands-artistes-montmartre/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "vinte ateliês",
+            "1904",
+            "Villa Médicis da pintura moderna",
+            "uma única fonte de água",
+            "sem aquecimento"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Bateau-Lavoir",
+          "u": "https://fr.wikipedia.org/wiki/Bateau-Lavoir",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "1907",
+            "Les Demoiselles d'Avignon",
+            "cubismo",
+            "Braque",
+            "Van Dongen",
+            "Juan Gris",
+            "12/05/1970",
+            "1978",
+            "Claude Charpentier",
+            "concreto"
+          ]
+        },
+        {
+          "o": "Offi · Musée de Montmartre",
+          "u": "https://www.offi.fr/expositions-musees/musee-de-montmartre-2822.html",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1875 e 1877",
+            "Renoir",
+            "La Balançoire",
+            "1912 a 1926",
+            "Maurice Utrillo",
+            "€16",
+            "€14",
+            "€6",
+            "grátis",
+            "menores de 10 anos",
+            "Lamarck-Caulaincourt",
+            "mobilidade reduzida"
+          ]
+        },
+        {
+          "o": "Solosophie · La Maison Rose",
+          "u": "https://www.solosophie.com/la-maison-rose-montmartre/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1906",
+            "Ramon Pichot",
+            "anos 1930",
+            "2 rue de l'Abreuvoir",
+            "mais pelo cenário que pela comida"
+          ]
+        },
+        {
+          "o": "Sortir à Paris · o Passe-Muraille",
+          "u": "https://sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/171843-the-passe-muraille-walker-through-walls-of-place-marcel-ayme-in-paris",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1989",
+            "Jean Marais",
+            "Marcel Aymé",
+            "1941",
+            "preso na pedra"
+          ]
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Basílica do Sacré-Cœur · adro e interior (35 rue du Chevalier-de-la-Barre, 18e)": [
+      {
+        "type": "official",
+        "label": "Basílica do Sacré-Cœur · site oficial",
+        "url": "https://www.sacre-coeur-montmartre.com/"
+      },
+      {
+        "type": "official",
+        "label": "Paris.fr · o Sacré-Cœur faz 150 anos",
+        "url": "https://www.paris.fr/pages/le-sacre-coeur-de-montmartre-qui-fete-ses-150-ans-n-a-pas-pris-une-ride-30567"
+      }
+    ],
+    "Basílica do Sacré-Cœur (35 rue du Chevalier-de-la-Barre, 18e)": [
+      {
+        "type": "official",
+        "label": "Basílica do Sacré-Cœur · site oficial",
+        "url": "https://www.sacre-coeur-montmartre.com/"
+      },
+      {
+        "type": "official",
+        "label": "Paris.fr · o Sacré-Cœur faz 150 anos",
+        "url": "https://www.paris.fr/pages/le-sacre-coeur-de-montmartre-qui-fete-ses-150-ans-n-a-pas-pris-une-ride-30567"
+      }
+    ],
+    "Parc de la Turlure (1 rue de la Bonne, 18e)": [
+      {
+        "type": "official",
+        "label": "Paris.fr · Parc Marcel-Bleustein-Blanchet",
+        "url": "https://www.paris.fr/lieux/parc-marcel-bleustein-blanchet-dit-parc-de-la-turlure-2695"
+      }
+    ],
+    "Square Louise-Michel (6 place Saint-Pierre, 18e)": [
+      {
+        "type": "official",
+        "label": "Paris.fr · Square Louise-Michel",
+        "url": "https://www.paris.fr/lieux/square-louise-michel-1762"
+      }
+    ],
+    "Musée de Montmartre + jardins Renoir (12 rue Cortot, 18e)": [
+      {
+        "type": "official",
+        "label": "Musée de Montmartre · site oficial",
+        "url": "https://www.museedemontmartre.fr/"
+      }
+    ],
+    "Musée de Montmartre · jardins Renoir (12 rue Cortot, 18e)": [
+      {
+        "type": "official",
+        "label": "Musée de Montmartre · site oficial",
+        "url": "https://www.museedemontmartre.fr/"
+      }
+    ],
+    "Dalí Paris · Espace Dalí (11 rue Poulbot, 18e)": [
+      {
+        "type": "official",
+        "label": "Dalí Paris · informações de visita",
+        "url": "https://www.daliparis.com/en/visit-information/"
+      }
+    ],
+    "Halle Saint-Pierre (2 rue Ronsard, 18e)": [
+      {
+        "type": "official",
+        "label": "Halle Saint-Pierre · site oficial",
+        "url": "https://www.hallesaintpierre.org/"
+      }
+    ],
+    "Breizh Café Abbesses (93 rue des Martyrs, 18e)": [
+      {
+        "type": "official",
+        "label": "Breizh Café · Abbesses",
+        "url": "https://en.breizhcafe.com/abbesses"
+      }
+    ],
+    "Breizh Café Abbesses (93 rue des Martyrs, 18e) · a parada salgada": [
+      {
+        "type": "official",
+        "label": "Breizh Café · Abbesses",
+        "url": "https://en.breizhcafe.com/abbesses"
+      }
+    ],
+    "Bateau-Lavoir (13 place Émile-Goudeau, 18e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · o Bateau-Lavoir",
+        "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-bateau-lavoir-cite-grands-artistes-montmartre/"
+      }
+    ],
+    "Moulin de la Galette (83 rue Lepic, 18e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Moulin de la Galette",
+        "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/moulin-de-la-galette-paris/"
+      }
+    ],
+    "Le Passe-Muraille (place Marcel-Aymé, 18e)": [
+      {
+        "type": "review",
+        "label": "Sortir à Paris · o Passe-Muraille",
+        "url": "https://sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/171843-the-passe-muraille-walker-through-walls-of-place-marcel-ayme-in-paris"
+      }
+    ],
+    "La Maison Rose (2 rue de l'Abreuvoir, 18e)": [
+      {
+        "type": "review",
+        "label": "Solosophie · La Maison Rose",
+        "url": "https://www.solosophie.com/la-maison-rose-montmartre/"
+      }
+    ],
+    "Clos Montmartre (rue des Saules, 18e)": [
+      {
+        "type": "official",
+        "label": "Musée de Montmartre · visita do vinhedo",
+        "url": "https://museedemontmartre.tickeasy.com/"
+      },
+      {
+        "type": "review",
+        "label": "Sortir à Paris · o vinhedo do Clos Montmartre",
+        "url": "https://www.sortiraparis.com/arts-culture/balades/articles/298016-en-balade-au-vignoble-du-clos-montmartre-les-plus-anciennes-vignes-de-paris"
+      }
+    ],
+    "Place du Tertre (18e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Place du Tertre",
+        "url": "https://www.pariszigzag.fr/?p=181237"
+      }
+    ],
+    "Funicular de Montmartre (place Saint-Pierre, 18e)": [
+      {
+        "type": "review",
+        "label": "Plein Soleil Paris · funicular de Montmartre",
+        "url": "https://www.pleinsoleilparis.fr/funiculaire-de-montmartre-votre-guide-complet-horaires-tarifs-histoire/"
+      }
+    ],
+    "Carrossel Saint-Pierre (place Saint-Pierre, 18e)": [
+      {
+        "type": "review",
+        "label": "A French Collection · carrosséis de Paris",
+        "url": "https://afrenchcollection.com/?p=42030"
+      }
+    ],
+    "Estação Abbesses · entrada Guimard (place des Abbesses, 18e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · estação Abbesses",
+        "url": "https://www.pariszigzag.fr/?p=265124"
+      }
+    ],
+    "Pain Pain (88 rue des Martyrs, 18e)": [
+      {
+        "type": "official",
+        "label": "Pain Pain · site oficial",
+        "url": "https://pain-pain.fr/"
+      },
+      {
+        "type": "review",
+        "label": "Paris by Mouth · Pain Pain",
+        "url": "https://parisbymouth.com/pain-pain"
+      }
+    ],
+    "Le Grenier à Pain (38 rue des Abbesses, 18e)": [
+      {
+        "type": "review",
+        "label": "Do It in Paris · Le Grenier à Pain",
+        "url": "https://www.doitinparis.com/en/le-grenier-a-pain-la-meilleure-baguette-de-paris-13932"
+      }
+    ],
+    "Arnaud Delmontel (39 rue des Martyrs, 9e)": [
+      {
+        "type": "review",
+        "label": "Time Out · Arnaud Delmontel",
+        "url": "https://www.timeout.fr/paris/shopping/arnaud-delmontel"
+      }
+    ],
+    "Henri Le Roux (24 rue des Martyrs, 9e)": [
+      {
+        "type": "official",
+        "label": "Maison Le Roux · boutiques",
+        "url": "https://chocolatleroux.com/boutique/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out · Henri Le Roux",
+        "url": "https://www.timeout.com/paris/en/shopping/henri-le-roux"
+      }
+    ],
+    "Popelini (44 rue des Martyrs, 9e)": [
+      {
+        "type": "official",
+        "label": "Popelini · site oficial",
+        "url": "https://www.popelini.com/"
+      }
+    ],
+    "Sébastien Gaudard · Pâtisserie des Martyrs (22 rue des Martyrs, 9e)": [
+      {
+        "type": "official",
+        "label": "Sébastien Gaudard · lojas",
+        "url": "https://sebastiengaudard.com/en/our-stores/"
+      },
+      {
+        "type": "review",
+        "label": "Gilles Pudlowski · Pâtisserie des Martyrs",
+        "url": "https://www.gillespudlowski.com/?p=39905"
+      }
+    ]
+  },
+  "transit_map": {
+    "Chegada · Métro Abbesses (L12)": {
+      "metro": "Estação da linha 12, sob a place des Abbesses; plataforma a 36 m de profundidade, com elevador e uma escada de cerca de 176 degraus (Wikipedia; Paris Zigzag) · na volta, a mesma L12 para em Lamarck-Caulaincourt, perto do Parc de la Turlure"
+    },
+    "Chegada · Métro Notre-Dame-de-Lorette (L12)": {
+      "metro": "Estação da linha 12, sob a rue de Châteaudun (Wikipédia) · a rue des Martyrs começa perto, no cruzamento das ruas Lamartine e Notre-Dame-de-Lorette, e a L12 também serve Saint-Georges, Pigalle e Abbesses ao longo dela · na volta, Abbesses (L12) fica no fim do traçado"
+    },
+    "Chegada · Métro Lamarck–Caulaincourt (L12)": {
+      "metro": "Estação da linha 12 com quatro cabines de elevador e plataforma a 25 m de profundidade (Wikipédia) · fica a ~235 m do Musée de Montmartre em linha reta, com a entrada na rue Lamarck; na volta, o Halle Saint-Pierre indica Anvers e Abbesses"
+    }
+  }
+}

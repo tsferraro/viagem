@@ -941,7 +941,7 @@
             },
             {
               "nome": "Crêperie Le Pot O'Lait (41 rue Censier, 5e)",
-              "desc": "Crêperia bretã com <strong>menu enfant</strong> · a crêpe doce é acerto aos 4 anos · abre no <strong>almoço (~11h30-14h30) e no jantar (~19h-22h)</strong>, com pausa à tarde — confira na porta · \"a partir de €15\" na ficha de 2020",
+              "desc": "Crêperia bretã com <strong>menu enfant</strong> · a crêpe doce é acerto com criança pequena · abre no <strong>almoço (~11h30-14h30) e no jantar (~19h-22h)</strong>, com pausa à tarde — confira na porta · \"a partir de €15\" na ficha de 2020",
               "preco": "a partir de ~€15 (2020)",
               "dist": "rue Censier, ~1 km do jardim (estimativa, não medida)",
               "valeAPena": 2,
@@ -1309,7 +1309,7 @@
       "gradA": "#1e3a8a",
       "gradB": "#3b82f6",
       "hideStopMarkers": true,
-      "nota": "<strong>\"Da Paris romana ao Panthéon\"</strong>, em 2 partes. <strong>Parte 1</strong> (manhã) desce em <strong>Maubert–Mutualité</strong> (L10), ~1,5 km (estimativa): o rio, os monges e o Panthéon. <strong>Parte 2</strong> (tarde) termina em <strong>Cardinal Lemoine</strong> (L10), ~1,5 km (estimativa): a colina de Santa Genoveva, o Hemingway pobre e a Mouffetard. Juntas formam um dia; separadas, duas meias-manhãs. Pensado pra adultos — com criança de 4 anos o que funciona é o pêndulo, as gárgulas e o fecho no parquinho das Arènes. <strong>Pula sem culpa:</strong> o <strong>panorama do Panthéon</strong> (cúpula/colunata, fechado para obras em out/2026; quando abre, é só por escada) e a <strong>cripta</strong> com criança (tumba atrás de tumba; pêndulo sim, cripta não).",
+      "nota": "<strong>\"Da Paris romana ao Panthéon\"</strong>, em 2 partes. <strong>Parte 1</strong> (manhã) desce em <strong>Maubert–Mutualité</strong> (L10), ~1,5 km (estimativa): o rio, os monges e o Panthéon. <strong>Parte 2</strong> (tarde) termina em <strong>Cardinal Lemoine</strong> (L10), ~1,5 km (estimativa): a colina de Santa Genoveva, o Hemingway pobre e a Mouffetard. Juntas formam um dia; separadas, duas meias-manhãs. Pensado pra adultos — com criança pequena o que funciona é o pêndulo, as gárgulas e o fecho no parquinho das Arènes. <strong>Pula sem culpa:</strong> o <strong>panorama do Panthéon</strong> (cúpula/colunata, fechado para obras em out/2026; quando abre, é só por escada) e a <strong>cripta</strong> com criança (tumba atrás de tumba; pêndulo sim, cripta não).",
       "stops": [
         {
           "hora": "10:00",
@@ -2653,7 +2653,7 @@
       "gradA": "#3730a3",
       "gradB": "#6366f1",
       "hideStopMarkers": true,
-      "nota": "<strong>\"Visita curta com criança\"</strong>: não é rota linear, é um cardápio pra encaixar <strong>1 museu por dia</strong>, de 45 a 90 min. <strong>Cuidado com os dias de fechamento</strong>: o Cluny fecha às segundas e a Grande Galerie às terças. O museu mais indicado pra criança pequena é a <strong>Grande Galerie de l'Évolution</strong>. <strong>Pula sem culpa:</strong> o <strong>Musée Curie</strong> com criança pequena (laboratório e documentos, nada pra 4 anos; só com um adulto sozinho) e as <strong>visitas guiadas do Cluny</strong> (contadas são de 5-7 anos, em família a partir de 8).",
+      "nota": "<strong>\"Visita curta com criança\"</strong>: não é rota linear, é um cardápio pra encaixar <strong>1 museu por dia</strong>, de 45 a 90 min. <strong>Cuidado com os dias de fechamento</strong>: o Cluny fecha às segundas e a Grande Galerie às terças. O museu mais indicado pra criança pequena é a <strong>Grande Galerie de l'Évolution</strong>. <strong>Pula sem culpa:</strong> o <strong>Musée Curie</strong> com criança pequena (laboratório e documentos, nada pra criança pequena; só com um adulto sozinho) e as <strong>visitas guiadas do Cluny</strong> (contadas são de 5-7 anos, em família a partir de 8).",
       "stops": [
         {
           "hora": "10:00",
@@ -3024,7 +3024,7 @@
           "sobre": "Guarda o <strong>último laboratório</strong> de Marie Curie, no pavilhão do Instituto do Rádio (construído em <strong>1911-1914</strong>), onde ela trabalhou de 1914 a 1934: o escritório e o laboratório de química, descontaminado em <strong>1981</strong>.",
           "imperdivel": "O que observar: o escritório e o laboratório de química preservados.",
           "dicas": [
-            "Pouco pra criança pequena; vale pros adultos — pula sem culpa com criança de 4 anos",
+            "Pouco pra criança pequena; vale pros adultos — pula sem culpa com criança pequena",
             "<strong>Qua-sáb 13h-17h</strong> · <strong>grátis</strong> · fecha em feriados, em agosto e nas férias de Natal (Offi)"
           ],
           "duracao": "45 min",
