@@ -1,0 +1,3056 @@
+{
+  "title": "🗺️ Walking Tours · Quartier Latin · Jardin des Plantes · Panthéon (Paris)",
+  "auth_emoji": "🗺️",
+  "auth_title": "Walking Tours · Paris",
+  "auth_subtitle": "Quartier Latin · Jardin des Plantes · Panthéon · roteiros a pé (sem data)",
+  "header_title": "🗺️ Quartier Latin · Walking Tours",
+  "header_sub": "Família · Profundo · Guloso · Museus",
+  "password": "marais2026",
+  "legend_group_text": "👨‍👩‍👧 Tour ok pra crianças pequenas",
+  "legend_notes_html": "<strong>🗺️ Coletânea de walking tours pelo Quartier Latin (5e)</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. É a Paris mais antiga que ainda dá pra pisar: arena romana, termas galo-romanas e o Panthéon no topo da colina. O bairro tem a melhor \"ilha\" infantil da Rive Gauche — <strong>Jardin des Plantes</strong> colado na <strong>Grande Mosquée</strong> e nas <strong>Arènes de Lutèce</strong> — e dá pra fazer o dia inteiro a pé. <strong>👶 Família</strong>: Arènes, Ménagerie, carrossel do dodô, Grande Galerie e chá de menta. <strong>🎨 Profundo</strong>: em 2 partes, da Paris romana ao Panthéon e à colina de Santa Genoveva. <strong>🍫 Guloso</strong>: da Contrescarpe à Mesquita. <strong>🖼️ Museus</strong>: cardápio de visitas curtas. <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>📍 Pinos</strong>: posições copiadas do OpenStreetMap e da Wikipédia. <strong>🗓️ Dias de fechar</strong>: segunda fecha o Musée de Cluny, o Institut du Monde Arabe, a feira da Mouffetard (que abre ter-dom) e a Carl Marletti · terça fecha a Grande Galerie de l'Évolution · o Musée Curie só abre de quarta a sábado, à tarde.",
+  "links_map": {
+    "Arènes de Lutèce + Square Capitan (4 rue des Arènes, 5e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square des Arènes de Lutèce et Square Capitan",
+        "url": "https://www.paris.fr/lieux/square-des-arenes-de-lutece-et-square-capitan-1760"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · os horários dos jardins seguem o sol",
+        "url": "https://www.paris.fr/pages/le-saviez-vous-les-horaires-des-jardins-parisiens-suivent-le-soleil-32521"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Arènes de Lutèce",
+        "url": "https://en.wikipedia.org/wiki/Ar%C3%A8nes_de_Lut%C3%A8ce"
+      }
+    ],
+    "Ménagerie du Jardin des Plantes (57 rue Cuvier, 5e)": [
+      {
+        "type": "official",
+        "label": "Jardin des Plantes (site oficial) · Ménagerie",
+        "url": "https://www.jardindesplantesdeparis.fr/fr/menagerie-zoo-du-jardin-des-plantes"
+      },
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Ménagerie du Jardin des Plantes",
+        "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/walks/articles/40300-la-menagerie-du-jardin-des-plantes-the-oldest-zoo-in-paris"
+      },
+      {
+        "type": "review",
+        "label": "avygeo · Ménagerie du Jardin des Plantes",
+        "url": "https://www.avygeo.com/fr/guide/lieux-interet/19444-menagerie-du-jardin-des-plantes"
+      }
+    ],
+    "Manège du Dodo + aire de jeux (Jardin des Plantes, 5e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · os mais belos carrosséis de Paris",
+        "url": "https://www.pariszigzag.fr/sortir-paris/balade-paris/beaux-maneges-paris-2"
+      }
+    ],
+    "Grande Galerie de l'Évolution (36 rue Geoffroy-Saint-Hilaire, 5e)": [
+      {
+        "type": "official",
+        "label": "Jardin des Plantes (site oficial) · Grande Galerie de l'Évolution",
+        "url": "https://www.jardindesplantesdeparis.fr/fr/grande-galerie-de-l-evolution"
+      },
+      {
+        "type": "review",
+        "label": "Time Out Paris · Grande Galerie de l'Évolution",
+        "url": "https://www.timeout.com/paris/en/museums/grande-galerie-de-levolution"
+      },
+      {
+        "type": "review",
+        "label": "Wikipédia (fr) · Grande galerie de l'évolution",
+        "url": "https://fr.wikipedia.org/wiki/Grande_galerie_de_l%27%C3%A9volution"
+      }
+    ],
+    "Salon de thé da Grande Mosquée (39 rue Geoffroy-Saint-Hilaire, 5e)": [
+      {
+        "type": "official",
+        "label": "Grande Mosquée de Paris (site oficial) · visitas",
+        "url": "https://www.grandemosqueedeparis.fr/visites"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Salon de thé de la Grande Mosquée",
+        "url": "https://www.pariszigzag.fr/bar-restaurant/restaurant/salon-the-grande-mosquee-paris/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipédia (fr) · Grande mosquée de Paris",
+        "url": "https://fr.wikipedia.org/wiki/Grande_mosqu%C3%A9e_de_Paris"
+      }
+    ],
+    "Jardin Tino-Rossi · Musée de la Sculpture en Plein Air (quai Saint-Bernard, 5e)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Musée de la Sculpture en Plein Air",
+        "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_la_Sculpture_en_Plein_Air"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · Jardin Tino-Rossi",
+        "url": "https://paris.fr/equipements/jardin-tino-rossi-1786"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Jardin Tino-Rossi (coordenada copiada)",
+        "url": "https://en.wikipedia.org/wiki/Jardin_Tino-Rossi"
+      }
+    ],
+    "Shakespeare and Company (37 rue de la Bûcherie, 5e)": [
+      {
+        "type": "official",
+        "label": "Shakespeare and Company (site oficial) · café e horários",
+        "url": "https://shakespeareandcompany.com/fr/cafe"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Shakespeare and Company (bookstore)",
+        "url": "https://en.wikipedia.org/wiki/Shakespeare_and_Company_(bookstore)"
+      },
+      {
+        "type": "review",
+        "label": "Mydl · Shakespeare and Company ganha rampa (2023)",
+        "url": "https://www.mydl.fr/?p=13517"
+      }
+    ],
+    "Square René-Viviani (5e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square René-Viviani",
+        "url": "https://www.paris.fr/lieux/square-rene-viviani-2441"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · se a árvore mais velha de Paris contasse sua história",
+        "url": "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · plus vieil arbre de Paris",
+        "url": "https://www.pariszigzag.fr/insolite/lieux-insolites/plus-vieil-arbre-paris/"
+      }
+    ],
+    "Saint-Julien-le-Pauvre (5e)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Saint-Julien-le-Pauvre",
+        "url": "https://en.wikipedia.org/wiki/Saint-Julien-le-Pauvre"
+      },
+      {
+        "type": "review",
+        "label": "Wikipédia (fr) · Église Saint-Julien-le-Pauvre",
+        "url": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Julien-le-Pauvre_de_Paris"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · Église Saint-Julien-le-Pauvre (trecho do buscador)",
+        "url": "https://www.paris.fr/lieux/eglise-saint-julien-le-pauvre-19484"
+      }
+    ],
+    "Saint-Séverin (rue des Prêtres-Saint-Séverin, 5e)": [
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Église Saint-Séverin",
+        "url": "https://www.sortiraparis.com/arts-culture/histoire-patrimoine/articles/172002-l-eglise-saint-severin-dans-le-quartier-latin"
+      },
+      {
+        "type": "review",
+        "label": "Wikipédia (fr) · Église Saint-Séverin",
+        "url": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-S%C3%A9verin_de_Paris"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · Église Saint-Séverin",
+        "url": "https://www.paris.fr/lieux/eglise-saint-severin-19444"
+      }
+    ],
+    "Termas de Cluny · fachada do museu (28 rue du Sommerard, 5e)": [
+      {
+        "type": "review",
+        "label": "Wikipédia (fr) · Thermes de Cluny",
+        "url": "https://fr.wikipedia.org/wiki/Thermes_de_Cluny"
+      },
+      {
+        "type": "review",
+        "label": "Routard · Musée national du Moyen Âge",
+        "url": "https://www.routard.com/fr/guide/france/ile-de-france/paris/5eme-arrondissement/musee-national-du-moyen-age"
+      }
+    ],
+    "Panthéon (place du Panthéon, 5e)": [
+      {
+        "type": "official",
+        "label": "Panthéon (site oficial) · informações práticas",
+        "url": "https://www.paris-pantheon.fr/visiter/informations-pratiques"
+      },
+      {
+        "type": "review",
+        "label": "avygeo · Panthéon",
+        "url": "https://www.avygeo.com/fr/guide/lieux-interet/19369-pantheon"
+      }
+    ],
+    "Saint-Étienne-du-Mont (place Sainte-Geneviève, 5e)": [
+      {
+        "type": "official",
+        "label": "Saint-Étienne-du-Mont (site da paróquia) · visitar a igreja",
+        "url": "https://www.saintetiennedumont.fr/a-propos/visiter-leglise/"
+      },
+      {
+        "type": "review",
+        "label": "French Moments · Saint-Étienne-du-Mont",
+        "url": "https://frenchmoments.eu/saint-etienne-du-mont-church-paris/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipédia (fr) · Église Saint-Étienne-du-Mont",
+        "url": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-%C3%89tienne-du-Mont"
+      },
+      {
+        "type": "review",
+        "label": "Routard · Église Saint-Étienne-du-Mont",
+        "url": "https://www.routard.com/fr/guide/france/ile-de-france/paris/5eme-arrondissement/eglise-saint-etienne-du-mont"
+      },
+      {
+        "type": "review",
+        "label": "Solosophie · Saint-Étienne-du-Mont",
+        "url": "https://www.solosophie.com/saint-etienne-du-mont-saint-genevieve/"
+      },
+      {
+        "type": "review",
+        "label": "The Cine-Tourist · Midnight in Paris",
+        "url": "https://thecinetourist.net/an-american-tourist-in-paris.html"
+      }
+    ],
+    "74 rue du Cardinal Lemoine (5e)": [
+      {
+        "type": "review",
+        "label": "rue-mouffetard.com · Hemingway na rue Mouffetard",
+        "url": "https://www.rue-mouffetard.com/hemingway-rue-mouffetard-complete-guide"
+      },
+      {
+        "type": "review",
+        "label": "rue-mouffetard.com · Hemingway em Paris",
+        "url": "https://www.rue-mouffetard.com/hemingway-paris-guide"
+      }
+    ],
+    "Place de la Contrescarpe (5e)": [
+      {
+        "type": "review",
+        "label": "rue-mouffetard.com · Hemingway em Paris",
+        "url": "https://www.rue-mouffetard.com/hemingway-paris-guide"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Rue Mouffetard",
+        "url": "https://en.wikipedia.org/wiki/Rue_Mouffetard"
+      }
+    ],
+    "Rue Mouffetard · mercado de rua (5e)": [
+      {
+        "type": "review",
+        "label": "Time Out Paris · Marché Mouffetard",
+        "url": "https://www.timeout.com/paris/en/shopping/marche-mouffetard"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · Marché Monge",
+        "url": "https://www.paris.fr/lieux/marche-monge-5464"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Rue Mouffetard",
+        "url": "https://en.wikipedia.org/wiki/Rue_Mouffetard"
+      }
+    ],
+    "Arènes de Lutèce · a história (4 rue des Arènes, 5e)": [
+      {
+        "type": "official",
+        "label": "paris.fr · Square des Arènes de Lutèce et Square Capitan",
+        "url": "https://www.paris.fr/lieux/square-des-arenes-de-lutece-et-square-capitan-1760"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Arènes de Lutèce",
+        "url": "https://en.wikipedia.org/wiki/Ar%C3%A8nes_de_Lut%C3%A8ce"
+      },
+      {
+        "type": "review",
+        "label": "Atlas Obscura · Arènes de Lutèce",
+        "url": "https://assets.atlasobscura.com/places/arenes-de-lutece"
+      }
+    ],
+    "Les Gelati d'Alberto (45 rue Mouffetard, 5e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · a melhor sorveteria de Paris (16/06/2026)",
+        "url": "https://www.pariszigzag.fr/bar-restaurant/meilleure-glace-paris/"
+      },
+      {
+        "type": "review",
+        "label": "Time Out Paris · Gelati d'Alberto",
+        "url": "https://www.timeout.fr/paris/restaurant/gelati-dalberto"
+      }
+    ],
+    "Maison Caffet (137 rue Mouffetard, 5e)": [
+      {
+        "type": "review",
+        "label": "Toute la Franchise · Maison Caffet",
+        "url": "https://www.toute-la-franchise.com/news-une-3e-boutique-parisienne-pour-l-enseigne-de-chocolaterie-maison-caffet"
+      },
+      {
+        "type": "official",
+        "label": "Maison Caffet (site oficial) · lojas",
+        "url": "https://www.maison-caffet.com/nos-boutiques"
+      },
+      {
+        "type": "review",
+        "label": "PagesJaunes · Maison Caffet Mouffetard",
+        "url": "https://www.pagesjaunes.fr/pros/60073600"
+      }
+    ],
+    "Carl Marletti (51 rue Censier, 5e)": [
+      {
+        "type": "official",
+        "label": "Carl Marletti (site oficial) · contato",
+        "url": "https://www.carlmarletti.com/contact"
+      },
+      {
+        "type": "review",
+        "label": "Paris by Mouth · Carl Marletti",
+        "url": "https://parisbymouth.com/our-guide-to-paris-carl-marletti/"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · la meilleure pâtisserie de Paris (19/06/2023)",
+        "url": "https://www.pariszigzag.fr/bars-restaurants/restaurants-paris/la-meilleure-patisserie-de-paris-se-trouve-rue-mouffetard"
+      }
+    ],
+    "🔄 Odette (77 rue Galande, 5e) · bônus fora do traçado": [
+      {
+        "type": "official",
+        "label": "Odette (site oficial) · lojas",
+        "url": "https://www.odette-paris.com"
+      },
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Odette",
+        "url": "https://www.sortiraparis.com/en/where-to-eat-in-paris/brunch-cafe-tea-time/articles/245599-odette-paris-la-maison-de-choux-a-la-creme-au-charme-d-antan"
+      }
+    ],
+    "Musée de Cluny · Musée national du Moyen Âge (28 rue du Sommerard, 5e)": [
+      {
+        "type": "review",
+        "label": "Citizenkid · Musée de Cluny",
+        "url": "https://www.citizenkid.com/sortie/musee-de-cluny-musee-national-du-moyen-age-paris-paris-a104277"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · após 7 anos de obras, o Cluny reabre",
+        "url": "https://www.pariszigzag.fr/paris-au-quotidien/apres-7-ans-de-travaux-le-musee-de-cluny-rouvre-enfin-ses-portes-au-printemps-2022/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · The Lady and the Unicorn",
+        "url": "https://en.wikipedia.org/wiki/The_Lady_and_the_Unicorn"
+      },
+      {
+        "type": "review",
+        "label": "Familin'Paris · Musée de Cluny",
+        "url": "https://www.familinparis.fr/musee-de-cluny-dame-a-la-licorne/"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · Jardin médiéval du musée de Cluny",
+        "url": "https://www.paris.fr/lieux/jardin-medieval-du-musee-de-cluny-2443"
+      },
+      {
+        "type": "review",
+        "label": "Enclosure: Take Refuge · Cluny Museum garden",
+        "url": "https://enclosuretakerefuge.com/2015/09/22/cluny-museum-garden-paris/"
+      }
+    ],
+    "Terraço do Institut du Monde Arabe (1 rue des Fossés-Saint-Bernard, 5e)": [
+      {
+        "type": "official",
+        "label": "Institut du Monde Arabe (site oficial) · terraço",
+        "url": "https://www.imarabe.org/fr/terrasse"
+      },
+      {
+        "type": "official",
+        "label": "Institut du Monde Arabe (site oficial) · horários",
+        "url": "https://www.imarabe.org/fr/horaires"
+      }
+    ],
+    "Musée Curie (1 rue Pierre-et-Marie-Curie, 5e)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Musée Curie",
+        "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Curie"
+      },
+      {
+        "type": "review",
+        "label": "Offi · Musée Curie",
+        "url": "https://www.offi.fr/expositions-musees/curie-1972.html"
+      }
+    ],
+    "🔄 Crêperie Le Pot O'Lait (41 rue Censier, 5e) · jantar, fora do traçado": [
+      {
+        "type": "review",
+        "label": "koifaire · Crêperie Le Pot O'Lait",
+        "url": "https://www.koifaire.com/paris/creperie,le,pot,o,lait,sarl,-15599.html"
+      },
+      {
+        "type": "review",
+        "label": "lesrestos · Pot O'lait (ficha de 03/03/2020)",
+        "url": "https://www.lesrestos.com/restaurant/fiche/paris/pot-o-lait"
+      }
+    ]
+  },
+  "transit_map": {
+    "Chegada · Métro L10 → Jussieu": {
+      "metro": "L10 direta, sem baldeação: Boulogne Pont de Saint-Cloud → Jussieu em ~35 min (19 estações) · outras estações da L10 no bairro: Cardinal Lemoine, Maubert–Mutualité e Cluny–La Sorbonne"
+    },
+    "Chegada · Métro L10 → Cardinal Lemoine": {
+      "metro": "L10 direta, sem baldeação · a estação fica sob a rue Monge, na esquina da rue du Cardinal-Lemoine; siga a rue du Cardinal-Lemoine até a place de la Contrescarpe, onde a rue Mouffetard começa a descer"
+    }
+  },
+  "bairros_config": [
+    {
+      "nome": "🦒 Jardin des Plantes · Mesquita",
+      "latMin": 48.8405,
+      "latMax": 48.848,
+      "lngMin": 2.3535,
+      "lngMax": 2.363
+    },
+    {
+      "nome": "📚 Panthéon · Mouffetard · Arènes",
+      "latMin": 48.838,
+      "latMax": 48.847,
+      "lngMin": 2.344,
+      "lngMax": 2.3535
+    },
+    {
+      "nome": "⛪ Saint-Michel · Cluny · Seine (5e)",
+      "latMin": 48.847,
+      "latMax": 48.854,
+      "lngMin": 2.342,
+      "lngMax": 2.35
+    },
+    {
+      "nome": "📍 Paris",
+      "fallback": true
+    }
+  ],
+  "wt_labels": "letters",
+  "historia": [
+    {
+      "titulo": "🏛️ Quartier Latin · de Lutécia a Hemingway",
+      "prosa_html": "<p>Antes de ser Quartier Latin, isto aqui era <strong>Lutécia</strong>: os romanos construíram no <strong>séc. I</strong> uma arena de <strong>15.000 lugares</strong>, com jaulas de animais que abriam direto pro chão de luta. Ela foi desmontada pra virar muralha nos ataques de <strong>275</strong>, virou cemitério e, depois da muralha de Philippe Auguste por volta de <strong>1210</strong>, sumiu debaixo da terra por seis séculos — até que, em <strong>1869</strong>, as obras de abertura da rue Monge bateram nela. <strong>Victor Hugo</strong> e o ministro Victor Duruy se mobilizaram pra não deixar a arena virar garagem de bonde, e Hugo escreveu: \"não é possível que Paris, a cidade do futuro, renuncie à prova viva de que foi uma cidade do passado\". Lá embaixo, perto do rio, as termas romanas sobrevivem dentro do Musée de Cluny, com uma abóbada de <strong>14,5 m</strong>, e a árvore mais velha de Paris, uma robínia plantada em <strong>1601</strong> por Jean Robin, ainda está de pé, de muletas, no Square René-Viviani.</p><p>O nome \"latino\" vem dos estudantes, mas a colina pertence a uma mulher: <strong>Santa Genoveva</strong>, padroeira de Paris, cujas relíquias a Revolução destruiu em 1793 — a pedra do túmulo dela foi levada em 1802-1803 pra Saint-Étienne-du-Mont, a igreja do único jubé que restou em Paris, onde também descansam Pascal e Racine. No século XX, o bairro foi barato o bastante pra um Hemingway de 22 anos morar sem água quente no 74 rue du Cardinal Lemoine por <strong>250 francos</strong>, e um americano chamado George Whitman abrir em <strong>1951</strong> uma livraria onde <strong>mais de 30.000</strong> viajantes já dormiram entre as estantes. E na escadaria ao lado de Saint-Étienne-du-Mont, à meia-noite, o Owen Wilson pega o carro pros anos 1920.</p>",
+      "fontes": [
+        {
+          "o": "Wikipedia (en) · Arènes de Lutèce",
+          "u": "https://en.wikipedia.org/wiki/Ar%C3%A8nes_de_Lut%C3%A8ce",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "séc. I",
+            "15.000 lugares",
+            "jaulas de animais que abriam direto pro chão de luta",
+            "275",
+            "1210",
+            "1869",
+            "Philippe Auguste",
+            "desmontada pra virar muralha",
+            "cemitério",
+            "rue Monge"
+          ]
+        },
+        {
+          "o": "paris.fr · Square des Arènes de Lutèce et Square Capitan",
+          "u": "https://www.paris.fr/lieux/square-des-arenes-de-lutece-et-square-capitan-1760",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "Victor Hugo",
+            "Victor Duruy",
+            "garagem de bonde",
+            "1869"
+          ]
+        },
+        {
+          "o": "Atlas Obscura · Arènes de Lutèce",
+          "u": "https://assets.atlasobscura.com/places/arenes-de-lutece",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "Victor Hugo",
+            "cidade do futuro",
+            "prova viva"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Thermes de Cluny",
+          "u": "https://fr.wikipedia.org/wiki/Thermes_de_Cluny",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "14,5 m",
+            "abóbada"
+          ]
+        },
+        {
+          "o": "paris.fr · Square René-Viviani",
+          "u": "https://www.paris.fr/lieux/square-rene-viviani-2441",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "árvore mais velha de Paris",
+            "1601",
+            "Jean Robin",
+            "robínia"
+          ]
+        },
+        {
+          "o": "paris.fr · se a árvore mais velha de Paris contasse sua história",
+          "u": "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "muletas"
+          ]
+        },
+        {
+          "o": "Wikipédia (fr) · Église Saint-Étienne-du-Mont",
+          "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-%C3%89tienne-du-Mont",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "Santa Genoveva",
+            "relíquias",
+            "1793",
+            "pedra do túmulo",
+            "1802-1803",
+            "Pascal",
+            "Racine",
+            "único jubé",
+            "Revolução"
+          ]
+        },
+        {
+          "o": "rue-mouffetard.com · Hemingway na rue Mouffetard",
+          "u": "https://www.rue-mouffetard.com/hemingway-rue-mouffetard-complete-guide",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "74 rue du Cardinal Lemoine",
+            "250 francos",
+            "sem água quente",
+            "22 anos"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Shakespeare and Company (bookstore)",
+          "u": "https://en.wikipedia.org/wiki/Shakespeare_and_Company_(bookstore)",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "George Whitman",
+            "1951",
+            "30.000"
+          ]
+        },
+        {
+          "o": "Solosophie · Saint-Étienne-du-Mont",
+          "u": "https://www.solosophie.com/saint-etienne-du-mont-saint-genevieve/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "Owen Wilson",
+            "meia-noite",
+            "Midnight in Paris",
+            "escadaria"
+          ]
+        }
+      ]
+    }
+  ],
+  "days": [
+    {
+      "date": "👶",
+      "tema": "Quartier Latin · Clássico em Família",
+      "temaCurto": "Família",
+      "bairro": "🦒 Jardin des Plantes · Arènes (5e)",
+      "grupo": true,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Bichos, gladiadores e chá de menta\"</strong>: a melhor \"ilha\" infantil da Rive Gauche — Arènes de Lutèce (arena romana e parquinho), Ménagerie, carrossel de bichos extintos ou ameaçados, Grande Galerie de l'Évolution e o chá de menta na Mesquita. Proposta: descer em <strong>Jussieu</strong> (L10) · ~2 km a pé (estimativa, não medida) · <strong>10h-17h</strong> com almoço · a âncora é a Ménagerie, que abre às <strong>10h</strong>. Tudo plano, sem metrô interno e com pausa de sobra. <strong>Pula sem culpa:</strong> a <strong>Galerie de Paléontologie et d'Anatomie comparée</strong>, <strong>fechada pra obras desde o início de 2026 por pelo menos 18 meses</strong> (reabre em 2027) — os esqueletos de dinossauro que uma criança amaria não estão disponíveis; e a <strong>Galerie des Enfants</strong> da Grande Galerie, feita pra 6-12 anos (aos 4 não aproveita).",
+      "stops": [
+        {
+          "hora": "09:15",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro L10 → Jussieu",
+          "cat": "L10 direta, sem baldeação · Boulogne Pont de Saint-Cloud → Jussieu em ~35 min (19 estações)",
+          "coord": {
+            "lat": 48.84605,
+            "lng": 2.35574
+          }
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🏟️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Arènes de Lutèce + Square Capitan (4 rue des Arènes, 5e)",
+          "cat": "Arena romana do séc. I · parquinho no Square Capitan",
+          "sobre": "Arena romana do <strong>séc. I</strong> que já teve <strong>15.000 lugares</strong>. Sob as arquibancadas havia <strong>5 salinhas, e algumas eram jaulas de animais que abriam direto pra arena</strong>.",
+          "imperdivel": "O que observar: as <strong>aberturas das jaulas ao nível do chão</strong> — conte pra criança que \"daqui saíam os animais pra arena\".",
+          "dicas": [
+            "Correr na arena \"de gladiador\" e, do lado, o parquinho do <strong>Square Capitan</strong> · tem bebedouro e banheiro",
+            "Horário de jardim de Paris: abre às <strong>8h</strong> (seg-sex) e <strong>9h</strong> (sáb-dom); o fechamento muda 6 vezes por ano, acompanhando o pôr do sol — de ~17h no inverno a ~21h30 no verão (paris.fr) · grátis",
+            "Os gramados de Paris ficam em princípio fechados de <strong>15/out a 15/abr</strong>, em repouso (regulamento dos jardins); fora deles, a arena e o parquinho seguem abertos",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Arènes de Lutèce</strong> — comece aqui: a criança corre antes de a manhã esquentar",
+            "🚶 <strong>Ⓐ Ménagerie</strong> — a pé pela rue Cuvier",
+            "🚶 <strong>Ⓑ Manège du Dodo</strong> — atravessando o jardim: carrossel de bichos extintos ou ameaçados e parquinho",
+            "🚶 <strong>Ⓒ Grande Galerie de l'Évolution</strong> — o \"uau\" do dia e o plano de chuva",
+            "🚶 <strong>Ⓓ Salon de thé da Grande Mosquée</strong> — a rua da frente: chá de menta e doce no pátio",
+            "🚶 <strong>Ⓔ Jardin Tino-Rossi</strong> — só se sobrar perna: esculturas e aire de jeux à beira do Sena"
+          ],
+          "duracao": "30-40 min",
+          "custo": "Grátis",
+          "acessibilidade": "Plano · bebedouro e banheiro no Square Capitan",
+          "coord": {
+            "lat": 48.84506,
+            "lng": 2.35294
+          },
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 👶 Bichos, gladiadores e chá de menta",
+              "descricao": "Arènes de Lutèce → Ménagerie → Manège du Dodo → Grande Galerie → Salon de thé da Grande Mosquée → Jardin Tino-Rossi (opcional) · ~2 km a pé (estimativa, não medida) · tudo plano",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Arènes de Lutèce + Square Capitan (4 rue des Arènes, 5e)",
+                  "coord": {
+                    "lat": 48.84506,
+                    "lng": 2.35294
+                  },
+                  "mapsQuery": "Arènes de Lutèce, 4 rue des Arènes, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Ménagerie du Jardin des Plantes (57 rue Cuvier, 5e)",
+                  "coord": {
+                    "lat": 48.84553,
+                    "lng": 2.36059
+                  },
+                  "mapsQuery": "Ménagerie du Jardin des Plantes, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Manège du Dodo + aire de jeux (Jardin des Plantes, 5e)",
+                  "coord": {
+                    "lat": 48.84308,
+                    "lng": 2.3617
+                  },
+                  "mapsQuery": "Dodo Manège, Jardin des Plantes, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Grande Galerie de l'Évolution (36 rue Geoffroy-Saint-Hilaire, 5e)",
+                  "coord": {
+                    "lat": 48.84211,
+                    "lng": 2.35624
+                  },
+                  "mapsQuery": "Grande Galerie de l'Évolution, 36 rue Geoffroy-Saint-Hilaire, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Salon de thé da Grande Mosquée (39 rue Geoffroy-Saint-Hilaire, 5e)",
+                  "coord": {
+                    "lat": 48.84207,
+                    "lng": 2.3551
+                  },
+                  "mapsQuery": "Grande Mosquée de Paris, 39 rue Geoffroy-Saint-Hilaire, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Jardin Tino-Rossi · Musée de la Sculpture en Plein Air (quai Saint-Bernard, 5e)",
+                  "coord": {
+                    "lat": 48.84734,
+                    "lng": 2.36115
+                  },
+                  "mapsQuery": "Jardin Tino-Rossi, quai Saint-Bernard, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "paris.fr · Square des Arènes de Lutèce et Square Capitan",
+              "u": "https://www.paris.fr/lieux/square-des-arenes-de-lutece-et-square-capitan-1760",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "8h",
+                "9h",
+                "repouso",
+                "4 rue des Arènes"
+              ]
+            },
+            {
+              "o": "paris.fr · os horários dos jardins seguem o sol",
+              "u": "https://www.paris.fr/pages/le-saviez-vous-les-horaires-des-jardins-parisiens-suivent-le-soleil-32521",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "6 vezes",
+                "pôr do sol",
+                "17h",
+                "21h30",
+                "inverno",
+                "verão"
+              ]
+            },
+            {
+              "o": "paris.fr · regulamento geral dos parques e jardins (anexo 2)",
+              "u": "https://cdn.paris.fr/paris/2025/03/17/annexe-2-reglementation-generale-jardins-et-bois-rp4G.pdf",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "15/out a 15/abr",
+                "15/abr"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Arènes de Lutèce",
+              "u": "https://en.wikipedia.org/wiki/Ar%C3%A8nes_de_Lut%C3%A8ce",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "séc. I",
+                "15.000 lugares",
+                "5 salinhas",
+                "jaulas de animais que abriam direto pra arena"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 406229046 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/406229046",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Arènes de Lutèce, 4 rue des Arènes, Paris"
+        },
+        {
+          "hora": "10:15",
+          "emoji": "🦒",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Ménagerie du Jardin des Plantes (57 rue Cuvier, 5e)",
+          "cat": "Zoo aberto em 1794, em escala pequena, dentro de um jardim botânico",
+          "sobre": "O <strong>zoológico mais antigo de Paris</strong>, aberto em <strong>1794</strong> — o próprio Jardin des Plantes diz \"um dos zoos mais antigos do mundo\" —, em escala pequena e enfiado num jardim botânico. A Sortir à Paris cita pandas-vermelhos, leopardos-das-neves, tartarugas de Seychelles e orangotangos.",
+          "imperdivel": "O que observar: os <strong>pandas-vermelhos</strong> e os <strong>orangotangos</strong>, dois dos bichos que a Sortir à Paris destaca.",
+          "dicas": [
+            "Bicho a cada poucos passos: criança pequena aguenta bem o zoo, que é de escala pequena",
+            "<strong>Adulto €13, de 3 a 25 anos €10</strong>, abaixo de 3 anos grátis · a bilheteria fecha <strong>1h antes</strong> do zoo",
+            "Abre às <strong>10h</strong> todos os dias; fecha às <strong>18h</strong> de março ao fim de outubro e às <strong>17h</strong> do fim de outubro a fevereiro — confira a data da troca no site oficial"
+          ],
+          "duracao": "1h30",
+          "custo": "Adulto €13 · 3-25 anos €10 · <3 anos grátis (2026)",
+          "acessibilidade": "Plano · jardim com sombra",
+          "coord": {
+            "lat": 48.84553,
+            "lng": 2.36059
+          },
+          "fontes": [
+            {
+              "o": "Jardin des Plantes (site oficial) · Ménagerie",
+              "u": "https://www.jardindesplantesdeparis.fr/fr/menagerie-zoo-du-jardin-des-plantes",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1794",
+                "mais antigos do mundo",
+                "€13",
+                "€10",
+                "3 a 25 anos",
+                "3 anos",
+                "10h",
+                "18h",
+                "17h",
+                "1h antes",
+                "outubro",
+                "fevereiro",
+                "março"
+              ]
+            },
+            {
+              "o": "Sortir à Paris · Ménagerie du Jardin des Plantes",
+              "u": "https://www.sortiraparis.com/en/what-to-visit-in-paris/walks/articles/40300-la-menagerie-du-jardin-des-plantes-the-oldest-zoo-in-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "mais antigo",
+                "pandas-vermelhos",
+                "orangotangos"
+              ]
+            },
+            {
+              "o": "avygeo · Ménagerie du Jardin des Plantes",
+              "u": "https://www.avygeo.com/fr/guide/lieux-interet/19444-menagerie-du-jardin-des-plantes",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "março",
+                "18h",
+                "17h"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 21999647 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/21999647",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Ménagerie du Jardin des Plantes, Paris"
+        },
+        {
+          "hora": "11:45",
+          "emoji": "🎠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Manège du Dodo + aire de jeux (Jardin des Plantes, 5e)",
+          "cat": "Carrossel de bichos extintos ou ameaçados · parquinho ao lado",
+          "sobre": "Carrossel instalado em <strong>1992</strong> onde a criança monta em bichos <strong>extintos ou ameaçados de extinção</strong> — o <strong>dodô</strong>, o lobo-da-Tasmânia, a tartaruga-de-chifre, o panda. Foi feito pra ensinar, brincando, o que é a extinção de uma espécie: vale contar enquanto ela escolhe o bicho.",
+          "imperdivel": "O que observar: cada bicho do carrossel é uma espécie extinta ou ameaçada — pergunte à criança quais ainda existem.",
+          "dicas": [
+            "Carrossel e parquinho ao lado: o descarrego de energia do dia",
+            "Fica dentro do Jardin des Plantes, do lado da rue Cuvier · paga-se por giro, na hora"
+          ],
+          "duracao": "30-40 min",
+          "custo": "Pago por giro, na hora",
+          "acessibilidade": "Plano · dentro do jardim",
+          "coord": {
+            "lat": 48.84308,
+            "lng": 2.3617
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag · os mais belos carrosséis de Paris",
+              "u": "https://www.pariszigzag.fr/sortir-paris/balade-paris/beaux-maneges-paris-2",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1992",
+                "extintos ou ameaçados",
+                "dodô",
+                "lobo-da-Tasmânia",
+                "tartaruga-de-chifre",
+                "panda",
+                "extinção"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 83976101 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/83976101",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Dodo Manège, Jardin des Plantes, Paris"
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Jardin des Plantes e arredores",
+          "cat": "Restaurante de jardim, crêperie, cuscuz na Mesquita ou piquenique",
+          "coord": {
+            "lat": 48.8446,
+            "lng": 2.35729
+          },
+          "opcoes": [
+            {
+              "nome": "Jardin Folia · antigo Les Belles Plantes (47 rue Cuvier, 5e · dentro do Jardin des Plantes)",
+              "desc": "Restaurante de jardim com <strong>2 terraços</strong> (um com vista pros <strong>wallabies</strong>, outro à sombra de uma paulównia) · <strong>menu enfant até 12 anos</strong> · espaço pra carrinho · dentro do programa da manhã, sem sair do jardim · <strong>seg-sex 9h15-17h30, sáb-dom 9h15-18h</strong> (site oficial) · o nome mudou de Les Belles Plantes pra Jardin Folia, no mesmo endereço",
+              "preco": "Menu enfant até 12 anos",
+              "dist": "dentro do Jardin des Plantes",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Jardin Folia, 47 rue Cuvier, Paris",
+              "fontes": [
+                {
+                  "o": "Jardin des Plantes (site oficial) · restaurantes",
+                  "u": "https://www.jardindesplantesdeparis.fr/en/restaurant-cafe-food-stands",
+                  "tier": "oficial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "Jardin Folia",
+                    "9h15-17h30",
+                    "9h15-18h"
+                  ]
+                },
+                {
+                  "o": "Familin'Paris · Jardin Folia",
+                  "u": "https://www.familinparis.fr/restaurant-les-belles-plantes/",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "2 terraços",
+                    "menu enfant",
+                    "12 anos",
+                    "wallabies"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 977194666 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/977194666",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.8446,
+                "lng": 2.35729
+              }
+            },
+            {
+              "nome": "Crêperie Le Pot O'Lait (41 rue Censier, 5e)",
+              "desc": "Crêperia bretã com <strong>menu enfant</strong> · a crêpe doce é acerto aos 4 anos · abre no <strong>almoço (~11h30-14h30) e no jantar (~19h-22h)</strong>, com pausa à tarde — confira na porta · \"a partir de €15\" na ficha de 2020",
+              "preco": "a partir de ~€15 (2020)",
+              "dist": "rue Censier, ~1 km do jardim (estimativa, não medida)",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Crêperie Le Pot O'Lait, 41 rue Censier, Paris",
+              "fontes": [
+                {
+                  "o": "lesrestos · Pot O'lait (ficha atualizada em 03/03/2020)",
+                  "u": "https://www.lesrestos.com/restaurant/fiche/paris/pot-o-lait",
+                  "tier": "diretorio",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "menu enfant",
+                    "€15",
+                    "2020",
+                    "22h"
+                  ]
+                },
+                {
+                  "o": "parisbouge · Le Pot O'Lait (trecho do buscador)",
+                  "u": "https://www.parisbouge.com/places/1749",
+                  "tier": "diretorio",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "11h30-14h30",
+                    "19h-22h"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 5222573357 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/5222573357",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.83997,
+                "lng": 2.35185
+              }
+            },
+            {
+              "nome": "Restaurante da Grande Mosquée (39 rue Geoffroy-Saint-Hilaire, 5e)",
+              "desc": "Cozinha norte-africana; o <strong>cuscuz</strong> é comida \"neutra\" pra criança · pátio com mosaico · serve <strong>almoço e jantar</strong> (ficha de 2020) · \"a partir de €25\" na mesma ficha",
+              "preco": "a partir de ~€25 (2020)",
+              "dist": "a rua da frente da Grande Galerie",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Restaurant de la Grande Mosquée de Paris, 39 rue Geoffroy-Saint-Hilaire, Paris",
+              "fontes": [
+                {
+                  "o": "lesrestos · Restaurant de la Mosquée de Paris (2020)",
+                  "u": "https://www.lesrestos.com/restaurant/fiche/paris/restaurant-de-la-mosquee-de-paris",
+                  "tier": "diretorio",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "cuscuz",
+                    "almoço e jantar",
+                    "€25",
+                    "2020"
+                  ]
+                },
+                {
+                  "o": "Time Out Paris · Grande Mosquée de Paris",
+                  "u": "https://www.timeout.fr/paris/sites-et-monuments/la-grande-mosquee-de-paris",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": []
+                },
+                {
+                  "o": "OpenStreetMap · way 437812893 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/way/437812893",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.84207,
+                "lng": 2.3551
+              }
+            },
+            {
+              "nome": "Piquenique do Marché Mouffetard / Marché Monge (place Monge, 5e)",
+              "desc": "Compra na feira e come sentado nas Arènes · zero espera de serviço · <strong>Marché Monge</strong>: qua e sex 7h-13h30, dom 7h-14h30 · feira da <strong>Mouffetard</strong>: ter-dom de manhã · preços variam",
+              "preco": "variável",
+              "dist": "place Monge, perto das Arènes",
+              "valeAPena": 2,
+              "poiCat": "mercado",
+              "mapsQuery": "Marché Monge, place Monge, Paris",
+              "fontes": [
+                {
+                  "o": "paris.fr · Marché Monge",
+                  "u": "https://www.paris.fr/lieux/marche-monge-5464",
+                  "tier": "oficial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "7h-13h30",
+                    "7h-14h30"
+                  ]
+                },
+                {
+                  "o": "Time Out Paris · Marché Mouffetard",
+                  "u": "https://www.timeout.com/paris/en/shopping/marche-mouffetard",
+                  "tier": "editorial",
+                  "data": "2026-10-06",
+                  "prova": [
+                    "ter-dom"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 1426204965 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/1426204965",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.84306,
+                "lng": 2.35175
+              }
+            }
+          ]
+        },
+        {
+          "hora": "13:45",
+          "emoji": "🦣",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Grande Galerie de l'Évolution (36 rue Geoffroy-Saint-Hilaire, 5e)",
+          "cat": "Animais em tamanho real numa galeria de 1889 · plano de chuva",
+          "sobre": "Aberta em <strong>julho de 1889</strong> (arquiteto Louis-Jules André) e reinaugurada em <strong>21/jun/1994</strong>, a galeria mostra <strong>animais em tamanho real</strong>: um guia descreve lulas de tentáculos erguidos, tubarões de boca aberta e macacos \"descendo do teto\". É o programa que moradoras de Paris indicam pra criança pequena no bairro, junto com a Mesquita.",
+          "imperdivel": "O que observar: os macacos \"descendo do teto\" e os tigres pendurados nos elefantes, como descreve um dos guias — e o teto de vidro que já existia no projeto original, pra luz natural.",
+          "dicas": [
+            "<strong>Fechada às terças</strong> · <strong>10h-18h</strong> · a bilheteria fecha <strong>1h antes</strong> · fecha também 1/jan, 1/mai e 25/dez",
+            "<strong>€13</strong>, reduzida <strong>€10</strong> (coleção permanente; com a exposição temporária, €16) · <strong>grátis até 25 anos</strong>, residente da UE ou não, com documento (site oficial)",
+            "Com sol, é opcional e o jardim basta; com chuva, é a parada principal"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "€13 · reduzida €10 · grátis até 25 anos",
+          "acessibilidade": "Selo Tourisme & Handicap · empréstimo de cadeira de rodas · piso plano",
+          "coord": {
+            "lat": 48.84211,
+            "lng": 2.35624
+          },
+          "fontes": [
+            {
+              "o": "Jardin des Plantes (site oficial) · Grande Galerie de l'Évolution",
+              "u": "https://www.jardindesplantesdeparis.fr/fr/grande-galerie-de-l-evolution",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h-18h",
+                "terças",
+                "1h antes",
+                "€13",
+                "€10",
+                "€16",
+                "25 anos",
+                "1/jan",
+                "1/mai",
+                "25/dez",
+                "Tourisme & Handicap"
+              ]
+            },
+            {
+              "o": "Dica de campo · moradoras de Paris (07/10/2026)",
+              "u": "https://github.com/tsferraro/viagem/blob/main/MEMORY.md",
+              "tier": "campo",
+              "data": "2026-10-07",
+              "prova": []
+            },
+            {
+              "o": "Time Out Paris · Grande Galerie de l'Évolution",
+              "u": "https://www.timeout.com/paris/en/museums/grande-galerie-de-levolution",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "tamanho real",
+                "lulas",
+                "tubarões",
+                "macacos"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Grande galerie de l'évolution",
+              "u": "https://fr.wikipedia.org/wiki/Grande_galerie_de_l%27%C3%A9volution",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "julho de 1889",
+                "1889",
+                "1994",
+                "21/jun/1994",
+                "Louis-Jules André"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 83913793 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/83913793",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Grande Galerie de l'Évolution, 36 rue Geoffroy-Saint-Hilaire, Paris"
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🍵",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Salon de thé da Grande Mosquée (39 rue Geoffroy-Saint-Hilaire, 5e)",
+          "cat": "Chá de menta e baklava num pátio de mosaico",
+          "sobre": "A mesquita foi inaugurada em <strong>julho de 1926</strong>, em homenagem aos muçulmanos mortos pela França na 1ª Guerra, e o pátio é <strong>inspirado na Alhambra de Granada</strong>. O salão de chá serve chá de menta e doces (baklava, chifre de gazela) nesse pátio.",
+          "imperdivel": "O que observar: os <strong>mosaicos e as fontes do pátio</strong>.",
+          "dicas": [
+            "O salão abre <strong>todos os dias, 9h-0h</strong> · chá e doces a <strong>~€2 cada</strong> (Paris Zigzag, jun/2025)",
+            "Lanche da tarde: chá de menta e um doce dividido",
+            "A visita à mesquita em si (<strong>9h-18h</strong>, €5, reduzida €3) <strong>não abre às sextas</strong> nem nas festas muçulmanas (site oficial); o salão de chá abre todos os dias"
+          ],
+          "duracao": "45 min",
+          "custo": "Chá e doces ~€2 cada (jun/2025)",
+          "acessibilidade": "Pátio plano · salão com mesas",
+          "coord": {
+            "lat": 48.84207,
+            "lng": 2.3551
+          },
+          "fontes": [
+            {
+              "o": "Grande Mosquée de Paris (site oficial) · visitas",
+              "u": "https://www.grandemosqueedeparis.fr/visites",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "9h-18h",
+                "€5",
+                "€3",
+                "sextas",
+                "festas muçulmanas"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · Salon de thé de la Grande Mosquée",
+              "u": "https://www.pariszigzag.fr/bar-restaurant/restaurant/salon-the-grande-mosquee-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "9h-0h",
+                "€2",
+                "jun/2025",
+                "baklava",
+                "chifre de gazela",
+                "Alhambra de Granada",
+                "1ª Guerra"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Grande mosquée de Paris",
+              "u": "https://fr.wikipedia.org/wiki/Grande_mosqu%C3%A9e_de_Paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "julho de 1926",
+                "1926",
+                "1ª Guerra"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 437812893 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/437812893",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "cafe",
+          "mapsQuery": "Grande Mosquée de Paris, 39 rue Geoffroy-Saint-Hilaire, Paris"
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🗿",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Jardin Tino-Rossi · Musée de la Sculpture en Plein Air (quai Saint-Bernard, 5e)",
+          "cat": "Museu a céu aberto à beira do Sena · opcional",
+          "sobre": "Museu ao ar livre criado em <strong>1980</strong>, com <strong>mais de 50 esculturas</strong> (Arp, César, Brâncuși) espalhadas pelo jardim à beira do Sena, entre a pont d'Austerlitz e a pont de Sully. Tem <strong>aire de jeux</strong>.",
+          "imperdivel": "O que observar: as esculturas de Arp, César e Brâncuși ao ar livre, com o rio do lado.",
+          "dicas": [
+            "Opcional: só se sobrar perna depois da Mesquita",
+            "Espaço aberto e parquinho à beira do rio · grátis · aberto <strong>24h</strong> (paris.fr)"
+          ],
+          "duracao": "30 min",
+          "custo": "Grátis",
+          "acessibilidade": "Plano · beira do rio",
+          "coord": {
+            "lat": 48.84734,
+            "lng": 2.36115
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Musée de la Sculpture en Plein Air",
+              "u": "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_la_Sculpture_en_Plein_Air",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1980",
+                "50"
+              ]
+            },
+            {
+              "o": "paris.fr · Jardin Tino-Rossi",
+              "u": "https://paris.fr/equipements/jardin-tino-rossi-1786",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "24h",
+                "aire de jeux"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Jardin Tino-Rossi (coordenada copiada)",
+              "u": "https://en.wikipedia.org/wiki/Jardin_Tino-Rossi",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "pont d'Austerlitz",
+                "pont de Sully"
+              ]
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "parque",
+          "mapsQuery": "Jardin Tino-Rossi, quai Saint-Bernard, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🎨",
+      "tema": "Quartier Latin Profundo · História",
+      "temaCurto": "História",
+      "bairro": "🏛️ Maubert → Panthéon → Mouffetard (5e)",
+      "grupo": false,
+      "cor": "#1d4ed8",
+      "gradA": "#1e3a8a",
+      "gradB": "#3b82f6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Da Paris romana ao Panthéon\"</strong>, em 2 partes. <strong>Parte 1</strong> (manhã) desce em <strong>Maubert–Mutualité</strong> (L10), ~1,5 km (estimativa): o rio, os monges e o Panthéon. <strong>Parte 2</strong> (tarde) termina em <strong>Cardinal Lemoine</strong> (L10), ~1,5 km (estimativa): a colina de Santa Genoveva, o Hemingway pobre e a Mouffetard. Juntas formam um dia; separadas, duas meias-manhãs. Pensado pra adultos — com criança de 4 anos o que funciona é o pêndulo, as gárgulas e o fecho no parquinho das Arènes. <strong>Pula sem culpa:</strong> o <strong>panorama do Panthéon</strong> (cúpula/colunata, fechado para obras em out/2026; quando abre, é só por escada) e a <strong>cripta</strong> com criança (tumba atrás de tumba; pêndulo sim, cripta não).",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "📚",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Shakespeare and Company (37 rue de la Bûcherie, 5e)",
+          "cat": "Livraria aberta em 1951 · pernoite de escritores em troca de trabalho",
+          "sobre": "Aberta em <strong>1951</strong> por George Whitman com o nome <strong>\"Le Mistral\"</strong>, virou Shakespeare and Company em <strong>1964</strong>, em homenagem à livraria de Sylvia Beach (1919-1941). <strong>Mais de 30.000 \"Tumbleweeds\"</strong> já dormiram lá em troca de trabalho e de ler um livro por dia.",
+          "imperdivel": "O que observar: as camas entre as estantes, onde <strong>mais de 30.000</strong> viajantes já dormiram em troca de trabalho.",
+          "dicas": [
+            "Tem <strong>seção infantil</strong> (livros em inglês) · interior apertado: visita curta, sem carrinho grande",
+            "Livraria <strong>seg-qua 10h-20h, qui-sáb 10h-21h, dom 12h-19h</strong>; café <strong>9h-19h</strong> todos os dias (site oficial)",
+            "🚶 <strong>Parte 1 · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Shakespeare and Company</strong> — ponto de partida, na beira do Sena",
+            "🚶 <strong>Ⓐ Square René-Viviani</strong> — a árvore mais velha de Paris, de muletas",
+            "🚶 <strong>Ⓑ Saint-Julien-le-Pauvre</strong> — olhada rápida, ao lado do square",
+            "🚶 <strong>Ⓒ Saint-Séverin</strong> — gárgulas por fora, o pilar torcido por dentro",
+            "🚶 <strong>Ⓓ Termas de Cluny</strong> — as ruínas romanas vistas de fora",
+            "🚶 <strong>Ⓔ Panthéon</strong> — o pêndulo de Foucault",
+            "🚶 <strong>Parte 2 · parada a parada</strong> (a segunda rota no mapa, pinos de contorno):",
+            "🚶 <strong>○ Saint-Étienne-du-Mont</strong> — ao lado do Panthéon: o jubé e os degraus do filme",
+            "🚶 <strong>Ⓐ 74 rue du Cardinal Lemoine</strong> — a casa do Hemingway, só a fachada",
+            "🚶 <strong>Ⓑ Place de la Contrescarpe</strong> — a praça no alto da Mouffetard",
+            "🚶 <strong>Ⓒ Rue Mouffetard</strong> — descer a ladeira de pedra e as bancas",
+            "🚶 <strong>Ⓓ Arènes de Lutèce</strong> — fecho: a história da arena e o parquinho"
+          ],
+          "duracao": "10 min",
+          "custo": "Entrada grátis",
+          "acessibilidade": "Interior apertado · <strong>1 degrau</strong> na entrada, com rampa removível",
+          "coord": {
+            "lat": 48.85257,
+            "lng": 2.34711
+          },
+          "walkingTours": [
+            {
+              "nome": "Parte 1 · 🏛️ O rio e os monges",
+              "descricao": "Shakespeare and Company → Square René-Viviani → Saint-Julien-le-Pauvre → Saint-Séverin → Termas de Cluny → Panthéon · ~1,5 km (estimativa) · manhã",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Shakespeare and Company (37 rue de la Bûcherie, 5e)",
+                  "coord": {
+                    "lat": 48.85257,
+                    "lng": 2.34711
+                  },
+                  "mapsQuery": "Shakespeare and Company, 37 rue de la Bûcherie, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Square René-Viviani (5e)",
+                  "coord": {
+                    "lat": 48.85212,
+                    "lng": 2.34754
+                  },
+                  "mapsQuery": "Square René-Viviani, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Saint-Julien-le-Pauvre (5e)",
+                  "coord": {
+                    "lat": 48.85205,
+                    "lng": 2.34713
+                  },
+                  "mapsQuery": "Église Saint-Julien-le-Pauvre, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Saint-Séverin (rue des Prêtres-Saint-Séverin, 5e)",
+                  "coord": {
+                    "lat": 48.85209,
+                    "lng": 2.34571
+                  },
+                  "mapsQuery": "Église Saint-Séverin, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Termas de Cluny · fachada do museu (28 rue du Sommerard, 5e)",
+                  "coord": {
+                    "lat": 48.85065,
+                    "lng": 2.34356
+                  },
+                  "mapsQuery": "Musée de Cluny, 28 rue du Sommerard, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Panthéon (place du Panthéon, 5e)",
+                  "coord": {
+                    "lat": 48.84619,
+                    "lng": 2.34605
+                  },
+                  "mapsQuery": "Panthéon, place du Panthéon, Paris"
+                }
+              ]
+            },
+            {
+              "nome": "Parte 2 · 📚 A colina de Santa Genoveva e o Hemingway pobre",
+              "descricao": "Saint-Étienne-du-Mont → 74 rue du Cardinal Lemoine → Place de la Contrescarpe → Rue Mouffetard → Arènes de Lutèce · ~1,5 km (estimativa) · tarde",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Saint-Étienne-du-Mont (place Sainte-Geneviève, 5e)",
+                  "coord": {
+                    "lat": 48.84655,
+                    "lng": 2.34802
+                  },
+                  "mapsQuery": "Église Saint-Étienne-du-Mont, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "74 rue du Cardinal Lemoine (5e)",
+                  "coord": {
+                    "lat": 48.84485,
+                    "lng": 2.3496
+                  },
+                  "mapsQuery": "74 rue du Cardinal Lemoine, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Place de la Contrescarpe (5e)",
+                  "coord": {
+                    "lat": 48.84448,
+                    "lng": 2.3495
+                  },
+                  "mapsQuery": "Place de la Contrescarpe, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Rue Mouffetard · mercado de rua (5e)",
+                  "coord": {
+                    "lat": 48.8423,
+                    "lng": 2.34977
+                  },
+                  "mapsQuery": "Rue Mouffetard, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Arènes de Lutèce · a história (4 rue des Arènes, 5e)",
+                  "coord": {
+                    "lat": 48.84506,
+                    "lng": 2.35294
+                  },
+                  "mapsQuery": "Arènes de Lutèce, 4 rue des Arènes, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Shakespeare and Company (site oficial) · café e horários",
+              "u": "https://shakespeareandcompany.com/fr/cafe",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "10h-20h",
+                "10h-21h",
+                "12h-19h",
+                "9h-19h",
+                "10h",
+                "20h",
+                "21h",
+                "12h",
+                "19h",
+                "9h"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Shakespeare and Company (bookstore)",
+              "u": "https://en.wikipedia.org/wiki/Shakespeare_and_Company_(bookstore)",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1951",
+                "1964",
+                "1919",
+                "1941",
+                "Le Mistral",
+                "30.000",
+                "Tumbleweeds",
+                "um livro por dia"
+              ]
+            },
+            {
+              "o": "Mydl · Shakespeare and Company ganha rampa (2023)",
+              "u": "https://www.mydl.fr/?p=13517",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1 degrau",
+                "rampa removível"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 251373380 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/251373380",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Shakespeare and Company, 37 rue de la Bûcherie, Paris"
+        },
+        {
+          "hora": "10:30",
+          "emoji": "🌳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Square René-Viviani (5e)",
+          "cat": "A árvore mais velha de Paris, com vista pra Notre-Dame",
+          "sobre": "Aqui está <strong>a árvore mais velha de Paris</strong>: uma robínia (falsa-acácia) plantada em <strong>1601</strong> pelo botânico <strong>Jean Robin</strong>, com sementes dos Apalaches, hoje com cerca de <strong>15 m</strong> de altura.",
+          "imperdivel": "O que observar: as <strong>muletas</strong> que seguram o tronco.",
+          "dicas": [
+            "Praça pequena pra correr, com vista pra Notre-Dame",
+            "Grátis · o square é colado em Saint-Julien-le-Pauvre"
+          ],
+          "duracao": "15 min",
+          "custo": "Grátis",
+          "acessibilidade": "Praça plana, com bancos",
+          "coord": {
+            "lat": 48.85212,
+            "lng": 2.34754
+          },
+          "fontes": [
+            {
+              "o": "paris.fr · Square René-Viviani",
+              "u": "https://www.paris.fr/lieux/square-rene-viviani-2441",
+              "tier": "oficial",
+              "data": "2026-10-06",
+              "prova": [
+                "mais velha",
+                "1601",
+                "Jean Robin"
+              ]
+            },
+            {
+              "o": "paris.fr · se a árvore mais velha de Paris contasse sua história",
+              "u": "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "Apalaches",
+                "15 m",
+                "muletas",
+                "1601"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · plus vieil arbre de Paris",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/plus-vieil-arbre-paris/",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "15 m",
+                "muletas"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 236820131 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/236820131",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "parque",
+          "mapsQuery": "Square René-Viviani, Paris"
+        },
+        {
+          "hora": "10:45",
+          "emoji": "⛪",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Saint-Julien-le-Pauvre (5e)",
+          "cat": "Igreja começada em 1165-1170, culto melquita desde 1889",
+          "sobre": "Começada entre <strong>1165 e 1170</strong>, sob Luís VII, no lugar de um oratório merovíngio que abrigava <strong>peregrinos sem dinheiro</strong> — daí o \"le Pauvre\". Desde <strong>1889</strong> abriga o culto <strong>grego-católico melquita</strong>.",
+          "imperdivel": "O que observar: o nome da igreja, que lembra os peregrinos pobres que ela acolhia.",
+          "dicas": [
+            "Olhada rápida, do lado do square",
+            "O paris.fr não publica horário de visita: por fora, dá pra ver a qualquer hora"
+          ],
+          "duracao": "10 min",
+          "custo": "Grátis por fora",
+          "coord": {
+            "lat": 48.85205,
+            "lng": 2.34713
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Saint-Julien-le-Pauvre",
+              "u": "https://en.wikipedia.org/wiki/Saint-Julien-le-Pauvre",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "1165",
+                "1170",
+                "1889",
+                "Luís VII",
+                "merovíngio",
+                "melquita"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Église Saint-Julien-le-Pauvre",
+              "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Julien-le-Pauvre_de_Paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "peregrinos sem dinheiro",
+                "le Pauvre"
+              ]
+            },
+            {
+              "o": "paris.fr · Église Saint-Julien-le-Pauvre",
+              "u": "https://www.paris.fr/lieux/eglise-saint-julien-le-pauvre-19484",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "não publica horário"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 19741083 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/19741083",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Julien-le-Pauvre, Paris"
+        },
+        {
+          "hora": "11:00",
+          "emoji": "⛪",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Saint-Séverin (rue des Prêtres-Saint-Séverin, 5e)",
+          "cat": "Gótico flamejante · gárgulas e o pilar torcido",
+          "sobre": "Igreja de <strong>gótico flamejante</strong> erguida depois da Guerra dos Cem Anos. Lá fora ficam as <strong>gárgulas góticas</strong> e, dentro, os vitrais modernos de <strong>Jean Bazaine</strong>, inaugurados em <strong>1970</strong>.",
+          "imperdivel": "O que observar: no deambulatório, o \"palmeiral\" de abóbadas termina num <strong>pilar torcido em espiral</strong>.",
+          "dicas": [
+            "Caçar gárgulas na fachada vira brincadeira com a criança",
+            "Grátis · <strong>seg-sáb 9h30-19h30, dom 9h-20h</strong> (Sortir à Paris) · confira no site da paróquia, que muda em dia de cerimônia"
+          ],
+          "duracao": "20 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.85209,
+            "lng": 2.34571
+          },
+          "fontes": [
+            {
+              "o": "Sortir à Paris · Église Saint-Séverin",
+              "u": "https://www.sortiraparis.com/arts-culture/histoire-patrimoine/articles/172002-l-eglise-saint-severin-dans-le-quartier-latin",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "gárgulas góticas",
+                "pilar torcido",
+                "9h30-19h30",
+                "9h-20h",
+                "grátis"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Église Saint-Séverin",
+              "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-S%C3%A9verin_de_Paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Jean Bazaine",
+                "1970",
+                "gótico flamejante"
+              ]
+            },
+            {
+              "o": "paris.fr · Église Saint-Séverin",
+              "u": "https://www.paris.fr/lieux/eglise-saint-severin-19444",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "Jean Bazaine"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 19740659 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/19740659",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Séverin, Paris"
+        },
+        {
+          "hora": "11:25",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Termas de Cluny · fachada do museu (28 rue du Sommerard, 5e)",
+          "cat": "Termas galo-romanas do fim do séc. I ou início do II",
+          "sobre": "Termas galo-romanas do <strong>fim do séc. I ou início do II</strong>. O frigidarium tem abóbada de <strong>14,5 m</strong>, uma das mais altas do Ocidente romano ainda de pé. Ao lado fica o Hôtel des Abbés de Cluny, do <strong>fim do séc. XV</strong>.",
+          "imperdivel": "O que observar: a <strong>abóbada do frigidarium</strong> e, ao lado, o Hôtel des Abbés de Cluny.",
+          "dicas": [
+            "Ver de fora as ruínas romanas; entrar é a aba Museus",
+            "O museu abre <strong>ter-dom 9h30-18h15</strong> e <strong>fecha às segundas</strong>"
+          ],
+          "duracao": "15 min por fora",
+          "custo": "Entrada [aba Museus]",
+          "acessibilidade": "Ruínas vistas de fora, da calçada · o interior é a aba Museus",
+          "coord": {
+            "lat": 48.85065,
+            "lng": 2.34356
+          },
+          "fontes": [
+            {
+              "o": "Wikipédia (fr) · Thermes de Cluny",
+              "u": "https://fr.wikipedia.org/wiki/Thermes_de_Cluny",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "fim do séc. I ou início do II",
+                "séc. I",
+                "14,5 m",
+                "mais altas"
+              ]
+            },
+            {
+              "o": "Routard · Musée national du Moyen Âge",
+              "u": "https://www.routard.com/fr/guide/france/ile-de-france/paris/5eme-arrondissement/musee-national-du-moyen-age",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "fim do séc. XV",
+                "séc. XV",
+                "9h30-18h15",
+                "9h30",
+                "18h15",
+                "segundas"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 56640163 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/56640163",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée de Cluny, 28 rue du Sommerard, Paris"
+        },
+        {
+          "hora": "11:50",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Panthéon (place du Panthéon, 5e)",
+          "cat": "Mausoléu dos grandes nomes · pêndulo de Foucault",
+          "sobre": "Sob a cúpula repousam <strong>mais de 80 personalidades</strong>. No centro da nave pende o <strong>pêndulo de Foucault</strong> (demonstração de <strong>1851</strong>), preso a um cabo de <strong>67 m</strong>.",
+          "imperdivel": "O que observar: o pêndulo \"não muda de direção; é a Terra que gira por baixo\".",
+          "dicas": [
+            "O pêndulo hipnotiza a criança por uns minutos; a cripta é tediosa pra criança pequena",
+            "Abre <strong>10h-18h30 de abril a setembro</strong> e <strong>10h-18h de outubro a março</strong>; última entrada 45 min antes; na 1ª segunda útil do mês só abre ao meio-dia · <strong>€16 abr-set</strong> (quartas €13), <strong>€13 out-mar</strong> · <strong>grátis abaixo de 16 anos</strong> com adulto e no 1º domingo de jan, fev, mar, nov e dez (site oficial)",
+            "Pula sem culpa: a cúpula, a colunata e a cripta com criança pequena"
+          ],
+          "duracao": "30-45 min",
+          "custo": "€13 out-mar · €16 abr-set · <16 anos grátis",
+          "acessibilidade": "Rampa externa e elevador interno até a nave · a cripta é só por escada · o panorama (cúpula/colunata) está fechado para obras (out/2026)",
+          "coord": {
+            "lat": 48.84619,
+            "lng": 2.34605
+          },
+          "fontes": [
+            {
+              "o": "Panthéon (site oficial) · informações práticas",
+              "u": "https://www.paris-pantheon.fr/visiter/informations-pratiques",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h-18h30",
+                "10h-18h",
+                "abril",
+                "setembro",
+                "outubro",
+                "março",
+                "45 min",
+                "meio-dia",
+                "€16",
+                "€13",
+                "16 anos",
+                "1º domingo",
+                "rampa",
+                "elevador",
+                "escada",
+                "fechado para obras",
+                "última",
+                "jan",
+                "fev",
+                "mar",
+                "nov",
+                "dez",
+                "segunda"
+              ]
+            },
+            {
+              "o": "avygeo · Panthéon",
+              "u": "https://www.avygeo.com/fr/guide/lieux-interet/19369-pantheon",
+              "tier": "diretorio",
+              "data": "2026-10-06",
+              "prova": [
+                "80",
+                "1851",
+                "67 m",
+                "pêndulo de Foucault"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 16407465 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/16407465",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Panthéon, place du Panthéon, Paris"
+        },
+        {
+          "hora": "14:30",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Saint-Étienne-du-Mont (place Sainte-Geneviève, 5e)",
+          "cat": "Único jubé de pedra que restou em Paris · relicário de Santa Genoveva",
+          "sobre": "Construída entre <strong>1492 e 1626</strong>, guarda <strong>o único jubé (tribuna de pedra que separa coro e nave) que sobrou em Paris</strong>, dos <strong>anos 1530</strong>, com duas escadas em caracol enroladas nos pilares. Ali estão a <strong>pedra do túmulo de Santa Genoveva</strong>, padroeira de Paris — trazida em 1802-1803, depois que a Revolução destruiu as relíquias, em 1793 —, e os restos de <strong>Pascal e Racine</strong>.",
+          "imperdivel": "O que observar: o <strong>jubé</strong> e as duas escadas em caracol dos pilares.",
+          "dicas": [
+            "Na <strong>escadaria lateral, na rue de la Montagne-Sainte-Geneviève</strong> (à esquerda de quem olha a fachada), o Owen Wilson espera o carro da meia-noite em <em>Midnight in Paris</em> — sente nos \"degraus do filme\"",
+            "Grátis · <strong>seg 14h30-19h30, ter-sáb 8h-19h30, dom 8h-20h</strong>; sem circulação durante missas e cerimônias (site da paróquia)"
+          ],
+          "duracao": "20-30 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.84655,
+            "lng": 2.34802
+          },
+          "fontes": [
+            {
+              "o": "Saint-Étienne-du-Mont (site da paróquia) · visitar a igreja",
+              "u": "https://www.saintetiennedumont.fr/a-propos/visiter-leglise/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "14h30-19h30",
+                "8h-19h30",
+                "8h-20h"
+              ]
+            },
+            {
+              "o": "French Moments · Saint-Étienne-du-Mont",
+              "u": "https://frenchmoments.eu/saint-etienne-du-mont-church-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1492",
+                "1626",
+                "único jubé",
+                "Pascal",
+                "Racine"
+              ]
+            },
+            {
+              "o": "Wikipédia (fr) · Église Saint-Étienne-du-Mont",
+              "u": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-%C3%89tienne-du-Mont",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "anos 1530",
+                "1530",
+                "pedra do túmulo",
+                "Santa Genoveva",
+                "1802-1803",
+                "1793",
+                "Pascal",
+                "Racine"
+              ]
+            },
+            {
+              "o": "Routard · Église Saint-Étienne-du-Mont",
+              "u": "https://www.routard.com/fr/guide/france/ile-de-france/paris/5eme-arrondissement/eglise-saint-etienne-du-mont",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "único jubé",
+                "escadas em caracol"
+              ]
+            },
+            {
+              "o": "Solosophie · Saint-Étienne-du-Mont",
+              "u": "https://www.solosophie.com/saint-etienne-du-mont-saint-genevieve/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Midnight in Paris",
+                "degraus",
+                "grátis"
+              ]
+            },
+            {
+              "o": "The Cine-Tourist · Midnight in Paris",
+              "u": "https://thecinetourist.net/an-american-tourist-in-paris.html",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "rue de la Montagne-Sainte-Geneviève"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 55343672 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/55343672",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Étienne-du-Mont, Paris"
+        },
+        {
+          "hora": "15:00",
+          "emoji": "✍️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "74 rue du Cardinal Lemoine (5e)",
+          "cat": "Onde Hemingway morou nos anos 1920",
+          "sobre": "Hemingway e Hadley moraram aqui de <strong>jan/1922 a ago/1923</strong>, no 3º andar, por <strong>250 francos por mês</strong>, sem água quente e com o banheiro no corredor. Ele escrevia num quarto alugado à parte, no <strong>39 rue Descartes</strong>.",
+          "imperdivel": "O que observar: a <strong>placa de bronze</strong> que diz que o bairro foi \"o verdadeiro berço da sua obra\".",
+          "dicas": [
+            "Fachada só · 2 min bastam",
+            "Fica a poucos passos da place de la Contrescarpe"
+          ],
+          "duracao": "5 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.84485,
+            "lng": 2.3496
+          },
+          "fontes": [
+            {
+              "o": "rue-mouffetard.com · Hemingway na rue Mouffetard",
+              "u": "https://www.rue-mouffetard.com/hemingway-rue-mouffetard-complete-guide",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "jan/1922",
+                "1922",
+                "ago/1923",
+                "1923",
+                "250 francos",
+                "39 rue Descartes",
+                "3º andar",
+                "sem água quente"
+              ]
+            },
+            {
+              "o": "rue-mouffetard.com · Hemingway em Paris",
+              "u": "https://www.rue-mouffetard.com/hemingway-paris-guide",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "placa de bronze",
+                "verdadeiro berço",
+                "poucos passos"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 6193948586 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/6193948586",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "74 rue du Cardinal Lemoine, Paris"
+        },
+        {
+          "hora": "15:10",
+          "emoji": "⛲",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Place de la Contrescarpe (5e)",
+          "cat": "A praça no alto da rue Mouffetard",
+          "sobre": "A praça no alto da rue Mouffetard, \"logo ao lado\" do apartamento do Hemingway, no 74 rue du Cardinal Lemoine.",
+          "imperdivel": "O que observar: o desenho redondo da praça e os cafés que a cercam.",
+          "dicas": [
+            "Praça redonda, fonte, bancos · bom ponto de pausa",
+            "É daqui que a rue Mouffetard desce pro sul"
+          ],
+          "duracao": "10 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.84448,
+            "lng": 2.3495
+          },
+          "fontes": [
+            {
+              "o": "rue-mouffetard.com · Hemingway em Paris",
+              "u": "https://www.rue-mouffetard.com/hemingway-paris-guide",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "logo ao lado"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Rue Mouffetard",
+              "u": "https://en.wikipedia.org/wiki/Rue_Mouffetard",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "desce pro sul",
+                "Contrescarpe"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · relation 288285 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/relation/288285",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "parque",
+          "mapsQuery": "Place de la Contrescarpe, Paris"
+        },
+        {
+          "hora": "15:25",
+          "emoji": "🥕",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Rue Mouffetard · mercado de rua (5e)",
+          "cat": "A rua-mercado da colina",
+          "sobre": "A rua-mercado da colina: desce da place de la Contrescarpe até a igreja de Saint-Médard. Nos dias de <strong>Marché Monge</strong> (qua, sex e dom), há feira também na place Monge, a poucas quadras.",
+          "imperdivel": "O que observar: as bancas de frutas descendo a ladeira de pedra.",
+          "dicas": [
+            "Feira da Mouffetard <strong>ter-sáb 8h-13h e 16h-19h, dom 8h-13h</strong> · Monge <strong>qua e sex 7h-13h30, dom 7h-14h30</strong>",
+            "Ladeira de pedra e movimento: bom pra criança andar, mais difícil com carrinho"
+          ],
+          "duracao": "30-40 min",
+          "custo": "Grátis",
+          "acessibilidade": "Ladeira de pedra",
+          "coord": {
+            "lat": 48.8423,
+            "lng": 2.34977
+          },
+          "fontes": [
+            {
+              "o": "Time Out Paris · Marché Mouffetard",
+              "u": "https://www.timeout.com/paris/en/shopping/marche-mouffetard",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "8h-13h",
+                "16h-19h",
+                "8h",
+                "13h"
+              ]
+            },
+            {
+              "o": "paris.fr · Marché Monge",
+              "u": "https://www.paris.fr/lieux/marche-monge-5464",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "qua",
+                "sex",
+                "dom",
+                "7h-13h30",
+                "7h-14h30",
+                "7h",
+                "13h30",
+                "14h30"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Rue Mouffetard",
+              "u": "https://en.wikipedia.org/wiki/Rue_Mouffetard",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Saint-Médard",
+                "Contrescarpe"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 164010797 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/164010797",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "mercado",
+          "mapsQuery": "Rue Mouffetard, Paris"
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🏟️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Arènes de Lutèce · a história (4 rue des Arènes, 5e)",
+          "cat": "Redescoberta em 1869 · praça pública desde 1892",
+          "sobre": "A arena ficou perdida desde a Idade Média, enterrada depois da muralha de Philippe Auguste (<strong>c. 1210</strong>), e foi <strong>redescoberta em 1869</strong> com a abertura da rue Monge. <strong>Victor Hugo</strong> e o ministro <strong>Victor Duruy</strong> se mobilizaram pra salvá-la, e o square que a integra abriu em <strong>1892</strong>.",
+          "imperdivel": "O que observar: o ponto onde a arena reapareceu, na abertura da rue Monge, em <strong>1869</strong>.",
+          "dicas": [
+            "Parquinho pra recompensar a caminhada",
+            "Horários e detalhes na aba Família"
+          ],
+          "duracao": "30 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.84506,
+            "lng": 2.35294
+          },
+          "fontes": [
+            {
+              "o": "paris.fr · Square des Arènes de Lutèce et Square Capitan",
+              "u": "https://www.paris.fr/lieux/square-des-arenes-de-lutece-et-square-capitan-1760",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1869",
+                "rue Monge",
+                "Victor Hugo",
+                "Victor Duruy",
+                "1892"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Arènes de Lutèce",
+              "u": "https://en.wikipedia.org/wiki/Ar%C3%A8nes_de_Lut%C3%A8ce",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "c. 1210",
+                "1210",
+                "Philippe Auguste"
+              ]
+            },
+            {
+              "o": "Atlas Obscura · Arènes de Lutèce",
+              "u": "https://assets.atlasobscura.com/places/arenes-de-lutece",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Victor Hugo"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 406229046 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/406229046",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Arènes de Lutèce, 4 rue des Arènes, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🍫",
+      "tema": "Quartier Latin Guloso · Da Contrescarpe à Mesquita",
+      "temaCurto": "Guloso",
+      "bairro": "🍫 Rue Mouffetard → rue Censier → Mesquita (5e)",
+      "grupo": true,
+      "cor": "#db2777",
+      "gradA": "#9d174d",
+      "gradB": "#f472b6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Da Contrescarpe à Mesquita\"</strong>: ~1,5 km (estimativa), melhor de <strong>terça a sábado, à tarde</strong> — a Carl Marletti fecha segunda e domingo só abre até 13h30. Descer em <strong>Cardinal Lemoine</strong> (L10). Paradas pequenas e doces. Pra fechar com salgado: a crêperie <strong>Le Pot O'Lait</strong>, na mesma rua da Marletti, abre pro jantar (~19h) — card no fim da aba. Bônus fora do traçado: <strong>Odette</strong> (choux), no começo da aba Profundo, parte 1. <strong>Pula sem culpa:</strong> a Maison Caffet, se o tempo apertar — é a parada mais dispensável do traçado.",
+      "stops": [
+        {
+          "hora": "14:00",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Chegada · Métro L10 → Cardinal Lemoine",
+          "cat": "L10 direta, sem baldeação · siga a rue du Cardinal-Lemoine até a place de la Contrescarpe e desça a rue Mouffetard",
+          "coord": {
+            "lat": 48.84714,
+            "lng": 2.3512
+          }
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🍦",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Les Gelati d'Alberto (45 rue Mouffetard, 5e)",
+          "cat": "Sorvete esculpido em forma de flor",
+          "sobre": "Loja única, aberta em <strong>1998</strong>: o sorvete é <strong>esculpido em forma de flor</strong> na hora, e os sorbets são <strong>100% fruta</strong>.",
+          "imperdivel": "O que observar: o sorvete sendo <strong>esculpido em forma de flor</strong>, na hora.",
+          "dicas": [
+            "A flor de sorvete é o momento-foto da criança",
+            "Aberto <strong>todos os dias, 12h-0h</strong> (Time Out)",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Les Gelati d'Alberto</strong> — comece pelo sorvete, já na rue Mouffetard",
+            "🚶 <strong>Ⓐ Maison Caffet</strong> — chocolates e o ursinho de marshmallow coberto",
+            "🚶 <strong>Ⓑ Crêperie Le Pot O'Lait</strong> — a parada salgada, com menu enfant (fecha no meio da tarde)",
+            "🚶 <strong>Ⓒ Carl Marletti</strong> — um éclair dividido, ou pra levar",
+            "🚶 <strong>Ⓓ Salon de thé da Grande Mosquée</strong> — fecho: chá de menta e baklava no pátio"
+          ],
+          "duracao": "20 min",
+          "custo": "Pago (preço não publicado nas fontes)",
+          "coord": {
+            "lat": 48.8436,
+            "lng": 2.34954
+          },
+          "walkingTours": [
+            {
+              "nome": "Quartier Latin Guloso · 🍫 Da Contrescarpe à Mesquita",
+              "descricao": "Gelati d'Alberto → Maison Caffet → Carl Marletti → Salon de thé da Grande Mosquée · ~1,5 km (estimativa) · de terça a sábado, à tarde",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Les Gelati d'Alberto (45 rue Mouffetard, 5e)",
+                  "coord": {
+                    "lat": 48.8436,
+                    "lng": 2.34954
+                  },
+                  "mapsQuery": "Les Gelati d'Alberto, 45 rue Mouffetard, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Maison Caffet (137 rue Mouffetard, 5e)",
+                  "coord": {
+                    "lat": 48.83988,
+                    "lng": 2.34986
+                  },
+                  "mapsQuery": "Maison Caffet, 137 rue Mouffetard, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Carl Marletti (51 rue Censier, 5e)",
+                  "coord": {
+                    "lat": 48.83939,
+                    "lng": 2.35047
+                  },
+                  "mapsQuery": "Carl Marletti, 51 rue Censier, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Salon de thé da Grande Mosquée (39 rue Geoffroy-Saint-Hilaire, 5e)",
+                  "coord": {
+                    "lat": 48.84207,
+                    "lng": 2.3551
+                  },
+                  "mapsQuery": "Grande Mosquée de Paris, 39 rue Geoffroy-Saint-Hilaire, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Paris Zigzag · a melhor sorveteria de Paris (16/06/2026)",
+              "u": "https://www.pariszigzag.fr/bar-restaurant/meilleure-glace-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1998",
+                "flor",
+                "100% fruta",
+                "loja única"
+              ]
+            },
+            {
+              "o": "Time Out Paris · Gelati d'Alberto",
+              "u": "https://www.timeout.fr/paris/restaurant/gelati-dalberto",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "12h-0h",
+                "12h",
+                "Out"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1681555580 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/1681555580",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "cafe",
+          "mapsQuery": "Les Gelati d'Alberto, 45 rue Mouffetard, Paris"
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🍫",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Maison Caffet (137 rue Mouffetard, 5e)",
+          "cat": "Chocolateria · macarons, bombons, ursinhos de marshmallow",
+          "sobre": "Chocolateria com macarons, <strong>ursinhos de marshmallow</strong> e bombons, a terceira boutique da marca em Paris.",
+          "imperdivel": "O que observar: os <strong>ursinhos de marshmallow</strong> cobertos.",
+          "dicas": [
+            "Ursinho de marshmallow coberto = acerto garantido com a criança",
+            "Aberta <strong>todos os dias, 10h-20h</strong> (PagesJaunes) · pula sem culpa se o tempo apertar: é a parada mais dispensável do traçado"
+          ],
+          "duracao": "15 min",
+          "custo": "Pago (preço não publicado nas fontes)",
+          "coord": {
+            "lat": 48.83988,
+            "lng": 2.34986
+          },
+          "fontes": [
+            {
+              "o": "Toute la Franchise · Maison Caffet",
+              "u": "https://www.toute-la-franchise.com/news-une-3e-boutique-parisienne-pour-l-enseigne-de-chocolaterie-maison-caffet",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "3e boutique",
+                "terceira"
+              ]
+            },
+            {
+              "o": "Maison Caffet (site oficial) · lojas",
+              "u": "https://www.maison-caffet.com/nos-boutiques",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "137 rue Mouffetard"
+              ]
+            },
+            {
+              "o": "PagesJaunes · Maison Caffet Mouffetard",
+              "u": "https://www.pagesjaunes.fr/pros/60073600",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "10h-20h"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 2788471590 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/2788471590",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "loja",
+          "mapsQuery": "Maison Caffet, 137 rue Mouffetard, Paris"
+        },
+        {
+          "hora": "16:30",
+          "emoji": "🧁",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Carl Marletti (51 rue Censier, 5e)",
+          "cat": "Pâtisserie-caixinha de joia colada na Mouffetard",
+          "sobre": "\"Caixinha de joia\" colada na Mouffetard, com o best-seller <strong>Lily Valley</strong> (4 choux com creme de violeta e cassis). O Paris Zigzag a chama de <strong>a melhor pâtisserie de Paris</strong>.",
+          "imperdivel": "O que observar: o <strong>Lily Valley</strong>, o best-seller de choux com violeta e cassis.",
+          "dicas": [
+            "Um éclair dividido, ou pra levar",
+            "<strong>Ter-sáb 10h-19h, dom 10h-13h30, fechada às segundas</strong> · fecha também 1/jan, 1/mai e 14/jul (site oficial)"
+          ],
+          "duracao": "20 min",
+          "custo": "Doces individuais ~€3,50-7 (2023)",
+          "coord": {
+            "lat": 48.83939,
+            "lng": 2.35047
+          },
+          "fontes": [
+            {
+              "o": "Carl Marletti (site oficial) · contato",
+              "u": "https://www.carlmarletti.com/contact",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "51 rue Censier",
+                "10h-19h",
+                "10h-13h30",
+                "segundas",
+                "1/jan",
+                "1/mai",
+                "14/jul"
+              ]
+            },
+            {
+              "o": "Paris by Mouth · Carl Marletti",
+              "u": "https://parisbymouth.com/our-guide-to-paris-carl-marletti/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "caixinha de joia"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · la meilleure pâtisserie de Paris (19/06/2023)",
+              "u": "https://www.pariszigzag.fr/bars-restaurants/restaurants-paris/la-meilleure-patisserie-de-paris-se-trouve-rue-mouffetard",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "melhor pâtisserie de Paris",
+                "Lily Valley",
+                "4 choux",
+                "€3,50",
+                "2023"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1941648252 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/1941648252",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "padaria",
+          "mapsQuery": "Carl Marletti, 51 rue Censier, Paris"
+        },
+        {
+          "hora": "17:15",
+          "emoji": "🍵",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Salon de thé da Grande Mosquée (39 rue Geoffroy-Saint-Hilaire, 5e)",
+          "cat": "Fecho: chá de menta e baklava no pátio de mosaico",
+          "sobre": "Fecho do tour: chá de menta e baklava no pátio de mosaico, que é <strong>inspirado na Alhambra de Granada</strong> (a história da mesquita está na aba Família).",
+          "imperdivel": "O que observar: os mosaicos e as fontes do pátio.",
+          "dicas": [
+            "Salão <strong>9h-0h</strong> todos os dias · chá e doces a <strong>~€2 cada</strong> (Paris Zigzag, jun/2025)",
+            "Peça o chá de menta e um doce dividido: é a pausa de fechar o passeio"
+          ],
+          "duracao": "45 min",
+          "custo": "Chá e doces ~€2 cada (jun/2025)",
+          "coord": {
+            "lat": 48.84207,
+            "lng": 2.3551
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag · Salon de thé de la Grande Mosquée",
+              "u": "https://www.pariszigzag.fr/bar-restaurant/restaurant/salon-the-grande-mosquee-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "9h-0h",
+                "€2",
+                "jun/2025",
+                "Alhambra de Granada"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 437812893 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/437812893",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "cafe",
+          "mapsQuery": "Grande Mosquée de Paris, 39 rue Geoffroy-Saint-Hilaire, Paris"
+        },
+        {
+          "hora": "17:45",
+          "emoji": "🍮",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "🔄 Odette (77 rue Galande, 5e) · bônus fora do traçado",
+          "cat": "Casa de choux à la crème num prédio do séc. XVII",
+          "sobre": "Casa de <strong>choux à la crème</strong> num prédio do <strong>séc. XVII</strong>, <strong>em frente a Saint-Julien-le-Pauvre</strong>.",
+          "imperdivel": "O que observar: o prédio do séc. XVII, de frente pra igreja.",
+          "dicas": [
+            "Bônus fora do traçado: fica no começo da aba Profundo, parte 1",
+            "Choux pequeno = porção de criança · aberta <strong>todos os dias, 10h-19h45</strong> (site oficial)"
+          ],
+          "duracao": "30 min",
+          "custo": "Pago (preço não publicado no site)",
+          "coord": {
+            "lat": 48.85204,
+            "lng": 2.34651
+          },
+          "fontes": [
+            {
+              "o": "Odette (site oficial) · lojas",
+              "u": "https://www.odette-paris.com",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "77 rue Galande",
+                "10h-19h45"
+              ]
+            },
+            {
+              "o": "Sortir à Paris · Odette",
+              "u": "https://www.sortiraparis.com/en/where-to-eat-in-paris/brunch-cafe-tea-time/articles/245599-odette-paris-la-maison-de-choux-a-la-creme-au-charme-d-antan",
+              "tier": "editorial",
+              "data": "2026-10-06",
+              "prova": [
+                "séc. XVII",
+                "choux à la crème",
+                "Saint-Julien-le-Pauvre"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 7889231280 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/7889231280",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "cafe",
+          "mapsQuery": "Odette, 77 rue Galande, Paris"
+        },
+        {
+          "hora": "19:00",
+          "emoji": "🥞",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "🔄 Crêperie Le Pot O'Lait (41 rue Censier, 5e) · jantar, fora do traçado",
+          "cat": "Crêperia bretã · jantar salgado depois dos doces",
+          "sobre": "Crêperia bretã há <strong>mais de 20 anos</strong>, com <strong>menu enfant</strong> — o jantar salgado depois da tarde de doces.",
+          "imperdivel": "O que observar: a galette de trigo-sarraceno, a versão salgada da crêpe bretã, antes de voltar pros doces.",
+          "dicas": [
+            "Tem <strong>menu enfant</strong>",
+            "Abre no <strong>almoço (~11h30-14h30) e no jantar (~19h-22h)</strong> e fecha no meio da tarde — por isso fica fora do traçado da tarde · \"a partir de €15\" (ficha de 2020)"
+          ],
+          "duracao": "45 min",
+          "custo": "a partir de ~€15 (2020)",
+          "coord": {
+            "lat": 48.83997,
+            "lng": 2.35185
+          },
+          "fontes": [
+            {
+              "o": "koifaire · Crêperie Le Pot O'Lait",
+              "u": "https://www.koifaire.com/paris/creperie,le,pot,o,lait,sarl,-15599.html",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "20 anos"
+              ]
+            },
+            {
+              "o": "lesrestos · Pot O'lait (ficha de 03/03/2020)",
+              "u": "https://www.lesrestos.com/restaurant/fiche/paris/pot-o-lait",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "menu enfant",
+                "€15",
+                "2020"
+              ]
+            },
+            {
+              "o": "parisbouge · Le Pot O'Lait (trecho do buscador)",
+              "u": "https://www.parisbouge.com/places/1749",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "11h30-14h30",
+                "19h-22h"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 5222573357 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/5222573357",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "restaurante",
+          "mapsQuery": "Crêperie Le Pot O'Lait, 41 rue Censier, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🖼️",
+      "tema": "Quartier Latin Museus · Visita curta com criança",
+      "temaCurto": "Museus",
+      "bairro": "🖼️ Cluny · Panthéon · Jardin des Plantes (5e)",
+      "grupo": false,
+      "cor": "#4f46e5",
+      "gradA": "#3730a3",
+      "gradB": "#6366f1",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Visita curta com criança\"</strong>: não é rota linear, é um cardápio pra encaixar <strong>1 museu por dia</strong>, de 45 a 90 min. <strong>Cuidado com os dias de fechamento</strong>: o Cluny fecha às segundas e a Grande Galerie às terças. O museu mais indicado pra criança pequena é a <strong>Grande Galerie de l'Évolution</strong>. <strong>Pula sem culpa:</strong> o <strong>Musée Curie</strong> com criança pequena (laboratório e documentos, nada pra 4 anos; só com um adulto sozinho) e as <strong>visitas guiadas do Cluny</strong> (contadas são de 5-7 anos, em família a partir de 8).",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🦄",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Musée de Cluny · Musée national du Moyen Âge (28 rue du Sommerard, 5e)",
+          "cat": "Termas romanas + palácio gótico + A Dama e o Unicórnio",
+          "sobre": "<strong>Reaberto em 12/mai/2022 após 7 anos de obras</strong>, une termas romanas, um palácio gótico e <strong>A Dama e o Unicórnio</strong>: seis tapeçarias <em>mille-fleurs</em> tecidas em Flandres, a partir de desenhos feitos em Paris por volta de <strong>1500</strong>. Cinco são os cinco sentidos, e a sexta, <em>\"À mon seul désir\"</em>, tem sentido discutido até hoje.",
+          "imperdivel": "O que observar: a sexta tapeçaria, a do <em>\"À mon seul désir\"</em>, que ninguém sabe ao certo o que quer dizer.",
+          "dicas": [
+            "<strong>Caça ao unicórnio</strong> nas 6 tapeçarias: a criança conta quantos acha · depois, o jardim medieval",
+            "Com criança bem pequena, faça sozinho e curto: as visitas contadas oficiais são de <strong>5 a 7 anos</strong> e as de família a partir de <strong>8 anos</strong>",
+            "<strong>Ter-dom 9h30-18h15</strong>, bilheteria até 17h30 · <strong>fechado às segundas</strong> · <strong>€12</strong>, reduzida €10 · <strong>grátis abaixo de 18 anos</strong>, residentes da UE abaixo de 26, e todo mundo no 1º domingo do mês"
+          ],
+          "duracao": "45 min",
+          "custo": "€12 · <18 anos grátis · 1º domingo grátis",
+          "acessibilidade": "Jardim medieval público ao lado, com área de jogos pra criança",
+          "coord": {
+            "lat": 48.85065,
+            "lng": 2.34356
+          },
+          "aprofundar": "<p><strong>O jardim medieval.</strong> O jardim tem <strong>3.500 m²</strong> e foi aberto em <strong>2000</strong>, desenhado a partir de documentos medievais; tem a <em>clairière des enfants</em>, com jogos e pegadas de bichos na pedra. É a pausa ao ar livre depois das tapeçarias (entrada pelo 73 bis boulevard Saint-Germain).</p>",
+          "walkingTours": [
+            {
+              "nome": "Quartier Latin Museus · 🖼️ Cardápio de visitas curtas",
+              "descricao": "Cluny → Panthéon → Grande Galerie → Terraço do IMA → Musée Curie · não é rota linear: escolha 1 por dia · 45-90 min cada",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Musée de Cluny (28 rue du Sommerard, 5e)",
+                  "coord": {
+                    "lat": 48.85065,
+                    "lng": 2.34356
+                  },
+                  "mapsQuery": "Musée de Cluny, 28 rue du Sommerard, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Panthéon (place du Panthéon, 5e)",
+                  "coord": {
+                    "lat": 48.84619,
+                    "lng": 2.34605
+                  },
+                  "mapsQuery": "Panthéon, place du Panthéon, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Grande Galerie de l'Évolution (36 rue Geoffroy-Saint-Hilaire, 5e)",
+                  "coord": {
+                    "lat": 48.84211,
+                    "lng": 2.35624
+                  },
+                  "mapsQuery": "Grande Galerie de l'Évolution, 36 rue Geoffroy-Saint-Hilaire, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Terraço do Institut du Monde Arabe (1 rue des Fossés-Saint-Bernard, 5e)",
+                  "coord": {
+                    "lat": 48.84892,
+                    "lng": 2.35715
+                  },
+                  "mapsQuery": "Institut du Monde Arabe, 1 rue des Fossés-Saint-Bernard, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Musée Curie (1 rue Pierre-et-Marie-Curie, 5e)",
+                  "coord": {
+                    "lat": 48.84424,
+                    "lng": 2.34479
+                  },
+                  "mapsQuery": "Musée Curie, 1 rue Pierre et Marie Curie, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Citizenkid · Musée de Cluny",
+              "u": "https://www.citizenkid.com/sortie/musee-de-cluny-musee-national-du-moyen-age-paris-paris-a104277",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "€12",
+                "€10",
+                "18 anos",
+                "26",
+                "1º domingo",
+                "9h30-18h15",
+                "17h30",
+                "segundas",
+                "9h30",
+                "18h15"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · após 7 anos de obras, o Cluny reabre",
+              "u": "https://www.pariszigzag.fr/paris-au-quotidien/apres-7-ans-de-travaux-le-musee-de-cluny-rouvre-enfin-ses-portes-au-printemps-2022/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "12/mai/2022",
+                "2022",
+                "7 anos"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · The Lady and the Unicorn",
+              "u": "https://en.wikipedia.org/wiki/The_Lady_and_the_Unicorn",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "mille-fleurs",
+                "Flandres",
+                "1500",
+                "cinco sentidos",
+                "À mon seul désir",
+                "discutido"
+              ]
+            },
+            {
+              "o": "Familin'Paris · Musée de Cluny",
+              "u": "https://www.familinparis.fr/musee-de-cluny-dame-a-la-licorne/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "5 a 7 anos",
+                "8 anos"
+              ]
+            },
+            {
+              "o": "paris.fr · Jardin médiéval du musée de Cluny",
+              "u": "https://www.paris.fr/lieux/jardin-medieval-du-musee-de-cluny-2443",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "3.500 m²",
+                "clairière des enfants",
+                "73 bis boulevard Saint-Germain",
+                "documentos medievais"
+              ]
+            },
+            {
+              "o": "Enclosure: Take Refuge · Cluny Museum garden",
+              "u": "https://enclosuretakerefuge.com/2015/09/22/cluny-museum-garden-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "2000"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 56640163 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/56640163",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée de Cluny, 28 rue du Sommerard, Paris"
+        },
+        {
+          "hora": "11:30",
+          "emoji": "🦣",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Grande Galerie de l'Évolution (36 rue Geoffroy-Saint-Hilaire, 5e)",
+          "cat": "O museu do bairro mais indicado pra criança pequena",
+          "sobre": "Animais em tamanho real numa galeria aberta em <strong>1889</strong> (detalhes na aba Família). É o museu do bairro mais indicado pra criança pequena, segundo moradoras de Paris.",
+          "imperdivel": "O que observar: os animais em tamanho real — a escala é o que prende a criança.",
+          "dicas": [
+            "<strong>Fechada às terças</strong> · <strong>10h-18h</strong> nos outros dias · bilheteria fecha 1h antes",
+            "<strong>€13</strong>, reduzida <strong>€10</strong> · <strong>grátis até 25 anos</strong>, residente da UE ou não (site oficial)"
+          ],
+          "duracao": "1h-1h30",
+          "custo": "€13 · reduzida €10 · grátis até 25 anos",
+          "acessibilidade": "Selo Tourisme & Handicap · empréstimo de cadeira de rodas · piso plano",
+          "coord": {
+            "lat": 48.84211,
+            "lng": 2.35624
+          },
+          "fontes": [
+            {
+              "o": "Jardin des Plantes (site oficial) · Grande Galerie de l'Évolution",
+              "u": "https://www.jardindesplantesdeparis.fr/fr/grande-galerie-de-l-evolution",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h-18h",
+                "terças",
+                "1h antes",
+                "€13",
+                "€10",
+                "25 anos",
+                "Tourisme & Handicap"
+              ]
+            },
+            {
+              "o": "Dica de campo · moradoras de Paris (07/10/2026)",
+              "u": "https://github.com/tsferraro/viagem/blob/main/MEMORY.md",
+              "tier": "campo",
+              "data": "2026-10-07",
+              "prova": []
+            },
+            {
+              "o": "Wikipédia (fr) · Grande galerie de l'évolution",
+              "u": "https://fr.wikipedia.org/wiki/Grande_galerie_de_l%27%C3%A9volution",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1889"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 83913793 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/83913793",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Grande Galerie de l'Évolution, 36 rue Geoffroy-Saint-Hilaire, Paris"
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Panthéon (place du Panthéon, 5e)",
+          "cat": "Pêndulo de Foucault · visita curta",
+          "sobre": "Mausoléu com o <strong>pêndulo de Foucault</strong> no centro da nave (detalhes na aba Profundo). Com criança, vale só a nave.",
+          "imperdivel": "O que observar: o cabo comprido do pêndulo e a escala da nave.",
+          "dicas": [
+            "Visita curta: o pêndulo e a escala da nave bastam",
+            "Abre <strong>10h-18h30 de abril a setembro</strong> e <strong>10h-18h de outubro a março</strong>; última entrada 45 min antes; na 1ª segunda útil do mês só abre ao meio-dia · <strong>€16 abr-set</strong> (quartas €13), <strong>€13 out-mar</strong> · <strong>grátis abaixo de 16 anos</strong> com adulto e no 1º domingo de jan, fev, mar, nov e dez (site oficial)"
+          ],
+          "duracao": "30 min",
+          "custo": "€13 out-mar · €16 abr-set · <16 anos grátis",
+          "acessibilidade": "Rampa externa e elevador interno até a nave · a cripta é só por escada · o panorama (cúpula/colunata) está fechado para obras (out/2026)",
+          "coord": {
+            "lat": 48.84619,
+            "lng": 2.34605
+          },
+          "fontes": [
+            {
+              "o": "Panthéon (site oficial) · informações práticas",
+              "u": "https://www.paris-pantheon.fr/visiter/informations-pratiques",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h-18h30",
+                "10h-18h",
+                "abril",
+                "setembro",
+                "outubro",
+                "março",
+                "45 min",
+                "meio-dia",
+                "€16",
+                "€13",
+                "16 anos",
+                "1º domingo",
+                "rampa",
+                "elevador",
+                "escada",
+                "fechado para obras",
+                "última",
+                "jan",
+                "fev",
+                "mar",
+                "nov",
+                "dez",
+                "segunda"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 16407465 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/16407465",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Panthéon, place du Panthéon, Paris"
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🏙️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Terraço do Institut du Monde Arabe (1 rue des Fossés-Saint-Bernard, 5e)",
+          "cat": "Terraço do 9º andar com vista pra Notre-Dame · grátis",
+          "sobre": "O terraço do <strong>9º andar</strong> do Institut du Monde Arabe é <strong>grátis</strong> e tem vista pro chevet de Notre-Dame e pra margem direita.",
+          "imperdivel": "O que observar: a vista de Notre-Dame e do rio lá do alto.",
+          "dicas": [
+            "Elevador + vista: parada sem esforço",
+            "<strong>Ter-dom 10h-18h</strong> (sáb-dom até 19h no prédio)"
+          ],
+          "duracao": "15-20 min",
+          "custo": "Grátis",
+          "acessibilidade": "Elevador até o terraço",
+          "coord": {
+            "lat": 48.84892,
+            "lng": 2.35715
+          },
+          "fontes": [
+            {
+              "o": "Institut du Monde Arabe (site oficial) · terraço",
+              "u": "https://www.imarabe.org/fr/terrasse",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "grátis",
+                "10h-18h",
+                "10h",
+                "18h",
+                "Notre-Dame"
+              ]
+            },
+            {
+              "o": "Institut du Monde Arabe (site oficial) · horários",
+              "u": "https://www.imarabe.org/fr/horaires",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "19h"
+              ]
+            },
+            {
+              "o": "Spotted by Locals · The 9th Floor of the I.M.A. (trecho do buscador)",
+              "u": "https://spottedbylocals.com/paris/the-9th-floor-of-the-ima",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "9º andar"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 22870791 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/22870791",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Institut du Monde Arabe, 1 rue des Fossés-Saint-Bernard, Paris"
+        },
+        {
+          "hora": "15:00",
+          "emoji": "⚗️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Musée Curie (1 rue Pierre-et-Marie-Curie, 5e)",
+          "cat": "O último laboratório de Marie Curie",
+          "sobre": "Guarda o <strong>último laboratório</strong> de Marie Curie, no pavilhão do Instituto do Rádio (construído em <strong>1911-1914</strong>), onde ela trabalhou de 1914 a 1934: o escritório e o laboratório de química, descontaminado em <strong>1981</strong>.",
+          "imperdivel": "O que observar: o escritório e o laboratório de química preservados.",
+          "dicas": [
+            "Pouco pra criança pequena; vale pros adultos — pula sem culpa com criança de 4 anos",
+            "<strong>Qua-sáb 13h-17h</strong> · <strong>grátis</strong> · fecha em feriados, em agosto e nas férias de Natal (Offi)"
+          ],
+          "duracao": "45 min",
+          "custo": "Grátis",
+          "coord": {
+            "lat": 48.84424,
+            "lng": 2.34479
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Musée Curie",
+              "u": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Curie",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1911-1914",
+                "1911",
+                "1914",
+                "1934",
+                "1981",
+                "último laboratório"
+              ]
+            },
+            {
+              "o": "Offi · Musée Curie",
+              "u": "https://www.offi.fr/expositions-musees/curie-1972.html",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "13h-17h",
+                "13h",
+                "17h",
+                "grátis",
+                "agosto",
+                "Natal"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 11259580512 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/11259580512",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée Curie, 1 rue Pierre et Marie Curie, Paris"
+        }
+      ]
+    }
+  ]
+}
