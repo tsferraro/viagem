@@ -92,14 +92,19 @@ Antes de declarar sessão terminada:
 
 1. **Pergunte ao Tobia** se quer adicionar lição em `MEMORY.md` (o que funcionou · ajustes necessários · padrão pro destino/composição). Se sim, edite a seção apropriada.
 1b. **Balanço de fontes** (curadoria · 2026-08-09): quais fontes embarcaram/validaram/demoliram nesta viagem? Gravar os eventos em `fontes/registro.json` e mover estados se o critério bateu (`skills/curadoria-fontes/SKILL.md` §5).
-2. **Execute** `scripts/wrap-up.sh` · ele faz:
-   - `git status` · mostra tudo modificado
+2. **Execute** `scripts/wrap-up.sh` (sem argumento: o repo é o que contém o script) · ele faz:
+   - `git status` + **pré-voo**: `fetch origin main` · se `origin/main` não está contido no HEAD, **para antes de mexer em arquivo** e pede `git merge origin/main`
    - `validate.py` em cada HTML modificado
    - Re-roda `regen-landing.py` (segurança extra · landing já deve estar OK pelo deploy)
-   - Confirma branch = main (sem isolada)
-   - `git commit` + `git push origin main` (pergunta msg)
-   - `curl HEAD` em cada URL · confirma HTTP 200
+   - `git commit` na branch ATUAL (pergunta msg · sem terminal usa a default) + `git push origin HEAD:main` (só fast-forward) · **publica igual no checkout principal e em worktree**
+   - Relê `origin/main` do remoto: `✅ Publicado` só se bater com o HEAD · commit local nunca publicado também sobe · `ℹ️ Nada a publicar` quando o remoto já é o HEAD · push recusado = `❌ NADA foi publicado`, exit 1
+   - Em worktree, avança o checkout principal (`merge --ff-only`) se ele estiver limpo · senão avisa
+   - `curl HEAD` em cada URL · **HTTP 200 só prova que a URL responde**, não que a versão nova já está servida (o Pages leva ~1min) · a prova é o `origin/main` relido
 3. **Reporte ao Tobia** as URLs ao vivo + resumo do que mudou.
+
+Corrigido em 2026-10-08 (mesmo padrão do `deploy.sh`): antes, num worktree, o `git push origin main`
+empurrava o ref `main` local parado → `Everything up-to-date`, e o `curl` dava 200 com a versão
+velha no ar — confirmação falsa.
 
 Anti-padrão: encerrar sessão sem rodar `wrap-up.sh` · risco de deixar branch órfã, validate não rodado.
 
