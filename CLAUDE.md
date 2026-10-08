@@ -227,16 +227,36 @@ cobre ⭐⭐ é o **re-check pré-viagem (R11 · 7-10 dias antes)**. Protocolo d
 ```bash
 # Assinatura real (errata da auditoria 2026-08-09 · o doc antigo mostrava 2 args e o script exige 3):
 #   deploy.sh "<commit-msg>" "<subdir>" "<slug>" [/path/index.html] [/path/repo]
+# Defaults (2026-10-08): html = <subdir>/index.html (o que o build.py gerou · sem cópia),
+#   senão $TMPDIR/build/index.html · repo = o repo/worktree que contém o script.
 
-# Viagem em subpasta (o caso normal · TODA viagem vive em subpasta)
+# Viagem em subpasta (o caso normal · build.py já escreveu <subdir>/index.html)
 scripts/deploy.sh "feat: roteiro lisboa-ago2026" "lisboa" "lisboa-ago2026"
 
-# Com HTML e repo explícitos (roteiro paralelo ou build fora do default)
+# Com HTML de outro lugar (roteiro paralelo ou build fora da pasta)
 scripts/deploy.sh "feat: roteiro familia em paralelo" "lisboa-familia" "lisboa-ago2026" \
   ./index-nova.html .
 ```
 
+**Publica igual no checkout principal e em git worktree** (corrigido 2026-10-08). O script
+commita na branch ATUAL e empurra `git push origin HEAD:main` — só fast-forward. Antes ele
+empurrava o ref `main` local, que num worktree (branch `claude/...`) fica parado: saía
+`Everything up-to-date` + `✅ Deploy completo` e **nada ia pro ar** (caso paris-amigos, 07/10).
+
+| Situação | O que o deploy faz |
+|---|---|
+| `origin/main` andou e a branch não tem esses commits | **para antes de mexer em arquivo** · pede `git merge origin/main` e rodar de novo |
+| push recusado | `❌ NADA foi publicado` · exit 1 |
+| nada novo e o remoto já é o HEAD | `ℹ️ Nada a publicar` · exit 0 · **sem** ✅ |
+| commit local que nunca subiu (rastro do bug antigo) | publica |
+| publicou | `✅ Deploy completo · origin/main <antes> → <depois>` — só depois de **reler o remoto** e ver que bate com o commit |
+| rodou num worktree | avança o checkout principal (`merge --ff-only`) se ele estiver limpo · senão avisa |
+
+Backup em `~/.skill-backups/` virou best-effort (o sandbox nega escrita lá; o git é o backup).
+`VIAGEM_BACKUP_DIR` muda o destino.
+
 Workflow:
+0. (antes de tudo) pré-voo de git: `fetch origin main` · se `origin/main` não está contido no HEAD, ABORTA sem mexer em arquivo
 1. Detecta slug atual em `SLUG.txt`
 2. Se mudou (modo principal): archive `index.html` + subpastas paralelas em `archive/<slug-anterior>/`
 3. Substitui target HTML
@@ -246,9 +266,9 @@ Workflow:
 4b. `critico-roteiro/audit.py --deploy-gate` (BLOQUEIA em P0 de conteúdo · card vazio, link oficial morto · `VIAGEM_STRICT=1` bloqueia <32 · falha-FECHADO se o script sumir)
 4c. `maps-audit.py --quiet` (BLOQUEIA URL de Maps genérica/malformada · busca que descreve atividade, waypoint fantasma, ponto repetido, coord idêntica em stops distintos · falha-FECHADO se o script sumir)
 4d. `factcheck-gate.py --quiet` (BLOQUEIA se não existe `<viagem>/FACTCHECK-*.md`, se o formato não tem vereditos por item com fonte, ou se conteúdo sensível — ⭐⭐⭐/WT/historia — mudou depois do último factcheck · viagem nova + factcheck de hoje passa com aviso · ver `skills/critico-roteiro/FACTCHECK-EXEC.md`). **Falha-FECHADO se o script sumir** (BLOQUEIA · script ausente não é "sem gate") — override explícito e ruidoso: `VIAGEM_SKIP_FCGATE=1` no env pula com aviso gritante.
-5. Backup local em `~/.skill-backups/`
-6. Re-gera `archive/index.html` (índice navegável)
-7. `git add` · `commit` · `push origin main`
+5. Backup local em `~/.skill-backups/` (best-effort · não bloqueia)
+6. Re-gera a landing (`regen-landing.py`)
+7. `git add` · `commit` na branch atual · `push origin HEAD:main` (fast-forward) · relê o remoto antes do ✅
 
 **SEMPRE merge na main após cada entrega · NÃO deixar em branch isolada.**
 
@@ -808,7 +828,7 @@ viagem/
 
 URLs: `tsferraro.github.io/viagem/familia`, `/casal`, etc.
 
-Deploy paralelo: `scripts/deploy.sh "<msg>" "<slug>" <html-path> . <subdir>`
+Deploy paralelo: `scripts/deploy.sh "<msg>" "<subdir>" "<slug>" [<html-path>] [<repo>]` (mesma assinatura do deploy normal · o `<subdir>` é o 2º argumento)
 
 Quando arquivar viagem principal (slug muda), TODAS as subpastas arquivam junto em `archive/<slug-anterior>/<subdir>/`.
 
