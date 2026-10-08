@@ -412,7 +412,7 @@
   },
   "transit_map": {
     "Chegada · Métro L10 → Jussieu": {
-      "metro": "L10 direta, sem baldeação: Boulogne Pont de Saint-Cloud → Jussieu em ~35 min (19 estações) · outras estações da L10 no bairro: Cardinal Lemoine, Maubert–Mutualité e Cluny–La Sorbonne"
+      "metro": "L10 · desça em Jussieu · outras estações da L10 no bairro: Cardinal Lemoine, Maubert–Mutualité e Cluny–La Sorbonne"
     },
     "Chegada · Métro L10 → Cardinal Lemoine": {
       "metro": "L10 direta, sem baldeação · a estação fica sob a rue Monge, na esquina da rue du Cardinal-Lemoine; siga a rue du Cardinal-Lemoine até a place de la Contrescarpe, onde a rue Mouffetard começa a descer"
@@ -597,7 +597,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Chegada · Métro L10 → Jussieu",
-          "cat": "L10 direta, sem baldeação · Boulogne Pont de Saint-Cloud → Jussieu em ~35 min (19 estações)",
+          "cat": "L10 · desça em Jussieu",
           "coord": {
             "lat": 48.84605,
             "lng": 2.35574
