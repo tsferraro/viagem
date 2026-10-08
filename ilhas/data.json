@@ -211,7 +211,7 @@
   },
   "transit_map": {
     "Chegada · Métro L4 → Cité": {
-      "metro": "L10 até Odéon (que é conexão com a L4) e L4 até Cité · o único acesso da estação Cité dá na place Louis-Lépine, na Île de la Cité, junto do mercado de flores e perto de Notre-Dame e da Sainte-Chapelle"
+      "metro": "L4 · desça em Cité · o único acesso da estação dá na place Louis-Lépine, na Île de la Cité, junto do mercado de flores e perto de Notre-Dame e da Sainte-Chapelle"
     },
     "Volta · Métro Sully-Morland (L7)": {
       "metro": "Estação da L7 sob o quai des Célestins, no cruzamento do boulevard Morland com o boulevard Henri-IV, junto da Pont de Sully"
@@ -448,7 +448,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Chegada · Métro L4 → Cité",
-          "cat": "L10 até Odéon e troca pra L4 até Cité · o único acesso da estação dá na place Louis-Lépine",
+          "cat": "L4 · desça em Cité · o único acesso da estação dá na place Louis-Lépine",
           "coord": {
             "lat": 48.8551,
             "lng": 2.34672

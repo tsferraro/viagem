@@ -1,0 +1,3036 @@
+{
+  "title": "🗺️ Walking Tours · Louvre · Tuileries · Palais-Royal · Passagens (Paris)",
+  "auth_emoji": "🗺️",
+  "auth_title": "Walking Tours · Paris",
+  "auth_subtitle": "Louvre · Tuileries · Palais-Royal · Passagens cobertas · roteiros a pé (sem data)",
+  "header_title": "🗺️ Louvre · Tuileries · Walking Tours",
+  "header_sub": "Família · Profundo · Museus · Passagens · Guloso",
+  "password": "marais2026",
+  "legend_group_text": "👨‍👩‍👧 Tour ok pra crianças pequenas",
+  "legend_notes_html": "<strong>🗺️ Coletânea de walking tours pelo Louvre, Tuileries e Palais-Royal (1er) + passagens cobertas (2e)</strong> — sem data fixa, pra fazer quando der e compartilhar com quem vier visitar Paris. É o eixo real da cidade: Concorde → Tuileries → Arco do Carrossel → Pirâmide, com o Palais-Royal e as passagens do séc. XIX ao norte. O <strong>Jardin des Tuileries</strong> é um parque infantil grátis no centro de Paris (parquinho, carrossel, trampolim e barquinhos), o <strong>Orangerie</strong> é o museu do tamanho de uma criança pequena e as <strong>passagens</strong> são o plano pra dia de chuva. O Louvre fica de fora como maratona: aqui ele é no máximo uma visita-relâmpago. <strong>👶 Família</strong>: Tuileries de ponta a ponta, com o Louvre por fora. <strong>🎨 Profundo</strong>: da guilhotina da Concorde ao Pont Neuf. <strong>🖼️ Museus</strong>: Orangerie e Louvre-relâmpago. <strong>🌧️ Passagens</strong>: Panoramas, Vivienne e Véro-Dodat. <strong>🍫 Guloso</strong>: de Angelina ao baba original. <strong>🧭</strong> Cada aba é um tour · 🗺️ Mapa mostra a rota e abre a navegação a pé no Google Maps · toque num card pra abrir histórias e dicas. <strong>📍 Pinos</strong>: posições copiadas do OpenStreetMap (a do salão Le Valentin marca o corredor da Galerie Vivienne, onde ele fica). <strong>🗓️ Dias de fechar</strong>: terça fecha o Louvre e o Orangerie · os barquinhos do Grand Bassin só funcionam em alguns dias da semana fora das férias · confira o calendário de abertura das salas do Louvre antes de escolher o dia.",
+  "links_map": {
+    "Grand Bassin octogonal · barquinhos (Jardin des Tuileries, 1er)": [
+      {
+        "type": "official",
+        "label": "louvre.fr · nos jardins (Tuileries)",
+        "url": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins"
+      },
+      {
+        "type": "review",
+        "label": "Hérodote · obelisco de Luxor, 25/10/1836",
+        "url": "https://www.herodote.net/25_octobre_1836-evenement-18361025.php"
+      }
+    ],
+    "Trampolines (Jardin des Tuileries, 1er)": [
+      {
+        "type": "official",
+        "label": "louvre.fr · nos jardins (Tuileries)",
+        "url": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins"
+      }
+    ],
+    "Aire de jeux + manège (Jardin des Tuileries, entrada Castiglione, 1er)": [
+      {
+        "type": "official",
+        "label": "louvre.fr · nos jardins (Tuileries)",
+        "url": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins"
+      }
+    ],
+    "Arc de triomphe du Carrousel (place du Carrousel, 1er)": [
+      {
+        "type": "official",
+        "label": "louvre.fr · Arc du Carrousel",
+        "url": "https://www.louvre.fr/decouvrir/vie-du-musee/restauration-de-l-arc-du-carrousel"
+      },
+      {
+        "type": "review",
+        "label": "napoleon.org · Arc de triomphe du Carrousel",
+        "url": "https://www.napoleon.org/magazine/lieux/arc-de-triomphe-du-carrousel-paris/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Arc de Triomphe du Carrousel",
+        "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe_du_Carrousel"
+      }
+    ],
+    "Pirâmide do Louvre · Cour Napoléon (1er)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Louvre Pyramid",
+        "url": "https://en.wikipedia.org/wiki/Louvre_Pyramid"
+      },
+      {
+        "type": "official",
+        "label": "louvre.fr · horários e tarifas",
+        "url": "https://www.louvre.fr/horaires-tarifs-acces"
+      }
+    ],
+    "Place de la Concorde · a história (8e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · place de la Concorde",
+        "url": "https://www.pariszigzag.fr/?p=70834"
+      },
+      {
+        "type": "review",
+        "label": "Hérodote · obelisco de Luxor, 25/10/1836",
+        "url": "https://www.herodote.net/25_octobre_1836-evenement-18361025.php"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · obras em Paris (jan/2026)",
+        "url": "https://www.pariszigzag.fr/paris-au-quotidien/travaux-paris/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Place de la Concorde",
+        "url": "https://en.wikipedia.org/wiki/Place_de_la_Concorde"
+      }
+    ],
+    "Place Vendôme · Colonne (1er)": [
+      {
+        "type": "review",
+        "label": "napoleon.org · coluna Vendôme",
+        "url": "https://www.napoleon.org/jeunes-historiens/napodoc/monuments-napoleoniens-la-colonne-vendome-paris"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Vendôme Column",
+        "url": "https://en.wikipedia.org/wiki/Vend%C3%B4me_Column"
+      }
+    ],
+    "Jardin du Palais-Royal + Colonnes de Buren (8 rue de Montpensier, 1er)": [
+      {
+        "type": "official",
+        "label": "Parcours Révolution (Ville de Paris) · Desmoulins no Palais-Royal",
+        "url": "https://parcoursrevolution.paris.fr/en/points-of-interest/98-camille-desmoulins-and-the-orators-of-the-palais-royal"
+      },
+      {
+        "type": "review",
+        "label": "Sortir à Paris · o canhão do Palais-Royal",
+        "url": "https://sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/318686-did-you-know-this-small-cannon-in-the-garden-of-the-palais-royal-was-used-as-a-clock-in-the-18th-century"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · colunas de Buren",
+        "url": "https://www.pariszigzag.fr/insolite/lieux-insolites/colonne-buren-palais-royal-polemique/"
+      },
+      {
+        "type": "official",
+        "label": "Visit Paris Region · Jardin du Palais-Royal",
+        "url": "https://www.visitparisregion.com/fr/jardin-du-palais-royal"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Palais-Royal",
+        "url": "https://en.wikipedia.org/wiki/Palais-Royal"
+      }
+    ],
+    "Arc du Carrousel · cavalos de Veneza (place du Carrousel, 1er)": [
+      {
+        "type": "official",
+        "label": "louvre.fr · Arc du Carrousel",
+        "url": "https://www.louvre.fr/decouvrir/vie-du-musee/restauration-de-l-arc-du-carrousel"
+      },
+      {
+        "type": "review",
+        "label": "napoleon.org · Arc de triomphe du Carrousel",
+        "url": "https://www.napoleon.org/magazine/lieux/arc-de-triomphe-du-carrousel-paris/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Arc de Triomphe du Carrousel",
+        "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe_du_Carrousel"
+      }
+    ],
+    "Pirâmide do Louvre (Cour Napoléon, 1er)": [
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Louvre Pyramid",
+        "url": "https://en.wikipedia.org/wiki/Louvre_Pyramid"
+      },
+      {
+        "type": "official",
+        "label": "louvre.fr · horários e tarifas",
+        "url": "https://www.louvre.fr/horaires-tarifs-acces"
+      }
+    ],
+    "Saint-Germain-l'Auxerrois (2 place du Louvre, 1er)": [
+      {
+        "type": "official",
+        "label": "paris.fr · passeio Saint-Barthélemy",
+        "url": "https://www.paris.fr/pages/balade-sur-les-traces-de-la-saint-barthelemy-21793"
+      },
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Saint-Germain-l'Auxerrois",
+        "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-passe-sanglant-de-leglise-saint-germain-lauxerrois/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Saint-Germain l'Auxerrois",
+        "url": "https://en.wikipedia.org/wiki/Saint-Germain-l%27Auxerrois"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · ficha da igreja",
+        "url": "https://www.paris.fr/lieux/eglise-saint-germain-l-auxerrois-3750"
+      },
+      {
+        "type": "official",
+        "label": "Paróquia · horários",
+        "url": "https://saintgermainlauxerrois.fr/nos-horaires/"
+      }
+    ],
+    "Pont Neuf (1er/6e)": [
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Pont-Neuf",
+        "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/173577-history-pont-neuf-paris"
+      },
+      {
+        "type": "review",
+        "label": "History Hit · Pont Neuf",
+        "url": "https://www.historyhit.com/locations/pont-neuf/"
+      }
+    ],
+    "Musée de l'Orangerie · salas das Ninféias (Jardin des Tuileries, 1er)": [
+      {
+        "type": "official",
+        "label": "Musée de l'Orangerie · história das Ninféias",
+        "url": "https://www.musee-orangerie.fr/en/node/33"
+      },
+      {
+        "type": "official",
+        "label": "Musée de l'Orangerie · visita (horários e tarifas)",
+        "url": "https://www.musee-orangerie.fr/en/visit-orangerie"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Musée de l'Orangerie",
+        "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27Orangerie"
+      }
+    ],
+    "Louvre-relâmpago · entrada pela Pirâmide (1er)": [
+      {
+        "type": "official",
+        "label": "louvre.fr · horários e tarifas",
+        "url": "https://www.louvre.fr/horaires-tarifs-acces"
+      },
+      {
+        "type": "official",
+        "label": "louvre.fr · calendário de abertura das salas",
+        "url": "https://www.louvre.fr/horaires-tarifs-acces/calendrier-d-ouverture-des-salles"
+      },
+      {
+        "type": "review",
+        "label": "Enfant en voyage · Louvre em família",
+        "url": "https://www.enfant-en-voyage.com/visite-louvre-enfant-famille/"
+      },
+      {
+        "type": "review",
+        "label": "Wikipedia (en) · Winged Victory of Samothrace",
+        "url": "https://en.wikipedia.org/wiki/Winged_Victory_of_Samothrace"
+      }
+    ],
+    "Passage des Panoramas (11 boulevard Montmartre, 2e)": [
+      {
+        "type": "official",
+        "label": "Visit Paris Region · Passage des Panoramas",
+        "url": "https://www.visitparisregion.com/fr/passage-des-panoramas"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · galerias e passagens",
+        "url": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889"
+      }
+    ],
+    "Galerie Vivienne (4 rue des Petits-Champs, 2e)": [
+      {
+        "type": "official",
+        "label": "Galerie Vivienne (site oficial)",
+        "url": "https://www.galerie-vivienne.com"
+      },
+      {
+        "type": "official",
+        "label": "Académie des beaux-arts · comunicado da Galerie Vivienne",
+        "url": "https://www.academiedesbeauxarts.fr/sites/default/files/inline-files/communique-de-presse-ouverture-nouvel-espace-d-exposition-galerie-vivienne_0.pdf"
+      },
+      {
+        "type": "review",
+        "label": "Francophiles Anonymes · Galerie Vivienne",
+        "url": "https://www.francophilesanonymes.com/en/paris/galerie-vivienne/"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · galerias e passagens",
+        "url": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889"
+      },
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Librairie Jousseaume",
+        "url": "https://www.sortiraparis.com/loisirs/shopping-mode/articles/305220-librairie-jousseaume-une-boutique-historique-au-coeur-de-la-galerie-vivienne-photos-et-reportage"
+      }
+    ],
+    "Galerie Véro-Dodat (19 rue Jean-Jacques Rousseau, 1er)": [
+      {
+        "type": "official",
+        "label": "Visit Paris Region · Galerie Véro-Dodat",
+        "url": "https://www.visitparisregion.com/en/galerie-vero-dodat"
+      },
+      {
+        "type": "official",
+        "label": "paris.fr · galerias e passagens",
+        "url": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889"
+      }
+    ],
+    "Angelina (226 rue de Rivoli, 1er)": [
+      {
+        "type": "review",
+        "label": "Famil'in Paris · Angelina",
+        "url": "https://www.familinparis.fr/salon-de-the-angelina-paris"
+      },
+      {
+        "type": "review",
+        "label": "Bonjour Paris · Angelina",
+        "url": "https://bonjourparis.com/story/angelina-tea-salon-patissier-restaurant-chocol/"
+      }
+    ],
+    "Café Verlet (256 rue Saint-Honoré, 1er)": [
+      {
+        "type": "review",
+        "label": "Mes Prestiges · Café Verlet",
+        "url": "https://mesprestiges.com/en/paris/places/cafe-verlet"
+      }
+    ],
+    "Fou de Pâtisserie (45 rue Montorgueil, 2e)": [
+      {
+        "type": "official",
+        "label": "Fou de Pâtisserie (site oficial)",
+        "url": "https://www.foudepatisserieboutique.fr"
+      },
+      {
+        "type": "review",
+        "label": "Elle & Vire · Fou de Pâtisserie",
+        "url": "https://www.elle-et-vire.com/pro/en/your-services/inspirations-trends/places-and-trends/fou-de-patisserie-les-meilleurs-desserts-de-paris"
+      },
+      {
+        "type": "review",
+        "label": "Gault&Millau · Fou de Pâtisserie",
+        "url": "https://fr.gaultmillau.com/fr/artisans/fou-de-patisserie"
+      }
+    ],
+    "Stohrer (51 rue Montorgueil, 2e)": [
+      {
+        "type": "review",
+        "label": "Paris Zigzag · Stohrer",
+        "url": "https://www.pariszigzag.fr/bar-restaurant/restaurant/patisserie-stohrer-paris/"
+      },
+      {
+        "type": "review",
+        "label": "France Today · a pâtisserie mais antiga de Paris",
+        "url": "https://francetoday.com/travel/paris/the_oldest_patisserie_in_paris/"
+      },
+      {
+        "type": "official",
+        "label": "Visit Paris Region · Stohrer",
+        "url": "https://www.visitparisregion.com/fr/stohrer"
+      }
+    ],
+    "À la Mère de Famille (35 rue du Faubourg-Montmartre, 9e)": [
+      {
+        "type": "official",
+        "label": "À la Mère de Famille (site oficial) · nossa história",
+        "url": "https://www.lameredefamille.com/en/pages/our-history"
+      },
+      {
+        "type": "review",
+        "label": "Sortir à Paris · À la Mère de Famille",
+        "url": "https://www.sortiraparis.com/hotel-restaurant/cafe-tea-time/articles/289472-a-la-mere-de-famille-faubourg-montmartre-la-plus-ancienne-chocolaterie-de-paris"
+      }
+    ],
+    "Le Valentin (35 Galerie Vivienne, 2e)": [
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Le Valentin",
+        "url": "https://www.sortiraparis.com/hotel-restaurant/cafe-tea-time/articles/230168-le-valentin-le-charmant-salon-de-the-retro-de-la-galerie-vivienne-a-paris"
+      }
+    ],
+    "Le Valentin (35 Galerie Vivienne, 2e) · a parada salgada": [
+      {
+        "type": "review",
+        "label": "Sortir à Paris · Le Valentin",
+        "url": "https://www.sortiraparis.com/hotel-restaurant/cafe-tea-time/articles/230168-le-valentin-le-charmant-salon-de-the-retro-de-la-galerie-vivienne-a-paris"
+      }
+    ]
+  },
+  "transit_map": {
+    "Chegada · Métro Concorde (L1/L8/L12)": {
+      "metro": "Estação das linhas 1, 8 e 12, sob a parte norte da place de la Concorde (Wikipédia) · a L1 também para em Tuileries, Palais-Royal–Musée du Louvre e Louvre-Rivoli, ao longo do eixo"
+    },
+    "Chegada · Métro Grands Boulevards (L8/L9)": {
+      "metro": "Estação das linhas 8 e 9, sob a ponta oeste do boulevard Poissonnière, no cruzamento com a rue Montmartre e a rue du Faubourg-Montmartre (Wikipédia) · o Passage des Panoramas abre no 11 boulevard Montmartre, ao lado · na volta, Palais-Royal–Musée du Louvre tem a L1 e a L7"
+    },
+    "Chegada · Métro Tuileries (L1)": {
+      "metro": "Estação da linha 1, sob a rue de Rivoli, ao longo do Jardin des Tuileries (Wikipédia) · a Angelina fica no 226 da mesma rue de Rivoli · o passeio termina perto de Grands Boulevards (L8/L9)"
+    }
+  },
+  "bairros_config": [
+    {
+      "nome": "🎠 Tuileries · Concorde",
+      "latMin": 48.8615,
+      "latMax": 48.8675,
+      "lngMin": 2.3195,
+      "lngMax": 2.3345
+    },
+    {
+      "nome": "🏛️ Louvre · Palais-Royal · Pont Neuf",
+      "latMin": 48.857,
+      "latMax": 48.866,
+      "lngMin": 2.3345,
+      "lngMax": 2.343
+    },
+    {
+      "nome": "🛍️ Passagens · Montorgueil",
+      "latMin": 48.866,
+      "latMax": 48.8745,
+      "lngMin": 2.3345,
+      "lngMax": 2.348
+    },
+    {
+      "nome": "📍 Paris",
+      "fallback": true
+    }
+  ],
+  "wt_labels": "letters",
+  "historia": [
+    {
+      "titulo": "🏛️ Palais-Royal · onde a Revolução começou a falar alto",
+      "prosa_html": "<p>O Palais-Royal parece um jardim tranquilo, com tílias, bancos e silêncio. Mas foi ali que a Revolução Francesa começou a falar alto. Em <strong>12 de julho de 1789</strong>, Paris soube que o rei tinha demitido <strong>Necker</strong>, o ministro das Finanças. <strong>Camille Desmoulins</strong> subiu numa mesa do <strong>Café de Foy</strong> (hoje galerie de Montpensier, 57-60), arrancou uma folha de árvore do jardim, prendeu-a como cocarda e chamou à insurreição; <strong>dois dias depois</strong> a Bastilha caía.</p><p>No mesmo jardim há um canhãozinho de <strong>1786</strong> com uma lente apontada pro sol do meio-dia: quando o sol chegava lá, a lente acendia o pavio e o tiro marcava a hora. Daí vem o francês <em>midi pétant</em>, meio-dia em ponto. A lente sumiu num roubo em <strong>1998</strong>, e hoje o canhão só dispara, à mão, em poucos dias do ano. Dois séculos depois do canhão, o pátio vizinho, que ia virar estacionamento subterrâneo, ganhou as <strong>260 colunas listradas de Daniel Buren</strong> (1985-86): a obra provocou debate nacional, foi chamada de &quot;ruína moderna&quot; e o Estado quase parou o projeto mais de uma vez, mas o ministro da Cultura, Jack Lang, a apoiou.</p>",
+      "fontes": [
+        {
+          "o": "Parcours Révolution (Ville de Paris) · Desmoulins no Palais-Royal",
+          "u": "https://parcoursrevolution.paris.fr/en/points-of-interest/98-camille-desmoulins-and-the-orators-of-the-palais-royal",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "12 de julho de 1789",
+            "Necker",
+            "Café de Foy",
+            "57-60",
+            "dois dias depois",
+            "cocarda",
+            "insurreição"
+          ]
+        },
+        {
+          "o": "Sortir à Paris · o canhão do Palais-Royal",
+          "u": "https://sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/318686-did-you-know-this-small-cannon-in-the-garden-of-the-palais-royal-was-used-as-a-clock-in-the-18th-century",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1786",
+            "lente",
+            "meridiano",
+            "midi pétant",
+            "1998",
+            "poucos dias do ano",
+            "à mão"
+          ]
+        },
+        {
+          "o": "Paris Zigzag · colunas de Buren",
+          "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/colonne-buren-palais-royal-polemique/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "260",
+            "estacionamento",
+            "ruína moderna",
+            "Jack Lang",
+            "debate nacional"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Palais-Royal",
+          "u": "https://en.wikipedia.org/wiki/Palais-Royal",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "1985-86",
+            "Daniel Buren"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "🐎 Napoleão assina a paisagem",
+      "prosa_html": "<p>Do outro lado do eixo, Napoleão fez questão de assinar a paisagem. O <strong>Arco do Carrossel</strong> (1806-1808) foi coroado com os <strong>cavalos de bronze da basílica de San Marco</strong>, levados de Veneza pelos exércitos revolucionários em <strong>1797</strong>. Em <strong>1815</strong>, com a queda do imperador, voltaram pra Itália, e a quadriga de hoje é de <strong>Bosio, de 1828</strong>. Na <strong>Place Vendôme</strong>, a coluna inaugurada em <strong>15/08/1810</strong> foi revestida com o bronze dos canhões tomados ao inimigo em Austerlitz. Em <strong>1871</strong>, na Comuna, o pintor <strong>Gustave Courbet</strong> propôs desmontá-la pra guardá-la; ela foi serrada na base em <strong>16/05/1871</strong>, e o pintor acabou condenado a pagar a reconstrução.</p><p>O epílogo mais recente é de <strong>outubro de 2025</strong>: quatro homens com um caminhão-cesto entraram em plena luz do dia na <strong>Galerie d'Apollon</strong> do Louvre e levaram <strong>oito joias da Coroa</strong>, estimadas em cerca de <strong>€88 milhões</strong>. Quando a galeria reabriu, em <strong>22/07/2026</strong>, as peças continuavam desaparecidas, e o espaço voltou a ser uma galeria de aparato do séc. XVII, sem vitrines nem joias.</p>",
+      "fontes": [
+        {
+          "o": "louvre.fr · Arc du Carrousel",
+          "u": "https://www.louvre.fr/decouvrir/vie-du-musee/restauration-de-l-arc-du-carrousel",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "1806-1808",
+            "1797",
+            "San Marco"
+          ]
+        },
+        {
+          "o": "napoleon.org · Arc de triomphe du Carrousel",
+          "u": "https://www.napoleon.org/magazine/lieux/arc-de-triomphe-du-carrousel-paris/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1815"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Arc de Triomphe du Carrousel",
+          "u": "https://en.wikipedia.org/wiki/Arc_de_Triomphe_du_Carrousel",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "1828",
+            "Bosio"
+          ]
+        },
+        {
+          "o": "napoleon.org · coluna Vendôme",
+          "u": "https://www.napoleon.org/jeunes-historiens/napodoc/monuments-napoleoniens-la-colonne-vendome-paris",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "15/08/1810",
+            "bronze",
+            "canhões",
+            "Austerlitz",
+            "16/05/1871",
+            "serrada na base"
+          ]
+        },
+        {
+          "o": "Wikipedia (en) · Vendôme Column",
+          "u": "https://en.wikipedia.org/wiki/Vend%C3%B4me_Column",
+          "tier": "crowd",
+          "data": "2026-10-08",
+          "prova": [
+            "Courbet",
+            "1871",
+            "condenado a pagar a reconstrução"
+          ]
+        },
+        {
+          "o": "Euronews · Galerie d'Apollon reabre (22/07/2026)",
+          "u": "https://fr.euronews.com/culture/2026/07/22/la-galerie-dapollon-du-louvre-rouvre-ses-portes-apres-le-scandale-du-vol-des-bijoux-de-la-",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "outubro de 2025",
+            "quatro homens",
+            "caminhão-cesto",
+            "oito joias",
+            "€88 milhões",
+            "22/07/2026",
+            "séc. XVII",
+            "sem vitrines",
+            "desaparecidas"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "🛍️ As passagens cobertas · Paris sob o vidro",
+      "prosa_html": "<p>Sob o Segundo Império, Paris chegou a ter <strong>até 150</strong> passagens e galerias cobertas; hoje restam cerca de trinta, várias delas no 2º arrondissement. A mais antiga, o <strong>Passage des Panoramas</strong>, é de <strong>1799</strong>, e em <strong>1817</strong> foi o primeiro lugar público de Paris com iluminação a gás. Na <strong>Galerie Vivienne</strong>, inaugurada em <strong>1826</strong>, morou por volta de <strong>1840</strong> o <strong>Vidocq</strong>, o ex-condenado que virou fundador da polícia de investigação, e a livraria <strong>Jousseaume</strong> funciona ali desde 1826. A <strong>Galerie Véro-Dodat</strong>, do mesmo ano, foi aberta por dois <strong>charcutiers</strong> que juntaram dinheiro e ousadia pra ligar o Palais-Royal a Les Halles.</p>",
+      "fontes": [
+        {
+          "o": "paris.fr · galerias e passagens",
+          "u": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "Segundo Império",
+            "150",
+            "trentaine",
+            "1799",
+            "1826",
+            "charcutiers"
+          ]
+        },
+        {
+          "o": "France.fr · passagens cobertas",
+          "u": "https://www.france.fr/fr/article/couvert-passages-parisiens/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "vingtaine",
+            "2º arrondissement",
+            "2e"
+          ]
+        },
+        {
+          "o": "Visit Paris Region · Passage des Panoramas",
+          "u": "https://www.visitparisregion.com/fr/passage-des-panoramas",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "1817",
+            "gás",
+            "primeiro lugar público"
+          ]
+        },
+        {
+          "o": "Francophiles Anonymes · Galerie Vivienne",
+          "u": "https://www.francophilesanonymes.com/en/paris/galerie-vivienne/",
+          "tier": "editorial",
+          "data": "2026-10-08",
+          "prova": [
+            "1826",
+            "1840",
+            "Vidocq",
+            "Jousseaume"
+          ]
+        },
+        {
+          "o": "Visit Paris Region · Galerie Véro-Dodat",
+          "u": "https://www.visitparisregion.com/en/galerie-vero-dodat",
+          "tier": "oficial",
+          "data": "2026-10-08",
+          "prova": [
+            "1826",
+            "Palais-Royal",
+            "Les Halles"
+          ]
+        }
+      ]
+    }
+  ],
+  "days": [
+    {
+      "date": "👶",
+      "tema": "Louvre · Tuileries · Clássico em Família",
+      "temaCurto": "Família",
+      "bairro": "🎠 Jardin des Tuileries (1er)",
+      "grupo": true,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Barquinhos, trampolim e o Louvre por fora\"</strong>: um parque infantil grátis no centro de Paris, de oeste a leste, com o Louvre no fim do eixo. Proposta: descer em <strong>Concorde</strong> (L1/L8/L12), ~1,2 km em linha reta (estimativa, não medida), <strong>10h-15h</strong> com almoço · os barquinhos só começam às <strong>11h</strong> e só funcionam em alguns dias da semana (ver o card). Tudo ao ar livre. <strong>Pula sem culpa:</strong> o <strong>Louvre &quot;de verdade&quot;</strong> com criança pequena (ver aba Museus) e o restaurante <strong>Loulou</strong> (107 rue de Rivoli, na beira das Tuileries): entradas a €22-30 e pratos a €36-49 (Mes Prestiges), caro pra almoço com criança.",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Concorde (L1/L8/L12)",
+          "cat": "Linhas 1, 8 e 12 · a estação fica sob a parte norte da place de la Concorde, a poucos passos do Jardin des Tuileries",
+          "coord": {
+            "lat": 48.86618,
+            "lng": 2.3224
+          }
+        },
+        {
+          "hora": "10:45",
+          "emoji": "⛵",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Grand Bassin octogonal · barquinhos (Jardin des Tuileries, 1er)",
+          "cat": "Tanque octogonal com barquinhos de aluguel · tradição de 1850",
+          "sobre": "No <strong>Grand Bassin octogonal</strong> há uma tradição que vem de <strong>1850</strong>: o aluguel de <strong>barquinhos</strong>.",
+          "imperdivel": "Alugar um barquinho e acompanhar a travessia do tanque octogonal · <strong>€6 por 30 min</strong>.",
+          "dicas": [
+            "<strong>€6 por 30 min</strong>, das <strong>11h às 18h</strong> · fora das férias escolares só <strong>quarta, sexta, sábado, domingo e feriados</strong>; nas férias, todos os dias (louvre.fr)",
+            "O jardim abre <strong>7h-21h</strong> em abril, maio, setembro e outubro · <strong>7h-23h</strong> de junho a agosto · <strong>7h30-19h30</strong> de novembro a março · é esvaziado <strong>30 min</strong> antes de fechar (louvre.fr; outras fichas dão horários diferentes: confira no louvre.fr)",
+            "Banheiros no jardim: dois blocos permanentes e mais alguns sazonais, todos com instalação acessível",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Place de la Concorde</strong> — comece aqui, saindo do metrô L1: o obelisco de Luxor é egípcio de verdade, do reinado de Ramsés II (<strong>séc. XIII a.C.</strong>), erguido em <strong>1836</strong> · o trânsito é pesado, segure a mão da criança",
+            "🚶 <strong>Ⓐ Grand Bassin octogonal</strong> — a pé pelo jardim, rumo ao tanque dos barquinhos",
+            "🚶 <strong>Ⓑ Trampolines</strong> — entre o tanque e a Terrasse des Feuillants, num espaço ladeado de palmeiras",
+            "🚶 <strong>Ⓒ Parquinho + carrossel</strong> — seguindo pelo lado norte do jardim, na entrada Castiglione",
+            "🚶 <strong>Ⓓ Arco do Carrossel</strong> — cruzando o jardim rumo ao Louvre",
+            "🚶 <strong>Ⓔ Pirâmide do Louvre</strong> — o fecho do eixo, no pátio Napoléon"
+          ],
+          "duracao": "30-40 min",
+          "custo": "€6 / 30 min (2026)",
+          "acessibilidade": "Dois blocos de banheiros permanentes no jardim, com instalação acessível",
+          "coord": {
+            "lat": 48.86452,
+            "lng": 2.32414
+          },
+          "walkingTours": [
+            {
+              "nome": "Tuileries de ponta a ponta · 👶 Barquinhos, trampolim e o Louvre por fora",
+              "descricao": "Concorde → Grand Bassin → Trampolines → Parquinho e carrossel → Arco do Carrossel → Pirâmide · ~1,2 km em linha reta (estimativa, não medida) · tudo ao ar livre",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Place de la Concorde (8e)",
+                  "coord": {
+                    "lat": 48.86548,
+                    "lng": 2.32113
+                  },
+                  "mapsQuery": "Obélisque de Louxor, Place de la Concorde, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Grand Bassin octogonal · barquinhos (Jardin des Tuileries, 1er)",
+                  "coord": {
+                    "lat": 48.86452,
+                    "lng": 2.32414
+                  },
+                  "mapsQuery": "Grand Bassin Octogonal, Jardin des Tuileries, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Trampolines (Jardin des Tuileries, 1er)",
+                  "coord": {
+                    "lat": 48.86498,
+                    "lng": 2.32556
+                  },
+                  "mapsQuery": "Trampolines du Jardin des Tuileries, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Aire de jeux + manège (Jardin des Tuileries, entrada Castiglione, 1er)",
+                  "coord": {
+                    "lat": 48.86443,
+                    "lng": 2.32727
+                  },
+                  "mapsQuery": "Aire de jeux pour enfants des Tuileries, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Arc de triomphe du Carrousel (place du Carrousel, 1er)",
+                  "coord": {
+                    "lat": 48.86173,
+                    "lng": 2.33291
+                  },
+                  "mapsQuery": "Arc de triomphe du Carrousel, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Pirâmide do Louvre · Cour Napoléon (1er)",
+                  "coord": {
+                    "lat": 48.86099,
+                    "lng": 2.33584
+                  },
+                  "mapsQuery": "Pyramide du Louvre, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "louvre.fr · nos jardins (Tuileries)",
+              "u": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1850",
+                "€6 por 30 min",
+                "11h às 18h",
+                "quarta, sexta, sábado, domingo e feriados",
+                "7h-21h",
+                "7h-23h",
+                "7h30-19h30",
+                "abril, maio, setembro e outubro",
+                "junho a agosto",
+                "novembro a março",
+                "30 min",
+                "30 min antes de fechar"
+              ]
+            },
+            {
+              "o": "Hérodote · obelisco de Luxor, 25/10/1836",
+              "u": "https://www.herodote.net/25_octobre_1836-evenement-18361025.php",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "séc. XIII a.C.",
+                "Ramsés II",
+                "1836",
+                "25/10/1836"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 54188993 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/54188993",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Grand Bassin Octogonal, Jardin des Tuileries, Paris"
+        },
+        {
+          "hora": "11:45",
+          "emoji": "🤸",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Trampolines (Jardin des Tuileries, 1er)",
+          "cat": "Camas elásticas entre palmeiras · a partir de 2 anos",
+          "sobre": "Camas elásticas <strong>a partir de 2 anos</strong>, num espaço <strong>fresco e ladeado de palmeiras</strong>, entre a Terrasse des Feuillants e o Grand Bassin octogonal.",
+          "imperdivel": "Gasta a energia da criança antes do almoço · <strong>€3</strong> por vez.",
+          "dicas": [
+            "<strong>€3</strong> (louvre.fr) · a partir de <strong>2 anos</strong>",
+            "Fica entre o tanque dos barquinhos e o parquinho do lado norte: dá pra encadear os três sem sair do jardim"
+          ],
+          "duracao": "15-20 min",
+          "custo": "€3 (2026)",
+          "acessibilidade": "Espaço ao ar livre, ladeado de palmeiras; banheiros acessíveis no jardim",
+          "coord": {
+            "lat": 48.86498,
+            "lng": 2.32556
+          },
+          "fontes": [
+            {
+              "o": "louvre.fr · nos jardins (Tuileries)",
+              "u": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "€3",
+                "2 anos",
+                "palmeiras",
+                "entre a Terrasse des Feuillants e o Grand Bassin octogonal"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 199336782 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/199336782",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Trampolines du Jardin des Tuileries, Paris"
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🛝",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Aire de jeux + manège (Jardin des Tuileries, entrada Castiglione, 1er)",
+          "cat": "Parquinho grátis + carrossel · lado norte do jardim",
+          "sobre": "O <strong>parquinho é grátis</strong> e fica ao norte, perto da <strong>entrada Castiglione</strong>: escorregador, balanços, gira-gira e uma <strong>ponte de corda nas árvores</strong>. O <strong>carrossel</strong> (<strong>€3</strong> a volta) fica no mesmo canto, com decoração de contos de fadas.",
+          "imperdivel": "É a parada onde a criança vai pedir pra ficar: reserve aqui a folga da manhã.",
+          "dicas": [
+            "Carrossel <strong>€3</strong> por volta · parquinho <strong>grátis</strong>",
+            "A entrada Castiglione dá na rue de Rivoli · o salão Angelina (opções de almoço abaixo) fica a ~110 m em linha reta"
+          ],
+          "duracao": "40-60 min",
+          "custo": "Parquinho grátis · carrossel €3 (2026)",
+          "acessibilidade": "Parquinho ao ar livre; banheiros acessíveis no jardim",
+          "coord": {
+            "lat": 48.86443,
+            "lng": 2.32727
+          },
+          "fontes": [
+            {
+              "o": "louvre.fr · nos jardins (Tuileries)",
+              "u": "https://www.louvre.fr/preparer-sa-visite/dans-les-jardins",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "gratuit",
+                "escorregador",
+                "balanços",
+                "gira-gira",
+                "ponte de corda nas árvores",
+                "perto da entrada Castiglione",
+                "€3",
+                "contos de fadas"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 28137338 (coordenada copiada) · distância até a Angelina (node 3980096134) calculada pelas coordenadas",
+              "u": "https://www.openstreetmap.org/way/28137338",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "110 m"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Aire de jeux pour enfants des Tuileries, Paris"
+        },
+        {
+          "hora": "13:00",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Tuileries e arredores",
+          "cat": "Salão Belle Époque, piquenique ou pizza napolitana",
+          "coord": {
+            "lat": 48.86508,
+            "lng": 2.32841
+          },
+          "opcoes": [
+            {
+              "nome": "Angelina (226 rue de Rivoli, 1er)",
+              "desc": "Salão Belle Époque de <strong>1903</strong>, em frente às Tuileries · pra criança, <strong>club sandwiches e saladas</strong> · o aperto vai de <strong>12h às 15h</strong>: fora desse horário costuma haver mesa; a casa recomenda <strong>reservar</strong> · o chocolate quente <em>l'Africain</em> é o clássico da casa",
+              "preco": "cardápio no local",
+              "dist": "bem perto do parquinho (~110 m em linha reta, estimativa)",
+              "valeAPena": 2,
+              "poiCat": "cafe",
+              "mapsQuery": "Angelina, 226 rue de Rivoli, Paris",
+              "fontes": [
+                {
+                  "o": "Famil'in Paris · Angelina",
+                  "u": "https://www.familinparis.fr/salon-de-the-angelina-paris",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "1903",
+                    "club sandwiches",
+                    "saladas",
+                    "reserva recomendada"
+                  ]
+                },
+                {
+                  "o": "Bonjour Paris · Angelina",
+                  "u": "https://bonjourparis.com/story/angelina-tea-salon-patissier-restaurant-chocol/",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "12h às 15h",
+                    "l'Africain"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 3980096134 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/3980096134",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.86508,
+                "lng": 2.32841
+              }
+            },
+            {
+              "nome": "Bo&Mie Louvre-Rivoli (91 rue de Rivoli, 1er)",
+              "desc": "Padaria de <strong>mais de 450 m²</strong> com mezanino de vista pro Louvre · <strong>seg-sáb 7h30-20h, dom 8h-20h</strong> · pegue sanduíche e viennoiserie e faça piquenique num banco das Tuileries",
+              "preco": "padaria · preços no balcão",
+              "dist": "~380 m da Pirâmide em linha reta (estimativa)",
+              "valeAPena": 1,
+              "poiCat": "padaria",
+              "mapsQuery": "Bo&Mie, 91 rue de Rivoli, Paris",
+              "fontes": [
+                {
+                  "o": "Bo&Mie (site oficial) · Louvre-Rivoli",
+                  "u": "https://www.boetmie.com/boutiques/louvre-rivoli/",
+                  "tier": "oficial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "450 m²",
+                    "7h30-20h",
+                    "8h-20h"
+                  ]
+                },
+                {
+                  "o": "Paris Muse · onde comer com crianças perto dos museus",
+                  "u": "https://parismuse.com/2026/04/where-to-eat-with-kids-near-paris-museums/",
+                  "tier": "editorial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "piquenique",
+                    "Tuileries"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 6192292303 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/6192292303",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.8607057,
+                "lng": 2.3409996
+              }
+            },
+            {
+              "nome": "Iovine's Louvre (7bis rue du Colonel Driant, 1er)",
+              "desc": "Pizzaria napolitana dos irmãos Nicola e Emanuele Iovine · <strong>Menu Bambino €13</strong> (margherita, xarope e sorvete) pra menores de <strong>9 anos</strong> · <strong>seg-sex 12h-15h e 19h-23h</strong>, <strong>sáb 12h-23h</strong>, <strong>dom 12h-15h30 e 19h-23h</strong>",
+              "preco": "Menu Bambino €13",
+              "dist": "~420 m da Pirâmide em linha reta (estimativa)",
+              "valeAPena": 2,
+              "poiCat": "restaurante",
+              "mapsQuery": "Iovine's Louvre, 7bis rue du Colonel Driant, Paris",
+              "fontes": [
+                {
+                  "o": "Iovine's Louvre (site oficial)",
+                  "u": "https://www.iovines.com/",
+                  "tier": "oficial",
+                  "data": "2026-10-08",
+                  "prova": [
+                    "Menu Bambino",
+                    "€13",
+                    "9 anos",
+                    "12h-15h",
+                    "19h-23h",
+                    "12h-23h",
+                    "15h30"
+                  ]
+                },
+                {
+                  "o": "OpenStreetMap · node 4950713394 (coordenada copiada)",
+                  "u": "https://www.openstreetmap.org/node/4950713394",
+                  "tier": "crowd",
+                  "data": "2026-10-08",
+                  "prova": []
+                }
+              ],
+              "coord": {
+                "lat": 48.86327,
+                "lng": 2.34044
+              }
+            }
+          ]
+        },
+        {
+          "hora": "14:15",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Arc de triomphe du Carrousel (place du Carrousel, 1er)",
+          "cat": "Arco triunfal de Napoleão · cavalos de Veneza",
+          "sobre": "Construído por <strong>Napoleão em 1806-1808</strong>, na volta vitoriosa de Austerlitz. No topo ficaram os <strong>cavalos de bronze da basílica de San Marco</strong>, de Veneza: foram levados pelos exércitos revolucionários em <strong>1797</strong> e devolvidos em <strong>1815</strong>; a quadriga de hoje é de <strong>Bosio, de 1828</strong>.",
+          "imperdivel": "O que observar: os <strong>oito soldados</strong> no alto das colunas, cada um de um corpo do exército de Napoleão (couraceiro, dragão, granadeiro, artilheiro, sapador…), com uniformes precisos, numa época de estátuas nuas e idealizadas.",
+          "dicas": [
+            "Pergunte à criança quantos cavalos tem lá em cima · as colunas coríntias são de mármore rosa",
+            "Fica em linha com a Pirâmide: do arco à Pirâmide é só atravessar o pátio"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis",
+          "acessibilidade": "Pátio aberto; vê-se por fora, sem ingresso",
+          "coord": {
+            "lat": 48.86173,
+            "lng": 2.33291
+          },
+          "fontes": [
+            {
+              "o": "louvre.fr · Arc du Carrousel",
+              "u": "https://www.louvre.fr/decouvrir/vie-du-musee/restauration-de-l-arc-du-carrousel",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1806-1808",
+                "Austerlitz",
+                "1797",
+                "San Marco",
+                "mármore rosa",
+                "coríntias"
+              ]
+            },
+            {
+              "o": "napoleon.org · Arc de triomphe du Carrousel",
+              "u": "https://www.napoleon.org/magazine/lieux/arc-de-triomphe-du-carrousel-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1806-1808",
+                "1815",
+                "oito",
+                "couraceiro",
+                "dragão",
+                "granadeiro",
+                "artilheiro",
+                "sapador"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Arc de Triomphe du Carrousel",
+              "u": "https://en.wikipedia.org/wiki/Arc_de_Triomphe_du_Carrousel",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1828",
+                "Bosio"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 227483542 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/227483542",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Arc de triomphe du Carrousel, Paris"
+        },
+        {
+          "hora": "14:45",
+          "emoji": "🔺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pirâmide do Louvre · Cour Napoléon (1er)",
+          "cat": "Entrada de vidro do Louvre · obra de I. M. Pei",
+          "sobre": "Projeto do arquiteto <strong>I. M. Pei</strong>, escolhido em <strong>1983</strong> dentro do plano Grand Louvre de Mitterrand: uma pirâmide de vidro e metal de <strong>21,6 m</strong>, concluída em <strong>1989</strong>, que serve de entrada principal do museu e leva luz ao hall subterrâneo.",
+          "imperdivel": "O que observar: o contraste entre o vidro moderno e as fachadas do palácio, que se enxergam também de dentro do hall.",
+          "dicas": [
+            "Cour Napoléon aberto <strong>7h30-21h</strong>; Cour Carrée <strong>7h30-19h45</strong> (louvre.fr)",
+            "Ver o Louvre por fora já entrega boa parte da emoção; o interior é decisão à parte (aba Museus)"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis (pátio)",
+          "acessibilidade": "Pátio aberto; vê-se por fora, sem ingresso",
+          "coord": {
+            "lat": 48.86099,
+            "lng": 2.33584
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Louvre Pyramid",
+              "u": "https://en.wikipedia.org/wiki/Louvre_Pyramid",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1983",
+                "21,6 m",
+                "1989",
+                "Mitterrand"
+              ]
+            },
+            {
+              "o": "louvre.fr · horários e tarifas",
+              "u": "https://www.louvre.fr/horaires-tarifs-acces",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "7h30-21h",
+                "7h30-19h45"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 375076234 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/375076234",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Pyramide du Louvre, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🎨",
+      "tema": "Louvre · Tuileries Profundo · História",
+      "temaCurto": "História",
+      "bairro": "🏛️ Concorde → Vendôme → Palais-Royal → Pont Neuf",
+      "grupo": false,
+      "cor": "#1d4ed8",
+      "gradA": "#1e3a8a",
+      "gradB": "#3b82f6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"De Luís XVI a Napoleão em menos de 3 km\"</strong>: o eixo real de Paris, da guilhotina ao Pont Neuf. Proposta: descer em <strong>Concorde</strong> (L1/L8/L12), ~2,7 km em linha reta (estimativa, não medida), <strong>10h-14h</strong> com paradas · volta pela L1 (Louvre-Rivoli) ou L7 (Pont Neuf). Pensado pra adultos: com criança pequena, o que funciona é o Palais-Royal (colunas de Buren pra correr) e a caça às máscaras do Pont Neuf. <strong>Pula sem culpa:</strong> a <strong>Galerie d'Apollon</strong> do Louvre &quot;pelas joias&quot;: oito joias da Coroa foram roubadas em outubro de 2025 por quatro homens com um caminhão-cesto, e a galeria reabriu em 22/07/2026 sem vitrines nem joias, de volta a galeria de aparato do séc. XVII. Só vale pela história, e só quem já está dentro do museu.",
+      "stops": [
+        {
+          "hora": "09:45",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Concorde (L1/L8/L12)",
+          "cat": "Linhas 1, 8 e 12 · a estação fica sob a parte norte da place de la Concorde · volta pela L1 (Louvre-Rivoli) ou pela L7 (Pont Neuf)",
+          "coord": {
+            "lat": 48.86618,
+            "lng": 2.3224
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🗿",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Place de la Concorde · a história (8e)",
+          "cat": "Três nomes, uma guilhotina e um obelisco egípcio",
+          "sobre": "Os nomes contam a história: <strong>place Louis XV</strong> (1748-1792), <strong>place de la Révolution</strong> (1792-1795) e, a partir de <strong>1795</strong>, <strong>Concorde</strong>, pra <em>reconciliar os franceses</em> depois do Terror. Na Restauração voltou a ser place Louis XV e depois place Louis XVI (1826); o nome Concorde voltou de vez após a revolução de <strong>1830</strong>, sob Louis-Philippe. A guilhotina foi instalada em <strong>1792</strong>; <strong>Louis XVI</strong> morreu aqui em <strong>21/01/1793</strong> e, no total, <strong>1.119 pessoas</strong> foram executadas na praça. O obelisco foi erguido em <strong>25/10/1836</strong>, com Louis-Philippe numa varanda e cerca de <strong>200 mil pessoas</strong> assistindo.",
+          "imperdivel": "O que observar: os hieróglifos do obelisco (reinado de Ramsés II, <strong>séc. XIII a.C.</strong>) e o <strong>topo dourado</strong>, um pyramidion acrescentado em <strong>1998</strong>.",
+          "dicas": [
+            "O obelisco tem <strong>22,84 m</strong> e pesa cerca de <strong>230 toneladas</strong>: um monólito inteiro de granito (Hérodote)",
+            "Com criança: conte os chafarizes e atravesse de mãos dadas · o trânsito é pesado",
+            "Obra grande de requalificação da praça prevista pra começar no <strong>fim de 2026</strong> e durar <strong>até pelo menos 2029</strong> (Paris Zigzag) · pode haver tapume",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Place de la Concorde</strong> — comece aqui, saindo do metrô L1",
+            "🚶 <strong>Ⓐ Place Vendôme</strong> — a pé rumo ao nordeste",
+            "🚶 <strong>Ⓑ Jardin du Palais-Royal</strong> — continuando ao leste, o jardim de Desmoulins e Buren",
+            "🚶 <strong>Ⓒ Arco do Carrossel</strong> — de volta ao eixo do Louvre",
+            "🚶 <strong>Ⓓ Pirâmide do Louvre</strong> — logo ao lado, no pátio Napoléon",
+            "🚶 <strong>Ⓔ Saint-Germain-l'Auxerrois</strong> — contornando o Louvre pela colunata leste, até a igreja da Saint-Barthélemy",
+            "🚶 <strong>Ⓕ Pont Neuf</strong> — descendo pro rio, até a ponte"
+          ],
+          "duracao": "20-30 min",
+          "custo": "Grátis",
+          "acessibilidade": "Espaço aberto; atenção ao trânsito nas travessias",
+          "coord": {
+            "lat": 48.86548,
+            "lng": 2.32113
+          },
+          "walkingTours": [
+            {
+              "nome": "De Luís XVI a Napoleão · 🎨 Concorde, Vendôme, Palais-Royal, Louvre e Pont Neuf",
+              "descricao": "Concorde → Place Vendôme → Palais-Royal → Arco do Carrossel → Pirâmide → Saint-Germain-l'Auxerrois → Pont Neuf · ~2,7 km em linha reta (estimativa, não medida)",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Place de la Concorde (8e)",
+                  "coord": {
+                    "lat": 48.86548,
+                    "lng": 2.32113
+                  },
+                  "mapsQuery": "Obélisque de Louxor, Place de la Concorde, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Place Vendôme · Colonne (1er)",
+                  "coord": {
+                    "lat": 48.86747,
+                    "lng": 2.32944
+                  },
+                  "mapsQuery": "Colonne Vendôme, Place Vendôme, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Jardin du Palais-Royal + Colonnes de Buren (8 rue de Montpensier, 1er)",
+                  "coord": {
+                    "lat": 48.86491,
+                    "lng": 2.33776
+                  },
+                  "mapsQuery": "Jardin du Palais-Royal, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Arc de triomphe du Carrousel (place du Carrousel, 1er)",
+                  "coord": {
+                    "lat": 48.86173,
+                    "lng": 2.33291
+                  },
+                  "mapsQuery": "Arc de triomphe du Carrousel, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Pirâmide do Louvre (Cour Napoléon, 1er)",
+                  "coord": {
+                    "lat": 48.86099,
+                    "lng": 2.33584
+                  },
+                  "mapsQuery": "Pyramide du Louvre, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "Saint-Germain-l'Auxerrois (2 place du Louvre, 1er)",
+                  "coord": {
+                    "lat": 48.85951,
+                    "lng": 2.34135
+                  },
+                  "mapsQuery": "Église Saint-Germain-l'Auxerrois, 2 place du Louvre, Paris"
+                },
+                {
+                  "n": 7,
+                  "nome": "Pont Neuf (1er/6e)",
+                  "coord": {
+                    "lat": 48.8578,
+                    "lng": 2.34192
+                  },
+                  "mapsQuery": "Pont Neuf, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Paris Zigzag · place de la Concorde",
+              "u": "https://www.pariszigzag.fr/?p=70834",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1748-1792",
+                "1792-1795",
+                "Louis-Philippe",
+                "1792",
+                "21/01/1793",
+                "1.119 pessoas",
+                "1998"
+              ]
+            },
+            {
+              "o": "Hérodote · obelisco de Luxor, 25/10/1836",
+              "u": "https://www.herodote.net/25_octobre_1836-evenement-18361025.php",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "25/10/1836",
+                "200 mil pessoas",
+                "Ramsés II",
+                "séc. XIII a.C.",
+                "230 toneladas",
+                "22,84 m",
+                "varanda",
+                "Louis-Philippe"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · obras em Paris (jan/2026)",
+              "u": "https://www.pariszigzag.fr/paris-au-quotidien/travaux-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "fim de 2026",
+                "até pelo menos 2029",
+                "2026",
+                "2029"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Place de la Concorde",
+              "u": "https://en.wikipedia.org/wiki/Place_de_la_Concorde",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1795",
+                "1826",
+                "1830",
+                "1.119 pessoas",
+                "reconciliar"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 72937686 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/72937686",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Obélisque de Louxor, Place de la Concorde, Paris"
+        },
+        {
+          "hora": "10:40",
+          "emoji": "🏛️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Place Vendôme · Colonne (1er)",
+          "cat": "Coluna de Napoleão · derrubada na Comuna",
+          "sobre": "Inaugurada em <strong>15/08/1810</strong>, aniversário de Napoleão, a coluna foi feita com o <strong>bronze dos canhões tomados ao inimigo</strong> em Austerlitz e é coberta por <strong>425 placas</strong> de bronze em espiral. Na Comuna, em <strong>1871</strong>, o pintor <strong>Gustave Courbet</strong>, presidente da Federação dos Artistas, propôs desmontá-la e guardá-la nos Invalides; um decreto de <strong>12/04/1871</strong> autorizou, e a coluna foi serrada na base em <strong>16/05/1871</strong>, diante de uma multidão.",
+          "imperdivel": "O que observar: a espiral de relevos subindo a coluna, que conta as campanhas de Napoleão como um gibi em bronze.",
+          "dicas": [
+            "<strong>Pula sem culpa</strong> com criança pequena: praça de joalherias, sem nada pra ela fazer · vale pela história, não pelo passeio",
+            "Foi reerguida depois da Comuna: a Wikipedia data de <strong>1874</strong>, o napoleon.org, de <strong>28/12/1875</strong>"
+          ],
+          "duracao": "5-10 min",
+          "custo": "Grátis",
+          "acessibilidade": "Praça aberta, sem ingresso",
+          "coord": {
+            "lat": 48.86747,
+            "lng": 2.32944
+          },
+          "aprofundar": "<p><strong>A conta chegou pro pintor.</strong> Depois da Comuna, Courbet foi condenado a pagar a reconstrução da coluna (<strong>323.000 francos</strong>, em parcelas); sem poder pagar, exilou-se na Suíça e morreu lá em <strong>1877</strong>.</p>",
+          "fontes": [
+            {
+              "o": "napoleon.org · coluna Vendôme",
+              "u": "https://www.napoleon.org/jeunes-historiens/napodoc/monuments-napoleoniens-la-colonne-vendome-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "15/08/1810",
+                "aniversário de Napoleão",
+                "bronze",
+                "canhões",
+                "425 placas",
+                "16/05/1871",
+                "serrada na base",
+                "multidão",
+                "1875",
+                "28 décembre 1875"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Vendôme Column",
+              "u": "https://en.wikipedia.org/wiki/Vend%C3%B4me_Column",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "Courbet",
+                "Federação dos Artistas",
+                "Invalides",
+                "12/04/1871",
+                "1871",
+                "16/05/1871",
+                "1874",
+                "1877",
+                "323.000 francos"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 227762241 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/227762241",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Colonne Vendôme, Place Vendôme, Paris"
+        },
+        {
+          "hora": "11:10",
+          "emoji": "🌳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Jardin du Palais-Royal + Colonnes de Buren (8 rue de Montpensier, 1er)",
+          "cat": "O jardim onde a Revolução começou a falar alto",
+          "sobre": "O palácio foi do Cardeal Richelieu, projetado por Lemercier a partir de <strong>1629</strong>. Em <strong>12/07/1789</strong>, depois da notícia da demissão do ministro Necker, <strong>Camille Desmoulins</strong> subiu numa mesa do <strong>Café de Foy</strong> (hoje galerie de Montpensier, 57-60), arrancou uma folha de árvore pra prender como cocarda e chamou à insurreição; <strong>dois dias depois</strong> caiu a Bastilha.",
+          "imperdivel": "O que observar: o <strong>canhão do meio-dia</strong>, de <strong>1786</strong>, que disparava sozinho quando uma lente, ao sol do meio-dia, acendia o pavio: daí vem <em>midi pétant</em>. E no pátio, as <strong>260 colunas listradas de Daniel Buren</strong> (obra de 1985-86), no lugar de um estacionamento subterrâneo planejado.",
+          "dicas": [
+            "O canhão perdeu a lente num roubo em <strong>1998</strong> e hoje só dispara, à mão, <strong>poucos dias por ano</strong> (Bastille Day, Jornadas do Patrimônio…)",
+            "As colunas de Buren causaram polêmica nacional (houve quem as chamasse de &quot;ruína moderna&quot;) · a criança pode correr entre as de alturas diferentes",
+            "Também no jardim: as fontes de <strong>Pol Bury</strong>, duas bacias quadradas com <strong>17 esferas</strong> de metal polido cada",
+            "Jardim aberto <strong>8h-20h30</strong> de 1º/out a 31/mar e <strong>8h-22h30</strong> de 1º/abr a 30/set · entrada <strong>grátis</strong>"
+          ],
+          "duracao": "30-40 min",
+          "custo": "Grátis",
+          "acessibilidade": "Jardim aberto; pátio das colunas ao ar livre",
+          "coord": {
+            "lat": 48.86491,
+            "lng": 2.33776
+          },
+          "fontes": [
+            {
+              "o": "Parcours Révolution (Ville de Paris) · Desmoulins no Palais-Royal",
+              "u": "https://parcoursrevolution.paris.fr/en/points-of-interest/98-camille-desmoulins-and-the-orators-of-the-palais-royal",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "12/07/1789",
+                "Necker",
+                "Café de Foy",
+                "Montpensier",
+                "57-60",
+                "dois dias depois",
+                "insurreição"
+              ]
+            },
+            {
+              "o": "Sortir à Paris · o canhão do Palais-Royal",
+              "u": "https://sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/318686-did-you-know-this-small-cannon-in-the-garden-of-the-palais-royal-was-used-as-a-clock-in-the-18th-century",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1786",
+                "lente",
+                "meridiano",
+                "midi pétant",
+                "1998",
+                "poucos dias por ano"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · colunas de Buren",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/colonne-buren-palais-royal-polemique/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "260",
+                "1986",
+                "estacionamento",
+                "ruína moderna",
+                "polêmica"
+              ]
+            },
+            {
+              "o": "Visit Paris Region · Jardin du Palais-Royal",
+              "u": "https://www.visitparisregion.com/fr/jardin-du-palais-royal",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "8h-20h30",
+                "8h-22h30",
+                "grátis",
+                "1º/out a 31/mar",
+                "1º/abr a 30/set",
+                "outubro",
+                "março",
+                "abril",
+                "setembro"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Palais-Royal",
+              "u": "https://en.wikipedia.org/wiki/Palais-Royal",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1629",
+                "Lemercier",
+                "1985-86",
+                "Pol Bury",
+                "17 esferas",
+                "Richelieu",
+                "1786"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Camille Desmoulins",
+              "u": "https://en.wikipedia.org/wiki/Camille_Desmoulins",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "mesa",
+                "Café de Foy",
+                "cocarda"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 4263203 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/4263203",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Jardin du Palais-Royal, Paris"
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🐎",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Arc du Carrousel · cavalos de Veneza (place du Carrousel, 1er)",
+          "cat": "Os cavalos de Veneza que voltaram pra Itália",
+          "sobre": "Napoleão mandou erguer o arco em <strong>1806-1808</strong>, depois de Austerlitz. Os <strong>cavalos de bronze de San Marco</strong> foram levados de Veneza pelos exércitos revolucionários em <strong>1797</strong> e, com a queda do imperador, devolvidos em <strong>1815</strong>; os de hoje são uma quadriga de <strong>Bosio, de 1828</strong>.",
+          "imperdivel": "O que observar: os <strong>oito soldados</strong> no alto das colunas: um couraceiro, um dragão, um granadeiro a cavalo, um caçador, um artilheiro, um carabineiro, um sapador… cada um com uniforme preciso, numa época em que só se faziam estátuas nuas e idealizadas à antiga.",
+          "dicas": [
+            "As colunas coríntias são de mármore rosa (louvre.fr)",
+            "Ver a aba Família pra versão curta, com a criança"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis",
+          "acessibilidade": "Pátio aberto; vê-se por fora, sem ingresso",
+          "coord": {
+            "lat": 48.86173,
+            "lng": 2.33291
+          },
+          "fontes": [
+            {
+              "o": "louvre.fr · Arc du Carrousel",
+              "u": "https://www.louvre.fr/decouvrir/vie-du-musee/restauration-de-l-arc-du-carrousel",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1806-1808",
+                "Austerlitz",
+                "1797",
+                "San Marco",
+                "mármore rosa",
+                "coríntias"
+              ]
+            },
+            {
+              "o": "napoleon.org · Arc de triomphe du Carrousel",
+              "u": "https://www.napoleon.org/magazine/lieux/arc-de-triomphe-du-carrousel-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1815",
+                "oito",
+                "couraceiro",
+                "dragão",
+                "granadeiro",
+                "artilheiro",
+                "carabineiro",
+                "sapador",
+                "preciso"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Arc de Triomphe du Carrousel",
+              "u": "https://en.wikipedia.org/wiki/Arc_de_Triomphe_du_Carrousel",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1828",
+                "Bosio"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 227483542 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/227483542",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Arc de triomphe du Carrousel, Paris"
+        },
+        {
+          "hora": "12:35",
+          "emoji": "🔺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pirâmide do Louvre (Cour Napoléon, 1er)",
+          "cat": "A pirâmide de vidro de Pei",
+          "sobre": "Projeto de <strong>I. M. Pei</strong>, escolhido em <strong>1983</strong> dentro do plano Grand Louvre, anunciado por Mitterrand em <strong>1981</strong>. A pirâmide tem <strong>21,6 m</strong>, foi concluída em <strong>1989</strong> e é a entrada principal do museu.",
+          "imperdivel": "O que observar: as linhas de visão do palácio, que chegam também a quem está no hall subterrâneo.",
+          "dicas": [
+            "Pátio Napoléon aberto <strong>7h30-21h</strong> (louvre.fr)",
+            "Cour Carrée aberta <strong>7h30-19h45</strong> (louvre.fr)"
+          ],
+          "duracao": "10 min",
+          "custo": "Grátis (pátio)",
+          "acessibilidade": "Pátio aberto; vê-se por fora, sem ingresso",
+          "coord": {
+            "lat": 48.86099,
+            "lng": 2.33584
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia (en) · Louvre Pyramid",
+              "u": "https://en.wikipedia.org/wiki/Louvre_Pyramid",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1983",
+                "1981",
+                "21,6 m",
+                "1989",
+                "Mitterrand"
+              ]
+            },
+            {
+              "o": "louvre.fr · horários e tarifas",
+              "u": "https://www.louvre.fr/horaires-tarifs-acces",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "7h30-21h",
+                "7h30-19h45"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 375076234 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/375076234",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Pyramide du Louvre, Paris"
+        },
+        {
+          "hora": "13:00",
+          "emoji": "⛪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Saint-Germain-l'Auxerrois (2 place du Louvre, 1er)",
+          "cat": "A igreja cujo sino deu o sinal da Saint-Barthélemy",
+          "sobre": "Foi a <strong>paróquia dos moradores do Louvre</strong> de <strong>1608 a 1806</strong>. Na noite de <strong>23 para 24/08/1572</strong>, por volta das <strong>2h30</strong>, o <strong>sino</strong> desta igreja tocou o alarme que deu início ao massacre da Saint-Barthélemy: os protestantes que tinham subido a Paris pro casamento de Henrique de Navarra e Margarida de Valois foram mortos; só em Paris, perto de <strong>3.000</strong>.",
+          "imperdivel": "O que observar: a base da <strong>torre do sino</strong>, do fim do <strong>séc. XII</strong>: a parte baixa da torre é o único trecho românico que sobrou; o resto do prédio é em grande parte do <strong>séc. XV</strong>, com acréscimos até o séc. XVI.",
+          "dicas": [
+            "Igreja aberta <strong>ter, sex, sáb, dom 10h-19h</strong> e <strong>qua, qui 10h-19h30</strong> · <strong>fecha segunda</strong> (site da paróquia) · acesso de plain-pied pelo 2 place du Louvre, sob pedido",
+            "Fica na place du Louvre, em frente ao Louvre"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis",
+          "acessibilidade": "Acesso de plain-pied pelo 2 place du Louvre, sob pedido",
+          "coord": {
+            "lat": 48.85951,
+            "lng": 2.34135
+          },
+          "fontes": [
+            {
+              "o": "paris.fr · passeio Saint-Barthélemy",
+              "u": "https://www.paris.fr/pages/balade-sur-les-traces-de-la-saint-barthelemy-21793",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "2h30",
+                "tocsin",
+                "Henri de Navarre",
+                "3.000",
+                "casamento"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · Saint-Germain-l'Auxerrois",
+              "u": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-passe-sanglant-de-leglise-saint-germain-lauxerrois/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "23 para 24/08/1572",
+                "1572"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Saint-Germain l'Auxerrois",
+              "u": "https://en.wikipedia.org/wiki/Saint-Germain-l%27Auxerrois",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1608 a 1806",
+                "séc. XII",
+                "românico",
+                "único trecho românico",
+                "séc. XV",
+                "séc. XVI",
+                "sino"
+              ]
+            },
+            {
+              "o": "paris.fr · ficha da igreja",
+              "u": "https://www.paris.fr/lieux/eglise-saint-germain-l-auxerrois-3750",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "2 place du Louvre",
+                "plain-pied"
+              ]
+            },
+            {
+              "o": "Paróquia Saint-Germain-l'Auxerrois · horários",
+              "u": "https://saintgermainlauxerrois.fr/nos-horaires/",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h-19h",
+                "10h-19h30",
+                "fecha segunda"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 53770908 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/53770908",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Église Saint-Germain-l'Auxerrois, 2 place du Louvre, Paris"
+        },
+        {
+          "hora": "13:30",
+          "emoji": "🌉",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Pont Neuf (1er/6e)",
+          "cat": "A ponte mais antiga de Paris (que se chama Nova)",
+          "sobre": "Apesar do nome, é a <strong>ponte mais antiga de Paris</strong>: obra começada em <strong>1578</strong>, parada nas guerras de religião e dada como concluída em <strong>1607</strong>. Henrique IV decidiu que seria <strong>sem casas em cima</strong>, pra deixar a vista livre do Sena, e ela ganhou <strong>calçadas</strong>, novidade na época.",
+          "imperdivel": "O que observar: as <strong>máscaras grotescas</strong> (mascarons) sob a cornija, centenas de rostos de sorriso torto, e a estátua equestre de Henrique IV: a original, encomendada por Maria de Médici e instalada em <strong>1614</strong>, foi destruída na Revolução; a atual, de Lemot, é de <strong>1818</strong>.",
+          "dicas": [
+            "Caçar a &quot;máscara mais feia&quot; é brincadeira que prende criança",
+            "Monumento histórico desde <strong>1889</strong> e parte da área do Sena listada pela UNESCO desde <strong>1991</strong>"
+          ],
+          "duracao": "15-20 min",
+          "custo": "Grátis",
+          "acessibilidade": "Ponte com calçadas que separam pedestres do trânsito",
+          "coord": {
+            "lat": 48.8578,
+            "lng": 2.34192
+          },
+          "fontes": [
+            {
+              "o": "Sortir à Paris · Pont-Neuf",
+              "u": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/173577-history-pont-neuf-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1578",
+                "1607",
+                "sem casas",
+                "calçadas",
+                "mascarons",
+                "1614",
+                "1818",
+                "Lemot",
+                "1889",
+                "1991"
+              ]
+            },
+            {
+              "o": "History Hit · Pont Neuf",
+              "u": "https://www.historyhit.com/locations/pont-neuf/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "mais antiga",
+                "1578",
+                "1607",
+                "sem casas"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 53574164 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/53574164",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Pont Neuf, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🖼️",
+      "tema": "Louvre · Tuileries Museus · Visita curta com criança",
+      "temaCurto": "Museus",
+      "bairro": "🖼️ Orangerie · Louvre (1er)",
+      "grupo": false,
+      "cor": "#4f46e5",
+      "gradA": "#3730a3",
+      "gradB": "#6366f1",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"Ninféias + Louvre-relâmpago\"</strong>: não é rota linear, é um cardápio de <strong>2 visitas curtas</strong>: o Orangerie de manhã (1 hora) e, se a criança ainda estiver bem, o Louvre-relâmpago depois do almoço (1 hora; opções de almoço na aba Família). <strong>Nunca na terça</strong>: Orangerie e Louvre fecham. <strong>Por que o Louvre é amarelo</strong>: ingresso caro pra quem é de fora do EEE, saída definitiva e salas fechando em rodízio. <strong>Pula sem culpa:</strong> o <strong>Louvre &quot;de verdade&quot;</strong> (2h+) com criança pequena, e as <strong>visitas guiadas família do Louvre</strong> (&quot;Louvre en famille&quot; e as temáticas), pensadas pra crianças de <strong>6 a 10 anos</strong>.",
+      "stops": [
+        {
+          "hora": "09:15",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Concorde (L1/L8/L12)",
+          "cat": "Linhas 1, 8 e 12 · a estação fica sob a parte norte da place de la Concorde · o Orangerie fica na ponta oeste das Tuileries, a ~270 m em linha reta",
+          "coord": {
+            "lat": 48.86618,
+            "lng": 2.3224
+          }
+        },
+        {
+          "hora": "09:30",
+          "emoji": "🪷",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Musée de l'Orangerie · salas das Ninféias (Jardin des Tuileries, 1er)",
+          "cat": "Duas salas ovais de Monet · o museu do tamanho de criança",
+          "sobre": "Em <strong>12/11/1918, um dia depois do Armistício</strong>, Monet escreveu a Clemenceau sobre dois painéis que queria assinar no Dia da Vitória. O contrato de doação ao Estado foi assinado em <strong>12/04/1922</strong> e as salas foram inauguradas em <strong>17/05/1927</strong>, meses depois da morte do pintor (1926). São <strong>8 composições</strong> grandes em <strong>2 salas em forma de ovo</strong>, que juntas formam o símbolo do infinito. A orientação é <strong>leste-oeste</strong>: tons de amanhecer a leste, de pôr do sol a oeste.",
+          "imperdivel": "O que observar: a <strong>luz que vem do teto</strong>. Foi tapada nas reformas dos anos <strong>1960</strong> e devolvida no restauro de <strong>2006</strong>, então o quadro muda com as nuvens.",
+          "dicas": [
+            "Há <strong>bancos nas salas</strong> das Ninféias: a criança senta, olha e &quot;entra no lago&quot;",
+            "<strong>9h-18h</strong> (sexta até 21h quando há exposição), <strong>fecha terça</strong> · última entrada 17h15 · <strong>€12,50</strong> online e <strong>€11</strong> na bilheteria · <strong>grátis abaixo de 18 anos</strong>",
+            "Guarda-volumes: o museu tem serviço de guarda e empresta cadeira de rodas, assento dobrável e bengala",
+            "🚶 <strong>Cardápio de 2 visitas curtas</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Orangerie</strong> — de manhã, 1 hora no máximo",
+            "🚶 <strong>Ⓐ Louvre-relâmpago</strong> — depois do almoço, atravessando o jardim das Tuileries até a Pirâmide"
+          ],
+          "duracao": "45-60 min",
+          "custo": "€12,50 (2026) · <18 anos grátis",
+          "acessibilidade": "Bancos nas salas; guarda-volumes; empréstimo de cadeira de rodas e assento dobrável",
+          "coord": {
+            "lat": 48.86377,
+            "lng": 2.32266
+          },
+          "fontes": [
+            {
+              "o": "Musée de l'Orangerie · história das Ninféias",
+              "u": "https://www.musee-orangerie.fr/en/node/33",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "12/11/1918",
+                "Armistício",
+                "Clemenceau",
+                "12/04/1922",
+                "17/05/1927",
+                "8 composições",
+                "2 salas",
+                "leste-oeste",
+                "1960",
+                "2006",
+                "1926",
+                "forma de ovo"
+              ]
+            },
+            {
+              "o": "Musée de l'Orangerie · visita (horários e tarifas)",
+              "u": "https://www.musee-orangerie.fr/en/visit-orangerie",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "9h-18h",
+                "21h",
+                "terça",
+                "17h15",
+                "última entrada",
+                "€12,50",
+                "€11",
+                "guarda-volumes",
+                "assento dobrável"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Musée de l'Orangerie",
+              "u": "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27Orangerie",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "símbolo do infinito",
+                "infinito",
+                "17/05/1927"
+              ]
+            },
+            {
+              "o": "Musée de l'Orangerie · acesso, horários e tarifas (FR)",
+              "u": "https://www.musee-orangerie.fr/fr/visite/acces-horaires-tarifs",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "18 anos",
+                "grátis"
+              ]
+            },
+            {
+              "o": "Art Visit Guide · Orangerie",
+              "u": "https://www.artvisitguide.com/orangerie-museum-guide/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "bancos"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 54188996 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/54188996",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée de l'Orangerie, Paris"
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🔺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Louvre-relâmpago · entrada pela Pirâmide (1er)",
+          "cat": "3 obras e saída · esfinge, múmias e a deusa sem cabeça",
+          "sobre": "Proposta de roteiro-relâmpago, em <strong>1 hora</strong>: o setor egípcio da ala Sully (<strong>Esfinge de Tânis</strong>, sala 338, múmias, sarcófagos e o <strong>Escriba sentado</strong>) e a <strong>Vitória de Samotrácia</strong>, no alto da escadaria Daru. A Vitória está no Louvre desde <strong>1884</strong>: mármore de Paros de <strong>c. 200-190 a.C.</strong>, sem cabeça nem braços, achada em <strong>13/04/1863</strong> no santuário dos Grandes Deuses de Samotrácia.",
+          "imperdivel": "O que observar: o Escriba sentado, &quot;uma estátua colorida de olhar tão expressivo&quot; (Enfant en voyage), e a Vitória de Samotrácia surgindo no alto da escadaria Daru.",
+          "dicas": [
+            "<strong>Toda saída é definitiva</strong>: não dá pra sair pro parquinho e voltar · o ingresso vale só pra data e hora marcadas, e a reserva online é recomendada, inclusive pra quem não paga",
+            "<strong>Seg, qui, sáb, dom 9h-18h · qua e sex 9h-21h · fecha terça</strong> · última entrada 1 hora antes do fechamento",
+            "<strong>€22</strong> pra residentes e nacionais do EEE, <strong>€32</strong> pra quem é de fora · <strong>grátis abaixo de 18 anos</strong>, de qualquer nacionalidade, mas com bilhete",
+            "O Louvre fecha salas em rodízio conforme o dia da semana: <strong>consulte o calendário de abertura das salas</strong> no site oficial antes de escolher o dia, principalmente se a ala egípcia for o objetivo",
+            "Não dá pra ver tudo: o Louvre publica no site <strong>percursos temáticos</strong>, inclusive para crianças · a Esfinge fica na sala 338 (ala Sully, nível -1) e o Escriba na sala 635 (ala Sully, nível 1)"
+          ],
+          "duracao": "1 hora",
+          "custo": "€22 (EEE) · €32 (fora do EEE) (2026) · <18 anos grátis",
+          "acessibilidade": "Escadaria Daru; consulte o calendário de salas",
+          "coord": {
+            "lat": 48.86115,
+            "lng": 2.33803
+          },
+          "fontes": [
+            {
+              "o": "louvre.fr · horários e tarifas",
+              "u": "https://www.louvre.fr/horaires-tarifs-acces",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "9h-18h",
+                "9h-21h",
+                "terça",
+                "última entrada",
+                "1 hora antes",
+                "€22",
+                "€32",
+                "18 anos",
+                "definitiva",
+                "recomendada"
+              ]
+            },
+            {
+              "o": "louvre.fr · calendário de abertura das salas",
+              "u": "https://www.louvre.fr/horaires-tarifs-acces/calendrier-d-ouverture-des-salles",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "calendário de abertura das salas",
+                "rodízio"
+              ]
+            },
+            {
+              "o": "Enfant en voyage · Louvre em família",
+              "u": "https://www.enfant-en-voyage.com/visite-louvre-enfant-famille/",
+              "tier": "campo",
+              "data": "2026-10-08",
+              "prova": [
+                "Esfinge de Tânis",
+                "338",
+                "Escriba sentado",
+                "múmias",
+                "sarcófagos",
+                "escadaria Daru",
+                "olhar tão expressivo",
+                "percursos temáticos"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Winged Victory of Samothrace",
+              "u": "https://en.wikipedia.org/wiki/Winged_Victory_of_Samothrace",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1884",
+                "c. 200-190 a.C.",
+                "13/04/1863",
+                "mármore de Paros",
+                "sem cabeça",
+                "Grandes Deuses"
+              ]
+            },
+            {
+              "o": "louvre.fr · a Esfinge, guardiã da arte egípcia",
+              "u": "https://www.louvre.fr/en/explore/the-palace/the-guardian-of-egyptian-art",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "338",
+                "635",
+                "Sully",
+                "nível -1",
+                "nível 1"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · relation 7515426 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/relation/7515426",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Musée du Louvre, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🌧️",
+      "tema": "Louvre · Tuileries Passagens · O plano de chuva",
+      "temaCurto": "Passagens",
+      "bairro": "🌧️ Grands Boulevards → Vivienne → Palais-Royal (2e/1er)",
+      "grupo": true,
+      "cor": "#b45309",
+      "gradA": "#78350f",
+      "gradB": "#f59e0b",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"O plano de chuva\"</strong>: passagens cobertas do séc. XIX, ao norte do Louvre. Proposta: descer em <strong>Grands Boulevards</strong> (L8/L9), ~1,1 km em linha reta (estimativa, não medida), <strong>14h-17h30</strong>, quase tudo coberto · volta pela L1 ou L7 em <strong>Palais-Royal–Musée du Louvre</strong>. Paris chegou a ter <strong>até 150</strong> passagens e galerias no Segundo Império; hoje restam <strong>cerca de trinta</strong>, várias delas no 2º arrondissement (Prefeitura de Paris). <strong>Pula sem culpa:</strong> nada neste traçado; se o dia estiver bom, troque o Palais-Royal pela aba Família.",
+      "stops": [
+        {
+          "hora": "14:00",
+          "emoji": "🚇",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Grands Boulevards (L8/L9)",
+          "cat": "Linhas 8 e 9 · a estação fica sob a ponta oeste do boulevard Poissonnière, perto do Passage des Panoramas · volta pela L1/L7 em Palais-Royal–Musée du Louvre",
+          "coord": {
+            "lat": 48.87143,
+            "lng": 2.34434
+          }
+        },
+        {
+          "hora": "14:15",
+          "emoji": "🕯️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Passage des Panoramas (11 boulevard Montmartre, 2e)",
+          "cat": "A mais antiga das passagens cobertas que sobrevivem",
+          "sobre": "A <strong>mais antiga</strong> das passagens de Paris que restam: construída em <strong>1799</strong> (segundo a Prefeitura; a Visit Paris Region diz 1800) pelo armador americano <strong>William Thayer</strong>, com o nome vindo de duas rotundas de <strong>panoramas</strong> pintados (uma de Paris, outra de Toulon), que sumiram em 1831. Em <strong>1817</strong> foi o <strong>primeiro lugar público de Paris com iluminação a gás</strong>.",
+          "imperdivel": "O que observar: a loja do gravador alsaciano <strong>Stern</strong>, do início do séc. XIX, e o <strong>Caffè Stern</strong> (nº 47), o único espaço com a decoração interna original desde a construção da passagem.",
+          "dicas": [
+            "Aberta todos os dias, <strong>6h-0h</strong> · entrada grátis",
+            "A entrada dos artistas do Théâtre des Variétés fica no <strong>nº 17</strong> da passagem",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Passage des Panoramas</strong> — comece aqui, saindo do metrô Grands Boulevards",
+            "🚶 <strong>Ⓐ Galerie Vivienne</strong> — descendo pela rue Vivienne",
+            "🚶 <strong>Ⓑ Le Valentin</strong> — dentro da galeria, no nº 35: pausa sentada e coberta",
+            "🚶 <strong>Ⓒ Jardin du Palais-Royal</strong> — a pé rumo ao sul, pra correr depois do trecho coberto",
+            "🚶 <strong>Ⓓ Galerie Véro-Dodat</strong> — a passagem de fecho, ao lado leste do Palais-Royal"
+          ],
+          "duracao": "20-30 min",
+          "custo": "Grátis",
+          "acessibilidade": "Passagem coberta, aberta ao público",
+          "coord": {
+            "lat": 48.87095,
+            "lng": 2.34166
+          },
+          "walkingTours": [
+            {
+              "nome": "Passagens cobertas · 🌧️ O plano de chuva",
+              "descricao": "Panoramas → Galerie Vivienne → Le Valentin → Palais-Royal → Véro-Dodat · ~1,1 km em linha reta (estimativa, não medida) · quase tudo coberto",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Passage des Panoramas (11 boulevard Montmartre, 2e)",
+                  "coord": {
+                    "lat": 48.87095,
+                    "lng": 2.34166
+                  },
+                  "mapsQuery": "Passage des Panoramas, 11 boulevard Montmartre, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Galerie Vivienne (4 rue des Petits-Champs, 2e)",
+                  "coord": {
+                    "lat": 48.86673,
+                    "lng": 2.33976
+                  },
+                  "mapsQuery": "Galerie Vivienne, 4 rue des Petits-Champs, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Le Valentin (35 Galerie Vivienne, 2e)",
+                  "coord": {
+                    "lat": 48.86654,
+                    "lng": 2.34011
+                  },
+                  "mapsQuery": "Le Valentin, 35 Galerie Vivienne, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Jardin du Palais-Royal + Colonnes de Buren (8 rue de Montpensier, 1er)",
+                  "coord": {
+                    "lat": 48.86491,
+                    "lng": 2.33776
+                  },
+                  "mapsQuery": "Jardin du Palais-Royal, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Galerie Véro-Dodat (19 rue Jean-Jacques Rousseau, 1er)",
+                  "coord": {
+                    "lat": 48.86282,
+                    "lng": 2.34022
+                  },
+                  "mapsQuery": "Galerie Véro-Dodat, 19 rue Jean-Jacques Rousseau, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Visit Paris Region · Passage des Panoramas",
+              "u": "https://www.visitparisregion.com/fr/passage-des-panoramas",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1800",
+                "William Thayer",
+                "armador americano",
+                "panoramas",
+                "Toulon",
+                "1831",
+                "1817",
+                "primeiro lugar público",
+                "gás",
+                "6h-0h",
+                "47",
+                "17",
+                "Théâtre des Variétés",
+                "único espaço"
+              ]
+            },
+            {
+              "o": "paris.fr · galerias e passagens",
+              "u": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1799",
+                "mais antiga",
+                "Stern",
+                "início do séc. XIX",
+                "início do XIXe siècle"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 152319685 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/152319685",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Passage des Panoramas, 11 boulevard Montmartre, Paris"
+        },
+        {
+          "hora": "14:55",
+          "emoji": "🏺",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Galerie Vivienne (4 rue des Petits-Champs, 2e)",
+          "cat": "A passagem que Marchoux quis a mais bela de Paris",
+          "sobre": "Construída entre <strong>1823</strong> e <strong>1826</strong> pelo arquiteto Delannoy, por encomenda de Louis-Auguste Marchoux, que a queria a mais bela e atraente das passagens cobertas de Paris; foi <strong>inaugurada em 1826</strong>. A Académie des beaux-arts é coproprietária da galeria desde <strong>1870</strong>.",
+          "imperdivel": "O que observar: o <strong>piso de mosaico</strong> de mármore e cerâmica colorida, obra de <strong>Giandomenico Facchina</strong> (<strong>1880</strong>) e, na <strong>escadaria monumental do nº 13</strong>, onde morou por volta de <strong>1840</strong> <strong>Vidocq</strong>, o ex-condenado que virou fundador da polícia de investigação. A <strong>Librairie Jousseaume</strong> (nº 45-47) funciona desde <strong>1826</strong>.",
+          "dicas": [
+            "Mosaico = jogo de &quot;não pisa na linha&quot; pra criança",
+            "Galeria pública, grátis, aberta todos os dias de <strong>8h30 às 20h</strong> (site oficial da galeria) · Jousseaume abre <strong>seg-sáb 11h-19h</strong>"
+          ],
+          "duracao": "20-30 min",
+          "custo": "Grátis",
+          "acessibilidade": "Galeria coberta, aberta ao público",
+          "coord": {
+            "lat": 48.86673,
+            "lng": 2.33976
+          },
+          "fontes": [
+            {
+              "o": "Académie des beaux-arts · comunicado da Galerie Vivienne (30/09/2025)",
+              "u": "https://www.academiedesbeauxarts.fr/sites/default/files/inline-files/communique-de-presse-ouverture-nouvel-espace-d-exposition-galerie-vivienne_0.pdf",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1823",
+                "1826",
+                "Facchina",
+                "1880",
+                "1870",
+                "Marchoux",
+                "mármore e cerâmica"
+              ]
+            },
+            {
+              "o": "Galerie Vivienne (site oficial)",
+              "u": "https://www.galerie-vivienne.com",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "8h30 às 20h",
+                "todos os dias"
+              ]
+            },
+            {
+              "o": "paris.fr · galerias e passagens",
+              "u": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "inaugurada em 1826",
+                "Facchina",
+                "Vidocq",
+                "escadaria monumental",
+                "mais bela"
+              ]
+            },
+            {
+              "o": "Francophiles Anonymes · Galerie Vivienne",
+              "u": "https://www.francophilesanonymes.com/en/paris/galerie-vivienne/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Delannoy",
+                "nº 13",
+                "1840",
+                "Vidocq",
+                "Jousseaume",
+                "45-47"
+              ]
+            },
+            {
+              "o": "Sortir à Paris · Librairie Jousseaume",
+              "u": "https://www.sortiraparis.com/loisirs/shopping-mode/articles/305220-librairie-jousseaume-une-boutique-historique-au-coeur-de-la-galerie-vivienne-photos-et-reportage",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1826",
+                "seg-sáb 11h-19h",
+                "11h-19h"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · relation 546789 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/relation/546789",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "atracao",
+          "mapsQuery": "Galerie Vivienne, 4 rue des Petits-Champs, Paris"
+        },
+        {
+          "hora": "15:30",
+          "emoji": "🍵",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Le Valentin (35 Galerie Vivienne, 2e)",
+          "cat": "Salão de chá dentro da galeria",
+          "sobre": "Salão de chá no <strong>nº 35 da Galerie Vivienne</strong>, com doces artesanais, café da manhã e almoço (<em>avocado toast</em>, <em>croque-monsieur au Comté</em>). No mesmo número funcionou o A Priori Thé, aberto em <strong>1980</strong> e hoje fechado.",
+          "imperdivel": "Pausa sentada e coberta no meio do passeio: divida um doce e um chá.",
+          "dicas": [
+            "Fórmulas de almoço a <strong>€19</strong> (entrada + prato) e <strong>€21</strong> (prato + doce); café da manhã de <strong>€5</strong> a <strong>€18,50</strong> (Sortir à Paris, ficha atualizada em dez/2024: confira o cardápio)",
+            "Horário: a Sortir à Paris dá <strong>10h30-18h30</strong> todos os dias e outra ficha dá horário diferente: confira antes · telefone +33 1 42 86 80 81",
+            "O pino marca o corredor da Galerie Vivienne (OpenStreetMap): o salão fica no nº 35, lá dentro"
+          ],
+          "duracao": "30-45 min",
+          "custo": "fórmula de almoço €19-21 (ficha de dez/2024)",
+          "acessibilidade": "Dentro da galeria coberta",
+          "coord": {
+            "lat": 48.86654,
+            "lng": 2.34011
+          },
+          "fontes": [
+            {
+              "o": "Sortir à Paris · Le Valentin (ficha atualizada em 20/12/2024)",
+              "u": "https://www.sortiraparis.com/hotel-restaurant/cafe-tea-time/articles/230168-le-valentin-le-charmant-salon-de-the-retro-de-la-galerie-vivienne-a-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "35 Galerie Vivienne",
+                "10h30-18h30",
+                "€19",
+                "€21",
+                "€5",
+                "€18,50",
+                "croque-monsieur au Comté",
+                "avocado toast",
+                "dez/2024"
+              ]
+            },
+            {
+              "o": "Privateaser · Le Valentin",
+              "u": "https://www.privateaser.com/lieu/7136-le-valentin",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "35 Galerie Vivienne"
+              ]
+            },
+            {
+              "o": "lesrestos.com · A Priori Thé (fechado)",
+              "u": "https://www.lesrestos.com/restaurant/fiche/paris/a-priori-the",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "fechado"
+              ]
+            },
+            {
+              "o": "France Today · Galerie Vivienne",
+              "u": "https://francetoday.com/travel/paris/parisian_walkways_galerie_vivienne/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1980"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 1192963471 (corredor da Galerie Vivienne; coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/1192963471",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "cafe",
+          "mapsQuery": "Le Valentin, 35 Galerie Vivienne, Paris"
+        },
+        {
+          "hora": "16:15",
+          "emoji": "🌳",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Jardin du Palais-Royal + Colonnes de Buren (8 rue de Montpensier, 1er)",
+          "cat": "O jardim depois do passeio coberto",
+          "sobre": "Jardim do antigo palácio do Cardeal Richelieu (projeto de <strong>1629</strong>), hoje com <strong>260 colunas</strong> listradas de Daniel Buren e as fontes de <strong>Pol Bury</strong>. A história completa de Camille Desmoulins e do canhão do meio-dia está na aba História.",
+          "imperdivel": "O que observar: as <strong>fontes de Pol Bury</strong>, duas bacias quadradas com <strong>17 esferas</strong> de metal polido cada, e as colunas de Buren em alturas diferentes.",
+          "dicas": [
+            "Espaço aberto pra correr depois do trecho coberto · fecha <strong>20h30</strong> de outubro a março e <strong>22h30</strong> de abril a setembro · grátis",
+            "Debaixo de tílias e castanheiros"
+          ],
+          "duracao": "20-30 min",
+          "custo": "Grátis",
+          "acessibilidade": "Jardim aberto; pátio das colunas ao ar livre",
+          "coord": {
+            "lat": 48.86491,
+            "lng": 2.33776
+          },
+          "fontes": [
+            {
+              "o": "Visit Paris Region · Jardin du Palais-Royal",
+              "u": "https://www.visitparisregion.com/fr/jardin-du-palais-royal",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "20h30",
+                "22h30",
+                "outubro",
+                "março",
+                "abril",
+                "setembro",
+                "grátis",
+                "tílias",
+                "castanheiros",
+                "Pol Bury"
+              ]
+            },
+            {
+              "o": "Wikipedia (en) · Palais-Royal",
+              "u": "https://en.wikipedia.org/wiki/Palais-Royal",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "1629",
+                "17 esferas",
+                "Richelieu"
+              ]
+            },
+            {
+              "o": "Paris Zigzag · colunas de Buren",
+              "u": "https://www.pariszigzag.fr/insolite/lieux-insolites/colonne-buren-palais-royal-polemique/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "260"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 4263203 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/4263203",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "parque",
+          "mapsQuery": "Jardin du Palais-Royal, Paris"
+        },
+        {
+          "hora": "16:50",
+          "emoji": "🚪",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Galerie Véro-Dodat (19 rue Jean-Jacques Rousseau, 1er)",
+          "cat": "Passagem de 1826 aberta por dois charcutiers",
+          "sobre": "Aberta em <strong>1826</strong> por dois charcutiers, <strong>Véro e Dodat</strong>, como passagem coberta entre o Palais-Royal e Les Halles: cerca de <strong>80 m</strong> de lojas neoclássicas.",
+          "imperdivel": "O que observar: o <strong>piso em xadrez diagonal preto e branco</strong>, que cria ilusão de profundidade, o teto de vidro e o decor pintado, restaurado em <strong>1997</strong>. Aqui fica a loja de <strong>Christian Louboutin</strong>.",
+          "dicas": [
+            "Curta: dá pra passar em poucos minutos · aberta todos os dias, <strong>7h-22h</strong> · grátis",
+            "Xadrez no chão: a criança pode pular só nos quadrados pretos"
+          ],
+          "duracao": "10-15 min",
+          "custo": "Grátis",
+          "acessibilidade": "Passagem coberta, aberta ao público",
+          "coord": {
+            "lat": 48.86282,
+            "lng": 2.34022
+          },
+          "fontes": [
+            {
+              "o": "Visit Paris Region · Galerie Véro-Dodat",
+              "u": "https://www.visitparisregion.com/en/galerie-vero-dodat",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1826",
+                "Véro",
+                "Dodat",
+                "80 m",
+                "xadrez diagonal",
+                "1997",
+                "Louboutin",
+                "7h-22h",
+                "charcutiers"
+              ]
+            },
+            {
+              "o": "paris.fr · galerias e passagens",
+              "u": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1826",
+                "charcutiers",
+                "ilusão de profundidade"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 1378010583 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/1378010583",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "atracao",
+          "mapsQuery": "Galerie Véro-Dodat, 19 rue Jean-Jacques Rousseau, Paris"
+        }
+      ]
+    },
+    {
+      "date": "🍫",
+      "tema": "Louvre · Tuileries Guloso · De Angelina ao baba original",
+      "temaCurto": "Guloso",
+      "bairro": "🍫 Rivoli → Saint-Honoré → Montorgueil → Faubourg-Montmartre",
+      "grupo": true,
+      "cor": "#db2777",
+      "gradA": "#9d174d",
+      "gradB": "#f472b6",
+      "hideStopMarkers": true,
+      "nota": "<strong>\"De Angelina ao baba original\"</strong>: ~2,5 km em linha reta (estimativa, não medida), <strong>10h30-16h</strong>, começando de manhã pra pegar a Angelina antes da fila · termina em <strong>Grands Boulevards</strong>, com as linhas 8 e 9. Sem carrinho, 2,5 km é muito pra criança pequena: dá pra cortar depois do Fou de Pâtisserie e do Stohrer, que ficam na mesma rua. <strong>Pula sem culpa:</strong> a <strong>Angelina no horário de pico</strong> (12h às 15h: vá fora desse horário ou reserve) e o <strong>Café Verlet</strong> com criança: é a parada mais dispensável do traçado.",
+      "stops": [
+        {
+          "hora": "10:15",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Chegada · Métro Tuileries (L1)",
+          "cat": "Linha 1 · a estação fica sob a rue de Rivoli, ao longo do jardim · volta por Grands Boulevards (L8/L9)",
+          "coord": {
+            "lat": 48.8645,
+            "lng": 2.33031
+          }
+        },
+        {
+          "hora": "10:30",
+          "emoji": "☕",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "nome": "Angelina (226 rue de Rivoli, 1er)",
+          "cat": "Chocolate quente de 1903 em frente às Tuileries",
+          "sobre": "Casa de <strong>1903</strong> (então Rumpelmeyer), com interior Belle Époque de <strong>Niermans</strong>, frequentada por Proust e Coco Chanel. O chocolate quente <strong>l'Africain</strong> mistura cacaus de Níger, Gana e Costa do Marfim, com receita secreta; vendem até <strong>600 Mont-Blanc por dia</strong>.",
+          "imperdivel": "O que observar: os espelhos e os mármores do salão, que ficaram como eram; o chocolate vem tão grosso que quase vira pudim: divida <strong>1 por 2</strong>.",
+          "dicas": [
+            "Fila no almoço: o aperto vai de <strong>12h às 15h</strong> (Bonjour Paris); fora desse horário costuma haver mesa, e a casa recomenda reservar",
+            "Abre cedo, por volta das <strong>7h30-8h30</strong>, e fecha por volta das <strong>19h-19h30</strong>; as fontes divergem em meia hora",
+            "🚶 <strong>Walking Tour · parada a parada</strong> (toque em 🗺️ Mapa pra rota):",
+            "🚶 <strong>○ Angelina</strong> — comece aqui, em frente às Tuileries",
+            "🚶 <strong>Ⓐ Café Verlet</strong> — a pé pela rue Saint-Honoré",
+            "🚶 <strong>Ⓑ Le Valentin</strong> — dentro da Galerie Vivienne, no nº 35: a parada salgada",
+            "🚶 <strong>Ⓒ Fou de Pâtisserie</strong> — rumo ao leste, até a rue Montorgueil",
+            "🚶 <strong>Ⓓ Stohrer</strong> — na mesma rua, no nº 51",
+            "🚶 <strong>Ⓔ À la Mère de Famille</strong> — subindo até o boulevard"
+          ],
+          "duracao": "40-60 min",
+          "custo": "chocolate quente e doce no salão",
+          "acessibilidade": "Salão com mesas; reserve se for no horário de pico",
+          "coord": {
+            "lat": 48.86508,
+            "lng": 2.32841
+          },
+          "walkingTours": [
+            {
+              "nome": "De Angelina ao baba original · 🍫 Guloso",
+              "descricao": "Angelina → Café Verlet → Le Valentin → Fou de Pâtisserie → Stohrer → À la Mère de Famille · ~2,5 km em linha reta (estimativa, não medida) · termina em Grands Boulevards, com a L9 de volta",
+              "stops": [
+                {
+                  "n": 1,
+                  "nome": "Angelina (226 rue de Rivoli, 1er)",
+                  "coord": {
+                    "lat": 48.86508,
+                    "lng": 2.32841
+                  },
+                  "mapsQuery": "Angelina, 226 rue de Rivoli, Paris"
+                },
+                {
+                  "n": 2,
+                  "nome": "Café Verlet (256 rue Saint-Honoré, 1er)",
+                  "coord": {
+                    "lat": 48.86411,
+                    "lng": 2.3339
+                  },
+                  "mapsQuery": "Verlet, 256 rue Saint-Honoré, Paris"
+                },
+                {
+                  "n": 3,
+                  "nome": "Le Valentin (35 Galerie Vivienne, 2e)",
+                  "coord": {
+                    "lat": 48.86654,
+                    "lng": 2.34011
+                  },
+                  "mapsQuery": "Le Valentin, 35 Galerie Vivienne, Paris"
+                },
+                {
+                  "n": 4,
+                  "nome": "Fou de Pâtisserie (45 rue Montorgueil, 2e)",
+                  "coord": {
+                    "lat": 48.86493,
+                    "lng": 2.34671
+                  },
+                  "mapsQuery": "Fou de Pâtisserie, 45 rue Montorgueil, Paris"
+                },
+                {
+                  "n": 5,
+                  "nome": "Stohrer (51 rue Montorgueil, 2e)",
+                  "coord": {
+                    "lat": 48.86525,
+                    "lng": 2.34682
+                  },
+                  "mapsQuery": "Stohrer, 51 rue Montorgueil, Paris"
+                },
+                {
+                  "n": 6,
+                  "nome": "À la Mère de Famille (35 rue du Faubourg-Montmartre, 9e)",
+                  "coord": {
+                    "lat": 48.87395,
+                    "lng": 2.34233
+                  },
+                  "mapsQuery": "À la Mère de Famille, 35 rue du Faubourg Montmartre, Paris"
+                }
+              ]
+            }
+          ],
+          "fontes": [
+            {
+              "o": "Famil'in Paris · Angelina",
+              "u": "https://www.familinparis.fr/salon-de-the-angelina-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1903",
+                "Proust",
+                "Coco Chanel",
+                "l'Africain",
+                "Níger",
+                "Gana",
+                "Costa do Marfim",
+                "receita secreta",
+                "600 Mont-Blanc por dia",
+                "reserva recomendada"
+              ]
+            },
+            {
+              "o": "Bonjour Paris · Angelina",
+              "u": "https://bonjourparis.com/story/angelina-tea-salon-patissier-restaurant-chocol/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Rumpelmeyer",
+                "Niermans",
+                "12h às 15h",
+                "7h30",
+                "8h30",
+                "19h",
+                "19h30",
+                "tão grosso",
+                "pudim"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 3980096134 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/3980096134",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "cafe",
+          "mapsQuery": "Angelina, 226 rue de Rivoli, Paris"
+        },
+        {
+          "hora": "11:15",
+          "emoji": "☕",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Café Verlet (256 rue Saint-Honoré, 1er)",
+          "cat": "O torrefador artesanal mais antigo de Paris",
+          "sobre": "Fundado em <strong>1880</strong>, é o <strong>torrefador artesanal mais antigo ainda em atividade em Paris</strong> e um dos poucos que torra no local. O salão é dos anos <strong>1920</strong> e os doces chegam do pâtissier Carl Marletti.",
+          "imperdivel": "Pra adulto, o café; pra criança, o doce. O ambiente é de salão, não de parquinho.",
+          "dicas": [
+            "Segundo o diretório, <strong>seg-sáb 10h-19h</strong>; o OpenStreetMap indica 9h30-18h30 · <strong>fecha domingo</strong> · telefone +33 1 42 60 67 39",
+            "A casa guarda mais de 30 cafés de origem única e 40 variedades de chá: leve um pacote pra casa"
+          ],
+          "duracao": "20-30 min",
+          "custo": "café e doce (preços no salão)",
+          "acessibilidade": "Salão pequeno; sem acesso pra cadeira de rodas segundo o OpenStreetMap",
+          "coord": {
+            "lat": 48.86411,
+            "lng": 2.3339
+          },
+          "fontes": [
+            {
+              "o": "Mes Prestiges · Café Verlet",
+              "u": "https://mesprestiges.com/en/paris/places/cafe-verlet",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "1880",
+                "mais antigo",
+                "torra no local",
+                "1920",
+                "Carl Marletti",
+                "10h-19h",
+                "fecha domingo",
+                "30 cafés de origem única",
+                "40 variedades de chá",
+                "mais de 30"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 3980826522 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/3980826522",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "9h30-18h30",
+                "9h30",
+                "18h30"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "cafe",
+          "mapsQuery": "Verlet, 256 rue Saint-Honoré, Paris"
+        },
+        {
+          "hora": "12:15",
+          "emoji": "🍵",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Le Valentin (35 Galerie Vivienne, 2e) · a parada salgada",
+          "cat": "Almoço leve dentro da Galerie Vivienne",
+          "sobre": "Salão de chá no <strong>nº 35 da Galerie Vivienne</strong>, com doces artesanais, café da manhã e almoço (<em>avocado toast</em>, <em>croque-monsieur au Comté</em>). No mesmo número funcionou o A Priori Thé, aberto em <strong>1980</strong> e hoje fechado.",
+          "imperdivel": "A parada salgada do roteiro: sentar, comer e deixar o resto pra depois.",
+          "dicas": [
+            "Fórmulas de almoço a <strong>€19</strong> (entrada + prato) e <strong>€21</strong> (prato + doce); café da manhã de <strong>€5</strong> a <strong>€18,50</strong> (Sortir à Paris, ficha atualizada em dez/2024: confira o cardápio)",
+            "Horário: a Sortir à Paris dá <strong>10h30-18h30</strong> todos os dias e outra ficha dá horário diferente: confira antes · telefone +33 1 42 86 80 81",
+            "O pino marca o corredor da Galerie Vivienne (OpenStreetMap): o salão fica no nº 35, lá dentro",
+            "A galeria em si está na aba Passagens"
+          ],
+          "duracao": "40-60 min",
+          "custo": "fórmula de almoço €19-21 (ficha de dez/2024)",
+          "acessibilidade": "Dentro da galeria coberta",
+          "coord": {
+            "lat": 48.86654,
+            "lng": 2.34011
+          },
+          "fontes": [
+            {
+              "o": "Sortir à Paris · Le Valentin (ficha atualizada em 20/12/2024)",
+              "u": "https://www.sortiraparis.com/hotel-restaurant/cafe-tea-time/articles/230168-le-valentin-le-charmant-salon-de-the-retro-de-la-galerie-vivienne-a-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "35 Galerie Vivienne",
+                "10h30-18h30",
+                "€19",
+                "€21",
+                "€5",
+                "€18,50",
+                "croque-monsieur au Comté",
+                "avocado toast",
+                "dez/2024"
+              ]
+            },
+            {
+              "o": "Privateaser · Le Valentin",
+              "u": "https://www.privateaser.com/lieu/7136-le-valentin",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "35 Galerie Vivienne"
+              ]
+            },
+            {
+              "o": "lesrestos.com · A Priori Thé (fechado)",
+              "u": "https://www.lesrestos.com/restaurant/fiche/paris/a-priori-the",
+              "tier": "diretorio",
+              "data": "2026-10-08",
+              "prova": [
+                "fechado"
+              ]
+            },
+            {
+              "o": "France Today · Galerie Vivienne",
+              "u": "https://francetoday.com/travel/paris/parisian_walkways_galerie_vivienne/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1980"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · way 1192963471 (corredor da Galerie Vivienne; coordenada copiada)",
+              "u": "https://www.openstreetmap.org/way/1192963471",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 1,
+          "poiCat": "cafe",
+          "mapsQuery": "Le Valentin, 35 Galerie Vivienne, Paris"
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🍰",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Fou de Pâtisserie (45 rue Montorgueil, 2e)",
+          "cat": "Vitrine dos grandes pâtissiers num lugar só",
+          "sobre": "Aberta em <strong>2016</strong>, reúne numa só vitrine doces de vários pâtissiers; o site oficial cita, entre outros, Christophe Adam, Pierre Hermé, Nina Métayer, Nicolas Bernardé e Stéphan Perrotte.",
+          "imperdivel": "Escolher 1 doce na vitrine é a graça: a criança aponta, o adulto prova vários nomes de uma vez.",
+          "dicas": [
+            "Aberta todos os dias, <strong>10h-20h</strong> (site oficial); o OpenStreetMap dá outro horário de segunda a sexta (11h-20h) e no domingo (10h-18h): confira",
+            "O Gault&amp;Millau avisa que nem todos os nomes anunciados estão sempre disponíveis"
+          ],
+          "duracao": "15-20 min",
+          "custo": "doces a partir da vitrine",
+          "acessibilidade": "Loja pequena de rua, sem acesso pra cadeira de rodas segundo o OpenStreetMap",
+          "coord": {
+            "lat": 48.86493,
+            "lng": 2.34671
+          },
+          "fontes": [
+            {
+              "o": "Fou de Pâtisserie (site oficial)",
+              "u": "https://www.foudepatisserieboutique.fr",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "10h-20h",
+                "todos os dias",
+                "Christophe Adam",
+                "Pierre Hermé",
+                "Nina Métayer",
+                "Nicolas Bernardé",
+                "Stéphan Perrotte"
+              ]
+            },
+            {
+              "o": "Elle & Vire · Fou de Pâtisserie",
+              "u": "https://www.elle-et-vire.com/pro/en/your-services/inspirations-trends/places-and-trends/fou-de-patisserie-les-meilleurs-desserts-de-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "2016"
+              ]
+            },
+            {
+              "o": "Gault&Millau · Fou de Pâtisserie",
+              "u": "https://fr.gaultmillau.com/fr/artisans/fou-de-patisserie",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "nem todos os nomes"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 6049882127 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/6049882127",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "11h-20h",
+                "10h-18h"
+              ]
+            }
+          ],
+          "valeAPena": 2,
+          "poiCat": "padaria",
+          "mapsQuery": "Fou de Pâtisserie, 45 rue Montorgueil, Paris"
+        },
+        {
+          "hora": "14:20",
+          "emoji": "🥐",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "Stohrer (51 rue Montorgueil, 2e)",
+          "cat": "A pâtisserie mais antiga de Paris, de 1730",
+          "sobre": "<strong>A pâtisserie mais antiga de Paris, de 1730</strong>, classificada como monumento histórico. Nicolas Stohrer, alsaciano de Wissembourg, trabalhava pro rei <strong>Stanislas Leszczynski</strong> e veio pra França quando a filha do rei, <strong>Marie Leszczynska</strong>, casou com Louis XV. A lenda diz que o rei achou o kouglof seco e Stohrer o regou com vinho Tokay: nasceu o <strong>baba</strong> (depois com rum).",
+          "imperdivel": "O que observar: os murais pintados por <strong>Paul Baudry</strong>, o mesmo pintor dos afrescos da Ópera Garnier.",
+          "dicas": [
+            "O baba leva álcool: pra criança, outro doce",
+            "<strong>Seg-sáb 8h-20h30, dom 8h-20h</strong> (Visit Paris Region) · confira em agosto e nos feriados"
+          ],
+          "duracao": "15-20 min",
+          "custo": "doces e babas no balcão",
+          "acessibilidade": "Loja pequena, monumento histórico",
+          "coord": {
+            "lat": 48.86525,
+            "lng": 2.34682
+          },
+          "fontes": [
+            {
+              "o": "Paris Zigzag · Stohrer",
+              "u": "https://www.pariszigzag.fr/bar-restaurant/restaurant/patisserie-stohrer-paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "1730",
+                "mais antiga",
+                "monumento histórico",
+                "Wissembourg",
+                "Stanislas Leszczynski",
+                "Tokay",
+                "kouglof seco",
+                "baba"
+              ]
+            },
+            {
+              "o": "France Today · a pâtisserie mais antiga de Paris",
+              "u": "https://francetoday.com/travel/paris/the_oldest_patisserie_in_paris/",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "Marie Leszczynska",
+                "Louis XV",
+                "Paul Baudry",
+                "Ópera Garnier",
+                "rum",
+                "agosto"
+              ]
+            },
+            {
+              "o": "Visit Paris Region · Stohrer",
+              "u": "https://www.visitparisregion.com/fr/stohrer",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "8h-20h30",
+                "8h",
+                "20h30",
+                "20h",
+                "1730",
+                "Paul Baudry",
+                "monumento histórico"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1679367439 (coordenada copiada)",
+              "u": "https://www.openstreetmap.org/node/1679367439",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": []
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "padaria",
+          "mapsQuery": "Stohrer, 51 rue Montorgueil, Paris"
+        },
+        {
+          "hora": "15:15",
+          "emoji": "🍬",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "nome": "À la Mère de Famille (35 rue du Faubourg-Montmartre, 9e)",
+          "cat": "A chocolataria e confeitaria mais antiga de Paris",
+          "sobre": "Fundada em <strong>1761</strong> por Pierre Jean Bernard, um jovem merceeiro de Coulommiers: a <strong>chocolataria e confeitaria mais antiga de Paris</strong>. Era mercearia e foi virando confeitaria ao longo do <strong>séc. XIX</strong>, quando o açúcar de beterraba barateou. A fachada é tombada como monumento histórico, e o interior, com madeiras e tetos pintados, está intacto desde o fim do séc. XIX.",
+          "imperdivel": "O que observar: os tetos pintados e as madeiras antigas; a criança escolhe entre caramelos, marshmallows, laranjas cristalizadas, nougats e castanhas glaceadas.",
+          "dicas": [
+            "Loja de bala antiga: o ponto alto pra criança do dia",
+            "<strong>Seg-sáb 9h30-20h, dom 10h-19h30</strong> · fica no 9º arrondissement, saindo do boulevard pela rue du Faubourg-Montmartre · a estação Grands Boulevards (L8/L9) fica a ~320 m em linha reta (estimativa)"
+          ],
+          "duracao": "20-30 min",
+          "custo": "balas e chocolates no balcão",
+          "acessibilidade": "Loja de rua, monumento histórico",
+          "coord": {
+            "lat": 48.87395,
+            "lng": 2.34233
+          },
+          "fontes": [
+            {
+              "o": "À la Mère de Famille (site oficial) · nossa história",
+              "u": "https://www.lameredefamille.com/en/pages/our-history",
+              "tier": "oficial",
+              "data": "2026-10-08",
+              "prova": [
+                "1761",
+                "Pierre Jean Bernard",
+                "Coulommiers",
+                "mais antiga",
+                "séc. XIX",
+                "madeiras",
+                "tetos pintados",
+                "fim do séc. XIX",
+                "monumento histórico",
+                "fachada"
+              ]
+            },
+            {
+              "o": "Sortir à Paris · À la Mère de Famille",
+              "u": "https://www.sortiraparis.com/hotel-restaurant/cafe-tea-time/articles/289472-a-la-mere-de-famille-faubourg-montmartre-la-plus-ancienne-chocolaterie-de-paris",
+              "tier": "editorial",
+              "data": "2026-10-08",
+              "prova": [
+                "9h30-20h",
+                "10h-19h30",
+                "caramelos",
+                "marshmallows",
+                "laranjas cristalizadas",
+                "nougats",
+                "castanhas glaceadas"
+              ]
+            },
+            {
+              "o": "OpenStreetMap · node 1699170789 (coordenada copiada) · distância até a estação calculada pelas coordenadas",
+              "u": "https://www.openstreetmap.org/node/1699170789",
+              "tier": "crowd",
+              "data": "2026-10-08",
+              "prova": [
+                "320 m"
+              ]
+            }
+          ],
+          "valeAPena": 3,
+          "poiCat": "loja",
+          "mapsQuery": "À la Mère de Famille, 35 rue du Faubourg Montmartre, Paris"
+        }
+      ]
+    }
+  ]
+}
