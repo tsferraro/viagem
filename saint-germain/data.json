@@ -187,7 +187,7 @@
   },
   "transit_map": {
     "Chegada · Métro L10 → Odéon": {
-      "metro": "L10 direta, sem baldeação: Boulogne Jean Jaurès → Mabillon em ~25 min (12 estações) · Odéon é a estação seguinte (L10) · Sèvres-Babylone (L10 direta) deixa na porta do Bon Marché / Square Boucicaut"
+      "metro": "L10 · desça em Mabillon ou Odéon (estações vizinhas) · Sèvres-Babylone (L10) deixa na porta do Bon Marché / Square Boucicaut"
     }
   },
   "bairros_config": [
@@ -237,7 +237,7 @@
           "periodo": "manha",
           "tipo": "transit",
           "nome": "Chegada · Métro L10 → Odéon",
-          "cat": "L10 direta, sem baldeação · Boulogne Jean Jaurès → Mabillon ~25 min · Odéon é a estação seguinte",
+          "cat": "L10 · desça em Mabillon ou Odéon (estações vizinhas)",
           "coord": {
             "lat": 48.8523,
             "lng": 2.33937
@@ -2246,7 +2246,7 @@
       "gradA": "#3730a3",
       "gradB": "#6366f1",
       "hideStopMarkers": true,
-      "nota": "<strong>\"Delacroix → Sena → Orsay → Deyrolle\"</strong>: Saint-Germain → beira do Sena → 7e · ~2 km (estimativa) · meio dia. <strong>Delacroix fecha às terças</strong> e <strong>Orsay às segundas</strong>. Com criança de 4 anos: <strong>Orsay curto (1h) + Deyrolle</strong>; Delacroix e Mazarine são pros adultos. Pro Orsay direto de Boulogne: L10 até Sèvres-Babylone → L12 até Solférino, ~32 min no total. <strong>Pula sem culpa:</strong> Monnaie de Paris / 11 Conti (ter-dom 11h-18h, menores de 26 grátis) — a oficina de família anunciada com idade é a partir de 7 anos, a caça ao tesouro é a partir de 12, e o adulto paga €12: não paga o esforço aos 4.",
+      "nota": "<strong>\"Delacroix → Sena → Orsay → Deyrolle\"</strong>: Saint-Germain → beira do Sena → 7e · ~2 km (estimativa) · meio dia. <strong>Delacroix fecha às terças</strong> e <strong>Orsay às segundas</strong>. Com criança de 4 anos: <strong>Orsay curto (1h) + Deyrolle</strong>; Delacroix e Mazarine são pros adultos. Pro Orsay de metrô: L12 até Solférino. <strong>Pula sem culpa:</strong> Monnaie de Paris / 11 Conti (ter-dom 11h-18h, menores de 26 grátis) — a oficina de família anunciada com idade é a partir de 7 anos, a caça ao tesouro é a partir de 12, e o adulto paga €12: não paga o esforço aos 4.",
       "stops": [
         {
           "hora": "10:00",
