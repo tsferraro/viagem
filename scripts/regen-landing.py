@@ -180,7 +180,8 @@ h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-
     def head_extra(title, sub, fname, emoji, prefixo, grad):
         # Favicon + atalho + Open Graph em toda página da lançadora (regra Tobia 2026-10-08)
         icones = escrever_icones(root, emoji, grad[0], grad[1], title, prefixo=prefixo)
-        return meta_tags(title, sub, SITE_BASE + fname, icones, SITE_BASE, grad[0]) + '\n'
+        capa = f'{prefixo}capa-og.jpg' if os.path.exists(os.path.join(root, f'{prefixo}capa-og.jpg')) else None
+        return meta_tags(title, sub, SITE_BASE + fname, icones, SITE_BASE, grad[0], capa=capa) + '\n'
 
     def page(title, h1, sub, body, fname='', emoji='🗺️', prefixo='home-', grad=('#0f766e', '#2563eb')):
         return ('<!DOCTYPE html>\n<html lang="pt-BR">\n<head>\n'

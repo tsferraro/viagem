@@ -626,7 +626,7 @@ def check_meta_icons(content, path):
     for nome, rx in (("description", r'<meta name="description" content="[^"]+"'),
                      ("og:title", r'<meta property="og:title" content="[^"]+"'),
                      ("og:description", r'<meta property="og:description" content="[^"]+"'),
-                     ("og:image", r'<meta property="og:image" content="https://[^"]+\.png"'),
+                     ("og:image", r'<meta property="og:image" content="https://[^"]+\.(?:png|jpe?g)"'),  # capa ilustrada é JPEG (WhatsApp descarta miniatura pesada)
                      ("favicon", r'<link rel="icon"[^>]*href="[^"]+"'),
                      ("apple-touch-icon", r'<link rel="apple-touch-icon"[^>]*href="[^"]+"')):
         if not re.search(rx, content):

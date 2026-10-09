@@ -1,5 +1,5 @@
 ---
-status: aberto
+status: consumido
 de: sessão "Construir o app do roteiro paris-amigos-out2026" (local_9f1d9a16 · 08/10/2026)
 para: a MESMA sessão, acordada por despertar único às 02:17 de sex 09/10 (CronCreate)
 ---
@@ -55,3 +55,6 @@ Fora: a home (`index.html`) e o app datado `paris-amigos/` (não pedidos).
 
 ## Pré-condições físicas (gesto do Tobia antes de dormir)
 Mac **na tomada**, **tampa aberta**, app aberto com **esta sessão aberta e ociosa** (o despertar só dispara com a sessão parada) e o Mac impedido de dormir.
+
+## Selo (09/10/2026, madrugada)
+8 capas geradas de primeira (0 edições), recortadas em 1200×630, JPEG ~200-250 KB. Rebuild de 7 coletâneas com os 5 gates verdes + `paris.html`. Desvio do plano: PNG → **JPEG** (1,5 MB por capa em PNG; o WhatsApp descarta miniatura pesada) e `validate.py` passou a aceitar `og:image` `.jpg`.

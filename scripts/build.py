@@ -54,8 +54,9 @@ def _meta_e_icones(data: dict, data_path: Path) -> str:
     emoji = (data.get("icon_emoji") or data.get("auth_emoji") or "").strip()
     icones = escrever_icones(data_path.parent, emoji, a, b, _nome_curto(data))
     url = data.get("site_url") or f"{SITE_BASE}{data_path.parent.name}/"
+    capa = "capa-og.jpg" if (data_path.parent / "capa-og.jpg").exists() else None  # capa ilustrada 1200×630
     return meta_tags(data.get("title", "Roteiro"), data.get("header_sub") or data.get("auth_subtitle", ""),
-                     url, icones, url, a)
+                     url, icones, url, a, capa=capa)
 
 
 def _nome_curto(data: dict) -> str:

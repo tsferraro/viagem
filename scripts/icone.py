@@ -95,7 +95,7 @@ def escrever_icones(pasta, emoji, grad_a="#1e3a8a", grad_b="#3b82f6", iniciais="
     return out
 
 
-def meta_tags(titulo, descricao, url_pagina, icones, url_base_icones, cor="#111827"):
+def meta_tags(titulo, descricao, url_pagina, icones, url_base_icones, cor="#111827", capa=None):
     """Bloco <head> com favicon + atalho + Open Graph. `url_base_icones` é a URL absoluta
     da pasta onde os PNGs estão (o og:image precisa de URL absoluta)."""
     t = html.escape(re.sub(r"<[^>]+>", "", titulo or "").strip(), quote=True)
@@ -108,13 +108,24 @@ def meta_tags(titulo, descricao, url_pagina, icones, url_base_icones, cor="#1118
         f'<meta property="og:title" content="{t}">',
         f'<meta property="og:description" content="{d}">',
         f'<meta property="og:url" content="{url_pagina}">',
-        '<meta name="twitter:card" content="summary">',
+        f'<meta name="twitter:card" content="{"summary_large_image" if capa else "summary"}">',
     ]
-    if icones:
+    if capa:
+        # Capa ilustrada 1200×630 (a miniatura grande do link no WhatsApp · 2026-10-09).
+        # `capa` = nome do PNG relativo a `url_base_icones`.
         linhas += [
-            f'<meta property="og:image" content="{url_base_icones}{icones["grande"]}">',
-            '<meta property="og:image:width" content="512">',
-            '<meta property="og:image:height" content="512">',
+            f'<meta property="og:image" content="{url_base_icones}{capa}">',
+            '<meta property="og:image:width" content="1200">',
+            '<meta property="og:image:height" content="630">',
+        ]
+    if icones:
+        if not capa:
+            linhas += [
+                f'<meta property="og:image" content="{url_base_icones}{icones["grande"]}">',
+                '<meta property="og:image:width" content="512">',
+                '<meta property="og:image:height" content="512">',
+            ]
+        linhas += [
             f'<link rel="icon" type="image/png" sizes="512x512" href="{icones["grande"]}">',
             f'<link rel="apple-touch-icon" sizes="180x180" href="{icones["touch"]}">',
         ]
