@@ -14,7 +14,7 @@
 - **Tivoli e Bakken estão ABERTOS nas suas datas** (confirmado nos sites oficiais): Tivoli com Halloween (11:00–22:00/23:00); Bakken só abre **10–18/out e 23–25/out** — ou seja, **18/out é o último dia da janela de feriado e depois fecha até 23/out**. Você não perde, mas é janela curta.
 - **O "museu legal" tem prazo:** o **Børnenes Museum** (museu das crianças do Nationalmuseet — navio viking pra subir, cozinha medieval, castelo sitiado) tem **"última chance 18/out/2026"**, vai ser reconstruído e só reabre em 2027. Pra 2 crianças de 4 anos, é o melhor museu da cidade e entra grátis pra menor de 18.
 - **Proposta:** qui = pouso leve no entorno · **sex = Tivoli** · **sáb = Bakken** · **dom = Børnenes Museum de manhã + saída**. Chuva no sábado → troca Bakken pelo Aquário (plano B).
-- **Honestidade crítica:** a lista da Kel é **~80% compras** (21 de 28 pontos) + 4 parquinhos. Dá pra encaixar, mas compras com 2 crianças de 4 anos e 3 dias cheios de programa só funcionam em janelas de 40 min perto de casa.
+- **Lista de 28 lugares da Kel:** são **marcações para visitar se estiverem por perto** (lojas, parquinhos, restaurantes), não programa a encaixar. O roteiro não reserva tempo pra elas; ficam no mapa como paradas de passagem.
 
 ## Tabela esforço × recompensa
 
@@ -33,7 +33,7 @@ Preços datados (out/2026); distâncias da hospedagem (Frederiksstaden); **estim
 | **Rosenborg (Joias da Coroa)** | ~15 min (est.) | ★ | Médio: horário marcado online, 2 crianças de 4a em sala de joias | ⏭️ pula sem culpa nesta viagem | atracao |
 | **Haunted House / Villa Vendetta (Tivoli)** | dentro do Tivoli | ★ (p/ adulto) | Alto: "não para crianças pequenas" (site oficial) | ⏭️ pula sem culpa | atracao |
 | **Little Mermaid** | Langelinie, junto do Kastellet | ★ | Baixo | ⏭️ só se passar por lá (não fazer viagem) | atracao |
-| **Compras da lista da Kel** (Posterland, Studio Arhoj, Karrusella, RAINS etc.) | ver §3.5 | ★ (depende de quem for) | Baixo-médio c/ crianças | ⚠️ talvez · janelas curtas | loja |
+| **Lojas marcadas pela Kel** (Posterland, Studio Arhoj, Karrusella, RAINS etc.) | ver triagem abaixo | ★ (de passagem) | Baixo | ⚠️ se estiver por perto | loja |
 
 ---
 
@@ -115,7 +115,7 @@ Sabores-assinatura locais: **smørrebrød** (pão de centeio aberto), **frikadel
 | **Qui 15/out · pouso leve** | Chegada → deixar malas na **consigna Radical Storage Amalienborg** (da lista da Kel, 5,0★ com 2 avaliações — **confirmar horário/preço**) se o check-in ainda não liberou | **12:00 troca de guarda** → almoço Nyhavns Færgekro → Kastellet + playground de Langelinie → check-in | Jantar cedo **Locale 21** (reserva) ou algo simples perto de casa |
 | **Sex 16/out · Tivoli** | Soneca/descanso se necessário → **Tivoli 11:00** (abóboras, Rasmus Klump, brinquedos infantis) | Almoço dentro; até ~17:30 | Sair antes do Friday Rock; jantar leve perto de casa |
 | **Sáb 17/out · Bakken** | **S-tog 9:30 → Bakken 11:00** (Monsterbal 12:30, Onkel Reje 14:00) | Dyrehaven, volta ~16:30 | Jantar de volta; plano B de chuva: **Den Blå Planet** |
-| **Dom 18/out · museu + saída** | **Børnenes Museum 10:00–12:30** (último dia!) | Almoço Torvehallerne/Hallernes → buscar malas → **janela de compras 40 min** (lista da Kel, ver §abaixo) | Saída fim de tarde (**horário do voo a confirmar**) |
+| **Dom 18/out · museu + saída** | **Børnenes Museum 10:00–12:30** (último dia!) | Almoço Torvehallerne/Hallernes → buscar malas | Saída fim de tarde (**horário do voo a confirmar**) |
 
 ## Dicas práticas + orçamento
 
@@ -153,7 +153,7 @@ Sabores-assinatura locais: **smørrebrød** (pão de centeio aberto), **frikadel
 | **Atração (1)** | Den Blå Planet | Plano B de chuva (ver acima). |
 | **Logística (2)** | Radical Storage Amalienborg · junto à hospedagem | Consigna: qui e dom. |
 | **Restaurantes/bar (3)** | Locale 21 ⚠️ · Osteria 16 ⏭️ · bird: downtown (bar) | Locale 21 jantar cedo; Osteria 16 evitar; bar só sem crianças. |
-| **Compras (18)** | Posterland · Norr · Tekla · Beau Marché · RAINS (×2) · Karrusella (roupa infantil) · Made Here · Studio Arhoj · Stilleben · Dora · Keramiker Inge Vincents · Gågrøn · Le Petit Voyeur (livraria) · I Love Beauty · Ladyfingers · Fünf | **Endereços não conferidos** — a lista do Google Maps não mostra rua. A maioria é boutique de bairro; o ideal é a Kel agrupar por rua antes. Proponho 1 janela de **40 min no domingo** depois do museu, **só 3-4 lojas** (sugestão Claude · validar: Karrusella e Studio Arhoj parecem as mais "família"). |
+| **Compras (18)** | Posterland · Norr · Tekla · Beau Marché · RAINS (×2) · Karrusella (roupa infantil) · Made Here · Studio Arhoj · Stilleben · Dora · Keramiker Inge Vincents · Gågrøn · Le Petit Voyeur (livraria) · I Love Beauty · Ladyfingers · Fünf | **Marcações de passagem**: entram se o grupo estiver por perto, sem tempo reservado no roteiro. Endereços em geral não conferidos (a lista do Google Maps não mostra rua); conferidos só Studio Arhoj e Karrusella (ver Fontes). |
 
 ## Triagem da 2ª lista da Kel (10 selecionados · adicionada na auditoria 15/out)
 
