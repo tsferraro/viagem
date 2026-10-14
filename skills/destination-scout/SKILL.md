@@ -173,7 +173,7 @@ python3 skills/destination-scout/scripts/docx_to_pdf.py /tmp/<slug>.docx entrega
 ```
 
 - `md_to_docx.py` converte markdown (headings, tabelas, bullets, prosa, **negrito**/*itálico*) em `.docx`. Instala `python-docx` se faltar.
-- `docx_to_pdf.py` renderiza o `.docx` em PDF com fonte DejaVu embarcada (acentos PT-BR), subtítulo cinza, tabelas com cabeçalho colorido. Os vereditos (🏆⚠️⏭️ e os 🟢🟡🔴 de entregas antigas) viram **bolinhas coloridas** (●) e emojis decorativos que a fonte não cobre são removidos. Instala `reportlab`/`python-docx` se faltarem.
+- `docx_to_pdf.py` renderiza o `.docx` em PDF (acentos PT-BR), subtítulo cinza, tabelas com cabeçalho colorido. Fonte: DejaVu no Linux, **Arial Unicode no macOS**, Arial no Windows (`_deps.py` escolhe; `PDF_FONT_DIR` força outra). Os vereditos (🏆⚠️⏭️ e os 🟢🟡🔴 de entregas antigas) viram **bolinhas coloridas** (●); o **★ de recompensa é preservado** (sem glifo na fonte vira "N de 3"); outros emojis decorativos são removidos. Instala `reportlab`/`python-docx` se faltarem, com plano B gravável (`--user`, depois `--target` em pasta temporária) — em sandbox, liberar `pypi.org` e `files.pythonhosted.org`. (Corrigido 2026-10-15: o script assumia caminho de fonte de Linux e quebrava no Mac.)
 - Entregar o arquivo via SendUserFile. Se possível, **renderize e confira** o PDF antes de entregar (ex: `pip install pymupdf` + `fitz`) — não chute o layout.
 - Depois de gerar: `git add entregas/<slug>.md entregas/<slug>.pdf` + commit + push (mesma main de sempre). Manter o `.md` fonte permite re-editar/regerar sem refazer do zero.
 

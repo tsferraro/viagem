@@ -13,26 +13,23 @@ Cadeia completa da skill (markdown -> docx -> pdf):
 Renderiza headings, subtítulo, parágrafos justificados, bullets e tabelas com
 fonte DejaVu embarcada (acentos PT-BR ok). Os semáforos 🟢🟡🔴 viram bolinhas
 coloridas (●) e emojis decorativos que a fonte não cobre são removidos.
-Instala reportlab/python-docx se faltarem. Requer fontes DejaVu (padrão em Linux).
+Instala reportlab/python-docx se faltarem (plano B gravável quando o pip é negado).
+Fonte: DejaVu (Linux) · Arial Unicode (macOS) · Arial (Windows) — ver _deps.py;
+`PDF_FONT_DIR` força uma pasta com DejaVuSans.ttf/DejaVuSans-Bold.ttf.
+O ★ (recompensa) é preservado quando a fonte o desenha; senão vira "N de 3".
 """
+import os
 import sys
-import subprocess
 
-
-def _ensure(mod, pkg=None):
-    try:
-        __import__(mod)
-    except ImportError:
-        print(f"Instalando {pkg or mod}...", file=sys.stderr)
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--quiet", pkg or mod])
-
-
-_ensure("docx", "python-docx")
-_ensure("reportlab")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _deps import ensure, find_fonts  # noqa: E402
 
 if len(sys.argv) < 3:
     print(__doc__)
     sys.exit(1)
+
+ensure("docx", "python-docx")
+ensure("reportlab")
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -46,14 +43,19 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import xml.etree.ElementTree as ET
 
-FD = "/usr/share/fonts/truetype/dejavu"
-pdfmetrics.registerFont(TTFont("DejaVu", f"{FD}/DejaVuSans.ttf"))
-pdfmetrics.registerFont(TTFont("DejaVu-Bold", f"{FD}/DejaVuSans-Bold.ttf"))
+FONT_REG, FONT_BOLD = find_fonts()  # DejaVu (Linux) · Arial Unicode (macOS) · Arial (Windows)
+_reg = TTFont("DejaVu", FONT_REG)
+pdfmetrics.registerFont(_reg)
+_bold = TTFont("DejaVu-Bold", FONT_BOLD)
+pdfmetrics.registerFont(_bold)
 pdfmetrics.registerFontFamily("DejaVu", normal="DejaVu", bold="DejaVu-Bold",
                               italic="DejaVu", boldItalic="DejaVu-Bold")
+# A fonte escolhida desenha ★ (recompensa)? Se sim, o ★ fica; se não, vira "N de 3".
+HAS_STAR = 0x2605 in _reg.face.charToGlyph
+HAS_STAR_BOLD = 0x2605 in _bold.face.charToGlyph  # Arial Bold (macOS) não tem ★: em negrito vira "*"
 
 import re as _re
-def emoji_fix(t):
+def emoji_fix(t, bold=False):
     # Vereditos viram bolinha colorida: a DejaVu não cobre emoji, e sem isto o veredito
     # SUMIA do PDF (o strip abaixo come 🏆 e ⚠️). Vocabulário novo (🏆⚠️⏭️ · Lote 7d) e o
     # antigo (🟢🟡🔴, entregas até 2026-08-09) convivem — as duas famílias mapeadas.
@@ -71,9 +73,16 @@ def emoji_fix(t):
     }
     for k, v in reps.items():
         t = t.replace(k, v)
-    # remove emojis decorativos restantes que a DejaVu não cobre
+    # ★ é DADO (recompensa 0-3), não enfeite: nunca some em silêncio. Sem glifo na fonte, vira texto.
+    if bold and not HAS_STAR_BOLD:
+        t = t.replace("★", "*")  # cabeçalho/negrito sem glifo: nunca □
+    elif HAS_STAR:
+        t = t.replace("★", "\x00")  # protege do strip abaixo
+    else:
+        t = _re.sub(r'★+', lambda m: f"{len(m.group(0))} de 3", t)
+    # remove emojis decorativos restantes que a fonte não cobre
     t = _re.sub(r'[\U0001F000-\U0001FAFF\U00002600-\U000027BF\U0001F1E6-\U0001F1FF]', '', t)
-    return t
+    return t.replace("\x00", "★")
 
 src, out = sys.argv[1], sys.argv[2]
 doc = Document(src)
@@ -92,15 +101,15 @@ styles = {
     "CellH": ParagraphStyle("CellH", parent=ss["BodyText"], fontName="DejaVu-Bold", fontSize=8.5, leading=11, textColor=colors.white),
 }
 
-def esc(t):
+def esc(t, bold=False):
     t = t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    return emoji_fix(t)
+    return emoji_fix(t, bold)
 
 def rich(para):
     """Converte runs (negrito/itálico) em markup reportlab."""
     out = ""
     for r in para.runs:
-        t = esc(r.text)
+        t = esc(r.text, bool(r.bold))
         if r.bold:
             t = f"<b>{t}</b>"
         if r.italic:
@@ -151,7 +160,7 @@ for child in body.iterchildren():
         for ri, row in enumerate(t.rows):
             cells = []
             for cell in row.cells:
-                txt = esc(cell.text.strip())
+                txt = esc(cell.text.strip(), bold=(ri == 0))
                 cells.append(Paragraph(txt, styles["CellH"] if ri == 0 else styles["Cell"]))
             data.append(cells)
         ncols = len(data[0])

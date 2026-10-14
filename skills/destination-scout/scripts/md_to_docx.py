@@ -18,11 +18,10 @@ import subprocess
 
 
 def ensure_docx():
-    try:
-        import docx  # noqa
-    except ImportError:
-        print("Instalando python-docx...", file=sys.stderr)
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--quiet", "python-docx"])
+    import os
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from _deps import ensure
+    ensure("docx", "python-docx")
 
 
 def add_runs(paragraph, text):
