@@ -87,8 +87,13 @@
 
 | O quê | Como |
 |---|---|
-| Fechamento do Tivoli na sexta 16 | app do Tivoli · +45 33 15 10 01 |
+| ~~Fechamento do Tivoli na sexta 16~~ | ✅ conferido pelo Tobia no app: 11:00–23:00 (15/out) |
 | Adulto precisa de pulseira pra acompanhar nos brinquedos infantis do Bakken? | bilheteria · +45 39 63 35 44 |
 | Cadeirão no Locale 21 / Cap Horn / Kronborg | +45 33 93 44 12 · +45 33 12 85 04 · 33 13 07 08 |
 | Café Daisy aberto no domingo | +45 53 61 14 16 |
 | Preço final da consigna | checkout da reserva |
+
+## Atualização do mesmo dia (15/out · dados de campo do Tobia)
+
+- Voo de domingo às 16:45: domingo replanejado (museu 10:15–12:00, almoço no café do museu, aeroporto ~14:15). Nenhuma afirmação nova sobre o mundo além das já verificadas acima.
+- Tivoli sexta 16: 11:00–23:00, conferido no app pelo Tobia.

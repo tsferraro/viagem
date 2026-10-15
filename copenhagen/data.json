@@ -331,7 +331,7 @@
       "cor": "#ea580c",
       "gradA": "#7c2d12",
       "gradB": "#f97316",
-      "nota": "<strong>Tivoli em dois turnos:</strong> manhã até ~15:00, pausa em casa pra soneca e volta ao entardecer pras luzes de Halloween. Assim as crianças aguentam e vocês pegam o parque aceso.<br><strong>Dá pra sair e voltar com o mesmo ingresso:</strong> peçam o carimbo na mão na saída do lado do Tivoli Food Hall. Sexta 16 não tem Fredagsrock, que é série de verão. O horário de fechamento da sexta está no app [a confirmar].",
+      "nota": "<strong>Tivoli em dois turnos:</strong> manhã até ~15:00, pausa em casa pra soneca e volta ao entardecer pras luzes de Halloween. Assim as crianças aguentam e vocês pegam o parque aceso.<br><strong>Dá pra sair e voltar com o mesmo ingresso:</strong> peçam o carimbo na mão na saída do lado do Tivoli Food Hall. Sexta o parque abre das 11:00 às 23:00 (conferido no app). Não tem Fredagsrock, que é série de verão.",
       "stops": [
         {
           "hora": "10:40",
@@ -410,7 +410,8 @@
                 "489–509",
                 "244–254",
                 "3 a 7 anos",
-                "vale só na data"
+                "vale só na data",
+                "11:00 às 23:00"
               ]
             },
             {
@@ -550,6 +551,7 @@
           "imperdivel": "Atravessar o parque já escuro, com as abóboras iluminadas: é a foto da viagem.",
           "dicas": [
             "🔁 Entrar com o carimbo na mão que pegaram na saída do Tivoli Food Hall.",
+            "🕚 Sexta o parque fica aberto das <strong>11:00 às 23:00</strong> (conferido no app): não há pressa de horário, só de cansaço.",
             "🕢 Voltar pra casa por volta das 19:30: as crianças já tiveram o dia inteiro.",
             "🎆 O show de luzes no lago (Halloween Illuminations) é às <strong>21:30</strong>: tarde demais pra criança, pula sem culpa."
           ],
@@ -582,6 +584,19 @@
                 "Villa Vendetta",
                 "150 kr",
                 "não para crianças pequenas"
+              ]
+            },
+            {
+              "o": "Tobia · preço conferido no app do Tivoli (15/out)",
+              "u": "https://shop.tivoli.dk/en/billetter-og-tivolikort/entre-og-turpas",
+              "tier": "campo",
+              "data": "2026-10-15",
+              "prova": [
+                "489–509",
+                "244–254",
+                "3 a 7 anos",
+                "vale só na data",
+                "11:00 às 23:00"
               ]
             },
             {
@@ -1042,10 +1057,10 @@
       "cor": "#2563eb",
       "gradA": "#1e3a8a",
       "gradB": "#3b82f6",
-      "nota": "<strong>Domingo depende do voo</strong> [horário a confirmar]: o plano supõe saída no fim da tarde. A consigna abre às 10:00 e fecha às 18:00, então as malas descem às 10:00 e sobem até ~15:00. Com voo antes das 17:00, cortar o almoço sentado e comer no café do museu.",
+      "nota": "<strong>Voo às 16:45:</strong> a meta é estar no aeroporto por volta das 14:15. Malas na consigna às 10:00 (ela abre às 10:00), museu das 10:15 às 12:00, almoço no café do próprio museu, malas de volta às 13:15 e metrô pro aeroporto às 13:45. Não dá pra esticar o museu além do meio-dia.",
       "stops": [
         {
-          "hora": "09:45",
+          "hora": "09:50",
           "emoji": "🧳",
           "periodo": "manha",
           "tipo": "card",
@@ -1056,7 +1071,7 @@
           "nome": "Check-out e malas na consigna",
           "cat": "Consigna abre às 10:00 · reserva já feita",
           "sobre": "Deixar as malas na mesma consigna de quinta e sair leve pro museu.",
-          "imperdivel": "Sair de casa às 9:45 com tudo pronto.",
+          "imperdivel": "Estar na porta da consigna às 10:00 em ponto: o museu abre na mesma hora.",
           "dicas": [
             "🕙 A consigna funciona <strong>10:00–18:00</strong> e só com reserva online.",
             "🎒 Mochila leve pro museu: água, lanche e casaco das crianças."
@@ -1079,7 +1094,7 @@
           ]
         },
         {
-          "hora": "10:15",
+          "hora": "10:05",
           "emoji": "🚇",
           "periodo": "manha",
           "tipo": "transit",
@@ -1092,7 +1107,7 @@
           }
         },
         {
-          "hora": "10:30",
+          "hora": "10:15",
           "emoji": "⛵",
           "periodo": "manha",
           "tipo": "card",
@@ -1108,9 +1123,10 @@
           "dicas": [
             "🎟️ Adulto <strong>150 kr</strong> (<strong>135 kr online</strong>), <strong>menor de 18 grátis</strong>. O museu das crianças vem <strong>incluído no ingresso geral</strong>.",
             "🕙 O museu <strong>abre às 10:00</strong>, mas o Børnenes fecha às <strong>16:30</strong>. Último dia + feriado = vai encher ao longo da manhã.",
-            "👶 Idade: conferido pelo Tobia, serve pras duas crianças."
+            "👶 Idade: conferido pelo Tobia, serve pras duas crianças.",
+            "✈️ Sair do museu às 12:00 e almoçar ali mesmo: o voo é às 16:45."
           ],
-          "duracao": "10:30-12:30",
+          "duracao": "10:15-12:00",
           "custo": "~540 kr, 4 adultos online (out/2026)",
           "acessibilidade": "Museu com elevador; o carrinho circula, mas no navio e no castelo é a pé.",
           "coord": {
@@ -1159,12 +1175,12 @@
           ]
         },
         {
-          "hora": "12:45",
+          "hora": "12:00",
           "emoji": "🍽️",
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço · perto do museu",
-          "cat": "Dentro do museu ou a poucas quadras",
+          "cat": "No café do museu, sem deslocamento: o voo é às 16:45",
           "coord": {
             "lat": 55.6745,
             "lng": 12.5747
@@ -1208,7 +1224,7 @@
               "nome": "Restaurant Kronborg (Brolæggerstræde 12)",
               "poiCat": "restaurante",
               "valeAPena": 2,
-              "desc": "Smørrebrød clássico. Domingo abre 11:00-18:00, cozinha até as 17:00. Preço e cadeirão não informados [a confirmar: 33 13 07 08].",
+              "desc": "Smørrebrød clássico. Domingo abre 11:00-18:00, cozinha até as 17:00. Só se quiserem sentar fora do museu: com o voo às 16:45, o tempo é curto. Preço e cadeirão não informados [a confirmar: 33 13 07 08].",
               "preco": "$$",
               "dist": "poucas quadras ao norte do museu",
               "coord": {
@@ -1232,7 +1248,7 @@
           ]
         },
         {
-          "hora": "14:30",
+          "hora": "13:15",
           "emoji": "🧳",
           "periodo": "tarde",
           "tipo": "card",
@@ -1241,9 +1257,9 @@
           "valeAPena": 1,
           "noMaps": true,
           "nome": "Buscar as malas",
-          "cat": "Antes das 18:00, sem exceção",
-          "sobre": "A consigna fecha às 18:00: com voo no fim da tarde, buscar as malas logo depois do almoço e seguir pro aeroporto.",
-          "imperdivel": "Não deixar pra depois das 17:30.",
+          "cat": "Metrô de volta do museu e malas na mão às 13:30",
+          "sobre": "Do museu, metrô M3 de volta a Marmorkirken, malas na consigna e direto pro metrô do aeroporto.",
+          "imperdivel": "Sair com as malas até 13:45.",
           "dicas": [
             "🕔 A consigna fecha às <strong>18:00</strong>.",
             "📍 Sobrou tempo? As marcações da Kel estão no link da lista, na legenda do Resumo."
@@ -1266,12 +1282,12 @@
           ]
         },
         {
-          "hora": "15:00",
+          "hora": "13:45",
           "emoji": "✈️",
           "periodo": "tarde",
           "tipo": "transit",
           "nome": "Frederiksstaden → Aeroporto (metrô)",
-          "cat": "M2 de Kongens Nytorv até o aeroporto (~13 min) · ou táxi com as malas",
+          "cat": "M2 de Kongens Nytorv até o aeroporto (~13 min) · chegar ~14:15 pro voo das 16:45 · ou táxi com as malas",
           "mapsQuery": "Lufthavnen Station, Kastrup",
           "coord": {
             "lat": 55.6308,
