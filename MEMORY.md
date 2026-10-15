@@ -142,6 +142,9 @@ endereço que não é mais dele. Buscar o nome confirma que existe; só buscar `
 revela que não opera. **Junta-se ao Le Lido (lugar errado) e à Auberge Coralli (local errado) da
 Córsega: mesma família, três variantes — não existe · não é ali · não está mais aberto.**
 
+### Quarta variante: o fantasma sobrevive à auditoria do levantamento (2026-10-15 · copenhagen)
+- **Reconferir cada restaurante na montagem do app, mesmo com o levantamento auditado** — a auditoria do scout checa o que muda o roteiro; restaurante ⚠️ passa sem busca própria.
+
 ### Endereço vale mais que coordenada
 Nesta sessão: **0 de 4** tentativas de obter lat/lng por busca, **4 de 4** de obter endereço.
 E os dois consumidores da informação preferem endereço: `getMapsUrl()` resolve pelo **nome**

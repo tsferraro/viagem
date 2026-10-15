@@ -1,6 +1,6 @@
 # Copenhagen · pré-roteiro · 15–18/out/2026
 
-**Briefing fixado:** 4 adultos + 2 crianças pequenas (faixa de ingresso 3–7 anos) · base **hospedagem (Frederiksstaden, colada no Amalienborg)** · chegada **qui 15/out de manhã** · saída **dom 18/out fim de tarde** · pedidos: **Tivoli**, **um museu legal**, **Bakken** (sugestão de amigo) · lista de lugares da Kel (28 pontos, triada abaixo).
+**Briefing fixado:** 4 adultos + 2 crianças pequenas (faixa de ingresso 3–7 anos) · base **hospedagem (Frederiksstaden, colada no Amalienborg)** · chegada **qui 15/out de manhã** · saída **dom 18/out, voo às 16:45** · pedidos: **Tivoli**, **um museu legal**, **Bakken** (sugestão de amigo) · lista de lugares da Kel (28 pontos, triada abaixo).
 
 **Elo mais restritivo:** crianças de 4 anos (fôlego de ~3-4h por atração, soneca, altura ≤115 cm nos brinquedos infantis). Adultos aguentam tudo; o ritmo é das crianças.
 
@@ -88,7 +88,6 @@ Sabores-assinatura locais: **smørrebrød** (pão de centeio aberto), **frikadel
 | Lugar | O que é | Pra quê (4 adultos + 2 crianças de 4) | Veredito |
 |---|---|---|---|
 | **Nyhavns Færgekro** (Nyhavn) | Restaurante casual de canal, smørrebrød e pratos tradicionais | Almoço de quinta com vista do canal (fonte: Pearl, 2026) | 🏆 |
-| **Café Nytorv** (Kongens Nytorv) | Clássico com cardápio infantil citado no Frommer's (fonte antiga) **[confirmar cardápio infantil]** | Almoço rápido | ⚠️ |
 | **Hallernes Smørrebrød** (Torvehallerne, Nørreport) | Smørrebrød "de iniciação", prato infantil 60–95 DKK (guia Copenhagen Tourism) | Almoço pós-Kongens Have ou antes do museu | 🏆 |
 | **Locale 21** (Ny Østergade 21) — **da lista da Kel** | Italiano pequeno e intimista (rabbit pappardelle, linguine); **400–800 kr** (Google) | Jantar cedo (17:30) com reserva e cadeira de criança **[perguntar]** | ⚠️ |
 | **Osteria 16** (Ravnsborggade 14B, Nørrebro) — **da lista da Kel** | Menu fixo compartilhado; **mesas coladas, barulhento** (reviews) | **Não é pra 2 crianças de 4 anos**; Nørrebro é longe da base | ⏭️ |
