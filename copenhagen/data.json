@@ -537,6 +537,79 @@
           ]
         },
         {
+          "hora": "15:00",
+          "emoji": "🏗️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "nome": "🔄 Chuva forte · DAC (Bryghuspladsen 10)",
+          "mapsQuery": "Danish Architecture Center, Bryghuspladsen 10, København",
+          "cat": "Centro de arquitetura coberto, à beira do porto · da lista da Kel",
+          "sobre": "Centro de arquitetura no prédio BLOX, à beira do porto, a uma estação de metrô do Tivoli. Coberto, com elevador em todos os andares e oficinas de família nos fins de semana e férias escolares [programa de sexta a confirmar no site].",
+          "imperdivel": "As oficinas de construção, se houver no dia: em outubro o DAC anunciou um \"Build the City\" com LEGO [a confirmar].",
+          "dicas": [
+            "🛝 O escorregador gigante exige <strong>1,20 m</strong>: as crianças de vocês provavelmente ficam de fora. Não vá por ele.",
+            "🎟️ Adulto <strong>135 kr</strong>, <strong>menor de 18 grátis</strong>. Sexta aberto <strong>10:00-21:00</strong>.",
+            "👉 Fica atrás da Glyptotek na fila das opções de chuva: só vale se houver oficina pras crianças."
+          ],
+          "duracao": "1h-1h30",
+          "custo": "135 kr por adulto · crianças grátis (out/2026)",
+          "acessibilidade": "Elevador em todos os andares, carrinho entra.",
+          "coord": {
+            "lat": 55.6721,
+            "lng": 12.5792
+          },
+          "fontes": [
+            {
+              "o": "DAC · planeje a visita",
+              "u": "https://dac.dk/en/plan-your-visit",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "10:00-21:00",
+                "sexta",
+                "Bryghuspladsen 10"
+              ]
+            },
+            {
+              "o": "DAC · visita",
+              "u": "https://dac.dk/en/visit/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "10:00-18:00",
+                "sábado",
+                "135 kr",
+                "menor de 18 grátis"
+              ]
+            },
+            {
+              "o": "DAC · dicas para famílias",
+              "u": "https://dac.dk/en/helpful-tips-for-families",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "1,20 m",
+                "elevadores",
+                "carrinho"
+              ]
+            },
+            {
+              "o": "DAC · experiências",
+              "u": "https://dac.dk/en/more-experiences-at-dac",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "fins de semana",
+                "férias escolares",
+                "LEGO"
+              ]
+            }
+          ]
+        },
+        {
           "hora": "17:15",
           "emoji": "🏮",
           "periodo": "noite",
@@ -652,8 +725,73 @@
       "cor": "#16a34a",
       "gradA": "#14532d",
       "gradB": "#22c55e",
-      "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde. Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário), coberto do começo ao fim.</li></ul>O Bakken fecha de 19 a 22/out (reabre de 23 a 25/out) e domingo é dia de museu e saída: se for, é no sábado.",
+      "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde. Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário) ou Experimentarium (ciências, com área pra 1-5 anos): os dois cobertos do começo ao fim.</li><li>🖼️ <strong>Dia dos adultos</strong> → Louisiana, no lugar do Bakken (não cabem os dois).</li></ul>Jantar: perto de casa, repetindo uma das opções de quinta. O Bakken fecha de 19 a 22/out (reabre de 23 a 25/out) e domingo é dia de museu e saída: se for, é no sábado.",
       "stops": [
+        {
+          "hora": "09:30",
+          "emoji": "🔬",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "🔄 Chuva o dia todo · Experimentarium (Tuborg Havnevej 7, Hellerup)",
+          "mapsQuery": "Experimentarium, Tuborg Havnevej 7, Hellerup",
+          "cat": "Museu de ciências com área só pra pequenos · alternativa ao aquário · da lista da Kel",
+          "sobre": "Segundo a Kel, é o lugar que as crianças mais curtem. O trunfo pra idade delas é o <strong>Miniverse</strong>, exposição de ciência pra <strong>1 a 5 anos</strong>, com <strong>7 áreas</strong> de carpete macio: blocos de espuma, hospital de ursinhos, fazenda, vento, floresta de sombras. Lá dentro se brinca <strong>de meia</strong>.",
+          "imperdivel": "O Miniverse inteiro: é feito pra altura delas, e os adultos brincam junto.",
+          "dicas": [
+            "🕤 Aberto <strong>9:30-17:00</strong> <strong>todos os dias</strong>.",
+            "🎟️ O ingresso vale <strong>só na data</strong> e é <strong>não reembolsável</strong>: comprar só com a chuva confirmada. Sair e voltar no mesmo dia é permitido (<strong>reentrada</strong>). Online tem 10% de desconto; preço do grupo [a confirmar na loja online].",
+            "🚆 S-tog até <strong>Hellerup</strong> e ônibus <strong>1A</strong> (ou a pé), ou S-tog até <strong>Svanemøllen</strong> e ônibus 1A.",
+            "🚼 O <strong>carrinho</strong> fica estacionado na entrada do Miniverse; no resto do prédio ele circula."
+          ],
+          "duracao": "3-4h",
+          "custo": "~1.300 kr o grupo [a confirmar] (out/2026)",
+          "acessibilidade": "Elevadores, trocador e sala de amamentação; carrinho circula fora do Miniverse.",
+          "coord": {
+            "lat": 55.72655,
+            "lng": 12.57996
+          },
+          "fontes": [
+            {
+              "o": "Experimentarium · planeje a visita",
+              "u": "https://experimentarium.dk/plan-your-visit",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "9:30-17:00",
+                "todos os dias",
+                "Hellerup",
+                "1A",
+                "Svanemøllen"
+              ]
+            },
+            {
+              "o": "Experimentarium · The Miniverse",
+              "u": "https://www.experimentarium.dk/udstillinger/the-miniverse/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "1 a 5 anos",
+                "7 áreas",
+                "de meia"
+              ]
+            },
+            {
+              "o": "Experimentarium · FAQ",
+              "u": "https://www.experimentarium.dk/english-faq-visiting-experimentarium/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "só na data",
+                "não reembolsável",
+                "reentrada",
+                "carrinho"
+              ]
+            }
+          ]
+        },
         {
           "hora": "10:00",
           "emoji": "🚆",
@@ -666,6 +804,89 @@
             "lat": 55.7772,
             "lng": 12.5881
           }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🖼️",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "🔄 Troca o Bakken · Louisiana (Gl. Strandvej 13, Humlebæk)",
+          "mapsQuery": "Louisiana Museum of Modern Art, Gl. Strandvej 13, Humlebæk",
+          "cat": "Museu de arte moderna com ala infantil · no lugar do Bakken, não somado a ele · da lista da Kel",
+          "sobre": "É a escolha dos adultos: arte moderna num casarão com jardim de esculturas, ao norte da cidade. Pras crianças, a <strong>ala infantil</strong> tem <strong>3 andares</strong> de <strong>oficinas</strong> abertas todo dia (pintar, desenhar, construir), <strong>grátis</strong>, pra <strong>4 a 16 anos</strong>: as de vocês ficam no limite de baixo.",
+          "imperdivel": "Pros adultos, o jardim de esculturas; pras crianças, as oficinas da ala infantil enquanto um adulto de cada vez escapa pras salas.",
+          "dicas": [
+            "🕚 Sábado <strong>11-18</strong> (as oficinas fecham às <strong>17:30</strong>). Segunda fechado.",
+            "🎟️ Adulto <strong>145 kr</strong>, <strong>menor de 18 grátis</strong>, sem horário marcado.",
+            "🚆 Trem regional da costa de København H até <strong>Humlebæk</strong>, ~<strong>40 min</strong>, e mais <strong>10-15 min</strong> a pé. Sair de casa por volta das 10:00 pra chegar na abertura.",
+            "🚼 O museu pede <strong>carrinho compacto</strong>: empresta um no térreo da loja (depósito de moeda de <strong>20 kr</strong>) e guarda o grande.",
+            "🥪 O café abre às 11; dá pra levar lanche e comer no pavilhão do <strong>Lake Garden</strong>, ao lado da ala infantil.",
+            "⚖️ Honesto: é dia de adulto com folga pras crianças. Pro dia ser delas, o Bakken ganha."
+          ],
+          "duracao": "dia inteiro com o trem (~10:00-16:30)",
+          "custo": "~580 kr os 4 adultos · crianças grátis (out/2026)",
+          "acessibilidade": "Rampas, elevadores e porta automática; com carrinho grande a circulação pode ser restrita em dia cheio.",
+          "coord": {
+            "lat": 55.96944,
+            "lng": 12.54306
+          },
+          "fontes": [
+            {
+              "o": "Louisiana · horários e preços",
+              "u": "https://louisiana.dk/en/plan-your-visit/opening-hours/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "11-18",
+                "sábado",
+                "145 kr",
+                "segunda fechado",
+                "17:30",
+                "café abre às 11"
+              ]
+            },
+            {
+              "o": "Louisiana · como chegar",
+              "u": "https://louisiana.dk/en/plan-your-visit/getting-here-and-parking/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "Gl. Strandvej 13",
+                "Humlebæk",
+                "40 min",
+                "10-15 min"
+              ]
+            },
+            {
+              "o": "Louisiana · informação prática",
+              "u": "https://louisiana.dk/en/plan-your-visit/practical-info-accessibility/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "menor de 18 grátis",
+                "carrinho compacto",
+                "20 kr",
+                "Lake Garden",
+                "elevadores"
+              ]
+            },
+            {
+              "o": "Louisiana · ala infantil",
+              "u": "https://louisiana.dk/en/museum/childrens-wing/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "3 andares",
+                "4 a 16 anos",
+                "oficinas",
+                "grátis",
+                "1994"
+              ]
+            }
+          ]
         },
         {
           "hora": "10:00",
@@ -1024,27 +1245,6 @@
             "lat": 55.6922,
             "lng": 12.5875
           }
-        },
-        {
-          "hora": "18:00",
-          "emoji": "🍽️",
-          "periodo": "noite",
-          "tipo": "card",
-          "risco": "green",
-          "poiCat": "restaurante",
-          "valeAPena": 1,
-          "noMaps": true,
-          "nome": "Jantar perto de casa",
-          "cat": "Repetir uma das opções de quinta, ou comer em casa",
-          "sobre": "Segundo dia seguido de parque ao ar livre: jantar simples e cedo.",
-          "imperdivel": "Cama cedo: domingo começa às 9:45 com malas.",
-          "dicas": [
-            "As opções de quinta (Færgekro, Cap Horn, Locale 21) valem de novo.",
-            "Locale 21 é pequeno: reservar de manhã se quiserem ir."
-          ],
-          "duracao": "1h",
-          "custo": "—",
-          "acessibilidade": "A pé de casa, sem trem."
         }
       ]
     },

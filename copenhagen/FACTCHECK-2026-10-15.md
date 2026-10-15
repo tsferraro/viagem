@@ -97,3 +97,7 @@
 
 - Voo de domingo às 16:45: domingo replanejado (museu 10:15–12:00, almoço no café do museu, aeroporto ~14:15). Nenhuma afirmação nova sobre o mundo além das já verificadas acima.
 - Tivoli sexta 16: 11:00–23:00, conferido no app pelo Tobia.
+
+## Alternativas adicionadas depois (15/out · pedido do Tobia: "o que ficou de fora vira alternativa")
+
+Cards ⭐⭐/⭐ 🔄 novos: **Louisiana** (sáb, troca o Bakken), **Experimentarium** (sáb, chuva) e **DAC** (sex, chuva). Os fatos vêm de um sub-agente pesquisador que leu as páginas oficiais (louisiana.dk, experimentarium.dk, dac.dk). Não passaram por um verificador cético separado: é item ⭐⭐ fora do escopo de frescor do gate, e fica para o re-check. O preço do Experimentarium só apareceu em snippet e está marcado `[a confirmar]` no card.
