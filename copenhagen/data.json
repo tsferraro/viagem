@@ -55,10 +55,10 @@
           "imperdivel": "Ficar leve pra troca da guarda do meio-dia, que é logo ali.",
           "dicas": [
             "🕙 Abre <strong>10:00–18:00</strong>: no domingo a retirada tem que ser antes das 18:00.",
-            "💶 ~<strong>€5-6</strong> por mala por dia."
+            "💶 ~<strong>€4-5</strong> por mala por dia (o valor final aparece no checkout da reserva)."
           ],
           "duracao": "10-15 min",
-          "custo": "~€5-6 por mala/dia (out/2026)",
+          "custo": "~€4-5 por mala/dia (out/2026)",
           "acessibilidade": "Sem degrau informado: conferir no e-mail da reserva [a confirmar].",
           "fontes": [
             {
@@ -68,7 +68,7 @@
               "data": "2026-10-15",
               "prova": [
                 "10:00–18:00",
-                "€5-6",
+                "€4-5",
                 "só com reserva online"
               ]
             }
@@ -85,7 +85,7 @@
           "nome": "Troca da guarda · Amalienborg (Amalienborg Slotsplads)",
           "mapsQuery": "Amalienborg Slotsplads, København",
           "cat": "A família real mora aqui · e a praça é a porta de casa de vocês",
-          "sobre": "A praça octogonal tem <strong>quatro palácios</strong> gêmeos, desenhados por Nicolai Eigtved pra Frederico V. A família real mora ali desde <strong>1794</strong>, quando o Palácio de Christiansborg pegou fogo e ela se mudou pros palácios do bairro dos nobres.",
+          "sobre": "A praça octogonal tem <strong>quatro palácios</strong> gêmeos, desenhados por Nicolai Eigtved para quatro famílias nobres. A família real mora ali desde <strong>1794</strong>, quando o Palácio de Christiansborg pegou fogo e ela se mudou pros palácios do bairro dos nobres.",
           "imperdivel": "A guarda chega marchando com o barretão de pele de urso e troca de posto em frente aos palácios: pras crianças é um desfile de soldadinho de chumbo em tamanho real.",
           "dicas": [
             "⏰ A troca é <strong>todo dia às 12:00</strong>: estar na grade às 11:45 pra pegar lugar na frente.",
@@ -120,7 +120,9 @@
                 "quatro palácios",
                 "Eigtved",
                 "Frederico V",
-                "Christiansborg"
+                "Christiansborg",
+                "1748",
+                "1750"
               ]
             },
             {
@@ -140,7 +142,7 @@
           "periodo": "tarde",
           "tipo": "opcoes",
           "nome": "Almoço · Nyhavn",
-          "cat": "2 opções no canal · ~10 min a pé da praça",
+          "cat": "2 opções no cais de Nyhavn",
           "coord": {
             "lat": 55.68071,
             "lng": 12.58799
@@ -152,7 +154,7 @@
               "valeAPena": 2,
               "desc": "Clássico do canal: buffet de arenque (sildebord, 195 kr), smørrebrød (95-145 kr) e frikadeller (120 kr) pra criança. Cozinha 11:00-21:00 todos os dias. O próprio restaurante diz que tem lugar pra carrinho e cadeirão.",
               "preco": "$$",
-              "dist": "~10 min a pé da praça",
+              "dist": "no cais de Nyhavn, lado de Kongens Nytorv",
               "coord": {
                 "lat": 55.68071,
                 "lng": 12.58799
@@ -215,7 +217,7 @@
           "sobre": "O jeito mais fácil de ver Copenhague com criança pequena: uma hora sentados, passando pelos canais e pelo porto. Duas empresas saem de Nyhavn, com preços bem diferentes.",
           "imperdivel": "Passar debaixo das pontes baixas: o barco quase raspa e as crianças adoram.",
           "dicas": [
-            "⛴️ <strong>Stromma</strong>: sai de <strong>Nyhavn 3</strong>, volta de <strong>1 h</strong>, adulto <strong>149 kr</strong> (tarifa adulta vale <strong>a partir de 16 anos</strong>; o preço de criança não está no site [a confirmar no cais]). Barcos <strong>cobertos e aquecidos</strong> nos meses frios, mas a empresa <strong>não garante</strong> que todos sejam.",
+            "⛴️ <strong>Stromma</strong>: sai de <strong>Nyhavn 3</strong>, volta de <strong>1 h</strong>, adulto <strong>149 kr</strong> na saída de Nyhavn (online o preço varia por canal) (tarifa adulta vale <strong>a partir de 16 anos</strong>; o preço de criança não está no site [a confirmar no cais]). Barcos <strong>cobertos e aquecidos</strong> nos meses frios, mas a empresa <strong>não garante</strong> que todos sejam.",
             "💰 <strong>Netto-Bådene</strong>: a opção barata, <strong>80 kr</strong> adulto e <strong>40 kr</strong> criança de <strong>3 a 14 anos</strong>, <strong>10:00-17:00</strong>. Sai de Nyhavn ou de <strong>Holmens Kirke</strong>.",
             "🚼 Na Stromma o <strong>carrinho não entra</strong>: fica no cais, por conta de vocês. Levem cadeado.",
             "🧥 Barco aberto no frio é gelado: casaco e gorro nas crianças."
@@ -544,11 +546,12 @@
           "noMaps": true,
           "nome": "Tivoli · 2º turno: as luzes de Halloween",
           "cat": "O parque aceso ao entardecer · jantar leve lá dentro ou em casa",
-          "sobre": "O Tivoli muda de cara aceso: com o <strong>pôr do sol por volta das 18h</strong>, as abóboras e as lanternas acendem e o parque vira outro.",
+          "sobre": "Com o <strong>pôr do sol por volta das 18h</strong>, o parque escurece e a decoração de Halloween fica iluminada [a confirmar no local]. É a hora em que a Kel recomenda o Tivoli.",
           "imperdivel": "Atravessar o parque já escuro, com as abóboras iluminadas: é a foto da viagem.",
           "dicas": [
             "🔁 Entrar com o carimbo na mão que pegaram na saída do Tivoli Food Hall.",
-            "🕢 Voltar pra casa por volta das 19:30: as crianças já tiveram o dia inteiro."
+            "🕢 Voltar pra casa por volta das 19:30: as crianças já tiveram o dia inteiro.",
+            "🎆 O show de luzes no lago (Halloween Illuminations) é às <strong>21:30</strong>: tarde demais pra criança, pula sem culpa."
           ],
           "duracao": "~2h",
           "custo": "mesmo ingresso do dia",
@@ -579,6 +582,15 @@
                 "Villa Vendetta",
                 "150 kr",
                 "não para crianças pequenas"
+              ]
+            },
+            {
+              "o": "Tivoli · Halloween Illuminations 16/out",
+              "u": "https://www.tivoli.dk/en/programme/events/illuminationer-hit-2026",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "21:30"
               ]
             },
             {
@@ -625,7 +637,7 @@
       "cor": "#16a34a",
       "gradA": "#14532d",
       "gradB": "#22c55e",
-      "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde (DAC se chover). Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário), coberto do começo ao fim.</li></ul>O Bakken fecha depois de domingo e domingo é dia de museu e saída: se for, é no sábado.",
+      "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde (DAC se chover). Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário), coberto do começo ao fim.</li></ul>O Bakken fecha de 19 a 22/out (reabre de 23 a 25/out) e domingo é dia de museu e saída: se for, é no sábado.",
       "stops": [
         {
           "hora": "10:00",
@@ -782,7 +794,7 @@
           "sobre": "Pela lenda do parque, tudo começou em <strong>1583</strong>, quando Kirsten Piil achou uma fonte na floresta e a multidão que vinha beber a água atraiu artistas e vendedores. Hoje é um parque de diversões de verdade, meio kitsch, com cheiro de algodão-doce: o charme é a floresta e o clima antigo, não a tecnologia.",
           "imperdivel": "O caminho da estação até o parque atravessa a <strong>Dyrehaven</strong>, onde os cervos andam soltos: pras crianças, os cervos podem ser o ponto alto do dia.",
           "dicas": [
-            "🎟️ <strong>Entrada grátis.</strong> Paga só a pulseira: <strong>MiniTurbånd</strong> (17 brinquedos infantis, criança até <strong>115 cm</strong> de sapato, medida na bilheteria) <strong>249 kr</strong> online ou <strong>279 kr</strong> na hora. A adulta (39 brinquedos) é <strong>349 kr</strong> online ou <strong>379 kr</strong> na hora: basta um adulto ter pra acompanhar.",
+            "🎟️ <strong>Entrada grátis.</strong> Paga só a pulseira: <strong>MiniTurbånd</strong> (17 brinquedos infantis, criança até <strong>115 cm</strong> de sapato, medida na bilheteria) <strong>249 kr</strong> online ou <strong>279 kr</strong> na hora. A adulta (39 brinquedos) é <strong>349 kr</strong> online ou <strong>379 kr</strong> na hora. Se o adulto que acompanha a criança precisa de pulseira, perguntar na bilheteria antes de comprar [a confirmar].",
             "🎭 Programa grátis do feriado: <strong>Monsterbal</strong> às <strong>12:30</strong> e <strong>Onkel Reje</strong> (show de Halloween) às <strong>14:00</strong>.",
             "🚶 Da estação até o parque são <strong>10 a 13 min</strong> a pé por trilha de terra: o carrinho sacoleja, mas passa.",
             "🌑 Sair antes das <strong>18:30</strong>: aí começa o <strong>After Dark</strong>, de terror, que não é pra criança.",
@@ -874,9 +886,9 @@
               "nome": "Torvehallerne (Frederiksborggade 21)",
               "poiCat": "food-hall",
               "valeAPena": 2,
-              "desc": "Dois pavilhões de bancas: cada um escolhe o que quer, e criança acha pizza, pão e fruta. Sábado <strong>10:00-18:00</strong>.",
+              "desc": "Mercado coberto de bancas: cada um escolhe o que quer, e há pizzaria ao lado. Sábado <strong>10:00-18:00</strong>.",
               "preco": "$$",
-              "dist": "~10 min a pé do Kongens Have",
+              "dist": "~600 m do Rosenborg",
               "coord": {
                 "lat": 55.6839,
                 "lng": 12.5696
@@ -898,7 +910,7 @@
               "nome": "Hallernes Smørrebrød (Torvehallerne)",
               "poiCat": "restaurante",
               "valeAPena": 1,
-              "desc": "Smørrebrød de iniciação, 75-125 kr a peça. Balcão de 16 lugares, sem reserva e sem cardápio infantil: bom pros adultos, as crianças comem nas bancas.",
+              "desc": "Smørrebrød de iniciação, a partir de ~75-80 kr a peça. Balcão pequeno, sem reserva [a confirmar] e sem cardápio infantil: bom pros adultos, as crianças comem nas bancas.",
               "preco": "$$",
               "dist": "dentro do mercado",
               "fontes": [
@@ -908,8 +920,7 @@
                   "tier": "oficial",
                   "data": "2026-10-15",
                   "prova": [
-                    "75-125 kr",
-                    "16 lugares"
+                    "75-80 kr"
                   ]
                 },
                 {
@@ -1051,7 +1062,7 @@
             "🎒 Mochila leve pro museu: água, lanche e casaco das crianças."
           ],
           "duracao": "15 min",
-          "custo": "~€5-6 por mala (out/2026)",
+          "custo": "~€4-5 por mala (out/2026)",
           "acessibilidade": "Malas e carrinho juntos: dois adultos levam as malas, dois as crianças.",
           "fontes": [
             {
@@ -1061,7 +1072,7 @@
               "data": "2026-10-15",
               "prova": [
                 "10:00–18:00",
-                "€5-6",
+                "€4-5",
                 "só com reserva online"
               ]
             }
@@ -1248,7 +1259,7 @@
               "data": "2026-10-15",
               "prova": [
                 "10:00–18:00",
-                "€5-6",
+                "€4-5",
                 "só com reserva online"
               ]
             }
@@ -1261,10 +1272,10 @@
           "tipo": "transit",
           "nome": "Frederiksstaden → Aeroporto (metrô)",
           "cat": "M2 de Kongens Nytorv até o aeroporto (~13 min) · ou táxi com as malas",
-          "mapsQuery": "Copenhagen Airport, Kastrup",
+          "mapsQuery": "Lufthavnen Station, Kastrup",
           "coord": {
-            "lat": 55.6181,
-            "lng": 12.6561
+            "lat": 55.6308,
+            "lng": 12.6492
           }
         }
       ]
@@ -1558,7 +1569,7 @@
   "historia": [
     {
       "titulo": "🎡 Copenhague · dois parques antigos e um bairro de nobres",
-      "prosa_html": "<p>Copenhague guarda <strong>dois dos parques de diversão mais antigos do mundo</strong>, a meia hora um do outro. O mais velho é o <strong>Bakken</strong>, em Klampenborg. Segundo a lenda do próprio parque, em <strong>1583</strong> uma mulher chamada <strong>Kirsten Piil</strong> achou uma fonte na floresta ao norte da cidade. A água ganhou fama de curativa, e a multidão que vinha beber atraiu artistas, vendedores e cervejeiros. Do mercado em volta da fonte nasceu o parque que a Wikipédia descreve como o mais antigo em funcionamento no mundo. A floresta em volta, a Dyrehaven, foi parque de caça dos reis e só abriu ao público em <strong>1756</strong>.</p><p>O mais famoso, o <strong>Tivoli</strong>, abriu em <strong>15 de agosto de 1843</strong>. O fundador, o oficial <strong>Georg Carstensen</strong>, convenceu o rei Cristiano VIII a deixar abrir um parque fora das muralhas. Ele dirigiu o Tivoli por só cinco anos: em <strong>1848</strong> foi lutar na guerra contra a Prússia, perdeu o posto, tentou abrir um parque rival, o Alhambra, e morreu aos 44 anos, meses antes da inauguração.</p><p>A casa de vocês também tem história. Os <strong>quatro palácios</strong> do Amalienborg foram feitos para nobres, num bairro novo que o rei <strong>Frederico V</strong> lançou nos anos 1750, com projeto do arquiteto Nicolai <strong>Eigtved</strong>. A família real só se mudou pra lá em <strong>1794</strong>, quando o Palácio de <strong>Christiansborg</strong> pegou fogo, e nunca mais saiu.</p><p>E o <strong>museu das crianças</strong> do Nationalmuseet, com o navio viking e o castelo sitiado, fecha em <strong>18 de outubro de 2026</strong> e só ganha substituto em 2027: vocês vão no último dia.</p>",
+      "prosa_html": "<p>Copenhague guarda <strong>dois dos parques de diversão mais antigos do mundo</strong>. O mais velho é o <strong>Bakken</strong>, em Klampenborg. Segundo a lenda do próprio parque, em <strong>1583</strong> uma mulher chamada <strong>Kirsten Piil</strong> achou uma fonte na floresta ao norte da cidade. A água ganhou fama de curativa, e a multidão que vinha beber atraiu artistas, vendedores e cervejeiros. Do mercado em volta da fonte nasceu o parque que a Wikipédia descreve como o mais antigo em funcionamento no mundo. A floresta em volta, a Dyrehaven, foi parque de caça dos reis e só abriu ao público em <strong>1756</strong>.</p><p>O mais famoso, o <strong>Tivoli</strong>, abriu em <strong>15 de agosto de 1843</strong>. O fundador, o oficial <strong>Georg Carstensen</strong>, convenceu o rei Cristiano VIII a deixar abrir um parque fora das muralhas. Ele dirigiu o Tivoli por só cinco anos: em <strong>1848</strong> foi lutar na Primeira Guerra de Schleswig, perdeu o posto, tentou abrir um parque rival, o Alhambra, e morreu aos 44 anos, meses antes da inauguração.</p><p>A casa de vocês também tem história. Os <strong>quatro palácios</strong> do Amalienborg foram feitos para nobres, num bairro novo que o rei <strong>Frederico V</strong> lançou em 1748; os palácios, dos anos 1750, têm projeto do arquiteto Nicolai <strong>Eigtved</strong>. A família real só se mudou pra lá em <strong>1794</strong>, quando o Palácio de <strong>Christiansborg</strong> pegou fogo, e nunca mais saiu.</p><p>E o <strong>museu das crianças</strong> do Nationalmuseet, com o navio viking e o castelo sitiado, fecha em <strong>18 de outubro de 2026</strong> e só ganha substituto em 2027: vocês vão no último dia.</p>",
       "fontes": [
         {
           "o": "Wikipedia · Dyrehavsbakken",
@@ -1592,7 +1603,8 @@
             "Alhambra",
             "44 anos",
             "Cristiano VIII",
-            "cinco anos"
+            "cinco anos",
+            "Primeira Guerra de Schleswig"
           ]
         },
         {
@@ -1605,7 +1617,9 @@
             "quatro palácios",
             "Eigtved",
             "Frederico V",
-            "Christiansborg"
+            "Christiansborg",
+            "1748",
+            "1750"
           ]
         },
         {
