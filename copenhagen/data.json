@@ -652,7 +652,7 @@
       "cor": "#16a34a",
       "gradA": "#14532d",
       "gradB": "#22c55e",
-      "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde (DAC se chover). Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário), coberto do começo ao fim.</li></ul>O Bakken fecha de 19 a 22/out (reabre de 23 a 25/out) e domingo é dia de museu e saída: se for, é no sábado.",
+      "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde. Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário), coberto do começo ao fim.</li></ul>O Bakken fecha de 19 a 22/out (reabre de 23 a 25/out) e domingo é dia de museu e saída: se for, é no sábado.",
       "stops": [
         {
           "hora": "10:00",
@@ -1367,13 +1367,6 @@
         "type": "official",
         "label": "Rosenborg · ingressos e horários",
         "url": "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/"
-      }
-    ],
-    "🔄 Plano cidade com chuva · DAC (Bryghuspladsen 10)": [
-      {
-        "type": "official",
-        "label": "DAC · visita",
-        "url": "https://dac.dk/en/visit/"
       }
     ],
     "🔄 Chuva forte · Ny Carlsberg Glyptotek": [
