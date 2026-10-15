@@ -1,0 +1,1643 @@
+{
+  "title": "Copenhagen · 15-18 Out",
+  "auth_emoji": "🎡",
+  "auth_title": "Copenhagen · 15 a 18 de outubro",
+  "auth_subtitle": "O roteiro de vocês em Copenhagen",
+  "header_title": "Copenhagen · 15-18/Out",
+  "header_sub": "Quatro dias no ritmo das crianças: Tivoli, Bakken e o museu infantil no último dia",
+  "password": "troll26",
+  "maps_region": "København, Denmark",
+  "wt_labels": "letters",
+  "legend_group_text": "Dia com o grupo todo",
+  "legend_notes_html": "<p>🏠 <strong>Base:</strong> Frederiksstaden, colada no Amalienborg. Metrô mais perto: Marmorkirken (M3).</p><p>🚇 <strong>Metrô e trem:</strong> bilhete de 2 zonas 24 kr, de 3 zonas (aeroporto) 30 kr [conferir no app DOT]. Cada adulto leva até 2 crianças com menos de 12 anos grátis: com 4 adultos, ninguém paga pelas crianças.</p><p>📍 <strong>Lista da Kel:</strong> marcações pra visitar se estiverem por perto, sem tempo reservado no roteiro: <a href=\"https://maps.app.goo.gl/oNXQzeExTagja83x7?g_st=iw\" target=\"_blank\" rel=\"noopener\">abrir no Google Maps</a>.</p><p>🔄 Cards com 🔄 são alternativas (chuva ou cansaço) e não entram na rota do dia.</p>",
+  "feedback_url": "",
+  "app_short_name": "Copenhagen",
+  "icon_emoji": "🎡",
+  "icon_grad_a": "#7c2d12",
+  "icon_grad_b": "#2563eb",
+  "days": [
+    {
+      "date": "Qui 15/Out",
+      "tema": "Chegada · Amalienborg e Nyhavn",
+      "temaCurto": "Chegada",
+      "bairro": "👑 Frederiksstaden + Nyhavn",
+      "grupo": true,
+      "cor": "#dc2626",
+      "gradA": "#7f1d1d",
+      "gradB": "#ef4444",
+      "nota": "<strong>Hoje é pouso:</strong> malas na consigna, troca da guarda ao meio-dia na porta de casa, almoço em Nyhavn e uma hora de barco sentados. Depois, check-in, soneca e jantar cedo: amanhã é o Tivoli. A consigna fecha às 18:00.<br><strong>Reservas e compras da viagem</strong><ul><li>🧳 <strong>Consigna</strong>: reservada (só funciona com reserva online).</li><li>🎃 <strong>Tivoli de sexta</strong>: preço conferido no app; o ingresso vale só na data escolhida.</li><li>🎡 <strong>Bakken</strong>: MiniTurbånd online só com a previsão de sábado firme (decidir sexta à noite).</li><li>⛵ <strong>Nationalmuseet</strong>: comprar os 4 ingressos de adulto online; crianças entram grátis.</li></ul>",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Aeroporto → Frederiksstaden (metrô)",
+          "cat": "M2 direto até Kongens Nytorv (~13 min) · daí a pé até casa, ou táxi direto",
+          "mapsQuery": "Kongens Nytorv Station, København",
+          "coord": {
+            "lat": 55.6793,
+            "lng": 12.5852
+          }
+        },
+        {
+          "hora": "10:45",
+          "emoji": "🧳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Malas na consigna (Radical Storage · Amalienborg)",
+          "cat": "Reserva feita · o endereço exato está no e-mail da reserva",
+          "sobre": "A consigna perto do Amalienborg segura as malas até o check-in liberar. Ela <strong>só aceita quem reservou online</strong>: sem reserva, sem walk-in e sem dinheiro.",
+          "imperdivel": "Ficar leve pra troca da guarda do meio-dia, que é logo ali.",
+          "dicas": [
+            "🕙 Abre <strong>10:00–18:00</strong>: no domingo a retirada tem que ser antes das 18:00.",
+            "💶 ~<strong>€5-6</strong> por mala por dia."
+          ],
+          "duracao": "10-15 min",
+          "custo": "~€5-6 por mala/dia (out/2026)",
+          "acessibilidade": "Sem degrau informado: conferir no e-mail da reserva [a confirmar].",
+          "fontes": [
+            {
+              "o": "Radical Storage · Amalienborg",
+              "u": "https://radicalstorage.com/luggage-storage/copenhagen/amalienborg-palace/luggage-storage-amalienborg",
+              "tier": "diretorio",
+              "data": "2026-10-15",
+              "prova": [
+                "10:00–18:00",
+                "€5-6",
+                "só com reserva online"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:45",
+          "emoji": "💂",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "Troca da guarda · Amalienborg (Amalienborg Slotsplads)",
+          "mapsQuery": "Amalienborg Slotsplads, København",
+          "cat": "A família real mora aqui · e a praça é a porta de casa de vocês",
+          "sobre": "A praça octogonal tem <strong>quatro palácios</strong> gêmeos, desenhados por Nicolai Eigtved pra Frederico V. A família real mora ali desde <strong>1794</strong>, quando o Palácio de Christiansborg pegou fogo e ela se mudou pros palácios do bairro dos nobres.",
+          "imperdivel": "A guarda chega marchando com o barretão de pele de urso e troca de posto em frente aos palácios: pras crianças é um desfile de soldadinho de chumbo em tamanho real.",
+          "dicas": [
+            "⏰ A troca é <strong>todo dia às 12:00</strong>: estar na grade às 11:45 pra pegar lugar na frente.",
+            "👀 Criança pequena só enxerga nos ombros: a multidão fica em pé, colada.",
+            "🎟️ Grátis, a céu aberto."
+          ],
+          "duracao": "20-30 min",
+          "custo": "grátis",
+          "acessibilidade": "Praça plana de paralelepípedo: o carrinho passa, sacolejando.",
+          "coord": {
+            "lat": 55.68403,
+            "lng": 12.59333
+          },
+          "fontes": [
+            {
+              "o": "Visit Copenhagen · troca da guarda",
+              "u": "https://visitcopenhagen.com/copenhagen/planning/changing-royal-guards-amalienborg-palace-gdk1120569",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "12:00",
+                "todo dia"
+              ]
+            },
+            {
+              "o": "Wikipedia · Amalienborg",
+              "u": "https://en.wikipedia.org/wiki/Amalienborg",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "1794",
+                "quatro palácios",
+                "Eigtved",
+                "Frederico V",
+                "Christiansborg"
+              ]
+            },
+            {
+              "o": "Kongernes Samling · Amalienborg",
+              "u": "https://kongernessamling.dk/en/amalienborg/beletagen-2",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "1794"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:45",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · Nyhavn",
+          "cat": "2 opções no canal · ~10 min a pé da praça",
+          "coord": {
+            "lat": 55.68071,
+            "lng": 12.58799
+          },
+          "opcoes": [
+            {
+              "nome": "Nyhavns Færgekro (Nyhavn 5)",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "desc": "Clássico do canal: buffet de arenque (sildebord, 195 kr), smørrebrød (95-145 kr) e frikadeller (120 kr) pra criança. Cozinha 11:00-21:00 todos os dias. O próprio restaurante diz que tem lugar pra carrinho e cadeirão.",
+              "preco": "$$",
+              "dist": "~10 min a pé da praça",
+              "coord": {
+                "lat": 55.68071,
+                "lng": 12.58799
+              },
+              "fontes": [
+                {
+                  "o": "Tholstrup · Nyhavns Færgekro",
+                  "u": "https://tholstrup.dk/nyhavns-faergekro/",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "11:00-21:00",
+                    "todos os dias",
+                    "195 kr",
+                    "95-145 kr",
+                    "120 kr",
+                    "cadeirão",
+                    "carrinho",
+                    "sildebord"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Cap Horn (Nyhavn 21)",
+              "poiCat": "restaurante",
+              "valeAPena": 1,
+              "desc": "Mesmo grupo do Færgekro, no mesmo cais: pratos de almoço 125-215 kr e smørrebrød 85-165 kr. Cozinha 11:00-21:00. Não achei informação sobre cadeirão [a confirmar: +45 33 12 85 04].",
+              "preco": "$$",
+              "dist": "no mesmo cais",
+              "fontes": [
+                {
+                  "o": "Tholstrup · Cap Horn",
+                  "u": "https://tholstrup.dk/cap-horn/",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "11:00-21:00",
+                    "todos os dias",
+                    "125-215 kr",
+                    "85-165 kr",
+                    "175-295 kr"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:00",
+          "emoji": "🚤",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "Passeio de barco nos canais (Nyhavn)",
+          "mapsQuery": "Nyhavn, København",
+          "cat": "1 h sentado vendo a cidade da água · descanso pras pernas depois da manhã",
+          "sobre": "O jeito mais fácil de ver Copenhague com criança pequena: uma hora sentados, passando pelos canais e pelo porto. Duas empresas saem de Nyhavn, com preços bem diferentes.",
+          "imperdivel": "Passar debaixo das pontes baixas: o barco quase raspa e as crianças adoram.",
+          "dicas": [
+            "⛴️ <strong>Stromma</strong>: sai de <strong>Nyhavn 3</strong>, volta de <strong>1 h</strong>, adulto <strong>149 kr</strong> (tarifa adulta vale <strong>a partir de 16 anos</strong>; o preço de criança não está no site [a confirmar no cais]). Barcos <strong>cobertos e aquecidos</strong> nos meses frios, mas a empresa <strong>não garante</strong> que todos sejam.",
+            "💰 <strong>Netto-Bådene</strong>: a opção barata, <strong>80 kr</strong> adulto e <strong>40 kr</strong> criança de <strong>3 a 14 anos</strong>, <strong>10:00-17:00</strong>. Sai de Nyhavn ou de <strong>Holmens Kirke</strong>.",
+            "🚼 Na Stromma o <strong>carrinho não entra</strong>: fica no cais, por conta de vocês. Levem cadeado.",
+            "🧥 Barco aberto no frio é gelado: casaco e gorro nas crianças."
+          ],
+          "duracao": "1h",
+          "custo": "~600 kr os 4 adultos na Stromma · ~400 kr o grupo na Netto (out/2026)",
+          "acessibilidade": "Embarque por degraus; carrinho fica no cais.",
+          "coord": {
+            "lat": 55.6797,
+            "lng": 12.5906
+          },
+          "fontes": [
+            {
+              "o": "Stromma · passeio de barco",
+              "u": "https://www.stromma.com/en-dk/copenhagen/sightseeing/sightseeing-by-boat/grand-tour/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "Nyhavn 3",
+                "1 h",
+                "149 kr",
+                "carrinho não entra",
+                "cobertos e aquecidos",
+                "não garante",
+                "a partir de 16 anos",
+                "10:00"
+              ]
+            },
+            {
+              "o": "Visit Copenhagen · Netto-Bådene",
+              "u": "https://visitcopenhagen.com/copenhagen/netto-boats-gdk585017",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "80 kr",
+                "40 kr",
+                "3 a 14 anos",
+                "10:00-17:00",
+                "Holmens Kirke"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "18:00",
+          "emoji": "🍝",
+          "periodo": "noite",
+          "tipo": "opcoes",
+          "nome": "Jantar · perto de casa",
+          "cat": "Reservar cedo ou comer em casa: o dia já foi longo",
+          "coord": {
+            "lat": 55.6793,
+            "lng": 12.5852
+          },
+          "opcoes": [
+            {
+              "nome": "Locale 21 (Ny Østergade 21)",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "desc": "Italiano pequeno, da lista da Kel. Quinta a cozinha serve jantar desde 17:30; massas 148-188 kr, pratos 298-345 kr. Reserva pelo site (Book bord). Cadeirão não informado [a confirmar: +45 33 93 44 12].",
+              "preco": "$$$",
+              "dist": "junto de Kongens Nytorv",
+              "fontes": [
+                {
+                  "o": "Locale 21 · site",
+                  "u": "https://www.locale21.dk",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "17:30",
+                    "148-188 kr",
+                    "298-345 kr",
+                    "Book bord"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Cap Horn (Nyhavn 21)",
+              "poiCat": "restaurante",
+              "valeAPena": 1,
+              "desc": "Se o almoço foi no Færgekro: pratos da noite 175-295 kr, cozinha até 21:00 todos os dias.",
+              "preco": "$$",
+              "dist": "Nyhavn",
+              "fontes": [
+                {
+                  "o": "Tholstrup · Cap Horn",
+                  "u": "https://tholstrup.dk/cap-horn/",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "11:00-21:00",
+                    "todos os dias",
+                    "125-215 kr",
+                    "85-165 kr",
+                    "175-295 kr"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Sex 16/Out",
+      "tema": "Tivoli em dois turnos · Halloween",
+      "temaCurto": "Tivoli",
+      "bairro": "🎃 Tivoli · Rådhuspladsen",
+      "grupo": true,
+      "cor": "#ea580c",
+      "gradA": "#7c2d12",
+      "gradB": "#f97316",
+      "nota": "<strong>Tivoli em dois turnos:</strong> manhã até ~15:00, pausa em casa pra soneca e volta ao entardecer pras luzes de Halloween. Assim as crianças aguentam e vocês pegam o parque aceso.<br><strong>Dá pra sair e voltar com o mesmo ingresso:</strong> peçam o carimbo na mão na saída do lado do Tivoli Food Hall. Sexta 16 não tem Fredagsrock, que é série de verão. O horário de fechamento da sexta está no app [a confirmar].",
+      "stops": [
+        {
+          "hora": "10:40",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Metrô Marmorkirken → Rådhuspladsen",
+          "cat": "M3 (anel Cityringen) · poucas paradas",
+          "mapsQuery": "Rådhuspladsen Station, København",
+          "coord": {
+            "lat": 55.6764,
+            "lng": 12.5681
+          }
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🎃",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "red",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "pendente",
+          "nome": "Tivoli Gardens · Halloween (Vesterbrogade 3)",
+          "mapsQuery": "Tivoli Gardens, Vesterbrogade 3, København",
+          "cat": "1º turno · brinquedos infantis, abóboras e o teatro do Rasmus Klump",
+          "sobre": "O parque abriu em <strong>1843</strong> e de 2/out a 1/nov vira Halloween: mais de <strong>20.000 abóboras</strong>, bruxas e um labirinto, com todos os brinquedos abertos. É feriado escolar dinamarquês, então conte com parque cheio.",
+          "imperdivel": "Pras crianças: o <strong>Little Ghost Train</strong> e o <strong>Witch's Carousel</strong>, e a pantomima do <strong>Rasmus Klump</strong>, que já vem incluída na entrada.",
+          "dicas": [
+            "🎟️ Entrada + Ride Pass: adulto <strong>489–509 kr</strong>, criança de <strong>3 a 7 anos</strong> paga <strong>244–254 kr</strong> (preço conferido no app). O ingresso <strong>vale só na data</strong> comprada.",
+            "🎢 As crianças vão usar meia dúzia de brinquedos infantis: o Ride Pass vale pelos adultos que também querem andar.",
+            "👻 <strong>Pula sem culpa:</strong> Haunted House e Villa Vendetta não entram no Ride Pass (combo à parte, 150 kr) e o próprio Tivoli diz que não são para crianças pequenas.",
+            "🍔 Almoço dentro do parque: comida de parque, preço de parque. Lanche, não refeição.",
+            "🔁 <strong>Sair e voltar:</strong> na saída do lado do <strong>Tivoli Food Hall</strong>, peçam o <strong>carimbo na mão</strong>: vale pro <strong>mesmo dia</strong>. Exceção do Tivoli: em <strong>grandes eventos</strong> não carimbam, e com o parque lotado a volta não é garantida."
+          ],
+          "duracao": "11:00-15:00 + volta ao entardecer",
+          "custo": "~2.450–2.550 kr o grupo, Entrada + Ride Pass (out/2026)",
+          "acessibilidade": "Parque plano e asfaltado, carrinho anda bem; filas e multidão são o atrito, não o piso.",
+          "coord": {
+            "lat": 55.6747,
+            "lng": 12.5657
+          },
+          "fontes": [
+            {
+              "o": "Tivoli · Halloween",
+              "u": "https://www.tivoli.dk/en/opening-hours-and-seasons/halloween-in-tivoli",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "2/out a 1/nov",
+                "20.000 abóboras",
+                "Rasmus Klump",
+                "Little Ghost Train",
+                "Witch's Carousel",
+                "Haunted House",
+                "Villa Vendetta",
+                "150 kr",
+                "não para crianças pequenas"
+              ]
+            },
+            {
+              "o": "Tivoli · plan your visit",
+              "u": "https://www.tivoli.dk/en/plan-your-visit",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "abre às 11:00"
+              ]
+            },
+            {
+              "o": "Tobia · preço conferido no app do Tivoli (15/out)",
+              "u": "https://shop.tivoli.dk/en/billetter-og-tivolikort/entre-og-turpas",
+              "tier": "campo",
+              "data": "2026-10-15",
+              "prova": [
+                "489–509",
+                "244–254",
+                "3 a 7 anos",
+                "vale só na data"
+              ]
+            },
+            {
+              "o": "Tivoli · história",
+              "u": "https://www.tivoli.dk/en/om/about/history",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "15 de agosto de 1843",
+                "1843"
+              ]
+            },
+            {
+              "o": "Tivoli · trocar por Tivoli Pass / re-entrada",
+              "u": "https://www.tivoli.dk/en/practical-information/exchange-for-a-tivoli-pass",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "carimbo na mão",
+                "Tivoli Food Hall",
+                "mesmo dia",
+                "grandes eventos"
+              ]
+            },
+            {
+              "o": "Tivoli · FAQ",
+              "u": "https://www.tivoli.dk/en/practical-information/faq",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "Ride Pass não inclui a entrada"
+              ]
+            },
+            {
+              "o": "Tivoli · Friday Rock (temporada encerrada)",
+              "u": "https://www.tivoli.dk/en/programme/friday-rock",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "série de verão",
+                "Friday Rock 2027"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "😴",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Pausa em casa · soneca",
+          "cat": "Metrô de volta, descanso, lanche",
+          "sobre": "A pausa é o que torna o segundo turno possível: criança pequena não aguenta seis horas seguidas de parque.",
+          "imperdivel": "Dormir.",
+          "dicas": [
+            "Sair de casa de novo por volta das 16:45 pra chegar com o céu ainda claro.",
+            "Lanche em casa: comida de parque é cara e demorada."
+          ],
+          "duracao": "~1h30",
+          "custo": "—",
+          "acessibilidade": "Em casa, sem deslocamento além do metrô."
+        },
+        {
+          "hora": "15:00",
+          "emoji": "🏛️",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "🔄 Chuva forte · Ny Carlsberg Glyptotek",
+          "mapsQuery": "Ny Carlsberg Glyptotek, København",
+          "cat": "Na frente do Tivoli · jardim de inverno coberto pra esperar a chuva passar",
+          "sobre": "Museu de esculturas do fundador da cervejaria Carlsberg, do outro lado da rua do Tivoli. Com chuva forte, é o abrigo mais perto: <strong>menor de 18 grátis</strong>, e o jardim de inverno é coberto e quente.",
+          "imperdivel": "O <strong>jardim de inverno</strong>: palmeiras debaixo de uma cúpula de vidro, quente e seco.",
+          "dicas": [
+            "🕙 Sexta <strong>10:00-17:00</strong>.",
+            "🎟️ Adulto <strong>135 kr online</strong> ou <strong>150 kr</strong> na bilheteria; <strong>menor de 18 grátis</strong>.",
+            "💡 Só vale se a chuva apertar: com tempo seco, a pausa em casa descansa mais."
+          ],
+          "duracao": "~1h",
+          "custo": "135 kr por adulto online · crianças grátis (out/2026)",
+          "acessibilidade": "Museu com elevador [a confirmar no local].",
+          "coord": {
+            "lat": 55.6725,
+            "lng": 12.5719
+          },
+          "fontes": [
+            {
+              "o": "Glyptotek · horários",
+              "u": "https://www.glyptoteket.com/visit/opening-hours",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "10:00-17:00",
+                "sexta"
+              ]
+            },
+            {
+              "o": "Glyptotek · ingressos",
+              "u": "https://www.glyptoteket.com/visit/tickets",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "135 kr online",
+                "150 kr",
+                "menor de 18 grátis"
+              ]
+            },
+            {
+              "o": "Visit Copenhagen · Glyptotek",
+              "u": "https://www.visitcopenhagen.com/copenhagen/planning/glyptoteket-gdk410562",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "jardim de inverno"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "17:15",
+          "emoji": "🏮",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "red",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "noMaps": true,
+          "nome": "Tivoli · 2º turno: as luzes de Halloween",
+          "cat": "O parque aceso ao entardecer · jantar leve lá dentro ou em casa",
+          "sobre": "O Tivoli muda de cara aceso: com o <strong>pôr do sol por volta das 18h</strong>, as abóboras e as lanternas acendem e o parque vira outro.",
+          "imperdivel": "Atravessar o parque já escuro, com as abóboras iluminadas: é a foto da viagem.",
+          "dicas": [
+            "🔁 Entrar com o carimbo na mão que pegaram na saída do Tivoli Food Hall.",
+            "🕢 Voltar pra casa por volta das 19:30: as crianças já tiveram o dia inteiro."
+          ],
+          "duracao": "~2h",
+          "custo": "mesmo ingresso do dia",
+          "acessibilidade": "Igual de manhã: plano e asfaltado.",
+          "fontes": [
+            {
+              "o": "General Blue · pôr do sol em Copenhagen",
+              "u": "https://www.generalblue.com/sunrise-sunset-in-copenhagen-denmark",
+              "tier": "diretorio",
+              "data": "2026-10-15",
+              "prova": [
+                "pôr do sol por volta das 18h",
+                "18:05"
+              ]
+            },
+            {
+              "o": "Tivoli · Halloween",
+              "u": "https://www.tivoli.dk/en/opening-hours-and-seasons/halloween-in-tivoli",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "2/out a 1/nov",
+                "20.000 abóboras",
+                "Rasmus Klump",
+                "Little Ghost Train",
+                "Witch's Carousel",
+                "Haunted House",
+                "Villa Vendetta",
+                "150 kr",
+                "não para crianças pequenas"
+              ]
+            },
+            {
+              "o": "Tivoli · trocar por Tivoli Pass / re-entrada",
+              "u": "https://www.tivoli.dk/en/practical-information/exchange-for-a-tivoli-pass",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "carimbo na mão",
+                "Tivoli Food Hall",
+                "mesmo dia",
+                "grandes eventos"
+              ]
+            },
+            {
+              "o": "Tivoli · FAQ",
+              "u": "https://www.tivoli.dk/en/practical-information/faq",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "Ride Pass não inclui a entrada"
+              ]
+            },
+            {
+              "o": "Tivoli · Friday Rock (temporada encerrada)",
+              "u": "https://www.tivoli.dk/en/programme/friday-rock",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "série de verão",
+                "Friday Rock 2027"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Sáb 17/Out",
+      "tema": "Bakken e Dyrehaven · ou plano cidade",
+      "temaCurto": "Bakken",
+      "bairro": "🎡 Klampenborg · Dyrehaven",
+      "grupo": true,
+      "cor": "#16a34a",
+      "gradA": "#14532d",
+      "gradB": "#22c55e",
+      "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde (DAC se chover). Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário), coberto do começo ao fim.</li></ul>O Bakken fecha depois de domingo e domingo é dia de museu e saída: se for, é no sábado.",
+      "stops": [
+        {
+          "hora": "10:00",
+          "emoji": "🚆",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "S-tog Østerport → Klampenborg",
+          "cat": "Linha C sentido Klampenborg · trens a cada 10-20 min · ~10 min a pé de casa até Østerport [a confirmar]",
+          "mapsQuery": "Klampenborg Station",
+          "coord": {
+            "lat": 55.7772,
+            "lng": 12.5881
+          }
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🏰",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 2,
+          "nome": "🔄 Plano cidade · Kongens Have + Rosenborg",
+          "mapsQuery": "Kongens Have, København",
+          "cat": "Parquinho de manhã e um castelo de contos de fadas, sem trem",
+          "sobre": "O jardim do rei fica no centro, entre o Rosenborg e o Torvehallerne. <strong>No meio do parque</strong> fica o parquinho de contos de fadas, com um <strong>dragão</strong> pra montar e <strong>figuras de madeira</strong>. Ao lado, o castelo de Rosenborg parece desenho de livro infantil.",
+          "imperdivel": "O dragão do parquinho. No castelo, só uma volta curta pelos salões: com criança pequena, não esticar.",
+          "dicas": [
+            "🏰 Rosenborg: <strong>horário marcado</strong>, com entradas <strong>a cada 10 min</strong>. Comprar online: adulto <strong>140 kr online</strong> (<strong>150 kr</strong> na bilheteria), <strong>menor de 18 grátis</strong>.",
+            "🕙 Sábado o castelo abre <strong>10:00-17:00</strong>; o parque abre às 7:00 e fecha <strong>até 19:00</strong>.",
+            "🚼 <strong>O carrinho não entra</strong> no castelo: fica na entrada.",
+            "👉 Pular o castelo é ok: o parquinho sozinho já faz a manhã."
+          ],
+          "duracao": "1h30-2h",
+          "custo": "parque grátis · castelo 140 kr por adulto online (out/2026)",
+          "acessibilidade": "Parque plano com caminhos de cascalho; dentro do Rosenborg há escadas estreitas: carrinho fica na entrada.",
+          "coord": {
+            "lat": 55.68508,
+            "lng": 12.57998
+          },
+          "fontes": [
+            {
+              "o": "Parkmuseerne · Kongens Have",
+              "u": "https://www.parkmuseerne.dk/en/parker/kongens-have",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "até 19:00",
+                "7:00"
+              ]
+            },
+            {
+              "o": "Det Kongelige Samling · Rosenborg horários",
+              "u": "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/opening-hours/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "10:00-17:00",
+                "sábado"
+              ]
+            },
+            {
+              "o": "Det Kongelige Samling · planeje a visita",
+              "u": "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "horário marcado",
+                "a cada 10 min",
+                "140 kr online",
+                "150 kr",
+                "menor de 18 grátis",
+                "carrinho não entra"
+              ]
+            },
+            {
+              "o": "Visit Copenhagen · parquinho do Kongens Have",
+              "u": "https://www.visitcopenhagen.com/copenhagen/kings-garden-playground-gdk566087",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "no meio do parque",
+                "dragão",
+                "figuras de madeira"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "10:00",
+          "emoji": "🐠",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 2,
+          "nome": "🔄 Chuva o dia todo · Den Blå Planet (Jacob Fortlingsvej 1, Kastrup)",
+          "mapsQuery": "Den Blå Planet, Jacob Fortlingsvej 1, Kastrup",
+          "cat": "Aquário nacional · coberto do começo ao fim · da lista da Kel",
+          "sobre": "O aquário nacional fica perto do aeroporto, com metrô M2 direto. Em dia de chuva ocupa a manhã inteira sem ninguém se molhar.",
+          "imperdivel": "O túnel do grande tanque oceânico, com os tubarões passando por cima [a confirmar no local].",
+          "dicas": [
+            "🎟️ No feriado: adulto <strong>229 kr</strong> online (<strong>259 kr</strong> na hora), criança de <strong>3 a 11 anos</strong> <strong>123 kr</strong> online (<strong>136 kr</strong>). Grupo: ~1.160 kr online.",
+            "🕙 Aberto <strong>10:00–21:00</strong> no feriado: vai lotar, chegar na abertura.",
+            "🚇 Metrô <strong>M2</strong> até <strong>Kastrup</strong> e mais <strong>600 m</strong> a pé."
+          ],
+          "duracao": "2-3h",
+          "custo": "~1.160 kr o grupo online (out/2026)",
+          "acessibilidade": "Prédio novo, todo plano e com elevador.",
+          "coord": {
+            "lat": 55.6381,
+            "lng": 12.6561
+          },
+          "fontes": [
+            {
+              "o": "Den Blå Planet · informações práticas",
+              "u": "https://denblaaplanet.dk/en/visit-us/practical-information/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "229 kr",
+                "123 kr",
+                "259 kr",
+                "136 kr",
+                "10:00–21:00",
+                "3 a 11 anos"
+              ]
+            },
+            {
+              "o": "Den Blå Planet · como chegar",
+              "u": "https://denblaaplanet.dk/en/visit-us/getting-here/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "600 m",
+                "M2",
+                "Kastrup"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "11:00",
+          "emoji": "🎡",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "pendente",
+          "nome": "Bakken + Dyrehaven (Dyrehavevej 62, Klampenborg)",
+          "mapsQuery": "Bakken, Dyrehavevej 62, Klampenborg",
+          "cat": "O parque de diversões mais antigo do mundo em funcionamento · no meio da floresta dos cervos",
+          "sobre": "Pela lenda do parque, tudo começou em <strong>1583</strong>, quando Kirsten Piil achou uma fonte na floresta e a multidão que vinha beber a água atraiu artistas e vendedores. Hoje é um parque de diversões de verdade, meio kitsch, com cheiro de algodão-doce: o charme é a floresta e o clima antigo, não a tecnologia.",
+          "imperdivel": "O caminho da estação até o parque atravessa a <strong>Dyrehaven</strong>, onde os cervos andam soltos: pras crianças, os cervos podem ser o ponto alto do dia.",
+          "dicas": [
+            "🎟️ <strong>Entrada grátis.</strong> Paga só a pulseira: <strong>MiniTurbånd</strong> (17 brinquedos infantis, criança até <strong>115 cm</strong> de sapato, medida na bilheteria) <strong>249 kr</strong> online ou <strong>279 kr</strong> na hora. A adulta (39 brinquedos) é <strong>349 kr</strong> online ou <strong>379 kr</strong> na hora: basta um adulto ter pra acompanhar.",
+            "🎭 Programa grátis do feriado: <strong>Monsterbal</strong> às <strong>12:30</strong> e <strong>Onkel Reje</strong> (show de Halloween) às <strong>14:00</strong>.",
+            "🚶 Da estação até o parque são <strong>10 a 13 min</strong> a pé por trilha de terra: o carrinho sacoleja, mas passa.",
+            "🌑 Sair antes das <strong>18:30</strong>: aí começa o <strong>After Dark</strong>, de terror, que não é pra criança.",
+            "📅 O Bakken só abre de <strong>10 a 18/out</strong> e depois de <strong>23 a 25/out</strong>. Sábado de feriado (efterårsferie) é o dia mais cheio: chegar na abertura."
+          ],
+          "duracao": "11:00-16:00",
+          "custo": "~500 kr (2 MiniTurbånd) a ~850 kr com 1 adulta (out/2026)",
+          "acessibilidade": "Trilha de terra na floresta e ruas do parque em subida leve; dá com carrinho, sem conforto.",
+          "coord": {
+            "lat": 55.7758,
+            "lng": 12.5748
+          },
+          "fontes": [
+            {
+              "o": "Bakken · preços",
+              "u": "https://bakken.dk/planlaeg-dit-besog/priser-billetter/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "249 kr",
+                "279 kr",
+                "115 cm",
+                "349 kr",
+                "379 kr",
+                "17 brinquedos",
+                "39 brinquedos",
+                "entrada grátis"
+              ]
+            },
+            {
+              "o": "Bakken · programa do feriado",
+              "u": "https://bakken.dk",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "12:30",
+                "14:00",
+                "18:30",
+                "After Dark"
+              ]
+            },
+            {
+              "o": "Bakken · horários",
+              "u": "https://bakken.dk/planlaeg-dit-besog/abningstider/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "10 a 18/out",
+                "23 a 25/out",
+                "efterårsferie"
+              ]
+            },
+            {
+              "o": "Wikipedia · Dyrehavsbakken",
+              "u": "https://en.wikipedia.org/wiki/Dyrehavsbakken",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "1583",
+                "Kirsten Piil",
+                "mais antigo em funcionamento",
+                "1756"
+              ]
+            },
+            {
+              "o": "Univ. de Copenhague · como chegar ao Bakken",
+              "u": "https://ivh.ku.dk/english/research/production-nutrition-and-health/decide-annual-workshop/general-assembly-june-2023/bakken-and-hvide-hest",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "10 a 13 min"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:30",
+          "emoji": "🥪",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "🔄 Plano cidade · almoço Torvehallerne",
+          "cat": "Mercado coberto ao lado do Kongens Have",
+          "coord": {
+            "lat": 55.6839,
+            "lng": 12.5696
+          },
+          "opcoes": [
+            {
+              "nome": "Torvehallerne (Frederiksborggade 21)",
+              "poiCat": "food-hall",
+              "valeAPena": 2,
+              "desc": "Dois pavilhões de bancas: cada um escolhe o que quer, e criança acha pizza, pão e fruta. Sábado <strong>10:00-18:00</strong>.",
+              "preco": "$$",
+              "dist": "~10 min a pé do Kongens Have",
+              "coord": {
+                "lat": 55.6839,
+                "lng": 12.5696
+              },
+              "fontes": [
+                {
+                  "o": "Torvehallerne · site",
+                  "u": "https://www.torvehallernekbh.dk",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "10:00-18:00",
+                    "sábado"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Hallernes Smørrebrød (Torvehallerne)",
+              "poiCat": "restaurante",
+              "valeAPena": 1,
+              "desc": "Smørrebrød de iniciação, 75-125 kr a peça. Balcão de 16 lugares, sem reserva e sem cardápio infantil: bom pros adultos, as crianças comem nas bancas.",
+              "preco": "$$",
+              "dist": "dentro do mercado",
+              "fontes": [
+                {
+                  "o": "Hallernes · cardápio",
+                  "u": "https://www.hallernes.dk/en/standard-smorrebrod/",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "75-125 kr",
+                    "16 lugares"
+                  ]
+                },
+                {
+                  "o": "Hallernes · Torvehallerne",
+                  "u": "https://www.hallernes.dk/torvehallerne/",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "10-18",
+                    "16 lugares",
+                    "sem reserva"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:30",
+          "emoji": "⭐",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "parque",
+          "valeAPena": 2,
+          "nome": "🔄 Plano cidade · Kastellet + parquinho de Langelinie",
+          "mapsQuery": "Kastellet, København",
+          "cat": "Fortaleza em estrela e o parquinho de barcos junto da Pequena Sereia · a pé de casa",
+          "sobre": "A fortaleza em forma de estrela, cercada de fosso, virou parque: rampas de grama, casinhas vermelhas do quartel e um moinho no alto do muro. O parque da frente leva o nome de <strong>Churchill</strong>. Logo depois, no cais, fica o parquinho de Langelinie.",
+          "imperdivel": "O parquinho de Langelinie, ao lado da <strong>Pequena Sereia</strong>: <strong>barcos de brincar</strong>, um <strong>escorregador</strong> com torre de frente pra água e <strong>caixas de areia</strong>.",
+          "dicas": [
+            "🚶 Da praça do Amalienborg até o Kastellet: ~<strong>1,1 km</strong>, uns <strong>~13 min</strong> a pé ao norte.",
+            "👉 A Pequena Sereia é pequena e vive cercada de turista: olhar de passagem, a caminho do parquinho.",
+            "🌆 Escurece cedo: voltar pra casa antes de anoitecer."
+          ],
+          "duracao": "1h30",
+          "custo": "grátis",
+          "acessibilidade": "Rampas de terra e grama; o carrinho sobe pelas rampas, não pelas escadas.",
+          "coord": {
+            "lat": 55.6911,
+            "lng": 12.5939
+          },
+          "fontes": [
+            {
+              "o": "Wikipedia · Churchillparken",
+              "u": "https://en.wikipedia.org/wiki/Churchillparken",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "Churchill"
+              ]
+            },
+            {
+              "o": "Rome2rio · Amalienborg → Kastellet",
+              "u": "https://www.rome2rio.com/s/Kastellet/Amalienborg-Palace",
+              "tier": "diretorio",
+              "data": "2026-10-15",
+              "prova": [
+                "~13 min",
+                "1,1 km"
+              ]
+            },
+            {
+              "o": "Børn i Byen · 5 parquinhos secretos",
+              "u": "https://bornibyen.dk/articles/the-5-secret-playgrounds",
+              "tier": "editorial",
+              "data": "2026-10-15",
+              "prova": [
+                "Pequena Sereia",
+                "barcos de brincar",
+                "escorregador",
+                "caixas de areia"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "16:00",
+          "emoji": "🚆",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "S-tog Klampenborg → Østerport",
+          "cat": "Mesma linha C, sentido centro · ~10 min a pé de Østerport até casa [a confirmar]",
+          "mapsQuery": "Østerport Station, København",
+          "coord": {
+            "lat": 55.6922,
+            "lng": 12.5875
+          }
+        },
+        {
+          "hora": "18:00",
+          "emoji": "🍽️",
+          "periodo": "noite",
+          "tipo": "card",
+          "risco": "green",
+          "poiCat": "restaurante",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Jantar perto de casa",
+          "cat": "Repetir uma das opções de quinta, ou comer em casa",
+          "sobre": "Segundo dia seguido de parque ao ar livre: jantar simples e cedo.",
+          "imperdivel": "Cama cedo: domingo começa às 9:45 com malas.",
+          "dicas": [
+            "As opções de quinta (Færgekro, Cap Horn, Locale 21) valem de novo.",
+            "Locale 21 é pequeno: reservar de manhã se quiserem ir."
+          ],
+          "duracao": "1h",
+          "custo": "—",
+          "acessibilidade": "A pé de casa, sem trem."
+        }
+      ]
+    },
+    {
+      "date": "Dom 18/Out",
+      "tema": "Museu das crianças · saída",
+      "temaCurto": "Museu+saída",
+      "bairro": "⛵ Nationalmuseet · Slotsholmen",
+      "grupo": true,
+      "cor": "#2563eb",
+      "gradA": "#1e3a8a",
+      "gradB": "#3b82f6",
+      "nota": "<strong>Domingo depende do voo</strong> [horário a confirmar]: o plano supõe saída no fim da tarde. A consigna abre às 10:00 e fecha às 18:00, então as malas descem às 10:00 e sobem até ~15:00. Com voo antes das 17:00, cortar o almoço sentado e comer no café do museu.",
+      "stops": [
+        {
+          "hora": "09:45",
+          "emoji": "🧳",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Check-out e malas na consigna",
+          "cat": "Consigna abre às 10:00 · reserva já feita",
+          "sobre": "Deixar as malas na mesma consigna de quinta e sair leve pro museu.",
+          "imperdivel": "Sair de casa às 9:45 com tudo pronto.",
+          "dicas": [
+            "🕙 A consigna funciona <strong>10:00–18:00</strong> e só com reserva online.",
+            "🎒 Mochila leve pro museu: água, lanche e casaco das crianças."
+          ],
+          "duracao": "15 min",
+          "custo": "~€5-6 por mala (out/2026)",
+          "acessibilidade": "Malas e carrinho juntos: dois adultos levam as malas, dois as crianças.",
+          "fontes": [
+            {
+              "o": "Radical Storage · Amalienborg",
+              "u": "https://radicalstorage.com/luggage-storage/copenhagen/amalienborg-palace/luggage-storage-amalienborg",
+              "tier": "diretorio",
+              "data": "2026-10-15",
+              "prova": [
+                "10:00–18:00",
+                "€5-6",
+                "só com reserva online"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "10:15",
+          "emoji": "🚇",
+          "periodo": "manha",
+          "tipo": "transit",
+          "nome": "Metrô Marmorkirken → Gammel Strand",
+          "cat": "M3 até Gammel Strand · ~4 min a pé até o museu",
+          "mapsQuery": "Gammel Strand Station, København",
+          "coord": {
+            "lat": 55.6778,
+            "lng": 12.5797
+          }
+        },
+        {
+          "hora": "10:30",
+          "emoji": "⛵",
+          "periodo": "manha",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 3,
+          "reserva": "pendente",
+          "nome": "Børnenes Museum · Nationalmuseet (Ny Vestergade 10)",
+          "mapsQuery": "Nationalmuseet, Ny Vestergade 10, København",
+          "cat": "O museu das crianças no último dia antes de fechar pra reforma",
+          "sobre": "Dentro do Museu Nacional, o museu das crianças tem um <strong>navio viking</strong> pra subir, uma <strong>cozinha medieval</strong> e um <strong>castelo sitiado</strong> pra defender. Hoje, <strong>18/out</strong>, é a última chance: ele fecha e o novo museu infantil só abre no <strong>verão de 2027</strong>.",
+          "imperdivel": "O navio viking: as crianças sobem a bordo, e é a história que vão contar na volta, de terem ido no último dia.",
+          "dicas": [
+            "🎟️ Adulto <strong>150 kr</strong> (<strong>135 kr online</strong>), <strong>menor de 18 grátis</strong>. O museu das crianças vem <strong>incluído no ingresso geral</strong>.",
+            "🕙 O museu <strong>abre às 10:00</strong>, mas o Børnenes fecha às <strong>16:30</strong>. Último dia + feriado = vai encher ao longo da manhã.",
+            "👶 Idade: conferido pelo Tobia, serve pras duas crianças."
+          ],
+          "duracao": "10:30-12:30",
+          "custo": "~540 kr, 4 adultos online (out/2026)",
+          "acessibilidade": "Museu com elevador; o carrinho circula, mas no navio e no castelo é a pé.",
+          "coord": {
+            "lat": 55.6747,
+            "lng": 12.5747
+          },
+          "fontes": [
+            {
+              "o": "Nationalmuseet",
+              "u": "https://nationalmuseet.dk/en/",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "150 kr",
+                "135 kr online",
+                "menor de 18 grátis",
+                "18/out",
+                "2026",
+                "última chance",
+                "último dia",
+                "verão de 2027",
+                "abre às 10:00",
+                "navio viking",
+                "cozinha medieval",
+                "castelo sitiado"
+              ]
+            },
+            {
+              "o": "Nationalmuseet · FAQ",
+              "u": "https://nationalmuseet.dk/en/page/faq",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "16:30"
+              ]
+            },
+            {
+              "o": "Nationalmuseet · ingresso",
+              "u": "https://nationalmuseet.dk/en/tickets/admission-ticket",
+              "tier": "oficial",
+              "data": "2026-10-15",
+              "prova": [
+                "incluído no ingresso geral"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "12:45",
+          "emoji": "🍽️",
+          "periodo": "tarde",
+          "tipo": "opcoes",
+          "nome": "Almoço · perto do museu",
+          "cat": "Dentro do museu ou a poucas quadras",
+          "coord": {
+            "lat": 55.6745,
+            "lng": 12.5747
+          },
+          "opcoes": [
+            {
+              "nome": "Café Daisy (dentro do Nationalmuseet)",
+              "poiCat": "cafe",
+              "valeAPena": 1,
+              "noMaps": true,
+              "desc": "O café do museu: smørrebrød, pratos frescos e sorvete, com opções pra criança. Sem sair do prédio. Horário próprio de domingo [a confirmar no local].",
+              "preco": "$$",
+              "dist": "no museu",
+              "coord": {
+                "lat": 55.6745,
+                "lng": 12.5747
+              },
+              "fontes": [
+                {
+                  "o": "Nationalmuseet · comida e bebida",
+                  "u": "https://www.nationalmuseet.dk/en/page/food-and-beverages",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "smørrebrød",
+                    "sorvete"
+                  ]
+                },
+                {
+                  "o": "Visit Copenhagen · Café Daisy",
+                  "u": "https://www.visitcopenhagen.com/copenhagen/planning/cafe-daisy-gdk1159436",
+                  "tier": "editorial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "opções pra criança"
+                  ]
+                }
+              ]
+            },
+            {
+              "nome": "Restaurant Kronborg (Brolæggerstræde 12)",
+              "poiCat": "restaurante",
+              "valeAPena": 2,
+              "desc": "Smørrebrød clássico. Domingo abre 11:00-18:00, cozinha até as 17:00. Preço e cadeirão não informados [a confirmar: 33 13 07 08].",
+              "preco": "$$",
+              "dist": "poucas quadras ao norte do museu",
+              "coord": {
+                "lat": 55.6776,
+                "lng": 12.5744
+              },
+              "fontes": [
+                {
+                  "o": "Restaurant Kronborg · site",
+                  "u": "https://www.restaurantkronborg.dk",
+                  "tier": "oficial",
+                  "data": "2026-10-15",
+                  "prova": [
+                    "11:00-18:00",
+                    "domingo",
+                    "Brolæggerstræde 12"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "14:30",
+          "emoji": "🧳",
+          "periodo": "tarde",
+          "tipo": "card",
+          "risco": "yellow",
+          "poiCat": "atracao",
+          "valeAPena": 1,
+          "noMaps": true,
+          "nome": "Buscar as malas",
+          "cat": "Antes das 18:00, sem exceção",
+          "sobre": "A consigna fecha às 18:00: com voo no fim da tarde, buscar as malas logo depois do almoço e seguir pro aeroporto.",
+          "imperdivel": "Não deixar pra depois das 17:30.",
+          "dicas": [
+            "🕔 A consigna fecha às <strong>18:00</strong>.",
+            "📍 Sobrou tempo? As marcações da Kel estão no link da lista, na legenda do Resumo."
+          ],
+          "duracao": "15 min",
+          "custo": "—",
+          "acessibilidade": "Malas e carrinho juntos até o metrô: o metrô tem elevador em todas as estações [a confirmar].",
+          "fontes": [
+            {
+              "o": "Radical Storage · Amalienborg",
+              "u": "https://radicalstorage.com/luggage-storage/copenhagen/amalienborg-palace/luggage-storage-amalienborg",
+              "tier": "diretorio",
+              "data": "2026-10-15",
+              "prova": [
+                "10:00–18:00",
+                "€5-6",
+                "só com reserva online"
+              ]
+            }
+          ]
+        },
+        {
+          "hora": "15:00",
+          "emoji": "✈️",
+          "periodo": "tarde",
+          "tipo": "transit",
+          "nome": "Frederiksstaden → Aeroporto (metrô)",
+          "cat": "M2 de Kongens Nytorv até o aeroporto (~13 min) · ou táxi com as malas",
+          "mapsQuery": "Copenhagen Airport, Kastrup",
+          "coord": {
+            "lat": 55.6181,
+            "lng": 12.6561
+          }
+        }
+      ]
+    }
+  ],
+  "links_map": {
+    "Troca da guarda · Amalienborg (Amalienborg Slotsplads)": [
+      {
+        "type": "review",
+        "label": "Visit Copenhagen · troca da guarda",
+        "url": "https://visitcopenhagen.com/copenhagen/planning/changing-royal-guards-amalienborg-palace-gdk1120569"
+      }
+    ],
+    "Tivoli Gardens · Halloween (Vesterbrogade 3)": [
+      {
+        "type": "official",
+        "label": "Tivoli · Halloween",
+        "url": "https://www.tivoli.dk/en/opening-hours-and-seasons/halloween-in-tivoli"
+      },
+      {
+        "type": "official",
+        "label": "Tivoli · ingressos",
+        "url": "https://shop.tivoli.dk/en/billetter-og-tivolikort/entre-og-turpas"
+      }
+    ],
+    "Bakken + Dyrehaven (Dyrehavevej 62, Klampenborg)": [
+      {
+        "type": "official",
+        "label": "Bakken · preços e MiniTurbånd",
+        "url": "https://bakken.dk/planlaeg-dit-besog/priser-billetter/"
+      },
+      {
+        "type": "official",
+        "label": "Bakken · horários",
+        "url": "https://bakken.dk/planlaeg-dit-besog/abningstider/"
+      }
+    ],
+    "Børnenes Museum · Nationalmuseet (Ny Vestergade 10)": [
+      {
+        "type": "official",
+        "label": "Nationalmuseet · ingressos",
+        "url": "https://nationalmuseet.dk/en/tickets/admission-ticket"
+      }
+    ],
+    "Kastellet + Churchillparken (se sobrar fôlego)": [
+      {
+        "type": "review",
+        "label": "Wikipedia · Churchillparken",
+        "url": "https://en.wikipedia.org/wiki/Churchillparken"
+      }
+    ],
+    "🔄 Chuva o dia todo · Den Blå Planet (Jacob Fortlingsvej 1, Kastrup)": [
+      {
+        "type": "official",
+        "label": "Den Blå Planet",
+        "url": "https://denblaaplanet.dk/en/visit-us/practical-information/"
+      }
+    ],
+    "Passeio de barco nos canais (Nyhavn)": [
+      {
+        "type": "official",
+        "label": "Stromma · passeio de barco",
+        "url": "https://www.stromma.com/en-dk/copenhagen/sightseeing/sightseeing-by-boat/grand-tour/"
+      },
+      {
+        "type": "review",
+        "label": "Visit Copenhagen · Netto-Bådene",
+        "url": "https://visitcopenhagen.com/copenhagen/netto-boats-gdk585017"
+      }
+    ],
+    "🔄 Plano cidade · Kongens Have + Rosenborg": [
+      {
+        "type": "official",
+        "label": "Rosenborg · ingressos e horários",
+        "url": "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/"
+      }
+    ],
+    "🔄 Plano cidade com chuva · DAC (Bryghuspladsen 10)": [
+      {
+        "type": "official",
+        "label": "DAC · visita",
+        "url": "https://dac.dk/en/visit/"
+      }
+    ],
+    "🔄 Chuva forte · Ny Carlsberg Glyptotek": [
+      {
+        "type": "official",
+        "label": "Glyptotek · ingressos",
+        "url": "https://www.glyptoteket.com/visit/tickets"
+      }
+    ]
+  },
+  "transit_map": {
+    "Aeroporto → Frederiksstaden (metrô)": {
+      "metro": "[M2] Lufthavnen → Kongens Nytorv · ~13 min · bilhete de 3 zonas 30 kr por adulto [conferir no app DOT] · até 2 crianças com menos de 12 anos grátis por adulto · daí a pé até casa, ou [M3] até Marmorkirken",
+      "taxi": "Fila de táxi na saída do terminal · preço no taxímetro [a confirmar]",
+      "fontes": [
+        {
+          "o": "Metroselskabet · bilhetes",
+          "u": "https://m.dk/en/travel-with-the-metro/tickets/",
+          "tier": "oficial",
+          "data": "2026-10-15",
+          "prova": [
+            "2 zonas 24 kr",
+            "3 zonas 30 kr",
+            "2 crianças",
+            "12 anos",
+            "24 h"
+          ]
+        },
+        {
+          "o": "Visit Copenhagen · aeroporto",
+          "u": "https://www.visitcopenhagen.com/copenhagen/planning/copenhagen-airport-gdk712443",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "13 min"
+          ]
+        },
+        {
+          "o": "Visit Copenhagen · transporte com crianças",
+          "u": "https://www.visitcopenhagen.com/copenhagen/planning/copenhagen-cards-for-families",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "2 crianças",
+            "12 anos"
+          ]
+        }
+      ]
+    },
+    "Metrô Marmorkirken → Rådhuspladsen": {
+      "metro": "[M3] Cityringen · Marmorkirken → Rådhuspladsen, sem baldeação · bilhete de 2 zonas 24 kr por adulto · crianças grátis com adulto",
+      "fontes": [
+        {
+          "o": "Metroselskabet · bilhetes",
+          "u": "https://m.dk/en/travel-with-the-metro/tickets/",
+          "tier": "oficial",
+          "data": "2026-10-15",
+          "prova": [
+            "2 zonas 24 kr",
+            "3 zonas 30 kr",
+            "2 crianças",
+            "12 anos",
+            "24 h"
+          ]
+        }
+      ]
+    },
+    "S-tog Østerport → Klampenborg": {
+      "metro": "[C] Østerport → Klampenborg · trens a cada 10 min de dia e a cada 20 min à noite (parte deles não vai até Klampenborg: olhar o painel) · do trem, 10 a 13 min a pé pela floresta até o Bakken",
+      "fontes": [
+        {
+          "o": "Wikipedia · linha C do S-tog",
+          "u": "https://en.wikipedia.org/wiki/C_(S-train)",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "a cada 10 min",
+            "a cada 20 min",
+            "Østerport",
+            "Klampenborg"
+          ]
+        },
+        {
+          "o": "Univ. de Copenhague · como chegar ao Bakken",
+          "u": "https://ivh.ku.dk/english/research/production-nutrition-and-health/decide-annual-workshop/general-assembly-june-2023/bakken-and-hvide-hest",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "10 a 13 min"
+          ]
+        }
+      ]
+    },
+    "S-tog Klampenborg → Østerport": {
+      "metro": "[C] Klampenborg → Østerport · mesma linha, sentido centro · trens a cada 10-20 min",
+      "fontes": [
+        {
+          "o": "Wikipedia · linha C do S-tog",
+          "u": "https://en.wikipedia.org/wiki/C_(S-train)",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "a cada 10 min",
+            "a cada 20 min",
+            "Østerport",
+            "Klampenborg"
+          ]
+        }
+      ]
+    },
+    "Metrô Marmorkirken → Gammel Strand": {
+      "metro": "[M3] Cityringen · Marmorkirken → Gammel Strand · daí ~4 min a pé até o Nationalmuseet",
+      "fontes": [
+        {
+          "o": "Visit Copenhagen · Nationalmuseet",
+          "u": "https://www.visitcopenhagen.com/copenhagen/planning/the-national-museum-gdk410508",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "Gammel Strand",
+            "4 min"
+          ]
+        },
+        {
+          "o": "Metroselskabet · bilhetes",
+          "u": "https://m.dk/en/travel-with-the-metro/tickets/",
+          "tier": "oficial",
+          "data": "2026-10-15",
+          "prova": [
+            "2 zonas 24 kr",
+            "3 zonas 30 kr",
+            "2 crianças",
+            "12 anos",
+            "24 h"
+          ]
+        }
+      ]
+    },
+    "Frederiksstaden → Aeroporto (metrô)": {
+      "metro": "[M2] Kongens Nytorv → Lufthavnen · ~13 min · bilhete de 3 zonas 30 kr por adulto [conferir no app DOT]",
+      "taxi": "Táxi com as malas: chamar pelo app ou pela recepção [preço a confirmar]",
+      "fontes": [
+        {
+          "o": "Metroselskabet · bilhetes",
+          "u": "https://m.dk/en/travel-with-the-metro/tickets/",
+          "tier": "oficial",
+          "data": "2026-10-15",
+          "prova": [
+            "2 zonas 24 kr",
+            "3 zonas 30 kr",
+            "2 crianças",
+            "12 anos",
+            "24 h"
+          ]
+        },
+        {
+          "o": "Visit Copenhagen · aeroporto",
+          "u": "https://www.visitcopenhagen.com/copenhagen/planning/copenhagen-airport-gdk712443",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "13 min"
+          ]
+        }
+      ]
+    }
+  },
+  "bairros_config": [
+    {
+      "nome": "👑 Frederiksstaden e Nyhavn",
+      "latMin": 55.676,
+      "latMax": 55.695,
+      "lngMin": 12.582,
+      "lngMax": 12.6
+    },
+    {
+      "nome": "🏰 Centro: Kongens Have, Torvehallerne, Strøget",
+      "latMin": 55.676,
+      "latMax": 55.69,
+      "lngMin": 12.565,
+      "lngMax": 12.582
+    },
+    {
+      "nome": "🎃 Tivoli, Rådhuspladsen e Slotsholmen",
+      "latMin": 55.668,
+      "latMax": 55.676,
+      "lngMin": 12.56,
+      "lngMax": 12.585
+    },
+    {
+      "nome": "🎡 Klampenborg (Bakken)",
+      "latMin": 55.76,
+      "latMax": 55.78,
+      "lngMin": 12.57,
+      "lngMax": 12.6
+    },
+    {
+      "nome": "✈️ Kastrup (aeroporto e aquário)",
+      "latMin": 55.6,
+      "latMax": 55.66,
+      "lngMin": 12.61,
+      "lngMax": 12.67
+    },
+    {
+      "nome": "📍 Outros",
+      "fallback": true
+    }
+  ],
+  "historia": [
+    {
+      "titulo": "🎡 Copenhague · dois parques antigos e um bairro de nobres",
+      "prosa_html": "<p>Copenhague guarda <strong>dois dos parques de diversão mais antigos do mundo</strong>, a meia hora um do outro. O mais velho é o <strong>Bakken</strong>, em Klampenborg. Segundo a lenda do próprio parque, em <strong>1583</strong> uma mulher chamada <strong>Kirsten Piil</strong> achou uma fonte na floresta ao norte da cidade. A água ganhou fama de curativa, e a multidão que vinha beber atraiu artistas, vendedores e cervejeiros. Do mercado em volta da fonte nasceu o parque que a Wikipédia descreve como o mais antigo em funcionamento no mundo. A floresta em volta, a Dyrehaven, foi parque de caça dos reis e só abriu ao público em <strong>1756</strong>.</p><p>O mais famoso, o <strong>Tivoli</strong>, abriu em <strong>15 de agosto de 1843</strong>. O fundador, o oficial <strong>Georg Carstensen</strong>, convenceu o rei Cristiano VIII a deixar abrir um parque fora das muralhas. Ele dirigiu o Tivoli por só cinco anos: em <strong>1848</strong> foi lutar na guerra contra a Prússia, perdeu o posto, tentou abrir um parque rival, o Alhambra, e morreu aos 44 anos, meses antes da inauguração.</p><p>A casa de vocês também tem história. Os <strong>quatro palácios</strong> do Amalienborg foram feitos para nobres, num bairro novo que o rei <strong>Frederico V</strong> lançou nos anos 1750, com projeto do arquiteto Nicolai <strong>Eigtved</strong>. A família real só se mudou pra lá em <strong>1794</strong>, quando o Palácio de <strong>Christiansborg</strong> pegou fogo, e nunca mais saiu.</p><p>E o <strong>museu das crianças</strong> do Nationalmuseet, com o navio viking e o castelo sitiado, fecha em <strong>18 de outubro de 2026</strong> e só ganha substituto em 2027: vocês vão no último dia.</p>",
+      "fontes": [
+        {
+          "o": "Wikipedia · Dyrehavsbakken",
+          "u": "https://en.wikipedia.org/wiki/Dyrehavsbakken",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "1583",
+            "Kirsten Piil",
+            "mais antigo em funcionamento",
+            "1756"
+          ]
+        },
+        {
+          "o": "Tivoli · história",
+          "u": "https://www.tivoli.dk/en/om/about/history",
+          "tier": "oficial",
+          "data": "2026-10-15",
+          "prova": [
+            "15 de agosto de 1843",
+            "1843"
+          ]
+        },
+        {
+          "o": "Wikipedia · Georg Carstensen",
+          "u": "https://en.wikipedia.org/wiki/Georg_Carstensen",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "1848",
+            "Alhambra",
+            "44 anos",
+            "Cristiano VIII",
+            "cinco anos"
+          ]
+        },
+        {
+          "o": "Wikipedia · Amalienborg",
+          "u": "https://en.wikipedia.org/wiki/Amalienborg",
+          "tier": "editorial",
+          "data": "2026-10-15",
+          "prova": [
+            "1794",
+            "quatro palácios",
+            "Eigtved",
+            "Frederico V",
+            "Christiansborg"
+          ]
+        },
+        {
+          "o": "Kongernes Samling · Amalienborg",
+          "u": "https://kongernessamling.dk/en/amalienborg/beletagen-2",
+          "tier": "oficial",
+          "data": "2026-10-15",
+          "prova": [
+            "1794"
+          ]
+        },
+        {
+          "o": "Nationalmuseet",
+          "u": "https://nationalmuseet.dk/en/",
+          "tier": "oficial",
+          "data": "2026-10-15",
+          "prova": [
+            "150 kr",
+            "135 kr online",
+            "menor de 18 grátis",
+            "18/out",
+            "2026",
+            "última chance",
+            "último dia",
+            "verão de 2027",
+            "abre às 10:00",
+            "navio viking",
+            "cozinha medieval",
+            "castelo sitiado"
+          ]
+        }
+      ]
+    }
+  ]
+}
