@@ -650,7 +650,7 @@ const DAYS = [
     "cor": "#dc2626",
     "gradA": "#7f1d1d",
     "gradB": "#ef4444",
-    "nota": "<strong>Hoje é pouso:</strong> malas na consigna, troca da guarda ao meio-dia na porta de casa, almoço em Nyhavn e uma hora de barco sentados. Depois, check-in, soneca e jantar cedo: amanhã é o Tivoli. A consigna fecha às 18:00.<br><strong>Reservas e compras da viagem</strong><ul><li>🧳 <strong>Consigna</strong>: reservada (só funciona com reserva online).</li><li>🎃 <strong>Tivoli de sexta</strong>: preço conferido no app; o ingresso vale só na data escolhida.</li><li>🎡 <strong>Bakken</strong>: MiniTurbånd online só com a previsão de sábado firme (decidir sexta à noite).</li><li>⛵ <strong>Nationalmuseet</strong>: comprar os 4 ingressos de adulto online; crianças entram grátis.</li></ul>",
+    "nota": "<strong>Hoje é pouso:</strong> malas na consigna, troca da guarda ao meio-dia na porta de casa, almoço em Nyhavn e uma hora de barco sentados. Depois, check-in, soneca e jantar cedo: amanhã é o Tivoli. A consigna fecha às 18:00.<br><strong>Reservas e compras da viagem</strong><ul><li>🧳 <strong>Consigna</strong>: reservada (só funciona com reserva online).</li><li>🎃 <strong>Tivoli de sexta</strong>: preço conferido no app; o ingresso vale só na data escolhida.</li><li>🎡 <strong>Bakken</strong> (troca do sábado): MiniTurbånd online só se decidirem ir.</li><li>⛵ <strong>Nationalmuseet</strong>: comprar os 4 ingressos de adulto online; crianças entram grátis.</li></ul>",
     "stops": [
       {
         "hora": "10:00",
@@ -1172,7 +1172,7 @@ const DAYS = [
         "nome": "🔄 Chuva forte · DAC (Bryghuspladsen 10)",
         "mapsQuery": "Danish Architecture Center, Bryghuspladsen 10, København",
         "cat": "Centro de arquitetura coberto, à beira do porto · da lista da Kel",
-        "sobre": "Centro de arquitetura no prédio BLOX, à beira do porto, a uma estação de metrô do Tivoli. Coberto, com elevador em todos os andares e oficinas de família nos fins de semana e férias escolares [programa de sexta a confirmar no site].",
+        "sobre": "Centro de arquitetura no prédio BLOX, à beira do porto, a uma estação de metrô do Tivoli. Coberto, com oficinas de família nos fins de semana e férias escolares [programa de sexta a confirmar no site].",
         "imperdivel": "As oficinas de construção, se houver no dia: em outubro o DAC anunciou um \"Build the City\" com LEGO [a confirmar].",
         "dicas": [
           "🛝 O escorregador gigante exige <strong>1,20 m</strong>: as crianças de vocês provavelmente ficam de fora. Não vá por ele.",
@@ -1343,14 +1343,14 @@ const DAYS = [
   },
   {
     "date": "Sáb 17/Out",
-    "tema": "Bakken e Dyrehaven · ou plano cidade",
-    "temaCurto": "Bakken",
-    "bairro": "🎡 Klampenborg · Dyrehaven",
+    "tema": "Cidade a pé · Kongens Have, Torvehallerne e Kastellet",
+    "temaCurto": "Cidade",
+    "bairro": "🏰 Centro + Kastellet",
     "grupo": true,
     "cor": "#16a34a",
     "gradA": "#14532d",
     "gradB": "#22c55e",
-    "nota": "<strong>Decidir na sexta à noite, olhando a previsão:</strong><ul><li>☀️ <strong>Tempo seco</strong> → Bakken (plano principal). Comprar as MiniTurbånd online só aí.</li><li>🌧️ <strong>Chuva ou crianças moídas do Tivoli</strong> → <strong>plano cidade</strong> (cards 🔄 abaixo): Kongens Have e Rosenborg de manhã, almoço no Torvehallerne, Kastellet e o parquinho de Langelinie à tarde. Tudo perto de casa, sem trem.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Den Blå Planet (aquário) ou Experimentarium (ciências, com área pra 1-5 anos): os dois cobertos do começo ao fim.</li><li>🖼️ <strong>Dia dos adultos</strong> → Louisiana, no lugar do Bakken (não cabem os dois).</li></ul>Jantar: perto de casa, repetindo uma das opções de quinta. O Bakken fecha de 19 a 22/out (reabre de 23 a 25/out) e domingo é dia de museu e saída: se for, é no sábado.",
+    "nota": "<strong>Dia de conhecer a cidade, a pé a partir de casa:</strong> Kongens Have (o parquinho do dragão) e uma volta curta no Rosenborg de manhã, almoço no Torvehallerne, soneca em casa entre 13:30 e 15:00, e à tarde Kastellet, o parquinho de Langelinie e a Pequena Sereia. Sem trem.<br><strong>Trocas possíveis (cards 🔄), decidir na sexta à noite olhando a previsão:</strong><ul><li>🎡 <strong>Tempo bom e vontade de parque</strong> → Bakken + Dyrehaven, o dia inteiro. O Bakken fecha de 19 a 22/out: se for, é no sábado.</li><li>⛈️ <strong>Chuva o dia inteiro</strong> → Experimentarium (área pra 1-5 anos), Den Blå Planet (aquário) ou ARKEN (os trolls do Dambo).</li><li>🖼️ <strong>Dia dos adultos</strong> → Louisiana.</li></ul>Jantar: perto de casa, repetindo uma das opções de quinta.",
     "stops": [
       {
         "hora": "09:30",
@@ -1419,109 +1419,13 @@ const DAYS = [
       },
       {
         "hora": "10:00",
-        "emoji": "🚆",
-        "periodo": "manha",
-        "tipo": "transit",
-        "nome": "S-tog Østerport → Klampenborg",
-        "cat": "Linha C sentido Klampenborg · trens a cada 10-20 min · ~10 min a pé de casa até Østerport [a confirmar]",
-        "mapsQuery": "Klampenborg Station",
-        "coord": {
-          "lat": 55.7772,
-          "lng": 12.5881
-        }
-      },
-      {
-        "hora": "10:00",
-        "emoji": "🖼️",
-        "periodo": "manha",
-        "tipo": "card",
-        "risco": "yellow",
-        "poiCat": "atracao",
-        "valeAPena": 2,
-        "nome": "🔄 Troca o Bakken · Louisiana (Gl. Strandvej 13, Humlebæk)",
-        "mapsQuery": "Louisiana Museum of Modern Art, Gl. Strandvej 13, Humlebæk",
-        "cat": "Museu de arte moderna com ala infantil · no lugar do Bakken, não somado a ele · da lista da Kel",
-        "sobre": "É a escolha dos adultos: arte moderna num casarão com jardim de esculturas, ao norte da cidade. Pras crianças, a <strong>ala infantil</strong> tem <strong>3 andares</strong> de <strong>oficinas</strong> abertas todo dia (pintar, desenhar, construir), <strong>grátis</strong>, pra <strong>4 a 16 anos</strong>: as de vocês ficam no limite de baixo.",
-        "imperdivel": "Pros adultos, o jardim de esculturas; pras crianças, as oficinas da ala infantil enquanto um adulto de cada vez escapa pras salas.",
-        "dicas": [
-          "🕚 Sábado <strong>11-18</strong> (as oficinas fecham às <strong>17:30</strong>). Segunda fechado.",
-          "🎟️ Adulto <strong>145 kr</strong>, <strong>menor de 18 grátis</strong>, sem horário marcado.",
-          "🚆 Trem regional da costa de København H até <strong>Humlebæk</strong>, ~<strong>40 min</strong>, e mais <strong>10-15 min</strong> a pé. Sair de casa por volta das 10:00 pra chegar na abertura.",
-          "🚼 O museu pede <strong>carrinho compacto</strong>: empresta um no térreo da loja (depósito de moeda de <strong>20 kr</strong>) e guarda o grande.",
-          "🥪 O café abre às 11; dá pra levar lanche e comer no pavilhão do <strong>Lake Garden</strong>, ao lado da ala infantil.",
-          "⚖️ Honesto: é dia de adulto com folga pras crianças. Pro dia ser delas, o Bakken ganha."
-        ],
-        "duracao": "dia inteiro com o trem (~10:00-16:30)",
-        "custo": "~580 kr os 4 adultos · crianças grátis (out/2026)",
-        "acessibilidade": "Rampas, elevadores e porta automática; com carrinho grande a circulação pode ser restrita em dia cheio.",
-        "coord": {
-          "lat": 55.96944,
-          "lng": 12.54306
-        },
-        "fontes": [
-          {
-            "o": "Louisiana · horários e preços",
-            "u": "https://louisiana.dk/en/plan-your-visit/opening-hours/",
-            "tier": "oficial",
-            "data": "2026-10-15",
-            "prova": [
-              "11-18",
-              "sábado",
-              "145 kr",
-              "segunda fechado",
-              "17:30",
-              "café abre às 11"
-            ]
-          },
-          {
-            "o": "Louisiana · como chegar",
-            "u": "https://louisiana.dk/en/plan-your-visit/getting-here-and-parking/",
-            "tier": "oficial",
-            "data": "2026-10-15",
-            "prova": [
-              "Gl. Strandvej 13",
-              "Humlebæk",
-              "40 min",
-              "10-15 min"
-            ]
-          },
-          {
-            "o": "Louisiana · informação prática",
-            "u": "https://louisiana.dk/en/plan-your-visit/practical-info-accessibility/",
-            "tier": "oficial",
-            "data": "2026-10-15",
-            "prova": [
-              "menor de 18 grátis",
-              "carrinho compacto",
-              "20 kr",
-              "Lake Garden",
-              "elevadores"
-            ]
-          },
-          {
-            "o": "Louisiana · ala infantil",
-            "u": "https://louisiana.dk/en/museum/childrens-wing/",
-            "tier": "oficial",
-            "data": "2026-10-15",
-            "prova": [
-              "3 andares",
-              "4 a 16 anos",
-              "oficinas",
-              "grátis",
-              "1994"
-            ]
-          }
-        ]
-      },
-      {
-        "hora": "10:00",
         "emoji": "🏰",
         "periodo": "manha",
         "tipo": "card",
         "risco": "green",
         "poiCat": "parque",
         "valeAPena": 2,
-        "nome": "🔄 Plano cidade · Kongens Have + Rosenborg",
+        "nome": "Kongens Have + Rosenborg",
         "mapsQuery": "Kongens Have, København",
         "cat": "Parquinho de manhã e um castelo de contos de fadas, sem trem",
         "sobre": "O jardim do rei fica no centro, entre o Rosenborg e o Torvehallerne. <strong>No meio do parque</strong> fica o parquinho de contos de fadas, com um <strong>dragão</strong> pra montar e <strong>figuras de madeira</strong>. Ao lado, o castelo de Rosenborg parece desenho de livro infantil.",
@@ -1589,6 +1493,165 @@ const DAYS = [
       },
       {
         "hora": "10:00",
+        "emoji": "🖼️",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "yellow",
+        "poiCat": "atracao",
+        "valeAPena": 2,
+        "nome": "🔄 Dia dos adultos · Louisiana (Gl. Strandvej 13, Humlebæk)",
+        "mapsQuery": "Louisiana Museum of Modern Art, Gl. Strandvej 13, Humlebæk",
+        "cat": "Museu de arte moderna com ala infantil · troca o dia na cidade · da lista da Kel",
+        "sobre": "É a escolha dos adultos: arte moderna num casarão com jardim de esculturas, ao norte da cidade. Pras crianças, a <strong>ala infantil</strong> tem <strong>3 andares</strong> de <strong>oficinas</strong> abertas todo dia (pintar, desenhar, construir), <strong>grátis</strong>, pra <strong>4 a 16 anos</strong>: as de vocês ficam no limite de baixo.",
+        "imperdivel": "Pros adultos, o jardim de esculturas; pras crianças, as oficinas da ala infantil enquanto um adulto de cada vez escapa pras salas.",
+        "dicas": [
+          "🕚 Sábado <strong>11-18</strong> (as oficinas fecham às <strong>17:30</strong>). Segunda fechado.",
+          "🎟️ Adulto <strong>145 kr</strong>, <strong>menor de 18 grátis</strong>, sem horário marcado.",
+          "🚆 Trem regional da costa de København H até <strong>Humlebæk</strong>, ~<strong>40 min</strong>, e mais <strong>10-15 min</strong> a pé. Sair de casa por volta das 10:00 pra chegar na abertura.",
+          "🚼 O museu pede <strong>carrinho compacto</strong>: empresta um no térreo da loja (depósito de moeda de <strong>20 kr</strong>) e guarda o grande.",
+          "🥪 O café abre às 11; dá pra levar lanche e comer no pavilhão do <strong>Lake Garden</strong>, ao lado da ala infantil.",
+          "⚖️ Honesto: é dia de adulto com folga pras crianças. Pro dia ser delas, a cidade ou o Bakken ganham."
+        ],
+        "duracao": "dia inteiro com o trem (~10:00-16:30)",
+        "custo": "~580 kr os 4 adultos · crianças grátis (out/2026)",
+        "acessibilidade": "Rampas, elevadores e porta automática; com carrinho grande a circulação pode ser restrita em dia cheio.",
+        "coord": {
+          "lat": 55.96944,
+          "lng": 12.54306
+        },
+        "fontes": [
+          {
+            "o": "Louisiana · horários e preços",
+            "u": "https://louisiana.dk/en/plan-your-visit/opening-hours/",
+            "tier": "oficial",
+            "data": "2026-10-15",
+            "prova": [
+              "11-18",
+              "sábado",
+              "145 kr",
+              "segunda fechado",
+              "17:30",
+              "café abre às 11"
+            ]
+          },
+          {
+            "o": "Louisiana · como chegar",
+            "u": "https://louisiana.dk/en/plan-your-visit/getting-here-and-parking/",
+            "tier": "oficial",
+            "data": "2026-10-15",
+            "prova": [
+              "Gl. Strandvej 13",
+              "Humlebæk",
+              "40 min",
+              "10-15 min"
+            ]
+          },
+          {
+            "o": "Louisiana · informação prática",
+            "u": "https://louisiana.dk/en/plan-your-visit/practical-info-accessibility/",
+            "tier": "oficial",
+            "data": "2026-10-15",
+            "prova": [
+              "menor de 18 grátis",
+              "carrinho compacto",
+              "20 kr",
+              "Lake Garden",
+              "elevadores"
+            ]
+          },
+          {
+            "o": "Louisiana · ala infantil",
+            "u": "https://louisiana.dk/en/museum/childrens-wing/",
+            "tier": "oficial",
+            "data": "2026-10-15",
+            "prova": [
+              "3 andares",
+              "4 a 16 anos",
+              "oficinas",
+              "grátis",
+              "1994"
+            ]
+          }
+        ]
+      },
+      {
+        "hora": "10:00",
+        "emoji": "🧌",
+        "periodo": "manha",
+        "tipo": "card",
+        "risco": "green",
+        "poiCat": "atracao",
+        "valeAPena": 2,
+        "nome": "🔄 Chuva o dia todo · ARKEN (os trolls do Dambo)",
+        "mapsQuery": "ARKEN Museum of Contemporary Art, Ishøj",
+        "cat": "Museu de arte com a exposição dos trolls gigantes · oficina de troll · ver a aba História",
+        "sobre": "O ARKEN, em <strong>Ishøj</strong>, faz até <strong>29/nov</strong> a <strong>primeira exposição em museu</strong> de Thomas Dambo, \"The Garbage Man\": os trolls gigantes de madeira reciclada, desta vez dentro de casa, e uma <strong>oficina de troll</strong> pras crianças.",
+        "imperdivel": "Entrar na sala e dar de cara com um troll do tamanho de uma casa. Lá dentro <strong>não pode tocar</strong> nem subir: combinar com as crianças antes.",
+        "dicas": [
+          "🕙 Nas <strong>férias de outono</strong> abre todo dia <strong>10h-17h</strong>.",
+          "🎟️ Adulto <strong>150 kr</strong>, <strong>menor de 18 grátis</strong>.",
+          "🚆 S-tog de København H até <strong>Ishøj</strong>, ~<strong>16 min</strong>, e o <strong>ônibus 128</strong>, uns <strong>5 min</strong> até a porta.",
+          "🧌 Quem gostar, tem mais troll ao ar livre em Ishøj: o Oscar Under the Bridge, um dos seis gigantes [a confirmar o caminho a pé desde o museu]."
+        ],
+        "duracao": "2-3h + ~45 min de trem e ônibus por trecho",
+        "custo": "600 kr os 4 adultos · crianças grátis (out/2026)",
+        "acessibilidade": "Carrinho bem-vindo, com elevadores e fraldário.",
+        "coord": {
+          "lat": 55.6065,
+          "lng": 12.3885
+        },
+        "fontes": [
+          {
+            "o": "ARKEN · The Garbage Man",
+            "u": "https://www.arken.dk/en/exhibitions/the-garbage-man",
+            "tier": "oficial",
+            "data": "2026-10-15",
+            "prova": [
+              "29/nov",
+              "oficina de troll",
+              "não pode tocar",
+              "primeira exposição em museu"
+            ]
+          },
+          {
+            "o": "ARKEN · informação",
+            "u": "https://www.arken.dk/en/information",
+            "tier": "oficial",
+            "data": "2026-10-15",
+            "prova": [
+              "menor de 18 grátis",
+              "150 kr",
+              "10h-17h",
+              "férias de outono",
+              "elevadores",
+              "fraldário",
+              "carrinho"
+            ]
+          },
+          {
+            "o": "ARKEN · passeio cultural de trem",
+            "u": "https://www.arken.dk/fra-sofaen/cultural-day-trip",
+            "tier": "oficial",
+            "data": "2026-10-15",
+            "prova": [
+              "16 min",
+              "Ishøj"
+            ]
+          },
+          {
+            "o": "Lonely Planet · ARKEN",
+            "u": "https://www.lonelyplanet.com/denmark/copenhagen/around-copenhagen/attractions/arken-museum-of-modern-art/a/poi-sig/1438684/1336118",
+            "tier": "editorial",
+            "data": "2026-10-15",
+            "prova": [
+              "ônibus 128",
+              "5 min"
+            ]
+          }
+        ]
+      },
+      {
+        "hora": "10:00",
         "emoji": "🐠",
         "periodo": "manha",
         "tipo": "card",
@@ -1649,7 +1712,7 @@ const DAYS = [
         "poiCat": "atracao",
         "valeAPena": 3,
         "reserva": "pendente",
-        "nome": "Bakken + Dyrehaven (Dyrehavevej 62, Klampenborg)",
+        "nome": "🔄 Troca o dia · Bakken + Dyrehaven (Dyrehavevej 62, Klampenborg)",
         "mapsQuery": "Bakken, Dyrehavevej 62, Klampenborg",
         "cat": "O parque de diversões mais antigo do mundo em funcionamento · no meio da floresta dos cervos",
         "sobre": "Pela lenda do parque, tudo começou em <strong>1583</strong>, quando Kirsten Piil achou uma fonte na floresta e a multidão que vinha beber a água atraiu artistas e vendedores. Hoje é um parque de diversões de verdade, meio kitsch, com cheiro de algodão-doce: o charme é a floresta e o clima antigo, não a tecnologia.",
@@ -1657,6 +1720,7 @@ const DAYS = [
         "dicas": [
           "🎟️ <strong>Entrada grátis.</strong> Paga só a pulseira: <strong>MiniTurbånd</strong> (17 brinquedos infantis, criança até <strong>115 cm</strong> de sapato, medida na bilheteria) <strong>249 kr</strong> online ou <strong>279 kr</strong> na hora. A adulta (39 brinquedos) é <strong>349 kr</strong> online ou <strong>379 kr</strong> na hora. Se o adulto que acompanha a criança precisa de pulseira, perguntar na bilheteria antes de comprar [a confirmar].",
           "🎭 Programa grátis do feriado: <strong>Monsterbal</strong> às <strong>12:30</strong> e <strong>Onkel Reje</strong> (show de Halloween) às <strong>14:00</strong>.",
+          "🚆 S-tog linha <strong>C</strong> de Østerport até <strong>Klampenborg</strong>, trens <strong>a cada 10 min</strong> de dia (parte deles não vai até lá: olhar o painel). Sair de casa às 10:00.",
           "🚶 Da estação até o parque são <strong>10 a 13 min</strong> a pé por trilha de terra: o carrinho sacoleja, mas passa.",
           "🌑 Sair antes das <strong>18:30</strong>: aí começa o <strong>After Dark</strong>, de terror, que não é pra criança.",
           "📅 O Bakken só abre de <strong>10 a 18/out</strong> e depois de <strong>23 a 25/out</strong>. Sábado de feriado (efterårsferie) é o dia mais cheio: chegar na abertura."
@@ -1728,6 +1792,17 @@ const DAYS = [
             "prova": [
               "10 a 13 min"
             ]
+          },
+          {
+            "o": "Wikipedia · linha C do S-tog",
+            "u": "https://en.wikipedia.org/wiki/C_(S-train)",
+            "tier": "editorial",
+            "data": "2026-10-15",
+            "prova": [
+              "a cada 10 min",
+              "Klampenborg",
+              "Østerport"
+            ]
           }
         ]
       },
@@ -1736,7 +1811,7 @@ const DAYS = [
         "emoji": "🥪",
         "periodo": "tarde",
         "tipo": "opcoes",
-        "nome": "🔄 Plano cidade · almoço Torvehallerne",
+        "nome": "Almoço · Torvehallerne",
         "cat": "Mercado coberto ao lado do Kongens Have",
         "coord": {
           "lat": 55.6839,
@@ -1807,7 +1882,7 @@ const DAYS = [
         "risco": "green",
         "poiCat": "parque",
         "valeAPena": 2,
-        "nome": "🔄 Plano cidade · Kastellet + parquinho de Langelinie",
+        "nome": "Kastellet + parquinho de Langelinie",
         "mapsQuery": "Kastellet, København",
         "cat": "Fortaleza em estrela e o parquinho de barcos junto da Pequena Sereia · a pé de casa",
         "sobre": "A fortaleza em forma de estrela, cercada de fosso, virou parque: rampas de grama, casinhas vermelhas do quartel e um moinho no alto do muro. O parque da frente leva o nome de <strong>Churchill</strong>. Logo depois, no cais, fica o parquinho de Langelinie.",
@@ -1857,19 +1932,6 @@ const DAYS = [
             ]
           }
         ]
-      },
-      {
-        "hora": "16:00",
-        "emoji": "🚆",
-        "periodo": "tarde",
-        "tipo": "transit",
-        "nome": "S-tog Klampenborg → Østerport",
-        "cat": "Mesma linha C, sentido centro · ~10 min a pé de Østerport até casa [a confirmar]",
-        "mapsQuery": "Østerport Station, København",
-        "coord": {
-          "lat": 55.6922,
-          "lng": 12.5875
-        }
       }
     ]
   },
@@ -2144,7 +2206,7 @@ const LINKS_MAP = {
       "url": "https://shop.tivoli.dk/en/billetter-og-tivolikort/entre-og-turpas"
     }
   ],
-  "Bakken + Dyrehaven (Dyrehavevej 62, Klampenborg)": [
+  "🔄 Troca o dia · Bakken + Dyrehaven (Dyrehavevej 62, Klampenborg)": [
     {
       "type": "official",
       "label": "Bakken · preços e MiniTurbånd",
@@ -2189,7 +2251,7 @@ const LINKS_MAP = {
       "url": "https://visitcopenhagen.com/copenhagen/netto-boats-gdk585017"
     }
   ],
-  "🔄 Plano cidade · Kongens Have + Rosenborg": [
+  "Kongens Have + Rosenborg": [
     {
       "type": "official",
       "label": "Rosenborg · ingressos e horários",
@@ -2259,49 +2321,6 @@ const TRANSIT_MAP = {
           "2 crianças",
           "12 anos",
           "24 h"
-        ]
-      }
-    ]
-  },
-  "S-tog Østerport → Klampenborg": {
-    "metro": "[C] Østerport → Klampenborg · trens a cada 10 min de dia e a cada 20 min à noite (parte deles não vai até Klampenborg: olhar o painel) · do trem, 10 a 13 min a pé pela floresta até o Bakken",
-    "fontes": [
-      {
-        "o": "Wikipedia · linha C do S-tog",
-        "u": "https://en.wikipedia.org/wiki/C_(S-train)",
-        "tier": "editorial",
-        "data": "2026-10-15",
-        "prova": [
-          "a cada 10 min",
-          "a cada 20 min",
-          "Østerport",
-          "Klampenborg"
-        ]
-      },
-      {
-        "o": "Univ. de Copenhague · como chegar ao Bakken",
-        "u": "https://ivh.ku.dk/english/research/production-nutrition-and-health/decide-annual-workshop/general-assembly-june-2023/bakken-and-hvide-hest",
-        "tier": "editorial",
-        "data": "2026-10-15",
-        "prova": [
-          "10 a 13 min"
-        ]
-      }
-    ]
-  },
-  "S-tog Klampenborg → Østerport": {
-    "metro": "[C] Klampenborg → Østerport · mesma linha, sentido centro · trens a cada 10-20 min",
-    "fontes": [
-      {
-        "o": "Wikipedia · linha C do S-tog",
-        "u": "https://en.wikipedia.org/wiki/C_(S-train)",
-        "tier": "editorial",
-        "data": "2026-10-15",
-        "prova": [
-          "a cada 10 min",
-          "a cada 20 min",
-          "Østerport",
-          "Klampenborg"
         ]
       }
     ]
@@ -2754,6 +2773,124 @@ const HISTORIA = [
           "10h-17h",
           "férias de outono",
           "21h"
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "🧜 A Pequena Sereia · a estátua mais roubada da cidade",
+    "prosa_html": "<p>A estátua que vocês veem no sábado, junto do parquinho de Langelinie, foi encomendada em <strong>1909</strong> por <strong>Carl Jacobsen</strong>, filho do fundador da Carlsberg, depois de ver um balé baseado no conto de H.C. Andersen. O escultor <strong>Edvard Eriksen</strong> a inaugurou em <strong>23 de agosto de 1913</strong>. É pequena mesmo: <strong>1,25 m</strong> e <strong>175 kg</strong> de bronze. O rosto foi pensado na bailarina <strong>Ellen Price</strong>, que se recusou a posar nua; o corpo é da mulher do escultor, <strong>Eline Eriksen</strong>.</p><p>A pobre sereia já sofreu muito: em <strong>1964</strong> serraram a cabeça dela, que <strong>nunca foi recuperada</strong> (fizeram outra), e em <strong>1998</strong> cortaram de novo, mas dessa vez a cabeça voltou. Em <strong>2010</strong> ela fez a única viagem da vida, pra Expo de <strong>Xangai</strong>, na China. Pras crianças: a sereia do filme é a mesma do conto, e o conto foi escrito aqui, em Copenhague.</p>",
+    "fontes": [
+      {
+        "o": "Wikipedia · The Little Mermaid (statue)",
+        "u": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue)",
+        "tier": "editorial",
+        "data": "2026-10-15",
+        "prova": [
+          "1909",
+          "Carl Jacobsen",
+          "Edvard Eriksen",
+          "23 de agosto de 1913",
+          "1913",
+          "1,25 m",
+          "175 kg",
+          "Eline Eriksen",
+          "Ellen Price",
+          "1964",
+          "1998",
+          "2010",
+          "Xangai",
+          "nunca foi recuperada"
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "📖 Andersen em Nyhavn · onde nasceram os contos",
+    "prosa_html": "<p>O canal colorido onde vocês almoçam na quinta foi aberto pelo rei <strong>Christian V</strong> entre <strong>1670</strong> e <strong>1675</strong>, pra trazer os navios até o coração da cidade. A casa mais antiga é a de <strong>nº 9</strong>, de <strong>1681</strong>.</p><p>Hans Christian Andersen morou três vezes em Nyhavn. Na casa de número 20, entre <strong>1834</strong> e <strong>1838</strong>, ele publicou, em <strong>maio de 1835</strong>, o primeiro livrinho de contos de fadas: estavam lá <strong>O Isqueiro</strong>, <strong>A Princesa e a Ervilha</strong> e <strong>Claus Grande e Claus Pequeno</strong>. Depois viveu também no número <strong>67</strong> e no <strong>18</strong> (as datas variam conforme a fonte). Pras crianças: dá pra contar a história da princesa que sentiu uma ervilha debaixo de vinte colchões, e mostrar a casa onde ela foi escrita.</p>",
+    "fontes": [
+      {
+        "o": "Wikipedia · Nyhavn 20",
+        "u": "https://en.wikipedia.org/wiki/Nyhavn_20",
+        "tier": "editorial",
+        "data": "2026-10-15",
+        "prova": [
+          "1834",
+          "1838",
+          "maio de 1835",
+          "O Isqueiro",
+          "A Princesa e a Ervilha",
+          "Claus Grande e Claus Pequeno"
+        ]
+      },
+      {
+        "o": "Wikipedia · Nyhavn",
+        "u": "https://en.wikipedia.org/wiki/Nyhavn",
+        "tier": "editorial",
+        "data": "2026-10-15",
+        "prova": [
+          "Christian V",
+          "1670",
+          "1675",
+          "nº 9",
+          "1681",
+          "67",
+          "18"
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "🧱 LEGO · \"brinque bem\" em dinamarquês",
+    "prosa_html": "<p>O brinquedo mais famoso do mundo é dinamarquês. O carpinteiro <strong>Ole Kirk Christiansen</strong>, de <strong>Billund</strong>, começou a fazer brinquedos de madeira em <strong>1932</strong>. Em <strong>1934</strong> a oficina ganhou o nome LEGO, juntando duas palavras dinamarquesas: <strong>leg godt</strong>, \"brinque bem\".</p><p>As pecinhas de plástico de encaixar vieram em <strong>1949</strong>, e o desenho de hoje, com os tubinhos por baixo, foi patenteado em <strong>1958</strong>: por isso uma peça de 1958 ainda encaixa numa de agora. A primeira Legoland abriu em Billund em <strong>1968</strong>, e os bonequinhos só nasceram em <strong>1978</strong>. Billund fica longe de Copenhague, mas a palavra do dia pras crianças é essa: <em>leg godt</em>!</p>",
+    "fontes": [
+      {
+        "o": "Wikipedia · Lego",
+        "u": "https://en.wikipedia.org/wiki/Lego",
+        "tier": "editorial",
+        "data": "2026-10-15",
+        "prova": [
+          "Ole Kirk Christiansen",
+          "Billund",
+          "1932",
+          "1934",
+          "leg godt",
+          "1949",
+          "1958",
+          "1968",
+          "1978"
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "⚔️ Vikings e tesouros do Museu Nacional",
+    "prosa_html": "<p>No domingo, além do navio viking do museu das crianças, o Nationalmuseet guarda alguns dos maiores tesouros da Dinamarca. O <strong>Carro do Sol de Trundholm</strong> é um cavalinho de bronze puxando um disco dourado, o sol, da <strong>Idade do Bronze</strong>. A <strong>Menina de Egtved</strong> foi enterrada num caixão de tronco de carvalho, e as roupas dela chegaram até hoje. O <strong>caldeirão de Gundestrup</strong>, de prata, é do <strong>séc. I a.C.</strong> e é coberto de deuses e bichos.</p><p>E há um mistério de ladrão: os <strong>Chifres de Ouro</strong> originais foram roubados em <strong>1802</strong> e <strong>derretidos</strong> pelo ladrão. O que se vê hoje são <strong>cópias</strong>. Pras crianças: procurem o cavalo que puxa o sol.</p>",
+    "fontes": [
+      {
+        "o": "Wikipedia · National Museum of Denmark",
+        "u": "https://en.wikipedia.org/wiki/National_Museum_of_Denmark",
+        "tier": "editorial",
+        "data": "2026-10-15",
+        "prova": [
+          "Egtved",
+          "Idade do Bronze",
+          "Carro do Sol de Trundholm",
+          "Gundestrup",
+          "séc. I a.C.",
+          "Chifres de Ouro",
+          "1802"
+        ]
+      },
+      {
+        "o": "Wikipedia · Golden Horns of Gallehus",
+        "u": "https://en.wikipedia.org/wiki/Golden_Horns_of_Gallehus",
+        "tier": "editorial",
+        "data": "2026-10-15",
+        "prova": [
+          "1802",
+          "derretidos",
+          "cópias"
         ]
       }
     ]
