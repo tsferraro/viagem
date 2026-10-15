@@ -101,3 +101,24 @@
 ## Alternativas adicionadas depois (15/out · pedido do Tobia: "o que ficou de fora vira alternativa")
 
 Cards ⭐⭐/⭐ 🔄 novos: **Louisiana** (sáb, troca o Bakken), **Experimentarium** (sáb, chuva) e **DAC** (sex, chuva). Os fatos vêm de um sub-agente pesquisador que leu as páginas oficiais (louisiana.dk, experimentarium.dk, dac.dk). Não passaram por um verificador cético separado: é item ⭐⭐ fora do escopo de frescor do gate, e fica para o re-check. O preço do Experimentarium só apareceu em snippet e está marcado `[a confirmar]` no card.
+
+## História ampliada (15/out · Christiania e trolls · 1 sub-agente cético, contexto limpo, nível-página na maioria)
+
+| Item | Afirmação verificada | Veredito | Fonte(s) | Data |
+|---|---|---|---|---|
+| historia:christiania | "26/set/1971 · Jacob Ludvigsen · quartel de Bådsmandsstræde · muralhas do séc. XVII" | OK | https://en.wikipedia.org/wiki/Freetown_Christiania · https://www.sbst.dk/bolig/christiania/about-christiania | 2026-10-15 |
+| historia:christiania | "vizinhos derrubavam a cerca pra ter um parquinho" | OK | https://www.christiania.org/wp-content/uploads/2013/02/Guideeng2.pdf | 2026-10-15 |
+| historia:christiania | "assembleias · bandeira com 3 bolas = três i · 2012 fundação com ações populares · muralhas arrendadas" | OK | https://lex.dk/Christiania · https://www.fotw.info/flags/dk-chris.html · https://www.sbst.dk/bolig/christiania/about-christiania | 2026-10-15 |
+| historia:christiania | "regras: sem drogas pesadas, armas, violência e sem carros" | RISCO — as 4 oficiais incluem jaquetas de gangue; "sem carros" é etiqueta → corrigido | https://www.christiania.org/wp-content/uploads/2013/02/Guideeng2.pdf | 2026-10-15 |
+| historia:christiania | "abril/2024 moradores arrancaram os paralelepípedos junto com polícia e prefeitura" | RISCO — com dinheiro do governo; a polícia retirou as barracas na mesma manhã → corrigido | https://www.clickondetroit.com/news/world/2024/04/06/christiania-copenhagens-hippie-oasis-wants-to-rebuild-without-its-illegal-hashish-market/ | 2026-10-15 |
+| historia:christiania | "cannabis ilegal · pedir licença pra fotografar · placas sem fotos" | OK | https://www.christiania.org/wp-content/uploads/2013/02/Guideeng2.pdf · https://en.wikipedia.org/wiki/Freetown_Christiania | 2026-10-15 |
+| historia:trolls | "antes de 1900 · debaixo da terra, montes, ouro · tamanho de montanha a criança grande · 4 dedos · medo dos sinos · pedra enorme na água" | OK | https://natmus.dk/fileadmin/user_upload/Editor/Undervisning_UV_materialer/Trolde_hekse_fortid_for_begyndere.pdf | 2026-10-15 |
+| historia:trolls | "nórdico antigo · vira pedra com sol" | OK | https://en.wikipedia.org/wiki/Troll · https://filer.slagelse.dk/tm/Trykopgaver/Troldeskoven%20A1%20h%C3%B8j.pdf | 2026-10-15 |
+| historia:trolls | "nisse: sótão do celeiro, gorro vermelho, mingau com manteiga, Natal no séc. XIX" | OK | https://lex.dk/nisse | 2026-10-15 |
+| historia:trolls | "Dambo desde 2014 · quase 200 · 19 países" | OK | https://wtop.com/entertainment/2026/05/the-trolls-come-indoors-as-a-danish-recycling-artist-stages-his-first-museum-exhibit/ | 2026-10-15 |
+| historia:trolls | "Green George 2019 em Christiania · livro de pétalas" | OK | https://thomasdambo.com/works/green-george · https://gradynewsource.uga.edu/discovering-hidden-giants-in-copenhagen/ | 2026-10-15 |
+| historia:trolls | "mural diz 'o mundo está em nossas mãos'" | RISCO — fonte única → corrigido (só "mural de Rasmus Balstrøm") | https://thomasdambo.com/works/green-george | 2026-10-15 |
+| historia:trolls | "Sanka 2020 · chupetas · Remiseparken" | OK | https://thomasdambo.com/works/suttetrolden-sanka · https://www.thelocal.dk/20240607/ten-great-and-free-playgrounds-to-take-your-kids-in-copenhagen | 2026-10-15 |
+| historia:trolls | "Six Forgotten Giants 2016 · precisa de carro" | RISCO — há rota oficial de bicicleta ~35 km → corrigido | https://www.opdagdanmark.dk/en/discover/de-seks-glemte-kaemper/ | 2026-10-15 |
+| historia:trolls | "ARKEN The Garbage Man até 29/nov · primeira em museu · oficina · não tocar · <18 grátis · 150 kr · S-tog ~16 min" | OK | https://www.arken.dk/en/exhibitions/the-garbage-man · https://www.arken.dk/en/information | 2026-10-15 |
+| historia:trolls | "ARKEN aberto 10h-17h de sexta a domingo" | ERRO → corrigido (férias de outono: todo dia 10-17, quinta 15 até 21h) | https://www.arken.dk/en/information | 2026-10-15 |
