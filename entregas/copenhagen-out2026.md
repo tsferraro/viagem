@@ -1,6 +1,6 @@
 # Copenhagen · pré-roteiro · 15–18/out/2026
 
-**Briefing fixado:** 4 adultos + 2 crianças (3,5 e 4,5 anos, segundo a Kel) · base **hospedagem (Frederiksstaden, colada no Amalienborg)** · chegada **qui 15/out de manhã** · saída **dom 18/out fim de tarde** · pedidos: **Tivoli**, **um museu legal**, **Bakken** (sugestão de amigo) · lista de lugares da Kel (28 pontos, triada abaixo).
+**Briefing fixado:** 4 adultos + 2 crianças pequenas (faixa de ingresso 3–7 anos) · base **hospedagem (Frederiksstaden, colada no Amalienborg)** · chegada **qui 15/out de manhã** · saída **dom 18/out fim de tarde** · pedidos: **Tivoli**, **um museu legal**, **Bakken** (sugestão de amigo) · lista de lugares da Kel (28 pontos, triada abaixo).
 
 **Elo mais restritivo:** crianças de 4 anos (fôlego de ~3-4h por atração, soneca, altura ≤115 cm nos brinquedos infantis). Adultos aguentam tudo; o ritmo é das crianças.
 
@@ -58,7 +58,7 @@ Preços datados (out/2026); distâncias da hospedagem (Frederiksstaden); **estim
 ### Børnenes Museum · Nationalmuseet — 🏆
 - Ny Vestergade 10 · museu **aberto 10:00–17:00 todos os dias**, mas o **Børnenes Museum fecha às 16:30** (FAQ oficial · **corrigido na auditoria**); adulto **150 DKK (135 online)**, **menor de 18 grátis** (oficial, out/2026).
 - O museu infantil: navio viking, bazar, cozinha medieval, castelo sitiado. **"Sua última chance de visitar é 18/out/2026"**; novo museu infantil só em **verão/2027**.
-- **Resolvido na auditoria:** o ingresso geral dá acesso a todas as exposições, **incluindo o Børnenes** (página de ingressos do Nationalmuseet). **Idade-alvo continua sem fonte oficial** — só o Lonely Planet (T3, antigo) diz "4 a 12 anos"; com crianças de 3,5 e 4,5, a mais nova pode estar abaixo do alvo **[a confirmar por telefone: +45 33 13 44 11]**.
+- **Resolvido na auditoria:** o ingresso geral dá acesso a todas as exposições, **incluindo o Børnenes** (página de ingressos do Nationalmuseet). **Idade-alvo continua sem fonte oficial** — só o Lonely Planet (T3, antigo) diz "4 a 12 anos". **Resolvido pelo Tobia em 15/out: a idade das crianças está ok para o museu.**
 - **Quando:** dom 18, 10:00 (abertura) — 10:00–12:30, volta tranquilo pra pegar mala. **Risco:** último dia → pode lotar; se a lotação assustar, **sex de manhã** vira plano B.
 
 ### Troca de guarda + Amalienborg — 🏆
@@ -157,7 +157,7 @@ Sabores-assinatura locais: **smørrebrød** (pão de centeio aberto), **frikadel
 
 ## Triagem da 2ª lista da Kel (10 selecionados · adicionada na auditoria 15/out)
 
-A Kel mandou uma seleção curta, com idades das crianças **3,5 e 4,5 anos**. Preços/horários abaixo conferidos em 15/out/2026 (nível-snippet salvo onde indicado); detalhes e fontes em `copenhagen-out2026.AUDITORIA.md`.
+A Kel mandou uma seleção curta. Preços/horários abaixo conferidos em 15/out/2026 (nível-snippet salvo onde indicado); detalhes e fontes em `copenhagen-out2026.AUDITORIA.md`.
 
 | # | Lugar (Kel) | Fatos conferidos | Veredito | Encaixe |
 |---|---|---|---|---|

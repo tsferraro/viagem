@@ -24,7 +24,7 @@
 | tivoli:abertura | aberto todo dia a partir das 11:00 na temporada | OK | https://www.tivoli.dk/en/plan-your-visit | 2026-10-15 |
 | tivoli:fecha-qui-dom | qui 22:00 · sex/sáb 23:00 · dom 22:00 | INCONCLUSIVO — calendário dinâmico; fontes T2-T3 dizem "~22:00, mais tarde no fim de semana"; conferir no app Tivoli ou +45 33 15 10 01 | https://www.copenhagentourism.org/tivoli-halloween-copenhagen/ | 2026-10-15 |
 | tivoli:preço-pacote | Entrada+Ride Pass adulto 489–509 DKK; 3–7 anos 244–254 | INCONCLUSIVO — página da loja não expõe preço sem JS; guias T2 sugerem entrada ~150 + Ride Pass ~299 (soma menor que a do texto), ingressos têm preço dinâmico; conferir antes de comprar | https://shop.tivoli.dk/en/billetter-og-tivolikort/entre-og-turpas | 2026-10-15 |
-| tivoli:criança-3-7 | faixa 3–7 paga metade; as duas crianças (3,5 e 4,5) entram nela | OK (faixa) / valor INCONCLUSIVO | https://www.visitcopenhagen.com/copenhagen/planning/halloween-tivoli-gdk1120891 | 2026-10-15 |
+| tivoli:criança-3-7 | faixa 3–7 paga metade; as duas crianças entram nela | OK (faixa) / valor INCONCLUSIVO | https://www.visitcopenhagen.com/copenhagen/planning/halloween-tivoli-gdk1120891 | 2026-10-15 |
 | tivoli:friday-rock | menor de 16 após 17:30 só com adulto ≥25 anos (máx. 4 menores por adulto) | OK | https://www.tivoli.dk/en/program/fredagsrock | 2026-10-15 |
 | tivoli:friday-rock-brinquedos | em sexta de Friday Rock os brinquedos fecham às 22:00 | OK (nível-snippet) | https://shop.tivoli.dk/en/billetter-og-tivolikort/entre-og-turpas | 2026-10-15 |
 | tivoli:16-out-é-friday-rock | que a sexta 16/out é dia de Friday Rock | INCONCLUSIVO — calendário do programa não lido; confirmar no app | https://www.tivoli.dk/en/program/fredagsrock | 2026-10-15 |
@@ -47,7 +47,7 @@
 | natmus:preço | adulto 150 DKK (135 online); menor de 18 grátis | OK | https://nationalmuseet.dk/en/ | 2026-10-15 |
 | natmus:última-chance | Børnenes "última chance 18/out/2026"; novo museu infantil no verão/2027 | OK | https://nationalmuseet.dk/en/ | 2026-10-15 |
 | natmus:incluído-no-geral | Børnenes incluído no ingresso geral (a confirmar no texto original) | OK — resolvido | https://nationalmuseet.dk/en/tickets/admission-ticket | 2026-10-15 |
-| natmus:idade-alvo | faixa etária do Børnenes | INCONCLUSIVO — Lonely Planet (T3, antigo) diz 4–12; nenhuma fonte oficial; a mais nova (3,5) pode estar abaixo do alvo; ligar +45 33 13 44 11 | https://www.lonelyplanet.com/points-of-interest/children-s-museum/1503592 | 2026-10-15 |
+| natmus:idade-alvo | faixa etária do Børnenes | INCONCLUSIVO — Lonely Planet (T3, antigo) diz 4–12; nenhuma fonte oficial; a mais nova pode estar abaixo do alvo; ligar +45 33 13 44 11 | https://www.lonelyplanet.com/points-of-interest/children-s-museum/1503592 | 2026-10-15 |
 | natmus:metro | metro M3 + ~5 min a pé | OK — melhor descer em **Gammel Strand** (4 min a pé) | https://www.visitcopenhagen.com/copenhagen/planning/the-national-museum-gdk410508 | 2026-10-15 |
 | dbp:horário-preços | pico 10–21 todo dia; adulto 259 (229 online), criança 3–11 136 (123 online); 0–2 grátis | OK | https://denblaaplanet.dk/en/visit-us/practical-information/ | 2026-10-15 |
 | dbp:noturno | ingresso noturno 99 DKK 19–21h, só online, limitado; recesso de outono 10/out–1/nov | OK | https://denblaaplanet.dk/en/holiday-evening-ticket | 2026-10-15 |
@@ -56,7 +56,7 @@
 | experimentarium:horário | 9:30–17:00 todo dia | OK | https://experimentarium.dk/plan-your-visit | 2026-10-15 |
 | experimentarium:preços | criança 154/169, adulto 249/274 | INCONCLUSIVO — página oficial lida não traz valores (só "10% de desconto online"); ~1.300 DKK é plausível, não provado | https://experimentarium.dk/plan-your-visit | 2026-10-15 |
 | kongens-have:horário | aberto até 19:00 em outubro (7:00–19:00) | OK | https://www.parkmuseerne.dk/en/parker/kongens-have | 2026-10-15 |
-| kongens-have:distância | ~10–15 min a pé da base | RISCO — sem fonte; pela geografia (≈1,3 km) é mais perto de 15–20 min com crianças de 3–4 anos | — | 2026-10-15 |
+| kongens-have:distância | ~10–15 min a pé da base | RISCO — sem fonte; pela geografia (≈1,3 km) é mais perto de 15–20 min com crianças pequenas | — | 2026-10-15 |
 | amalienborg:guarda | troca de guarda 12:00 diária (14–28/out listadas) | OK | https://visitcopenhagen.com/copenhagen/planning/changing-royal-guards-amalienborg-palace-gdk1120569 | 2026-10-15 |
 | amalienborg:bandeira | bandeira no topo = família real em casa; versão maior com o rei presente | INCONCLUSIVO — não verificado nesta auditoria | — | 2026-10-15 |
 | torvehallerne:endereço | Frederiksborggade 21, junto de Nørreport | OK | https://www.visitcopenhagen.com/copenhagen/planning/torvehallerne-gdk545401 | 2026-10-15 |
@@ -92,12 +92,12 @@
 | glyptotek | fecha 2ª; dom 10–17; menor de 18 grátis; adulto ~150; jardim de inverno incluso | OK (nível-snippet, listagens Visit Copenhagen) | https://www.visitcopenhagen.com/copenhagen/planning/glyptoteket-gdk410562 | 2026-10-15 |
 | dyrehaven | Dyrehaven é o parque onde o Bakken fica | OK | https://en.wikipedia.org/wiki/Klampenborg_station | 2026-10-15 |
 
-## 2 · Lógica do roteiro (qui/sex/sáb/dom com 4 adultos + 2 crianças de 3,5 e 4,5 anos)
+## 2 · Lógica do roteiro (qui/sex/sáb/dom com 4 adultos + 2 crianças pequenas)
 
 | Dia | Veredito | Por quê (crítico) |
 |---|---|---|
 | **Qui** (pouso leve) | Viável, **mas não é leve** | Guarda 12:00 → almoço em Nyhavn → Kastellet + playground (~1,1 km de Amalienborg, e Kastellet fica na direção oposta a Nyhavn) → check-in → jantar às 17:30 em Ny Østergade. Para quem chegou de manhã são ~4 trechos a pé com 2 crianças. A consigna **exige reserva online** (sem walk-in), e check-in costuma ser à tarde. Sugestão (validar): cortar o jantar com reserva e deixar algo ao lado de casa. |
-| **Sex** (Tivoli) | Viável com ressalva | 11:00–17:30 são ~6,5 h dentro de um parque: acima do fôlego típico de 3–4 anos. A regra do Friday Rock **não é obstáculo para vocês**: menores de 16 entram após 17:30 se acompanhados por adulto ≥25 (vocês são 4 adultos). O argumento real para sair antes é multidão/barulho — e a própria Kel diz que Tivoli é **melhor no fim da tarde/noite**. Alternativa (sugestão · validar): entrar às 11:00, voltar ~15:00 para descanso, retornar ao entardecer (pôr do sol ~18:05, luzes de Halloween). O Glyptotek (colado ao Tivoli) serve de buffer de chuva. |
+| **Sex** (Tivoli) | Viável com ressalva | 11:00–17:30 são ~6,5 h dentro de um parque: acima do fôlego típico de criança pequena. A regra do Friday Rock **não é obstáculo para vocês**: menores de 16 entram após 17:30 se acompanhados por adulto ≥25 (vocês são 4 adultos). O argumento real para sair antes é multidão/barulho — e a própria Kel diz que Tivoli é **melhor no fim da tarde/noite**. Alternativa (sugestão · validar): entrar às 11:00, voltar ~15:00 para descanso, retornar ao entardecer (pôr do sol ~18:05, luzes de Halloween). O Glyptotek (colado ao Tivoli) serve de buffer de chuva. |
 | **Sáb** (Bakken) | Viável, **dia mais pesado** | Segundo dia seguido de ~6 h ao ar livre; ida+volta ~1 h de trem cada; sábado de recesso = lotação máxima. Saída "9:30" deixa ~40 min de folga antes de abrir 11:00 — dá pra sair 10:00. Premissa frágil: depende do clima e as MiniTurbånd online custam menos (249 × 279) — só comprar com previsão firme. Plano B (Den Blå Planet) está certo e há mais três planos de chuva na lista nova. |
 | **Dom** (Børnenes + saída) | **Fecha, mas com 2 premissas frágeis** | (1) **O horário do voo/trem de saída é desconhecido** — "fim de tarde" é a variável que decide tudo. (2) A consigna fecha às **18:00** e é só com reserva: retirada de malas depois das 17:30 é arriscada. (3) Checkout do alojamento antes das 9:15–10:00 com 2 crianças, malas guardadas, e chegada ao museu na abertura — a manhã é apertada. (4) Børnenes fecha **16:30** (não 17:00), então 10:00–12:30 tem folga. Com voo após ~19:30 fecha com folga; com voo antes, a tarde fica só almoço + malas + traslado. (A janela de compras de 40 min do texto original foi retirada a pedido do Tobia em 15/out: a lista da Kel são marcações de passagem, não programa.) |
 
@@ -126,6 +126,6 @@
 | Consigna: 10–18, só online, ~€5-6 | resolvido |
 | Metro: ~24 DKK, crianças grátis, Østerport na linha C | resolvido |
 | Skydebanehaven (Vesterbro) e Nørrebroparken | resolvido |
-| Idades das crianças (3,5 e 4,5) e nova seção "Triagem da 2ª lista da Kel" | informação nova do Tobia/Kel |
+| Nova seção "Triagem da 2ª lista da Kel" | informação nova do Tobia/Kel |
 
 **Sem endereço da hospedagem em nenhum arquivo.** O texto continua referindo "Frederiksstaden, colada no Amalienborg" apenas.
