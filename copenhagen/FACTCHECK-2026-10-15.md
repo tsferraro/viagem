@@ -122,3 +122,24 @@ Cards ⭐⭐/⭐ 🔄 novos: **Louisiana** (sáb, troca o Bakken), **Experimenta
 | historia:trolls | "Six Forgotten Giants 2016 · precisa de carro" | RISCO — há rota oficial de bicicleta ~35 km → corrigido | https://www.opdagdanmark.dk/en/discover/de-seks-glemte-kaemper/ | 2026-10-15 |
 | historia:trolls | "ARKEN The Garbage Man até 29/nov · primeira em museu · oficina · não tocar · <18 grátis · 150 kr · S-tog ~16 min" | OK | https://www.arken.dk/en/exhibitions/the-garbage-man · https://www.arken.dk/en/information | 2026-10-15 |
 | historia:trolls | "ARKEN aberto 10h-17h de sexta a domingo" | ERRO → corrigido (férias de outono: todo dia 10-17, quinta 15 até 21h) | https://www.arken.dk/en/information | 2026-10-15 |
+
+## Sábado invertido + ARKEN + 4 temas de história (15/out · 1 sub-agente cético, contexto limpo, nível-página)
+
+A inversão do sábado (cidade principal, Bakken 🔄) só reordena cards já verificados acima; nada novo sobre o mundo além do que está abaixo.
+
+| Item | Afirmação verificada | Veredito | Fonte(s) | Data |
+|---|---|---|---|---|
+| historia:sereia | "1909 Carl Jacobsen após o balé · Edvard Eriksen · 23/08/1913 · 1964 cabeça nunca recuperada · 1998 · Xangai 2010" | OK | https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue) · https://www.visithcandersen.dk/havfrue-historie-eng.htm | 2026-10-15 |
+| historia:sereia | "1,25 m e 175 kg" | RISCO — fontes divergem (~100 kg) → corrigido (número removido) | https://www.visithcandersen.dk/havfrue-historie-eng.htm | 2026-10-15 |
+| historia:sereia | "rosto de Ellen Price, corpo de Eline Eriksen" | RISCO — rosto disputado entre fontes → corrigido ("as fontes discordam") | https://en.wikipedia.org/wiki/Eline_Eriksen · https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue) | 2026-10-15 |
+| historia:sereia | "Xangai foi a única viagem da vida" | RISCO — fontes dizem primeira saída oficial → corrigido | https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue) | 2026-10-15 |
+| historia:nyhavn | "Christian V 1670-1675 · nº 9 de 1681 · Andersen também no 67 e no 18" | OK | https://en.wikipedia.org/wiki/Nyhavn | 2026-10-15 |
+| historia:nyhavn | "nº 20 em 1834-1838 · maio de 1835 O Isqueiro, A Princesa e a Ervilha, Claus Grande e Claus Pequeno" | OK | https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection. · https://www.routesnorth.com/denmark/copenhagen/hans-christian-andersen-sights-in-copenhagen/ | 2026-10-15 |
+| historia:nyhavn | "a casa onde A Princesa e a Ervilha foi escrita" | RISCO — fonte única → corrigido ("onde morava quando o livro saiu") | https://www.routesnorth.com/denmark/copenhagen/hans-christian-andersen-sights-in-copenhagen/ | 2026-10-15 |
+| historia:lego | "Ole Kirk Christiansen, Billund, 1932 · 1934 leg godt · 1949 · 1958 patente · Legoland 1968 · minifiguras 1978" | OK — "tubinhos por baixo" sem fonte → corrigido (removido) | https://en.wikipedia.org/wiki/Lego | 2026-10-15 |
+| historia:natmus | "Carro do Sol de Trundholm, Idade do Bronze · Menina de Egtved, caixão de carvalho, roupas" | OK | https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/ · https://en.wikipedia.org/wiki/Egtved_Girl | 2026-10-15 |
+| historia:natmus | "caldeirão de Gundestrup do séc. I a.C." | RISCO — Natmus dá c. 150 a.C. ao ano 1 → corrigido | https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-early-iron-age/the-gundestrup-cauldron/the-dating-and-origin-of-the-silver-cauldron/ | 2026-10-15 |
+| historia:natmus | "Chifres de Ouro roubados em 1802 e derretidos · hoje cópias no museu" | OK | https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-late-iron-age/the-golden-horns/the-theft-of-the-golden-horns | 2026-10-15 |
+| card:ARKEN | "The Garbage Man até 29/11 · oficina de troll · não tocar · adulto 150 kr · <18 grátis · S-tog 16 min · carrinho, elevadores, fraldário · coord no museu" | OK | https://www.arken.dk/en/exhibitions/the-garbage-man · https://www.arken.dk/en/information · https://nominatim.openstreetmap.org/reverse?lat=55.6065&lon=12.3885&format=json&zoom=18 | 2026-10-15 |
+| card:ARKEN | "férias de outono todo dia 10h-17h" | RISCO — há um dia até 21h (as duas verificações divergem entre qui 15 e sex 16) → corrigido (sábado 10-17 confirmado; o dia longo marcado [conferir]) | https://www.arken.dk/en/exhibitions/the-garbage-man | 2026-10-15 |
+| card:ARKEN | "ônibus 128, ~5 min" | RISCO — número da linha só em Lonely Planet/Citymapper → corrigido ([conferir no Rejseplanen]) | https://citymapper.com/copenhagen/l/bus-128 | 2026-10-15 |
